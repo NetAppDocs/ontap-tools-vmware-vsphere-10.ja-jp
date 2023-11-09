@@ -1,0 +1,15 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+permalink: index.html 
+summary: 概要。検索結果に使用されます 
+---
+= VMware vSphere ドキュメント用の ONTAP ツール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
