@@ -404,7 +404,6 @@ ONTAP REST APIを使用して、アグリゲートIDとストレージID（SVM U
   <block id="ce7cb9480d630713fc44a2f9e2273a42" category="list-text">[追加]*アイコンをクリックします。</block>
   <block id="ef59b5af74d1b1aa24395b9491647640" category="list-text">ストレージプロバイダの接続情報を入力します。</block>
   <block id="77cef77e665ad7d002465ac0ebd7fb15" category="list-text">name：「ScaleoutVP」などのユーザフレンドリな名前</block>
-  <block id="8830b67cd089d24cc92948e8271a67b0" category="list-text">URL：<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - URL内の名前は、単一vCenter環境の場合はOVA導入時に指定された仮想IP（または複数vCenter環境の場合はドメイン名）に対応します。</block>
   <block id="7a7e4311e3d4256bb5dc8666f51daccb" category="list-text">OVAの導入時に入力されたクレデンシャル：&lt;VASA Provider username&gt;/&lt;VASA Provider password&gt;</block>
   <block id="fbce45ba9d44733fbab7b187a96af41e" category="list-text">VASAを登録したら、*[OK]*をクリックします。
 [Storage Provider]の下に表示され、ステータスが[Online]になっていることを確認します。</block>
@@ -795,7 +794,6 @@ vCenter 8では、シンプロビジョニングで256GBのLUNに容量を割り
   <block id="344687b1f8337fc7dd37917a74d46f9a" category="cell">アクションが実行されるエンティティ。VMware vCenterオブジェクトは、データセンター、フォルダ、リソースプール、クラスタ、ホスト、 およびVM</block>
   <block id="05206c56912863d79578b5fcb147092f" category="paragraph">タスクを完了するには、適切なvCenter Server RBACロールが必要です。タスクの実行中、ONTAP toolsはユーザのvCenter Serverロールを確認してから、ユーザのONTAP権限を確認します。</block>
   <block id="aafdd15db41596697a2eae0a7f4a1e48" category="admonition">vCenter Serverのロールは、管理者ではなく、ONTAP toolsのvCenterユーザに適用されます。デフォルトでは、管理者は製品へのフルアクセス権を持ち、ロールを割り当てる必要はありません。</block>
-  <block id="f8482d25f67ff16f85cd357691527065" category="paragraph">ユーザとグループにはロールは割り当てられません。vCenter Serverロールに含まれることで、ロールにアクセスできます。</block>
   <block id="0f9feaf083615e8846e538d5b34566ac" category="section-title">vCenter Serverのロールの割り当てと変更に関するキーポイント</block>
   <block id="3314432e9743e55f152832883016d5bb" category="paragraph">vCenter Serverのロールは、vSphereのオブジェクトおよびタスクへのアクセスを制限する場合にのみ設定します。それ以外の場合は、管理者としてログインできます。このログインでは、すべての vSphere オブジェクトに自動的にアクセスできます。</block>
   <block id="5fb4985540d209a017332028f425ead8" category="paragraph">ロールを割り当てる場所によって、ユーザが実行できるONTAP toolsタスクが決まります。一度に1つのロールを変更できます。
@@ -837,5 +835,10 @@ vCenter 8では、シンプロビジョニングで256GBのLUNに容量を割り
   <block id="956040396bc93fbe70e3c9e235f5bfdb" category="sidebar">ONTAP ツールのメンテナンスコンソールにアクセスします</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">ロールベースアクセス制御</block>
-  <block id="96ab5f4eecc9217c7e8b30303647f507" category="sidebar">ONTAP ツールのロールベースアクセス制御の概要</block>
+  <block id="d24271a1f22c82f9f35e39eb3c1987a9" category="list-text">URL：<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - URL内の名前は、単一vCenter環境の場合はOVA導入時に指定された仮想IP（または複数vCenter環境の場合はドメイン名）に対応します。証明書をURLに追加します。同じ証明書がvCenterに公開されます。</block>
+  <block id="706d26bec853805e4de29044300749ad" category="list-text">管理者のユーザー名と管理者のパスワード：* ONTAP tools Manager* UIへのログインに使用するパスワードです。</block>
+  <block id="b910beb5fe2953d304ea1b38de1c4fa3" category="list-text">CA証明書（ルート証明書、リーフ証明書、中間証明書）を商用CAから取得します。</block>
+  <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">ユーザとグループは、vCenter Serverロールに含まれることでロールにアクセスできます。</block>
+  <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">vVolデータストアの削除ワークフローでは、datastore-volumeが管理されているかどうかに関係なく、delete_volumeフラグがtrueに設定されている場合、datastore-volumesが削除されます。</block>
+  <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP toolsのロールベースアクセス制御の概要</block>
 </blocks>

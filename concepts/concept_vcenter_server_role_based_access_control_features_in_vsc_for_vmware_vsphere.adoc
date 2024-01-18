@@ -38,7 +38,7 @@ vCenter Server の RBAC を使用すると、 vSphere オブジェクトへの�
 
 NOTE: vCenter Serverのロールは、管理者ではなく、ONTAP toolsのvCenterユーザに適用されます。デフォルトでは、管理者は製品へのフルアクセス権を持ち、ロールを割り当てる必要はありません。
 
-ユーザとグループにはロールは割り当てられません。vCenter Serverロールに含まれることで、ロールにアクセスできます。
+ユーザとグループは、vCenter Serverロールに含まれることでロールにアクセスできます。
 
 
 
