@@ -441,7 +441,6 @@ ONTAP REST APIを使用して、アグリゲートIDとストレージID（SVM U
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">既存のユーザは、9.10Dパッチまたは9.11Dパッチにアップグレードする前に、9.10/9.11からOVAバックアップを作成する必要があります。</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">既存のONTAP tools for VMware vSphere 9.10D2および9.11D4でDerbyポート1527を有効にします。ポートを有効にするには、rootユーザでCLIにログインし、次のコマンドを実行します。</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">ONTAP ツールクイックスタート</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">ONTAP tools for VMware vSphere 10.0リリース向けOVAを導入します。を参照してください <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">移行するvCenterをONTAP tools for VMware vSphere 10.0リリースに追加します。を参照してください <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>。</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">オンボードストレージバックエンド</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">リモートプラグインのvCenter APIからローカルでストレージバックエンドをオンボードする。を参照してください <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>。移行対象としてローカルスコープのストレージを追加します。</block>
@@ -675,7 +674,6 @@ vVol 仮想マシンのサマリレポートのメニューには、選択した
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">導入の要件</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">ONTAP tools for VMware vSphereを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件を理解しておく必要があります。</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">ONTAPツールは、Windows vCenter ServerまたはVMware vCenter Server VirtualAppliance（vCSA）で使用できます。ESXiシステムを含むサポートされているvSphereにONTAP toolsを導入する必要があります。</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">詳細については、を参照してください <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">ONTAP ツールの要件</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">.ova ファイルをダウンロードします。</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">vCenter Server インスタンスのログインクレデンシャルを用意します。</block>
@@ -841,4 +839,6 @@ vCenter 8では、シンプロビジョニングで256GBのLUNに容量を割り
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">ユーザとグループは、vCenter Serverロールに含まれることでロールにアクセスできます。</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">vVolデータストアの削除ワークフローでは、datastore-volumeが管理されているかどうかに関係なく、delete_volumeフラグがtrueに設定されている場合、datastore-volumesが削除されます。</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP toolsのロールベースアクセス制御の概要</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">ONTAP tools for VMware vSphere 10.0リリース向けOVAを導入します。を参照してください <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">詳細については、を参照してください <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>

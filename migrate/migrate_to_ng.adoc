@@ -33,7 +33,7 @@ NOTE: 既存のユーザは、9.10Dパッチまたは9.11Dパッチにアップ�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. ONTAP tools for VMware vSphere 10.0リリース向けOVAを導入します。を参照してください link:../qsg_10.html["ONTAP ツールクイックスタート"]
+. ONTAP tools for VMware vSphere 10.0リリース向けOVAを導入します。を参照してください link:../deploy/qsg_10.html["ONTAP ツールクイックスタート"]
 . 移行するvCenterをONTAP tools for VMware vSphere 10.0リリースに追加します。を参照してください link:../configure/add_vcenter.html["vCenterの追加"]。
 . リモートプラグインのvCenter APIからローカルでストレージバックエンドをオンボードする。を参照してください link:../configure/onboard_svm.html["オンボードストレージバックエンド"]。移行対象としてローカルスコープのストレージを追加します。
 . 次のAPIを使用して移行します。

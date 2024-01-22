@@ -3,7 +3,7 @@ section: deploy
 title: ONTAP ツールを導入
 entries:
 - title: ONTAP ツールクイックスタート
-  url: "/qsg_10.html"
+  url: "/deploy/qsg_10.html"
 - title: ONTAP ツールを導入するための要件
   url: "/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html"
 - title: ONTAP ツールのダウンロード方法
