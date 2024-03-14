@@ -15,7 +15,7 @@ ONTAP tools Managerのユーザインターフェイスのオプションを使�
 
 * 手順 *
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから* Log Bundles *を選択します。
 +
 この処理には数分かかることがあります。

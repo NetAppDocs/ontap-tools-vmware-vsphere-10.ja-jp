@@ -26,7 +26,7 @@ ONTAPツールは次の処理を実行します。
 * ログバンドルのダウンロード
 
 
-ONTAP toolsのUIにアクセスするには、 https://loadBalanceIP:8443/virtualization/ui/[] ブラウザから、導入時に指定したONTAP tools管理者のクレデンシャルを使用してログインします。
+ONTAP toolsのUIにアクセスするには、 `\https://loadBalanceIP:8443/virtualization/ui/` ブラウザから、導入時に指定したONTAP tools管理者のクレデンシャルを使用してログインします。
 
 image::../media/ontap_tools_manager.png[ONTAP ToolsマネージャのUI]
 

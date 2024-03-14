@@ -19,7 +19,7 @@ VMware vCenter 10.0向けONTAPツールの1つのインスタンスを使用し�
 
 * 手順 *
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから[vCenters]を選択します。
 . vCenterのIPアドレス/ホスト名、ユーザ名、パスワード、およびポートを持つオンボードvCenterに* add *を選択します。
 

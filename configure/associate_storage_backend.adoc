@@ -19,7 +19,7 @@ vCenterのリストページに、関連付けられているストレージバ�
 
 * 手順 *
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから[vCenters]を選択します。
 . ストレージバックエンドに関連付けるvCenterの縦の省略記号をクリックします。
 . ポップアップのドロップダウンからストレージバックエンドを選択します。

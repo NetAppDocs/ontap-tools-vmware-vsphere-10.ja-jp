@@ -15,7 +15,7 @@ ONTAP toolsとONTAP System Managerに付属のJSONファイルを使用して、
 
 * 必要なもの *
 
-* ONTAP toolsから\https：//<loadbalancerIP>：8443/virtualization/user-privileges/users_roles.zipを使用してONTAP Privilegesファイルをダウンロードしておく必要があります。
+* 次のコマンドを使用して、ONTAP PrivilegesファイルをONTAP toolsからダウンロードしておきます。 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
 
 NOTE: ユーザはクラスタレベルまたは直接Storage Virtual Machine（SVM）レベルで作成できます。user_roles.jsonファイルを使用せずにユーザを作成することもできます。作成した場合は、SVMレベルの最小限の権限セットが必要になります。

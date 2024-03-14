@@ -21,7 +21,7 @@ VMware vCenter 10.0向けONTAPツールの1つのインスタンスを使用し�
 
 * 手順 *
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから[vCenters]を選択します。
 . vCenterのIPアドレス/ホスト名、ユーザ名、パスワード、およびポートを持つオンボードvCenterに* add *を選択します。
 . ストレージバックエンド*ページに移動し、*[ホスト名、ユーザ名、パスワード、およびポートを指定してオンボードストレージバックエンド*（ONTAPクラスタ）に追加する]を選択します。
@@ -38,7 +38,7 @@ vCenterのリストページに、関連付けられているストレージバ�
 
 * 手順 *
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから[vCenters]を選択します。
 . ストレージバックエンドに関連付ける、またはストレージバックエンドとの関連付けを解除するvCenterの縦の省略記号をクリックします。
 . 実行するアクションに応じて*[ストレージバックエンドの関連付け]または[関連付け解除]*を選択します。
@@ -53,7 +53,7 @@ vCenterのリストページに、関連付けられているストレージバ�
 
 vCenterを変更するには、次の手順に従います。
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから[vCenters]を選択します。
 . 変更するvCenterの縦の省略記号をクリックし、*[変更]*を選択します。
 . vCenterの詳細を変更し、*[変更]*を選択します。
@@ -65,7 +65,7 @@ vCenterを変更するには、次の手順に従います。
 
 vCenterを削除する前に、vCenterに接続されているすべてのストレージバックエンドを削除する必要があります。
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから[vCenters]を選択します。
 . 削除するvCenterの縦の省略記号をクリックし、*[Remove]*を選択します。
 +

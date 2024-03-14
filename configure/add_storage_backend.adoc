@@ -19,7 +19,7 @@ summary: ストレージバックエンドは、EXSiホストがデータスト�
 
 * 手順 *
 
-. を起動します https://loadBalanceIP:8443/virtualization/ui/[] 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
+. を起動します `\https://loadBalanceIP:8443/virtualization/ui/` 導入時に指定したONTAP tools管理者のクレデンシャルをブラウザから使用
 . サイドバーから* Storage backends *を選択します。
 . 「 * 追加」を選択します。
 . サーバのIPアドレスまたはFQDN、ユーザ名、およびパスワードの詳細を入力し、*[追加]*を選択します。
