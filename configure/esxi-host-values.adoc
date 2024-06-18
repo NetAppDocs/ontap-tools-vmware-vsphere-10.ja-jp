@@ -1,0 +1,86 @@
+---
+permalink: configure/esxi-host-values.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。ONTAP tools for VMware vSphereが設定する値は、社内のNetAppテストに基づいています。 
+---
+= ESXiホストの値の設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。ONTAP tools for VMware vSphereが設定する値は、社内のNetAppテストに基づいています。
+
+ESXi ホストでは、次の値を設定できます。
+
+
+
+== HBA / CNAアダプタ設定
+
+NetAppストレージシステムに推奨されるHBAタイムアウト設定を設定します。
+
+* * Disk.QFullSampleSize *
++
+すべての構成でこの値を32に設定します。この値を設定すると、 I/O エラーの防止に役立ちます。
+
+* * Disk.QFullThreshold *
++
+すべての構成でこの値を8に設定します。この値を設定すると、 I/O エラーの防止に役立ちます。
+
+* * Emulex FC HBA タイムアウト *
++
+デフォルト値を使用します。
+
+* * QLogic FC HBA タイムアウト *
++
+デフォルト値を使用します。
+
+
+
+
+
+== MPIO設定
+
+NetAppストレージシステムの優先パスを設定します。MPIOの設定によって、（インターコネクトケーブルを経由する最適化されていないパスではなく）最適化されたパスが決まり、そのうちの1つに優先パスが設定されます。
+
+ハイパフォーマンスな環境で、または単一の LUN データストアでパフォーマンスをテストする場合は、ラウンドロビン（ VMW_PSP_RR ）パス選択ポリシー（ PSP ）の負荷分散設定をデフォルトの IOPS 設定 1000 から 1 に変更することを検討します。
+
+
+
+== NFS 設定
+
+* * Net.TcpipHeHeapSize *
++
+この値を32に設定します。
+
+* * Net.TcpipHeapMax *
++
+この値を1024MBに設定します。
+
+* * NFS.MaxVolumes *
++
+この値を256に設定します。
+
+* * NFS41.MaxVolumes *
++
+この値を256に設定します。
+
+* * NFS.MaxQueueDepth *
++
+キューイングのボトルネックを回避するには、この値を128以上に設定します。
+
+* * nfs.HeartbeatMaxFailures*
++
+すべてのNFS構成で、この値を10に設定します。
+
+* * nfs.HeartbeatFrequency*
++
+すべてのNFS構成で、この値を12に設定します。
+
+* * nfs.HeartbeatTimeout *
++
+すべてのNFS構成で、この値を5に設定します。
+
+

@@ -2,17 +2,23 @@
 section: concepts
 title: 概念
 entries:
-- title: ONTAP ツールの概要
-  url: "/concepts/concept_ontap_tools_overview.html"
-- title: VVOL 向けの VASA Provider の設定
-  url: "/concepts/concept_configure_vvols_datastores.html"
+- title: ONTAP Tools for VMware vSphereの概要
+  url: "/concepts/ontap-tools-overview.html"
+- title: 主要な概念と用語
+  url: "/concepts/ontap-tools-concepts-terms.html"
 - title: ロールベースアクセス制御
   entries:
-  - title: ONTAP toolsのロールベースアクセス制御の概要
-    url: "/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html"
-  - title: VMware vSphere 用の ONTAP ツールを使用する際に推奨される ONTAP ロール
-    url: "/concepts/concept_recommended_ontap_roles_when_using_vsc_for_vmware_vsphere.html"
-- title: ONTAP ツールのハイアベイラビリティを設定する
-  url: "/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html"
+  - title: 概要
+    url: "/concepts/vcenter-server-role-based-access-control-features.html"
+  - title: vCenter Serverアクセス許可
+    url: "/concepts/vcenter-server-permissions.html"
+  - title: vCenter Serverの権限の割り当てと変更
+    url: "/concepts/key-points-about-assign-and-modify-permissions.html"
+  - title: ONTAP Tools for VMware vSphereのタスクに必要な権限
+    url: "/concepts/privileges-required.html"
+  - title: 推奨されるONTAPロール
+    url: "/concepts/ontap-roles.html"
+- title: ONTAP tools for VMware vSphereの高可用性
+  url: "/concepts/high-availability.html"
 - title: AutoSupport
-  url: "/concepts/asup.html"
+  url: "/concepts/autosupport.html"

@@ -1,0 +1,45 @@
+---
+permalink: configure/install-nfs-vaai-plug-in.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for VMware vStorage APIs for Array Integration\（VAAI\）をインストールできます。 
+---
+= NFS VAAI プラグインをインストールします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for VMware vStorage APIs for Array Integration（VAAI）をインストールできます。
+
+* 必要なもの *
+
+* NFS Plug-in for VAAIのインストールパッケージをダウンロードしておく必要があります (`.vib`）をNetApp Support Site から取得します。 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["NetApp NFS Plug-in for VMware VAAI"]
+* ESXiホスト7.0U3の最新パッチを最小バージョンとしてインストールし、ONTAP 9.12.1Px（最新のPリリース）9.13.1Px、9.14.1Px以降をインストールしておく必要があります。
+* ESXi ホストの電源をオンにし、 NFS データストアをマウントしておく必要があります。
+* の値を設定しておく必要があります `DataMover.HardwareAcceleratedMove`、 `DataMover.HardwareAcceleratedInit`および `VMFS3.HardwareAcceleratedLocking` ホスト設定を「1」に変更します。
++
+これらの値は、推奨設定ダイアログボックスが更新されると、 ESXi ホストで自動的に設定されます。
+
+* を使用して、Storage Virtual Machine（SVM）でvstorageオプションを有効にしておく必要があります `vserver nfs modify -vserver vserver_name -vstorage enabled` コマンドを実行します
+* NetApp NFS VAAI Plug-in 2.0を使用している場合は、ESXi 7.0U3以降が必要です。
+* vSphere 6.5が廃止されたため、vSphere 7.0U3の最新のパッチリリースが必要です。
+* vSphere 8.xは、NetApp NFS VAAIプラグイン2.0.1（ビルド16）でサポートされます。
+
+
+* 手順 *
+
+. ONTAP tools for VMware vSphereのホームページで*[設定]*をクリックします。
+. NFS VAAI ツール * タブをクリックします。
+. VAAIプラグインをvCenter Serverにアップロードしたら、* Existing version *セクションで* Change *を選択します。VAAIプラグインがvCenter Serverにアップロードされていない場合は、*[アップロード]*ボタンを選択します。
+. を参照して選択します。 `.vib` [File]をクリックし、*[Upload]*をクリックしてファイルをONTAP toolsにアップロードします。
+. [EXSiホストにインストール]*をクリックし、NFS VAAIプラグインをインストールするESXiホストを選択して、*[インストール]*をクリックします。
++
+プラグインのインストールに対応するESXiホストのみが表示されます。画面に表示される手順に従ってインストールを完了する必要があります。インストールの進捗状況は、vSphere Web Clientの[Recent Tasks]セクションで監視できます。
+
+. インストールが完了したら、ESXiホストを手動でリブートする必要があります。
++
+VMware管理者がESXiホストをリブートすると、ONTAP tools for VMware vSphereによってNFS VAAIプラグインが自動的に検出されます。プラグインを有効にするための追加の手順は必要ありません。
+
+

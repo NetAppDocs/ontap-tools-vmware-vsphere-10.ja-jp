@@ -1,0 +1,32 @@
+---
+permalink: manage/start-the-ssh-on-other-nodes.html 
+sidebar: sidebar 
+keywords:  
+summary: アップグレードの前に、他のノードでSSHを開始する必要があります。 
+---
+= 他のノードでSSHを開始する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレードの前に、他のノードでSSHを開始する必要があります。
+
+* 必要なもの *
+
+vCenter Serverインスタンスに対してVASA Provider拡張機能を有効にする必要があります。
+
+* このタスクについて *
+
+アップグレードの前に、各ノードでこの手順を実行してください。
+
+* 手順 *
+
+. vCenter Serverで、VASA Providerへのコンソールを開きます。
+. maintenance ユーザとしてログインします。
+. 入力するコマンド `4` [Support and Diagnostics]を選択します。
+. 入力するコマンド `1` [Access diagnostic shell]を選択します。
+. 入力するコマンド `y` 続行してください。
+. コマンド_sudo systemctl restart ssh_を実行します。
+

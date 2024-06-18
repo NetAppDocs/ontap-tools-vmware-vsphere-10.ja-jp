@@ -1,0 +1,30 @@
+---
+permalink: protect/enable-storage-replication-adapter.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP tools for VMware vSphereには、SRA機能をONTAP tools for VMware vSphereで使用してディザスタリカバリを設定するためのオプションがあります。 
+---
+= SRA でデータストアを保護する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphereには、SRA機能をONTAP tools for VMware vSphereで使用してディザスタリカバリを設定するためのオプションがあります。
+
+* 必要なもの *
+
+* vCenter ServerインスタンスのセットアップとESXiホストの設定が完了している必要があります。
+* ONTAP toolsを導入しておく必要があります。
+* SRAアダプタをダウンロードしておく必要があります。 `.tar.gz` ファイルを参照してください https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。
+
+
+* 手順 *
+
+. 次のURLを使用してSRMアプライアンス管理インターフェイスにログインします。 `\https://:<srm_ip>:5480`をクリックし、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。
+. [New Adapter]*を選択します。
+. SRA プラグインの .tar.gz_installer を SRM にアップロードします。
+. アダプタを再スキャンして、SRM Storage Replication Adapterで詳細が更新されていることを確認します。
+ページ
+

@@ -1,0 +1,110 @@
+---
+permalink: automation/create-vvol-workflow.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: ワークフローは、特定の管理タスクまたは目標を達成するために必要な1つ以上の手順のシーケンスです。 
+---
+= vVolデータストアの作成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vVolデータストアは、新しいボリュームまたは既存のボリュームを使用して作成できます。既存のボリュームと新しいボリュームを組み合わせてvVolデータストアを作成することもできます。
+
+
+NOTE: ルートアグリゲートがSVMにマッピングされていないことを確認します。
+
+データストアを作成する前にJWTトークンを生成するか、vCenterで[Maximum Bearer Token Lifetime]を60mに設定してSAMLトークンの有効期限を延長します。
+
+APIにはx-authを渡す必要があります。このx-authは、SwaggerのAuthに追加された新しいAPIから生成できます。
+
+/virtualization/api/v1/auth/vcenter-login
+
+. 新しいボリュームでvVolデータストアを作成する。
+
+
+ONTAP REST APIを使用して、アグリゲートIDとストレージID（SVM UUID）を取得します。
+/virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vVols/datastores以降
+
+次のURIを使用してステータスを確認します。
+
+[+]
+
+[listing]
+----
+`\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
+----
+[+]
+NFSデータストアのRequest Body
+
+｛
+   "name"："nfsds1"、
+   "プロトコル"："nfs"、
+   "platform_type"："aff"、
+   "moref"："domain-c8"、
+   "ボリューム"：[
+      ｛
+         "is_existing"：false、
+         "名前"："vol_NFS_pvt"、
+         "size_in_mb"：2048000、
+         "space_efficiency"："thin"、
+         "アグリゲート"：｛
+            "id"："d7078b3c-3827-4ac9-9273-0a32909455c2"
+         }、
+         "qos"：｛
+            "最小IOPS"：200、
+            "max_iops"：5000
+         ｝
+      ｝
+   ]、
+   「storage_backend」：｛
+      "storage_id"："654c67bc-0f75-11ee-8a8c-00a09860a3ff"
+   ｝
+｝
+
+iSCSIデータストアの要求本文：
+｛
+   "名前"："iscsi_custom"、
+   "プロトコル"："iSCSI"、
+   "platform_type"：" AFF "、
+   "moref"："domain-c8"、
+   "ボリューム"：[
+       ｛
+           "is_existing"：false、
+           "名前"："iscsi_custom"、
+           "size_in_mb"：8034、
+           "space_efficiency"："thin"、
+           "アグリゲート"：｛
+               "id"："54fe5dd4-E461-49c8-bb2d-6d62c5d75af2"
+           ｝
+       ｝
+   ]、
+   "custom_igroup_name"："igroup1"、
+   「storage_backend」：｛
+                       "storage_id"："eb9d33ab-1960-11ee-9506-00a0985c6d9b"｝
+｝
+。既存のボリュームを使用してvVolデータストアを作成する。
+
+ONTAP REST APIを使用してaggregate_idとvolume_idを取得します。
+
+ POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
+リクエストボディ
+
+....
+ {
+"name" : "nfsds2",
+"protocol" : "nfs",
+"platform_type": "aff",
+"moref" : "domain-c8",
+"volumes" : [
+    {
+          "is_existing": true,
+          "id": "e632a632-1412-11ee-8a8c-00a09860a3ff"
+        }
+],
+"storage_backend": {
+                    "storage_id": "33a8b6b3-10cd-11ee-8a8c-00a09860a3ff"    }
+....
+｝

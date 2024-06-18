@@ -1,0 +1,75 @@
+---
+permalink: concepts/vcenter-server-permissions.html 
+sidebar: sidebar 
+keywords:  
+summary: vCenter Server で認識されるのはアクセス許可で、権限ではありません。vCenter Server アクセス許可は 3 つの要素で構成されます。 
+---
+= vCenter Server アクセス許可の要素
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vCenter Server で認識されるのはアクセス許可で、権限ではありません。vCenter Server アクセス許可は 3 つの要素で構成されます。
+
+vCenter Server には次のコンポーネントがあります。
+
+* 1 つ以上の権限（ロール）
++
+ユーザが実行できるタスクを定義します。
+
+* vSphere オブジェクト
++
+タスクの対象となるオブジェクトです。
+
+* ユーザまたはグループ
++
+タスクを実行できるユーザまたはグループを定義します。
+
+
+
+
+NOTE: グレーのボックスは vCenter Server 側の要素、白のボックスは vCenter Server を実行しているオペレーティングシステム側の要素を表しています。
+
+image:../media/permission-updated-graphic.gif["権限コンポーネントの図"]
+
+
+
+== 権限
+
+VMware vSphere 用の ONTAP ツールには、次の 2 種類の権限が関連付けられています。
+
+* vCenter Server 標準の権限
++
+vCenter Server に付属している権限です。
+
+* ONTAP tools固有の権限
++
+これらの権限は、特定のONTAP Tools for VMware vSphereタスク用に定義されています。ONTAP Tools for VMware vSphereに固有の機能です。
+
+
+
+ONTAP tools for VMware vSphereのタスクには、ONTAP tools固有の権限とvCenter Server標準の権限の両方が必要です。これらの権限は ' ユーザーのロールを構成しますアクセス許可には複数の権限を含めることができます。これらの権限は、 vCenter Server にログインしているユーザを対象としています。
+
+
+NOTE: vCenter Server RBACの使用を簡易化するために、ONTAP tools for VMware vSphereには、ONTAP tools for VMware vSphereタスクの実行に必要なONTAP tools固有の権限と標準の権限をすべて含む標準ロールがいくつか用意されています。
+
+アクセス許可に含まれる権限が変更された場合、そのアクセス許可が関連付けられたユーザは、更新されたアクセス許可を有効にするためにログアウトしてログインし直す必要があります。
+
+
+
+== vSphere オブジェクト
+
+アクセス許可は vSphere オブジェクトに関連付けられます。 vCenter Server 、 ESXi ホスト、仮想マシン、データストア、データセンター、 とフォルダ。任意の vSphere オブジェクトに権限を割り当てることができます。vSphere オブジェクトに割り当てられたアクセス許可に基づいて、そのオブジェクトに対してどのユーザがどのタスクを実行できるかが決まります。ONTAP tools for VMware vSphere固有のタスクの場合、アクセス許可の割り当てと検証はルートフォルダレベル（vCenter Server）でのみ行われ、他のエンティティでは行われません。ただしVAAIプラグインの処理は例外で、該当するESXiホストに対して権限が検証されます。
+
+
+
+== ユーザとグループ
+
+ユーザとグループは、 Active Directory （またはローカルの vCenter Server マシン）を使用して設定できます。その後、vCenter Serverアクセス許可を使用してこれらのユーザまたはグループにアクセスを許可し、特定のONTAP Tools for VMware vSphereタスクを実行できるようにします。
+
+
+NOTE: これらのvCenter Serverアクセス許可は、ONTAP tools for VMware vSphere vCenterユーザに適用され、ONTAP tools for VMware vSphere管理者には適用されません。ONTAP tools for VMware vSphereの管理者には、デフォルトでフルアクセス権が付与され、権限を割り当てる必要はありません。
+
+ユーザとグループにはロールは割り当てられません。vCenter Server アクセス許可を割り当てることで、間接的にロールが適用されます。

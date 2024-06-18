@@ -1,0 +1,36 @@
+---
+section: protect
+title: データストアと仮想マシンを保護
+entries:
+- title: SRA でデータストアを保護する
+  url: "/protect/enable-storage-replication-adapter.html"
+- title: ディザスタリカバリ用にストレージシステムを設定する
+  entries:
+  - title: SAN環境およびNAS環境向けのSRAの設定
+    url: "/protect/configure-storage-replication-adapter-for-san-environment.html"
+  - title: 大規模な環境向けのSRAの設定
+    url: "/protect/configure-storage-replication-adapter-for-highly-scaled-environment.html"
+- title: SRMアプライアンスでSRAを設定する
+  url: "/protect/configure-on-srm-appliance.html"
+- title: SRA クレデンシャルを更新する
+  url: "/protect/update-credentials.html"
+- title: 保護対象サイトとリカバリサイトを設定
+  entries:
+  - title: 保護グループを設定します
+    url: "/protect/configure-protection-groups.html"
+  - title: 保護対象サイトとリカバリサイトをペアリング
+    url: "/protect/pair-protected-and-recovery-sites.html"
+  - title: 保護対象サイトとリカバリサイトのリソースを設定
+    entries:
+    - title: ネットワークマッピングを設定します
+      url: "/protect/map-network.html"
+    - title: フォルダマッピングを設定します
+      url: "/protect/map-folder.html"
+    - title: リソースマッピングを設定する
+      url: "/protect/map-resource.html"
+    - title: プレースホルダデータストアを設定します
+      url: "/protect/configure-placeholder-datastores.html"
+    - title: アレイマネージャを使用して SRA を設定する
+      url: "/protect/configure-array-manager.html"
+  - title: レプリケートされたストレージシステムを確認
+    url: "/protect/verify-the-replicated-storage-environment.html"

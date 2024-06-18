@@ -1,0 +1,30 @@
+---
+permalink: manage/migrate-standard-virtual-machines-to-vvols-datastores.html 
+sidebar: sidebar 
+keywords: Migrate NFS and VMFS virtual machines 
+summary: NFSおよびVMFSデータストアからVirtual Volumes\（VVols\）データストアに仮想マシンを移行して、ポリシーベースのVM管理やその他のVVOL機能を活用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。 
+---
+= NFSおよびVMFSデータストアを使用する仮想マシンをvVolデータストアに移行する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFSおよびVMFSデータストアからVirtual Volumes（VVol）データストアに仮想マシンを移行して、ポリシーベースのVM管理やその他のVVol機能を利用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。
+
+* 必要なもの *
+
+移行する仮想マシンでVASA Providerが実行されていないことを確認します。VASA Provider を実行している仮想マシンを VVOL データストアに移行すると、いっさいの管理操作を実行できなくなり、仮想マシンの電源をオンにすることもできなくなります。
+
+* このタスクについて *
+
+NFSおよびVMFSデータストアからvVolデータストアに移行する場合、VMFSデータストアからのデータの移動にはvStorage APIs for Array Integration（VAAI）のオフロードがvCenter Serverで使用されますが、NFS VMDKファイルからのデータの移動には使用されません。VAAI のオフロードは、通常、ホストの負荷を軽減します。
+
+* 手順 *
+
+. 移行する仮想マシンを右クリックし、 * Migrate * （移行）をクリックします。
+. ［ * ストレージのみを変更する * ］ を選択し、 ［ * 次へ * ］ をクリックします。
+. 仮想ディスクの形式、VMストレージポリシー、および移行するデータストアの機能に一致するVVolデータストアを選択し、*[次へ]*をクリックします。
+. 設定を確認し、 [ 完了 ] をクリックします。
+
