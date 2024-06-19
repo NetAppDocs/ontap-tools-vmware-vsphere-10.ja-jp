@@ -23,7 +23,7 @@ ONTAP tools for VMware vSphereの導入を開始する前に、ストレージ�
 . vCenter Server 環境を設定およびセットアップします。
 . _.ova_ファイルをダウンロードします。
 . （任意）NetAppが提供するPostmanコレクションJSONファイルを自動化ユーザ収集するために使用します。
-. OVAを導入するための親vCenter Serverのクレデンシャル。
+. OVAを導入するための親vCenter Serverのクレデンシャル。vCenter Serverの親のパスワードに次の特殊文字を使用することはできません（$、'、"）。
 . OVAが導入されているホストまたはリソースプールに、 link:../deploy/sizing-requirements.html["ONTAP Tools for VMware vSphereを導入するための前提条件"] セクション。
 . 導入後にONTAP tools for VMware vSphereが登録用に接続するvCenter Serverインスタンスのログインクレデンシャル。
 . ブラウザキャッシュを削除します。
@@ -47,7 +47,7 @@ ONTAP tools for VMware vSphereの導入を開始する前に、ストレージ�
 .. プロトコル
 .. Kubernetesコントロールプレーンの仮想IPアドレス。
 .. [HA/non-HA]ドロップダウン
-.. ホスト名のリスト）
+.. ホスト名のリスト
 .. IPアドレス（文字列）
 .. コンテンツライブラリ名
 .. OVFテンプレート名

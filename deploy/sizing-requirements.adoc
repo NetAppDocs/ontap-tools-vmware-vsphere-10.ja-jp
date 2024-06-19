@@ -50,13 +50,10 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 | ONTAP | ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース 
 
 
-| VMware vSphere の場合 | VMware 7.0U3、8.0U1、または8.0U2 
-
-
 | ESXiホスト | ESXi 7.0.3 
 
 
-| vCenterサーバ | vCenter 7.0U3、8.0U1、または8.0U2 
+| vCenterサーバ | vCenter 7.0U3 
 
 
 | VASA Provider | 3.0 

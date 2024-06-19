@@ -45,7 +45,6 @@
   <block id="97157b0bbe0ba304414559c34c463fa8" category="section-title">ストレージとアプリケーションの最小要件：</block>
   <block id="17d884d1bc0b828c55d255e092457a6d" category="cell">ストレージ、ホスト、およびアプリケーション</block>
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
-  <block id="8887a9a417a1629326acdb917d224337" category="cell">VMware vSphere の場合</block>
   <block id="42094e9e4a0f05012b8d6753300a1657" category="cell">ESXiホスト</block>
   <block id="6a81c846c8c35b839d7586abc329dfda" category="cell">vCenterサーバ</block>
   <block id="cc7378d924a7a641ed80e623576e3981" category="cell">VASA Provider</block>
@@ -72,7 +71,6 @@
   <block id="0ab827837bc64b58b05cd348d8091ccd" category="list-text">[Enable ASUP]*チェックボックスはデフォルトで選択されています。</block>
   <block id="668e412f320c49b9f89a8e8605221e62" category="list-text">メンテナンスユーザのパスワード：「メンテナンスコンソールオプション」へのアクセスを許可するために使用します。</block>
   <block id="5465c5a8e21220567f3ba4f1efaac90d" category="list-text">[Customize template]*&gt;*Deployment Configuration *]ウィンドウで、次の詳細情報を入力します。</block>
-  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">ONTAP / SVMのパスワードを入力します。</block>
   <block id="08c09a05323f6950d8f48ace64dcce65" category="list-text">プライマリVMはデフォルトで有効になっています。この選択は変更しないでください。</block>
   <block id="c62a64bea2e2d5c666e24dfb5d069512" category="list-text">*テンプレートのカスタマイズ*&gt;*コンテンツライブラリの詳細*ウィンドウで、*コンテンツライブラリ名*と* OVFテンプレート名*を入力します。</block>
   <block id="263c52df144ff2a8cb1c5fb283b06e3b" category="list-text">[テンプレートのカスタマイズ]*&gt;[ノード構成]*ウィンドウで、3つすべてのノードのOVAのネットワークプロパティを入力します。</block>
@@ -847,9 +845,7 @@ vSphere 7.0U3からvSphere 8.0のバージョンでは、オプションが表�
   <block id="a57c0ce4d3d1909f36fd6d1a7910403f" category="cell">メモリ（GB）</block>
   <block id="7749f88b50568c3684b1ec4d9887097a" category="cell">最小バージョン要件</block>
   <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース</block>
-  <block id="4a5720859f5b334d0e52f781b6d0866b" category="cell">VMware 7.0U3、8.0U1、または8.0U2</block>
   <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
-  <block id="25ae27c71592ed325ef896fdb496c487" category="cell">vCenter 7.0U3、8.0U1、または8.0U2</block>
   <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1</block>
   <block id="4ee667a9190fbad5088c191cedc77afb" category="paragraph">ONTAP toolsの導入をカスタマイズするときは、いくつかの要件を考慮する必要があります。</block>
   <block id="4de4e6307c23d1e06ba251e848109d58" category="paragraph">管理者アカウントに割り当てられたパスワードです。セキュリティ上の理由から、パスワードの長さは8~30文字にすることを推奨します。パスワードには、最低1文字の上部、下部、1文字の数字、および特殊文字を使用します。</block>
@@ -929,9 +925,6 @@ vSphere 7.0U3からvSphere 8.0のバージョンでは、オプションが表�
 次の詳細を入力します。
 。アプリケーションのユーザ名とパスワード：このユーザ名とパスワードは、VASA ProviderとSRAの両方をvCenter Serverに登録するときに使用します。
 。[Enable ASUP]*チェックボックスはデフォルトで選択されています。</block>
-  <block id="51491a1b63f1ab74ff3d5c3f04737d97" category="paragraph">[+]
-AutoSupportを有効または無効にできるのは導入時のみです。</block>
-  <block id="06dada7d059c163e436d8babbfe496b2" category="list-text">管理者ユーザー名と管理者パスワード：ONTAPツールマネージャへのログインに使用するパスワードです。</block>
   <block id="2b86a57a5ac0aad5d414c4e50460a2d9" category="list-text">直接追加したSVMユーザアカウントを使用する場合は、*[SVMスコープを有効にする]*オプションを選択します。ONTAPクラスタを使用する場合は、このチェックボックスをオフにします。</block>
   <block id="7bf4b753fd6180b89cfa814803b686df" category="admonition">SVMスコープを有効にした場合は、管理IPアドレスでのSVMサポートをすでに有効にしておく必要があります。</block>
   <block id="5068ca71ed06e693eb275de382372bac" category="admonition">ここで提供された情報は、インストールプロセス中に適切なパターンについて検証されます。不一致がある場合は、Webコンソールにエラーメッセージが表示され、入力した誤った情報を修正するように求められます。</block>
@@ -1079,17 +1072,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="041bb037e3c06caf84dedc58c6457aab" category="list-text">[ネットワークの選択]ウィンドウで、各ソースネットワークの宛先ネットワークを選択します。</block>
   <block id="33f9aca743a2e76b383f29162f592587" category="admonition">ロードバランサのIPアドレスとKubernetes APIサーバのIPアドレスは保持する必要があります。ノードのIPアドレスを変更することも、同じIPアドレスを維持することもできます。</block>
   <block id="95a5639e9ced3c2a924d88f72bf15202" category="list-text">アプリケーションのユーザ名とパスワード：このユーザ名とパスワードは、VASA ProviderとSRAの両方をvCenter Serverに登録するときに使用します。初期導入時に指定したユーザ名とパスワードとは異なる場合があります。</block>
-  <block id="e0d1be9dd9681bb313cf7fc3d4d2466a" category="paragraph">AutoSupportを有効または無効にできるのは導入時のみです。</block>
-  <block id="d760d8124a3b7b4f25d7a060fbbe28c2" category="list-text">管理者ユーザー名と管理者パスワード：ONTAPツールマネージャへのログインに使用するパスワードです。初期導入時に指定したユーザ名とパスワードとは異なる場合があります。</block>
-  <block id="fbc464170efb8207d41115c5aa6b9f5c" category="list-text">maintenance user password：メンテナンスコンソールのオプションへのアクセスを許可する場合に使用します。</block>
-  <block id="56a705dd58842237be39c9dc6690dc11" category="list-text">[テンプレートのカスタマイズ]*&gt;[展開構成]*ウィンドウで、展開時に指定した詳細を入力します。このセクションの値は、データLIFの値を除き、初期導入時に指定した値と同じにする必要があります。</block>
-  <block id="1878c6b5e06a450ebbda55598dd1f46c" category="admonition">リカバリデータが格納されるストレージSVM名は変更しないでください。この環境によってSVMユーザアカウントも直接追加されました。</block>
-  <block id="8996b03753e9ce7a80c11afe0264c52b" category="list-text">HA導入のリカバリの場合は、次の詳細を指定します。</block>
-  <block id="1f53b41bbade1ab389a3607b4142c02b" category="list-text">コンテンツライブラリの詳細。</block>
-  <block id="740a5b1a45f3bf1d6aafe19c7e697d76" category="list-text">vCenterの設定の詳細。</block>
-  <block id="6451c3c167ea5dc647d10405f29fbe55" category="list-text">[Customize template]*&gt;[* Node Configuration]*ウィンドウで、リカバリしようとしているセットアップ（非HAまたはHAのセットアップ）に従って詳細を入力します。</block>
-  <block id="8c5fb624497b2b75cfb141fd905af66d" category="list-text">[OK]*または[キャンセル]*を選択すると、指定した値が再度検証されます。値を3回修正するためのプロビジョニングがあります。3回以内に修正しなかった場合は、製品のインストールが停止し、新しいVMでインストールを試すことをお勧めします。</block>
-  <block id="195da22c42b67fa5228bd7b955f4c001" category="list-text">インストールが完了すると、WebコンソールにONTAP tools for VMware vSphereの状態が表示されます。インストールが完了したら、のガイドラインに従ってハードウェア要件を手動で編集する必要があります。 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> ページ</block>
   <block id="dd47efe31efd4cc6180876f236c1c622" category="doc">ONTAP Tools for VMware vSphereのダウンロード</block>
   <block id="4c322557b2037165ab2dfd286fa6a839" category="paragraph">はダウンロードできます<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> のONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名済み証明書を含むファイル<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="5a3fc9b654cc05d821feead33114167a" category="paragraph">導入が完了すると、ONTAP Tools for VMware vSphereおよびVASA製品が環境にインストールされます。デフォルトでは、後続の導入モデルを決定し、要件に基づいてVASA Providerを有効にするかどうかを選択すると、すぐにONTAP Tools for VMware vSphereが機能し始めます。を参照してください <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block> を参照してください。</block>
@@ -1106,7 +1088,6 @@ HA構成にOVAを導入する前に、OVAを格納するコンテンツライブ
 事前に導入計画を立て、環境でONTAP tools for VMware vSphereをどのように設定するかを決めておきます。</block>
   <block id="e34466eda4e5b5f68501a10425c10513" category="paragraph">導入を進める前のONTAP Tools for VMware vSphereの要件は次のとおりです。</block>
   <block id="1584251f717b5c5b67df88454cbd8688" category="list-text">（任意）NetAppが提供するPostmanコレクションJSONファイルを自動化ユーザ収集するために使用します。</block>
-  <block id="44e7cf5dfde42bfb03c0f3e90458f84e" category="list-text">OVAを導入するための親vCenter Serverのクレデンシャル。</block>
   <block id="d8cea021ae68f06628331588ee1f7b9f" category="list-text">OVAが導入されているホストまたはリソースプールに、 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> セクション。</block>
   <block id="3aa072fa38b0383a0d289fde6a7bdb7c" category="list-text">導入後にONTAP tools for VMware vSphereが登録用に接続するvCenter Serverインスタンスのログインクレデンシャル。</block>
   <block id="0d129795e915c1dfe3e328d2bb4d641e" category="list-text">非HA環境では、3つの空きIPアドレスが必要です。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。
@@ -1128,7 +1109,6 @@ HA構成にOVAを導入する前に、OVAを格納するコンテンツライブ
   <block id="888a77f5ac0748b6c8001822417df8b6" category="list-text">プロトコル</block>
   <block id="85c3dba7de47b75da65759dc70b8b923" category="list-text">Kubernetesコントロールプレーンの仮想IPアドレス。</block>
   <block id="a3163c4ad052022f35412b6401e0b839" category="list-text">[HA/non-HA]ドロップダウン</block>
-  <block id="0013740280b976265b3a365f87034e52" category="list-text">ホスト名のリスト）</block>
   <block id="1d05598e5b2e831093de6c37162ef10e" category="list-text">IPアドレス（文字列）</block>
   <block id="511ff4e20173d429ce366128f541bc37" category="list-text">コンテンツライブラリ名</block>
   <block id="e32539630c3af1f9f5940e0473d0ed81" category="list-text">OVFテンプレート名</block>
@@ -1651,7 +1631,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">VMware vSphere のドキュメント：「ストレージプロバイダ設定の変更</block>
   <block id="b16f93be354af7771dc8708241003863" category="paragraph"><block ref="b16f93be354af7771dc8708241003863" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">ストレージ設定</block>
-  <block id="c98cb9d5c24721c2e52ce120aae0abef" category="paragraph">大規模な環境では、<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> および<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> タイムアウト間隔を99、999秒に設定します。</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定したタイムアウト間隔が最大値です。最大タイムアウトに達することはありません。ほとんどのコマンドは、設定された最大タイムアウト間隔内に終了します。</block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">詳細については、 SAN プロバイダの設定の変更に関する VMware のドキュメントを参照してください。</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">VMware Site Recovery Manager のドキュメント：「ストレージ設定の変更</block>
@@ -1867,4 +1846,39 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">レプリケートされたストレージシステムを確認</block>
   <block id="437c283786a19efa2a883c2776477f2a" category="sidebar">最新バージョンのONTAP Tools for VMware vSphereに移行する</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">ONTAP ツールをアップグレードする</block>
+  <block id="42ac03a8bab25efc61489f3923976820" category="summary">ONTAP tools Managerのパスワードを忘れた場合は、ONTAP tools for VMware vSphereメンテナンスコンソールで生成されたトークンを使用して管理者クレデンシャルをリセットできます。</block>
+  <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">タイムアウトに達した場合は、<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> および<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 値を大きくします。</block>
+  <block id="2aa80bb65f090b8d6c9ff632d1836a2b" category="list-text">OVAを導入するための親vCenter Serverのクレデンシャル。vCenter Serverの親のパスワードに次の特殊文字を使用することはできません（$、'、"）。</block>
+  <block id="7443ebb7d3e5fd61a07b688ed33f3c1c" category="list-text">ホスト名のリスト</block>
+  <block id="78188fd22202c681b7a1e12f470fb065" category="paragraph">AutoSupportを有効または無効にできるのは導入時のみです。
+。[ASUPプロキシURL]*フィールドに、AutoSupportデータ転送用のファイアウォールブロックを回避するためにこのURLを指定します。
+。管理者ユーザー名と管理者パスワード：ONTAPツールマネージャへのログインに使用するパスワードです。初期導入時に指定したユーザ名とパスワードとは異なる場合があります。
+。[NTP Servers]フィールドにNTPサーバ情報を入力します。
+。maintenance user password：メンテナンスコンソールのオプションへのアクセスを許可する場合に使用します。
+。[テンプレートのカスタマイズ]*&gt;[展開構成]*ウィンドウで、展開時に指定した詳細を入力します。このセクションの値は、データLIFの値を除き、初期導入時に指定した値と同じにする必要があります。</block>
+  <block id="59ccb8025c048802013b2da5a2e36f2e" category="admonition">リカバリデータが格納されるストレージSVM名は変更しないでください。この環境によってSVMユーザアカウントも直接追加されました。
+。HA導入のリカバリの場合は、次の詳細を指定します。
+。コンテンツライブラリの詳細。
+。vCenterの設定の詳細。
+。[Customize template]*&gt;[* Node Configuration]*ウィンドウで、リカバリしようとしているセットアップ（非HAまたはHAのセットアップ）に従って詳細を入力します。
+。[選択内容の確認]ウィンドウで詳細を確認し、*[終了]*を選択します。</block>
+  <block id="4a3c1579f0245205d5b4f1e7a0fb0199" category="paragraph">[+]
+導入タスクが作成されると、進行状況がvSphereタスクバーに表示されます。
+。タスクが完了したら、VMの電源をオンにします。</block>
+  <block id="ac13898d80338928a374c608bab436b1" category="paragraph">[+]
+インストールが開始されます。インストールの進行状況は、VMのWebコンソールで追跡できます。
+インストールの一環として、ノードの設定が検証されます。OVFフォームの[Customize template]の下のさまざまなセクションで入力された内容が検証されます。不一致がある場合は、修正措置を講じるように求めるダイアログが表示されます。
+。ダイアログプロンプトで必要な変更を行います。タブボタンを使用してパネルを移動し、* OK *または*キャンセル*の値を入力します。
+。[OK]*または[キャンセル]*を選択すると、指定した値が再度検証されます。値を3回修正するためのプロビジョニングがあります。3回以内に修正しなかった場合は、製品のインストールが停止し、新しいVMでインストールを試すことをお勧めします。
+。インストールが完了すると、WebコンソールにONTAP tools for VMware vSphereの状態が表示されます。インストールが完了したら、のガイドラインに従ってハードウェア要件を手動で編集する必要があります。 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> ページ</block>
+  <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0U3</block>
+  <block id="b5a405460149721025d3f0b33b133321" category="list-text">ONTAP / SVMのパスワードを入力します。このStorage VMのONTAP / SVMのログインパスワードに特殊文字（$、'、"）を使用することはできません。</block>
+  <block id="94f46bf8acbeafbae8c2da9d2cc27158" category="paragraph">AutoSupportを有効または無効にできるのは導入時のみです。
+。[ASUPプロキシURL]*フィールドに、AutoSupportデータ転送用のファイアウォールブロックを回避するためにこのURLを指定します。
+。管理者ユーザー名と管理者パスワード：ONTAPツールマネージャへのログインに使用するパスワードです。
+。[NTP Servers]フィールドにNTPサーバ情報を入力します。
+。メンテナンスユーザのパスワード：「メンテナンスコンソールオプション」へのアクセスを許可するために使用します。
+。[Customize template]*&gt;*Deployment Configuration *]ウィンドウで、次の詳細情報を入力します。</block>
+  <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">[+]
+<block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
