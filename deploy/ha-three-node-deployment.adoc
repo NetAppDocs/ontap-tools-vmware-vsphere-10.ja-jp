@@ -36,6 +36,10 @@ NOTE: 導入を進める前に、ONTAPツールのインストール中に、イ
 +
 .. vSphereサーバにログインします。
 .. OVAを導入するリソースプールまたはホストに移動し、VMの導入先を右クリックして*[Deploy OVF template...]*を選択します。
++
+
+NOTE: 管理対象のVVOLデータストアには、ONTAP tools VMware vSphere仮想マシンを導入しないでください。
+
 .. _.ova_fileのURLを入力するか、または_.ova_fileが保存されているフォルダを参照して、*[Next]*を選択します。
 
 

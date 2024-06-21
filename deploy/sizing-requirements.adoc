@@ -18,7 +18,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 * *ノードあたりのインストールパッケージのスペース要件*
 +
 ** シンプロビジョニング環境の場合は10GB
-** シックプロビジョニングの場合は200GB
+** シックプロビジョニングの場合は248GB
 
 
 * *ノードあたりのホストシステムのサイジング要件*
