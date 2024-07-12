@@ -13,7 +13,7 @@ summary: Delete datastore action：データストアを削除します。NFSま
 [role="lead"]
 [データストアからのストレージの削除]操作は、vCenter Serverで検出または管理されるすべてのONTAP tools for VMware vSphere vVolデータストアでサポートされます。この操作により、vVolデータストアからボリュームを削除できます。
 
-[削除]オプションは、特定のボリュームにvVolがある場合は無効になります。データストアからのボリュームの削除に加えて、ONTAPストレージ上の選択したボリュームも削除できます。
+削除オプションは、特定のボリュームにVVolがある場合は無効になります。データストアからのボリュームの削除に加えて、ONTAPストレージ上の選択したボリュームも削除できます。
 
 vCenter ServerのONTAP tools for VMware vSphereからデータストアを削除すると、次の処理が実行されます。
 

@@ -22,9 +22,9 @@ entries:
     url: "/configure/esxi-host-values.html"
 - title: ストレージシステムとホストを検出
   url: "/configure/discover-storage-systems-and-hosts.html"
-- title: ストレージバックエンドの追加
+- title: ストレージバックエンドを追加します
   url: "/configure/add-storage-backend.html"
-- title: ストレージバックエンドとvCenter Serverの関連付け
+- title: ストレージバックエンドとvCenter Serverインスタンスの関連付け
   url: "/configure/associate-storage-backend.html"
 - title: ネットワークアクセスの設定
   url: "/configure/configure-network-access.html"
@@ -32,5 +32,5 @@ entries:
   url: "/configure/configure-user-role-and-privileges.html"
 - title: NetApp ONTAP Tools for VMware vSphereプラグインダッシュボードの概要
   url: "/configure/dashboard-overview.html"
-- title: データストアの作成
+- title: データストアを作成
   url: "/configure/create-vvols-datastore.html"

@@ -35,13 +35,19 @@ LUNは、Storage Area Network（SAN；ストレージエリアネットワーク
 
 === ONTAPツールマネージャ
 
-ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスやオンボードストレージバックエンドに対して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。ONTAP Tools Mangerは、vCenter Serverインスタンス、ストレージバックエンド、証明書、パスワード、およびログバンドルのダウンロードを管理するのに役立ちます。
+ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスやオンボードストレージバックエンドに対して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。ONTAP Tools Mangerを使用すると、vCenter Serverインスタンス、ストレージバックエンド、証明書、パスワード、ログバンドルのダウンロードを管理できます。
 
 
 
 === Open Virtual Appliance（OVA；オープン仮想アプライアンス）
 
 OVAは、仮想マシン上で実行する必要がある仮想アプライアンスまたはソフトウェアをパッケージ化して配布するためのオープンスタンダードです。
+
+
+
+=== SnapMirrorアクティブ（SMAS）
+
+SnapMirror Active Syncを使用すると、サイト全体に障害が発生してもビジネスサービスの運用を継続できるため、アプリケーションをセカンダリコピーを使用して透過的にフェイルオーバーできます。SnapMirror Active Syncでフェイルオーバーをトリガーするには、手動操作やカスタムスクリプトが必要です。
 
 
 

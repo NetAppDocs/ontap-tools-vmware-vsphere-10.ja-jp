@@ -54,7 +54,7 @@ summary: 大規模な環境で最適なパフォーマンスを実現するに�
 |===
 また、を有効にする必要があります `StorageProvider.autoResignatureMode` オプション
 
-ストレージプロバイダの設定を変更する方法の詳細については、 VMware のドキュメントを参照してください。
+ストレージプロバイダの設定の変更の詳細については、VMwareのドキュメントを参照してください。
 
 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere のドキュメント：「ストレージプロバイダ設定の変更"]
 
@@ -67,6 +67,6 @@ https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GU
 
 NOTE: 指定したタイムアウト間隔が最大値です。最大タイムアウトに達することはありません。ほとんどのコマンドは、設定された最大タイムアウト間隔内に終了します。
 
-詳細については、 SAN プロバイダの設定の変更に関する VMware のドキュメントを参照してください。
+詳細については、SANプロバイダの設定の変更に関するVMwareのドキュメントを参照してください。
 
 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager のドキュメント：「ストレージ設定の変更"]

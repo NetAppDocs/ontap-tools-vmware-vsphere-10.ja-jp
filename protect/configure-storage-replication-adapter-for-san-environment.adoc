@@ -38,7 +38,7 @@ https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 
 
 . 保護対象サイトで、プライマリ ESXi ホストがプライマリストレージシステムの LUN に接続されていることを確認します。
 . LUNが含まれているigroupにが含まれていることを確認します `ostype` プライマリストレージシステムでオプションを_vmware_に設定します。
-. リカバリサイトのESXiホストからStorage Virtual Machine（SVM）への適切なiSCSI接続が確立されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスできる必要があります。同様に、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。
+. リカバリサイトのESXiホストからStorage Virtual Machine（SVM）への適切なiSCSI接続が確立されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスでき、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。
 +
 そのためには、ESXiホストのSVMでローカルLUNが接続されていることを確認するか、または `iscsi show initiators` SVMでコマンドを実行します。
 ESXiホストでマッピングされたLUNへのLUNアクセスをチェックして、iSCSI接続を確認します。
@@ -47,7 +47,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
 
 
 
-== NAS環境用のSRAの設定
+== NAS環境向けのSRAの設定
 
 * 必要なもの *
 

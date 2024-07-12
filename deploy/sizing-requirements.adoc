@@ -41,13 +41,13 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 |===
 
 
-== ストレージとアプリケーションの最小要件：
+== ストレージとアプリケーションの最小要件
 
 |===
 | ストレージ、ホスト、およびアプリケーション | 最小バージョン要件 
 
 
-| ONTAP | ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース 
+| ONTAP | ONTAP 9.13.1、9.14.1、および9.15.1の最新パッチリリース。 
 
 
 | ESXiホスト | ESXi 7.0.3 
@@ -59,7 +59,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 | VASA Provider | 3.0 
 
 
-| OVAアプリケーション | 10.1 
+| OVAアプリケーション | 10.2 
 |===
 サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
 

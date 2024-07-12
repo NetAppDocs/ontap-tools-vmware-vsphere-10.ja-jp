@@ -11,7 +11,7 @@ summary: ONTAP tools Managerを使用すると、VMware vSphere管理者向け�
 
 
 [role="lead"]
-ONTAP Tools for VMware vSphereは、複数のvCenter Serverインスタンスを管理するマルチテナントシステムです。ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスやオンボードストレージバックエンドに対して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。
+ONTAP Tools for VMware vSphereは、複数のvCenter Serverインスタンスを管理できるマルチテナントシステムです。ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスとオンボードストレージバックエンドを使用して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。
 
 ONTAP Tools Managerは、次のことを支援します。
 
