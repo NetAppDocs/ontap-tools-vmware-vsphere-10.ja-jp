@@ -66,5 +66,3 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: ボリュームをクリーンアップ
   url: "/manage/delete-deployment.html"
-- title: ホストクラスタの保護
-  url: "/manage/protect-cluster.html"

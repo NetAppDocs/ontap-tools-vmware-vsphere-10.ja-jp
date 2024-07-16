@@ -62,7 +62,7 @@ image:../media/ha-deploy-config.png["導入構成"]
 
 NOTE: SVMスコープを有効にした場合は、管理IPアドレスでのSVMサポートをすでに有効にしておく必要があります。
 
-. [プロトコル]*フィールドで、NFS、iSCSI、NVMe/TCP、またはNVMe/FCを選択します。
+. [プロトコル]*フィールドでNFSまたはiSCSIを選択します。
 . [ONTAP / SVM管理LIF]フィールドに、ONTAPクラスタまたはSVM管理IPアドレスを入力します。
 . ONTAPクラスタまたはSVM ONTAP/SVMデータLIFを入力します。データLIFは選択したプロトコルに属している必要があります。たとえば、iSCSIプロトコルを選択した場合は、iSCSIデータLIFを指定する必要があります。
 . Storage VMについては、ONTAPのデフォルトのStorage VMの詳細を指定するか、新しいStorage VMを作成するかを選択できます。[SVMスコープを有効にする]を選択した場合は、*[Storage VM]*フィールドには値を入力しないでください。このフィールドは無視されます。

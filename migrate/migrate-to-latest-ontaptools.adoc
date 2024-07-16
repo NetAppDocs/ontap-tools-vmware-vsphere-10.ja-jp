@@ -18,7 +18,7 @@ NOTE: ONTAP tools for VMware vSphere 9.xxのセットアップは、VASA Provide
 
 * このタスクについて *
 
-ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.2リリースへの移行がサポートされます。
+ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.1リリースへの移行がサポートされます。
 
 
 NOTE: 既存のユーザは、パッチリリースにアップグレードする前に、現在のリリースからOVAバックアップを作成する必要があります。
@@ -27,10 +27,10 @@ NOTE: 既存のユーザは、パッチリリースにアップグレードす�
 
 == 一般的な移行手順
 
-. ONTAP tools for VMware vSphere 10.2リリース向けOVAを導入します。
-. ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加と管理"]
+. ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。
+. ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加と管理"]
 . ONTAP Tools for VMware vSphereプラグインvCenter APIを使用して、ストレージバックエンドをローカルでオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
-. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.2に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。
+. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.1に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。
 
 
 
@@ -56,7 +56,7 @@ NOTE: フェイルオーバーが完了して再保護が保留になってい�
 
 
 
-. の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.2 SRAアダプタをインストールします。 link:../protect/configure-on-srm-appliance.html["SRMアプライアンスでSRAを設定する"]
+. の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.1 SRAアダプタをインストールします。 link:../protect/configure-on-srm-appliance.html["SRMアプライアンスでSRAを設定する"]
 . SRM UIページで、*[アレイの検出]*処理と*[デバイスの検出]*処理を実行し、デバイスが移行前の状態になっていることを確認します。
 
 
@@ -70,8 +70,8 @@ NOTE: フェイルオーバーが完了して再保護が保留になってい�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. ONTAP tools for VMware vSphere 10.2リリース向けOVAを導入します。
-. ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照して link:../configure/add-vcenter.html["vCenter Serverインスタンスを追加する"]
+. ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。
+. ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照して link:../configure/add-vcenter.html["vCenter Serverインスタンスを追加する"]
 . リモートのプラグインvCenter APIからローカルでストレージバックエンドをオンボードする。移行対象としてローカルスコープのストレージを追加します。
 . 移行する次のAPI呼び出しを問題します。
 +
@@ -222,7 +222,7 @@ NOTE: UUIDは、移行後のAPIの応答で返された移行UUIDです。
 ====
 
 
-移行が完了したら、ONTAP tools 10.2をvCenter Serverに登録したら、次の手順を実行します。
+移行が完了したら、ONTAP tools 10.1をvCenter Serverに登録したら、次の手順を実行します。
 
 * すべてのホストで証明書を更新します。
 * しばらくしてからデータストア（DS）および仮想マシン（VM）の処理を実行します。待機時間は、セットアップに含まれるホスト、DS、VMの数によって異なります。待機しないと、操作が断続的に失敗する可能性があります。

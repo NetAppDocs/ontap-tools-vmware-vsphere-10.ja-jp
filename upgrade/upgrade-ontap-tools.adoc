@@ -2,7 +2,7 @@
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
 keywords: upgrade 
-summary: ONTAP tools for VMware vSphere 10.0および10.1から10.2にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。 
+summary: ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。 
 ---
 = ONTAP ツールの最新リリースにアップグレードします
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphere 10.0および10.1から10.2にアップ�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 10.0および10.1から10.2にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。構成のリカバリが必要な場合は、リカバリボリュームを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。ONTAP tools for VMware vSphere 10.2のパッチレベルアップグレードを実行する場合は、同じリカバリボリュームが使用され、詳細が更新されます。アップグレードは、HA構成と非HA構成の両方でサポートされます。
+ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。構成のリカバリが必要な場合は、リカバリボリュームを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。ONTAP tools for VMware vSphere 10.1のパッチレベルアップグレードを実行する場合は、同じリカバリボリュームが使用され、詳細が更新されます。アップグレードは、HA構成と非HA構成の両方でサポートされます。
 
 * 始める前に *
 

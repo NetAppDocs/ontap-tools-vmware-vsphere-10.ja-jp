@@ -1776,7 +1776,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ab912edc5760deb33b4733d3d0cd7edc" category="list-text">ページの右側にある*[作成]*を選択します。</block>
   <block id="1b363a673c183e8f6180915f94b60037" category="list-text">ページの右側の*[Actions]*を選択し、*[Import item]*を選択してOVAファイルをインポートします。</block>
   <block id="a640a03a856b5e3aae702472813c834b" category="list-text">管理者のユーザー名と管理者のパスワード：ONTAP tools Managerへのログインに使用するパスワードです。</block>
-  <block id="e4784e1bb3bd818491d6767390ee6d49" category="list-text">[プロトコル]*フィールドで、NFS、iSCSI、NVMe/TCP、またはNVMe/FCを選択します。</block>
   <block id="7fba027b53fe0361b3e204e33ff5d78d" category="list-text">ONTAP / SVMのユーザ名を入力します。高度な導入またはHA導入の場合にTridentでサービスのデータを格納するボリュームを作成し、ノード障害時にボリュームからデータをリカバリするには、ONTAP / SVMのユーザ名とパスワードが必要です。</block>
   <block id="5152e3b7ceb6dfd9a3bf166aa65ef895" category="list-text">デュアルスタックが必要な場合にのみ、導入されたネットワーク上のIPv6アドレスを入力します。</block>
   <block id="d41b8ccbeee15bda2042a49f14f4aa0c" category="paragraph">インストールが開始されます。インストールの進行状況は、VMのWebコンソールで追跡できます。インストールの一環として、ノード構成が検証されます。OVFフォームの[Customize template]の下のさまざまなセクションで入力された内容が検証されます。不一致がある場合は、修正措置を講じるように求めるダイアログが表示されます。</block>
@@ -1790,8 +1789,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="e3737327f930d4c72818d209bfcf6259" category="paragraph">AutoSupportを有効または無効にできるのは導入時のみです。..[ASUPプロキシURL]*フィールドに、AutoSupportデータ転送用のファイアウォールブロックを回避するためにこのURLを指定します。..管理者のユーザー名と管理者のパスワード：ONTAPツールマネージャへのログインに使用するパスワードです。初期導入時に指定したユーザ名とパスワードとは異なる場合があります。..[NTP Servers]フィールドにNTPサーバ情報を入力します。..maintenance user password：メンテナンスコンソールのオプションへのアクセスを許可する場合に使用します。です。[テンプレートのカスタマイズ]*&gt;[展開構成]*ウィンドウで、展開時に指定した詳細を入力します。このセクションの値は、データLIFの値を除き、初期導入時に指定した値と同じにする必要があります。</block>
   <block id="8d6f4234d5e392c6af4a7f7a63466a02" category="paragraph">+インストールが開始されます。インストールの進行状況は、VMのWebコンソールで追跡できます。インストールの一環として、ノード構成が検証されます。OVFフォームの[Customize template]の下のさまざまなセクションで入力された内容が検証されます。不一致がある場合は、修正措置を講じるように求めるダイアログが表示されます。です。ダイアログプロンプトで必要な変更を行います。タブボタンを使用してパネルを移動し、* OK *または*キャンセル*の値を入力します。です。[OK]*または[キャンセル]*を選択すると、指定した値が再度検証されます。ONTAP Tools for VMwareでは、無効な値の修正を3回試行できます。3回試行しても問題を修正できない場合は、製品のインストールが停止し、新しいVMでインストールを試すことを推奨します。です。インストールが完了すると、WebコンソールにONTAP tools for VMware vSphereの状態が表示されます。インストールが完了したら、ページのガイドラインに従ってハードウェア要件を手動で編集する必要があります <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 。</block>
   <block id="51bc5399ec09a540c942908f434a6727" category="section-title">ストレージとアプリケーションの最小要件</block>
-  <block id="6e49cbaea696f892ae53c9a0995b93cd" category="cell">ONTAP 9.13.1、9.14.1、および9.15.1の最新パッチリリース。</block>
-  <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2</block>
   <block id="4bcb36ab655842162169378c79643b23" category="summary">ONTAP tools for VMware vSphereの単一インスタンスで、複数のvCenter Serverインスタンスを管理できます。ONTAP Tools for VMware vSphereは、VASA Provider用の自己署名証明書を使用して導入されます。これにより、vVolデータストアに対して管理できるvCenter Serverインスタンスは1つだけです。</block>
   <block id="c461f736da6382202e4d5e2cb330125b" category="paragraph">ONTAP tools for VMware vSphereの単一インスタンスで、複数のvCenter Serverインスタンスを管理できます。ONTAP Tools for VMware vSphereは、VASA Provider用の自己署名証明書を使用して導入されます。これにより、vVolデータストアに対して管理できるvCenter Serverインスタンスは1つだけです。複数のvCenter Serverインスタンスを管理していて、複数のvCenter ServerインスタンスでVVol機能を有効にする場合は、ONTAP tools Managerインターフェイスを使用して自己署名証明書をカスタムCA証明書に変更する必要があります。同じインターフェイスを使用して、すべての証明書を更新または更新できます。</block>
   <block id="a2587697ec1c091500e1ebcb1fb42235" category="list-text">[証明書をカスタムCA *にアップグレード]ポップアップで、サーバ証明書、サーバ証明書の秘密鍵、ルートCA証明書、および中間証明書のファイルをアップロードします。ツールヒントには証明書の概要が表示されます。</block>
@@ -1812,18 +1809,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="942cf885b18078ee60d85d8f60fdd3bb" category="list-text">[ストレージのみを変更]*を選択し、*[次へ]*をクリックします。</block>
   <block id="ad4926bc91a1588104b73a5c2567773a" category="list-text">仮想ディスクの形式、VMストレージポリシー、および移行するデータストアの機能に一致するVVolデータストアを選択します。「 * 次へ * 」をクリックします。</block>
   <block id="4f3d8287647170b16320a50c9b202bcf" category="doc">vVolデータストアのマウント</block>
-  <block id="36e1355079ba82b06508974d2c01905d" category="doc">ホストクラスタの保護</block>
-  <block id="df5fc4c5860b228222af73dea5081d49" category="paragraph">選択したSVMに属する（クラスタの1つ以上のホストにマウントされている）すべてのデータストアが、ホストクラスタの下で（SMAの場合）保護されます。</block>
-  <block id="33e9b7450e4681b65d656e9bf374d3a2" category="paragraph">ホストクラスタを保護する前に、次の条件を満たしていることを確認してください。ホストクラスタには、1つのSVMのデータストアのみがあります。SVM（SB）のバージョンが9.15.1よりもあとである必要があります。ホストクラスタにマウントされたデータストアは、クラスタ外のホストにはマウントしないでください。です。ホストクラスタにマウントされたすべてのデータストアがVMFSデータストアである必要があります。です。ホストクラスタにマウントされたデータストアを形成しているFlexVolまたはLUNが、既存のCGに含まれていないことを確認してください。です。FlexVolまたはLUNをSnapMirror関係に含めることはできません。</block>
-  <block id="2a1efdf83826a56993bfba5b5a635373" category="list-text">ホストクラスタを右クリックし、* NetApp ONTAP tools *&gt;*[クラスタの保護]*を選択します。</block>
-  <block id="5cef65058acde71f54351729c4d4aae0" category="list-text">[クラスタの保護]ウィンドウで、保護するデータストアの保護設定を入力します。ホストクラスタには、1つのSVM（クラスタ）のデータストアのみを含めることができます。</block>
-  <block id="f602a92649e69bfb5e514f1f7e6ec2e3" category="list-text">いずれかのターゲットONTAPクラスタと[Storage VM]オプションを選択します。</block>
-  <block id="4edbc81d130e38bf5282945e677bae74" category="list-text">データストアの元のボリュームにローカルSnapshotポリシーを適用する場合は、*[ローカルSnapshotを有効にする]*チェックボックスを選択します。</block>
-  <block id="d8377abd09ba6f445ff59b4cd7998e60" category="list-text">選択したAutomatedFailoverDuplexポリシー、ターゲットクラスタ、およびターゲットStorage VMでデータストアを保護する場合は、の*[Enable SnapMirror]*チェックボックスをオンにし、*[Add Relationship]*をオンにします。</block>
-  <block id="2fd9549357e908dd8c088fe87589817e" category="list-text">均一な構成の場合は、*[ホスト構成の均一化]*トグルボタンをtrueに選択します。</block>
-  <block id="cc86829e222178f4a897942d9fe91b66" category="list-text">統一されたホスト構成トグルボタンの選択に応じて、各ホストに* Host Proximity *または* Access *を提供します。</block>
-  <block id="7b1742183451ff119f53d562e7bbe3c5" category="list-text">概要ページを確認し、[Protect]を選択します。</block>
-  <block id="5d641001c5c7b915643b5170f746e9be" category="paragraph">タスクがvCenter上に作成されます。生成されたジョブIDを使用してタスクを監視します。</block>
   <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">ONTAP Tools for VMware vSphereプラグインは、仮想マシンとデータストアのレポートを提供します。vCenterクライアントのショートカットセクションでNetApp ONTAP tools for VMware vSphereプラグインのアイコンを選択すると、ユーザインターフェイスが概要ページに移動します。[レポート]タブを選択して、仮想マシンとデータストアのレポートを表示します。</block>
   <block id="f7a2e0b6ed3f51220e81b2d1a0df9298" category="paragraph">Virtual Machinesレポートには、検出された仮想マシン（ONTAPストレージベースのデータストアのディスクが少なくとも1本必要）のリストとパフォーマンス指標が表示されます。VMレコードを展開すると、ディスクに関連するすべてのデータストア情報が表示されます。</block>
   <block id="4e740e8d009ff8d0ca15216304e1e027" category="paragraph">[列の管理]オプションを使用すると、さまざまな列の表示と非表示を切り替えることができます。</block>
@@ -1844,15 +1829,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">vCenterクレデンシャルを更新するには、次のコマンドを実行します。</block>
   <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">データLIFを更新するには、次のコマンドを実行します。</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">右側のペインで* Monitor *タブをクリックします。</block>
-  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.2リリースへの移行がサポートされます。</block>
-  <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">ONTAP tools for VMware vSphere 10.2リリース向けOVAを導入します。</block>
-  <block id="bd0f2e6bf32427dcda6828d92fdc2bb7" category="list-text">ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照し <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
-  <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.2に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。</block>
-  <block id="6d97df629c9c16b4d9a0dcf9a97cf50d" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.2 SRAアダプタをインストールします。 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
-  <block id="f2f34eedd3398b474ec363008e4f96c1" category="list-text">ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照して <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">ONTAP tools for VMware vSphereストレージプロバイダをvCenter Serverおよびに追加します <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">古いVASAプロバイダが停止すると、vCenter ServerはONTAP tools for VMware vSphereにフェイルオーバーします。すべてのデータストアとVMにアクセスし、ONTAP Tools for VMware vSphereからアクセスできます。</block>
-  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">移行が完了したら、ONTAP tools 10.2をvCenter Serverに登録したら、次の手順を実行します。</block>
   <block id="aa37ece429cdd8d8eb8497434085200a" category="summary">SRMアプライアンスを導入したら、SRMアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、ディザスタリカバリ管理のためにSRMアプライアンスがSRAと通信できるようになります。SRMアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereクレデンシャル\（IPアドレスと管理者パスワード\）をSRMアプライアンスに保存する必要があります。</block>
   <block id="7f1de51a94944bdde2c4458094963297" category="paragraph">SRMアプライアンスを導入したら、SRMアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、ディザスタリカバリ管理のためにSRMアプライアンスがSRAと通信できるようになります。SRMアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereクレデンシャル（IPアドレス）をSRMアプライアンスに保存する必要があります。</block>
   <block id="3eed86b47b47a45bf41f076589a64165" category="paragraph">SRMアプライアンスでSRAを設定すると、SRAクレデンシャルがSRMアプライアンスに保存されます。</block>
@@ -1875,8 +1853,18 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d43a71ae180632566a3e174280cb4453" category="paragraph">トピックに記載されている手順を実行しておく必要があります <block ref="2844354f8ed275182ec054cfc4f78370" category="inline-link-macro-rx"></block>。</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Perlコマンドを実行して、SRAに新しいクレデンシャルを設定します。</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">必要なアレイペアを選択し、対応する詳細を確認します。</block>
-  <block id="cfde4c1ad1c585a7cc3eb6944c2c2297" category="summary">ONTAP tools for VMware vSphere 10.0および10.1から10.2にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。</block>
-  <block id="a24408ea1ff869c3683365ba548dfa2d" category="paragraph">ONTAP tools for VMware vSphere 10.0および10.1から10.2にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。構成のリカバリが必要な場合は、リカバリボリュームを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。ONTAP tools for VMware vSphere 10.2のパッチレベルアップグレードを実行する場合は、同じリカバリボリュームが使用され、詳細が更新されます。アップグレードは、HA構成と非HA構成の両方でサポートされます。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*</block>
-  <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">ONTAP Tools for VMware vSphere 10.2のドキュメント</block>
+  <block id="6d2010d4e5297c8351863ce46a5c8da3" category="list-text">[プロトコル]*フィールドでNFSまたはiSCSIを選択します。</block>
+  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース</block>
+  <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1</block>
+  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.1リリースへの移行がサポートされます。</block>
+  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。</block>
+  <block id="9f24f41794806941dd2aeb79a4491cc8" category="list-text">ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照し <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
+  <block id="4a03a1c1f0cc7fc87194ca50c15f95d1" category="list-text">ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.1に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。</block>
+  <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.1 SRAアダプタをインストールします。 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
+  <block id="c75271fb1b456df4f20e50dc78c6f11d" category="list-text">ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照して <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
+  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">移行が完了したら、ONTAP tools 10.1をvCenter Serverに登録したら、次の手順を実行します。</block>
+  <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。</block>
+  <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。構成のリカバリが必要な場合は、リカバリボリュームを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。ONTAP tools for VMware vSphere 10.1のパッチレベルアップグレードを実行する場合は、同じリカバリボリュームが使用され、詳細が更新されます。アップグレードは、HA構成と非HA構成の両方でサポートされます。</block>
+  <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">ONTAP Tools for VMware vSphere 10.1のドキュメント</block>
 </blocks>
