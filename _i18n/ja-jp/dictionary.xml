@@ -188,10 +188,6 @@
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">入力するコマンド<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> [Support and Diagnostics]を選択します。</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">入力するコマンド<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> [Access diagnostic shell]を選択します。</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">入力するコマンド<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 続行してください。</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">必要に応じてクレデンシャルを更新します。</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">otv-update -- ontapUsername &lt;new username&gt;-- ontapPassword &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">otv-update -- vcenterUsername &lt;new username&gt;-- vcenterPassword &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">otv-update --dataLif &lt;新しいDatalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">再生ボタン</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">* コンソール・メニュー *</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">* オプション *</block>
@@ -1696,7 +1692,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
 導入タスクが作成されると、進行状況がvSphereタスクバーに表示されます。
 。タスクが完了したら、VMの電源をオンにします。</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0U3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">ONTAP / SVMのパスワードを入力します。このStorage VMのONTAP / SVMのログインパスワードに特殊文字（$、'、"）を使用することはできません。</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">[+]
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">管理対象のVVOLデータストアには、ONTAP tools VMware vSphere仮想マシンを導入しないでください。</block>
@@ -1825,9 +1820,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">ストレージバックエンドの削除</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">ストレージバックエンドを削除する前に、ストレージバックエンドに接続されているすべてのデータストアを削除する必要があります。ストレージバックエンドを削除するには、次の手順を実行します。</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">右ペインの*[設定]*タブをクリックします。</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">ONTAPクレデンシャルを更新するには、次のコマンドを実行します。</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">vCenterクレデンシャルを更新するには、次のコマンドを実行します。</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">データLIFを更新するには、次のコマンドを実行します。</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">右側のペインで* Monitor *タブをクリックします。</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">ONTAP tools for VMware vSphereストレージプロバイダをvCenter Serverおよびに追加します <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">古いVASAプロバイダが停止すると、vCenter ServerはONTAP tools for VMware vSphereにフェイルオーバーします。すべてのデータストアとVMにアクセスし、ONTAP Tools for VMware vSphereからアクセスできます。</block>
@@ -1867,4 +1859,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。構成のリカバリが必要な場合は、リカバリボリュームを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。ONTAP tools for VMware vSphere 10.1のパッチレベルアップグレードを実行する場合は、同じリカバリボリュームが使用され、詳細が更新されます。アップグレードは、HA構成と非HA構成の両方でサポートされます。</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">ONTAP Tools for VMware vSphere 10.1のドキュメント</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">ONTAP / SVMのパスワードを入力します。</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">と入力<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> して[System Configuration Menu]を選択します。</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">と入力<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> してONTAP資格情報を変更します。</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">と入力<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> してvCenterクレデンシャルを変更する。</block>
 </blocks>
