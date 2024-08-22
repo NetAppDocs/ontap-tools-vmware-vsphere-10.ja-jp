@@ -18,7 +18,7 @@ ONTAP toolsのメンテナンスコンソールを使用して、アプリケー
 
 NOTE: のパスワードを設定する必要があります。 `diag` ユーザがリモート診断を有効にしています。
 
-メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。をクリックします image:../media/launch-maintenance-console.gif["再生ボタン"]をクリックすると、メンテナンスコンソールが起動します。
+メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。をクリックすると、image:../media/launch-maintenance-console.gif["再生ボタン"]メンテナンスコンソールが起動します。
 
 |===
 

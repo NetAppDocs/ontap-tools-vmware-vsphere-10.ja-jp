@@ -24,9 +24,6 @@ NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM
 * ストレージバックエンドの管理者権限でログインしている必要があります。
 
 
-
-NOTE: ユーザはクラスタレベルまたはSVMレベルで作成できます。user_roles.jsonファイルを使用せずにユーザを作成することもできます。作成した場合は、SVMレベルの最小限の権限セットが必要になります。
-
 * 手順 *
 
 . ダウンロードした_\ https：//<loadbalancerIP>：8443 /virtualization/user-privileges/users_roles.zip_fileを展開します。

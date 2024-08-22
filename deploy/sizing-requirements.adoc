@@ -28,7 +28,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 |===
 
 
-| 導入のタイプ | CPU | メモリ（GB） 
+| *展開の種類* | * CPU * | *メモリ（GB）* 
 
 
 | 小（S） | 8 | 16 
@@ -39,6 +39,8 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 
 | 大（L） | 16 | 32だ 
 |===
+link:../deploy/config-limits.html["ONTAP tools for VMware vSphereを導入するための構成の制限"]詳細については、を参照してください。
+
 
 
 == ストレージとアプリケーションの最小要件

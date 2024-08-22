@@ -6,6 +6,8 @@ entries:
   url: "/deploy/sizing-requirements.html"
 - title: ONTAPツールのダウンロード
   url: "/deploy/download-ontap-tools.html"
+- title: 構成の制限
+  url: "/deploy/config-limits.html"
 - title: ONTAP toolsの導入準備
   url: "/deploy/prepare-deployment.html"
 - title: 非HAシングルノード構成の導入

@@ -21,7 +21,7 @@ indexpage:
       url: "/concepts/vcenter-server-role-based-access-control-features.html"
     - title: リモート診断を設定します
       url: "/manage/configure-remote-diagnostic-access.html"
-    - title: ハイアベイラビリティを設定する
+    - title: ONTAP tools for VMware vSphereの高可用性
       url: "/concepts/high-availability.html"
     - title: データストアを保護
       url: "/protect/enable-storage-replication-adapter.html"
