@@ -20,7 +20,7 @@ VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設�
 * 手順 *
 
 . VMware vSphere Web Clientの[ホーム]ページで、*[ホストおよびクラスタ]*をクリックします。
-. ホストを右クリックし、* NetApp ONTAP tools *>*[ホストデータの更新]*を選択します。
+. ホストを右クリックし、* NetApp ONTAP tools *>* Update host data *を選択します。
 . ショートカットページで、プラグインセクションの* NetApp ONTAP tools *をクリックします。
 . ONTAP tools for VMware vSphereプラグインの概要（ダッシュボード）で、ESXiホストコンプライアンスカードに移動します。
 . [推奨設定の適用]*リンクを選択します。

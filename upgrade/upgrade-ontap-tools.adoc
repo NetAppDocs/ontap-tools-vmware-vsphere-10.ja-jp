@@ -2,20 +2,23 @@
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
 keywords: upgrade 
-summary: ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。 
+summary: アップグレードは、HA構成と非HA構成の両方でサポートされます。 
 ---
-= ONTAP ツールの最新リリースにアップグレードします
+= ONTAP Tools for VMware vSphere 10.xから10.2へのアップグレード
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレードすると、リカバリボリュームが作成され、必要なすべての詳細がリカバリボリュームに反映されます。構成のリカバリが必要な場合は、リカバリボリュームを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。ONTAP tools for VMware vSphere 10.1のパッチレベルアップグレードを実行する場合は、同じリカバリボリュームが使用され、詳細が更新されます。アップグレードは、HA構成と非HA構成の両方でサポートされます。
+アップグレードは、HA構成と非HA構成の両方でサポートされます。
+
+
+NOTE: ONTAP tools for VMware vSphere 10.0を10.2リリースにアップグレードするには、まずONTAP tools for VMware vSphere 10.1にアップグレードしてから10.2リリースにアップグレードする必要があります。
 
 * 始める前に *
 
-アップグレードタスクを開始する前に、次の手順を完了する必要があります。
+ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場合は、アップグレードタスクを開始する前に次の手順を完了する必要があります。
 
 *診断を有効にする*
 
@@ -62,7 +65,7 @@ ONTAP tools for VMware vSphere 10.0および10.1から10.1にアップグレー�
 
 . ONTAP tools for VMware vSphereアップグレードISOをコンテンツライブラリにアップロードします。
 . プライマリVMページで、*[Actions]*>*[Edit Settings]*を選択します。
-. [Edit settings]ウィンドウの[*CD/DVD drive*]フィールドで、[content library ISO file]を選択します。
+. [設定の編集]ウィンドウの[*CD/DVDドライブ*]フィールドで、[コンテンツライブラリISOファイル]を選択します。
 . ISOファイルを選択し、* OK *をクリックします。[CD/DVDドライブ]フィールドで[接続済み]チェックボックスを選択します。
 image:../media/primaryvm-edit-settings.png["設定を編集します"]
 . vCenter Serverで、ONTAP toolsへのコンソールを開きます。

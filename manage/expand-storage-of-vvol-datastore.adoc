@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores 
 summary: 'vCenterオブジェクトビューでデータストアオブジェクトを右クリックすると、[plug-in]セクションにONTAP tools for VMware vSphereでサポートされるアクションが表示されます。' 
 ---
-= vVolデータストアの拡張
+= vVol データストアの拡張
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

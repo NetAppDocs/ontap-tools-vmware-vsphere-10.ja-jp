@@ -33,8 +33,8 @@ ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for VMware vS
 . ONTAP tools for VMware vSphereのホームページで*[設定]*をクリックします。
 . NFS VAAI ツール * タブをクリックします。
 . VAAIプラグインをvCenter Serverにアップロードしたら、* Existing version *セクションで* Change *を選択します。VAAIプラグインがvCenter Serverにアップロードされていない場合は、*[アップロード]*ボタンを選択します。
-. を参照して選択します。 `.vib` [File]をクリックし、*[Upload]*をクリックしてファイルをONTAP toolsにアップロードします。
-. [EXSiホストにインストール]*をクリックし、NFS VAAIプラグインをインストールするESXiホストを選択して、*[インストール]*をクリックします。
+.  `.vib`ファイルを参照して選択し、*[アップロード]*をクリックしてファイルをONTAPツールにアップロードします。
+. [ESXiホストにインストール]*をクリックし、NFS VAAIプラグインをインストールするESXiホストを選択し、*[インストール]*をクリックします。
 +
 プラグインのインストールに対応するESXiホストのみが表示されます。画面に表示される手順に従ってインストールを完了する必要があります。インストールの進捗状況は、vSphere Web Clientの[Recent Tasks]セクションで監視できます。
 

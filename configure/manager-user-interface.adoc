@@ -18,8 +18,7 @@ ONTAP Tools Managerは、次のことを支援します。
 * vCenter Serverインスタンス管理- vCenter ServerインスタンスをONTAPツールに追加および管理します。
 * ストレージバックエンド管理- ONTAPストレージクラスタをONTAP tools for VMware vSphereに追加および管理し、オンボードされたvCenter Serverインスタンスにグローバルにマッピングします。
 * ログバンドルのダウンロード- ONTAP Tools for VMware vSphereのログファイルを収集します。
-* 証明書管理-自己署名証明書をカスタムCA証明書に変更して更新
-または、すべての証明書を更新します。
+* 証明書管理-自己署名証明書をカスタムCA証明書に変更し、VASA Providerのすべての証明書を更新または更新します。
 * パスワード管理- OVAアプリケーションのユーザパスワードをリセットします。
 
 

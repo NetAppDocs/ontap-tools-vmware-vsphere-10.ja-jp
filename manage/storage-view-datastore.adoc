@@ -35,10 +35,11 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 .手順
 . vSphere Clientで、VMFSデータストアに移動します。
 . 右ペインの*[設定]*タブをクリックします。
-. NetApp ONTAP tools *>* ONTAP Storage *を選択します。右側のペインに*[ストレージの詳細]*および* LUNの詳細*が表示されます。
+. NetApp ONTAP tools *>* ONTAP Storage *を選択します。右側のペインに、*[ストレージの詳細]*および* LUNの詳細*または*[ネームスペースの詳細]*（NVMe/TCPプロトコルまたはNVMe/FCプロトコルの場合）が表示されます。
 +
 ** ストレージの詳細ページには、ストレージバックエンド、アグリゲート、およびボリュームに関する情報が表示されます。
 ** [LUNの詳細]ページには、LUNに関連するデータが表示されます。
+** VMFSデータストアにNVMe/TCPまたはNVMe/FCプロトコルを使用している場合は、[ネームスペースの詳細]ページにネームスペースに関連するデータが表示されます。
 
 
 
@@ -53,6 +54,6 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 . NetApp ONTAP tools *>* ONTAP Storage *を選択します。
 . ONTAPストレージビューには、すべてのボリュームが表示されます。ONTAPストレージペインでは、ストレージを拡張または削除できます。
 +
-の手順に従います link:../manage/expand-storage-of-vvol-datastore.html["vVolデータストアの拡張"] セクションでvVolデータストアを追加 link:../manage/remove-storage-from-a-vvols-datastore.html["vVolデータストアの縮小"] セクションをクリックしてデータストアを削除します。
+link:../manage/expand-storage-of-vvol-datastore.html["vVol データストアの拡張"]セクションの手順に従ってvVolデータストアを追加し、link:../manage/remove-storage-from-a-vvols-datastore.html["vVolデータストアの縮小"]セクションの手順に従ってデータストアを削除します。
 
 

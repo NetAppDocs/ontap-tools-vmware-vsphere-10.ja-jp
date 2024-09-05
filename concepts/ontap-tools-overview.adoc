@@ -11,9 +11,7 @@ summary: ONTAP Tools for VMware vSphereは、仮想マシンのライフサイ�
 
 
 [role="lead"]
-ONTAP Tools for VMware vSphereは、仮想マシンのライフサイクル管理用の一連のツールです。VMwareエコシステムと統合することで、データストアのプロビジョニングや仮想マシンの基本的な保護を支援します。ONTAP Tools for VMware vSphereにより、管理者はストレージライフサイクル管理をシームレスに管理できます。
-
-ONTAP tools for VMware vSphere 10.1リリースは、拡張性に優れたイベントベースのマイクロサービスを、オープン仮想アプライアンス（OVA）として導入したものです。このリリースでは、REST APIとONTAPが統合されています。
+ONTAP Tools for VMware vSphereは、仮想マシンのライフサイクル管理用の一連のツールです。VMwareエコシステムと統合することで、データストアのプロビジョニングや仮想マシンの基本的な保護を支援します。ONTAP tools for VMware vSphereは、拡張性に優れ、イベント駆動型のマイクロサービスを、オープン仮想アプライアンス（OVA）として導入したものです。このリリースでは、REST APIとONTAPが統合されています。
 
 ONTAP Tools for VMware vSphereは次のコンポーネントで構成されています。
 

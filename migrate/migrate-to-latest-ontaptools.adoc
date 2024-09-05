@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: ストレージデータを移行する際、ストレージバックエンドはREST APIを使用して手動でオンボーディングされます。VASA Providerのデータを移行すると、既存のDerbyデータベースからデータがエクスポートされ、MongoDBデータベースにインポートされます。 
 ---
-= 最新リリースのONTAP toolsに移行する
+= ONTAP Tools for VMware vSphere 9.xから10.2への移行
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: ストレージデータを移行する際、ストレージバック�
 ストレージデータを移行する際、ストレージバックエンドはREST APIを使用して手動でオンボーディングされます。VASA Providerのデータを移行すると、既存のDerbyデータベースからデータがエクスポートされ、MongoDBデータベースにインポートされます。
 
 
-NOTE: ONTAP tools for VMware vSphere 9.xxのセットアップは、VASA Provider機能のみを実行する場合にのみ移行することを推奨します。NVMeデータストアとVVolレプリケーションがある場合は、ONTAP tools for VMware vSphere 10.1にセットアップを移行することは推奨されません。
+NOTE: ONTAP tools for VMware vSphere 9.xxのセットアップは、VASA Provider機能のみを実行する場合にのみ移行することを推奨します。
 
 * このタスクについて *
 
@@ -27,6 +27,10 @@ NOTE: 既存のユーザは、パッチリリースにアップグレードす�
 
 == 一般的な移行手順
 
+. ONTAP tools for VMware vSphere 10.2リリース向けOVAを導入します。
+. ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加と管理"]
+. ONTAP Tools for VMware vSphereプラグインvCenter Server APIを使用して、ストレージバックエンドをローカルにオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
+. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.2に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。
 . ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。
 . ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加と管理"]
 . ONTAP Tools for VMware vSphereプラグインvCenter APIを使用して、ストレージバックエンドをローカルでオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
@@ -70,9 +74,9 @@ NOTE: フェイルオーバーが完了して再保護が保留になってい�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。
-. ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照して link:../configure/add-vcenter.html["vCenter Serverインスタンスを追加する"]
-. リモートのプラグインvCenter APIからローカルでストレージバックエンドをオンボードする。移行対象としてローカルスコープのストレージを追加します。
+. ONTAP tools for VMware vSphere 10.2リリース向けOVAを導入します。
+. ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照して link:../configure/add-vcenter.html["vCenter Serverインスタンスを追加する"]
+. リモートのプラグインvCenter Server APIからストレージバックエンドをローカルにオンボードします。移行対象としてローカルスコープのストレージを追加します。
 . 移行する次のAPI呼び出しを問題します。
 +
 []

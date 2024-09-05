@@ -32,5 +32,7 @@ entries:
   url: "/configure/configure-user-role-and-privileges.html"
 - title: NetApp ONTAP Tools for VMware vSphereプラグインダッシュボードの概要
   url: "/configure/dashboard-overview.html"
+- title: ホストクラスタの保護の作成
+  url: "/configure/protect-cluster.html"
 - title: データストアを作成
   url: "/configure/create-vvols-datastore.html"

@@ -4,18 +4,20 @@ title: ONTAP ツールを管理します
 entries:
 - title: データストアを管理します
   entries:
-  - title: NFSデータストアとVMFSデータストアのマウント
+  - title: NFSおよびVMFSデータストアのマウント
     url: "/manage/mount-datastores-on-host.html"
+  - title: NFSおよびVMFSデータストアのアンマウント
+    url: "/manage/unmount-datastores-on-host.html"
   - title: vVolデータストアのマウント
     url: "/manage/mount-a-vvols-datastore.html"
-  - title: NFSデータストアとVMFSデータストアのサイズ変更
+  - title: NFSおよびVMFSデータストアのサイズ変更
     url: "/manage/resize-datastores.html"
-  - title: VVolデータストアの拡張
+  - title: vVolデータストアの拡張
     url: "/manage/expand-storage-of-vvol-datastore.html"
   - title: vVolデータストアの縮小
     url: "/manage/remove-storage-from-a-vvols-datastore.html"
   - title: データストアの削除
-    url: "/manage/delete-vvols.html"
+    url: "/manage/delete-ds.html"
   - title: データストアのONTAPストレージビュー
     url: "/manage/storage-view-datastore.html"
   - title: 仮想マシンストレージビュー
@@ -38,7 +40,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: 他のノードでSSHを開始する
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: vCenterとONTAPのクレデンシャルを更新する
+  - title: vCenterサーバとONTAPクレデンシャルを更新する
     url: "/manage/update-vcenter-credentials.html"
 - title: ONTAP Toolレポート
   url: "/manage/reports.html"
@@ -66,3 +68,9 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: ボリュームをクリーンアップ
   url: "/manage/delete-deployment.html"
+- title: ホストクラスタの保護を管理します。
+  entries:
+  - title: ホストクラスタの保護を変更
+    url: "/manage/edit-hostcluster-protection.html"
+  - title: ホストクラスタの保護の解除
+    url: "/manage/delete-hostcluster-protection.html"
