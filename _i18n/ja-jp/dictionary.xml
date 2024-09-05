@@ -1551,14 +1551,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">必要なアレイペアを選択し、対応する詳細を確認します。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*</block>
   <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース</block>
-  <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1</block>
   <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.1リリースへの移行がサポートされます。</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。</block>
-  <block id="9f24f41794806941dd2aeb79a4491cc8" category="list-text">ONTAP tools for VMware vSphere 10.1リリースに移行するvCenter Serverインスタンスを追加します。を参照し <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
-  <block id="4a03a1c1f0cc7fc87194ca50c15f95d1" category="list-text">ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.1に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.1 SRAアダプタをインストールします。 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">移行が完了したら、ONTAP tools 10.1をvCenter Serverに登録したら、次の手順を実行します。</block>
-  <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">ONTAP Tools for VMware vSphere 10.1のドキュメント</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">と入力<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> して[System Configuration Menu]を選択します。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">と入力<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> してONTAP資格情報を変更します。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">と入力<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> してvCenterクレデンシャルを変更する。</block>
@@ -1848,4 +1844,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">vCenterサーバとONTAPクレデンシャルを更新する</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">ホストクラスタの保護を管理します。</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">ホストクラスタの保護を変更</block>
+  <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2</block>
+  <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">ONTAP Tools for VMware vSphere 10.2のドキュメント</block>
 </blocks>

@@ -61,7 +61,7 @@ link:../deploy/config-limits.html["ONTAP tools for VMware vSphereを導入する
 | VASA Provider | 3.0 
 
 
-| OVAアプリケーション | 10.1 
+| OVAアプリケーション | 10.2 
 |===
 サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
 
