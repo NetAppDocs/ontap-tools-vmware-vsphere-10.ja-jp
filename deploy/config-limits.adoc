@@ -42,28 +42,6 @@ summary: ONTAP tools for VMware vSphereを導入するための構成の制限
 次の表に、ONTAP tools for VMware vSphereを使用した場合に、SRMインスタンスごとにサポートされる数を示します。
 
 |===
-
-
-| アレイベースのレプリケーションを使用した保護用に構成された仮想マシンの総数 | 5000 
-
-
-| アレイベースのレプリケーション保護グループの総数 | 250 
-
-
-| リカバリプランあたりの保護グループの総数 | 50 
-
-
-| レプリケートされたデータストア数 | 255 
-|===
-ノードごとのホストシステムのサイジング要件の詳細については、を参照してくださいlink:../deploy/sizing-requirements.html["ONTAP Tools for VMware vSphereを導入するための前提条件"]。
-
-
-
-== ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）
-
-次の表に、ONTAP tools for VMware vSphereを使用した場合に、SRMインスタンスごとにサポートされる数を示します。
-
-|===
 | * vCenterの導入規模* | *小さい* | *中* 
 
 

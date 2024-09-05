@@ -1550,8 +1550,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Perlコマンドを実行して、SRAに新しいクレデンシャルを設定します。</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">必要なアレイペアを選択し、対応する詳細を確認します。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*</block>
-  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース</block>
-  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.1リリースへの移行がサポートされます。</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.1 SRAアダプタをインストールします。 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">移行が完了したら、ONTAP tools 10.1をvCenter Serverに登録したら、次の手順を実行します。</block>
@@ -1581,7 +1579,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="72fa3a55085ed575e69d7aaa8847dce6" category="cell">約50k</block>
   <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
   <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">~100k</block>
-  <block id="4817fc1db77ffd3d9559878c1947be09" category="paragraph">ノードごとのホストシステムのサイジング要件の詳細については、を参照してください<block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block>。</block>
   <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）</block>
   <block id="747389dd88507b473bef28a38f605585" category="paragraph">次の表に、ONTAP tools for VMware vSphereを使用した場合に、SRMインスタンスごとにサポートされる数を示します。</block>
   <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">* vCenterの導入規模*</block>
@@ -1634,7 +1631,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="adbcecad06ff22a439836e6c9002cc82" category="section-title">vSphere Metroストレージクラスタ</block>
   <block id="fdaedd61903be1be2102df0b95fd62f8" category="inline-link">VMware vSphere Metroストレージクラスタ</block>
   <block id="ab214a77aca7f1a5595c69a10b7f0c9d" category="paragraph">vSphere Metro Storage Cluster（vMSC）は、拡張されたクラスタ環境でvSphereを有効化およびサポートするテクノロジです。vMSCソリューションは、NetApp MetroClusterおよびSnapMirror Active Sync（旧称SMBC）でサポートされます。これらのソリューションは、ドメインに障害が発生した場合のビジネス継続性を強化します。耐障害性モデルは、選択した構成に基づいています。詳細については<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>、をご覧ください。</block>
-  <block id="becce2ec351a7286510e90f70f5d4890" category="paragraph">ONTAP Tools for VMware vSphereは、仮想マシンのライフサイクル管理用の一連のツールです。VMwareエコシステムと統合することで、データストアのプロビジョニングや仮想マシンの基本的な保護を支援します。ONTAP tools for VMware vSphereは、拡張性に優れ、イベント駆動型のマイクロサービスを、オープン仮想アプライアンス（OVA）として導入したものです。このリリースでは、REST APIとONTAPが統合されています。</block>
   <block id="743bb9eba37e39241a186d033a7c1e5d" category="list-text">ホストを右クリックし、* NetApp ONTAP tools *&gt;* Update host data *を選択します。</block>
   <block id="7da745ff746553dfa65f8ae5fbe4b8ff" category="list-text">保護対象のクラスタにはVMFSデータストアのみを作成できます。VMFSデータストアを保護対象のクラスタに追加すると、データストアは自動的に保護されます。</block>
   <block id="7f4eeeb7066fc64c51f02eba557a897f" category="list-text">保護されているホストクラスタが1つ以上あるデータセンターにデータストアを作成することはできません。</block>
@@ -1846,4 +1842,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">ホストクラスタの保護を変更</block>
   <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2</block>
   <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">ONTAP Tools for VMware vSphere 10.2のドキュメント</block>
+  <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">ONTAP Tools for VMware vSphereは、仮想マシンのライフサイクル管理用の一連のツールです。VMwareエコシステムと統合することで、データストアのプロビジョニングや仮想マシンの基本的な保護を支援します。</block>
+  <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">ONTAP tools for VMware vSphereは、拡張性に優れ、イベント駆動型のマイクロサービスを、オープン仮想アプライアンス（OVA）として導入したものです。このリリースでは、REST APIとONTAPが統合されています。</block>
+  <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">ONTAP 9の最新パッチリリース。12.1、9.13.1、9.14.1、および9.15.1。</block>
+  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.2リリースへの移行がサポートされます。</block>
 </blocks>

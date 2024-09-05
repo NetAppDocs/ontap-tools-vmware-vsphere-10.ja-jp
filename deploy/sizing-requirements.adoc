@@ -49,7 +49,7 @@ link:../deploy/config-limits.html["ONTAP tools for VMware vSphereを導入する
 | ストレージ、ホスト、およびアプリケーション | 最小バージョン要件 
 
 
-| ONTAP | ONTAP 9.12.1、9.13.1、または9.14.1の最新パッチリリース 
+| ONTAP | ONTAP 9の最新パッチリリース。12.1、9.13.1、9.14.1、および9.15.1。 
 
 
 | ESXiホスト | ESXi 7.0.3 

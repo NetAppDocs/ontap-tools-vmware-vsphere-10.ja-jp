@@ -18,7 +18,7 @@ NOTE: ONTAP tools for VMware vSphere 9.xxのセットアップは、VASA Provide
 
 * このタスクについて *
 
-ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.1リリースへの移行がサポートされます。
+ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.2リリースへの移行がサポートされます。
 
 
 NOTE: 既存のユーザは、パッチリリースにアップグレードする前に、現在のリリースからOVAバックアップを作成する必要があります。
