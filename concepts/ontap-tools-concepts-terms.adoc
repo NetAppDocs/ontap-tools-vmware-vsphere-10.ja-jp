@@ -53,7 +53,7 @@ NVMeネームスペースは、論理ブロックにフォーマット可能な�
 
 === ONTAPツールマネージャ
 
-ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスやオンボードストレージバックエンドに対して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。ONTAP Tools Mangerを使用すると、vCenter Serverインスタンス、ストレージバックエンド、証明書、パスワード、ログバンドルのダウンロードを管理できます。
+ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスやオンボードストレージバックエンドに対して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。ONTAP tools Managerを使用すると、vCenter Serverインスタンス、ストレージバックエンド、証明書、パスワード、およびログバンドルのダウンロードを管理できます。
 
 
 
@@ -71,7 +71,7 @@ SnapMirror Active Syncを使用すると、サイト全体に障害が発生し�
 
 === Storage Replication Adapter （ SRA ）
 
-SRAは、SRMアプライアンスにインストールされるストレージベンダー固有のソフトウェアです。このアダプタを使用すると、Storage Virtual Machine（SVM）レベルおよびクラスタレベルの設定でSite Recovery Managerとストレージコントローラの間の通信が可能になります。
+SRAは、VMware Live Site Recoveryアプライアンスにインストールされるストレージベンダー固有のソフトウェアです。このアダプタを使用すると、Storage Virtual Machine（SVM）レベルおよびクラスタレベルの設定でSite Recovery Managerとストレージコントローラの間の通信が可能になります。
 
 
 
@@ -111,9 +111,9 @@ VVOLは、仮想マシンで使用されるストレージをボリュームレ�
 
 
 
-=== VMware Site Recovery Manager（SRM）
+=== VMware Live Site Recovery
 
-SRMは、VMware仮想環境のビジネス継続性、ディザスタリカバリ、サイト移行、および無停止テスト機能を提供します。
+VMware Live Site Recoveryは、VMware仮想環境のビジネス継続性、ディザスタリカバリ、サイト移行、および無停止テスト機能を提供します。
 
 
 

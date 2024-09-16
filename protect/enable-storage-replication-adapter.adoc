@@ -22,9 +22,8 @@ ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザス�
 
 * 手順 *
 
-. URL：を使用してSRMアプライアンス管理インターフェイスにログインし `\https://:<srm_ip>:5480`、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。
+. URL：を使用してVMware Live Site Recoveryアプライアンスの管理インターフェイスにログインし `\https://:<srm_ip>:5480`、VMware Live Site Recoveryアプライアンスの管理インターフェイスで[Storage Replication Adapters]に移動します。
 . [New Adapter]*を選択します。
-. SRA プラグインの .tar.gz_installer を SRM にアップロードします。
-. アダプタを再スキャンして、SRM Storage Replication Adapterで詳細が更新されていることを確認します。
-ページ
+. SRAプラグインの_.tar.gz_installerをVMware Live Site Recoveryにアップロードします。
+. アダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。
 

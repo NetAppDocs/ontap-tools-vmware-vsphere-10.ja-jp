@@ -141,3 +141,80 @@ APIの使用：
 
 | / API | 読み取り専用 | 正しいストレージバックエンドステータスを取得するには、クラスタユーザにこの権限が必要です。それ以外の場合は、ONTAP tools Managerに「unknown」ストレージバックエンドステータスが表示されます。 
 |===
+
+
+=== ONTAP tools for VMware vSphere 10.1ユーザから10.2ユーザへのアップグレード
+
+ONTAP tools for VMware vSphere 10.1ユーザが、JSONファイルを使用して作成されたクラスタスコープのユーザである場合は、ONTAP CLIでadminユーザを使用して次のコマンドを実行し、10.2リリースにアップグレードします。
+
+製品機能の場合：
+
+* VSC
+* VSCとVASA Provider
+* VSCとSRA
+* VSC、VASA Provider、SRA：
+
+
+クラスタPrivileges：
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme namespace show"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem show"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem host show"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map show"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme show -interface"-access read_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem host add"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map add"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme namespace delete"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem delete"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem host remove"-access all_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map remove"-access all_
+
+ONTAP tools for VMware vSphere 10.1ユーザが、JSONファイルを使用して作成されたSVMスコープのユーザである場合は、ONTAP CLIでadminユーザを使用して次のコマンドを実行し、10.2リリースにアップグレードします。
+
+SVM Privileges：
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme namespace show"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem show"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem host show"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map show"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme show-interface"-access read -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem host add"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map add"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme namespace delete"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem delete"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem host remove"-access all -vserver <vserver-name>_
+
+_security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map remove"-access all -vserver <vserver-name>_
+
+command_vserver nvme namespace show_and_vserver nvme subsystem show_を既存のロールに追加すると、次のコマンドが追加されます。
+
+[listing]
+----
+vserver nvme namespace create
+
+vserver nvme namespace modify
+
+vserver nvme subsystem create
+
+vserver nvme subsystem modify
+
+----

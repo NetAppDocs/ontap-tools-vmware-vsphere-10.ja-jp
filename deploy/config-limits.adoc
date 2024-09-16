@@ -39,7 +39,7 @@ summary: ONTAP tools for VMware vSphereを導入するための構成の制限
 
 == ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）
 
-次の表に、ONTAP tools for VMware vSphereを使用した場合に、SRMインスタンスごとにサポートされる数を示します。
+次の表に、ONTAP tools for VMware vSphereを使用したVMware Live Site Recoveryインスタンスごとにサポートされる数を示します。
 
 |===
 | * vCenterの導入規模* | *小さい* | *中* 
@@ -59,12 +59,12 @@ summary: ONTAP tools for VMware vSphereを導入するための構成の制限
 
 | VM数 | 4000 | 7000 
 |===
-次の表に、SRMの数と、VMware vSphereの導入規模に対応するONTAPツールを示します。
+次の表に、VMware Live Site Recoveryの数と、VMware vSphereの導入規模に対応するONTAPツールを示します。
 
 |===
 
 
-| * SRMインスタンスの数* | * ONTAPツールの導入規模* 
+| * VMware Live Site Recoveryインスタンスの数* | * ONTAPツールの導入規模* 
 
 
 | 最大4 | 小規模 

@@ -14,11 +14,11 @@ summary: Storage Replication Adapter（SRA\）でストレージシステムを�
 Storage Replication Adapter（SRA）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトをvSphere Clientを使用してペアリングする必要があります。
 
 
-NOTE: Storage Replication Adapter （ SRA ）では、ファンアウト SnapMirror 構成がサポートされません。SnapMirror のファンアウト構成は、ソースボリュームが 2 つの異なるデスティネーションにレプリケートされる構成です。SRMがデスティネーションから仮想マシンをリカバリする必要がある場合、リカバリ中に問題が発生します。
+NOTE: Storage Replication Adapter（SRA）では、ファンアウトSnapMirror構成がサポートされません。SnapMirrorのファンアウト構成は、ソースボリュームが2つの異なるデスティネーションにレプリケートされる構成です。これにより、VMware Live Site Recoveryがデスティネーションから仮想マシンをリカバリする必要がある場合に、リカバリ中に問題が発生します。
 
 * 必要なもの *
 
-* 保護対象サイトとリカバリサイトにSite Recovery Manager（SRM）をインストールしておく必要があります。
+* 保護対象サイトとリカバリサイトにVMware Live Site Recoveryがインストールされている必要があります。
 * 保護対象サイトとリカバリサイトにSRAをインストールしておく必要があります。
 
 

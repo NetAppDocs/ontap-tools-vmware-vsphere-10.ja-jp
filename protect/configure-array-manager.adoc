@@ -2,7 +2,7 @@
 permalink: protect/configure-array-manager.html 
 sidebar: sidebar 
 keywords:  
-summary: Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter \ （ SRA \ ）を設定し、 SRM と Storage Virtual Machine （ SVM \ ）が連携できるようにすることができます。 
+summary: VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA\）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM\）が連携できるようにすることができます。 
 ---
 = アレイマネージャを使用して SRA を設定する
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: Site Recovery Manager （ SRM ）の Array Manager ウィザードを�
 
 
 [role="lead"]
-Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter （ SRA ）を設定し、 SRM と Storage Virtual Machine （ SVM ）が連携できるようにすることができます。
+VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM）の間のやり取りを有効にすることができます。
 
 * 必要なもの *
 
-* SRMで保護対象サイトとリカバリサイトをペアリングしておく必要があります。
+* VMware Live Site Recoveryで保護対象サイトとリカバリサイトをペアリングしておく必要があります。
 * アレイマネージャを設定する前に、オンボードストレージを設定しておく必要があります。
 * 保護対象サイトとリカバリサイト間のSnapMirror関係を設定し、レプリケートしておく必要があります。
 * マルチテナンシーを有効にするには、SVM管理LIFを有効にしておく必要があります。
@@ -25,8 +25,8 @@ SRA では、クラスタレベルの管理と SVM レベルの管理がサポ�
 
 * 手順 *
 
-. SRMで、*[アレイマネージャ]*をクリックし、*[アレイマネージャの追加]*をクリックします。
-. 次の情報を入力して、 SRM でアレイを指定します。
+. VMware Live Site Recoveryで、* Array Managers *をクリックし、* Add Array Manager *をクリックします。
+. 次の情報を入力して、VMware Live Site Recoveryでアレイについて説明します。
 +
 .. [*Display Name*] フィールドに、アレイマネージャを識別する名前を入力します。
 .. 「 * SRA Type * 」フィールドで、「 * ONTAP 向け NetApp Storage Replication Adapter 」を選択します。

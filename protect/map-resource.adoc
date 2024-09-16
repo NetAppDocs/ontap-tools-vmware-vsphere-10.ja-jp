@@ -18,7 +18,7 @@ summary: 仮想マシンがどちらか一方のホストグループにフェ�
 保護対象サイトとリカバリサイトを接続しておく必要があります。
 
 
-NOTE: Site Recovery Manager （ SRM ）のリソースには、リソースプール、 ESXi ホスト、 vSphere クラスタがあります。
+NOTE: VMware Live Site Recoveryでは、リソースはリソースプール、ESXiホスト、vSphereクラスタのいずれかになります。
 
 * 手順 *
 
