@@ -31,10 +31,6 @@ NOTE: 既存のユーザは、パッチリリースにアップグレードす�
 . ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加と管理"]
 . ONTAP Tools for VMware vSphereプラグインvCenter Server APIを使用して、ストレージバックエンドをローカルにオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
 . ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.2に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。
-. ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。
-. ONTAP tools for VMware vSphere 10.2リリースに移行するvCenter Serverインスタンスを追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加と管理"]
-. ONTAP Tools for VMware vSphereプラグインvCenter APIを使用して、ストレージバックエンドをローカルでオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
-. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.2に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。
 
 
 
@@ -60,7 +56,7 @@ NOTE: フェイルオーバーが完了して再保護が保留になってい�
 
 
 
-. の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.1 SRAアダプタをインストールします。 link:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]
+. の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.2 SRAアダプタをインストールします。 link:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]
 . VMware Live Site Recovery UIページで、* Discover Arrays *および* Discover Devices *の処理を実行し、デバイスが移行前の状態であることを確認します。
 
 
@@ -226,7 +222,7 @@ NOTE: UUIDは、移行後のAPIの応答で返された移行UUIDです。
 ====
 
 
-移行が完了したら、ONTAP tools 10.1をvCenter Serverに登録したら、次の手順を実行します。
+移行が完了したら、ONTAP tools 10.2をvCenter Serverに登録したら、次の手順を実行します。
 
 * すべてのホストで証明書を更新します。
 * しばらくしてからデータストア（DS）および仮想マシン（VM）の処理を実行します。待機時間は、セットアップに含まれるホスト、DS、VMの数によって異なります。待機しないと、操作が断続的に失敗する可能性があります。

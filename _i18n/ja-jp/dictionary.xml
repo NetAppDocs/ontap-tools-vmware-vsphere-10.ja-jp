@@ -1208,7 +1208,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">[ ネットワークマッピング ] ページには、保護対象サイトのリソースとリカバリサイトのリソースが表示されます。環境内の他のネットワークについても、同じ手順を実行します。</block>
   <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">既存のユーザは、パッチリリースにアップグレードする前に、現在のリリースからOVAバックアップを作成する必要があります。</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">一般的な移行手順</block>
-  <block id="eece6ba8141877366a154b925c32a9f5" category="list-text">ONTAP Tools for VMware vSphereプラグインvCenter APIを使用して、ストレージバックエンドをローカルでオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRAの移行手順</block>
   <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">移行の前に、一方のサイトが保護状態で、もう一方のサイトがリカバリ状態であることを確認してください。</block>
   <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">フェイルオーバーが完了して再保護が保留になっている場合は、移行しないでください。再保護を完了してから移行を実行します。
@@ -1504,8 +1503,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Perlコマンドを実行して、SRAに新しいクレデンシャルを設定します。</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">必要なアレイペアを選択し、対応する詳細を確認します。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*</block>
-  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">ONTAP tools for VMware vSphere 10.1リリース向けOVAを導入します。</block>
-  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">移行が完了したら、ONTAP tools 10.1をvCenter Serverに登録したら、次の手順を実行します。</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">と入力<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> して[System Configuration Menu]を選択します。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">と入力<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> してONTAP資格情報を変更します。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">と入力<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> してvCenterクレデンシャルを変更する。</block>
@@ -1587,7 +1584,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="2b1af6f75eb17029e34abc0a1219ad91" category="list-text">ホストシステム、ホストクラスタ、データセンターを右クリックし、* NetApp ONTAP tools *&gt;*[Create Datastore]*を選択します。</block>
   <block id="f72f57410286ed6d906bcd47b23e2804" category="list-text">[ストレージ]*ペインで、*[プラットフォーム]*および*[Storage VM]*を選択します。[アドバンストオプション]*セクションで、必要に応じてカスタムのエクスポートポリシー（NFSプロトコルの場合）またはカスタムのイニシエータグループ名（iSCSI AMD FCプロトコルの場合）を選択します。</block>
   <block id="a78a02bb1fc75e90c0aa8b7d5ee977d3" category="list-text">ホストシステム、ホストクラスタ、またはデータセンターを右クリックし、* NetApp ONTAP tools *&gt;*[Create Datastore]*を選択します。</block>
-  <block id="cf15c96a94a1c3b116a75ddc813146c7" category="paragraph">Virtual Machine File System（VMFS）は、VMware vSphere環境に仮想マシンファイルを格納するために特別に設計されたクラスタファイルシステムです。複数のESXiホストが同じ仮想マシンファイルに同時にアクセスできるため、vMotionや高可用性などの機能が有効になります。.始める前に次に進む前に、次の項目を確認してください。</block>
   <block id="5574a2ea8c4feb96a776c4e8ce8a26dd" category="list-text">ONTAPストレージ側のプロトコルごとに、それぞれのサービスとLIFを有効にする必要があります。</block>
   <block id="00e94fd17e3b9474f70e512906843f21" category="list-text">NVMe/TCPプロトコルを使用している場合は、次の手順を実行してESXiホストを設定します。</block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware Compatibility Guide</block>
@@ -1843,7 +1839,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">VMware Live Site Recovery UIでONTAP Tools for VMware vSphere 9.xxリリースSRAアダプタを削除するには、次の手順を実行します。</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">VMware Live Site Recovery構成の管理ページに移動します。</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">VMware Live Site RecoveryアプライアンスでのSRAの設定</block>
-  <block id="9bf06b478ac6a48afec45b6081899c00" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.1 SRAアダプタをインストールします。 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">VMware Live Site Recovery UIページで、* Discover Arrays *および* Discover Devices *の処理を実行し、デバイスが移行前の状態であることを確認します。</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA\）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM\）が連携できるようにすることができます。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM）の間のやり取りを有効にすることができます。</block>
@@ -1885,4 +1880,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c8af2a359991324c5027f67981fcf118" category="sidebar">ONTAP Tools for VMware vSphere 10.1のドキュメント</block>
   <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">以前のバージョンのONTAP Tools for VMware vSphere 9のドキュメント</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">VMware vSphereとONTAPの詳細</block>
+  <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">Virtual Machine File System（VMFS）は、VMware vSphere環境に仮想マシンファイルを格納するために特別に設計されたクラスタファイルシステムです。複数のESXiホストが同じ仮想マシンファイルに同時にアクセスできるため、vMotionや高可用性などの機能が有効になります。</block>
+  <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">続行する前に、次の項目を確認してください。</block>
+  <block id="2557cccd5218f319091e35b938bd9d10" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.2 SRAアダプタをインストールします。 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
+  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">移行が完了したら、ONTAP tools 10.2をvCenter Serverに登録したら、次の手順を実行します。</block>
 </blocks>
