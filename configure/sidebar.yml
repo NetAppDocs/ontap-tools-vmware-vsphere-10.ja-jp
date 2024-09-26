@@ -4,7 +4,7 @@ title: ONTAP ツールを設定する
 entries:
 - title: ONTAP tools Managerユーザインターフェイス
   url: "/configure/manager-user-interface.html"
-- title: vCenter Serverの追加と管理
+- title: vCenter Serverの追加
   url: "/configure/add-vcenter.html"
 - title: VASA ProviderをvCenter Serverに登録
   url: "/configure/registration-process.html"
@@ -22,14 +22,14 @@ entries:
     url: "/configure/esxi-host-values.html"
 - title: ストレージシステムとホストを検出
   url: "/configure/discover-storage-systems-and-hosts.html"
+- title: ONTAPユーザのロールと権限の設定
+  url: "/configure/configure-user-role-and-privileges.html"
 - title: ストレージバックエンドを追加します
   url: "/configure/add-storage-backend.html"
 - title: ストレージバックエンドとvCenter Serverインスタンスの関連付け
   url: "/configure/associate-storage-backend.html"
 - title: ネットワークアクセスの設定
   url: "/configure/configure-network-access.html"
-- title: ONTAPユーザのロールと権限の設定
-  url: "/configure/configure-user-role-and-privileges.html"
 - title: NetApp ONTAP Tools for VMware vSphereプラグインダッシュボードの概要
   url: "/configure/dashboard-overview.html"
 - title: ホストクラスタの保護の作成

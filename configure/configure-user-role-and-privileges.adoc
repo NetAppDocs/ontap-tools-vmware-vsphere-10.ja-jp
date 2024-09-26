@@ -143,7 +143,7 @@ APIの使用：
 |===
 
 
-=== ONTAP tools for VMware vSphere 10.1ユーザから10.2ユーザへのアップグレード
+== ONTAP tools for VMware vSphere 10.1ユーザから10.2ユーザへのアップグレード
 
 ONTAP tools for VMware vSphere 10.1ユーザが、JSONファイルを使用して作成されたクラスタスコープのユーザである場合は、ONTAP CLIでadminユーザを使用して次のコマンドを実行し、10.2リリースにアップグレードします。
 

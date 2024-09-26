@@ -3,18 +3,8 @@ section: deploy
 title: ONTAP Tools for VMware vSphereの導入
 entries:
 - title: 前提条件
-  url: "/deploy/sizing-requirements.html"
-- title: 構成の制限
-  url: "/deploy/config-limits.html"
-- title: ONTAP toolsの導入準備
-  url: "/deploy/prepare-deployment.html"
-- title: ONTAPツールのダウンロード
-  url: "/deploy/download-ontap-tools.html"
-- title: 非HAシングルノード構成の導入
-  url: "/deploy/nonha-deployment.html"
-- title: HA構成を導入する
-  url: "/deploy/ha-three-node-deployment.html"
-- title: リカバリ
-  url: "/deploy/recovery-deployment.html"
+  url: "/deploy/prerequisites.html"
+- title: ONTAPツールの導入
+  url: "/deploy/ontap-tools-deployment.html"
 - title: 導入エラーコード
   url: "/deploy/deployment-error-codes.html"

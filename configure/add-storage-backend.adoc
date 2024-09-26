@@ -11,19 +11,16 @@ summary: ストレージバックエンドは、ESXiホストがデータスト�
 
 
 [role="lead"]
-ストレージバックエンドは、ESXiホストがデータストレージに使用するシステムです。
+ストレージバックエンドは、ESXiホストがデータストレージに使用するシステムです。ストレージバックエンドは、ONTAP tools ManagerまたはvSphere Client UIを使用して追加できます。
 
 * このタスクについて *
 
 このタスクは、ONTAPクラスタをオンボードする際に役立ちます。ONTAP tools Managerを使用してストレージバックエンドを追加すると、ストレージバックエンドがグローバルクラスタに追加されます。グローバルクラスタをvCenter Serverインスタンスに関連付けて、SVMユーザにvVolデータストアのプロビジョニングを許可します。
 
-
-NOTE: vSphere Client UIを使用してストレージバックエンドを追加した場合、vVolデータストアでSVMユーザを直接追加することはできません。
-
-
-
-== ONTAP tools Managerを使用したストレージバックエンドの追加
-
+[role="tabbed-block"]
+====
+.ONTAP tools Managerの使用
+--
 
 NOTE: ストレージバックエンドは、ONTAP tools ManagerまたはONTAP tools APIから追加するとグローバルになります。ストレージバックエンドは、vCenter Server APIから追加したときにローカルになります。たとえば、マルチテナントセットアップでは、SVMユーザクレデンシャルを使用するために、ストレージバックエンド（クラスタ）をグローバルに、SVMをローカルに追加できます。
 
@@ -40,9 +37,11 @@ NOTE: IPv4とIPv6の管理LIFがサポートされます。管理LIFを使用す
 
 
 
+--
+.vSphere Client UIノシヨウ
+--
 
-
-== vSphere Client UIを使用してストレージバックエンドを追加します。
+NOTE: vSphere Client UIを使用してストレージバックエンドを追加した場合、vVolデータストアでSVMユーザを直接追加することはできません。
 
 . 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
 . ショートカットページで、プラグインセクションの* NetApp ONTAP tools *をクリックします。
@@ -55,3 +54,6 @@ NOTE: クラスタベースのクレデンシャルとIPv4およびIPv6の管理
 
 
 リストが更新され、新しく追加されたストレージバックエンドがリストに表示されます。
+
+--
+====

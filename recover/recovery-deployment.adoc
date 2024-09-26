@@ -1,5 +1,5 @@
 ---
-permalink: deploy/recovery-deployment.html 
+permalink: recover/recovery-deployment.html 
 sidebar: sidebar 
 keywords:  
 summary: ONTAP tools for VMware vSphereのセットアップを失ったあとにONTAPが動作している場合は、ONTAPを使用してONTAP tools for VMware vSphereのセットアップをリカバリできます。セットアップが失われたら、セットアップを正常に停止してください。 
@@ -58,4 +58,4 @@ NOTE: SVMスコープを有効にした場合は、管理IPアドレスでのSVM
 
 インストールが完了すると、WebコンソールにONTAP tools for VMware vSphereの状態が表示されます。
 
-インストールが完了したら、ページのガイドラインに従ってハードウェア要件を手動で編集する必要があります link:../deploy/sizing-requirements.html["ONTAP Tools for VMware vSphereを導入するための前提条件"] 。
+インストールが完了したら、ページのガイドラインに従ってハードウェア要件を手動で編集する必要があります link:../deploy/prerequisites.html["ONTAP Tools for VMware vSphereを導入するための前提条件"] 。
