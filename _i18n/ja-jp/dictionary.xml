@@ -21,7 +21,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">このリリースの VMware vSphere 用 ONTAP ツールに関する重要な情報を提供します。新機能と機能拡張、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">リリースノート</block>
-  <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">解決済みの問題、既知の問題、注意事項、および制限事項など、 VMware vSphere 用のこのリリースの ONTAP ツールに関する重要な情報を提供します。</block>
   <block id="9918cd46976715deff1f5b36e3f39bea" category="list-text">*ノードあたりのインストールパッケージのスペース要件*</block>
   <block id="98f2fde112dbbbfa4faf3948eb59905c" category="list-text">シンプロビジョニング環境の場合は10GB</block>
   <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*ノードあたりのホストシステムのサイジング要件*
@@ -1680,7 +1679,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="74b27627165f74c84a8f31981da59bce" category="list-text">保護グループの名前と説明、方向を指定し、*次へ*をクリックします。</block>
   <block id="aa204271b3b654aa91947cf038f3e150" category="list-text">vSphere Clientのホームページで* Site Recovery *をダブルクリックし、* Sites *をクリックします。</block>
   <block id="41dd8791118d286f9dd16dda93fb4676" category="inline-link">ONTAP Tools for VMware vSphere 10.2リリースノート</block>
-  <block id="c801e65ec97aa4aa423dadb596e0ae66" category="paragraph">詳細については、を参照して<block ref="4c445cf2a5e8fa11ece1f426d363bfb8" category="inline-link-rx"></block>ください。</block>
   <block id="d2716515bd05082789a31002d4bbc958" category="cell">091</block>
   <block id="43474d50dc285d06ee8ee53c42bd7425" category="cell">iSCSIのアップグレードに失敗しました</block>
   <block id="e64770ac6bac05626b4f59b6a03e2ff8" category="cell">092</block>
@@ -1697,8 +1695,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="cd93511e96156295ce407e7171040058" category="admonition">ONTAP tools for VMware vSphere 10.0を10.2リリースにアップグレードするには、まずONTAP tools for VMware vSphere 10.1にアップグレードしてから10.2リリースにアップグレードする必要があります。</block>
   <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場合は、アップグレードタスクを開始する前に次の手順を完了する必要があります。</block>
   <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">[設定の編集]ウィンドウの[*CD/DVDドライブ*]フィールドで、[コンテンツライブラリISOファイル]を選択します。</block>
-  <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">このリリースの新機能</block>
-  <block id="4d4c4bd87a75920c82f20ee9d507ffc3" category="paragraph">このリリースのONTAP Tools for VMware vSphereに関する重要な情報を提供します。</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">NFSおよびVMFSデータストアのマウント</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">NFSおよびVMFSデータストアのアンマウント</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">vVolデータストアの拡張</block>
@@ -1710,7 +1706,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">ONTAP Tools for VMware vSphereは、仮想マシンのライフサイクル管理用の一連のツールです。VMwareエコシステムと統合することで、データストアのプロビジョニングや仮想マシンの基本的な保護を支援します。</block>
   <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">ONTAP tools for VMware vSphereは、拡張性に優れ、イベント駆動型のマイクロサービスを、オープン仮想アプライアンス（OVA）として導入したものです。このリリースでは、REST APIとONTAPが統合されています。</block>
   <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">ONTAP 9の最新パッチリリース。12.1、9.13.1、9.14.1、および9.15.1。</block>
-  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースから10.2リリースへの移行がサポートされます。</block>
   <block id="9c914c30102fcf893634491740cba696" category="paragraph">ONTAP tools Managerを使用すると、管理対象のvCenter Serverインスタンスやオンボードストレージバックエンドに対して、VMware vSphere管理者向けのONTAP toolsをより細かく制御できます。ONTAP tools Managerを使用すると、vCenter Serverインスタンス、ストレージバックエンド、証明書、パスワード、およびログバンドルのダウンロードを管理できます。</block>
   <block id="81d59d981388d591597f0840a1778f7c" category="paragraph">SRAは、VMware Live Site Recoveryアプライアンスにインストールされるストレージベンダー固有のソフトウェアです。このアダプタを使用すると、Storage Virtual Machine（SVM）レベルおよびクラスタレベルの設定でSite Recovery Managerとストレージコントローラの間の通信が可能になります。</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
@@ -1849,4 +1844,63 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">ONTAPツールの導入</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">ONTAPツールのリカバリ</block>
   <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">ONTAPツールのリカバリ</block>
+  <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12D1、および9.13D2リリースから10.2リリースへの移行がサポートされます。</block>
+  <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較について説明します。</block>
+  <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp Interoperability Matrix Tool</block>
+  <block id="71581c0be7a347807a5d3847fde7ec18" category="paragraph">ONTAP tools for VMware vSphere 9からONTAP tools for VMware vSphere 10.1またはVMware vSphere 10.2への移行が適しているかどうかをご確認ください。互換性に関する最新情報については、を参照してください<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
+  <block id="e2e5efdc8b340ced50733afbe15a4fad" category="cell">ONTAPツール9.13</block>
+  <block id="ec00f002c530dcfbc3a0e06a58d47937" category="cell">ONTAPツール10.1</block>
+  <block id="8192138c7b90bb4854daa73842003f2c" category="cell">ONTAPツール10.2</block>
+  <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">主な価値提案</block>
+  <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">強化されたセキュリティ、コンプライアンス、自動化機能により、運用開始から運用を合理化、簡易化</block>
+  <block id="798f5d4722c6982593d6671eef46371d" category="cell">高可用性、パフォーマンス、拡張性の制限を拡張しながら、ONTAP tools 10.xを9.xパリティに移行</block>
+  <block id="b96b395121ebad86d9a5850232e77183" category="cell">VMFSとVVOLのFC、VMFSのみのNVMe-oF / FC、NVMe-oF / TCPのサポートが拡張されました。NetApp SnapMirrorの使いやすさ、vSphereメトロストレージクラスタのシンプルなセットアップ、3サイトのSRMサポート</block>
+  <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">ONTAPリリースの認定</block>
+  <block id="f69940d2c889c5ba58609514e4ec4bff" category="cell">ONTAP 9 .9.1からONTAP 9 .15.1へ</block>
+  <block id="d4dcb3d0be17e55a6784a2f961f93bc2" category="cell">ONTAP 9 .12.1からONTAP 9 .14.1へ</block>
+  <block id="aaf6e1251cbc7e7b17911496f89b36fe" category="cell">ONTAP 9 .12.1からONTAP 9 .15.1へ</block>
+  <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">VMwareリリースのサポート</block>
+  <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager（SRM）8.5からVMware Live Site Recovery 9.0へ</block>
+  <block id="170ea24c94c478abd1871386c2d1ec72" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager（SRM）8.7からVMware Live Site Recovery 9.0へ</block>
+  <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">プロトコルのサポート</block>
+  <block id="e810af0cb36135a5b8e6f2da4440d6cb" category="cell">NFSおよびVMFSデータストア：NFS（v3およびv4.1）、VMFS（iSCSIおよびFCP）vVolデータストア：iSCSI、FCP、NVMe/FC、NFS v3</block>
+  <block id="8bc8491da19ddf762b07de3144d61829" category="cell">NFSおよびVMFSデータストア：NFS（v3およびv4.1）、VMFS（iSCSI）vVolデータストア：iSCSI、NFS v3</block>
+  <block id="945e5bf339d57e18c8160e2e3df16d62" category="cell">NFSおよびVMFSデータストア：NFS（v3およびv4.1）、VMFS（iSCSI/FCP/NVMe-oF）vVolデータストア：iSCSI、FCP、NFS v3</block>
+  <block id="2d215ebfc0280f8163d071454ec7ce01" category="cell">拡張性</block>
+  <block id="1dc64c16edbea8bc4c02d8fc9f91793e" category="cell">ホストとVM：300台のホスト、最大10、000台のVMデータストア：NFS 600、VMFS 50、VVOL最大250、VVOL最大14、000</block>
+  <block id="1cd0e9deda1f8d2ec1d07623c8de9dd3" category="cell">ホストとVM：600台のホストVVol：最大14、000</block>
+  <block id="31fd0c2c8d388a4cd2c6459234743476" category="cell">オブザーバビリティ</block>
+  <block id="0ae86707597758caa42797b966846966" category="cell">パフォーマンス、容量、ホストコンプライアンスのダッシュボードVMとデータストアの動的なレポート</block>
+  <block id="e48d3655de549622076e6823dc5953da" category="cell">パフォーマンス、容量、ホストコンプライアンスに関するダッシュボードが更新されました。Dynamic VMとデータストアに関するレポートが更新されました。</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">データ保護</block>
+  <block id="efee7a2d070a492110e424ced07a5cb4" category="cell">VMFS用とNFS用のSRAレプリケーションFlexVolベースのレプリケーションでvVol SCVを統合し、バックアップに相互運用可能</block>
+  <block id="15449f9a7ac234221e11423d597b85d4" category="cell">iSCSI VMFSデータストアおよびNFS v3データストア用のSRAレプリケーション</block>
+  <block id="60d68cab51d9c8a782f647a80a3dc658" category="cell">iSCSI VMFSおよびNFS v3データストア用のSRAレプリケーションSMASとSRMを組み合わせた3サイト保護。</block>
+  <block id="b3dc8af7a4f134b177b24282d77ca3eb" category="cell">VASAプロバイダのサポート</block>
+  <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4.0</block>
+  <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3.0</block>
+  <block id="620a99069ca21ddda63311030de128d1" category="paragraph">ONTAP Tools for VMware vSphere 10.2の新機能と拡張機能について説明します。</block>
+  <block id="a0f2f641913db0ffffab76fafad81203" category="inline-xref-macro">ONTAP Tools for VMware vSphere 10.2の新機能</block>
+  <block id="c796cc4c6989b5a604c6eef24c2de84d" category="paragraph">新機能と拡張機能の一覧については、を参照してください<block ref="815f650045efcb134f42d68a8e4fca4c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="66e41f837b141c5c933d4281f7abe97c" category="paragraph">ONTAP tools for VMware vSphere 9からONTAP tools 10.2への移行が導入環境に適しているかどうかの詳細については、を参照して<block ref="947428ca1064f8d19137fb8976698998" category="inline-xref-macro-rx"></block>ください。ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12、9.13リリースからONTAP tools 10.2への移行がサポートされます。</block>
+  <block id="bb8eb6c356c3f564a1613f6389297778" category="paragraph">詳細については、を参照して<block ref="4c445cf2a5e8fa11ece1f426d363bfb8" category="inline-link-rx"></block>ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
+  <block id="0d43955405fcb8a6a71cf0abd21c3e42" category="summary">ONTAP Tools for VMware vSphere 10.2の新機能について説明します。</block>
+  <block id="e326cb748235539f45a016f59b087724" category="doc">ONTAP Tools for VMware vSphere 10.2の新機能</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
+  <block id="f9c5165567b26fd44d26cca28ae989f8" category="inline-xref-macro">NVMeプロトコルのサポート</block>
+  <block id="4348c73f2f4a3114c481b101d6c05b63" category="paragraph"><block ref="4348c73f2f4a3114c481b101d6c05b63" category="inline-xref-macro-rx"></block></block>
+  <block id="5a0b2b57fe55f878474bb1c7fe15d781" category="paragraph">ONTAP Tools for VMware vSphere 10.2は、VMFSデータストアのプロビジョニングでNVMe/FCプロトコルとNVMe/TCPプロトコルの両方をサポートしています。vCenterインターフェイス内にシームレスに統合されたワークフローにより、データストアのプロビジョニングが容易になります。NVMe/FCプロトコルとNVMe/TCPプロトコルを使用してVMFSデータストアをプロビジョニングするメリットには、パフォーマンスの最適化、優れた拡張性、複数のデータ要求の効率的な処理、レイテンシの大幅な削減、効率的なリソース管理などがあります。NVMeベースのストレージIOは、従来のデータプロトコルに比べてCPU利用率が最大50%低下します。</block>
+  <block id="7d8b9f8f245933a3f23753f3aa1969c9" category="inline-xref-macro">ファイバチャネル（FC）プロトコルのサポート</block>
+  <block id="3c85cd96a35bb2b0e89ca5aa4ed84c95" category="paragraph"><block ref="3c85cd96a35bb2b0e89ca5aa4ed84c95" category="inline-xref-macro-rx"></block></block>
+  <block id="5dea3d6458f352c0baabcd90a7577765" category="paragraph">ONTAP Tools for VMware vSphere 10.2では、VVOLデータストアとVMFSデータストアのプロビジョニングにFCプロトコルがサポートされています。FCプロトコルのサポートには、高いパフォーマンス、信頼性と安定性、拡張性、セキュリティの強化、効率的なリソース管理などのメリットがあります。</block>
+  <block id="b0152c6ea6956b36bce225d922d832c9" category="paragraph"><block ref="b0152c6ea6956b36bce225d922d832c9" category="inline-xref-macro-rx"></block></block>
+  <block id="e7dc7e22d370d773fbdac05c041a62da" category="paragraph">VMware vSphere 10.2向けのONTAPツールによるSnapMirrorアクティブ同期のサポートには、vCenter UI内でvSphere Metro Storageを構築するためのエンドツーエンドの設定ワークフローを提供する、まったく新しい保護クラスタ機能が含まれています。これにより、拡張されたクラスタ構成が可能になり、サイト全体に障害が発生してもビジネスサービスの運用が継続され、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。</block>
+  <block id="282017cc6c0ad4ab6de03aa6f4cdbd64" category="paragraph">SnapMirrorウィザードでは、SnapMirrorのアクティブな同期に加えて、SnapMirrorの非同期と同期を設定できます。</block>
+  <block id="1d8dd3cdaea3514d2aa5572ad597f0ca" category="inline-xref-macro">Storage Replication Adapter（SRA）の機能拡張</block>
+  <block id="118d400244411eadc174437736f63aef" category="paragraph"><block ref="118d400244411eadc174437736f63aef" category="inline-xref-macro-rx"></block></block>
+  <block id="bcb303519e38c6fa54f97973b5fa43ac" category="paragraph">SRAは、VMware Site Recovery Manager（SRM）仕様に基づいたディザスタリカバリ（DR）ソリューションを実装します。SRM統合によるSnapMirrorアクティブ同期は、ディザスタリカバリ計画とオーケストレーションソリューションをサポートし、透過的なアプリケーションフェイルオーバーを実現します。</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
+  <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAPツール9とONTAPツール10の機能比較</block>
 </blocks>
