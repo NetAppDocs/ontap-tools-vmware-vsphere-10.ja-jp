@@ -1486,7 +1486,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">*展開の種類*</block>
   <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU *</block>
   <block id="5a4776483c0990d54df47e0a2478facc" category="cell">*メモリ（GB）*</block>
-  <block id="9062a44d27a4f37689abd458521d9079" category="paragraph"><block ref="e6f7130920699b61d596eeb5119cbced" category="inline-link-macro-rx"></block>詳細については、を参照してください。</block>
   <block id="c09f9ab815eaddacaa1dc798048be564" category="paragraph">ONTAPでは、エクスポートポリシーを使用してホストへのボリュームデータパスにアクセスし、イニシエータグループ（igroup）を使用してESXiホストへの論理ユニット番号（LUN）データパスにアクセスします。VMware vSphere向けのONTAPツールを使用すると、igroupを簡単かつわかりやすく作成でき、充実したエンドツーエンドのワークフローが提供されます。整合性を確保するために、ストレージプラットフォームでigroupを直接作成することはサポートされていません。</block>
   <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。をクリックすると、<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>メンテナンスコンソールが起動します。</block>
   <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">整合グループ</block>
@@ -1668,7 +1667,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="58ee9210196e8f4558d87b26bba5bc19" category="paragraph">データストアが保護されたホストクラスタの一部である場合は、警告メッセージが表示されます。</block>
   <block id="303fed3350b929d95f1f937c9d4e0032" category="admonition">保護されているデータストアがアンマウントされている場合、既存の保護設定が部分的に保護される可能性があります。<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>完全保護を有効にするには、を参照してください。</block>
   <block id="929d4b31f1c50c6c72409f0bf4ba7863" category="doc">ONTAP Tools for VMware vSphere 9.xから10.2への移行</block>
-  <block id="5ddb4f14bcf9ccda5a654d01d9537cd7" category="admonition">ONTAP tools for VMware vSphere 9.xxのセットアップは、VASA Provider機能のみを実行する場合にのみ移行することを推奨します。</block>
   <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">ONTAP tools for VMware vSphere 10.2リリース向けOVAを導入します。</block>
   <block id="0073dc7bd5514abf0999b550aa754930" category="list-text">ONTAP Tools for VMware vSphereプラグインvCenter Server APIを使用して、ストレージバックエンドをローカルにオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。</block>
   <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.2に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。ONTAP tools for VMware vSphere Plugin UIページの[Overview]ページにデータストアが表示されるかどうかを確認します。</block>
@@ -1903,4 +1901,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bcb303519e38c6fa54f97973b5fa43ac" category="paragraph">SRAは、VMware Site Recovery Manager（SRM）仕様に基づいたディザスタリカバリ（DR）ソリューションを実装します。SRM統合によるSnapMirrorアクティブ同期は、ディザスタリカバリ計画とオーケストレーションソリューションをサポートし、透過的なアプリケーションフェイルオーバーを実現します。</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAPツール9とONTAPツール10の機能比較</block>
+  <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">詳細については、後述の「ONTAP tools for VMware vSphereを導入する際の構成の制限」セクションを参照してください。</block>
+  <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">ONTAP tools for VMware vSphere 9.xのセットアップは、VASA Provider機能のみを実行する場合にのみ移行することを推奨します。</block>
+  <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">ONTAP tools for VMware vSphere 9.xから10.2に移行したあと、NVMe/FCプロトコルのvVolデータストアは機能しません。これは、ONTAP tools 10.2がVMFSデータストアでNVMe-oFのみをサポートするためです。</block>
 </blocks>

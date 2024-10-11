@@ -43,7 +43,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 
 | 大（L） | 16 | 32だ 
 |===
-link:../deploy/config-limits.html["ONTAP tools for VMware vSphereを導入するための構成の制限"]詳細については、を参照してください。
+詳細については、後述の「ONTAP tools for VMware vSphereを導入する際の構成の制限」セクションを参照してください。
 
 
 
