@@ -35,6 +35,10 @@ VMware Live Site RecoveryアプライアンスでSRAを設定すると、VMware 
 
 NOTE: Perlスクリプトでパスワードの特殊文字が入力の区切り文字として読み取られないようにするには、パスワードの値を一重引用符で囲む必要があります。
 
++
+
+NOTE: アプリケーションのユーザ名とパスワードは、ONTAP toolsの導入時に設定されます。これはVASA Provider / SRAの登録に必要です。
+
 . アダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。
 
 

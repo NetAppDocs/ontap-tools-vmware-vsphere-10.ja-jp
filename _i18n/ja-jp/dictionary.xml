@@ -1902,6 +1902,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">詳細については、後述の「ONTAP tools for VMware vSphereを導入する際の構成の制限」セクションを参照してください。</block>
   <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">ONTAP tools for VMware vSphere 9.xのセットアップは、VASA Provider機能のみを実行する場合にのみ移行することを推奨します。</block>
   <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">ONTAP tools for VMware vSphere 9.xから10.2に移行したあと、NVMe/FCプロトコルのvVolデータストアは機能しません。これは、ONTAP tools 10.2がVMFSデータストアでNVMe-oFのみをサポートするためです。</block>
-  <block id="3a3be4ef9c2ffae0f29834b33de5a0ac" category="list-text">非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。HA構成と非HA構成の両方でを割り当てる前に、DNSの空きIPアドレスにホスト名をマッピングする必要があります。HA環境の5つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。</block>
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">[ペアサイトリカバリマネージャサーバー*]ダイアログボックスで、保護サイトのプラットフォームサービスコントローラーのアドレスを入力し、[次へ*]をクリックします。</block>
+  <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。HA構成と非HA構成の両方でを割り当てる前に、DNSの空きIPアドレスにホスト名をマッピングする必要があります。HA構成の5つのIPアドレスと非HA構成の3つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。</block>
+  <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">アプリケーションのユーザ名とパスワードは、ONTAP toolsの導入時に設定されます。これはVASA Provider / SRAの登録に必要です。</block>
 </blocks>
