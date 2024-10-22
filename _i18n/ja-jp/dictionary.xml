@@ -1014,7 +1014,6 @@ _\ https：//&lt;ip_address&gt;/docs/api_</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">Storage Replication Adapter（SRA）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトをvSphere Clientを使用してペアリングする必要があります。</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">保護対象サイトとリカバリサイトにSRAをインストールしておく必要があります。</block>
   <block id="0cb204757fc030d9ca635551827fb5fc" category="list-text">[ * オブジェクト * &gt; * アクション * &gt; * サイトのペアリング * ] をクリックします。</block>
-  <block id="175196fb642ea5ad4b3eb3694afac00f" category="list-text">ペアサイトリカバリマネージャサーバーダイアログボックスで、保護サイトのプラットフォームサービスコントローラのアドレスを入力し、次へ * をクリックします。</block>
   <block id="c036188407dc1d12b6c53670d6f74de9" category="list-text">Select vCenter Server セクションで、次の手順を実行します。</block>
   <block id="c5740be3b9782c8fc0bd8ed3b5756bae" category="list-text">保護対象サイトの vCenter Server が対応するペア候補として表示されていることを確認します。</block>
   <block id="f866f4a2783cef537c7ed29ec6bffe37" category="list-text">SSO 管理クレデンシャルを入力し、 [* 終了 * ] をクリックします。</block>
@@ -1825,7 +1824,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4501e00e353424cff3952eefd1e4da0b" category="admonition">vCenter Serverの親のパスワードに特殊文字（$、'、"）を使用することはできません。</block>
   <block id="c5323fb352d4289acd4e443d9b6ffbc6" category="list-text">ONTAP tools for VMware vSphereが導入後に接続するvCenter Serverインスタンスの登録用ログインクレデンシャルを用意しておきます。</block>
   <block id="f0e37f4c361ffc72156998eab274a0df" category="list-text">ブラウザキャッシュが削除されます。</block>
-  <block id="3329fe5e48659261596f0eb67edfb0ee" category="list-text">非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。ホスト名は、割り当てる前にDNSの空きIPアドレスにマッピングする必要があります。5つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。</block>
   <block id="89e60c832660d19053506627cc1f15b4" category="list-text">カスタムCA証明書が必須であるvCenterが複数ある環境では、証明書が発行されるドメイン名が仮想IPアドレスにマッピングされていることを確認します。ドメイン名に対して_nslookup_checkが実行され、ドメインが目的のIPアドレスに解決されているかどうかが確認されます。証明書は、ロードバランサのIPアドレスのドメイン名とIPアドレスを使用して作成する必要があります。</block>
   <block id="7b4a891ff8781d5df1c6613d8a092a8a" category="doc">vCenter Serverインスタンスの管理</block>
   <block id="55a2bc624166080e36f75d7c8c9ae6a9" category="paragraph">vCenter Serverインスタンスは、ホスト、仮想マシン、ストレージバックエンドを制御できる一元管理プラットフォームです。</block>
@@ -1904,4 +1902,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">詳細については、後述の「ONTAP tools for VMware vSphereを導入する際の構成の制限」セクションを参照してください。</block>
   <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">ONTAP tools for VMware vSphere 9.xのセットアップは、VASA Provider機能のみを実行する場合にのみ移行することを推奨します。</block>
   <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">ONTAP tools for VMware vSphere 9.xから10.2に移行したあと、NVMe/FCプロトコルのvVolデータストアは機能しません。これは、ONTAP tools 10.2がVMFSデータストアでNVMe-oFのみをサポートするためです。</block>
+  <block id="3a3be4ef9c2ffae0f29834b33de5a0ac" category="list-text">非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。HA構成と非HA構成の両方でを割り当てる前に、DNSの空きIPアドレスにホスト名をマッピングする必要があります。HA環境の5つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。</block>
+  <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">[ペアサイトリカバリマネージャサーバー*]ダイアログボックスで、保護サイトのプラットフォームサービスコントローラーのアドレスを入力し、[次へ*]をクリックします。</block>
 </blocks>
