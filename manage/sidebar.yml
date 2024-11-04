@@ -2,8 +2,12 @@
 section: manage
 title: ONTAP ツールを管理します
 entries:
+- title: NetApp ONTAP Tools for VMware vSphereプラグインダッシュボードの概要
+  url: "/configure/dashboard-overview.html"
 - title: データストアを管理します
   entries:
+  - title: データストアを作成
+    url: "/configure/create-vvols-datastore.html"
   - title: NFSおよびVMFSデータストアのマウント
     url: "/manage/mount-datastores-on-host.html"
   - title: NFSおよびVMFSデータストアのアンマウント
@@ -54,6 +58,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: VASAクリーンアップ
     url: "/manage/delete-virtual-machines.html"
+- title: ストレージシステムとホストを検出
+  url: "/configure/discover-storage-systems-and-hosts.html"
 - title: ESXi ホストの設定の変更
   url: "/manage/edit-esxi-host-settings.html"
 - title: パスワードを管理します

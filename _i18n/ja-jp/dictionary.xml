@@ -308,9 +308,6 @@
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">ESXiホストコンプライアンスカード</block>
   <block id="37a7aee5902e5e8b7d36af678ff3baf3" category="cell">このカードには、選択したvCenterのすべてのESXiホスト設定の、推奨されるNetAppホスト設定に関する全体的な準拠ステータスが、設定グループ/カテゴリ別に表示されます。
 [推奨設定の適用]リンクをクリックすると、推奨設定を適用できます。[問題/不明]をクリックすると、ホストのリストが表示されます。</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">ESXiホストでオンデマンド検出を実行して、ストレージデータの最新の更新を取得できます。</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="doc">ホストデータの更新</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">[ホストデータの更新]*ポップアップウィンドウで*[はい]*を選択して、接続されているすべてのストレージシステムの検出を再開します。</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用して、ストレージバックエンドを管理するための新しいユーザロールを設定できます。</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">ONTAPユーザのロールと権限の設定</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">ストレージバックエンドの管理に使用する新しいユーザロールと権限を設定するには、ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用します。</block>
@@ -1301,9 +1298,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="721041095b64df665034c0b19c967475" category="sidebar">ONTAP tools for VMware vSphereの高可用性</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">REST API を使用して自動化</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">データストアと仮想マシンを保護</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">ディザスタリカバリ用にストレージシステムを設定する</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">大規模な環境向けのSRAの設定</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">保護対象サイトとリカバリサイトを設定</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">保護対象サイトとリカバリサイトのリソースを設定</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">レプリケートされたストレージシステムを確認</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">ONTAP ツールをアップグレードする</block>
@@ -1524,7 +1519,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">ソフトウェアNVMe over RDMAまたはNVMe over TCPアダプタの追加</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">VMware vSphere 7リリースの場合は、VMwareサイトの手順に従って<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block>NVMe/TCPソフトウェアアダプタを設定します。VMware vSphere 8リリースの場合は、に従って<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block>NVMe/TCPソフトウェアアダプタを設定します。</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">VMFSデータストア用にNVMe/TCPをvSphere 8.0 Update 1およびONTAP 9 VMFS.13.1で設定する方法</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text"><block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block>ESXiホストでアクションを実行します。詳細については、を参照してください。<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">NVMe/FCプロトコルを使用する場合は、次の手順を実行してESXiホストを設定します。</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">ESXiホストでNVMe over Fabrics（NVMe-oF）を有効にします。</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">SCSIゾーニングを完了します。</block>
@@ -1839,7 +1833,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">vCenter Serverの追加</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">ONTAPツールの導入</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">ONTAPツールのリカバリ</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">ONTAPツールのリカバリ</block>
   <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12D1、および9.13D2リリースから10.2リリースへの移行がサポートされます。</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較について説明します。</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">ONTAP Tools for VMware vSphere 9とONTAP Tools for VMware vSphere 10の機能比較</block>
@@ -1905,4 +1898,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">[ペアサイトリカバリマネージャサーバー*]ダイアログボックスで、保護サイトのプラットフォームサービスコントローラーのアドレスを入力し、[次へ*]をクリックします。</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。HA構成と非HA構成の両方でを割り当てる前に、DNSの空きIPアドレスにホスト名をマッピングする必要があります。HA構成の5つのIPアドレスと非HA構成の3つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">アプリケーションのユーザ名とパスワードは、ONTAP toolsの導入時に設定されます。これはVASA Provider / SRAの登録に必要です。</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text"><block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block>ESXiホストでアクションを実行します。詳細については、を参照してください。<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">ホストクラスタの保護を使用した保護</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">SRAによる保護を使用して保護する</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">ONTAP toolsセットアップのリカバリ</block>
 </blocks>
