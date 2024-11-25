@@ -243,8 +243,6 @@
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">ONTAP toolsでvCenter Serverインスタンスを削除すると、次の処理が自動的に実行されます。</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">プラグインの登録が解除されました。</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">プラグイン権限とプラグインロールが削除されました。</block>
-  <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">オンボードしたSVMがvCenter Client UIのVASA Providerの下に表示されていることを確認します。</block>
-  <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">登録されたVASAプロバイダを確認</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">オンボードしたVASA Providerが、vCenter Client UIおよびリモートプラグインUIの[VASA Provider]の下に表示されていることを確認します。</block>
   <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">vCenter Client UIからVASA Providerを確認するには、次の手順を実行します。</block>
   <block id="45b4fd4eef700c8aca7d8e7d745b8cbd" category="list-text">[Storage Provider/storage backends]で、オンボードしたVASAプロバイダが正しく表示されていることを確認します。</block>
@@ -1902,4 +1900,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">ホストクラスタの保護を使用した保護</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">SRAによる保護を使用して保護する</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">ONTAP toolsセットアップのリカバリ</block>
+  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">* 終了後 *</block>
 </blocks>
