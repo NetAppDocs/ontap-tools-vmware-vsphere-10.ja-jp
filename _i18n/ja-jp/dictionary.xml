@@ -1901,4 +1901,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">SRAによる保護を使用して保護する</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">ONTAP toolsセットアップのリカバリ</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">* 終了後 *</block>
+  <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">HAモードの導入環境では、導入後にVM名を変更しないでください。</block>
+  <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">ONTAP tools for VMware vSphere 9.13P1バージョンを使用している場合は、10.2バージョンに移行する前に9.13D2にアップグレードする必要があります。</block>
 </blocks>

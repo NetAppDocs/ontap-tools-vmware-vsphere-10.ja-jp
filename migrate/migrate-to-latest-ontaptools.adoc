@@ -24,6 +24,9 @@ NOTE: ONTAP tools for VMware vSphere 9.xから10.2に移行したあと、NVMe/F
 ONTAP tools for VMware vSphere 9.10D2、9.11D4、9.12D1、および9.13D2リリースから10.2リリースへの移行がサポートされます。
 
 
+NOTE: ONTAP tools for VMware vSphere 9.13P1バージョンを使用している場合は、10.2バージョンに移行する前に9.13D2にアップグレードする必要があります。
+
+
 NOTE: 既存のユーザは、パッチリリースにアップグレードする前に、現在のリリースからOVAバックアップを作成する必要があります。
 
 
