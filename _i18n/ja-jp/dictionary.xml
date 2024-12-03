@@ -313,8 +313,6 @@
   <block id="5d0fbbf77d63dd4a6501929f5b229ee9" category="admonition">ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM）レベルで直接作成できます。user_roles.jsonファイルを使用せずにユーザを作成することもできます。作成した場合は、SVMレベルの最小限の権限セットが必要になります。</block>
   <block id="43646e7149ab6454d53dccb48f546e65" category="list-text">ダウンロードした_\ https：//&lt;loadbalancerIP&gt;：8443 /virtualization/user-privileges/users_roles.zip_fileを展開します。</block>
   <block id="e85e7085cb02b451ed0ba49e3f1febd6" category="list-text">クラスタのクラスタ管理IPアドレスを使用してONTAP System Managerにアクセスします。</block>
-  <block id="6e2198e632f8de89c3e71e8215c06c49" category="list-text">クラスタまたはSVMのユーザとしてログインします。</block>
-  <block id="ecc1dbb4ae50c911f6b9e1bb413a439f" category="list-text">[クラスタ]*&gt;*[設定]*&gt;*[ユーザとロール]*ペインを選択します。</block>
   <block id="6689eaef2ac72f5df927cd96978a3e89" category="list-text">*参照*をクリックして、ONTAP Privileges JSONファイルを選択してアップロードします。</block>
   <block id="64d37b9f5522fbf3a1c422e4d3605497" category="paragraph">[Product]フィールドには自動的に値が入力されます。</block>
   <block id="3bf7f46e9f0a95a7cd2b53aa11857658" category="list-text">製品機能ドロップダウンメニューから必要な機能を選択します。</block>
@@ -1903,4 +1901,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">* 終了後 *</block>
   <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">HAモードの導入環境では、導入後にVM名を変更しないでください。</block>
   <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">ONTAP tools for VMware vSphere 9.13P1バージョンを使用している場合は、10.2バージョンに移行する前に9.13D2にアップグレードする必要があります。</block>
+  <block id="cf16829e329e313f56570072f21af5b9" category="list-text">管理Privilegesでクラスタにログインします。ユーザを設定するには、次の手順を実行します。</block>
+  <block id="73413dc748808c141555f95dacc368af" category="list-text">クラスタのONTAP toolsユーザを設定するには、*[クラスタ]*&gt;*[設定]*&gt;*[ユーザとロール]*ペインを選択します。</block>
+  <block id="122159aaab87ec5c9bfb746121abf088" category="list-text">SVM ONTAP toolsのユーザを設定するには、*[ストレージSVM ]*&gt;*[設定]*&gt;*[ユーザとロール]*ペインを選択します。</block>
+  <block id="2000e83d945563ce0118bc3b5c5f6fbc" category="list-text">管理Privilegesでクラスタにログインします。</block>
+  <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">クラスタのONTAP toolsのロールを設定するには、*[クラスタ]*&gt;*[設定]*&gt;*[ユーザとロール]*ペインを選択します。</block>
+  <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">クラスタSVM ONTAP toolsのロールを設定するには、*[ストレージSVM ]*&gt;*[設定]*&gt;*[ユーザとロール]*ペインを選択します。</block>
 </blocks>
