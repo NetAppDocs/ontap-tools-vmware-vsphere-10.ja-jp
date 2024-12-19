@@ -160,4 +160,5 @@ NOTE: vCenter Serverの親のパスワードに特殊文字（$、'、"）を使
 
 
 * カスタムCA証明書が必須であるvCenterが複数ある環境では、証明書が発行されるドメイン名が仮想IPアドレスにマッピングされていることを確認します。ドメイン名に対して_nslookup_checkが実行され、ドメインが目的のIPアドレスに解決されているかどうかが確認されます。証明書は、ロードバランサのIPアドレスのドメイン名とIPアドレスを使用して作成する必要があります。
+* 非HAの高度なHA構成およびHA構成でONTAP Tools for VMware vSphere 10.2をインストールする前に、次の技術情報アーティクルを確認してください。 https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["HAイカイノコウシントHAコウセイノシヨウケン"]
 
