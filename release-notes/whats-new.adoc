@@ -59,5 +59,6 @@ ONTAP Tools for VMware vSphere 10.3では、ASA R2システムでのVMFSデー�
  a| 
 オブザーバビリティの向上
  a| 
- ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastores and their respective VMs.
+ONTAP tools for VMware vSphere 10.3では、VMFSデータストア、VVolデータストア、およびそれぞれのVMのオブザーバビリティ指標のサポートが拡張されました。
+
 |===

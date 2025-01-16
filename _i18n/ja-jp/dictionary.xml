@@ -2008,4 +2008,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">ONTAP Tools for VMware vSphere 10.2のドキュメント</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">ONTAP tools for VMware vSphere 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">保護対象サイトとリカバリサイトの設定</block>
+  <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">ONTAP tools for VMware vSphere 10.3では、VMFSデータストア、VVolデータストア、およびそれぞれのVMのオブザーバビリティ指標のサポートが拡張されました。</block>
 </blocks>
