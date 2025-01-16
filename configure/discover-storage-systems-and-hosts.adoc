@@ -43,6 +43,6 @@ ONTAP tools for VMware vSphereに*[確認]*ダイアログボックスが表示�
 
 検出プロセスが完了したら、次の操作を実行します。
 
-* ONTAP tools for VMware vSphereを使用して、[アダプタ設定]、[MPIO設定]、または[NFS設定]列に[アラート]アイコンが表示されているホストのESXiホストを設定します。
+* ONTAP tools for VMware vSphereを使用して、アダプタ設定、MPIO設定、またはNFS設定の列にアラートアイコンが表示されているホストのESXiホストを設定します。
 * ストレージシステムのクレデンシャルを入力します。
 

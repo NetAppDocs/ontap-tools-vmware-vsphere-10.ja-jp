@@ -2,8 +2,12 @@
 section: manage
 title: ONTAP ツールを管理します
 entries:
-- title: NetApp ONTAP Tools for VMware vSphereプラグインダッシュボードの概要
+- title: ONTAP Tools for VMware vSphereダッシュボードの概要
   url: "/configure/dashboard-overview.html"
+- title: ONTAP tools Managerユーザインターフェイス
+  url: "/configure/manager-user-interface.html"
+- title: アプライアンス設定の編集
+  url: "/manage/edit-appliance-settings.html"
 - title: データストアを管理します
   entries:
   - title: データストアを作成
@@ -34,8 +38,6 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: 証明書を管理します
   url: "/manage/certificate-manage.html"
-- title: igroupとエクスポートポリシーを管理します。
-  url: "/manage/igroup-management.html"
 - title: ONTAP Tools for VMware vSphereメンテナンスコンソールへのアクセス
   entries:
   - title: ONTAP Tools for VMware vSphereメンテナンスコンソールの概要
@@ -46,7 +48,7 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: vCenterサーバとONTAPクレデンシャルを更新する
     url: "/manage/update-vcenter-credentials.html"
-- title: ONTAP Toolレポート
+- title: ONTAP toolsレポート
   url: "/manage/reports.html"
 - title: ログファイルを収集します
   url: "/manage/collect-the-log-files.html"
@@ -80,3 +82,5 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: ホストクラスタの保護の解除
     url: "/manage/delete-hostcluster-protection.html"
+- title: ほぼゼロRPO
+  url: "/manage/enable-backup.html"

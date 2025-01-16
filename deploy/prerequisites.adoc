@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: ONTAP tools for VMware vSphereを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件を理解しておく必要があります。 
 ---
-= ONTAP Tools for VMware vSphereを導入するための前提条件
+= ONTAP tools for VMware vSphere導入の前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,8 +21,8 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 
 * *ノードあたりのインストールパッケージのスペース要件*
 +
-** シンプロビジョニング環境の場合は10GB
-** シックプロビジョニングの場合は248GB
+** シンプロビジョニング環境の場合は15GB
+** シックプロビジョニングの場合は348GB
 
 
 * *ノードあたりのホストシステムのサイジング要件*
@@ -32,19 +32,23 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 |===
 
 
-| *展開の種類* | * CPU * | *メモリ（GB）* 
+| *展開の種類* | * CPU * | *メモリ（GB）* | *シックプロビジョニングされたディスクスペース（GB）* 
 
 
-| 小（S） | 8 | 16 
+| 非HA（小規模） | 9 | 18 | 350 
 
 
-| 中（M） | 12 | 24 
+| 非HAメディア | 13 | 26 | 350 
 
 
-| 大（L） | 16 | 32だ 
+| HA小規模 | 27 | 54 | 1050 
+
+
+| HAメディア | 39 | 78 | 1050 
+
+
+| 大規模なHA構成 | 51 | 一 〇 二 | 1050 
 |===
-詳細については、後述の「ONTAP tools for VMware vSphereを導入する際の構成の制限」セクションを参照してください。
-
 
 
 == ストレージとアプリケーションの最小要件
@@ -53,7 +57,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 | ストレージ、ホスト、およびアプリケーション | 最小バージョン要件 
 
 
-| ONTAP | ONTAP 9の最新パッチリリース。12.1、9.13.1、9.14.1、および9.15.1。 
+| ONTAP | 9.14.1、9.15.1、および9.16.0。FAS、ASA Aシリーズ、ASA Cシリーズ、AFF Aシリーズ、AFF Cシリーズ、およびASA R2。 
 
 
 | ESXiホスト | ESXi 7.0.3 
@@ -65,7 +69,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 | VASA Provider | 3.0 
 
 
-| OVAアプリケーション | 10.2 
+| OVAアプリケーション | 10.3 
 |===
 サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
 
@@ -80,22 +84,22 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-| * 導入 * | * タイプ * | * VVOLの数* | *ホスト数* | *プロトコルタイプ* 
+| * 導入 * | * タイプ * | * VVOLの数* | *ホスト数* 
 
 
-| 容易な導入 | 小（S） | ~12、000 | 32だ | NFS、iSCSI 
+| HA 認定外 | 小（S） | ~12、000 | 32だ 
 
 
-| 容易な導入 | 中（M） | 最大24、000 | 64 | NFS、iSCSI 
+| HA 認定外 | 中（M） | 最大24、000 | 64 
 
 
-| 高可用性 | 小（S） | 最大24、000 | 64 | NFS、iSCSI 
+| 高可用性 | 小（S） | 最大24、000 | 64 
 
 
-| 高可用性 | 中（M） | 約50k | 128 | NFS、iSCSI 
+| 高可用性 | 中（M） | 約50k | 128 
 
 
-| 高可用性 | 大（L） | ~100k | 256 [注]表のホスト数は、複数のvCenterからのホストの総数を示しています。 | NFS、iSCSI 
+| 高可用性 | 大（L） | ~100k | 256 [注]表のホスト数は、複数のvCenterからのホストの総数を示しています。 
 |===
 ノードごとのホストシステムのサイジング要件の詳細については、を参照してくださいlink:../deploy/prerequisites.html["ONTAP Tools for VMware vSphereを導入するための前提条件"]。
 
@@ -143,22 +147,70 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+== ポートの要件
+
+次の表に、NetAppで使用されるネットワークポートとその目的を示します。システム内での適切な操作と通信を容易にするために、これらのポートが開いていてアクセス可能であることを確認してください。関連するサービスが正しく機能するために、これらのポート上のトラフィックを許可するために必要なネットワーク構成が設定されていることを確認します。セキュリティポリシーによっては、ファイアウォールやその他のセキュリティアプライアンスを設定して、ネットワーク内でこのトラフィックを許可する必要があります。
+
+|===
+
+
+| * ポート * | * 概要 * 
+
+
+| 22（TCP） | Ansibleは、クラスタのプロビジョニング時の通信にこのSSHポートを使用します。このポートは、HA構成の場合、メンテナンスユーザのパスワードやステータスメッセージの変更、3つすべてのノードの値の更新などの機能で必要になります。 
+
+
+| 443（TCP） | VASA Providerサービスの受信通信用のパススルーポートです。VASA Providerの自己署名証明書とカスタムCA証明書はこのポートでホストされています。 
+
+
+| 8443（TCP） | このポートは、swaggerとManagerユーザインターフェイスアプリケーションを使用してAPIドキュメントをホストします。 
+
+
+| 2379（TCP） | これは、GET、PUT、DELETE、etcdキー値ストア内のキーの監視などのクライアント要求のデフォルトポートです。 
+
+
+| 2380（TCP） | これは、etcdがデータレプリケーションと整合性のために依存するraft consensusアルゴリズムに使用されるetcdクラスタのサーバ間通信のデフォルトポートです。 
+
+
+| 7472（TCP + UDP） | Prometheus指標のサービスポートです。 
+
+
+| 7946（TCP + UDP） | このポートは、Dockerのコンテナネットワーク検出に使用されます。 
+
+
+| 9083（TCP） | このポートは、VASA Providerサービスで内部的に使用されるサービスポートです。 
+
+
+| 1162（UDP） | これはSNMPトラップパケットポートです。 
+
+
+| 6443（TCP） | ソース：RKE2エージェントノード。宛先：REK2サーバノード。説明：Kubernetes API 
+
+
+| 9345（TCP） | ソース：RKE2エージェントノード。宛先：REK2サーバノード。説明:REK2スーパーバイザAPI 
+
+
+| 8472（TCP + UDP） | フランネルVXLANを使用する場合、すべてのノードがUDPポート8472を介して他のノードに到達できる必要があります。ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：VXLANを使用したCanal CNI 
+
+
+| 10250（TCP） | ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：Kubelet指標 
+
+
+| 30000～32767（TCP） | ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：NodePortポート範囲 
+
+
+| 123（TCP） | ntpdはこのポートを使用してNTPサーバの検証を実行します。 
+|===
+
+
 == 導入前のチェック
 
 導入を進める前に、次の項目が揃っていることを確認してください。
 
 * vCenter Server環境がセットアップおよび設定されている。
-* (オプション)自動化のために、ユーザNetApp提供のPostmanコレクションJSONファイルが収集されます。
 * OVAを導入するための親vCenter Serverのクレデンシャルが設定されている。
-+
-
-NOTE: vCenter Serverの親のパスワードに特殊文字（$、'、"）を使用することはできません。
-
 * ONTAP tools for VMware vSphereが導入後に接続するvCenter Serverインスタンスの登録用ログインクレデンシャルを用意しておきます。
 * ブラウザキャッシュが削除されます。
-* 非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。HA構成と非HA構成の両方でを割り当てる前に、DNSの空きIPアドレスにホスト名をマッピングする必要があります。HA構成の5つのIPアドレスと非HA構成の3つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。
-
-
+* 非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。ホスト名は、割り当てる前にDNSの空きIPアドレスにマッピングする必要があります。5つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。
 * カスタムCA証明書が必須であるvCenterが複数ある環境では、証明書が発行されるドメイン名が仮想IPアドレスにマッピングされていることを確認します。ドメイン名に対して_nslookup_checkが実行され、ドメインが目的のIPアドレスに解決されているかどうかが確認されます。証明書は、ロードバランサのIPアドレスのドメイン名とIPアドレスを使用して作成する必要があります。
-* 非HAの高度なHA構成およびHA構成でONTAP Tools for VMware vSphere 10.2をインストールする前に、次の技術情報アーティクルを確認してください。 https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["HAイカイノコウシントHAコウセイノシヨウケン"]
 

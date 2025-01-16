@@ -21,4 +21,5 @@ ONTAP Tools for VMware vSphereは次のコンポーネントで構成されて�
 * VASA ProviderによるVMのきめ細かな管理
 * ポリシーベースのストレージ管理
 * Storage Replication Adapter （ SRA ）
+* SnapMirrorアクティブ同期（SMAS）
 

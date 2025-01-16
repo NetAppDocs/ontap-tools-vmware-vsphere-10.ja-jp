@@ -11,14 +11,13 @@ summary: ONTAP tools for VMware vSphereリモートプラグインインター�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereリモートプラグインインターフェイスを使用して、vCenter ServerインスタンスへのVASA Providerの登録と登録解除を行うことができます。
-[VASA Provider Settings]セクションには、選択したvCenter ServerのVASA Providerの登録状態が表示されます。
+ONTAP tools for VMware vSphereリモートプラグインインターフェイスを使用して、vCenter ServerインスタンスへのVASA Providerの登録と登録解除を行うことができます。[VASA Provider Settings]セクションには、選択したvCenter ServerのVASA Providerの登録状態が表示されます。
 
 * 手順 *
 
 . 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
 . ショートカットページで、プラグインセクションの* NetApp ONTAP tools *をクリックします。
-. [設定]*>*[VASA Provider settings]*を選択します。VASA Providerの登録状態がNot Registeredと表示される。
+. [設定]*>*[VASA Provider設定]*を選択します。VASA Providerの登録状態が「Not Registered」と表示される。
 . [登録]*ボタンをクリックしてVASA Providerを登録します。
 . VASA Providerの名前を入力し、ONTAP tools for VMware vSphereアプリケーションのユーザクレデンシャルを指定して、*[登録]*をクリックします。
 . 登録が完了してページが更新されると、登録されているVASA Providerの状態、名前、バージョンがUIに表示されます。登録解除アクションがアクティブになります。
@@ -40,9 +39,8 @@ ONTAP tools for VMware vSphereリモートプラグインインターフェイ�
 +
 .. vCenter Serverに移動します。
 .. 管理者のクレデンシャルでログインします。
-.. [ストレージプロバイダ]*を選択します。
-.. 「 * Configure * 」を選択します。
-.. [Storage Provider/storage backends]で、オンボードしたVASAプロバイダが正しく表示されていることを確認します。
+.. [ストレージプロバイダ]*>*[設定]*を選択します。
+.. [Storage Provider/storage backends]で、オンボードしたVASA Providerが正しく表示されていることを確認します。
 
 
 . リモートプラグインUIからVASA Providerを確認するには、次の手順を実行します。

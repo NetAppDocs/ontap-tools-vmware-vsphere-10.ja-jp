@@ -22,3 +22,5 @@ entries:
   url: "/configure/associate-storage-backend.html"
 - title: ネットワークアクセスの設定
   url: "/configure/configure-network-access.html"
+- title: データストアを作成
+  url: "/configure/create-vvols-datastore.html"

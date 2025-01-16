@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP Tools for VMware vSphereプラグインは、仮想マシンとデータストアのレポートを提供します。 
 ---
-= ONTAP Toolレポート
+= ONTAP toolsレポート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

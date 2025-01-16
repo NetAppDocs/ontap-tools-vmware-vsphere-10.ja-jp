@@ -30,14 +30,4 @@ _kubectl describe persistentvolumes | grep internalName | awk -F'=''｛print $2�
 . vCenter ServerからのVMの削除（を参照） https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html["vCenter ServerまたはデータストアからのVMまたはVMテンプレートの削除"]
 . ONTAP System Managerからボリュームを削除します。を参照してください。 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["FlexVol ボリュームを削除します"]。ボリュームを削除するには、CLIコマンドでFlexVolの正確な名前を指定します。
 . iSCSIを導入する場合は、SAN igroupをONTAPから削除します。を参照してください。 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["SANイニシエータとigroupを表示および管理します"]。
-+
-HA構成では4つのigroupが作成され、非HA構成では2つのigroupが作成されます。
-次のコマンドを実行して、最初のigroup名を確認します。
-
-+
-_kubectl -n trident get tbc trident-backend -o yaml | grep igroupName：|awk -F'：''｛print $2｝'_
-
-+
-その他のigroup名は、VMのホスト名から始まります。
-
 

@@ -16,7 +16,7 @@ ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for vSphere A
 * 必要なもの *
 
 * NFS Plug-in for VAAIのインストールパッケージをダウンロードしておく必要があります (`.vib`）をNetApp Support Site から取得します。 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["NetApp NFS Plug-in for VMware VAAI"]
-* ESXiホスト7.0U3の最新パッチを最小バージョンとしてインストールし、ONTAP 9.12.1Px（最新のPリリース）9.13.1Px、9.14.1Px以降をインストールしておく必要があります。
+* ESXiホスト7.0U3の最新のパッチを最小バージョンとしてインストールし、ONTAP 9.14.1、9.15.1、および9.16.0をインストールしておく必要があります。
 * ESXi ホストの電源をオンにし、 NFS データストアをマウントしておく必要があります。
 * の値を設定しておく必要があります `DataMover.HardwareAcceleratedMove`、 `DataMover.HardwareAcceleratedInit`および `VMFS3.HardwareAcceleratedLocking` ホスト設定を「1」に変更します。
 +
@@ -36,7 +36,7 @@ ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for vSphere A
 .  `.vib`ファイルを参照して選択し、*[アップロード]*をクリックしてファイルをONTAPツールにアップロードします。
 . [ESXiホストにインストール]*をクリックし、NFS VAAIプラグインをインストールするESXiホストを選択し、*[インストール]*をクリックします。
 +
-プラグインのインストールに対応するESXiホストのみが表示されます。画面に表示される手順に従ってインストールを完了する必要があります。インストールの進捗状況は、vSphere Web Clientの[Recent Tasks]セクションで監視できます。
+プラグインのインストールに対応するESXiホストのみが表示されます。画面に表示される手順に従ってインストールを完了する必要があります。インストールの進捗状況は、vSphere Web Clientの[Recent tasks]セクションで監視できます。
 
 . インストールが完了したら、ESXiホストを手動でリブートする必要があります。
 +

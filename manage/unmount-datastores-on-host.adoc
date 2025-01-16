@@ -8,12 +8,9 @@ summary: '[データストアのアンマウント]操作を実行すると、NF
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 [データストアのアンマウント]操作を実行すると、NFSまたはVMFSデータストアがESXiホストからアンマウントされます。データストアのアンマウント処理は、ONTAP tools for VMware vSphereで検出または管理されるNFSおよびVMFSデータストアに対して有効になります。
 
 * 手順 *

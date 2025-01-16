@@ -18,10 +18,12 @@ entries:
     url: "/protect/configure-on-srm-appliance.html"
   - title: SRA クレデンシャルを更新する
     url: "/protect/update-credentials.html"
-  - title: 保護グループを設定します
-    url: "/protect/configure-protection-groups.html"
-  - title: 保護対象サイトとリカバリサイトをペアリング
-    url: "/protect/pair-protected-and-recovery-sites.html"
+  - title: 保護対象サイトとリカバリサイトの設定
+    entries:
+    - title: 保護グループを設定します
+      url: "/protect/configure-protection-groups.html"
+    - title: 保護対象サイトとリカバリサイトをペアリング
+      url: "/protect/pair-protected-and-recovery-sites.html"
   - title: 保護対象サイトとリカバリサイトのリソースを設定
     entries:
     - title: ネットワークマッピングを設定します
