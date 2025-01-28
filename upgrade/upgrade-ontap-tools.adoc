@@ -40,13 +40,13 @@ summary: アップグレードは、HA構成と非HA構成の両方でサポー�
 | 大規模なHA構成 | 大規模なHA構成 
 |===
 
-NOTE: VM ware vSphere 10.1および10.2から10.3へのONTAP toolsのアップグレードがサポートされています。ONTAP tools 10.0から10.3への直接アップグレードはサポートされていません。
+NOTE: ONTAP tools for VMware vSphere 10.1および10.2から10.3へのアップグレードがサポートされます。ONTAP tools 10.0から10.3への直接アップグレードはサポートされていません。
 
 * 始める前に *
 
-非HAアップグレードの場合は、ONTAP tools VMの電源をオフにし、HAアップグレードの場合は、最初のノードの電源をオフにしてから仮想マシン（VM）の設定を次のように変更します。
+非HAアップグレードの場合は、ONTAP tools VMの電源をオフにします。HAアップグレードの場合は、仮想マシン（VM）の設定を次のように変更する前に、最初のノードの電源をオフにします。
 
-* サービスデータがVMにローカルに格納されるため、各ノードに100GBのハードディスクを追加します。
+* サービスデータはVMにローカルに格納されるため、各ノードに100GBのハードディスクを追加します。
 * 電源がオフになっているVMのCPUとメモリを、導入環境の種類に応じて変更します。CPUとRAMのホットプラグインを有効にします。
 +
 |===
@@ -69,7 +69,7 @@ NOTE: VM ware vSphere 10.1および10.2から10.3へのONTAP toolsのアップ�
 |===
 * 変更が完了したらVMの電源をオンにし、サービスが実行中の状態になるまで待ちます。
 * HA環境の場合は、リソースを変更し、CPUとRAMのホットプラグインを有効にし、2番目と3番目のノードにも100GBのハードディスクを追加します。これらのノードをリブートする必要はありません。
-* ONTAP tools 10.1または10.2バージョンを使用してアプライアンスをローカルパス（簡単な導入）として導入した場合は、アップグレード前にSnapshotを休止しておく必要があります。
+* ONTAP tools 10.1または10.2を使用してアプライアンスをローカルパス（簡単な導入）として導入した場合は、アップグレード前に休止スナップショットを作成する必要があります。
 
 
 ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場合は、アップグレードタスクを開始する前に次の手順を完了する必要があります。
@@ -81,7 +81,7 @@ ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場�
 . 「* 4 *」と入力して* Support and Diagnostics（サポートと診断）*を選択します。
 . 「* 2 *」と入力して*[リモート診断アクセスを有効にする]*を選択します。
 . 「* y *」と入力して、任意のパスワードを設定します。
-. ターミナル/ puttyから、前の手順で設定したユーザ「diag」とパスワードを使用してVMのIPアドレスにログインします。
+. ターミナル/ puttyから、ユーザ「diag」と前の手順で設定したパスワードを使用してVMのIPアドレスにログインします。
 
 
 * MongoDBのバックアップを取る*
@@ -89,15 +89,15 @@ ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場�
 次のコマンドを実行して、MongoDBのバックアップを作成します。
 
 * kn exec-it ntv-MongoDB-0 sh-kNはkubectl -n ntv-systemの別名である。
-* env | grep MongoDB_root_password -ポッド内でこのコマンドを実行します。
-* 'exit'-これを実行してポッドから出ます。
-* KN exec NTV-MongoDB-0--mongodump -u root -p MongoDB_root_password --archive=/tmp/ mongodb-backup.gz --gzip -このコマンドを実行して、上記のコマンドで設定したMongo_root_passwordを置き換えます。
-* kn cp ntv-mongodb-0：/tmp/ mongodb-backup.gz ./ mongodb-backup.gz -このコマンドを実行して、上記のコマンドを使用して作成したMongoDBバックアップをポッドからホストにコピーします。
+* ポッド内でrun_env | grep MongoDB_root_password_commandを実行します。
+* run_exit_commandを実行してポッドから出力します。
+* run_kN exec NTV-MongoDB-0--mongodump -u root -p MongoDB_root_password --archive=/tmp/ mongodb-backup.gz --gzip_commandを実行して、上記のコマンドで設定したMongo_root_passwordを置き換えます。
+* _kN cp NTV-MongoDB-0：/tmp/ mongodb-backup.gz ./MongoDB-backup.gz_commandを実行して、上記のコマンドを使用して作成したMongoDBバックアップをポッドからホストにコピーします。
 
 
 *すべてのボリュームのスナップショットを作成*
 
-* 「kN get pvc」コマンドを実行し、コマンドの出力を保存します。
+* 「kN get pvc」コマンドを実行し、コマンド出力を保存します。
 * 次のいずれかの方法で、すべてのボリュームのSnapshotを1つずつ作成します。
 +
 ** CLIから次のコマンドを実行します。_volume snapshot create -vserver <vserver_name>-volume <volume_name>-snapshot <snapshot_name>_
@@ -112,26 +112,25 @@ ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場�
 * [Snapshots]タブに移動し、*[Take Snapshot]*ボタンをクリックします。VMの休止スナップショットを作成します。詳細については、を参照してください https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["仮想マシンのスナップショットの作成"^]。
 
 
-「generate-support-bundle-job」というプレフィックスが付いた完了したポッドをログバンドルから削除してから、アップグレードを実行します。
-サポートバンドルの生成を実行中の場合は、完了してからポッドを削除します。
+アップグレードを実行する前に、「generate-support-bundle-job」というプレフィックスが付いた完了したポッドをログバンドルから削除してください。サポートバンドルの生成を実行中の場合は、完了してからポッドを削除します。
 
-どのようなアップグレードでも、容量が100GBのハードディスクドライブ（HDD）を追加する必要があります。HDDを追加するには、次のタスクを実行します。
+どのようなアップグレードでも、100 GBのハードディスクドライブ（HDD）を追加する必要があります。HDDを追加するには、次のタスクを実行します。
 
-. シングルノード構成のVMを選択するか、HA構成の3つのVMをすべて選択します。
+. シングルノード構成のVMを選択するか、HA構成の3つすべてのVMを選択します。
 . VMを右クリックし、*[Add New Device]*>*[Hard Disk]*を選択します。
-. [New Hard disk]フィールドに、100 GBのサイズのHDDを追加します。
+. [New Hard disk]フィールドに100 GB HDDを追加します。
 . [適用]*をクリックします。
 
 
-ハードディスクを追加したら、それぞれの構成に対してVMのリソースを更新し、プライマリVMを再起動します。
+ハードディスクを追加したら、それぞれの構成のVMのリソースを更新し、プライマリVMを再起動します。
 
-新しいHDDが作成されます。Dynamic Storage Provisionerは、このHDDを使用してボリュームを作成またはレプリケートします。
+新しいHDDが作成されます。Dynamic Storage Provisionerは、このHDDを使用してボリュームを生成またはレプリケートします。
 
 * 手順 *
 
 . ONTAP tools for VMware vSphereアップグレードISOをコンテンツライブラリにアップロードします。
 . プライマリVMページで、*[Actions]*>*[Edit Settings]*を選択します。
-. [設定の編集]ウィンドウの[*CD/DVDドライブ*]フィールドで、[コンテンツライブラリISOファイル]を選択します。
+. CD/DVDドライブ*フィールドの編集設定ウィンドウで、コンテンツライブラリISOファイルを選択します。
 . ISOファイルを選択し、* OK *をクリックします。[CD/DVDドライブ]フィールドで[接続済み]チェックボックスを選択します。
 image:../media/primaryvm-edit-settings.png["設定を編集します"]
 . vCenter Serverで、ONTAP toolsへのコンソールを開きます。
@@ -150,23 +149,23 @@ ONTAP tools for VMware vSphere 10.3にアップグレードすると、次のこ
 
 * マネージャUIからサービスを無効にする
 * 非HAセットアップからHAセットアップへの移行
-* 非HA小規模構成を非HA中規模構成、またはHA中規模構成または大規模構成にスケールアップします。
+* 非HA小規模構成非HA中規模構成、またはHA中規模または大規模構成にスケールアップします。
 * HA構成でないアップグレードの場合は、ONTAP tools VMをリブートして変更を反映します。HAのアップグレードの場合は、最初のノードをリブートして変更をノードに反映します。
 
 
 * 終了後 *
 
-以前のリリースのONTAP tools for VMware vSphereを10.3リリースにアップグレードしたら、SRAアダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。
+以前のリリースのONTAP tools for VMware vSphereを10.3にアップグレードしたら、SRAアダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。
 
 アップグレードが完了したら、次の手順に従ってONTAPからTridentボリュームを手動で削除します。
 
 
-NOTE: ONTAP tools for VMware vSphere 10.1または10.2が非HA小規模または非HA中規模（ローカルパス）構成であった場合、これらの手順は必要ありません。
+NOTE: ONTAP tools for VMware vSphere 10.1または10.2が非HAの小規模または中規模（ローカルパス）構成の場合、これらの手順は必要ありません。
 
 . vCenter Serverで、ONTAP toolsへのコンソールを開きます。
 . maintenance ユーザとしてログインします。
 . 「* 4 *」と入力して、* Support and Diagnostics（サポートと診断）*メニューを選択します。
-. * 1 *を入力して*「診断シェルへのアクセス」オプションを選択します。
+. * 1 *を入力して*アクセス診断シェル*オプションを選択します。
 . 次のコマンドを実行します。
 +
 [listing]
@@ -176,4 +175,4 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 . ONTAPのユーザ名とパスワードを入力します。
 
 
-これにより、ONTAP tools for VMware vSphere 10.1 / 10.2で使用されていたONTAP内のTridentボリュームがすべて削除されます。
+これにより、ONTAP tools for VMware vSphere 10.1 / 10.2で使用されているONTAP内のTridentボリュームがすべて削除されます。
