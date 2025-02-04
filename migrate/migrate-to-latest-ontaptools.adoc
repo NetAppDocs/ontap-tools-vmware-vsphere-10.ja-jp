@@ -244,3 +244,7 @@ VMストレージポリシーへの準拠*では、準拠ステータスを確�
 [VM storage policy compliance]*で、準拠ステータスが[準拠]と表示されるようになりました。
 
 
+
+* 関連情報 *
+
+link:../upgrade/upgrade-ontap-tools.html["ONTAP Tools for VMware vSphere 10.xから10.3へのアップグレード"]
