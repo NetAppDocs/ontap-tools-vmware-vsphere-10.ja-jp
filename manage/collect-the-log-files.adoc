@@ -18,7 +18,7 @@ NOTE: ONTAP tools Managerからのログの生成には、すべてのvCenter Se
 
 * 手順 *
 
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから* Log Bundles *を選択します。
 +
@@ -34,7 +34,7 @@ tar.gzファイルをダウンロードし、テクニカルサポートに送�
 vCenter Client UIを使用してログバンドルを生成するには、次の手順を実行します。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . vSphere Clientのホームページで、* Support *>* Log bundle *>* Generate *に移動します。
 . ログバンドルラベルを指定し、ログバンドルを生成します。
 ファイルが生成されると、ダウンロードオプションが表示されます。ダウンロードには時間がかかる場合があります。

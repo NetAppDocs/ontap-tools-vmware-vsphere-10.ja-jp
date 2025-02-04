@@ -26,7 +26,7 @@ summary: 保護対象ホストクラスタのSnapMirror関係を編集するこ�
 ホストクラスタ保護のステータスを監視するには、次の手順を実行します。保護されているすべてのホストクラスタを、保護状態、SnapMirror関係、データストア、および対応するSnapMirrorステータスとともに監視できます。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . NetApp ONTAP tools *>*[保護]*>*[ホストクラスタ関係]*に移動します。
 +
 保護列の下にあるアイコンには、保護のステータスが表示されます。
@@ -41,10 +41,10 @@ summary: 保護対象ホストクラスタのSnapMirror関係を編集するこ�
 新しく追加したデータストアまたはホストを保護するには、次の手順を実行します。vCenterの標準ユーザインターフェイスを使用して、保護対象クラスタに新しいホストを追加したり、ホストクラスタに新しいデータストアを作成したりできます。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . 保護されたクラスタのプロパティを編集するには、次のいずれかを実行します。
 +
-.. NetApp ONTAP tools *>*[保護]*>*[ホストクラスタ関係]*に移動し、クラスタの省略記号メニューをクリックして*[編集]*または
+.. NetApp ONTAP tools *>* Protection *>* Host cluster relationships *に移動し、クラスタの省略記号メニューを選択して* Edit *または
 .. ホストクラスタを右クリックし、* NetApp ONTAP tools *>* Protect Cluster *を選択します。
 
 
@@ -65,10 +65,10 @@ vCenterタスクが作成され、*[最近のタスク]*パネルで進捗状況
 == 新しいSnapMirror関係を追加する
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . 保護されたクラスタのプロパティを編集するには、次のいずれかを実行します。
 +
-.. NetApp ONTAP tools *>*[保護]*>*[ホストクラスタ関係]*に移動し、クラスタの省略記号メニューをクリックして*[編集]*または
+.. NetApp ONTAP tools *>* Protection *>* Host cluster relationships *に移動し、クラスタの省略記号メニューを選択して* Edit *または
 .. ホストクラスタを右クリックし、* NetApp ONTAP tools *>* Protect Cluster *を選択します。
 
 
@@ -89,10 +89,10 @@ vCenterタスクが作成され、*[最近のタスク]*パネルで進捗状況
 関係を削除すると、セカンダリサイトで再スキャンがトリガーされ、マッピングされていないLUNがアクティブパスとしてホストから削除されます。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . 保護されたクラスタのプロパティを編集するには、次のいずれかを実行します。
 +
-.. NetApp ONTAP tools *>*[保護]*>*[ホストクラスタ関係]*に移動し、クラスタの省略記号メニューをクリックして*[編集]*または
+.. NetApp ONTAP tools *>* Protection *>* Host cluster relationships *に移動し、クラスタの省略記号メニューを選択して* Edit *または
 .. ホストクラスタを右クリックし、* NetApp ONTAP tools *>* Protect Cluster *を選択します。
 
 
@@ -111,10 +111,10 @@ vCenterタスクが作成され、*[最近のタスク]*パネルで進捗状況
 NOTE: 既存の非同期SnapMirror関係を編集することはできません。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . 保護されたクラスタのプロパティを編集するには、次のいずれかを実行します。
 +
-.. NetApp ONTAP tools *>*[保護]*>*[ホストクラスタ関係]*に移動し、クラスタの省略記号メニューをクリックして*[編集]*または
+.. NetApp ONTAP tools *>* Protection *>* Host cluster relationships *に移動し、クラスタの省略記号メニューを選択して* Edit *または
 .. ホストクラスタを右クリックし、* NetApp ONTAP tools *>* Protect Cluster *を選択します。
 
 

@@ -18,7 +18,7 @@ ONTAP tools for VMware vSphere 9からONTAP tools for VMware vSphere 10.1以降�
 | 機能 | ONTAPツール9.13 | ONTAPツール10.1 | ONTAPツール10.2以降 
 
 
-| 主な価値提案 | 強化されたセキュリティ、コンプライアンス、自動化機能により、運用開始から運用を合理化、簡易化 | 高可用性、パフォーマンス、拡張性の制限を拡張しながら、ONTAP tools 10.xを9.xパリティに移行 | VMFSとVVOLのFC、VMFSのみのNVMe-oF / FC、NVMe-oF / TCPのサポートが拡張されました。NetApp SnapMirrorの使いやすさ、vSphereメトロストレージクラスタのシンプルなセットアップ、3サイトのSRMサポート 
+| 主な価値提案 | 強化されたセキュリティ、コンプライアンス、自動化機能により、運用開始から運用を合理化、簡易化 | 高可用性、パフォーマンス、拡張性の制限を拡張しながら、ONTAP tools 10.xを9.xパリティに移行 | VMFSとVVOLのFC、VMFSのみのNVMe-oF / FC、NVMe-oF / TCPのサポートが拡張されました。NetApp SnapMirrorの使いやすさ、vSphereメトロストレージクラスタのシンプルなセットアップ、3サイトのVMware Live Site Recoveryのサポート 
 
 
 | ONTAPリリースの認定 | ONTAP 9 .9.1からONTAP 9 .15.1へ | ONTAP 9 .12.1からONTAP 9 .14.1へ | ONTAP 9.12.1からONTAP 9.15.1（ONTAP tools 10.2用）ONTAP 9.14.1、9.15.1、および9.16.0（ONTAP tools 10.3用） 
@@ -36,7 +36,7 @@ ONTAP tools for VMware vSphere 9からONTAP tools for VMware vSphere 10.1以降�
 | オブザーバビリティ | パフォーマンス、容量、ホストコンプライアンスのダッシュボードVMとデータストアの動的なレポート | パフォーマンス、容量、ホストコンプライアンスに関するダッシュボードが更新されました。Dynamic VMとデータストアに関するレポートが更新されました。 | パフォーマンス、容量、ホストコンプライアンスに関するダッシュボードが更新されました。Dynamic VMとデータストアに関するレポートが更新されました。 
 
 
-| データ保護 | VMFS用とNFS用のSRAレプリケーションFlexVolベースのレプリケーションでvVol SCVを統合し、バックアップに相互運用可能 | iSCSI VMFSデータストアおよびNFS v3データストア用のSRAレプリケーション | iSCSI VMFSおよびNFS v3データストア用のSRAレプリケーションSMASとSRMを組み合わせた3サイト保護。 
+| データ保護 | VMFS用とNFS用のSRAレプリケーションFlexVolベースのレプリケーションでvVol SCVを統合し、バックアップに相互運用可能 | iSCSI VMFSデータストアおよびNFS v3データストア用のSRAレプリケーション | iSCSI VMFSおよびNFS v3データストア用のSRAレプリケーションSMASとVMware Live Site Recoveryを組み合わせた3サイト保護。 
 
 
 | VASA Providerのサポート | VASA 4.0 | VASA 3.0 | VASA 3.0 

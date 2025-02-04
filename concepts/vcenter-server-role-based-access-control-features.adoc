@@ -55,7 +55,7 @@ vCenter Serverのロールは、vSphereのオブジェクトおよびタスク�
 
 vCenter Serverの権限とRBACを簡単に使用できるように、ONTAP Tools for VMware vSphereには、主要なONTAPツールfor VMware vSphereタスクを実行できる標準のONTAPツールfor VMware vSphereロールが用意されています。タスクを実行せずに情報を表示できる読み取り専用ロールもあります。
 
-ONTAP Tools for VMware vSphereの標準ロールを表示するには、vSphere Clientのホームページで*[ロール]*をクリックします。ONTAP Tools for VMware vSphereのロールで、次のタスクを実行できます。
+ONTAP Tools for VMware vSphereの標準ロールを表示するには、vSphere Clientのホームページで*[ロール]*を選択します。ONTAP Tools for VMware vSphereのロールで、次のタスクを実行できます。
 
 |===
 

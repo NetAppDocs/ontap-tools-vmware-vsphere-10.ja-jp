@@ -74,8 +74,6 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: メンテナンスコンソールのユーザパスワードのリセット
     url: "/manage/reset-maint-password.html"
-- title: ボリュームをクリーンアップ
-  url: "/manage/delete-deployment.html"
 - title: ホストクラスタの保護を管理します。
   entries:
   - title: ホストクラスタの保護を変更
@@ -84,3 +82,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: ほぼゼロRPO
   url: "/manage/enable-backup.html"
+- title: ONTAP toolsの導入を終了
+  url: "/manage/uninstall-deployment.html"
+- title: ボリュームをクリーンアップ
+  url: "/manage/delete-deployment.html"

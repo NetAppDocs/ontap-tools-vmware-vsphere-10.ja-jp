@@ -19,10 +19,10 @@ vCenter Serverのリストページには、関連するストレージバック
 
 * 手順 *
 
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから[vCenter]を選択します。
-. ストレージバックエンドに関連付けるvCenterの縦の省略記号をクリックします。
+. ストレージバックエンドに関連付けるvCenterの縦の省略記号を選択します。
 . ポップアップのドロップダウンからストレージバックエンドを選択します。
 . vCenter Serverインスタンスを必要なストレージバックエンドに関連付けるには、*[ストレージバックエンドの関連付け]*オプションを選択します。
 

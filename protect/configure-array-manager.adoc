@@ -25,7 +25,7 @@ SRA では、クラスタレベルの管理と SVM レベルの管理がサポ�
 
 * 手順 *
 
-. VMware Live Site Recoveryで、* Array Managers *をクリックし、* Add Array Manager *をクリックします。
+. VMware Live Site Recoveryで、* Array Managers *>* Add Array Manager *を選択します。
 . 次の情報を入力して、VMware Live Site Recoveryでアレイについて説明します。
 +
 .. [*Display Name*] フィールドに、アレイマネージャを識別する名前を入力します。
@@ -62,7 +62,7 @@ NOTE: アレイマネージャを設定するときは、ONTAP toolsでストレ
 
 
 . 「 * 次へ * 」をクリックします。
-. アレイが検出され、[Add Array Manager]ウィンドウの下部に表示されていることを確認し、*[Finish]*をクリックします。
+. アレイが検出され、[Add Array Manager]ウィンドウの下部に表示されていることを確認し、*[Finish]*を選択します。
 
 
 適切な SVM 管理 IP アドレスとクレデンシャルを使用して、リカバリサイトでも同じ手順を実行します。アレイマネージャの追加ウィザードのアレイペアを有効にする画面で、正しいアレイペアが選択されていること、および有効にする準備ができたことを確認する必要があります。

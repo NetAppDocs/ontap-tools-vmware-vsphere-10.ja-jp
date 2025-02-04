@@ -26,7 +26,7 @@ ONTAP toolsタブには、証明書の種類（自己署名/ CA署名）やド�
 
 * 手順 *
 
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . 証明書を更新するには、*証明書*>* ONTAP tools *>*更新*オプションを選択します。
 +
@@ -56,7 +56,7 @@ ONTAP Tools for VMware vSphereは、VASA Provider用の自己署名証明書を�
 
 * 手順 *
 
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . 証明書を更新するには、*[証明書]*>*[VASA Provider]*または* ONTAP tools *>*[更新]*オプションを選択します。
 . 自己署名証明書をカスタムCA証明書にアップグレードするには、*[証明書]*>*[VASA Provider]*または* ONTAP tools *>*[CAにアップグレード]*オプションを選択します。

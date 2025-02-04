@@ -48,7 +48,6 @@
   <block id="29f2665c887f3f211c2db15093412283" category="list-text">[Users]で[Add]*を選択します。</block>
   <block id="ec42f863993abd2934159f53379a6901" category="list-text">[ユーザーの追加*]ダイアログボックスで、[仮想化製品*]を選択します。</block>
   <block id="5df7b70c5af0cd50a04e3746ad6245d1" category="list-text">必要なユーザ名とパスワードを入力します。</block>
-  <block id="e01af01e2bf5d617a15d4fadeab27079" category="list-text">ユーザに必要な権限（[Discovery]、[Create Storage]、[Modify Storage]、[Destroy Storage]、[NAS/SAN Role]）を選択し、*[Add]*をクリックします。</block>
   <block id="e7242d929f91fa7cccd6f633c006cf87" category="section-title">SVMアグリゲートのマッピングの要件</block>
   <block id="8118b7bf07f19656c810eaba631ffaf8" category="paragraph">REST API：</block>
   <block id="ff0a0ea2c5511721348ab57e43f8194f" category="paragraph">ONTAP CLI：</block>
@@ -83,7 +82,6 @@
   <block id="9c52661d131f07face38ff3baa271d09" category="cell">/api/SVM/SVMs</block>
   <block id="a00c50b90749f90a36742b8673eb5362" category="cell">/api/network/ip/interfaces</block>
   <block id="75a3ccbb7a9e84c450e2a4fa949a65dd" category="cell">ストレージバックエンドの追加-管理LIFの範囲がクラスタ/ SVMであることを確認します。</block>
-  <block id="3b81d27fac8f09b16f1a3c38fef1586e" category="list-text">vCenter Serverに移動します。</block>
   <block id="d683f4893193b2031b9057d1e1d8107d" category="list-text">管理者のクレデンシャルでログインします。</block>
   <block id="f13b700708b8d1b2903e01d04713cb09" category="admonition">ルートアグリゲートがSVMにマッピングされていないことを確認します。</block>
   <block id="aee895c24ce8b1de4db4cd6c7eabc1e3" category="paragraph">次のURIを使用してステータスを確認します。</block>
@@ -197,32 +195,17 @@
   <block id="198ed9d33d0ea5ef2037f6497ce3a42f" category="summary">ONTAP tools for VMware vSphereは、NetAppストレージシステムに最適なESXiホストのマルチパス設定とHBAタイムアウト設定を確認して設定します。</block>
   <block id="90844ba0025d985c5a9dd619dcba22e2" category="doc">ESXiサーバのマルチパスとタイムアウトの設定</block>
   <block id="cbed6a690169a39b735cd91952a313f3" category="paragraph">VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに最も適した設定を行います。</block>
-  <block id="ec6630d660da48dc217afab30ba7c1ce" category="list-text">ショートカットページで、プラグインセクションの* NetApp ONTAP tools *をクリックします。</block>
   <block id="48541486be8b3f08161f9ca5ec2e9de2" category="list-text">[推奨設定の適用]*リンクを選択します。</block>
   <block id="7ca24662c9fd82d1c8f828af5176f560" category="list-text">設定ページで、必要に応じて推奨値を選択します。</block>
   <block id="c260b7a566deca46e5b1c9214afd516d" category="summary">ストレージバックエンドは、ESXiホストがデータストレージに使用するシステムです。</block>
-  <block id="038f6457c1cb541ff02015f8ede42bdb" category="list-text">WebブラウザからONTAP Tools Managerを起動します。<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block></block>
   <block id="600bee7ab6e14dd0a2755b8f2270990c" category="list-text">導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
-  <block id="835e306294a47e73fead15ebe0ab0f34" category="list-text">次のコマンドを使用してvSphere Clientにログインします。<block ref="aa8722d854b4ede974e04f75b8b124b5" prefix=" " category="inline-code"></block></block>
   <block id="be220ca65fb361f10c452627110630ac" category="list-text">ONTAP toolsの左側のペインで、*[ストレージバックエンド]*に移動し、*[追加]*を選択します。</block>
   <block id="7f2d9eb042fad8493c138993f867cd80" category="paragraph">リストが更新され、新しく追加されたストレージバックエンドがリストに表示されます。</block>
-  <block id="f6c30a782639c90ebe44f3f343922077" category="summary">vCenter Serverインスタンスは、ホスト、仮想マシン（VM）、ストレージバックエンドを制御できる一元管理プラットフォームです。</block>
-  <block id="9a22df67797f0968951385551d26d202" category="paragraph">vCenter Serverは、ホスト、仮想マシン（VM）、およびストレージバックエンドを制御できる一元管理プラットフォームを提供します。</block>
   <block id="a8534b379980a6bb97915d2890ad3522" category="section-title">vCenter Serverインスタンスを追加する</block>
-  <block id="aaf638e0edd71bac35fef1b1149f3843" category="paragraph">ONTAP tools for VMware vSphereの1つのインスタンスを使用して、複数のvCenter Serverインスタンスを追加および管理できます。</block>
-  <block id="0336e0a2e9f5b95c0d4178d3186ecbf6" category="list-text">サイドバーから* vCenters *を選択します。</block>
-  <block id="4287076fd3b7cc772889cb75d012c773" category="list-text">vCenter Serverインスタンスをオンボードするには*[追加]*を選択し、vCenterのIPアドレス/ホスト名、ユーザ名、パスワード、およびポートの詳細を指定します。</block>
-  <block id="2d371751c2001ffe5e53c536ad57192b" category="paragraph">vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理が自動的に実行されます。</block>
-  <block id="2ac1dd1c4b8256022b5e0787f80e4796" category="list-text">vCenter Client Plug-inが登録されている</block>
-  <block id="558eb42fc2df4bacc01e4c41a425eaa9" category="list-text">プラグインとAPIのカスタム権限がvCenter Serverインスタンスにプッシュされる</block>
   <block id="1fb8597774c73340601ce61c9d3435ad" category="list-text">ユーザを管理するためのカスタムロールが作成されます。</block>
-  <block id="7cf8d73badf9183387fac300a5b1c2f5" category="paragraph">vCenter Serverインスタンスを追加すると、ONTAP tools for VMware vSphereプラグインがリモートプラグインとしてvCenter Serverに自動的に登録されます。プラグインは、vSphereユーザインターフェイスのショートカットに表示されます。</block>
-  <block id="834391696f42211e534b504b2ab7fc3b" category="paragraph">プラグインは、vCenter Serverインスタンスへのキー_com.netapp.otv_で登録され、vCenter ServerインスタンスのExtensionManagerで確認できます。</block>
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">ONTAP toolsでvCenter Serverインスタンスを削除すると、次の処理が自動的に実行されます。</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">プラグインの登録が解除されました。</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">プラグイン権限とプラグインロールが削除されました。</block>
-  <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">vCenter Client UIからVASA Providerを確認するには、次の手順を実行します。</block>
-  <block id="05cb6ed323f4143840fd9e10390fb26a" category="list-text">リモートプラグインUIからVASA Providerを確認するには、次の手順を実行します。</block>
   <block id="d418b16c9420ea00709d4c60eb2f4123" category="list-text">[タイプ]*ペインで、*[データストアタイプ]*で[VVols]を選択します。</block>
   <block id="c541e6c09ab567adf5bace8dda1aa1fb" category="list-text">[名前とプロトコル]ペインで、*[データストア名]*と*[プロトコル]*の情報を指定します。</block>
   <block id="2368a6b040d4adc2d37ac7169ec7c692" category="list-text">[タイプ]*ペインで、*[データストアタイプ]*で[NFS]を選択します。</block>
@@ -230,7 +213,6 @@
   <block id="d6912beeaac19fd0d96cc7553862efc5" category="list-text">*非対称*トグルボタンは、プラットフォームのドロップダウンでパフォーマンスまたは容量が選択されている場合にのみ表示されます。</block>
   <block id="53a55f63b586976eed071f053f5bd93d" category="list-text">*[プラットフォーム]ドロップダウンの[任意]*オプションを使用すると、プラットフォームフラグまたは非対称フラグに関係なく、vCenterに含まれるすべてのSVMを表示できます。</block>
   <block id="3be89e21b871a8b3f031c98d9feeed52" category="list-text">[ストレージ属性]*ペインで、ボリュームを作成するアグリゲートを選択します。アドバンストオプションで、必要に応じて*[スペースリザベーション]*および*[QoSを有効にする]*を選択します。</block>
-  <block id="db7e33787aabbd286bac5bcc2981ef04" category="list-text">[概要]*ペインで選択内容を確認し、*[完了]*をクリックします。</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">* 始める前に *</block>
   <block id="dcb7d3ba96571479c14a3f217235fda3" category="list-text">[タイプ]ペインで、*[データストアタイプ]*で[VMFS]を選択します。</block>
   <block id="422b0793eae20199839e73ad8d631758" category="summary">ONTAP tools Managerを使用すると、VMware vSphere管理者向けのONTAP toolsをより詳細に制御して使用できるため、アプライアンス、テナント、ストレージバックエンドの全体的な管理に役立ちます。</block>
@@ -239,7 +221,6 @@
   <block id="db02bd2307c791062e633781a3c11af0" category="list-text">vCenter Serverインスタンス管理- vCenter ServerインスタンスをONTAPツールに追加および管理します。</block>
   <block id="7642832535ff83a877a05e578e6e55f7" category="list-text">ストレージバックエンド管理- ONTAPストレージクラスタをONTAP tools for VMware vSphereに追加および管理し、オンボードされたvCenter Serverインスタンスにグローバルにマッピングします。</block>
   <block id="ce3d50f0dc891fd49131a5879ff0cfbb" category="list-text">ログバンドルのダウンロード- ONTAP Tools for VMware vSphereのログファイルを収集します。</block>
-  <block id="201e0f05da35ce967557e2ecf9f130be" category="paragraph">ONTAP Tools Managerにアクセスするには、<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> ブラウザで、導入時に指定したONTAP Tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
   <block id="3fae23455f0376a5d42734cbd65edc69" category="summary">vSphere ClientでONTAP tools for VMware vSphereを初めて実行すると、ONTAP tools for VMware vSphereによって、ESXiホスト、そのLUNとNFSエクスポート、およびLUNとエクスポートを所有するNetAppストレージシステムが検出されます。</block>
   <block id="8fd43ee482a4e281b8feee6762fb22d2" category="doc">ストレージシステムとホストを検出</block>
   <block id="b7010f15d8c1972d8186a014a02775aa" category="paragraph">vSphere ClientでONTAP tools for VMware vSphereを初めて実行すると、ESXiホスト、そのLUNとNFSエクスポート、およびそれらのLUNとエクスポートを所有するNetAppストレージシステムがONTAP Toolsによって検出されます。</block>
@@ -266,7 +247,6 @@
   <block id="ec53a8c4f07baed5d8825072c89799be" category="cell">ステータス</block>
   <block id="b7ccb515b31d3cd038c0bf7b2d75ff97" category="cell">ストレージバックエンド-容量</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="cell">仮想マシン</block>
-  <block id="924348d1e34a882239d0ef6965d398a3" category="cell">このカードには、上位10個のVMがパフォーマンス指標でソートされて表示されます。ヘッダーをクリックすると、選択した指標の上位10台のVMを昇順または降順でソートして表示できます。カードで行われたソートとフィルタリングの変更は、ブラウザキャッシュを変更またはクリアするまで保持されます。</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="cell">データストア</block>
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">ESXiホストコンプライアンスカード</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用して、ストレージバックエンドを管理するための新しいユーザロールを設定できます。</block>
@@ -295,30 +275,8 @@
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">ESXi ホストでは、次の値を設定できます。</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">HBA / CNAアダプタ設定</block>
   <block id="d3c41b5a4cf556f3a598cc1221e08ee4" category="paragraph">NetAppストレージシステムに推奨されるHBAタイムアウト設定を設定します。</block>
-  <block id="15ed0ba40712ee81b72a8792c890eedc" category="list-text">* Disk.QFullSampleSize *</block>
-  <block id="66ea40466e5ef8258f8b6db3cdc7106f" category="paragraph">すべての構成でこの値を32に設定します。この値を設定すると、 I/O エラーの防止に役立ちます。</block>
-  <block id="39588925ce067cdd61e04bbd64e51dcb" category="list-text">* Disk.QFullThreshold *</block>
-  <block id="9bd553240078f69295a0b47ce73fd074" category="paragraph">すべての構成でこの値を8に設定します。この値を設定すると、 I/O エラーの防止に役立ちます。</block>
-  <block id="81ec4070dd281a6d1920f79a9ecb8f0d" category="list-text">* Emulex FC HBA タイムアウト *</block>
-  <block id="b4dbfc2d52627e923cbb563a31ff756d" category="paragraph">デフォルト値を使用します。</block>
-  <block id="5ecf7b7910834f22ac8988030833dbcc" category="list-text">* QLogic FC HBA タイムアウト *</block>
   <block id="c803cf4eb4cbf3a6b12b1e1cc3443970" category="section-title">MPIO設定</block>
   <block id="5fc0e54193f8c3ad7e67febc376fc805" category="section-title">NFS 設定</block>
-  <block id="8070bc80900108d97e4adad9ab6d22e4" category="list-text">* Net.TcpipHeHeapSize *</block>
-  <block id="63f2bf43871d7fd6cfff0ee7fae2851c" category="paragraph">この値を32に設定します。</block>
-  <block id="8fa1b2348551705fe60dee095d5ff318" category="list-text">* Net.TcpipHeapMax *</block>
-  <block id="7ac4447eac890dbe7789370e88c99552" category="paragraph">この値を1024MBに設定します。</block>
-  <block id="010bb3b0833d69b2d577ce46a15191c1" category="list-text">* NFS.MaxVolumes *</block>
-  <block id="49f73a20f20d4a942995b54e5dc1ec85" category="paragraph">この値を256に設定します。</block>
-  <block id="a503d9e9758ec168f61d4fa7f51a9b77" category="list-text">* NFS41.MaxVolumes *</block>
-  <block id="25ab5860cd87fb44b71dd148311dbc6c" category="list-text">* NFS.MaxQueueDepth *</block>
-  <block id="20e93515794eb8fe08f2d5c03b2fe6dd" category="paragraph">キューイングのボトルネックを回避するには、この値を128以上に設定します。</block>
-  <block id="2851ec7ed71fcd9728c3eec063752975" category="list-text">* nfs.HeartbeatMaxFailures*</block>
-  <block id="4141b60cadce8484d5b990b27028afcc" category="paragraph">すべてのNFS構成で、この値を10に設定します。</block>
-  <block id="e025b4d688912451e00be1ede73c233a" category="list-text">* nfs.HeartbeatFrequency*</block>
-  <block id="8a4ab1f920d50bb0dc8b6aa1aa85b593" category="paragraph">すべてのNFS構成で、この値を12に設定します。</block>
-  <block id="e639cf4ed1d7e930f85e04fb8f39dffd" category="list-text">* nfs.HeartbeatTimeout *</block>
-  <block id="ac716bc8b8e82b6996bc08330af3a1ed" category="paragraph">すべてのNFS構成で、この値を5に設定します。</block>
   <block id="95a5538456f4b3e049c517bde3056fa4" category="paragraph">このタスクでは、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間のマッピングをグローバルに作成できます。</block>
   <block id="5f115b5221541c527e67a2b71da5fb5d" category="list-text">サイドバーから[vCenter]を選択します。</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for VMware vStorage APIs for Array Integration\（VAAI\）をインストールできます。</block>
@@ -338,18 +296,10 @@
   <block id="b69d71b082dde673b81262019b917561" category="list-text">インストールが完了したら、ESXiホストを手動でリブートする必要があります。</block>
   <block id="f80079b24d028427b631b828f0b21663" category="paragraph">VMware管理者がESXiホストをリブートすると、ONTAP tools for VMware vSphereによってNFS VAAIプラグインが自動的に検出されます。プラグインを有効にするための追加の手順は必要ありません。</block>
   <block id="062e7967273cea76dff9c3579a0c44db" category="doc">VASA ProviderをvCenter Serverインスタンスに登録する</block>
-  <block id="7bd80420c7575554792093f90dbbe6ed" category="list-text">[登録]*ボタンをクリックしてVASA Providerを登録します。</block>
-  <block id="2a8034ce8dbfe14fabe94e3ca6c7b860" category="list-text">VASA Providerの名前を入力し、ONTAP tools for VMware vSphereアプリケーションのユーザクレデンシャルを指定して、*[登録]*をクリックします。</block>
-  <block id="45ca3d95e3d8d42137e3ddd3aad3a99c" category="list-text">登録が完了してページが更新されると、登録されているVASA Providerの状態、名前、バージョンがUIに表示されます。登録解除アクションがアクティブになります。</block>
-  <block id="1df0d7e9f5b78d4fa1a6976adc523050" category="list-text">VASA Providerの登録を解除するには、次の手順を実行します。</block>
-  <block id="35cad240f98c78499e16ff2c12c26c3e" category="list-text">VASA Providerの登録を解除するには、画面下部の*[登録解除]*オプションを選択します。</block>
-  <block id="f80c9283353883b14d2a39cfb0f83568" category="list-text">[VASA Providerの登録解除]*ページでは、VASA Providerの名前を確認できます。このページで、アプリケーションのユーザクレデンシャルを入力し、*[登録解除]*をクリックします。</block>
   <block id="3f95368adb4475e89e1f4206049b54ad" category="summary">VMware 仮想ボリューム（ vvols ）データストアは、 Mount VVOLs Datastore （ VVol データストアのマウント）ダイアログボックスを使用して、 1 つ以上の追加のホストにマウントできます。データストアをマウントすると、他のホストからストレージにアクセスできるようになります。vVolデータストアをアンマウントできるのは、APIを使用する場合のみです。</block>
   <block id="8ac8af3fafb018169f82c906bf521ceb" category="paragraph">VMware Virtual Volumes（vVol）データストアを1つ以上の追加ホストにマウントして、追加のホストにストレージアクセスを提供することができます。vVolデータストアをアンマウントできるのは、APIを使用する場合のみです。</block>
-  <block id="86cba8961b973fe0f7d32bf728804437" category="list-text">vSphere Client のホームページで、 * Hosts and Clusters * をクリックします。</block>
   <block id="0e6fc56cbe91d72cb03e33a904ae9ab3" category="list-text">ナビゲーションペインで、データストアが含まれているデータセンターを選択します。</block>
   <block id="011c7edf1e9f3c93cbdd438d0b9298d1" category="list-text">データストアを右クリックし、* NetApp ONTAP tools *&gt;* Mount datastore *を選択します。</block>
-  <block id="821b150008fb02dff573ea6adca8f145" category="list-text">[ホストにデータストアをマウントする]*ダイアログボックスで、データストアをマウントするホストを選択し、*[マウント]*をクリックします。</block>
   <block id="d3cd4bffc1abc46e60337f8438f457b9" category="summary">[ストレージ]ビューには、仮想マシンによって作成されたVVOLのリストが表示されます。</block>
   <block id="f6607063532d19e10b746de0f6108f15" category="doc">仮想マシンストレージビュー</block>
   <block id="9d850336a156831a9095fd981a1a0c23" category="admonition">このビューは、ONTAP Tools for VMware vSphereで管理するvVolデータストア関連のディスクが1つ以上マウントされているVMに適用されます。</block>
@@ -363,7 +313,6 @@
   <block id="7aaefa4d4b1dc5f22ac66195d817ec42" category="summary">データストアのサイズを変更すると、仮想マシンファイル用のストレージを拡張できます。データストアのサイズは、インフラ要件の変化に応じて変更できます。</block>
   <block id="acaef68592c39a3506e0d7bb3c9e162c" category="paragraph">NFSデータストアとVMFSデータストアのサイズは、必ず拡張する必要があります。NFSデータストアとVMFSデータストアの一部であるFlexVolボリュームは、既存のサイズより小さくすることはできませんが、最大120%まで拡張できます。</block>
   <block id="823a888350d98ab4dac348c27cf264a3" category="doc">アプリケーションユーザパスワードのリセット</block>
-  <block id="a813ffd8133a7b35be235fdabf32e943" category="list-text">サイドバーの*[設定]*をクリックします。</block>
   <block id="eeebcae8d6dc4d602035dac1bc8bf207" category="list-text">[リセット（Reset）]*をクリックして変更を適用します。</block>
   <block id="e811200464bd3c07736511ca762cfead" category="summary">ONTAP tools for VMware vSphereのログファイルは、ONTAP tools for VMware vSphereグラフィカルユーザインターフェイス\（GUI\）のオプションから収集できます。テクニカルサポートに問題のトラブルシューティングを依頼すると、ログファイルの収集を求められることがあります。</block>
   <block id="8058137328d41c72a79d7dea14eaab18" category="paragraph">ONTAP tools for VMware vSphereのログファイルは、ONTAP tools Managerユーザインターフェイスのオプションから収集できます。テクニカルサポートに問題のトラブルシューティングを依頼すると、ログファイルの収集を求められることがあります。</block>
@@ -374,21 +323,14 @@
   <block id="b6d50c4645c0bca6b859870159ef8d88" category="list-text">vSphere Clientのホームページで、* Support *&gt;* Log bundle *&gt;* Generate *に移動します。</block>
   <block id="d33e0eed0ba191bd65fd110cd78b4fe3" category="list-text">ログバンドルラベルを指定し、ログバンドルを生成します。
 ファイルが生成されると、ダウンロードオプションが表示されます。ダウンロードには時間がかかる場合があります。</block>
-  <block id="6a7f3ac83e0c65049ec0ceb21e5a43cf" category="list-text">ストレージバックエンドに関連付ける、またはストレージバックエンドとの関連付けを解除するvCenter Serverの縦の省略記号をクリックします。</block>
-  <block id="a164c42c0b421ef080c9ece13b2dc4f5" category="list-text">変更するvCenter Serverの縦の省略記号をクリックし、*[変更]*を選択します。</block>
   <block id="1de6fa416467171388151875976896ac" category="list-text">vCenter Serverインスタンスの詳細を変更し、*[変更]*を選択します。</block>
   <block id="2917b452ab6d9fd65242e5b878abb0ca" category="paragraph">vCenter Serverを削除する前に、vCenter Serverに接続されているすべてのストレージバックエンドを削除する必要があります。</block>
-  <block id="4043d34409a767217985df86b4e697a1" category="list-text">削除するvCenter Serverの縦の省略記号をクリックし、*[削除]*を選択します。</block>
   <block id="c1506892d1092bf8f73a94ec8249a0f5" category="summary">管理者パスワードは、ONTAP tools Managerを使用して変更できます。</block>
   <block id="c4f8ed60e900e21e211600378be9ee4b" category="doc">ONTAP tools Managerのパスワードの変更</block>
-  <block id="31b542807ad1cd5852e5030eca687353" category="list-text">画面右上の* administrator *アイコンをクリックし、* Change password *を選択します。</block>
   <block id="6082370b0d6d5f8a68f4878e7fa6c9ee" category="list-text">パスワードの変更ポップアップウィンドウで、古いパスワードと新しいパスワードの詳細を入力します。パスワード変更の制約がUI画面に表示されます。</block>
   <block id="ed573fc99efcde0f2343089cf96f6448" category="list-text">変更を適用するには、*変更*をクリックします。</block>
   <block id="2da2062b7a007e397ad268a2b32e9012" category="summary">[データストアの削除]操作を実行すると、選択したデータストアにVVolがない場合にデータストアが削除されます。</block>
-  <block id="3d9191d4a29f16503fdee524fc49addd" category="list-text">VVOLデータストアを右クリックし、* NetApp ONTAP tools *&gt;*[データストアからのストレージの削除]*を選択します。</block>
-  <block id="9d59c1e0cc838cd0d9ee40a2ae789c20" category="list-text">vVolがないボリュームを選択し、*[削除]*をクリックします。</block>
   <block id="6cfbd682adda5c4eac39b86ca21a3fd0" category="admonition">vVolが配置されているボリュームを選択するオプションが無効になります。</block>
-  <block id="eec500d1a36f2f7219040bb385c5c5af" category="list-text">[ストレージの削除]*ポップアップで*[ ONTAPクラスタからボリュームを削除する]*チェックボックスを選択してデータストアおよびONTAPストレージからボリュームを削除し、*[削除]*をクリックします。</block>
   <block id="28557ae56fb972905373e3ac7d9f0f7a" category="summary">NFSおよびVMFSデータストアからVirtual Volumes\（VVols\）データストアに仮想マシンを移行して、ポリシーベースのVM管理やその他のVVOL機能を活用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。</block>
   <block id="d4a113b393db168040c1e9829f30a5d6" category="doc">NFSおよびVMFSデータストアを使用する仮想マシンをvVolデータストアに移行する</block>
   <block id="8cf7c9a705a6403c6ba75ba220837f38" category="paragraph">NFSおよびVMFSデータストアからVirtual Volumes（VVol）データストアに仮想マシンを移行して、ポリシーベースのVM管理やその他のVVol機能を利用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。</block>
@@ -438,12 +380,9 @@ VMでパスワードが更新されます。</block>
   <block id="60d5fd412f90990c51b45f832c8346fe" category="section-title">ストレージの検出</block>
   <block id="f44198097514008927dcc53491c4fa9f" category="paragraph">ストレージバックエンドを検出するには、次の手順を実行します。</block>
   <block id="5f1a8388cdc284eff5c6d1df4b56fe00" category="list-text">ONTAP toolsの左側のペインで、*[Storage backends]*に移動し、ストレージバックエンドを選択します。</block>
-  <block id="6e77766d6374a95828874eef8e15faa8" category="list-text">縦の省略記号メニューをクリックし、*ストレージの検出*を選択します。</block>
-  <block id="bdef6374840a5b3ad1b8d88cc4acaa89" category="list-text">垂直の省略記号メニューをクリックし、*修正*を選択します。</block>
   <block id="a80f0212cc4459655bc5fcab9939686f" category="list-text">クレデンシャルまたはポートを変更できます。ストレージバックエンドを変更するには、*[Username]*と*[Password]*を入力します。</block>
   <block id="ec09e6c55bb934479c1bf602a1a1b5dd" category="paragraph">ONTAP tools Managerを使用して、グローバルONTAPクラスタの削除処理を実行できます。</block>
   <block id="d1549e71fef997733dd3e1617b673673" category="list-text">削除するストレージバックエンドを選択してください</block>
-  <block id="59e2e5a73b6135753cf4d2c730f49a4b" category="list-text">垂直の省略記号メニューをクリックし、*削除*を選択します。</block>
   <block id="42897e06463b0e5ff55224e34121989b" category="section-title">ストレージバックエンドのドリルダウンビュー</block>
   <block id="bddf30be772bb9812e1221c4bc3edfa5" category="paragraph">概要ページには、次の詳細が表示されます。</block>
   <block id="e4bb6370a3f553e0f11a4261db2f7c1d" category="list-text">ストレージバックエンドのステータス</block>
@@ -452,9 +391,6 @@ VMでパスワードが更新されます。</block>
   <block id="5fa405a749972739acd6821756a04696" category="list-text">ネットワークのIPアドレスやポートなどのネットワーク情報。子SVMの場合、情報は親ストレージバックエンドと同じになります。</block>
   <block id="4300089ef33ef55dfedd4e30b4a8f256" category="list-text">ストレージバックエンドに対して許可および制限された権限。子SVMの場合、情報は親ストレージバックエンドと同じになります。権限はクラスタベースのストレージバックエンドでのみ表示されます。SVMをストレージバックエンドとして追加すると、権限の情報は表示されません。</block>
   <block id="e844d9fd53042c733afd7279ded5c1f9" category="summary">VMware vSphere 用の ONTAP ツールのダッシュボードを使用して、 ESXi ホストの設定を編集できます。</block>
-  <block id="7197b2227eb43020539f044b58abaab3" category="paragraph">ESXiホストの設定が含まれている問題がある場合は、ダッシュボードの[ESXiホストシステム]ポートレットに問題が表示されます。問題をクリックすると、問題を搭載した ESXi ホストのホスト名または IP アドレスを確認できます。</block>
-  <block id="639e9ba6f308c9778d22516bc9168d82" category="summary">vCenterオブジェクトビューでデータストアオブジェクトを右クリックすると、[plug-in]セクションにONTAP tools for VMware vSphereでサポートされるアクションが表示されます。</block>
-  <block id="98bbbff1c605d88050b223eb4441899e" category="paragraph">vCenterオブジェクトビューでデータストアオブジェクトを右クリックすると、[plug-in]セクションにONTAP tools for VMware vSphereでサポートされるアクションが表示されます。データストアのタイプと現在のユーザ権限に応じて、特定の操作が有効になります。</block>
   <block id="02ab3ab0847511acbd4b15c4effc3a0f" category="list-text">データストアを右クリックし、* NetApp ONTAP tools *&gt;* Add storage to datastore *を選択します。</block>
   <block id="1559d9c8a77bef2ef4cd2769fa8d4bce" category="list-text">[ボリュームの作成または選択]*ウィンドウで、新しいボリュームを作成するか、既存のボリュームから選択できます。このUIはわかりやすいもので、説明を必要としません。選択した手順に従ってください。</block>
   <block id="0d4c7a909a42ee4216c9dc3a711d6f9c" category="summary">データセンター内の既存の仮想マシンを移行する場合の考慮事項について理解しておく必要があります。</block>
@@ -520,7 +456,6 @@ VMでパスワードが更新されます。</block>
   <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
   <block id="3c69aed3fe79d658207798783104200f" category="inline-link">コンテンツライブラリの作成と使用</block>
   <block id="9349198fdfb9af0c955ccb6ec9ce87ea" category="admonition">導入を進める前に、ONTAPツールのインストール中に、インベントリ上のクラスタのDistributed Resource Scheduler（DRS）を「保守的」に設定してください。これにより、インストール中にVMが移行されなくなります。</block>
-  <block id="5152df3c6b339965d3e104e3df60ca4e" category="list-text">コンテンツライブラリに移動し、展開するライブラリアイテムをクリックします。</block>
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">[選択内容の確認]ウィンドウで詳細を確認し、*[終了]*を選択します。</block>
   <block id="2982d64d666813e553487acfc3139e7b" category="paragraph">導入タスクが作成されると、進行状況がvSphereタスクバーに表示されます。</block>
   <block id="f0e6ca4faaee2f8ba40b1d44ce65e0a0" category="list-text">目的の場所を右クリックし、*[Deploy OVF template...]*を選択します。</block>
@@ -605,7 +540,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
 ロール内の権限を変更した場合、そのロールに関連付けられているユーザは、更新されたロールを有効にするためにログアウトしてから再度ログインする必要があります。</block>
   <block id="399819e3f9493a6dd1ca2c92fbf64730" category="section-title">ONTAP Tools for VMware vSphereに付属の標準ロール</block>
   <block id="092c3cc85864d9e570f219b8f2d0300f" category="paragraph">vCenter Serverの権限とRBACを簡単に使用できるように、ONTAP Tools for VMware vSphereには、主要なONTAPツールfor VMware vSphereタスクを実行できる標準のONTAPツールfor VMware vSphereロールが用意されています。タスクを実行せずに情報を表示できる読み取り専用ロールもあります。</block>
-  <block id="7febf27fe95db590358f98752af7741a" category="paragraph">ONTAP Tools for VMware vSphereの標準ロールを表示するには、vSphere Clientのホームページで*[ロール]*をクリックします。ONTAP Tools for VMware vSphereのロールで、次のタスクを実行できます。</block>
   <block id="bf4c81fa7ba63639b09571cecd64f47b" category="cell">VMware vSphere管理者向けNetApp ONTAPツール</block>
   <block id="a01664a084e564d30d3380d980bf3f1e" category="cell">ONTAP tools for VMware vSphereの一部のタスクを実行するために必要なvCenter Server標準の権限とONTAP tools固有の権限がすべて含まれています。</block>
   <block id="b2cd18c44875bb3f426decbafad3b8e6" category="cell">NetApp ONTAP Tools for VMware vSphere読み取り専用</block>
@@ -645,9 +579,7 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="b528f501fc8de0d95230ff4729b26803" category="paragraph">RPOはRecovery Point Objective（目標復旧時点）の略で、所定の時間内に許容可能とみなされるデータ損失量です。RPOがゼロの場合は、データ損失が許容されないことを意味します。</block>
   <block id="e7515d72c1e04da864284dddc38af8e3" category="summary">ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools for VMware vSphere固有の権限とvCenter Server標準の権限の組み合わせが異なります。</block>
   <block id="ad28e08c64876f0d6306fbeecbc9945d" category="doc">ONTAP Tools for VMware vSphereのタスクに必要な権限</block>
-  <block id="95ea3eb3a49f71fcb621dd0ba137306c" category="paragraph">ONTAP tools for VMware vSphere GUIにアクセスするには、製品レベルのONTAP tools固有のView権限が、適切なvSphereオブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、NetAppアイコンをクリックしたときにONTAP tools for VMware vSphereにエラーメッセージが表示され、ONTAP toolsにアクセスできません。</block>
   <block id="076e2508337120e7d5752f5ce8c6c43b" category="paragraph">View *権限では、VMware vSphere用のONTAPツールにアクセスできます。この権限では、ONTAP tools for VMware vSphere内でタスクを実行することはできません。ONTAP tools for VMware vSphereのタスクを実行するには、タスクに対する適切なONTAP tools固有の権限とvCenter Server標準の権限が必要です。</block>
-  <block id="c46683409009b49455531ac018593091" category="paragraph">割り当てレベルによって、表示できる UI の部分が決まります。ルートオブジェクト（フォルダ）にView権限を割り当てると、NetAppアイコンをクリックしてONTAP tools for VMware vSphereにアクセスできるようになります。</block>
   <block id="d0a94c83b68b4f28f7679d108cca67b8" category="paragraph">別のvSphereオブジェクトレベルにView権限を割り当てることもできますが、その場合、表示および使用できるONTAP Tools for VMware vSphereメニューが制限されます。</block>
   <block id="3413a918b6452d3e60e37eb18410f94c" category="summary">vCenter Server のアクセス許可を使用する際にはいくつかの点に注意する必要があります。VMware vSphere タスク用の ONTAP ツールを使用できるかどうかは、アクセス許可を割り当てた場所、およびアクセス許可の変更後にユーザが実行した操作によって決まります。</block>
   <block id="01f81b02c1a4020173a9881080d42f3d" category="doc">vCenter Serverの権限の割り当てと変更</block>
@@ -719,8 +651,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="0cb204757fc030d9ca635551827fb5fc" category="list-text">[ * オブジェクト * &gt; * アクション * &gt; * サイトのペアリング * ] をクリックします。</block>
   <block id="c036188407dc1d12b6c53670d6f74de9" category="list-text">Select vCenter Server セクションで、次の手順を実行します。</block>
   <block id="c5740be3b9782c8fc0bd8ed3b5756bae" category="list-text">保護対象サイトの vCenter Server が対応するペア候補として表示されていることを確認します。</block>
-  <block id="f866f4a2783cef537c7ed29ec6bffe37" category="list-text">SSO 管理クレデンシャルを入力し、 [* 終了 * ] をクリックします。</block>
-  <block id="2972eea0a5dd2d6837f9aa4d63cfe23a" category="list-text">プロンプトが表示されたら、 [ はい ] をクリックしてセキュリティ証明書を受け入れます。</block>
   <block id="600901e70afccc50e18676048766ba78" category="paragraph">* 結果 *</block>
   <block id="f5687be176cf7331c8455f99c17ffcf2" category="paragraph">保護対象サイトとリカバリサイトの両方が [ オブジェクト ] ダイアログボックスに表示されます。</block>
   <block id="22bf2e5e3e861785a0e8f1eb7bd7492e" category="doc">SRA でデータストアを保護する</block>
@@ -733,7 +663,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="b2beb4d07aac60ef0509b65054500a7c" category="paragraph">プレースホルダデータストアを設定して、リカバリサイトのvCenterインベントリに保護対象の仮想マシン（VM）用の場所を確保する必要があります。プレースホルダ VM はサイズが小さく、数百 KB 以下なので、大容量のプレースホルダデータストアは必要ありません。</block>
   <block id="953e6b615a5a31e17c7240dfe25d81c3" category="list-text">保護対象サイトとリカバリサイトを接続しておく必要があります。</block>
   <block id="fd4020683cb15781a96e8c0356ac1436" category="list-text">リソースマッピングを設定しておく必要があります。</block>
-  <block id="f7469e4bfe16e81c75f9db17425420c6" category="list-text">vCenter Serverにログインし、* Site Recovery *&gt;* Sites *をクリックします。</block>
   <block id="1492b0392ea61287f2885789d58f0cb2" category="list-text">[ 管理 ] タブで、 [ プレースホルダデータストア ] を選択します。</block>
   <block id="f62fc5ba64b8442458ec991092fdb379" category="list-text">新しいプレースホルダデータストアを作成するには、*[新規]*をクリックします。</block>
   <block id="9f300d87b0b24027951fafe07e70031d" category="admonition">プレースホルダデータストアはローカルまたはリモートに作成し、レプリケートはしないでください。</block>
@@ -742,14 +671,9 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="2d1feca885442920df4a76e66f4b88de" category="paragraph">ソースとターゲットの両方のサイトで以下を設定する必要があります。</block>
   <block id="460fd136eab61e2db49d5f457f164f87" category="list-text">保護対象サイトとリカバリサイトのペアリング</block>
   <block id="e438ef52a4347c4c5df1158aecfbabec" category="list-text">ソースとデスティネーションのデータストアをそれぞれのサイトにマウントする必要があります</block>
-  <block id="74bdf365bbc7a26268d2593a0697fb5b" category="list-text">vCenter Serverにログインし、*[サイトリカバリ]*&gt;*[保護グループ]*をクリックします。</block>
-  <block id="139ad45c6dc5c6c49367a34e84df49de" category="list-text">[* 保護グループ * ] ウィンドウ枠で、 [ * 新規 * ] をクリックします。</block>
   <block id="ae24a33c4cdea2edc6acf443decbd4a6" category="list-text">[タイプ]*フィールドで、NFSおよびVMFSデータストアの[タイプ]フィールドオプション...*を[データストアグループ（アレイベースのレプリケーション）]として選択します。
 フォールトドメインは、レプリケーションが有効になっている SVM だけです。ピアリングのみが実装されていて問題がないSVMが表示されます。</block>
-  <block id="fa6dc991183921436639d25587a78f5a" category="list-text">[レプリケーショングループ]タブで、有効なアレイペアまたは設定した仮想マシンがあるレプリケーショングループのいずれかを選択し、*[次へ]*をクリックします。</block>
   <block id="3ec3afd258436b0602e7b898eedbf8db" category="paragraph">レプリケーショングループ上のすべての仮想マシンが保護グループに追加されます。</block>
-  <block id="3bafeb6f773f96336dfd3d5f7f966bba" category="list-text">既存のリカバリプランを選択するか、または新しいリカバリプランに追加 * をクリックして新しいプランを作成します。</block>
-  <block id="aeeb33a98931ed155510009c93a039a0" category="list-text">[ 完了準備完了 ] タブで、作成した保護グループの詳細を確認し、 [ 完了 ] をクリックします。</block>
   <block id="97daabed54f11ac04f0838fb633676b3" category="doc">SAN環境およびNAS環境向けのSRAの設定</block>
   <block id="f222eba86de49df529ce1b0bd8136570" category="paragraph">保護対象サイトとリカバリサイトには、次のプログラムがインストールされている必要があります。</block>
   <block id="406292f3c5b20715e348f48fa5e6d6e3" category="list-text">SRA</block>
@@ -777,7 +701,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="11f4ccd371b621a7fd0ddb2b197b1e00" category="paragraph">Create Folder Mapping ウィザードが表示されます。</block>
   <block id="6f39eceaad564346f7c828d828949f3f" category="list-text">Create Folder Mapping ウィザードで、次の手順を実行します。</block>
   <block id="1ce1b9392a2b445336c39282e8ba76a1" category="list-text">マッピングが正常に作成されたら、 * 次へ * をクリックします。</block>
-  <block id="47f9ac20228d1f077d0314ced055f7fe" category="list-text">前に使用したオブジェクトを選択してリバースマッピングを作成し、*[完了]*をクリックします。</block>
   <block id="dfa5d044985f5ffcb33239e7e7f02f4f" category="paragraph">[ フォルダマッピング ] ページには、保護対象サイトリソースとリカバリサイトリソースが表示されます。環境内の他のネットワークについても、同じ手順を実行します。</block>
   <block id="ab6fe2f57f912e70a50c692b568b9324" category="summary">仮想マシンがどちらか一方のホストグループにフェイルオーバーするように構成されるように、保護対象サイトとリカバリサイトのリソースをマッピングする必要があります。</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">リソースマッピングを設定する</block>
@@ -810,7 +733,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="82655331603d8cc384a5d202a579b205" category="list-text">* （オプション） * Volume exclude list * フィールドに、検出対象から除外するボリュームを入力します。</block>
   <block id="cd146b39104fa69031db97d03b2145ad" category="paragraph">たとえば、volume_dst_vol1_とSnapMirror関係にあるvolume_src_vol1_を除外する場合は、保護対象サイトのフィールドで_src_vol1_を指定し、リカバリサイトのフィールドで_dst_vol1_を指定する必要があります。</block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">「 * 次へ * 」をクリックします。</block>
-  <block id="d77671c8c2dbecec29242655e1670ae5" category="list-text">アレイが検出され、[Add Array Manager]ウィンドウの下部に表示されていることを確認し、*[Finish]*をクリックします。</block>
   <block id="a572a74f39a209b2a39fbc78485af141" category="paragraph">適切な SVM 管理 IP アドレスとクレデンシャルを使用して、リカバリサイトでも同じ手順を実行します。アレイマネージャの追加ウィザードのアレイペアを有効にする画面で、正しいアレイペアが選択されていること、および有効にする準備ができたことを確認する必要があります。</block>
   <block id="9e28f23a92c9abcf9ad62bef3a78490f" category="summary">大規模な環境で最適なパフォーマンスを実現するには、Storage Replication Adapter（SRA\）の推奨設定に従ってストレージのタイムアウト間隔を設定する必要があります。</block>
   <block id="0665e266b8a667d47913e7a384e164d3" category="paragraph">大規模な環境で最適なパフォーマンスを実現するには、Storage Replication Adapter（SRA）の推奨設定に従ってストレージのタイムアウト間隔を設定する必要があります。</block>
@@ -895,8 +817,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">ONTAP tools for VMware vSphereアップグレードISOをコンテンツライブラリにアップロードします。</block>
   <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">プライマリVMページで、*[Actions]*&gt;*[Edit Settings]*を選択します。</block>
   <block id="54a029420d74c0dff69239155cf510b5" category="inline-image-macro">設定を編集します</block>
-  <block id="91d7b736db58d36b29982013e0b7dc00" category="list-text">ISOファイルを選択し、* OK *をクリックします。[CD/DVDドライブ]フィールドで[接続済み]チェックボックスを選択します。
-<block ref="af57a506b85774ef3a9f849e2b26e258" category="inline-image-macro-rx" type="image"></block></block>
   <block id="17ed2c4d54e60ea5223b73996ed7aa1f" category="list-text">「* 3 *」と入力して、[システム設定]メニューを選択します。</block>
   <block id="baab61a76fb8179e23cdeb844ecfde7e" category="list-text">「* 7 *」と入力して、アップグレードオプションを選択します。</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">をアップグレードすると、次の処理が自動的に実行されます。</block>
@@ -974,12 +894,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="500709781cf1f23d88b63694fea55531" category="paragraph">iSCSI環境の場合は、igroupも削除する必要があります。</block>
   <block id="bb113144dfd0e0dacc7ebb805636d51b" category="list-text">次のコマンドを使用して、導入時にONTAPで作成されたFlexVolのリストを取得します。</block>
   <block id="a2b995300ba8f79cc278568247266c61" category="paragraph">_kubectl describe persistentvolumes | grep internalName | awk -F'=''｛print $2｝'_</block>
-  <block id="15408f1c813642ad74ef2fc0f2b80003" category="inline-link">vCenter ServerまたはデータストアからのVMまたはVMテンプレートの削除</block>
-  <block id="1f9681143775b9bbb796eb20e711fdc5" category="list-text">vCenter ServerからのVMの削除（を参照）<block ref="9df05bce2537d61ac4cfd60da50857ed" category="inline-link-rx"></block></block>
   <block id="ef5b87aeaa907022daf2aa19faf9b465" category="inline-link">FlexVol ボリュームを削除します</block>
-  <block id="61829ef583e1b41805512593ab501327" category="list-text">ONTAP System Managerからボリュームを削除します。を参照してください。<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>。ボリュームを削除するには、CLIコマンドでFlexVolの正確な名前を指定します。</block>
   <block id="e38d6f0a684b3cc719c83432498db42b" category="inline-link">SANイニシエータとigroupを表示および管理します</block>
-  <block id="c3a21329f59e75c5e2c910cc4e4e7a7e" category="list-text">iSCSIを導入する場合は、SAN igroupをONTAPから削除します。を参照してください。<block ref="14bc02d0e479c1e35338b733fac8ca0e" category="inline-link-rx"></block>。</block>
   <block id="98ea8bb5748846a8eb48ec17775dd65c" category="list-text"><block ref="73be5ab307e7055f684cc317b6aff741" prefix="" category="inline-code"></block></block>
   <block id="9aac114d9a8bbe576d39d35cf5fad65b" category="list-text"><block ref="5ec1d0f6687a4c1e0107632871d4a131" prefix="" category="inline-code"></block></block>
   <block id="be886d30990ecb1cd7da9458a1301ba3" category="list-text"><block ref="ed73a6dfaf2769c449bcf6ac1257b40e" prefix="" category="inline-code"></block></block>
@@ -990,9 +906,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="11d338a3b0af56cfdced607e83e44a27" category="admonition">vSphere Client UIを使用してストレージバックエンドを追加した場合、vVolデータストアでSVMユーザを直接追加することはできません。</block>
   <block id="787af46eba84a8c9f8559e1c4741c2c8" category="admonition">ストレージバックエンドは、ONTAP tools ManagerまたはONTAP tools APIから追加するとグローバルになります。ストレージバックエンドは、vCenter Server APIから追加したときにローカルになります。たとえば、マルチテナントセットアップでは、SVMユーザクレデンシャルを使用するために、ストレージバックエンド（クラスタ）をグローバルに、SVMをローカルに追加できます。</block>
   <block id="91cd9aca64c654c7b6a103f086f013e2" category="list-text">サーバのIPアドレスまたはFQDN、ユーザ名、パスワードを入力し、*[追加]*を選択します。</block>
-  <block id="003a794e7629da616de34d5f657a1c81" category="list-text">[ストレージバックエンドの追加]*ウィンドウで、サーバのIPアドレス、ユーザ名、パスワード、およびポートの詳細を指定し、*[追加]*をクリックします。</block>
   <block id="a5ff3af9e80b6313b32053dd07f43a23" category="doc">ストレージバックエンドとvCenter Serverインスタンスの関連付け</block>
-  <block id="392754e62bbd2ca202e7ae6e9b219117" category="list-text">[推奨されるホスト設定を適用]*ウィンドウで、NetAppの推奨されるホスト設定に準拠するホストを選択し、*[次へ]*をクリックします。</block>
   <block id="8da0640ba152e49c75030464c1f52d41" category="admonition">ESXiホストを展開すると、現在の値を確認できます。</block>
   <block id="3598b8dea95243a9785e55bbc16226db" category="paragraph">ESXiホストのIPアドレスが複数ある場合は、ホストで検出されたすべてのIPアドレスがデフォルトでエクスポートポリシーに追加されます。すべてのIPアドレスをエクスポートポリシーに追加しない場合は、各vCenterに対して特定のIPアドレスをカンマで区切ったリスト、範囲、CIDR、またはこれら3つの組み合わせを許可する設定を指定します。</block>
   <block id="a01f6bd7b0bc100626b19006792453e3" category="paragraph">データストアのマウント処理で特定のESXiホストアドレスをいくつか許可するように選択できます。設定を指定しない場合は、マウント前の手順で検出したすべてのIPアドレスがエクスポートポリシーによって追加されます。この設定を指定すると、ONTAP tools for VMware vSphereは、表示されたIPアドレスまたは範囲内のIPアドレスのみを追加します。リストされているIPアドレスに属するホストのIPアドレスがない場合、そのホストでのマウントは失敗します。</block>
@@ -1002,7 +916,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="484cebc53125766b84254b2ca0899b9c" category="doc">データストアを作成</block>
   <block id="190ba216e5abb93c1ba4ee19a2b96c79" category="section-title">vVolデータストアを作成する</block>
   <block id="ef728c8519a79414267cc16e51bf7c4f" category="paragraph">vVolデータストアは、新しいボリュームまたは既存のボリュームを使用して作成できます。既存のボリュームと新しいボリュームが混在しているvVolデータストアを作成することはできません。</block>
-  <block id="69f64880687325312a4335d5010b43ee" category="list-text">[サマリ]*ペインで選択内容を確認し、*[完了]*をクリックします。vVolデータストアが作成され、すべてのホストにマウントされます。</block>
   <block id="4756276b2f8600b15e3b2537cf52faf5" category="section-title">NFSデータストアを作成する</block>
   <block id="025fcf8a2aeeec85b0e969b7dc206ef0" category="paragraph">VMware Network File System（NFS）データストアは、NFSプロトコルを使用して、ESXiホストをネットワーク経由で共有ストレージデバイスに接続します。NFSデータストアはVMware vSphere環境で一般的に使用され、シンプルさや柔軟性など、いくつかの利点があります。</block>
   <block id="2710b75030951da73f0267637e131179" category="admonition">Kerberos認証は、NFS 4.1プロトコルが選択されている場合にのみ使用できます。</block>
@@ -1023,8 +936,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="57a91f0b109c904814be718ccd3c723a" category="paragraph">削除オプションは、特定のボリュームにVVolがある場合は無効になります。データストアからのボリュームの削除に加えて、ONTAPストレージ上の選択したボリュームも削除できます。</block>
   <block id="73199adc1dd0bc42eef3c48da1e43a0b" category="doc">ストレージのしきい値の管理</block>
   <block id="8efc9711c0ea0db8499241a6ec86ceab" category="list-text">ONTAPツールの左側のペインで、*[設定]*&gt;*[しきい値設定]*&gt;*[編集]*に移動します。</block>
-  <block id="d6e765126cb2943624c47d3d3b567001" category="section-title">ストレージバックエンドをvCenter Serverインスタンスに関連付けまたは関連付け解除する</block>
-  <block id="942cf885b18078ee60d85d8f60fdd3bb" category="list-text">[ストレージのみを変更]*を選択し、*[次へ]*をクリックします。</block>
   <block id="ad4926bc91a1588104b73a5c2567773a" category="list-text">仮想ディスクの形式、VMストレージポリシー、および移行するデータストアの機能に一致するVVolデータストアを選択します。「 * 次へ * 」をクリックします。</block>
   <block id="4f3d8287647170b16320a50c9b202bcf" category="doc">vVolデータストアのマウント</block>
   <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">ONTAP Tools for VMware vSphereプラグインは、仮想マシンとデータストアのレポートを提供します。vCenterクライアントのショートカットセクションでNetApp ONTAP tools for VMware vSphereプラグインのアイコンを選択すると、ユーザインターフェイスが概要ページに移動します。[レポート]タブを選択して、仮想マシンとデータストアのレポートを表示します。</block>
@@ -1053,11 +964,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c296e8788b295e89d6f8e1bfcd28b6ff" category="list-text">リカバリサイトのESXiホストからStorage Virtual Machine（SVM）への適切なiSCSI接続が確立されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスでき、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。</block>
   <block id="0cd8afb704226b6e22e0e52f54ef48ba" category="section-title">NAS環境向けのSRAの設定</block>
   <block id="f2752e6caaa6a7299132353ae30a162b" category="summary">ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザスタリカバリを設定するためのオプションがあります。</block>
-  <block id="3b204745724768bca001c3a2060e50d1" category="list-text">[Automatically Prepare Mappings for Folders with Matching Names]*を選択し、*[Next]*をクリックします。</block>
-  <block id="51a24aec0d2aefedac755d5648602767" category="list-text">保護対象サイトとリカバリサイトに必要なデータセンターオブジェクトを選択し、*[マッピングの追加]*をクリックします。</block>
-  <block id="3fe42195c23f54944aea2da2ed4b723c" category="list-text">前に使用したオブジェクトを選択してリバースマッピングを作成し、*[完了]*をクリックします。</block>
-  <block id="7fa438f9d261a519dd8e0870c68c752d" category="list-text">[Automatically Prepare Mappings for Networks with Matching Names]*を選択し、*[Next]*をクリックします。</block>
-  <block id="31eaa05ff0db5b24f55f9ba8a07eb25c" category="list-text">[Automatically Prepare Mappings for Resource with Matching Names]*を選択し、*[Next]*をクリックします。</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Perlコマンドを実行して、SRAに新しいクレデンシャルを設定します。</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">必要なアレイペアを選択し、対応する詳細を確認します。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*</block>
@@ -1110,7 +1016,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">*展開の種類*</block>
   <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU *</block>
   <block id="5a4776483c0990d54df47e0a2478facc" category="cell">*メモリ（GB）*</block>
-  <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。をクリックすると、<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>メンテナンスコンソールが起動します。</block>
   <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">整合グループ</block>
   <block id="eba11c7a4079ec571b88361adcae2df5" category="inline-link">整合グループ</block>
   <block id="0668b41054907094c1a4aab4f8e838d1" category="paragraph">整合グループは、1つのユニットとして管理されるボリュームの集まりです。ONTAPでは、整合グループを使用することで、複数のボリュームにまたがるアプリケーションワークロードの管理が容易になり、保護が保証されます。詳細については<block ref="53f778179cc7ee2da9dcd6ff88e07f22" category="inline-link-rx"></block>、をご覧ください。</block>
@@ -1158,15 +1063,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bcfcba3d84c95eb110df0649ab05c280" category="paragraph">VMware vSphere 7.0でNVMe/FCを使用する方法の詳細については<block ref="27816f9f9cf7e278691c8ea8c1dd01dc" category="inline-link-rx"></block>、およびを参照して<block ref="a23d4cc1b9464bb497e26d387d612153" category="inline-link-rx"></block>ください。</block>
   <block id="8ed67121ab040fc0922a264b155f3ebd" category="list-text">ホストシステム、ホストクラスタ、またはデータストアを右クリックし、* NetApp ONTAP tools *&gt;*[Create Datastore]*を選択します。</block>
   <block id="6f0dd31cd27fc175ab8caadfb092594b" category="admonition">NVMe/FCまたはNVMe/TCPプロトコルを使用してVMFSデータストアを作成する場合は、新しいボリュームを作成する必要があります。</block>
-  <block id="4b6f904d102c6f75313ada665b1648c5" category="list-text">[概要]*ペインでデータストアの詳細を確認し、*[終了]*をクリックします。</block>
   <block id="74251eeae0bc37e1cca3c2932fd10eed" category="admonition">データストアを保護されたクラスタに作成している場合は、読み取り専用のメッセージ「The datastore is being mounted on a protected Cluster」が表示されます。VMFSデータストアが作成され、すべてのホストにマウントされます。</block>
   <block id="ea681736881aaf06c82b7e06948e2e8a" category="list-text">必要なデータセンターを右クリックし、* NetApp ONTAP tools *&gt;*ホストデータの更新*を選択します。</block>
-  <block id="b016d9e8c37a9043d6687fb3202eaffc" category="list-text">検出されたステータスのストレージコントローラを選択し<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block>、*[操作]*&gt;*[変更]*をクリックします。</block>
-  <block id="8770991b792c59e6400f105020504a5b" category="list-text"><block ref="74f7b54ea713d9f5b69839982911bbf7" prefix=" " category="inline-code"></block>ファイルを参照して選択し、*[アップロード]*をクリックしてファイルをONTAPツールにアップロードします。</block>
-  <block id="c2d17f31eed98de1b06305e17c410eac" category="list-text">[ESXiホストにインストール]*をクリックし、NFS VAAIプラグインをインストールするESXiホストを選択し、*[インストール]*をクリックします。</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">ONTAP Tools for VMware vSphereは、ホストクラスタの保護を管理します。</block>
   <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">ホストクラスタの保護の作成</block>
-  <block id="7635eee0e25ece8591b1b913d5334a98" category="paragraph">ONTAP Tools for VMware vSphereは、ホストクラスタの保護を管理します。選択したSVMに属し、クラスタの1つ以上のホストにマウントされているすべてのデータストアが、ホストクラスタで保護されます。</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">次の前提条件が満たされていることを確認します。</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">ホストクラスタには、1つのSVMのデータストアだけが含まれます。</block>
   <block id="abd2c79ea68f2d7802d6d7a46312971e" category="list-text">ホストクラスタにマウントされたデータストアは、クラスタ外のどのホストにもマウントしないでください。</block>
@@ -1174,26 +1074,16 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="49a723243e5259986d917878bbe6cf41" category="list-text">ホストクラスタにマウントされているデータストアを形成するFlexVol / LUNを、既存のSnapMirror関係に含めないでください。</block>
   <block id="457dce14094d2af1facd68b45f25a766" category="list-text">ホストクラスタには少なくとも1つのデータストアが必要です。</block>
   <block id="ad9b96bac1f0f10b53031d1297f5be51" category="list-text">ホストクラスタを右クリックし、* NetApp ONTAP tools *&gt;* Protect Cluster *を選択します。</block>
-  <block id="40289b07d697ec5ca4ead8c7743bb28c" category="list-text">[クラスタの保護]ウィンドウで、データストアタイプとソースStorage Virtual Machine（VM）の詳細が自動的に入力されます。[データストア]リンクを選択すると、保護されているデータストアが表示されます。</block>
   <block id="aa71c98626ee7f3e7dc96f710ef3aedf" category="list-text">整合グループ名*を入力します。</block>
   <block id="15fd5e4e757c3763d058dedf1246e182" category="list-text">[関係の追加]*を選択します。</block>
   <block id="3fe598cb92fb08f012c12b0e1aa67204" category="list-text">[ SnapMirror関係の追加]*ウィンドウで、*[ターゲットStorage VM]*と*[ポリシー]*タイプを選択します。</block>
   <block id="f27ce68ca753b1a5a70d16d1fa28480d" category="paragraph">ポリシータイプはAsynchronousまたはAutomatedFailOverDuplexのいずれかです。</block>
-  <block id="0e965a59dd9bb11e093869bb4e131e90" category="paragraph">SnapMirror関係をAutomatedFailOverDuplexタイプのポリシーとして追加する場合は、ターゲットStorage VMをストレージバックエンドとしてONTAP tools for VMware vSphereが導入されているvCenterに追加する必要があります。</block>
-  <block id="a1e9f9871f21e37505c19a7365dd90b7" category="paragraph">AutomatedFailOverDuplexポリシータイプには、均一なホスト構成と非均一なホスト構成があります。[ホストの均一設定]トグルボタンを選択すると、ホストイニシエータグループの設定がターゲットサイトに暗黙的にレプリケートされます。詳細については、を参照してください。<block ref="456cca003d9f01756d52d6978fb7648b" category="inline-link-macro-rx"></block></block>
   <block id="6818262cebe6c106e90b59bf6cfd9eb8" category="list-text">不均一なホスト構成を選択した場合は、そのクラスタ内の各ホストのホストアクセス（ソース/ターゲット）を選択します。</block>
   <block id="ea6bb6fc463a883955000653c51dcf8c" category="list-text">[保護]*ボタンを選択します。</block>
   <block id="02ecc951ba9c7de4ba8def4213f1982e" category="list-text">保護されているホストクラスタを表示するには、* NetApp ONTAP tools *&gt;* Protection *&gt;* Host cluster relationships *に移動します。</block>
   <block id="689f487789c06af94daaa5b3ad3db058" category="cell">256 [注]表のホスト数は、複数のvCenterからのホストの総数を示しています。</block>
   <block id="a14afee79848f51d5784f4f72ef33c1c" category="list-text">作成したリソースプール、またはクラスタまたはOVAを導入するホストに移動します。</block>
-  <block id="3ad150a812c29bae9599272d5640318b" category="list-text">OVAファイルを_.ova_fileのURLから選択するか、または_.ova_fileが保存されているフォルダを参照して、*[次へ]*をクリックします。</block>
   <block id="c4a737cc92d926d728a5c20a5da697b9" category="list-text">コンテンツライブラリからONTAP Tools for VMware vSphereを導入するには、次の手順を実行します。</block>
-  <block id="32524bd9a7fd0fc829fe992304646b38" category="list-text">[Actions]*&gt;*[New VM from this template]*をクリックします。</block>
-  <block id="b77eb34e1ea1ce07a453dfbd61651097" category="list-text">テンプレートの詳細を確認し、*[次へ]*をクリックします。</block>
-  <block id="5dea555b3d4e46f336a3c3bbbd09e3db" category="list-text">ライセンス契約を読んで同意し、*[Next]*をクリックします。</block>
-  <block id="a6eec341e1ec883fe42a51b86ec0cd94" category="list-text">構成用のストレージとディスクファイルを選択し、*[次へ]*をクリックします。</block>
-  <block id="56f3d9ed05ed20647f3e24d189b1952c" category="list-text">各ソースネットワークのデスティネーションネットワークを選択し、*[次へ]*をクリックします。</block>
-  <block id="74c26879a0d88ca93c2b9e06b03ed377" category="list-text">[テンプレートのカスタマイズ]ウィンドウで、必要なフィールドに入力し、*[次へ]*をクリックします。</block>
   <block id="925b2a258c4c659a6a847841123e08f0" category="list-text">ここで提供される情報は、インストールプロセス中に適切なパターンがあるかどうか検証されます。不一致がある場合は、Webコンソールにエラーメッセージが表示され、誤った情報を修正するように求められます。</block>
   <block id="6e3d346ab934863ca5d1d45e8e42d003" category="list-text">ホスト名には、大文字（A ~ Z）、小文字（a ~ z）、数字（0 ~ 9）、または特殊文字ハイフン（-）を使用する必要があります。デュアルスタックを設定する場合は、IPv6アドレスにマッピングされたホスト名を指定します。</block>
   <block id="708a9faa83bd031efac98fcfcc00b55f" category="list-text">と入力し<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>て[Enable remote diagnostics access]を選択します</block>
@@ -1237,19 +1127,14 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="946a83271556c139842bcb5af7ae1f0a" category="list-text">ポリシータイプとしてAutomatedFailOverDuplexが選択されている場合は、ホストプロキシミティまたはホストアクセスの詳細を追加します。</block>
   <block id="c94bbde5a330b4478f870b948c9975d9" category="doc">vVol データストアの拡張</block>
   <block id="97c7ab1ce39aa0129e7264728d8af0ff" category="list-text">「maint」ユーザのパスワードの変更</block>
-  <block id="1f9370a7bc92ca174218dd2444ea1608" category="list-text">移行する仮想マシンを右クリックし、*[移行]*をクリックします。</block>
-  <block id="bf1f3a4a60c760467633f1d23cafa259" category="list-text">設定を確認し、*[終了]*をクリックします。</block>
-  <block id="8e88de3e6e742463e79a3e8a904727f9" category="list-text">vSphere Clientのバージョンと選択したデータストアのタイプによっては、一部の右クリック操作が無効または使用できない場合があります。vSphere Client 8.0以降のバージョンを使用している場合、一部の右クリックオプションは非表示になります。</block>
   <block id="58fe9e1cb934ac74ee3f8b5376d19217" category="list-text">vSphere 7.0U3からvSphere 8.0のバージョンでは、オプションが表示されていても、この操作は無効になります。</block>
   <block id="67ea44e3ba9af443d11fa13f297377fc" category="list-text">ホストクラスタが統一された構成で保護されている場合、データストアのマウントは無効になります。</block>
   <block id="2485c52972ea7083934a6c2fe7c6b077" category="list-text">ホストまたはホストクラスタにNFS / VMFSデータストアをマウントするには、データストアを右クリックして* NetApp ONTAP tools *&gt;* Mount Datastores *を選択します。</block>
-  <block id="e4041815b96eeb08ea460cf07bea3bd6" category="list-text">マウントするデータストアを選択し、*[マウント]*をクリックします。</block>
   <block id="b5783ac409e73180ab37229219e49c28" category="doc">vVolデータストアの縮小</block>
   <block id="cfe2ade5e927260481a4080015905722" category="paragraph">5秒でオプションを選択できます。いずれかのキーを押して進行状況を停止し、GRUBメニューをフリーズします。</block>
   <block id="4c734aa54cd53c11c7a3b92546fe4f71" category="admonition">VMの電源投入時にも同じGRUBメニューが表示されます。ただし、[パスワードのリセット]オプションは、*[ゲストOSの再起動]*オプションを指定した場合にのみ使用してください。</block>
   <block id="7297f5439531e38507b51692d1e1240a" category="paragraph">Managerパスワードをリセットするには、ONTAP tools for VMware vSphereメンテナンスコンソールを使用してリセットトークンを生成する必要があります。..vCenter Serverで、メンテナンスコンソールを開きます。「2」と入力して[System Configuration]オプションを選択します。「maint」ユーザパスワードを変更するには、「3」を入力してください。</block>
   <block id="9704bbe9f3dcdd6bcaf267fe293ed88b" category="doc">NFSおよびVMFSデータストアのサイズ変更</block>
-  <block id="fd65fbd0826cc47ba41493cb65a7f85a" category="list-text">[サイズ変更]ダイアログボックスで、データストアの新しいサイズを指定し、*[OK]*をクリックします。</block>
   <block id="394fd800a2f0eeab4ce90d523f482596" category="list-text">VMFSデータストアにNVMe/TCPまたはNVMe/FCプロトコルを使用している場合は、[ネームスペースの詳細]ページにネームスペースに関連するデータが表示されます。</block>
   <block id="66b35670e1d214ace40486c73d0f6adb" category="paragraph"><block ref="f7d732a4279ec8aa2eb5d17d00714307" category="inline-link-macro-rx"></block>セクションの手順に従ってvVolデータストアを追加し、<block ref="6d832355e25e19af70f0fa408b0b686f" category="inline-link-macro-rx"></block>セクションの手順に従ってデータストアを削除します。</block>
   <block id="be9a71458974fa7a07e70416397a3e07" category="summary">[データストアのアンマウント]操作を実行すると、NFSまたはVMFSデータストアがESXiホストからアンマウントされます。データストアのアンマウント処理は、ONTAP tools for VMware vSphereで検出または管理されるNFSおよびVMFSデータストアに対して有効になります。</block>
@@ -1263,10 +1148,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="303fed3350b929d95f1f937c9d4e0032" category="admonition">保護されているデータストアがアンマウントされている場合、既存の保護設定が部分的に保護される可能性があります。<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>完全保護を有効にするには、を参照してください。</block>
   <block id="0073dc7bd5514abf0999b550aa754930" category="list-text">ONTAP Tools for VMware vSphereプラグインvCenter Server APIを使用して、ストレージバックエンドをローカルにオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。</block>
   <block id="1c9a04fa9475b21ef9be5e7bd0f30822" category="list-text">リモートのプラグインvCenter Server APIからストレージバックエンドをローカルにオンボードします。移行対象としてローカルスコープのストレージを追加します。</block>
-  <block id="1f80017cff7192214efc53298c1489d3" category="list-text">保護対象サイトを選択し、*[管理]*をクリックします。</block>
-  <block id="1c511a264bbd662cde1cfebeb069c175" category="list-text">適切なデータストアを選択し、* OK *をクリックします。</block>
-  <block id="74b27627165f74c84a8f31981da59bce" category="list-text">保護グループの名前と説明、方向を指定し、*次へ*をクリックします。</block>
-  <block id="aa204271b3b654aa91947cf038f3e150" category="list-text">vSphere Clientのホームページで* Site Recovery *をダブルクリックし、* Sites *をクリックします。</block>
   <block id="f43686bab1c60489c1eac5ecb1ec8c7b" category="cell">093</block>
   <block id="ebf11048b18616fbd6ba58d38a1858be" category="cell">094</block>
   <block id="fb9ce87f03a0429d0af0760d01b74612" category="cell">095</block>
@@ -1330,12 +1211,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA\）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM\）が連携できるようにすることができます。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM）の間のやり取りを有効にすることができます。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">VMware Live Site Recoveryで保護対象サイトとリカバリサイトをペアリングしておく必要があります。</block>
-  <block id="83d479d6142f609752232069f2e45305" category="list-text">VMware Live Site Recoveryで、* Array Managers *をクリックし、* Add Array Manager *をクリックします。</block>
   <block id="a276fae7dadb74c9d51a7a7823f174bc" category="list-text">次の情報を入力して、VMware Live Site Recoveryでアレイについて説明します。</block>
   <block id="bba4b1edcf0645b5356e4f3ffed77b3a" category="summary">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereのクレデンシャル\（IPアドレスと管理者パスワード\）をVMware Live Site Recoveryアプライアンスに保存する必要があります。</block>
   <block id="ac7f1666af7e74993cdbf1eb27d64168" category="paragraph">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。ONTAP Tools for VMware vSphereのクレデンシャル（IPアドレス）をVMware Live Site Recoveryアプライアンスに保存して、VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にする必要があります。</block>
   <block id="21e557aeec91fdacbde971d5f1de9806" category="paragraph">VMware Live Site RecoveryアプライアンスでSRAを設定すると、VMware Live Site RecoveryアプライアンスにSRAクレデンシャルが保存されます。</block>
-  <block id="2fdef650865ae2c93b66f0f8c3481d33" category="list-text">VMware Live Site Recoveryアプライアンスの画面で、* Storage Replication Adapter *&gt;* New Adapter *をクリックします。</block>
   <block id="7ebae8ab4249a32272c6182685fb369b" category="list-text">_.tar.gz_ファイルをVMware Live Site Recoveryにアップロードします。</block>
   <block id="e94e8319bfdee87f64f751c05ceaa14e" category="list-text">puttyを使用して、管理者アカウントでVMware Live Site Recoveryアプライアンスにログインします。</block>
   <block id="08155ff6aa2057ea9c3c11ad9a0e78c9" category="list-text">次のコマンドを使用して、ONTAP tools for VMware vSphereのIPアドレスとパスワードを使用してVMware Live Site Recoveryを設定します。<block ref="83f30183bb230f5e651ad5daf51de6eb" prefix=" " category="inline-code"></block></block>
@@ -1404,7 +1283,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">主な価値提案</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">強化されたセキュリティ、コンプライアンス、自動化機能により、運用開始から運用を合理化、簡易化</block>
   <block id="798f5d4722c6982593d6671eef46371d" category="cell">高可用性、パフォーマンス、拡張性の制限を拡張しながら、ONTAP tools 10.xを9.xパリティに移行</block>
-  <block id="b96b395121ebad86d9a5850232e77183" category="cell">VMFSとVVOLのFC、VMFSのみのNVMe-oF / FC、NVMe-oF / TCPのサポートが拡張されました。NetApp SnapMirrorの使いやすさ、vSphereメトロストレージクラスタのシンプルなセットアップ、3サイトのSRMサポート</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">ONTAPリリースの認定</block>
   <block id="f69940d2c889c5ba58609514e4ec4bff" category="cell">ONTAP 9 .9.1からONTAP 9 .15.1へ</block>
   <block id="d4dcb3d0be17e55a6784a2f961f93bc2" category="cell">ONTAP 9 .12.1からONTAP 9 .14.1へ</block>
@@ -1424,13 +1302,11 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">データ保護</block>
   <block id="efee7a2d070a492110e424ced07a5cb4" category="cell">VMFS用とNFS用のSRAレプリケーションFlexVolベースのレプリケーションでvVol SCVを統合し、バックアップに相互運用可能</block>
   <block id="15449f9a7ac234221e11423d597b85d4" category="cell">iSCSI VMFSデータストアおよびNFS v3データストア用のSRAレプリケーション</block>
-  <block id="60d68cab51d9c8a782f647a80a3dc658" category="cell">iSCSI VMFSおよびNFS v3データストア用のSRAレプリケーションSMASとSRMを組み合わせた3サイト保護。</block>
   <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4.0</block>
   <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3.0</block>
   <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAPツール9とONTAPツール10の機能比較</block>
-  <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">[ペアサイトリカバリマネージャサーバー*]ダイアログボックスで、保護サイトのプラットフォームサービスコントローラーのアドレスを入力し、[次へ*]をクリックします。</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">アプリケーションのユーザ名とパスワードは、ONTAP toolsの導入時に設定されます。これはVASA Provider / SRAの登録に必要です。</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">ホストクラスタの保護を使用した保護</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">SRAによる保護を使用して保護する</block>
@@ -1450,12 +1326,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="72e3ae7264188f32ef466bc958c20ada" category="admonition">IPv4とIPv6の管理LIFがサポートされます。管理LIFを使用するSVMユーザベースのクレデンシャルもサポートされます。</block>
   <block id="4b2d8c124e59b1ec91262e9515635028" category="admonition">クラスタベースのクレデンシャルとIPv4およびIPv6アドレス管理LIFを追加するか、SVMの管理LIFにSVMベースのクレデンシャルを指定して、SVMユーザを直接追加できます。</block>
   <block id="b9a068a02697530e80b2303bfa47a612" category="paragraph">vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドに関連付けるオプションがあります。</block>
-  <block id="206bf5527da26b5add758683ce2b9e9b" category="list-text">ストレージバックエンドに関連付けるvCenterの縦の省略記号をクリックします。</block>
   <block id="06838b2f1fa401e4dabf9d6d8bc25d78" category="list-text">vCenter Serverインスタンスを必要なストレージバックエンドに関連付けるには、*[ストレージバックエンドの関連付け]*オプションを選択します。</block>
-  <block id="ad1d23ed91ff0cc38598df62eccada21" category="paragraph">構成やシステムの負荷によっては、このプロセスに時間がかかることがあります。タスクの進行状況は、*[最近のタスク]*パネルに表示されます。タスクが完了すると、ホストステータスのアラートアイコンが通常のアイコンまたはリブート保留中のアイコンに変わります。</block>
-  <block id="04cd09844e41616d3355d7f7a2899a5c" category="list-text">VMware vSphere Web Clientのホームページで、*[ホストおよびクラスタ]*をクリックします。</block>
-  <block id="e97364f9e24d3cabfd7ddd4fcabc8a8e" category="list-text">ONTAP Tools for VMware vSphereプラグインの概要（ダッシュボード）の* ESXiホストコンプライアンス*カードに移動します。</block>
-  <block id="ad8a41e9793bc2a30bce23edb74e1b5f" category="list-text">概要ペインで値を確認し、*[完了]*をクリックします。進捗状況は、最近のタスクパネルで追跡できます。</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">管理Privilegesでクラスタにログインします。ユーザを設定するには、次の手順を実行します。</block>
   <block id="9c275e19e563a19853ce98157a4409c7" category="admonition">アンインストール処理では、ONTAP toolsのロールは削除されませんが、ONTAP tools固有のPrivilegesのローカライズ名は削除され、プレフィックスが付加され<block ref="9de395ca99b82f3f1184378e489fdde5" prefix=" " category="inline-code"></block>ます。ONTAP tools for VMware vSphereを再インストールするか新しいバージョンにアップグレードすると、標準のONTAP tools for VMware vSphereロールとONTAP tools固有の権限がすべてリストアされます。</block>
   <block id="bbeec4867a4357c871f33630e5eb711f" category="list-text">管理Privilegesでクラスタにログインします。</block>
@@ -1500,10 +1371,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="fdb05dd673fb9906dad6b230dd17a27a" category="admonition">アクションボタンは、検出アクションを実行する権限がある場合にのみ有効になります。</block>
   <block id="8c4347c0b3496aae0e194a2e6785a6ff" category="paragraph">検出要求が送信されると、[最近のタスク]パネルでアクションの進行状況を追跡できます。</block>
   <block id="5eb608c14fb00e6f328fdcb612009008" category="cell">*カード*</block>
-  <block id="4cade9ced081997544b5a6abec290cf8" category="cell">[Status]カードには、ストレージバックエンドの数と、ストレージバックエンドとVASA Providerの全体的な健全性ステータスが表示されます。すべてのストレージバックエンドのステータスが正常な場合、ストレージバックエンドのステータスは* Healthy *と表示され、いずれかのストレージバックエンドに問題がある場合は* Unhealthy *と表示されます（Unknown / Unreachable / Degradedステータス）。ツールヒントを選択して、ストレージバックエンドのステータスの詳細を開きます。任意のストレージバックエンドをクリックすると、詳細が表示されます。*その他のVASA Providerの状態*リンクには、vCenter Serverに登録されているVASA Providerの現在の状態が表示されます。</block>
   <block id="dd7f35945d9991d1b40238b7158f4b01" category="cell">このカードには、選択したvCenter Serverインスタンスのすべてのストレージバックエンドの使用済み容量と使用可能容量の合計が表示されます。ASA R2ストレージシステムの場合、容量データは分離型システムであるため表示されません。</block>
-  <block id="7021010e99ff4d4acf4ee96a7da0a75a" category="cell">このカードには、上位10個のデータストアがパフォーマンス指標でソートされて表示されます。ヘッダーをクリックすると、選択した指標の上位10個のデータストアが昇順または降順でソートされて表示されます。カードで行われたソートとフィルタリングの変更は、ブラウザキャッシュを変更またはクリアするまで保持されます。[Datastore type]ドロップダウンで、データストアのタイプ（NFS、VMFS、またはVVOL）を選択できます。</block>
-  <block id="92b35c44d0081388bce054fa014f5829" category="cell">このカードには、すべてのESXiホスト（選択したvCenterの）設定の、推奨されるNetAppホスト設定に関する全体的な準拠ステータスが設定グループ/カテゴリ別に表示されます。[推奨設定の適用]*リンクをクリックすると、推奨設定を適用できます。ホストの準拠ステータスをクリックすると、ホストのリストが表示されます。</block>
   <block id="77ec0225c438e9a28006f8865dbcb95a" category="list-text">ONTAP tools for VMware vSphereを使用して、アダプタ設定、MPIO設定、またはNFS設定の列にアラートアイコンが表示されているホストのESXiホストを設定します。</block>
   <block id="7fa388a6283e6645544b070194187c75" category="list-text">ESXiホスト7.0U3の最新のパッチを最小バージョンとしてインストールし、ONTAP 9.14.1、9.15.1、および9.16.0をインストールしておく必要があります。</block>
   <block id="35b4916fa7f87e2934afc9aa83571dfc" category="paragraph">プラグインのインストールに対応するESXiホストのみが表示されます。画面に表示される手順に従ってインストールを完了する必要があります。インストールの進捗状況は、vSphere Web Clientの[Recent tasks]セクションで監視できます。</block>
@@ -1513,15 +1381,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="2ba512cd332d9fb8cdb8eaaa68126426" category="cell">アラートカード</block>
   <block id="3c3237ebddf22ec92cfa91fee8b87db8" category="cell">ONTAP toolsノードカード</block>
   <block id="c749ba6a66c9c4d365591fada904e866" category="list-text">ホストクラスタにマウントするデータストアは、iSCSI / FCプロトコルのVMFSデータストアである必要があります。NVMe/FCプロトコルおよびNVMe/TCPプロトコルのvVol、NFS、またはVMFSデータストアはサポートされていません。</block>
-  <block id="6107bfa2400c41e392656bedd41adf70" category="list-text">[クラスタの保護]*ウィンドウでは、作成時に削除操作のみがサポートされます。保護を削除して再度追加することができます。ホストクラスタの保護を変更する処理では、編集オプションを使用できます。省略記号のメニューオプションを使用して、関係を編集または削除できます。</block>
-  <block id="79f9acbcb92275b6970c0803108ab558" category="paragraph">vCenterタスクがジョブIDの詳細で作成され、進捗状況が[Recent Tasks]パネルに表示されます。これは非同期タスクで、ユーザーインターフェイスにはリクエスト送信ステータスのみが表示され、タスクの完了を待たずに表示されます。</block>
-  <block id="71e5f844069355137b61b6187be89923" category="summary">ONTAP tools for VMware vSphereリモートプラグインインターフェイスを使用して、vCenter ServerインスタンスへのVASA Providerの登録と登録解除を行うことができます。</block>
-  <block id="6cd3e4e3f8219f1992ad79d05cbfc746" category="paragraph">ONTAP tools for VMware vSphereリモートプラグインインターフェイスを使用して、vCenter ServerインスタンスへのVASA Providerの登録と登録解除を行うことができます。[VASA Provider Settings]セクションには、選択したvCenter ServerのVASA Providerの登録状態が表示されます。</block>
-  <block id="7e060e841c79af2138ad9a22d3268b45" category="list-text">[設定]*&gt;*[VASA Provider設定]*を選択します。VASA Providerの登録状態が「Not Registered」と表示される。</block>
-  <block id="ec40cd6e762f23cbf90dfdb52cb11457" category="paragraph">オンボードしたVASA Providerが、vCenter Client UIおよびリモートプラグインUIの[VASA Provider]の下に表示されていることを確認します。</block>
-  <block id="cb5d69d932872be7776bebe374f3d10b" category="list-text">[ストレージプロバイダ]*&gt;*[設定]*を選択します。</block>
-  <block id="878e27dc426862625a028fdd21431a4d" category="list-text">[Storage Provider/storage backends]で、オンボードしたVASA Providerが正しく表示されていることを確認します。</block>
-  <block id="d28c149d3d639283898903399cf9fe30" category="list-text">登録されているVASA Providerは、概要ページと*[設定]*&gt;*[VASA Provider設定]*ページで確認できます。</block>
   <block id="dc13bd17b05ee77ce72002d48aa0e578" category="cell">firstboot-deploy-otv-ng.pl、導入、HA</block>
   <block id="a564d8a763506cfbc7605f842a3dcb18" category="cell">firstboot-deploy-otv-ng.pl、デプロイ、非HA</block>
   <block id="a243787b46ef4c9834d19b2886e66692" category="cell">firstboot-deploy-otv-ng.pl、アップグレード、HA</block>
@@ -1553,7 +1412,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">ONTAP Tools for VMware vSphere仮想マシンは、管理しているVVOLデータストアには絶対に格納しないでください。</block>
   <block id="b2beb53e07d823dec2c2ea3f5bc86599" category="list-text">[仮想マシンの名前とフォルダの選択]ウィンドウで、仮想マシン名を入力し、仮想マシンの場所を選択します。[この仮想マシンのハードウェアをカスタマイズする]チェックボックスをオンにすると、[完了の準備完了]ウィンドウが表示される前に、[ハードウェアをカスタマイズする]という手順が有効になります。</block>
-  <block id="5100a5b2ecca5b63b695129448c086b9" category="list-text">コンピュータリソースを選択し、* Next *をクリックします。[Automatically power on deployed VM]チェックボックスをオンにすることもできます。</block>
   <block id="84cc92b833510ebb4c14b968eaac82ce" category="admonition">Pure IPv6はサポートされていません。mixedモードは、IPv6とIPv4の両方のアドレスを持つVLANでサポートされます。</block>
   <block id="c1fd5cae41c37c765fe66ca3b42ec8dd" category="list-text">[ハードウェアのカスタマイズ]ウィンドウで、CPUホットアドとメモリホットプラグを有効にする必要があります。</block>
   <block id="d3db9c22fc785bc7be0bb555aacb7832" category="admonition">電源をオンにする前に、VMでCPUとメモリの両方に対してホットプラグインが有効になっていることを確認してください。</block>
@@ -1633,32 +1491,17 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="dda76f88bc9cef7821c56240f9ec4b62" category="list-text">自己署名証明書をカスタムCA証明書にアップグレードするには、*[証明書]*&gt;*[VASA Provider]*または* ONTAP tools *&gt;*[CAにアップグレード]*オプションを選択します。</block>
   <block id="21d108129175f5ff7e7d38e10818e345" category="list-text">VMFSデータストアがASA R2システムで作成され、保護の一部である場合は、データストアを削除する前に保護を解除する必要があります。</block>
   <block id="714ece12b84efacae25f0810e81201df" category="list-text">ASA R2システムベースのvVolデータストアの場合、元のボリュームを削除するチェックボックスは適用されません。</block>
-  <block id="1b974540555f440257fd405fe48bad98" category="list-text">[ホストクラスタ保護]*ウィンドウで、クラスタに対する省略記号メニューをクリックし、*[保護の削除]*を選択します。</block>
   <block id="8b432e71a26dc2273b4a71116e77e4dd" category="doc">アプライアンス設定の編集</block>
   <block id="02c1ba69e6d63648fe5eda55fa274225" category="paragraph">ONTAP tools Managerを使用して、ノードサイズのスケールアップ、サービスの管理、ONTAP tools for VMware vSphereのハイアベイラビリティ（HA）セットアップへのアップグレードを行います。</block>
   <block id="75e87fca53a612b41f04acb89e65cfa3" category="paragraph">ONTAP toolsアプライアンスは、最初はシングルノード非HA構成で導入されます。設定は、*[Edit appliance settings]*ウィンドウで編集できます。</block>
   <block id="ec4d925953bd16003beb4b1c923a908e" category="paragraph">指定したOVAテンプレートのバージョンが最初のノードと同じであることを確認します。</block>
-  <block id="2aee6ba5e862151a2de4b1bac8eb8a98" category="list-text">概要セクションの*アプライアンス設定の編集*をクリックします。</block>
-  <block id="2c91bcb09ea846820fe77364c24e54d7" category="list-text">[サービス]セクションでは、要件に応じて、VASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのオプションのサービスを有効にすることができます。</block>
   <block id="ff342d5300aec1283f1184476607d69f" category="paragraph">サービスを初めて有効にするときは、VASA Provider / SRAクレデンシャルを作成する必要があります。これは、vCenter ServerでVASA Provider / SRAサービスを登録または有効にするために使用します。</block>
-  <block id="9de0438d0ac1c68b85c3c99b46c4ba0f" category="admonition">オプションのサービスを無効にするには、ONTAP toolsで管理しているvCenter Serverがこれらのサービスを使用していないことを確認してください。</block>
   <block id="9645c7119a0e526f5bd4862babc84deb" category="paragraph">*[VVol構成のインポートを許可する]*オプションは、VASA Providerサービスが有効になっている場合にのみ表示されます。このオプションを使用すると、ONTAP tools 9.xからONTAP tools 10.3にvVolデータを移行できます。</block>
-  <block id="2536b15ac1622e131b9a099f1f08c46a" category="list-text">[構成]セクションでは、ONTAP toolsの各ノードサイズをスケールアップし、要件に応じてHA構成を有効にすることができます。変更を行うには、vCenter Serverのクレデンシャルが必要です。</block>
-  <block id="81c4ef1808de7dd96fd0c1ea6c5a9f53" category="paragraph">ONTAP toolsがHA構成の場合は、コンテンツライブラリの詳細を変更できます。新しい編集を送信するには、パスワードをもう一度入力する必要があります。</block>
-  <block id="2122f2a73f9993f228d2f1c7897a34ad" category="admonition">スケールアップできるのは、ONTAP toolsのノードサイズのみです。ノードを現在のサイズから小さいサイズにスケールダウンすることはできません。非HAの場合、サポートされる最大構成はmediumです。HA構成では、中規模および大規模の構成がサポートされます。</block>
   <block id="ebec22202754f1aa58513d3a2ec88687" category="list-text">HAの切り替えボタンを使用して、HA構成を有効にします。HA構成を選択すると、HA関連の入力用に追加の* HA設定*ページが表示されます。</block>
-  <block id="423888e1c606333c669145be044e8324" category="list-text">コンテンツライブラリは、ONTAP toolsノードVMが実行されているvCenter Serverに属している必要があります。vCenter Serverのクレデンシャルを使用して、アプライアンスの変更用のOVAテンプレートを検証およびダウンロードします。</block>
-  <block id="419d5dc39af8681e9074b569ecf1295f" category="list-text">HA導入を有効にするには、ONTAPツールをホストしている仮想マシンをESXiホストに直接導入しないでください。代わりに、クラスタまたはリソースプールに導入する必要があります。</block>
   <block id="5f98c3b534070e410ae275d61dc53c75" category="list-text">有効にすると、HA構成から非HAシングルノード構成にリバートできなくなります。</block>
-  <block id="783166c74011afeebd6508701d39b2c0" category="list-text">アプライアンス設定の編集*ウィンドウの* HA設定*セクションで、ノード2とノード3の詳細を入力できます。OVAの一部として導入されるONTAP toolsのデフォルトノードはノード1です。ONTAP tools for VMware vSphereでは、HAセットアップで3つのノードがサポートされます。</block>
-  <block id="7191fd91523639f89e58ed106bafce35" category="admonition">ワークフローを容易にするため、ほとんどの入力オプションにはノード1のネットワークの詳細があらかじめ入力されています。ただし、ウィザードの最終ページに移動する前に、入力データを編集できます。最初のノードでIPv6アドレスが有効になっている場合にのみ、他の2つのノードのIPv6の詳細を入力できます。</block>
   <block id="da8b2f27297a9b9118f73acd0acb3d1c" category="paragraph">ESXiホストにONTAP tools VMが1つだけ含まれていることを確認します。入力は、次のウィンドウに移動するたびに検証されます。</block>
-  <block id="737461166f2d8a6febee199b804ea4c1" category="list-text">[Summary]*セクションで詳細を確認し、*[Save]*をクリックして変更を適用します。</block>
-  <block id="514957f5e82b70403d7db7f87c7c8bd8" category="paragraph">[Overview]*ページには、導入のステータスが表示されます。また、ジョブIDを使用して、[Jobs]ビューからアプライアンス設定の編集ジョブステータスを追跡することもできます。</block>
-  <block id="fac35290ffd63b7d545f1ca24c0d1b23" category="paragraph">HAの導入に失敗して新しいノードのステータスが[New]になっている場合は、vCenterで新しいVMを削除してから、HAの有効化処理を再試行してください。</block>
   <block id="d4074ccb6b38b9bac6bde691702ff0e0" category="paragraph">左側パネルの*[アラート]*タブには、ONTAP tools for VMware vSphereのアラートが表示されます。</block>
   <block id="1ea68582c5812061ab6e0dec557f5c98" category="list-text">ONTAP tools for VMware vSphereプラグインの[概要（ダッシュボード）]で*[ESXiホスト準拠]*ポートレットに移動します。</block>
-  <block id="d3fcd3a8c1d36aac140d75340f676656" category="list-text">NetApp ONTAP tools *&gt;*[保護]*&gt;*[ホストクラスタ関係]*に移動し、クラスタの省略記号メニューをクリックして*[編集]*または</block>
   <block id="2e528e0090a590aef663fa1b0e9cbdc3" category="list-text">新しいESXiホストを追加した場合は、保護ステータスがPartially protectedと表示されます。SnapMirror設定の下にある省略記号のメニューを選択し、*[編集]*を選択して、新たに追加したESXiホストとの距離を設定します。</block>
   <block id="f48c5996dde7700c4b8e02b156be64a9" category="list-text">SnapMirror設定の下にある省略記号メニューを選択し、*削除*を選択します。</block>
   <block id="d21289b9715739d521ff6caef69a0eb6" category="summary">ONTAP tools for VMware vSphere 10.3では動的ストレージプロビジョニングツールが使用されるため、RPOをゼロにすることはできません。ただし、RPOはほぼゼロに近づきます。</block>
@@ -1689,11 +1532,9 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="0305dc99772d0a5c329839aa9316d5e1" category="list-text">リカバリが成功すると、サービスとvCenterオブジェクトがリストアされます。</block>
   <block id="8746628f0f2c5087a8e2a516211f31a4" category="doc">vVolデータストアの拡張</block>
   <block id="2a0e10d3d583ad5ef09d7693b1329038" category="admonition">vVolデータストアの拡張処理は、ASA R2ベースのvVolデータストアでは実行できません。</block>
-  <block id="5b167151dd3542026c198402fddd0118" category="list-text">[サマリ]*ウィンドウで、選択内容を確認し、*[展開]*をクリックします。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
   <block id="7a8e7317ab9023c8e3dac44950232672" category="list-text">AutoSupportプロキシURLの更新</block>
   <block id="d51a3b8155ff2f65ec368b7278c07f16" category="list-text">バックアップ用のvCenterクレデンシャルを入力</block>
   <block id="1f3bf2522a0df56ad834875880cfcc04" category="list-text">バックアップを作成</block>
-  <block id="add1689102b3d51bfd7e14b9df33f205" category="list-text">[しきい値の編集]*ウィンドウで、*[ほぼフル]*フィールドと*[フル]*フィールドに必要な値を指定し、*[保存]*をクリックします。推奨値（「ほぼフル」が80、「フル」が90）にリセットできます。</block>
   <block id="b6b9d4100dc66eb2a9d44485b61f0fba" category="paragraph">vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドとの関連付けまたは関連付け解除を行うオプションがあります。このタスクでは、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間のマッピングをグローバルに作成できます。</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">クローニング用仮想マシンの作成</block>
   <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph">詳細については、を参照してください<block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>。</block>
@@ -1706,10 +1547,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a863fbcb404c3c0f9eeb95248a63b005" category="list-text">新しいパスワードを入力し、新しいパスワードの入力内容を確認します。</block>
   <block id="b0bc3604d114546b6aae8777d8ac55fc" category="admonition">ONTAP tools for VMware vSphere HAを導入する場合は、プライマリノード（node1）でメンテナンスコンソールユーザのパスワードを変更する必要があります。</block>
   <block id="6af43bd137ddca6aadd0587323c669ae" category="paragraph">進捗状況は、[最近のタスク]パネルで追跡できます。</block>
-  <block id="e1c82c7c1887809272a35f186a631538" category="list-text">クレデンシャルまたはポート名を変更するには、縦の省略記号メニューをクリックし、*[変更]*を選択します。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
-  <block id="25fab2a7b0e89065b4e266d3f3341851" category="list-text">垂直の省略記号メニューをクリックし、*削除*を選択します。ストレージバックエンドにデータストアがないことを確認します。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
   <block id="2797bd5927c3cbd3ea400a45d2884b54" category="paragraph">ストレージバックエンドページには、すべてのストレージバックエンドが表示されます。ストレージの検出、変更、および削除の処理は、クラスタ内の個 々 の子SVMではなく、追加したストレージバックエンドに対して実行できます。</block>
-  <block id="77579205262edfad414a94468c45038b" category="paragraph">ストレージバックエンドの親クラスタまたは子クラスタをクリックすると、コンポーネントの全体的な概要が表示されます。親クラスタをクリックすると、処理ドロップダウンが表示され、ストレージの検出、変更、削除の各処理を実行できます。</block>
   <block id="0ae836564a89cedf23c9cb768ee35ac8" category="list-text">SVMまたはクラスタに対してDisaggregatedプロパティが「true」に設定されている場合、ASA R2クラスタのドリルダウンビューに[Local Tiers]タブは表示されません。</block>
   <block id="adbfd849396b043f4dcb2a476c5c8679" category="list-text">ASA R2 SVMシステムでは、容量ポートレットは表示されません。容量ポータルは、SVMまたはクラスタに対してDisaggregatedプロパティが「true」に設定されている場合にのみ必要です。</block>
   <block id="a0232c1a7a8b2051db36fee0cee48ac5" category="list-text">ASA R2 SVMシステムの場合は、[基本情報]セクションにプラットフォームタイプが表示されます。</block>
@@ -1806,8 +1644,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1e137377f709a1d14e9081a633895f6d" category="list-text">「* 2 *」と入力して*[リモート診断アクセスを有効にする]*を選択します。</block>
   <block id="6628bd5e9dbb13f60147cfc8d04cb977" category="paragraph">*すべてのボリュームのスナップショットを作成*</block>
   <block id="a6d135b70268e6dae6e2414dc9c7e465" category="inline-link">仮想マシンのスナップショットの作成</block>
-  <block id="557eb1dc4f7a93540b6e414ed969c26c" category="list-text">[Snapshots]タブに移動し、*[Take Snapshot]*ボタンをクリックします。VMの休止スナップショットを作成します。詳細については、を参照してください<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>。</block>
-  <block id="f0032c952bebc43c75710433e2994c19" category="list-text">VMを右クリックし、*[Add New Device]*&gt;*[Hard Disk]*を選択します。</block>
   <block id="91228eef6e9a7bdc25cdad1b40b153b6" category="list-text">[適用]*をクリックします。</block>
   <block id="51d976aa6e2371bc36e19441158b8e08" category="paragraph">ONTAP tools for VMware vSphere 10.3にアップグレードすると、次のことが可能になります。</block>
   <block id="12da67bb345ae219e1ec7b1f8d8f09dd" category="paragraph">アップグレードが完了したら、次の手順に従ってONTAPからTridentボリュームを手動で削除します。</block>
@@ -1825,7 +1661,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6ff8508bd0ad0da36fc04c76066c464c" category="paragraph"><block ref="4c9882763c7aaf0e39789953130b5809" prefix="" category="inline-code"></block></block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 例 *</block>
   <block id="95d36d22664f8854f7a69597b5d159e9" category="paragraph"><block ref="bcaca837447d687465d80574c1488516" prefix="" category="inline-code"></block></block>
-  <block id="029cd27c82b397ce647ab6fdab6ce96b" category="list-text">個 々 のAPI呼び出しの例として、* vcenters *カテゴリまで下にスクロールし、エンドポイントの横にある* get *をクリックします。<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
   <block id="9e2559913ee384f282b7c8922d9c892e" category="summary">curlを使用してAPI呼び出しを発行し、ONTAP tools for VMware vSphere 10 REST APIの使用を開始できます。</block>
   <block id="25aa7ee97346651715a55a99bba91d34" category="doc">ONTAP Tools for VMware vSphere 10 REST APIの初めての呼び出し</block>
   <block id="190ffd22724cdd7dfb04a0d2211e12bd" category="paragraph">curlの例で必要な情報とパラメータを確認してください。</block>
@@ -1961,7 +1796,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="43a0f271454bd2f46f0629ca623fd6e6" category="list-text">各トークンは60分後に期限切れになります。</block>
   <block id="b2e958775d667e0a227cfddbcebd684f" category="list-text">クライアントからのAPI要求では、要求ヘッダーにトークンを含める必要があります<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>。</block>
   <block id="8921c3b98c12a84674b91d6afb231018" category="inline-link-macro">最初のREST API呼び出し</block>
-  <block id="97464d8b78e344ca1b8dbef846959c30" category="paragraph">アクセストークンの要求と使用の例については、を参照してください<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
   <block id="a629cb231a04093c2a17e9137fcc8b2e" category="section-title">同期要求と非同期要求</block>
   <block id="a7fdec025c999a2d4658d175b36b6816" category="paragraph">ほとんどのREST API呼び出しは短時間で完了するため、同期的に実行されます。つまり、リクエストが完了するとステータスコード（200など）が返されます。完了までに時間がかかる要求は、バックグラウンドジョブを使用して非同期で実行されます。</block>
   <block id="ee0683b0f9214e5957ad88b24d1d0692" category="paragraph">非同期で実行されるAPI呼び出しを発行すると、サーバはHTTPステータスコード202を返します。これは、リクエストは承認されましたが、まだ完了していないことを示します。バックグラウンドジョブを照会して、成功または失敗などのステータスを確認できます。</block>
@@ -1972,9 +1806,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="cfd78a7adbcd7e4e099e4150d96d4189" category="list-text">パスワード管理-ユーザのOVAアプリケーションのパスワードをリセットします。</block>
   <block id="86e9662d627799ea9b0d956617badc77" category="paragraph">ONTAP tools Managerの概要セクションでは、サービスの管理、ノードサイズのアップスケーリング、ハイアベイラビリティ（HA）の有効化など、アプライアンスの構成を管理できます。また、ノードに関連するONTAPツールの全体的な情報（健全性、ネットワークの詳細、アラートなど）を監視することもできます。</block>
   <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9190f42ee5e75c97614269214dfcb136" category="cell">アプライアンスのカードには、ONTAP toolsアプライアンスの全体的なステータスが表示されます。アプライアンスの設定の詳細と有効なサービスのステータスが表示されます。ONTAP toolsアプライアンスの詳細については、*[詳細を表示]*リンクをクリックしてください。アプライアンス設定の編集アクション・ジョブが進行中の場合、アプライアンス・ポートレットにジョブのステータスと詳細が表示されます。</block>
-  <block id="faf239172dda3b91c4655d9bbde63c82" category="cell">[Alerts]カードには、HAノードレベルのアラートなど、ONTAP toolsのアラートがタイプ別に表示されます。アラートのリストを表示するには、カウントテキスト（ハイパーリンク）をクリックします。このリンクをクリックすると、選択したタイプでフィルタリングされた[Alerts]ビューページが表示されます。</block>
-  <block id="0e347dbe23febdf1001ed9dfb3e15bc1" category="cell">ONTAP toolsのノードカードには、ノードのリストとノード名、ノードVM名、ステータス、およびすべてのネットワーク関連データが表示されます。[詳細を表示]*をクリックすると、選択したノードに関するその他の詳細を表示できます。[注]非HA構成の場合、表示されるノードは1つだけです。HAセットアップでは、3つのノードが表示されています。</block>
   <block id="8c5a94dd08e58279f7461d929aa633e6" category="paragraph">ストレージデータを移行する際、ストレージバックエンドはREST APIを使用して手動でオンボーディングされます。VASA Providerのデータを移行すると、既存のDerbyデータベースからデータがエクスポートされ、MongoDBデータベースにインポートされます。</block>
   <block id="b191a7ff08bb6435186d922c59ff1907" category="admonition">ONTAP tools for VMware vSphere 9.xxのセットアップは、VASA Provider機能のみを実行する場合にのみ移行してください。</block>
   <block id="656a2ce4c62bd399a29a0cc087a7eb83" category="admonition">ONTAP tools for VMware vSphere 9.xから10.3に移行したあと、NVMe/FCプロトコルを使用するvVolデータストアは機能しません。これは、ONTAP tools 10.3がVMFSデータストアでNVMe-oFのみをサポートするためです。</block>
@@ -1985,8 +1816,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="b4c20aabb2d8056ffe9e2b60a0164bf2" category="paragraph">移行の前に、一方のサイトが保護状態で、もう一方のサイトがリカバリ状態であることを確認してください。</block>
   <block id="c7c25af309bd84b7749f1862027abc3f" category="admonition">フェイルオーバーが完了したばかりで、再保護が保留中の場合は、移行しないでください。再保護を完了してから移行を実行します。リカバリプランのテストが完了したら、テストリカバリをクリーンアップして移行を開始します。</block>
   <block id="0f47e7ab13b9f8031de10689d97b861b" category="list-text">Storage Replication Adapter *セクションに移動します。</block>
-  <block id="c28d0a48f388c92ed3ec2fccafeb15ea" category="list-text">省略記号メニューをクリックし、*設定のリセット*を選択します。</block>
-  <block id="1c5f97ee40c90341d1819bd10d046a29" category="list-text">省略記号メニューをクリックし、*削除*を選択します。</block>
   <block id="e7563198149b4ef22a580dcc695a13ec" category="list-text">VMware Live Site Recovery UIページで、* Discover Arrays *および* Discover Devices *の処理を実行し、デバイスが移行前の状態であることを確認します。</block>
   <block id="e316aaa000b8dea913558dbe47e2ab03" category="list-text">既存のONTAP tools for VMware vSphereでDerbyポート1527を有効にします。ポートを有効にするには、rootユーザでCLIにログインし、次のコマンドを実行します。</block>
   <block id="fdb5b6876d97a075f0bc2a07cd4be907" category="list-text">ONTAP tools for VMware vSphere 10.3向けOVAを導入します。</block>
@@ -1999,7 +1828,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">パッチ移行APIが正常に実行されると、すべてのVMがストレージポリシーに準拠します。</block>
   <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">このAPIは、移行IDによる移行を削除し、指定したvCenter Server上の移行を削除します。</block>
   <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">しばらくしてからデータストア（DS）および仮想マシン（VM）の処理を実行します。待機時間は、セットアップ内のホスト、DS、およびVMの数によって異なります。待機しないと、操作が断続的に失敗する可能性があります。</block>
-  <block id="d338e834d62b1cf850a89cbfdf1d9bd7" category="paragraph">古いリリースのONTAP tools for VMware vSphereから10.3に移行したら、SRAアダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。</block>
   <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">アップグレード後に仮想マシンのコンプライアンス状態が最新でない場合は、次の手順に従って仮想マシンストレージポリシーを再適用します。</block>
   <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">データストアに移動し、*[概要]*&gt;*[ VMストレージポリシー]*を選択します。</block>
   <block id="578a0636e92ae2e1b6afe3bdc7c9f9b3" category="paragraph">VMストレージポリシーへの準拠*では、準拠ステータスを確認できます。「Out-of-date*」と表示されます。</block>
@@ -2024,7 +1852,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="91e2ec0f0dd7d843927f5c85366a02ec" category="list-text">run_kN exec NTV-MongoDB-0--mongodump -u root -p MongoDB_root_password --archive=/tmp/ mongodb-backup.gz --gzip_commandを実行して、上記のコマンドで設定したMongo_root_passwordを置き換えます。</block>
   <block id="4728f0b778ffa8e0ae5be992c59e144b" category="list-text">_kN cp NTV-MongoDB-0：/tmp/ mongodb-backup.gz ./MongoDB-backup.gz_commandを実行して、上記のコマンドを使用して作成したMongoDBバックアップをポッドからホストにコピーします。</block>
   <block id="8694eb97cf4ec570d09d33becf6a8eed" category="list-text">「kN get pvc」コマンドを実行し、コマンド出力を保存します。</block>
-  <block id="a9e8526531fd29e961f43f5bb243319e" category="list-text">ONTAP System Managerのユーザインターフェイスで、検索バーの名前でボリュームを検索し、名前をクリックしてボリュームを開きます。[Snapshot]に移動し、そのボリュームのSnapshotを追加します。</block>
   <block id="07cf559ee7bbc8841180f1dd59c2917f" category="paragraph">アップグレードを実行する前に、「generate-support-bundle-job」というプレフィックスが付いた完了したポッドをログバンドルから削除してください。サポートバンドルの生成を実行中の場合は、完了してからポッドを削除します。</block>
   <block id="7817c7412ad536f5c02bd959934f66d5" category="paragraph">どのようなアップグレードでも、100 GBのハードディスクドライブ（HDD）を追加する必要があります。HDDを追加するには、次のタスクを実行します。</block>
   <block id="11873b433682caa870371cc1631ef90f" category="list-text">シングルノード構成のVMを選択するか、HA構成の3つすべてのVMを選択します。</block>
@@ -2040,4 +1867,192 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="97157e33a0e033b7effd56e6305b9030" category="admonition">ONTAP tools for VMware vSphere 10.1または10.2が非HAの小規模または中規模（ローカルパス）構成の場合、これらの手順は必要ありません。</block>
   <block id="3ff3da4c344f1ccca0d255803305cce9" category="list-text">* 1 *を入力して*アクセス診断シェル*オプションを選択します。</block>
   <block id="a1f81812b9996ffae82950938651b560" category="paragraph">これにより、ONTAP tools for VMware vSphere 10.1 / 10.2で使用されているONTAP内のTridentボリュームがすべて削除されます。</block>
+  <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">個 々 のAPI呼び出しの例として、* vcenters *カテゴリまで下にスクロールし、エンドポイントの横にある* get *を選択します。<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
+  <block id="ef78cf93c4b4adc658c8565b28ac853c" category="paragraph">アクセストークンの要求と使用の例については、を参照してください<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
+  <block id="8a9926c3485a1ac96ffad76b582819b3" category="paragraph">ONTAP tools for VMware vSphere GUIにアクセスするには、製品レベルのONTAP tools固有のView権限が、適切なvSphereオブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、NetAppアイコンを選択したときにONTAP tools for VMware vSphereにエラーメッセージが表示され、ONTAP toolsにアクセスできません。</block>
+  <block id="06aedf9059711b0467a247ef51dde236" category="paragraph">割り当てレベルによって、UIのどの部分を表示できるかが決まります。ルートオブジェクト（フォルダ）にView権限を割り当てると、NetAppアイコンを選択してONTAP tools for VMware vSphereにアクセスできるようになります。</block>
+  <block id="82723240a39079ab06612c9bd8a4524f" category="paragraph">ONTAP Tools for VMware vSphereの標準ロールを表示するには、vSphere Clientのホームページで*[ロール]*を選択します。ONTAP Tools for VMware vSphereのロールで、次のタスクを実行できます。</block>
+  <block id="7b0f795e746611f8d000c88ef7404ee7" category="list-text">WebブラウザからONTAP Tools Managerを起動します。<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
+  <block id="6700bd2d5a11f981faf541727c91e5eb" category="list-text">次のコマンドを使用してvSphere Clientにログインします。<block ref="9ad784043785fc1c1be39efefce3e216" prefix=" " category="inline-code"></block></block>
+  <block id="3a3cf1aabccd549ecea01e8e5bd01415" category="list-text">ショートカットページで、プラグインセクションの* NetApp ONTAP tools *を選択します。</block>
+  <block id="58eec86a03a134f719b54881671c7c52" category="list-text">[ストレージバックエンドの追加]*ウィンドウで、サーバのIPアドレス、ユーザ名、パスワード、およびポートの詳細を入力し、*[追加]*を選択します。</block>
+  <block id="f017ca342576480350b43d2d7e7f73ae" category="summary">vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。</block>
+  <block id="f05b95a344d62647f6489daf34512360" category="paragraph">ONTAP toolsをvCenterと統合することで、プロビジョニング、Snapshot、データ保護などのストレージタスクをvSphere Clientから直接実行できるため、別のストレージ管理コンソールに切り替える必要がありません。</block>
+  <block id="f8539fd8796614c8ef01970c32bcf658" category="list-text">Webブラウザを開き、次のURLに移動します。<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
+  <block id="d5e2bc65733d04e5cb0f6d28bc9c86af" category="list-text">vCenter Serverインスタンスをオンボードするには、* vCenters *&gt;* Add *を選択します。vCenterのIPアドレスまたはホスト名、ユーザ名、パスワード、およびポートの詳細を入力します。</block>
+  <block id="3739ecac839d5ac8c0f3ea1f4faedcd4" category="paragraph">vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理が自動的にトリガーされます。</block>
+  <block id="e73ab0bb08227c7d6283172340ef4110" category="list-text">vCenter Clientプラグインがリモートプラグインとして登録されます。</block>
+  <block id="8a404e7f82db3ef3d17705db761a896a" category="list-text">プラグインとAPIのカスタムPrivilegesがvCenter Serverインスタンスに適用されます。</block>
+  <block id="d27e4fce4f79fa9051d36defb304e437" category="list-text">プラグインは、vSphereユーザインターフェイスにショートカットとして表示されます。</block>
+  <block id="14c4727e4f68c3aa4a941464f0b319d8" category="list-text">ストレージバックエンドに関連付けるvCenterの縦の省略記号を選択します。</block>
+  <block id="a8dd9fd826c0b5a23d10cc79f04b3dcc" category="paragraph">ESXiサーバのマルチパスとタイムアウトを設定すると、プライマリパスに障害が発生した場合にバックアップストレージパスにシームレスに切り替えることができるため、高可用性とデータの整合性が確保されます。</block>
+  <block id="a2c9aa05a1263d6f74b437438ff8d9b6" category="paragraph">構成とシステムの負荷によっては、このプロセスに時間がかかることがあります。タスクの進行状況は、[最近のタスク]パネルに表示されます。</block>
+  <block id="865e50373aa3c11fe9e36d655e067ce8" category="list-text">VMware vSphere Web Clientのホームページで、*[ホストおよびクラスタ]*を選択します。</block>
+  <block id="b419c5fc15752b6af9959fd39f83d5dd" category="list-text">VMware vSphere Web Clientのショートカットページで、[plug-ins]セクションで* NetApp ONTAP tools *を選択します。</block>
+  <block id="d5fe6d0ac1b601e04d96c74f6d0386d4" category="list-text">ONTAP Tools for VMware vSphereプラグインの概要（ダッシュボード）にある* ESXiホストコンプライアンス*カードに移動します。</block>
+  <block id="76700e4e74402f1dc0cbb4ce13dfb8cf" category="list-text">[推奨されるホスト設定を適用]*ウィンドウで、NetAppの推奨設定に準拠するように更新するホストを選択し、*[次へ]*を選択します。</block>
+  <block id="b27fb30d1dcf9cc1da220014dcb65168" category="list-text">概要ペインで値を確認し、*[完了]*を選択します。進捗状況は、最近のタスクパネルで追跡できます。</block>
+  <block id="80ac2f9578a520b00361f7d4b685dc67" category="list-text">ユーザに必要なPrivileges（検出、ストレージの作成、ストレージの変更、ストレージの削除、NAS/SANロール）を選択し、*[追加]*を選択します。</block>
+  <block id="5bef79143531cb99f88ff82457e4d120" category="list-text">[サマリ]*ペインで選択内容を確認し、*[完了]*を選択します。vVolデータストアが作成され、すべてのホストにマウントされます。</block>
+  <block id="f3c8bab9486f9f6a5044434c97e0dfcc" category="list-text">[概要]*ペインで選択内容を確認し、*[完了]*を選択します。</block>
+  <block id="6bf995e8d13cb233d08744ba59e31de6" category="list-text">[概要]*ペインでデータストアの詳細を確認し、*[終了]*を選択します。</block>
+  <block id="93e132ab01db0bd2143f644738deb530" category="cell">[Status]カードには、ストレージバックエンドの数と、ストレージバックエンドとVASA Providerの全体的な健全性ステータスが表示されます。すべてのストレージバックエンドのステータスが正常な場合、ストレージバックエンドのステータスは* Healthy *と表示され、いずれかのストレージバックエンドに問題がある場合は* Unhealthy *と表示されます（Unknown / Unreachable / Degradedステータス）。ツールヒントを選択して、ストレージバックエンドのステータスの詳細を開きます。任意のストレージバックエンドを選択して詳細を表示できます。*その他のVASA Providerの状態*リンクには、vCenter Serverに登録されているVASA Providerの現在の状態が表示されます。</block>
+  <block id="848e87e55792473f81a08f59c9e1a7d4" category="cell">このカードには、上位10個のVMがパフォーマンス指標でソートされて表示されます。ヘッダーを選択すると、選択した指標の上位10台のVMを昇順または降順でソートして表示できます。カードで行われたソートとフィルタリングの変更は、ブラウザキャッシュを変更またはクリアするまで保持されます。</block>
+  <block id="34708a7ee3c666f413240fedba4b042a" category="cell">このカードには、上位10個のデータストアがパフォーマンス指標でソートされて表示されます。ヘッダーを選択すると、選択した指標の上位10個のデータストアを昇順または降順でソートして表示できます。カードで行われたソートとフィルタリングの変更は、ブラウザキャッシュを変更またはクリアするまで保持されます。[Datastore type]ドロップダウンで、データストアのタイプ（NFS、VMFS、またはVVOL）を選択できます。</block>
+  <block id="4c2183bca6b89d1820fb11f5a1d938c8" category="cell">このカードには、すべてのESXiホスト（選択したvCenterの）設定の、推奨されるNetAppホスト設定に関する全体的な準拠ステータスが設定グループ/カテゴリ別に表示されます。[推奨設定の適用]*リンクを選択すると、推奨設定を適用できます。ホストの準拠ステータスを選択すると、ホストのリストを表示できます。</block>
+  <block id="62938ab037901a948099ef101beec571" category="list-text">検出されたストレージコントローラのうち、ステータスがのものを選択し<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block>、*[操作]*&gt;*[変更]*を選択します。</block>
+  <block id="3225a10b07f1580f10dee4abc3779e6c" category="cell">パラメータ</block>
+  <block id="c77eb099ccd3a59aa3a56c3c98c84669" category="cell">設定する値</block>
+  <block id="117704664d6cada78ac3107380f63d23" category="cell">Disk.QFullSampleSize</block>
+  <block id="07b21acb18ec7b34bd91453e33448369" category="cell">すべての構成で32。この値を設定すると、I/Oエラーを回避できます。</block>
+  <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">Disk.QFullThreshold</block>
+  <block id="ed6604a4485d16e1285db04ae3d4279f" category="cell">8（すべての構成）この値を設定すると、I/Oエラーを回避できます。</block>
+  <block id="19c08de7404551288e1274186e039ef4" category="cell">Emulex FC HBAタイムアウト</block>
+  <block id="6ea7e3b1d2b04c77c55309b1aaa41f8c" category="cell">デフォルト値。</block>
+  <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">QLogic FC HBAタイムアウト</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">パラメータ</block>
+  <block id="c3b49a515dd0046685e06092642aa139" category="cell">Net.TcpipHeapSize</block>
+  <block id="504e96cc79e7efe30a8271cea152d9d1" category="cell">Net.TcpipHeapMax</block>
+  <block id="be58b8cbc3483f9d66eecbf4933a72ae" category="cell">1024 MB</block>
+  <block id="5f1e7b6431061565550e292d05c73588" category="cell">NFS.MaxVolumes</block>
+  <block id="f718499c1c8cef6730f9fd03c8125cab" category="cell">256</block>
+  <block id="3058676a1cf088aa4a73312ac36f2a58" category="cell">NFS41.MaxVolumes</block>
+  <block id="6f4edfb9f3990d73482442c70e5fc2a0" category="cell">NFS.MaxQueueDepth</block>
+  <block id="1dd541063ef2b67f54e6660bcc9ac5be" category="cell">128以上</block>
+  <block id="18e1fb6924459470760771b20ab0c379" category="cell">NFS.HeartbeatMaxFailures</block>
+  <block id="d3d9446802a44259755d38e6d163e820" category="cell">10</block>
+  <block id="1aa26eb281359ba3b9a9a4b83a09ed46" category="cell">NFS.HeartbeatFrequency</block>
+  <block id="c20ad4d76fe97759aa27a0c99bff6710" category="cell">12</block>
+  <block id="eb4182715f8cde98563dc59ea36461d3" category="cell">NFS.HeartbeatTimeout</block>
+  <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
+  <block id="0aa364b40943456fe1d59c4a4a6ee32d" category="list-text">ファイルを参照して選択し<block ref="74f7b54ea713d9f5b69839982911bbf7" prefix=" " category="inline-code"></block>、*アップロード*を選択してファイルをONTAPツールにアップロードします。</block>
+  <block id="58baf634a0cbe2c538cb4ee8b49eb797" category="list-text">[ESXiホストにインストール]*をクリックし、NFS VAAIプラグインをインストールするESXiホストを選択し、*[インストール]*を選択します。</block>
+  <block id="741276b1afc1cd52f0ec6404edcf55de" category="paragraph">ONTAP tools Managerにアクセスするには<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block>、ブラウザからを起動し、導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
+  <block id="fb31aab466ef06ee817c945e4fe16b33" category="cell">アプライアンスのカードには、ONTAP toolsアプライアンスの全体的なステータスが表示されます。アプライアンスの設定の詳細と有効なサービスのステータスが表示されます。ONTAP toolsアプライアンスの詳細については、*[詳細を表示]*リンクを選択してください。アプライアンス設定の編集アクション・ジョブが進行中の場合、アプライアンス・ポートレットにジョブのステータスと詳細が表示されます。</block>
+  <block id="96322cb1e08cb1a6e918061bfd2a7459" category="cell">[Alerts]カードには、HAノードレベルのアラートなど、ONTAP toolsのアラートがタイプ別に表示されます。アラートのリストを表示するには、カウントテキスト（ハイパーリンク）を選択します。このリンクをクリックすると、選択したタイプでフィルタリングされた[Alerts]ビューページが表示されます。</block>
+  <block id="a353c311fd478f54264d2f3142183a7e" category="cell">ONTAP toolsのノードカードには、ノードのリストとノード名、ノードVM名、ステータス、およびすべてのネットワーク関連データが表示されます。[詳細を表示]*を選択すると、選択したノードに関連するその他の詳細を表示できます。[注]非HA構成の場合、表示されるノードは1つだけです。HAセットアップでは、3つのノードが表示されています。</block>
+  <block id="aa53af31c82c56982dcdb39a1977824c" category="paragraph">ONTAP tools for VMware vSphereは、ホストクラスタの保護を管理します。選択したSVMに属し、クラスタの1つ以上のホストにマウントされているすべてのデータストアが、ホストクラスタで保護されます。</block>
+  <block id="b7537190feef878bca08128a99683b08" category="list-text">[クラスタの保護]ウィンドウで、データストアタイプとソースStorage Virtual Machine（VM）の詳細が自動的に入力されます。[データストア]リンクを選択して保護されているデータストアを表示します。</block>
+  <block id="758bc97457a26bfa0a61cc0166a6d597" category="paragraph">SnapMirror関係をAutomatedFailOverDuplexタイプのポリシーとして追加する場合は、ONTAP tools for VMware vSphereが導入されているvCenterに、ストレージバックエンドとしてターゲットStorage VMを追加する必要があります。</block>
+  <block id="4f968d89fcb2968c967f57e1fa7b1138" category="paragraph">AutomatedFailOverDuplexポリシータイプには、均一なホスト設定と非均一なホスト設定があります。[ホストの均一設定]トグルボタンを選択すると、ホストイニシエータグループの設定がターゲットサイトに暗黙的にレプリケートされます。詳細については、を参照してください。<block ref="456cca003d9f01756d52d6978fb7648b" category="inline-link-macro-rx"></block></block>
+  <block id="e3b0abcdc3eb75065eedea5a442bdf00" category="list-text">[クラスタの保護]*ウィンドウでは、作成処理中に保護されたクラスタを編集することはできません。保護を再度削除して追加することができます。ホストクラスタの保護を変更する処理では、編集オプションを使用できます。省略記号のメニューオプションを使用して、関係を編集または削除できます。</block>
+  <block id="d7c513071870643e06bdd5a2952a3848" category="list-text">[保護]*ボタンを選択します。</block>
+  <block id="5522fdca4065fd1e9ed7b389f3a8e7b2" category="paragraph">vCenterタスクがジョブIDの詳細で作成され、[Recent Tasks]パネルに進捗状況が表示されます。これは非同期タスクです。ユーザーインターフェイスにはリクエスト送信ステータスのみが表示され、タスクが完了するのを待たずに表示されます。</block>
+  <block id="ded8026201084be2fda01a73c0b6a45c" category="summary">VASA Providerは、ONTAP tools for VMware vSphereリモートプラグインインターフェイスを使用してvCenter Serverインスタンスに登録できます。</block>
+  <block id="609d93e638a93ef3fbaff21b075792f5" category="paragraph">VASA Providerは、ONTAP tools for VMware vSphereを使用してvCenter Serverインスタンスに登録できます。[VASA Providerの設定]セクションに、選択したvCenter ServerのVASA Providerの登録ステータスが表示されます。</block>
+  <block id="dbf218ab7bc36005b7fdd93dda1f6eda" category="list-text">プラグインセクションで*ショートカット*&gt;* NetApp ONTAP tools *を選択します。</block>
+  <block id="1767c8dcd2dacb5056d2a398b5761669" category="list-text">[設定]*&gt;*[VASA Provider設定]*を選択します。VASA Providerの登録ステータスは「Not Registered」と表示されます。</block>
+  <block id="600ff4b29760f4ad12573092ddf700ed" category="list-text">[登録]*ボタンを選択してVASA Providerを登録します。</block>
+  <block id="df1a39c4f4e7ca54718d4638a0fbe196" category="list-text">VASA Providerの名前を入力し、ONTAP tools for VMware vSphereアプリケーションのユーザクレデンシャルを指定して、*[登録]*を選択します。</block>
+  <block id="f4a7e7e14fab1c3d711985600e2ee7f0" category="list-text">登録が完了してページが更新されると、登録されているVASA Providerのステータス、名前、バージョンが表示されます。登録後、登録解除アクションがアクティブになります。</block>
+  <block id="2a8d2860baf78d6dcd2ba9cf54828350" category="paragraph">vCenterクライアントからオンボードしたVASA Providerが[VASA Provider]の下に表示されていることを確認します。</block>
+  <block id="b2d759d8409be83670d858be76d08a57" category="list-text">vCenter Serverインスタンスに移動します。</block>
+  <block id="31cbb70f53b2d4a961916f4f580b9afa" category="list-text">[ストレージプロバイダ]*&gt;*[設定]*を選択します。オンボードしたVASA Providerが正しく表示されていることを確認します。</block>
+  <block id="09040fbb354fc3ca71206d6284afc48b" category="list-text">OVAファイルを_.ova_fileのURLから選択するか、または_.ova_fileが保存されているフォルダを参照して*[次へ]*を選択します。</block>
+  <block id="7e2b29fab046b14f9ba1bfc2251f4af8" category="list-text">コンテンツライブラリに移動し、展開するライブラリアイテムを選択します。</block>
+  <block id="4d3c2178c8b4d1172e4a40d3eea7bca5" category="list-text">[Actions]&gt;[New VM from this template]を選択します。*</block>
+  <block id="603a2f8cbe9d7aa136251507eb2d82f4" category="list-text">コンピュータリソースを選択し、* Next *を選択します。[Automatically power on deployed VM]チェックボックスをオンにすることもできます。</block>
+  <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">テンプレートの詳細を確認し、* Next *を選択します。</block>
+  <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">ライセンス契約を読んで同意し、* Next *を選択します。</block>
+  <block id="c26e3cc6a042c9880f33d1c3ad1e1f05" category="list-text">構成用のストレージとディスクファイルを選択し、*[Next]*を選択します。</block>
+  <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">各ソースネットワークのデスティネーションネットワークを選択し、*[Next]*を選択します。</block>
+  <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">[テンプレートのカスタマイズ]ウィンドウで、必要なフィールドに入力し、*[次へ]*を選択します。</block>
+  <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">画面右上の* administrator *アイコンを選択し、* Change password *を選択します。</block>
+  <block id="a507cab298067b18a544dc700d1b49f7" category="inline-link">VMおよびVMテンプレートの削除と再登録</block>
+  <block id="f984ae2b9e73ded60af216a40fcb5a33" category="list-text">vCenter ServerからVMを削除します。を参照してください。<block ref="d6e07286372376b6b92ed9babd2f6996" category="inline-link-rx"></block></block>
+  <block id="9ac18603ba1d7eaea59e783f4b92c470" category="list-text">ONTAP System Managerからボリュームを削除します。を参照してください。<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>ボリュームを削除するには、CLIコマンドでFlexVolの正確な名前を指定します。</block>
+  <block id="545d5a3b6fbb629619299d0278ed00f6" category="list-text">iSCSIを導入する場合は、ONTAPからSAN igroupを削除します。を参照してください。<block ref="14bc02d0e479c1e35338b733fac8ca0e" category="inline-link-rx"></block></block>
+  <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">[ホストクラスタ保護]*ウィンドウで、クラスタに対する省略記号メニューを選択し、*[保護の削除]*を選択します。</block>
+  <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">概要セクションの*アプライアンス設定の編集*を選択します。</block>
+  <block id="10a18f6550543dba2c0c294b235bf941" category="list-text">[サービス]セクションで、要件に応じて、VASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのオプションのサービスを有効にすることができます。</block>
+  <block id="3adee667bc073dee8c7f2d71b9109baf" category="admonition">オプションのサービスを無効にするには、ONTAP toolsで管理しているvCenter Serverがオプションのサービスを使用していないことを確認してください。</block>
+  <block id="4ed533fb6b94bd90431f06d50153fbfb" category="list-text">[構成]セクションでは、ONTAP toolsの各ノードサイズをスケールアップし、要件に応じてHA構成を有効にすることができます。変更を行うには、vCenter Serverのクレデンシャルが必要です。</block>
+  <block id="4b79dfb0f49c4baf79128f8a1d094d7a" category="paragraph">ONTAP toolsがHA構成の場合は、コンテンツライブラリの詳細を変更できます。新しい編集送信用のパスワードをもう一度入力する必要があります。</block>
+  <block id="9ddc33b894aa1f6686c98fee9df6aa08" category="admonition">スケールアップできるのは、ONTAP toolsのノードサイズのみです。ノードを現在のサイズから小さいサイズにスケールダウンすることはできません。非HA構成でサポートされる最大構成はmediumです。HAの場合は、中規模および大規模の構成がサポートされます。</block>
+  <block id="3f4368b51c017ffc4a7f2c223ae7da5b" category="list-text">コンテンツライブラリは、ONTAP toolsノードVMが実行されているvCenter Serverに属している必要があります。vCenter Serverのクレデンシャルは、アプライアンスの変更用にOVAテンプレートを検証およびダウンロードするために使用されます。</block>
+  <block id="df1f3c7a7a8cb17ba27b5cf0017c995d" category="list-text">HA導入を有効にするには、ONTAPツールをホストしている仮想マシンをESXiホストに直接導入しないでください。代わりに、クラスタまたはリソースプールに導入する必要があります。</block>
+  <block id="a96b928ede21dad56f6d2029a890e3d0" category="list-text">[Edit Appliance Settings]*ウィンドウの*[HA settings]*セクションで、ノード2とノード3の詳細を入力できます。OVAの一部として導入されるONTAP toolsのデフォルトノードはノード1です。ONTAP tools for VMware vSphereでは、HAセットアップで3つのノードがサポートされます。</block>
+  <block id="69e38926bfa1149faa4e587df68ec45c" category="admonition">ワークフローを容易にするため、ほとんどの入力オプションにはノード1のネットワークの詳細があらかじめ入力されています。ただし、ウィザードの最終ページに移動する前に、入力データを編集できます。最初のノードでIPv6アドレスが有効になっている場合にのみ、他の2つのノードのIPv6の詳細を入力できます。</block>
+  <block id="9ca324e861f47579c7127d0e3c61a42e" category="list-text">[Summary]*セクションで詳細を確認し、*[Save]*を選択して変更を適用します。</block>
+  <block id="083fdc949ae8ae40c1cb8ff83d473adb" category="paragraph">[Overview]ページには、展開のステータスが表示されます。ジョブIDを使用すると、[Jobs]ビューからアプライアンス設定の編集ジョブステータスを追跡することもできます。</block>
+  <block id="ae79a569a7aff132c14d8144a64688f9" category="paragraph">HAの導入に失敗し、新しいノードのステータスが[New]になっている場合は、vCenterで新しいVMを削除してから、HAの有効化処理を再試行してください。</block>
+  <block id="426c64967b4b7a5db012042c7160c121" category="paragraph">ESXiホストの設定が含まれている問題がある場合は、ダッシュボードの[ESXiホストシステム]ポートレットに問題が表示されます。問題を選択すると、問題があるESXiホストのホスト名またはIPアドレスを確認できます。</block>
+  <block id="99458b1e600e8f8642f1d6a53c1cee4f" category="list-text">[推奨されるホスト設定を適用]*ウィンドウで、NetAppの推奨されるホスト設定に準拠するホストを選択し、*[次へ]*を選択します。</block>
+  <block id="b9c098c7cabaa0b14f3cbc46dd8aee99" category="list-text">概要ペインで値を確認し、*[完了]*を選択します。進捗状況は、最近のタスクパネルで追跡できます。</block>
+  <block id="1823e2571adf15490a9c436b943a6c76" category="list-text">NetApp ONTAP tools *&gt;* Protection *&gt;* Host cluster relationships *に移動し、クラスタの省略記号メニューを選択して* Edit *または</block>
+  <block id="14b863fe869a79efed0088cc76e88374" category="summary">vCenterオブジェクトビューでデータストアオブジェクトを右クリックすると、[plug-in]セクションにONTAP tools for VMware vSphereでサポートされるアクションが表示されます。</block>
+  <block id="49502d33ce4af19779137b32f66be652" category="paragraph">vCenterオブジェクトビューでデータストアオブジェクトを右クリックすると、[plug-in]セクションにONTAP tools for VMware vSphereでサポートされるアクションが表示されます。データストアのタイプと現在のユーザ権限に応じて、特定の操作が有効になります。</block>
+  <block id="bbe57747f4505ee1666f69c3e2e22914" category="list-text">[サマリ]*ウィンドウで、選択内容を確認し、*[展開]*を選択します。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
+  <block id="7126c2d3ac63ad339fed10c3e80b9154" category="paragraph">メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。を選択する<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>と、メンテナンスコンソールが起動します。</block>
+  <block id="29f385adfbfb27c8582d1c11890c8556" category="list-text">[しきい値の編集]*ウィンドウで、*[ほぼフル]*フィールドと*[フル]*フィールドに必要な値を指定し、*[保存]*を選択します。推奨値（「ほぼフル」が80、「フル」が90）にリセットできます。</block>
+  <block id="0f7693907bf1c5887f11085d59c4b126" category="section-title">ストレージバックエンドをvCenter Serverインスタンスに関連付けまたは関連付け解除する</block>
+  <block id="e86e9d91e2d4fec33d849cf922251ff6" category="list-text">ストレージバックエンドに関連付ける、またはストレージバックエンドとの関連付けを解除するvCenter Serverの縦の省略記号を選択します。</block>
+  <block id="c059c6405b3526137de28981e7d60b16" category="list-text">変更するvCenter Serverの縦の省略記号を選択し、*[変更]*を選択します。</block>
+  <block id="b5c456ea007c6f139a957980317bbe28" category="list-text">削除するvCenter Serverの縦の省略記号を選択し、*[削除]*を選択します。</block>
+  <block id="51f04e28eeabc89526616bd1000e6071" category="list-text">移行する仮想マシンを右クリックし、*[移行]*を選択します。</block>
+  <block id="8df33af7cabc049e0ed0647bce4e331c" category="list-text">[ストレージのみを変更]*を選択し、*[次へ]*を選択します。</block>
+  <block id="62ac5355da102c7e942b48071ff5f72a" category="list-text">設定を確認し、*[終了]*を選択します。</block>
+  <block id="6ca1f41f9b51c9451c86fc8719b6b18d" category="list-text">[ホストにデータストアをマウントする]ダイアログボックスで、データストアをマウントするホストを選択し、*[マウント]*を選択します。</block>
+  <block id="d0e3569f211e8dd2861fa8f7c186ba77" category="list-text">vSphere Clientのバージョンと選択したデータストアのタイプによっては、一部の右クリック操作が無効または使用できない場合があります。vSphere Client 8.0以降のバージョンを使用している場合、一部の右クリックオプションは非表示になります。</block>
+  <block id="cd976ca49583a8080802261ae61aa5a0" category="list-text">マウントするデータストアを選択し、*[マウント]*を選択します。</block>
+  <block id="f90f65776adad29b4cbb92ed52a8e69c" category="list-text">VVOLデータストアを右クリックし、* NetApp ONTAP tools *&gt;*[データストアからのストレージの削除]*を選択します。</block>
+  <block id="5aa7caeeea3e4a3e60d0414cc9a54be1" category="list-text">vVolがないボリュームを選択し、*[削除]*を選択します。</block>
+  <block id="aead57347d2dc00927edd37edabb180a" category="list-text">[ストレージの削除]*ポップアップで*[ ONTAPクラスタからボリュームを削除する]*チェックボックスを選択してデータストアおよびONTAPストレージからボリュームを削除し、*[削除]*を選択します。</block>
+  <block id="267de19ac03e71a99875cacf87972c29" category="list-text">サイドバーから*[設定]*を選択します。</block>
+  <block id="acbb9fb52437ae4b13baa2a0348d0f54" category="list-text">[サイズ変更]ダイアログボックスで、データストアの新しいサイズを指定し、*[OK]*を選択します。</block>
+  <block id="3783fd9fd4953ec562029748312baab2" category="list-text">縦の省略記号メニューを選択し、*ストレージの検出*を選択します。</block>
+  <block id="94eb6f58d9e59ecf544e93049e0b5a12" category="list-text">クレデンシャルまたはポート名を変更するには、縦の省略記号メニューを選択し、*[変更]*を選択します。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
+  <block id="e3a4199b03830cb617b930ebbf0e2ab9" category="list-text">垂直楕円メニューを選択し、*修正*を選択します。</block>
+  <block id="ef11c9aff075521175fcfa578795e121" category="list-text">垂直の楕円メニューを選択し、*削除*を選択します。ストレージバックエンドにデータストアがないことを確認します。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
+  <block id="eed7fc96f746813cb6dc7931e0b308b0" category="list-text">垂直の楕円メニューを選択し、*削除*を選択します。</block>
+  <block id="1b46a38e17199ae5d2201aa53d2f0fe9" category="paragraph">ストレージバックエンドの親クラスタまたは子クラスタを選択すると、コンポーネントの全体的な概要が表示されます。親クラスタを選択すると、処理ドロップダウンからストレージの検出、変更、削除の各処理を実行できます。</block>
+  <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。</block>
+  <block id="d1a23a03023137fd38165cea715f27d9" category="doc">ONTAP toolsの導入を終了</block>
+  <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。</block>
+  <block id="5a542b803059205c8fd2335844a87295" category="admonition">ONTAP tools for VMware vSphereを終了すると、ツール内のデータがすべて削除されます。</block>
+  <block id="ddd0e0be06228297b94d3fcf028edb16" category="list-text">ONTAP tools for VMware vSphereで作成した仮想マシンをすべて削除します。を参照してください<block ref="d6e07286372376b6b92ed9babd2f6996" category="inline-link-rx"></block>。</block>
+  <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>ONTAP Tools for VMware vSphereを使用して作成されます。</block>
+  <block id="1e51d74fa593c2d20970490a2e9adbe0" category="list-text">次の手順に従って、すべてのvCenterサーバからVASAプロバイダの登録を解除します。</block>
+  <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">ONTAPツールで、画面下部の*[設定]*&gt;*[VASA Provider設定]*&gt;*[登録解除]*オプションを選択します。</block>
+  <block id="ff58dfdcb939738020bc3b48ae83b617" category="list-text">[VASA Providerの登録解除]*ページで、アプリケーションのユーザクレデンシャルを入力し、*[登録解除]*を選択します。</block>
+  <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
+  <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">すべてのストレージバックエンドを削除します。を参照してください <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
+  <block id="39ebf4e5b2fe43c5d1e039f8afb8a330" category="list-text">VMware Live Site RecoveryからSRAアダプタを削除します。</block>
+  <block id="6b888cf1301944636f489bc5295c2ef7" category="list-text">管理者として5480ポートを使用して、VMware Live Site Recoveryアプライアンスの管理インターフェイスにログインします。</block>
+  <block id="11e59432e8c34141d30396d503dc7c73" category="list-text">[ストレージレプリケーションアダプタ]*を選択します。</block>
+  <block id="44c85ccbfd05b98d17400def9e18c139" category="list-text">適切なSRAカードを選択し、ドロップダウンメニューから*[削除]*を選択します。</block>
+  <block id="51853e46fcef4ee8c2608d1c9995935a" category="list-text">アダプタを削除した結果がわかっていることを確認し、*[削除]*を選択します。</block>
+  <block id="6281313312c47617dfa2786104fdeaf5" category="list-text">ONTAP tools for VMware vSphereにオンボードしたvCenter Serverインスタンスをすべて削除します。を参照してください <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>。</block>
+  <block id="3972fe2496bae000ec66a62ef0711339" category="list-text">vCenter ServerからONTAP tools for VMware vSphere VMの電源をオフにし、VMを削除します。</block>
+  <block id="f803051356e1156c49b0c23af17c876b" category="list-text">省略記号メニューを選択し、*設定のリセット*を選択します。</block>
+  <block id="a91d8b1466c010c4ae95c7bc969d60d2" category="list-text">省略記号メニューを選択し、*削除*を選択します。</block>
+  <block id="7ecf25a7ff85dee8180a09f0f8a71a56" category="list-text">VMware Live Site Recoveryで、* Array Managers *&gt;* Add Array Manager *を選択します。</block>
+  <block id="4340c1f9c69771baf38ff123de03411d" category="list-text">アレイが検出され、[Add Array Manager]ウィンドウの下部に表示されていることを確認し、*[Finish]*を選択します。</block>
+  <block id="080c5fb237f3463d2cba06aa31f7be71" category="list-text">VMware Live Site Recoveryアプライアンスの画面で、* Storage Replication Adapter *&gt;* New Adapter *を選択します。</block>
+  <block id="72d57111cbc44da3fa27bf21fe154b3d" category="list-text">vCenter Serverにログインし、* Site Recovery *&gt;* Sites *を選択します。</block>
+  <block id="c91d1a3e08ece10194d18d3ef358cd0d" category="list-text">保護対象サイトを選択し、*[管理]*を選択します。</block>
+  <block id="d786809521d22ecbe05b18f857719cad" category="list-text">適切なデータストアを選択し、* OK *を選択します。</block>
+  <block id="83d301f4fb8c7d313a9cfddfeeab72de" category="list-text">vCenter Serverにログインし、*[サイトリカバリ]*&gt;*[保護グループ]*を選択します。</block>
+  <block id="4aa3cbb9b28815019281d7208ceea4d7" category="list-text">[保護グループ]*ペインで*[新規]*を選択します。</block>
+  <block id="1c07c39f9003b0a95de815ee8d32819b" category="list-text">保護グループの名前と説明、方向を指定し、* Next *を選択します。</block>
+  <block id="f84f7699f8b08a1588dfcdcaf166af7d" category="list-text">Replication groups（レプリケーショングループ）タブで、有効なアレイペアまたは設定した仮想マシンがあるレプリケーショングループのいずれかを選択し、* Next（次へ）*を選択します。</block>
+  <block id="30540211c8e23faa45ed28d5205c4947" category="list-text">既存のリカバリプランを選択するか、*[新しいリカバリプランに追加]*を選択して新しいプランを作成します。</block>
+  <block id="957ced2b76acd32178c2c248540302a7" category="list-text">[Ready to Complete]タブで、作成した保護グループの詳細を確認し、*[Finish]*を選択します。</block>
+  <block id="c0946891246547c7c18fb0aaebb87d51" category="list-text">[Automatically Prepare Mappings for Folders with Matching Names]*を選択し、[*Next]*を選択します。</block>
+  <block id="26169939295d594d7c775e68c43de55c" category="list-text">保護対象サイトとリカバリサイトに必要なデータセンターオブジェクトを選択し、*[マッピングの追加]*を選択します。</block>
+  <block id="781af874880fdb2d90df7fa4a3c386a0" category="list-text">前に使用したオブジェクトを選択してリバースマッピングを作成し、*[完了]*を選択します。</block>
+  <block id="0d0e9cb7cf0aab081411efd770b33af1" category="list-text">[Automatically Prepare Mappings for Networks with Matching Names]*を選択し、[次へ]*を選択します。</block>
+  <block id="717d6542430f22a142148691e591899e" category="list-text">前に使用したオブジェクトを選択してリバースマッピングを作成し、*[完了]*を選択します。</block>
+  <block id="71468795231ab3ecd14b562a28516052" category="list-text">[Automatically Prepare Mappings for Resource with Matching Names]*を選択し、[次へ]*を選択します。</block>
+  <block id="7f49636559294ca40a35594e8541dd2c" category="list-text">vSphere Clientのホームページで* Site Recovery *をダブルクリックし、* Sites *を選択します。</block>
+  <block id="ee0227357c8961e918fa1a9c1201e98c" category="list-text">[Site Recovery Managerサーバのペアリング]ダイアログボックスで、保護対象サイトのプラットフォームサービスコントローラのアドレスを入力し、*[次へ]*を選択します。</block>
+  <block id="3ec71f0bb7ca716b9bfe9eec4617ad6f" category="list-text">SSO管理クレデンシャルを入力し、*[終了]*を選択します。</block>
+  <block id="0e4280d392a45d4af0200fa4ad5cb15a" category="list-text">プロンプトが表示されたら、*[はい]*を選択してセキュリティ証明書を受け入れます。</block>
+  <block id="3bad20a7b8cd4b70fc562f9168f7a022" category="list-text">ソースサイトとデスティネーションサイトで同じSnapMirrorポリシーとスケジュールを使用する必要があります。</block>
+  <block id="d3a79ed7c8de1319d53eb17bb256cb17" category="cell">VMFSとVVOLのFC、VMFSのみのNVMe-oF / FC、NVMe-oF / TCPのサポートが拡張されました。NetApp SnapMirrorの使いやすさ、vSphereメトロストレージクラスタのシンプルなセットアップ、3サイトのVMware Live Site Recoveryのサポート</block>
+  <block id="f04d5a39f552e53928ef021fc890d6c5" category="cell">iSCSI VMFSおよびNFS v3データストア用のSRAレプリケーションSMASとVMware Live Site Recoveryを組み合わせた3サイト保護。</block>
+  <block id="0e27105caa72d21e8749a7f4537adbcf" category="list-text">ONTAP System Managerのユーザインターフェイスで、検索バーの名前でボリュームを検索し、名前を選択してボリュームを開きます。[Snapshot]に移動し、そのボリュームのSnapshotを追加します。</block>
+  <block id="b639159ff2a793aff96fa54f36b5fe54" category="list-text">[Snapshots]タブに移動し、*[Take Snapshot]*ボタンを選択します。VMの休止スナップショットを作成します。詳細については、を参照してください<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>。</block>
+  <block id="901db5b8a2bb826f006539770e8329a4" category="list-text">VMを右クリックし、*[Add New Device]*&gt;* Hard Disk*を選択します。</block>
+  <block id="2c2d3019834934bb25449edddc396321" category="list-text">ISOファイルを選択し、* OK *を選択します。[CD/DVDドライブ]フィールドで[接続済み]チェックボックスを選択します。<block ref="af57a506b85774ef3a9f849e2b26e258" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

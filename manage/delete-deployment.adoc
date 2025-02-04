@@ -27,7 +27,7 @@ iSCSI環境の場合は、igroupも削除する必要があります。
 +
 _kubectl describe persistentvolumes | grep internalName | awk -F'=''｛print $2｝'_
 
-. vCenter ServerからのVMの削除（を参照） https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html["vCenter ServerまたはデータストアからのVMまたはVMテンプレートの削除"]
-. ONTAP System Managerからボリュームを削除します。を参照してください。 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["FlexVol ボリュームを削除します"]。ボリュームを削除するには、CLIコマンドでFlexVolの正確な名前を指定します。
-. iSCSIを導入する場合は、SAN igroupをONTAPから削除します。を参照してください。 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["SANイニシエータとigroupを表示および管理します"]。
+. vCenter ServerからVMを削除します。を参照してください。 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["VMおよびVMテンプレートの削除と再登録"]
+. ONTAP System Managerからボリュームを削除します。を参照してください。 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["FlexVol ボリュームを削除します"]ボリュームを削除するには、CLIコマンドでFlexVolの正確な名前を指定します。
+. iSCSIを導入する場合は、ONTAPからSAN igroupを削除します。を参照してください。 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["SANイニシエータとigroupを表示および管理します"]
 

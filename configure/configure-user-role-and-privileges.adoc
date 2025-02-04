@@ -43,7 +43,7 @@ NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM
 [ロール]*フィールドには、選択した製品機能に基づいて自動的に値が入力されます。
 
 .. 必要なユーザ名とパスワードを入力します。
-.. ユーザに必要な権限（[Discovery]、[Create Storage]、[Modify Storage]、[Destroy Storage]、[NAS/SAN Role]）を選択し、*[Add]*をクリックします。
+.. ユーザに必要なPrivileges（検出、ストレージの作成、ストレージの変更、ストレージの削除、NAS/SANロール）を選択し、*[追加]*を選択します。
 
 
 

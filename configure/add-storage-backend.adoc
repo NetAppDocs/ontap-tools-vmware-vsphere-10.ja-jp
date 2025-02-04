@@ -29,7 +29,7 @@ NOTE: ストレージバックエンドは、ONTAP tools ManagerまたはONTAP t
 
 * 手順 *
 
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalanceIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから* Storage backends *を選択します。
 . 「 * 追加」を選択します。
@@ -46,10 +46,10 @@ NOTE: IPv4とIPv6の管理LIFがサポートされます。管理LIFを使用す
 
 NOTE: vSphere Client UIを使用してストレージバックエンドを追加した場合、vVolデータストアでSVMユーザを直接追加することはできません。
 
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://vcenterip/ui`
-. ショートカットページで、プラグインセクションの* NetApp ONTAP tools *をクリックします。
+. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
+. ショートカットページで、プラグインセクションの* NetApp ONTAP tools *を選択します。
 . ONTAP toolsの左側のペインで、*[ストレージバックエンド]*に移動し、*[追加]*を選択します。
-. [ストレージバックエンドの追加]*ウィンドウで、サーバのIPアドレス、ユーザ名、パスワード、およびポートの詳細を指定し、*[追加]*をクリックします。
+. [ストレージバックエンドの追加]*ウィンドウで、サーバのIPアドレス、ユーザ名、パスワード、およびポートの詳細を入力し、*[追加]*を選択します。
 +
 
 NOTE: クラスタベースのクレデンシャルとIPv4およびIPv6アドレス管理LIFを追加するか、SVMの管理LIFにSVMベースのクレデンシャルを指定して、SVMユーザを直接追加できます。
