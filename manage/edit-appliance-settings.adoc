@@ -19,8 +19,7 @@ ONTAP toolsアプライアンスは、最初はシングルノード非HA構成�
 
 指定したOVAテンプレートのバージョンが最初のノードと同じであることを確認します。
 
-* 手順 *
-
+.手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . 概要セクションの*アプライアンス設定の編集*を選択します。

@@ -54,9 +54,7 @@ summary: 大規模な環境で最適なパフォーマンスを実現するに�
 |===
 また、を有効にする必要があります `StorageProvider.autoResignatureMode` オプション
 
-ストレージプロバイダの設定の変更の詳細については、VMwareのドキュメントを参照してください。
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere のドキュメント：「ストレージプロバイダ設定の変更"]
+ストレージプロバイダの設定の変更の詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-provider-settings.html["Change Storage Provider Settings"]。
 
 
 
@@ -67,6 +65,4 @@ https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recove
 
 NOTE: 指定したタイムアウト間隔が最大値です。最大タイムアウトに達することはありません。ほとんどのコマンドは、設定された最大タイムアウト間隔内に終了します。
 
-詳細については、SANプロバイダの設定の変更に関するVMwareのドキュメントを参照してください。
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager のドキュメント：「ストレージ設定の変更"]
+SANプロバイダ設定の変更については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Change Storage Settings"]。

@@ -19,7 +19,7 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 
 .手順
 . vSphere Clientで、NFSデータストアに移動します。
-. 右ペインの*[設定]*タブをクリックします。
+. 右側のペインで[Configure]タブを選択します。
 . NetApp ONTAP tools *>* ONTAP Storage *を選択します。右側のペインに*[ストレージの詳細]*と*[NFSの詳細]*が表示されます。
 +
 ** ストレージの詳細ページには、ストレージバックエンド、アグリゲート、およびボリュームに関する情報が表示されます。
@@ -34,7 +34,7 @@ ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージ�
 
 .手順
 . vSphere Clientで、VMFSデータストアに移動します。
-. 右ペインの*[設定]*タブをクリックします。
+. 右側のペインで[Configure]タブを選択します。
 . NetApp ONTAP tools *>* ONTAP Storage *を選択します。右側のペインに、プロトコルに応じて*[ストレージの詳細]*および* LUNの詳細*または*[ネームスペースの詳細]*が表示されます。
 +
 ** ストレージの詳細ページには、ストレージバックエンド、アグリゲート、およびボリュームに関する情報が表示されます。
@@ -54,7 +54,7 @@ NOTE: このビューは、ASA R2ベースのvVolデータストアではサポ�
 
 .手順
 . vSphere Clientで、vVolデータストアに移動します。
-. 右ペインの*[設定]*タブをクリックします。
+. 右側のペインで[Configure]タブを選択します。
 . NetApp ONTAP tools *>* ONTAP Storage *を選択します。
 . ONTAPストレージビューには、すべてのボリュームが表示されます。ONTAPストレージペインでは、ストレージを拡張または削除できます。
 +

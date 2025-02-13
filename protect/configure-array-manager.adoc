@@ -13,8 +13,7 @@ summary: VMware Live Site RecoveryのArray Managerウィザードを使用して
 [role="lead"]
 VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM）の間のやり取りを有効にすることができます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * VMware Live Site Recoveryで保護対象サイトとリカバリサイトをペアリングしておく必要があります。
 * アレイマネージャを設定する前に、オンボードストレージを設定しておく必要があります。
 * 保護対象サイトとリカバリサイト間のSnapMirror関係を設定し、レプリケートしておく必要があります。
@@ -23,8 +22,7 @@ VMware Live Site RecoveryのArray Managerウィザードを使用してStorage R
 
 SRA では、クラスタレベルの管理と SVM レベルの管理がサポートされます。クラスタレベルでストレージを追加すると、クラスタ内のすべてのSVMを検出して処理を実行できます。SVM レベルでストレージを追加する場合は、特定の SVM だけを管理できます。
 
-* 手順 *
-
+.手順
 . VMware Live Site Recoveryで、* Array Managers *>* Add Array Manager *を選択します。
 . 次の情報を入力して、VMware Live Site Recoveryでアレイについて説明します。
 +
@@ -61,7 +59,7 @@ NOTE: アレイマネージャを設定するときは、ONTAP toolsでストレ
 
 
 
-. 「 * 次へ * 」をクリックします。
+. 「 * 次へ * 」を選択します。
 . アレイが検出され、[Add Array Manager]ウィンドウの下部に表示されていることを確認し、*[Finish]*を選択します。
 
 

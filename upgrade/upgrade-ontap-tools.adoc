@@ -109,7 +109,7 @@ ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場�
 * vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*
 
 * vSphere Clientユーザインターフェイスで、VMを選択します。
-* [Snapshots]タブに移動し、*[Take Snapshot]*ボタンを選択します。VMの休止スナップショットを作成します。詳細については、を参照してください https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["仮想マシンのスナップショットの作成"^]。
+* [Snapshots]タブに移動し、*[Take Snapshot]*ボタンを選択します。VMの休止スナップショットを作成します。詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["仮想マシンのスナップショットの作成"^]。
 
 
 アップグレードを実行する前に、「generate-support-bundle-job」というプレフィックスが付いた完了したポッドをログバンドルから削除してください。サポートバンドルの生成を実行中の場合は、完了してからポッドを削除します。
@@ -119,15 +119,14 @@ ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場�
 . シングルノード構成のVMを選択するか、HA構成の3つすべてのVMを選択します。
 . VMを右クリックし、*[Add New Device]*>* Hard Disk*を選択します。
 . [New Hard disk]フィールドに100 GB HDDを追加します。
-. [適用]*をクリックします。
+. [適用]を選択します。
 
 
 ハードディスクを追加したら、それぞれの構成のVMのリソースを更新し、プライマリVMを再起動します。
 
 新しいHDDが作成されます。Dynamic Storage Provisionerは、このHDDを使用してボリュームを生成またはレプリケートします。
 
-* 手順 *
-
+.手順
 . ONTAP tools for VMware vSphereアップグレードISOをコンテンツライブラリにアップロードします。
 . プライマリVMページで、*[Actions]*>*[Edit Settings]*を選択します。
 . CD/DVDドライブ*フィールドの編集設定ウィンドウで、コンテンツライブラリISOファイルを選択します。

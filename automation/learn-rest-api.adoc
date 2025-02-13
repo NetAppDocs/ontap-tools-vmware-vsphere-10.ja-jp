@@ -56,4 +56,4 @@ ONTAP Tools for VMware vSphere 10は、vSphereリモートプラグインアー�
 ONTAP tools for VMware vSphere 10は単一のIPアドレスを公開し、仮想マシンの機能へのゲートウェイを提供します。このアドレスは初期設定時に指定する必要があり、内部のロードバランサコンポーネントに割り当てられます。このアドレスは、ONTAP tools Managerのユーザインターフェイス、およびSwaggerのドキュメントページやREST APIに直接アクセスする際に使用されます。
 
 .2つのREST API
-ONTAP Tools for VMware vSphere 10 REST APIに加えて、ONTAPクラスタにも独自のREST APIがあります。ONTAP tools Managerは、ONTAP REST APIをクライアントとして使用してストレージ関連のタスクを実行します。これら2つのAPIは別個のものであることに注意することが重要です。ONTAP REST APIの詳細については、のドキュメントを参照してください https://docs.netapp.com/us-en/ontap-automation/["ONTAPの自動化"^]。
+ONTAP Tools for VMware vSphere 10 REST APIに加えて、ONTAPクラスタにも独自のREST APIがあります。ONTAP tools Managerは、ONTAP REST APIをクライアントとして使用してストレージ関連のタスクを実行します。これら2つのAPIは別個のものであることに注意することが重要です。詳細については、を参照してください https://docs.netapp.com/us-en/ontap-automation/["ONTAPの自動化"^]。

@@ -13,8 +13,7 @@ summary: diagユーザのSSHアクセスを有効にするようにONTAP tools f
 [role="lead"]
 diagユーザのSSHアクセスを有効にするようにONTAP tools for VMware vSphereを設定できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 vCenter Serverインスタンスに対してVASA Provider拡張機能を有効にする必要があります。
 
 * このタスクについて *
@@ -33,8 +32,7 @@ SSH を使用して diag ユーザアカウントにアクセスする際は次�
 
 
 
-* 手順 *
-
+.手順
 . vCenter Serverで、VASA Providerへのコンソールを開きます。
 . maintenance ユーザとしてログインします。
 . 入力するコマンド `4` [Support and Diagnostics]を選択します。

@@ -17,8 +17,7 @@ vCenter Serverのリストページには、関連するストレージバック
 
 このタスクでは、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間のマッピングをグローバルに作成できます。
 
-* 手順 *
-
+.手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから[vCenter]を選択します。

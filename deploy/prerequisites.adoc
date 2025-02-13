@@ -25,8 +25,7 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 ** シックプロビジョニングの場合は348GB
 
 
-* *ノードあたりのホストシステムのサイジング要件*
-次の表に、導入サイズおよびノードごとの推奨メモリを示します。
+* *ホストシステムのサイジング要件*導入規模に応じた推奨メモリは次の表のとおりです。
 
 
 |===
@@ -41,13 +40,13 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 | 非HAメディア | 13 | 26 | 350 
 
 
-| HA小規模 | 27 | 54 | 1050 
+| 小規模HA構成（3ノードの累積） | 27 | 54 | 1050 
 
 
-| HAメディア | 39 | 78 | 1050 
+| HA中規模（3ノードの累積） | 39 | 78 | 1050 
 
 
-| 大規模なHA構成 | 51 | 一 〇 二 | 1050 
+| 大規模なHA構成（3ノードの累積） | 51 | 一 〇 二 | 1050 
 |===
 
 
@@ -143,7 +142,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 | 8人以上 | 大規模 
 |===
-詳細については、を参照してください https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["VMware Live Site Recoveryの運用上の制限"]。
+詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recoveryの運用上の制限"]。
 
 
 

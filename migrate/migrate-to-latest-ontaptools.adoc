@@ -31,7 +31,7 @@ NOTE: パッチリリースにアップグレードする前に、現在のリ�
 == 一般的な移行手順
 
 . ONTAP tools for VMware vSphere 10.3リリース向けOVAを導入します。
-. 移行するvCenter ServerインスタンスをONTAP tools for VMware vSphere 10.3リリースに追加します。を参照し link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加"]
+. 移行するvCenter ServerインスタンスをONTAP tools for VMware vSphere 10.3リリースに追加します。参照してくださいlink:../configure/add-vcenter.html["vCenter Serverインスタンスの追加"]。
 . ONTAP Tools for VMware vSphereプラグインvCenter Server APIを使用して、ストレージバックエンドをローカルにオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
 . ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.3に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。VMware vSphereプラグインUIページのONTAP toolsの[Overview]ページにデータストアが表示されていることを確認します。
 

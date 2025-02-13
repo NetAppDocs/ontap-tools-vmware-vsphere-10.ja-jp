@@ -13,8 +13,7 @@ summary: ONTAP tools for VMware vSphereおよびONTAP System Managerに付属の
 [role="lead"]
 ストレージバックエンドの管理に使用する新しいユーザロールと権限を設定するには、ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用します。
 
-* 必要なもの *
-
+.作業を開始する前に
 * ONTAP PrivilegesファイルをONTAP tools for VMware vSphereから、_\ https：//<loadbalancerIP>：8443 /virtualization/user-privileges/users_roles.zip_を使用してダウンロードしておく必要があります。
 * 次のコマンドを使用して、ONTAP PrivilegesファイルをONTAP toolsからダウンロードしておきます。 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
@@ -24,8 +23,7 @@ NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM
 * ストレージバックエンドの管理者権限でログインしている必要があります。
 
 
-* 手順 *
-
+.手順
 . ダウンロードした_\ https：//<loadbalancerIP>：8443 /virtualization/user-privileges/users_roles.zip_fileを展開します。
 . クラスタのクラスタ管理IPアドレスを使用してONTAP System Managerにアクセスします。
 . 管理Privilegesでクラスタにログインします。ユーザを設定するには、次の手順を実行します。

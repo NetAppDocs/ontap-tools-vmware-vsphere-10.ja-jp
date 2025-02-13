@@ -45,8 +45,7 @@ OVAがコンテンツライブラリにインポートされていることを�
 
 NOTE: 導入を進める前に、ONTAPツールのインストール中に、インベントリ上のクラスタのDistributed Resource Scheduler（DRS）を「保守的」に設定してください。これにより、インストール中にVMが移行されなくなります。
 
-* 手順 *
-
+.手順
 .  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。
 . vSphereサーバにログインします。
 . 作成したリソースプール、またはクラスタまたはOVAを導入するホストに移動します。

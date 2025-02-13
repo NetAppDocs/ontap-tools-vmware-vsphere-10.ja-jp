@@ -19,8 +19,7 @@ vCenter Serverインスタンスは、ホスト、仮想マシン、ストレー
 
 vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドとの関連付けまたは関連付け解除を行うオプションがあります。このタスクでは、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間のマッピングをグローバルに作成できます。
 
-* 手順 *
-
+.手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから必要なvCenter Serverインスタンスを選択します。

@@ -16,8 +16,7 @@ ONTAP tools for VMware vSphereのログファイルは、ONTAP tools Managerユ�
 
 NOTE: ONTAP tools Managerからのログの生成には、すべてのvCenter Serverインスタンスのすべてのログが含まれます。vCenter Client UIからのログの生成範囲は、選択したvCenter Serverに限定されます。
 
-* 手順 *
-
+.手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから* Log Bundles *を選択します。

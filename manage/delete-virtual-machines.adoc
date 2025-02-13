@@ -16,8 +16,7 @@ VASAのクリーンアップを実行するには、このセクションの手�
 
 NOTE: VASAクリーンアップを実行する前に、VVOLデータストアを削除することを推奨します。
 
-* 手順 *
-
+.手順
 . \https://OTV_IP:8143/Register.htmlに移動してプラグインの登録を解除します。
 . プラグインがvCenter Serverで使用できなくなったことを確認します。
 . ONTAP Tools for VMware vSphere VMをシャットダウンします。

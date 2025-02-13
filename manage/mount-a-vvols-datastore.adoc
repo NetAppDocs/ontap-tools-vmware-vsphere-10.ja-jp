@@ -13,8 +13,7 @@ summary: VMware 仮想ボリューム（ vvols ）データストアは、 Mount
 [role="lead"]
 VMware Virtual Volumes（vVol）データストアを1つ以上の追加ホストにマウントして、追加のホストにストレージアクセスを提供することができます。vVolデータストアをアンマウントできるのは、APIを使用する場合のみです。
 
-* 手順 *
-
+.手順
 . vSphere Clientの[ホーム]ページで、*[ホストおよびクラスタ]*を選択します。
 . ナビゲーションペインで、データストアが含まれているデータセンターを選択します。
 . データストアを右クリックし、* NetApp ONTAP tools *>* Mount datastore *を選択します。

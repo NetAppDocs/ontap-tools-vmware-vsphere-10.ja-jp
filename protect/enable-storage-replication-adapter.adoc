@@ -13,16 +13,14 @@ summary: ONTAP tools for VMware vSphereには、SRA機能を有効にしてデ�
 [role="lead"]
 ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザスタリカバリを設定するためのオプションがあります。
 
-* 必要なもの *
-
+.作業を開始する前に
 * vCenter ServerインスタンスのセットアップとESXiホストの設定が完了している必要があります。
 * ONTAP toolsを導入しておく必要があります。
 * SRAアダプタをダウンロードしておく必要があります。 `.tar.gz` ファイルを参照してください https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。
 * SRAワークフローを実行する前に、ソースとデスティネーションのONTAPクラスタで同じカスタムSnapMirrorスケジュールを作成しておく必要があります。
 
 
-* 手順 *
-
+.手順
 . URL：を使用してVMware Live Site Recoveryアプライアンスの管理インターフェイスにログインし `\https://:<srm_ip>:5480`、VMware Live Site Recoveryアプライアンスの管理インターフェイスで[Storage Replication Adapters]に移動します。
 . [New Adapter]*を選択します。
 . SRAプラグインの_.tar.gz_installerをVMware Live Site Recoveryにアップロードします。
