@@ -1,6 +1,6 @@
 ---
 section: manage
-title: ONTAP ツールを管理します
+title: ONTAP Tools for VMware vSphereを管理します。
 entries:
 - title: ONTAP Tools for VMware vSphereダッシュボードの概要
   url: "/configure/dashboard-overview.html"
@@ -10,8 +10,6 @@ entries:
   url: "/manage/edit-appliance-settings.html"
 - title: データストアを管理します
   entries:
-  - title: データストアを作成
-    url: "/configure/create-vvols-datastore.html"
   - title: NFSおよびVMFSデータストアのマウント
     url: "/manage/mount-datastores-on-host.html"
   - title: NFSおよびVMFSデータストアのアンマウント

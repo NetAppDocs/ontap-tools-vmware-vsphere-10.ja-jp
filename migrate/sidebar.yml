@@ -1,6 +1,6 @@
 ---
 section: migrate
-title: ONTAPツールの移行
+title: ONTAP Tools for VMware vSphereを移行
 entries:
 - title: ONTAP Tools for VMware vSphere 9.xから10.3への移行
   url: "/migrate/migrate-to-latest-ontaptools.html"

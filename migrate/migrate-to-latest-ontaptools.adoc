@@ -33,7 +33,7 @@ NOTE: パッチリリースにアップグレードする前に、現在のリ�
 . ONTAP tools for VMware vSphere 10.3リリース向けOVAを導入します。
 . 移行するvCenter ServerインスタンスをONTAP tools for VMware vSphere 10.3リリースに追加します。参照してくださいlink:../configure/add-vcenter.html["vCenter Serverインスタンスの追加"]。
 . ONTAP Tools for VMware vSphereプラグインvCenter Server APIを使用して、ストレージバックエンドをローカルにオンボードします。移行用に、ローカルスコープのストレージとしてストレージを追加します。
-. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.3に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。VMware vSphereプラグインUIページのONTAP toolsの[Overview]ページにデータストアが表示されていることを確認します。
+. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.3に表示されるのは、データストアの検出ジョブがトリガーされたあとだけです。トリガーされるまでに最大30分かかることがあります。VMware vSphereプラグインのユーザインターフェイスページのONTAP toolsの[Overview]ページにデータストアが表示されていることを確認します。
 
 
 
@@ -47,7 +47,7 @@ NOTE: パッチリリースにアップグレードする前に、現在のリ�
 
 NOTE: フェイルオーバーが完了したばかりで、再保護が保留中の場合は、移行しないでください。再保護を完了してから移行を実行します。リカバリプランのテストが完了したら、テストリカバリをクリーンアップして移行を開始します。
 
-. VMware Live Site Recovery UIでONTAP Tools for VMware vSphere 9.xxリリースSRAアダプタを削除するには、次の手順を実行します。
+. VMware Live Site RecoveryユーザインターフェイスでONTAP tools for VMware vSphere 9.xxリリースSRAアダプタを削除するには、次の手順を実行します。
 +
 .. VMware Live Site Recovery構成の管理ページに移動します。
 .. Storage Replication Adapter *セクションに移動します。
@@ -59,7 +59,7 @@ NOTE: フェイルオーバーが完了したばかりで、再保護が保留�
 
 
 . の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.3 SRAアダプタをインストールします。 link:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]
-. VMware Live Site Recovery UIページで、* Discover Arrays *および* Discover Devices *の処理を実行し、デバイスが移行前の状態であることを確認します。
+. VMware Live Site Recoveryのユーザーインターフェイスページで、*アレイの検出*および*デバイスの検出*操作を実行し、移行前のデバイスが表示されていることを確認します。
 
 
 
