@@ -9,11 +9,7 @@ entries:
 - title: NFS VAAI プラグインをインストールします
   url: "/configure/install-nfs-vaai-plug-in.html"
 - title: ESXiホストの設定
-  entries:
-  - title: ESXiサーバのマルチパスとタイムアウトの設定
-    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
-  - title: ESXiホストの値の設定
-    url: "/configure/esxi-host-values.html"
+  url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
 - title: ONTAPユーザのロールと権限の設定
   url: "/configure/configure-user-role-and-privileges.html"
 - title: ストレージバックエンドを追加します

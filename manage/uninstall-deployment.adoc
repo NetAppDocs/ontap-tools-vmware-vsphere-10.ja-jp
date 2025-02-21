@@ -19,7 +19,7 @@ NOTE: ONTAP tools for VMware vSphereを終了すると、ツール内のデー�
 .手順
 . ONTAP tools for VMware vSphereで管理されているデータストアからすべての仮想マシンを削除します。削除するか（を参照）、を使用して https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["Storage vMotion"]管理対象外のデータストアに移動できます https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["VMおよびVMテンプレートの削除と再登録"]。
 . link:../manage/delete-ds.html["データストアの削除"]ONTAP Tools for VMware vSphereを使用して作成されます。
-. 次の手順に従って、すべてのvCenterサーバからVASAプロバイダの登録を解除します。
+. 次の手順に従って、すべてのvCenterサーバからVASA Providerの登録を解除します。
 +
 .. ONTAPツールで、画面下部の*[設定]*>*[VASA Provider設定]*>*[登録解除]*オプションを選択します。
 .. [VASA Providerの登録解除]*ページで、アプリケーションのユーザクレデンシャルを入力し、*[登録解除]*を選択します。
