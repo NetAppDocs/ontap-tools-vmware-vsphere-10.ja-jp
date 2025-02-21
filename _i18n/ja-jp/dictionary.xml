@@ -598,7 +598,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">既存のリソースインスタンスを削除します。</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">PUT</block>
   <block id="c4408d335012a56ff58937d78050efad" category="section-title">同意します</block>
-  <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">Storage Replication Adapter（SRA\）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトをvSphere Clientを使用してペアリングする必要があります。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">保護対象サイトとリカバリサイトをペアリング</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">Storage Replication Adapter（SRA）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトをvSphere Clientを使用してペアリングする必要があります。</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">保護対象サイトとリカバリサイトにSRAをインストールしておく必要があります。</block>
@@ -975,7 +974,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="81ef6507a13da5635951bc5b533deb59" category="inline-link">TR-4684</block>
   <block id="bcfcba3d84c95eb110df0649ab05c280" category="paragraph">VMware vSphere 7.0でNVMe/FCを使用する方法の詳細については<block ref="27816f9f9cf7e278691c8ea8c1dd01dc" category="inline-link-rx"></block>、およびを参照して<block ref="a23d4cc1b9464bb497e26d387d612153" category="inline-link-rx"></block>ください。</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">ONTAP Tools for VMware vSphereは、ホストクラスタの保護を管理します。</block>
-  <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">ホストクラスタの保護の作成</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">次の前提条件が満たされていることを確認します。</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">ホストクラスタには、1つのSVMのデータストアだけが含まれます。</block>
   <block id="abd2c79ea68f2d7802d6d7a46312971e" category="list-text">ホストクラスタにマウントされたデータストアは、クラスタ外のどのホストにもマウントしないでください。</block>
@@ -1845,9 +1843,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="eed7fc96f746813cb6dc7931e0b308b0" category="list-text">垂直の楕円メニューを選択し、*削除*を選択します。</block>
   <block id="1b46a38e17199ae5d2201aa53d2f0fe9" category="paragraph">ストレージバックエンドの親クラスタまたは子クラスタを選択すると、コンポーネントの全体的な概要が表示されます。親クラスタを選択すると、処理ドロップダウンからストレージの検出、変更、削除の各処理を実行できます。</block>
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。</block>
-  <block id="d1a23a03023137fd38165cea715f27d9" category="doc">ONTAP toolsの導入を終了</block>
-  <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。</block>
-  <block id="5a542b803059205c8fd2335844a87295" category="admonition">ONTAP tools for VMware vSphereを終了すると、ツール内のデータがすべて削除されます。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>ONTAP Tools for VMware vSphereを使用して作成されます。</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">ONTAPツールで、画面下部の*[設定]*&gt;*[VASA Provider設定]*&gt;*[登録解除]*オプションを選択します。</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
@@ -2054,4 +2049,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="27668debe2a46165745d80fe01711790" category="list-text">次の手順に従って、すべてのvCenterサーバからVASA Providerの登録を解除します。</block>
   <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">[VASA Providerの登録解除]*ページで、アプリケーションのユーザクレデンシャルを入力し、*[登録解除]*を選択します。</block>
   <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">アプリケーションのユーザ名とパスワードは、ONTAP toolsの導入時に設定されます。これはVASA Provider / SRAの登録に必要です。</block>
+  <block id="cd8867ea57955f19f3087c7262d1186d" category="doc">ONTAP tools導入環境のアンインストール</block>
+  <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">ONTAP tools for VMware vSphereをアンインストールすると、ツール内のデータがすべて削除されます。</block>
+  <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">ONTAP Tools for VMware vSphere 9.xを10.3に移行</block>
 </blocks>

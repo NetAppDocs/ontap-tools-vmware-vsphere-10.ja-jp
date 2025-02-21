@@ -4,17 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。 
 ---
-= ONTAP toolsの導入を終了
+= ONTAP tools導入環境のアンインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。
-
-
-NOTE: ONTAP tools for VMware vSphereを終了すると、ツール内のデータがすべて削除されます。
+ONTAP tools for VMware vSphereをアンインストールすると、ツール内のデータがすべて削除されます。
 
 .手順
 . ONTAP tools for VMware vSphereで管理されているデータストアからすべての仮想マシンを削除します。削除するか（を参照）、を使用して https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["Storage vMotion"]管理対象外のデータストアに移動できます https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["VMおよびVMテンプレートの削除と再登録"]。

@@ -80,7 +80,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: ほぼゼロRPO
   url: "/manage/enable-backup.html"
-- title: ONTAP toolsの導入を終了
+- title: ONTAP tools導入環境のアンインストール
   url: "/manage/uninstall-deployment.html"
 - title: ボリュームをクリーンアップ
   url: "/manage/delete-deployment.html"
