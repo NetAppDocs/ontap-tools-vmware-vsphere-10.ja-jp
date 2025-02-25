@@ -6,7 +6,9 @@ entries:
   url: "/configure/dashboard-overview.html"
 - title: ONTAP tools Managerユーザインターフェイス
   url: "/configure/manager-user-interface.html"
-- title: アプライアンス設定の編集
+- title: ONTAP Tools for VMware vSphereサービスを有効にする
+  url: "/manage/enable-services.html"
+- title: ONTAP Tools for VMware vSphereの設定の変更
   url: "/manage/edit-appliance-settings.html"
 - title: データストアを管理します
   entries:
@@ -78,6 +80,10 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: ホストクラスタの保護の解除
     url: "/manage/delete-hostcluster-protection.html"
+- title: AutoSupportを無効にする
+  url: "/manage/disable-autosupport.html"
+- title: AutoSupportプロキシURLの更新
+  url: "/manage/update-proxyurl.html"
 - title: ほぼゼロRPO
   url: "/manage/enable-backup.html"
 - title: ONTAP tools導入環境のアンインストール
