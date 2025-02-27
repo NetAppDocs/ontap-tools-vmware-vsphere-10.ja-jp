@@ -25,8 +25,7 @@ NOTE: HA導入をあとで有効にする場合は、ONTAPツールをホスト�
 
 適切なコンテンツライブラリがない場合は、次の手順に従ってコンテンツライブラリを作成します。
 
-
-NOTE: 小規模なシングルノード配置のみを使用する場合は、コンテンツライブラリを作成する必要はありません。
+*コンテンツライブラリの作成*小規模なシングルノード展開のみを使用する場合は、コンテンツライブラリを作成する必要はありません。
 
 .  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。
 . 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`

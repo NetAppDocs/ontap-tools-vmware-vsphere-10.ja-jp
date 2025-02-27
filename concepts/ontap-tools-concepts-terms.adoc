@@ -17,7 +17,7 @@ summary: 次のセクションでは、このドキュメントで使用され�
 
 === ASA r2システム
 
-新しいNetApp ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルな操作性を実現します。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA R2ストレージシステムの詳細"]です。
+新しいNetApp ASA R2システムは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせたシンプルな操作性を実現します。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA R2ストレージシステムの詳細"]です。
 
 
 
