@@ -83,12 +83,10 @@
   <block id="aee895c24ce8b1de4db4cd6c7eabc1e3" category="paragraph">次のURIを使用してステータスを確認します。</block>
   <block id="f323831468d8f05429defe22a9e81256" category="list-text">サイドバーから* Storage backends *を選択します。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">「 * 追加」を選択します。</block>
-  <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">ポップアップのドロップダウンからストレージバックエンドを選択します。</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUIDは、移行後のAPIの応答で返された移行UUIDです。</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">すべてのホストで証明書を更新します。</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">* 概要 *</block>
   <block id="d59f94015529940d2e6778d013097380" category="summary">vCenterは、ホスト、仮想マシン、およびストレージバックエンドを制御できる一元管理プラットフォームです。</block>
-  <block id="aeb18aa675191e7f63da99f8c2975141" category="list-text">実行するアクションに応じて*[ストレージバックエンドの関連付け]または[関連付け解除]*を選択します。</block>
   <block id="a1c4eb450799cb3f30c400d0201414e7" category="doc">検出</block>
   <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">例</block>
   <block id="84fd2e9f48ced2057b35ca005d2e23dd" category="doc">ログファイルを収集します</block>
@@ -1082,13 +1080,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="beadd6cb6100e1a0cce84603ccb7105a" category="paragraph">次の表に、VMware Live Site Recoveryの数と、VMware vSphereの導入規模に対応するONTAPツールを示します。</block>
   <block id="df0d7eb56e12922cca30035472c40aa7" category="cell">* VMware Live Site Recoveryインスタンスの数*</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">VMware Live Site Recovery構成の管理ページに移動します。</block>
-  <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">VMware Live Site RecoveryアプライアンスでのSRAの設定</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA\）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM\）が連携できるようにすることができます。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM）の間のやり取りを有効にすることができます。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">VMware Live Site Recoveryで保護対象サイトとリカバリサイトをペアリングしておく必要があります。</block>
   <block id="a276fae7dadb74c9d51a7a7823f174bc" category="list-text">次の情報を入力して、VMware Live Site Recoveryでアレイについて説明します。</block>
-  <block id="bba4b1edcf0645b5356e4f3ffed77b3a" category="summary">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereのクレデンシャル\（IPアドレスと管理者パスワード\）をVMware Live Site Recoveryアプライアンスに保存する必要があります。</block>
-  <block id="ac7f1666af7e74993cdbf1eb27d64168" category="paragraph">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。ONTAP Tools for VMware vSphereのクレデンシャル（IPアドレス）をVMware Live Site Recoveryアプライアンスに保存して、VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にする必要があります。</block>
   <block id="21e557aeec91fdacbde971d5f1de9806" category="paragraph">VMware Live Site RecoveryアプライアンスでSRAを設定すると、VMware Live Site RecoveryアプライアンスにSRAクレデンシャルが保存されます。</block>
   <block id="7ebae8ab4249a32272c6182685fb369b" category="list-text">_.tar.gz_ファイルをVMware Live Site Recoveryにアップロードします。</block>
   <block id="e94e8319bfdee87f64f751c05ceaa14e" category="list-text">puttyを使用して、管理者アカウントでVMware Live Site Recoveryアプライアンスにログインします。</block>
@@ -1360,7 +1355,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="7a8e7317ab9023c8e3dac44950232672" category="list-text">AutoSupportプロキシURLの更新</block>
   <block id="d51a3b8155ff2f65ec368b7278c07f16" category="list-text">バックアップ用のvCenterクレデンシャルを入力</block>
   <block id="1f3bf2522a0df56ad834875880cfcc04" category="list-text">バックアップを作成</block>
-  <block id="b6b9d4100dc66eb2a9d44485b61f0fba" category="paragraph">vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドとの関連付けまたは関連付け解除を行うオプションがあります。このタスクでは、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間のマッピングをグローバルに作成できます。</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">クローニング用仮想マシンの作成</block>
   <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph">詳細については、を参照してください<block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>。</block>
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">進捗状況は、最近のタスクパネルで追跡できます。</block>
@@ -1380,7 +1374,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">ストレージデータを移行する際、ストレージバックエンドはREST APIを使用して手動でオンボーディングされます。VASA Providerのデータを移行すると、既存のDerbyデータベースからデータがエクスポートされ、MongoDBデータベースにインポートされます。</block>
   <block id="e43b5fd407b2bc9fda1a39851a48f9bb" category="doc">ONTAP Tools for VMware vSphere 9.xから10.3への移行</block>
   <block id="98db65da9a06955541a5451543410fde" category="list-text">ONTAP tools for VMware vSphere 10.3リリース向けOVAを導入します。</block>
-  <block id="b81b2046e8a2fa467c645a47a0ade5d0" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.3 SRAアダプタをインストールします。 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">VASA Providerの移行手順</block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">ONTAP tools for VMware vSphereストレージプロバイダをvCenter Serverおよびに追加します <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>。</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">VASA Providerは削除しないでください。</block>
@@ -1774,7 +1767,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bbe57747f4505ee1666f69c3e2e22914" category="list-text">[サマリ]*ウィンドウで、選択内容を確認し、*[展開]*を選択します。進捗状況は、[最近のタスク]パネルで追跡できます。</block>
   <block id="7126c2d3ac63ad339fed10c3e80b9154" category="paragraph">メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。を選択する<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>と、メンテナンスコンソールが起動します。</block>
   <block id="29f385adfbfb27c8582d1c11890c8556" category="list-text">[しきい値の編集]*ウィンドウで、*[ほぼフル]*フィールドと*[フル]*フィールドに必要な値を指定し、*[保存]*を選択します。推奨値（「ほぼフル」が80、「フル」が90）にリセットできます。</block>
-  <block id="0f7693907bf1c5887f11085d59c4b126" category="section-title">ストレージバックエンドをvCenter Serverインスタンスに関連付けまたは関連付け解除する</block>
   <block id="e86e9d91e2d4fec33d849cf922251ff6" category="list-text">ストレージバックエンドに関連付ける、またはストレージバックエンドとの関連付けを解除するvCenter Serverの縦の省略記号を選択します。</block>
   <block id="c059c6405b3526137de28981e7d60b16" category="list-text">変更するvCenter Serverの縦の省略記号を選択し、*[変更]*を選択します。</block>
   <block id="b5c456ea007c6f139a957980317bbe28" category="list-text">削除するvCenter Serverの縦の省略記号を選択し、*[削除]*を選択します。</block>
@@ -1797,7 +1789,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>ONTAP Tools for VMware vSphereを使用して作成されます。</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">ONTAPツールで、画面下部の*[設定]*&gt;*[VASA Provider設定]*&gt;*[登録解除]*オプションを選択します。</block>
-  <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
   <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">すべてのストレージバックエンドを削除します。を参照してください <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
   <block id="39ebf4e5b2fe43c5d1e039f8afb8a330" category="list-text">VMware Live Site RecoveryからSRAアダプタを削除します。</block>
   <block id="6b888cf1301944636f489bc5295c2ef7" category="list-text">管理者として5480ポートを使用して、VMware Live Site Recoveryアプライアンスの管理インターフェイスにログインします。</block>
@@ -2005,7 +1996,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">ONTAP Tools for VMware vSphere 9.xを10.3に移行</block>
   <block id="d15333fd508f1d73c6c7c18f9657c60b" category="summary">ストレージバックエンドをvCenter Serverに関連付けて、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間にグローバルなマッピングを作成します。</block>
   <block id="f2b44f635f2072efed00e9602e1e2ff4" category="list-text">ストレージバックエンドに関連付けるvCenter Serverインスタンスの縦の省略記号を選択します。</block>
-  <block id="9d85f6212023f4e0b82efdeec842c0c7" category="list-text">ドロップダウンからストレージバックエンドを選択し、vCenter Serverインスタンスを必要なストレージバックエンドに関連付けます。</block>
   <block id="199ed231411d6d659f29a3a7b2ea8db6" category="summary">ストレージシステムの初回構成時には、AutoSupportはデフォルトで有効になっています。有効になってから24時間後にテクニカルサポートにメッセージが送信されます。</block>
   <block id="c5adbf27ae2d8bfae599b0a24c10a95f" category="paragraph">ストレージシステムの初回構成時には、AutoSupportはデフォルトで有効になっています。有効になってから24時間後にテクニカルサポートにメッセージが送信されます。AutoSupportを無効にすると、プロアクティブなサポートと監視を受けることができなくなります。</block>
   <block id="e58a5d9f48a5cdc890b1cc0ed74ce0b4" category="admonition">AutoSupportは有効にしておくことを推奨します。問題の検出と解決を高速化するのに役立ちます。AutoSupportの情報は、無効な場合でも収集されてローカルに格納されます。</block>
@@ -2048,4 +2038,13 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="cea51b5f4b8c25d096d54257d5d0348e" category="paragraph">新しいNetApp ASA R2システムは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせたシンプルな操作性を実現します。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>です。</block>
   <block id="9401e344ca7f0cbda5f2f0b48709397f" category="paragraph">ホストクラスタレベルでデータストアを作成すると、データストアが作成され、すべてのデスティネーションホストにマウントされます。このオプションは、必要なPrivilegesがある場合にのみ表示されます。</block>
   <block id="1dd9aa2a5203b6e1a1980842e9af2082" category="paragraph">*コンテンツライブラリの作成*小規模なシングルノード展開のみを使用する場合は、コンテンツライブラリを作成する必要はありません。</block>
+  <block id="40291729bc47db016ddfca9972ab2bda" category="list-text">ドロップダウンからストレージバックエンドを選択して、vCenter Serverインスタンスを必要なストレージバックエンドに関連付けます。</block>
+  <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">ストレージバックエンドとvCenter Serverインスタンスの関連付けを解除する</block>
+  <block id="b5ae5420b0908ddbac99943f9b50285d" category="paragraph">vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドとの関連付けまたは関連付け解除を行うオプションがあります。</block>
+  <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">[ストレージバックエンドの関連付けを解除]*を選択します。</block>
+  <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>。</block>
+  <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">VMware Live Site RecoveryアプライアンスでのSRAの設定</block>
+  <block id="3bf1c404c0b424b9520fcc0dc5fb8998" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.3 SRAアダプタをインストールします。 <block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
+  <block id="0789cade62ba5a348d7e1ed5a15e5429" category="summary">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereのクレデンシャル\（IPアドレスと管理者パスワード\）をVMware Live Site Recoveryアプライアンスに保存する必要があります。</block>
+  <block id="ca19ccb681ec240b3ba2bef453f35015" category="paragraph">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。ONTAP Tools for VMware vSphereのクレデンシャル（IPアドレス）をVMware Live Site Recoveryアプライアンスに保存して、VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にする必要があります。</block>
 </blocks>
