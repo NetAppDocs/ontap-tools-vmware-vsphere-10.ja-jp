@@ -27,7 +27,7 @@ NOTE: HA導入をあとで有効にする場合は、ONTAPツールをホスト�
 
 *コンテンツライブラリの作成*小規模なシングルノード展開のみを使用する場合は、コンテンツライブラリを作成する必要はありません。
 
-.  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。
+.  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。
 . 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
 . vSphere Clientの横の省略記号を選択し、*[Content library]*を選択します。
 . ページの右側にある*[作成]*を選択します。
@@ -45,7 +45,7 @@ OVAがコンテンツライブラリにインポートされていることを�
 NOTE: 導入を進める前に、ONTAPツールのインストール中に、インベントリ上のクラスタのDistributed Resource Scheduler（DRS）を「保守的」に設定してください。これにより、インストール中にVMが移行されなくなります。
 
 .手順
-.  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。
+.  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。
 . vSphereサーバにログインします。
 . 作成したリソースプール、またはクラスタまたはOVAを導入するホストに移動します。
 . 目的の場所を右クリックし、*[Deploy OVF template...]*を選択します。

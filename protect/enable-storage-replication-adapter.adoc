@@ -16,7 +16,7 @@ ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザス�
 .作業を開始する前に
 * vCenter ServerインスタンスのセットアップとESXiホストの設定が完了している必要があります。
 * ONTAP Tools for VMware vSphereを導入しておく必要があります。
-* SRAアダプタをダウンロードしておく必要があります。 `.tar.gz` ファイルを参照してください https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Site"^]。
+*  `.tar.gz`からSRAアダプタファイルをダウンロードしておく必要があります https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。
 * SRAワークフローを実行する前に、ソースとデスティネーションのONTAPクラスタで同じカスタムSnapMirrorスケジュールを作成しておく必要があります。
 
 

@@ -588,7 +588,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="f5687be176cf7331c8455f99c17ffcf2" category="paragraph">保護対象サイトとリカバリサイトの両方が [ オブジェクト ] ダイアログボックスに表示されます。</block>
   <block id="22bf2e5e3e861785a0e8f1eb7bd7492e" category="doc">SRA でデータストアを保護する</block>
   <block id="f8159a1f10595cc4a80126746a124cb1" category="list-text">vCenter ServerインスタンスのセットアップとESXiホストの設定が完了している必要があります。</block>
-  <block id="0fd28be9959e611e7350a85da18ec3d2" category="list-text">SRAアダプタをダウンロードしておく必要があります。<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> ファイルを参照してください<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="3cd3d1462bf37583e74346e9e49e0712" category="list-text">[New Adapter]*を選択します。</block>
   <block id="c88f553be5a81e83a1a2cd590af81efb" category="summary">プレースホルダデータストアを設定して、リカバリサイトのvCenterインベントリに保護対象の仮想マシン（VM\）用の場所を確保する必要があります。プレースホルダ VM はサイズが小さく、数百 KB 以下なので、大容量のプレースホルダデータストアは必要ありません。</block>
   <block id="a079415d00c6083e09f585ea2ed56548" category="doc">プレースホルダデータストアを設定します</block>
@@ -632,7 +631,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">リソースマッピングを設定する</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">Create Resource Mapping ウィザードで、次の手順を実行します。</block>
   <block id="3c16183aac3a35635bd37651c6e30ca9" category="paragraph">リソースマッピングページには、保護対象サイトリソースとリカバリサイトリソースが表示されます。環境内の他のネットワークについても、同じ手順を実行します。</block>
-  <block id="9efe335a21c7ed7fb03853b29d60db35" category="paragraph">.tar.gz ファイルをからダウンロードしておく必要があります<block ref="0e1d5eb136c80762086cbb6a49f15235" category="inline-link-rx"></block>。</block>
   <block id="bef92ccaf2eaa0578e6024bf1bbf9ea7" category="list-text">次のコマンドを使用してrootユーザに切り替えます。<block ref="ed4421a15b86845cfea13385b427b340" prefix=" " category="inline-code"></block></block>
   <block id="eec423b8c8e795c4422b564b889c72ba" category="admonition">Perlスクリプトでパスワードの特殊文字が入力の区切り文字として読み取られないようにするには、パスワードの値を一重引用符で囲む必要があります。</block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。SRA は、指定された IP アドレス、ポート、およびクレデンシャルを使用して SRA サーバと通信できます。</block>
@@ -1116,7 +1114,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">続行する前に、次の項目を確認してください。</block>
   <block id="da6388fdc3d2fad794be9aa033101c19" category="open-title">ONTAP tools Managerの使用</block>
   <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">vCenter Serverインスタンスの追加</block>
-  <block id="9d0c1154faecde38baf4c2a1e8f8e9e6" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="76c9f2fd0b61e8f84a42f7ab8d5ce641" category="admonition">詳細については<block ref="b5992e6d058c0c347b7f52b58c58c7d5" category="inline-link-rx"></block>、ブログを参照してください。</block>
   <block id="6b373c8cb8fb1cd1a92b3762ada8ce1d" category="paragraph">インストールの進行状況は、VMのWebコンソールで追跡できます。</block>
   <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">システム要件</block>
@@ -1251,7 +1248,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3d408fd9ee71e5590c9d127632f486ff" category="admonition">HA導入をあとで有効にする場合は、ONTAPツールをホストしている仮想マシンをESXiホストに直接導入しないでください。代わりに、クラスタまたはリソースプールに導入する必要があります。</block>
   <block id="8fc66c32d9085d19a2b350fb78e96657" category="paragraph">適切なコンテンツライブラリがない場合は、次の手順に従ってコンテンツライブラリを作成します。</block>
   <block id="75e558b408663f8095495e2f3ccd77f2" category="paragraph">OVAがコンテンツライブラリにインポートされていることを確認します。</block>
-  <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">ONTAP Tools for VMware vSphere仮想マシンは、管理しているVVOLデータストアには絶対に格納しないでください。</block>
   <block id="b2beb53e07d823dec2c2ea3f5bc86599" category="list-text">[仮想マシンの名前とフォルダの選択]ウィンドウで、仮想マシン名を入力し、仮想マシンの場所を選択します。[この仮想マシンのハードウェアをカスタマイズする]チェックボックスをオンにすると、[完了の準備完了]ウィンドウが表示される前に、[ハードウェアをカスタマイズする]という手順が有効になります。</block>
   <block id="84cc92b833510ebb4c14b968eaac82ce" category="admonition">Pure IPv6はサポートされていません。mixedモードは、IPv6とIPv4の両方のアドレスを持つVLANでサポートされます。</block>
@@ -2047,4 +2043,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3bf1c404c0b424b9520fcc0dc5fb8998" category="list-text">の手順に従って、保護サイトとリカバリサイトの両方にONTAP Tools for VMware vSphere 10.3 SRAアダプタをインストールします。 <block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
   <block id="0789cade62ba5a348d7e1ed5a15e5429" category="summary">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にするには、ONTAP tools for VMware vSphereのクレデンシャル\（IPアドレスと管理者パスワード\）をVMware Live Site Recoveryアプライアンスに保存する必要があります。</block>
   <block id="ca19ccb681ec240b3ba2bef453f35015" category="paragraph">VMware Live Site Recoveryアプライアンスを導入したら、VMware Live Site RecoveryアプライアンスにSRAを設定する必要があります。SRAを正しく設定すると、VMware Live Site Recoveryアプライアンスがディザスタリカバリ管理のためにSRAと通信できるようになります。ONTAP Tools for VMware vSphereのクレデンシャル（IPアドレス）をVMware Live Site Recoveryアプライアンスに保存して、VMware Live Site RecoveryアプライアンスとSRAの間の通信を有効にする必要があります。</block>
+  <block id="16f65f1a2c3859080a448540a2f81494" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
+  <block id="9ec5add7ee06ee04d0890fe8cedb44a5" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。</block>
+  <block id="b0dfff6a1c3e295ea3b778c18fd97c19" category="paragraph">から_tar.gz_ファイルをダウンロードしておく必要があります<block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block>。</block>
+  <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text"><block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>からSRAアダプタファイルをダウンロードしておく必要があります<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
 </blocks>
