@@ -49,9 +49,6 @@ NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM
 新しいロールとユーザが追加され、設定したロールの詳細な権限が表示されます。
 
 
-NOTE: アンインストール処理では、ONTAP toolsのロールは削除されませんが、ONTAP tools固有のPrivilegesのローカライズ名は削除され、プレフィックスが付加され `XXX missing privilege`ます。ONTAP tools for VMware vSphereを再インストールするか新しいバージョンにアップグレードすると、標準のONTAP tools for VMware vSphereロールとONTAP tools固有の権限がすべてリストアされます。
-
-
 
 == SVMアグリゲートのマッピングの要件
 

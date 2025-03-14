@@ -135,11 +135,7 @@
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
   <block id="01e377670806c0c1bb0a507160a3b7ad" category="paragraph">ONTAP Tools for VMware vSphereは次のコンポーネントで構成されています。</block>
   <block id="4c94c0434ea110b41df3e17bf583daa7" category="list-text">ポリシーベースのストレージ管理</block>
-  <block id="74d56f13e9a7c977cac9a88a879fcbfc" category="paragraph">View 権限を含むアクセス許可は、ルートオブジェクトに割り当てることを推奨します。</block>
   <block id="02621f852bb8e8078b864aaa378a1b3b" category="paragraph">ストレージシステムを追加できます。</block>
-  <block id="765b7167d2cfb7c36210a70c5d8b606e" category="list-text">ストレージを作成します</block>
-  <block id="d91d511439023f9dc5e437233b815e8e" category="list-text">ストレージを変更します</block>
-  <block id="3d384eb1ba36d273adab30ad3d265c2d" category="list-text">ストレージを破棄します</block>
   <block id="f3c1d0e4118d5d9501e1a7aeed19d224" category="list-text">ホスト障害です</block>
   <block id="734be913391a1dc4dbeed479e524a09f" category="admonition">単一ノード障害のみがサポートされます。</block>
   <block id="031f25fc50366090e766a7daac6c8eb8" category="list-text">ネットワーク障害</block>
@@ -148,26 +144,14 @@
   <block id="6645e0ebb53d4b6e68be7936af3a8039" category="doc">AutoSupport</block>
   <block id="31147c2932798eadd955620b17929169" category="paragraph">AutoSupport は、システムヘルスをプロアクティブに監視し、ネットアップテクニカルサポート、社内のサポート部門、およびサポートパートナーにメッセージを自動的に送信します。</block>
   <block id="73d5b42012a1c21cf5bfd7b8d27dba86" category="paragraph">AutoSupport は、ストレージシステムの初回設定時にデフォルトで有効になります。AutoSupport は、 AutoSupport が有効になってから 24 時間後にテクニカルサポートへのメッセージ送信を開始します。</block>
-  <block id="103274bd7fa9aac4d19ecfb8c9451dce" category="summary">vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。</block>
-  <block id="d72aa008378f653922ff3dc6be92bb92" category="paragraph">vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。vCenter Serverは、ロールと権限を持つユーザ権限とグループ権限を使用して、インベントリ内のさまざまなレベルで一元的な認証および許可サービスを提供します。vCenter Serverには、RBACを管理するための5つの主要コンポーネントがあります。</block>
-  <block id="05bbb43b3d923283e0b6ffafd088f41f" category="cell">コンポーネント</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
   <block id="d4613ce1ce58f0172e8a4a07c9582cdf" category="cell">権限</block>
-  <block id="e78cf251dfa491b5ec249361b48c6f65" category="cell">vSphereで操作を実行するためのアクセスを有効または拒否します。</block>
   <block id="a5cd3ed116608dac017f14c046ea56bf" category="cell">ロール</block>
-  <block id="32194064a810a5a489a1733d4e62a576" category="cell">ロールには、1つ以上のシステム権限が含まれています。各権限は、システム内の特定のオブジェクトまたはタイプのオブジェクトに対する管理権限を定義します。ユーザにロールを割り当てると、そのロールで定義されている権限の機能が継承されます。</block>
   <block id="b7f56258c47d620440751b7faddb209b" category="cell">ユーザとグループ</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="cell">権限</block>
-  <block id="6cad2a8c2c098bc6095c180f24d6e985" category="cell">権限を使用すると、ユーザまたはグループに権限を割り当てて、特定の操作を実行し、vCenter Server内のオブジェクトに変更を加えることができます。vCenter Serverアクセス許可は、ESXiホストに直接ログインするユーザではなく、vCenter Serverにログインするユーザにのみ影響します。</block>
-  <block id="497031794414a552435f90151ac3b54b" category="cell">オブジェクト</block>
-  <block id="344687b1f8337fc7dd37917a74d46f9a" category="cell">アクションが実行されるエンティティ。VMware vCenterオブジェクトは、データセンター、フォルダ、リソースプール、クラスタ、ホスト、 およびVM</block>
-  <block id="0f9feaf083615e8846e538d5b34566ac" category="section-title">vCenter Serverのロールの割り当てと変更に関するキーポイント</block>
-  <block id="3314432e9743e55f152832883016d5bb" category="paragraph">vCenter Serverのロールは、vSphereのオブジェクトおよびタスクへのアクセスを制限する場合にのみ設定します。それ以外の場合は、管理者としてログインできます。このログインでは、すべての vSphere オブジェクトに自動的にアクセスできます。</block>
-  <block id="cf917d8457fcc174b9b969143eda5613" category="cell">* 役割 *</block>
   <block id="6d8ff32b9b51120334931b95633f779a" category="paragraph">ストレージのプロビジョニングに必要なvCenter Server標準の権限とONTAP tools固有の権限が含まれています。次のタスクを実行できます。</block>
   <block id="b444bb84c6347f04bc0fe9b808470c02" category="list-text">新しいデータストアを作成する</block>
   <block id="1b8a04f09ff55290753a17988fd53c2a" category="list-text">データストアを管理します</block>
-  <block id="66dbc6e377d603cf1f5e9abf75b00fcf" category="section-title">ONTAPストレージバックエンドとvSphereオブジェクトの権限</block>
   <block id="8f7be3c874feb6ef0fd5f20afd8d5fbb" category="sidebar">VMware vSphere 用の ONTAP ツールを使用すると、 vCenter Server 環境内の仮想データストアを設定、管理、保護できます。</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
   <block id="da951ef1610be90b45b31baf7b25b179" category="sidebar">VMware vSphere 向け ONTAP ツールについて説明します</block>
@@ -176,7 +160,6 @@
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">リソースの追加</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">ロールベースアクセス制御</block>
-  <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">ユーザとグループは、vCenter Serverロールに含まれることでロールにアクセスできます。</block>
   <block id="99c32328fc9914bedd703b6f5db4812f" category="list-text">次のコマンドを使用して、ONTAP PrivilegesファイルをONTAP toolsからダウンロードしておきます。<block ref="7f922dba99ab8084641c5a38eed2214d" prefix=" " category="inline-code"></block>。</block>
   <block id="198ed9d33d0ea5ef2037f6497ce3a42f" category="summary">ONTAP tools for VMware vSphereは、NetAppストレージシステムに最適なESXiホストのマルチパス設定とHBAタイムアウト設定を確認して設定します。</block>
   <block id="90844ba0025d985c5a9dd619dcba22e2" category="doc">ESXiサーバのマルチパスとタイムアウトの設定</block>
@@ -469,24 +452,9 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="e57ef79b89d008b00ca33aabc087c40e" category="list-text">基本的な保護やディザスタリカバリなどの仮想マシン機能</block>
   <block id="a18d382710dfe7b582ca9e2bd707d11e" category="list-text">VASA ProviderによるVMのきめ細かな管理</block>
   <block id="410414402089bdca884f44be14088a59" category="list-text">Storage Replication Adapter （ SRA ）</block>
-  <block id="eaa87b49e42055b06bb53bce22bade66" category="doc">ONTAP tools for VMware vSphereでのロールベースアクセス制御の概要</block>
-  <block id="6492bdbe9707e60be4757f24352e6254" category="cell">ユーザとグループは、Active Directory（AD）からロールを割り当てる権限で使用されます。vCenter Serverには、使用可能な独自のローカルユーザとローカルグループがあります。</block>
-  <block id="9b21b9286bc8af38838701ee5b96185b" category="paragraph">タスクを完了するには、適切なvCenter Server RBACロールが必要です。タスクの実行中、ONTAP tools for VMware vSphereは、ユーザのvCenter Serverロールを確認してから、ユーザのONTAP権限を確認します。</block>
-  <block id="63f592b3bb7f4f2f020b53a89fe41a97" category="admonition">vCenter Serverのロールは、管理者ではなく、ONTAP Tools for VMware vSphere vCenterユーザに適用されます。デフォルトでは、管理者は製品へのフルアクセス権を持ち、ロールを割り当てる必要はありません。</block>
-  <block id="57193097a50e1a48745a2b20b325a3e9" category="paragraph">ロールを割り当てる場所によって、ユーザが実行できるONTAP Tools for VMware vSphereタスクが決まります。一度に1つのロールを変更できます。
-ロール内の権限を変更した場合、そのロールに関連付けられているユーザは、更新されたロールを有効にするためにログアウトしてから再度ログインする必要があります。</block>
-  <block id="399819e3f9493a6dd1ca2c92fbf64730" category="section-title">ONTAP Tools for VMware vSphereに付属の標準ロール</block>
-  <block id="092c3cc85864d9e570f219b8f2d0300f" category="paragraph">vCenter Serverの権限とRBACを簡単に使用できるように、ONTAP Tools for VMware vSphereには、主要なONTAPツールfor VMware vSphereタスクを実行できる標準のONTAPツールfor VMware vSphereロールが用意されています。タスクを実行せずに情報を表示できる読み取り専用ロールもあります。</block>
   <block id="bf4c81fa7ba63639b09571cecd64f47b" category="cell">VMware vSphere管理者向けNetApp ONTAPツール</block>
-  <block id="a01664a084e564d30d3380d980bf3f1e" category="cell">ONTAP tools for VMware vSphereの一部のタスクを実行するために必要なvCenter Server標準の権限とONTAP tools固有の権限がすべて含まれています。</block>
   <block id="b2cd18c44875bb3f426decbafad3b8e6" category="cell">NetApp ONTAP Tools for VMware vSphere読み取り専用</block>
   <block id="172e99eeccf15776434aac31db2a4a6e" category="cell">ONTAP toolsへの読み取り専用アクセスを許可します。アクセスが制御されたONTAP tools for VMware vSphereアクションを実行することはできません。</block>
-  <block id="84cc387d76d323daccad4d96bdd0092c" category="cell">NetApp ONTAP Tools for VMware vSphereのプロビジョニング</block>
-  <block id="95c496cc27d9993938504d08343b90a2" category="paragraph">ONTAP tools Managerの管理者ロールがvCenter Serverに登録されていません。このロールは、ONTAP tools Managerに固有です。</block>
-  <block id="07f2a14c1a836ac33b378595110abea2" category="paragraph">標準のONTAP tools for VMware vSphereロールよりも制限の厳しいロールを実装する必要がある場合は、ONTAP tools for VMware vSphereロールを使用して新しいロールを作成できます。</block>
-  <block id="ddb49621f905826ec22a5fb8d52fc78f" category="paragraph">この場合は、必要なONTAP tools for VMware vSphereロールのクローンを作成し、そのクローンを編集してユーザに必要な権限だけを付与します。</block>
-  <block id="abb97deac1e9b2cb4179a0aee04823b9" category="paragraph">vCenter Serverアクセス許可が十分であれば、ONTAP tools for VMware vSphereは、ストレージバックエンドのクレデンシャル（ユーザ名とパスワード）に関連付けられているONTAP RBAC権限（ONTAPロール）を確認します。 そのストレージバックエンドでONTAP tools for VMware vSphereタスクに必要なストレージ処理を実行するための十分な権限があるかどうかを確認する。適切なONTAP権限があれば、
-ストレージバックエンドを使用してONTAP Tools for VMware vSphereタスクを実行できます。ストレージバックエンドで実行できるONTAP Tools for VMware vSphereタスクは、ONTAPロールで決まります。</block>
   <block id="eb59b3767616ff613c26e1d7f5451f0e" category="summary">次のセクションでは、このドキュメントで使用される主な概念と用語について説明します。</block>
   <block id="9ffd131623ad515701813a71121ab8a3" category="doc">主要な概念と用語</block>
   <block id="d8656f55a37738b40be6ef5801f660e5" category="section-title">認証局（CA）</block>
@@ -514,64 +482,15 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="db07ee4ed1ddb3f939892b140a23cd3a" category="paragraph">vVolデータストアは、VASA Providerで作成および管理されるvVolコンテナを表す論理データストアです。</block>
   <block id="6772d57ff19ee93553d25bf56f393392" category="section-title">RPOはゼロです</block>
   <block id="b528f501fc8de0d95230ff4729b26803" category="paragraph">RPOはRecovery Point Objective（目標復旧時点）の略で、所定の時間内に許容可能とみなされるデータ損失量です。RPOがゼロの場合は、データ損失が許容されないことを意味します。</block>
-  <block id="e7515d72c1e04da864284dddc38af8e3" category="summary">ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools for VMware vSphere固有の権限とvCenter Server標準の権限の組み合わせが異なります。</block>
-  <block id="ad28e08c64876f0d6306fbeecbc9945d" category="doc">ONTAP Tools for VMware vSphereのタスクに必要な権限</block>
-  <block id="076e2508337120e7d5752f5ce8c6c43b" category="paragraph">View *権限では、VMware vSphere用のONTAPツールにアクセスできます。この権限では、ONTAP tools for VMware vSphere内でタスクを実行することはできません。ONTAP tools for VMware vSphereのタスクを実行するには、タスクに対する適切なONTAP tools固有の権限とvCenter Server標準の権限が必要です。</block>
-  <block id="d0a94c83b68b4f28f7679d108cca67b8" category="paragraph">別のvSphereオブジェクトレベルにView権限を割り当てることもできますが、その場合、表示および使用できるONTAP Tools for VMware vSphereメニューが制限されます。</block>
-  <block id="3413a918b6452d3e60e37eb18410f94c" category="summary">vCenter Server のアクセス許可を使用する際にはいくつかの点に注意する必要があります。VMware vSphere タスク用の ONTAP ツールを使用できるかどうかは、アクセス許可を割り当てた場所、およびアクセス許可の変更後にユーザが実行した操作によって決まります。</block>
-  <block id="01f81b02c1a4020173a9881080d42f3d" category="doc">vCenter Serverの権限の割り当てと変更</block>
   <block id="c8ae2664c1636dc82742c9e4a7d61618" category="section-title">権限を割り当てます</block>
-  <block id="930763c1a1aa2d8dac9f593b88cc97f3" category="paragraph">vCenter Server のアクセス許可は、 vSphere のオブジェクトおよびタスクへのアクセスを制限したい場合にのみ設定します。それ以外の場合は、管理者としてログインできます。このログインでは、すべての vSphere オブジェクトに自動的にアクセスできます。</block>
-  <block id="ec75505e8ca42120049536474d01d15a" category="paragraph">権限の割り当て先によって、ユーザが実行できるONTAP tools for VMware vSphereタスクが決まります。</block>
-  <block id="29f32952e4fe0a781b4c32b95c7cc970" category="paragraph">場合によっては、タスクを確実に完了させるために、ルートオブジェクトなどの上位レベルに権限を割り当てる必要があります。具体的には、特定の vSphere オブジェクトには適用されない権限（タスクの追跡など）がタスクに必要な場合や、必要な権限環境が vSphere 以外のオブジェクト（ストレージシステムなど）に必要な場合です。</block>
-  <block id="71eb8c58c726e9561cc5250bbf77248e" category="paragraph">このような場合は、子エンティティに継承されるようにアクセス許可を設定できます。子エンティティには、他の権限も割り当てることができます。子エンティティに割り当てたアクセス許可は、親エンティティから継承されたアクセス許可を上書きします。つまり、子エンティティにアクセス許可を付与して、ルートオブジェクトに割り当てられ、子エンティティに継承されるアクセス許可の範囲を制限できます。</block>
-  <block id="3cfc0fca04f11488b56caab42cdd61d4" category="admonition">会社のセキュリティポリシーでアクセス許可を厳しく制限することが求められる場合を除き、ルートオブジェクト（ルートフォルダとも呼ばれる）にアクセス許可を割り当てることを推奨します。</block>
-  <block id="65e2bf8aa80dc9818c751f89f6af711e" category="section-title">アクセス許可と非 vSphere オブジェクト</block>
-  <block id="60d77703ef468312376aed86c6291538" category="paragraph">作成したアクセス許可はvSphere以外のオブジェクトに適用されます。たとえば、ストレージシステムは vSphere オブジェクトではありません。ストレージシステムの環境権限がある場合は、tools for VMware vSphereルートオブジェクトに割り当てることができるvSphereオブジェクトがないため、その権限を含むアクセス許可をONTAP tools for VMware vSphereルートオブジェクトに割り当てる必要があります。</block>
-  <block id="cbed07d432de27b73e998073e1519463" category="paragraph">たとえば、ONTAP tools for VMware vSphereの「Add/Modify/Skip storage systems」などの権限を含むすべてのアクセス許可は、ルートオブジェクトレベルに割り当てる必要があります。</block>
-  <block id="b9fb193a2e0ec11e6325daf26766f10a" category="section-title">アクセス許可の変更</block>
-  <block id="a8e01cabe9b5f1e74700dfe84ecb64df" category="paragraph">一度に変更できるアクセス許可は 1 つです。</block>
-  <block id="738c71d468b929e0b80b012e95674531" category="paragraph">アクセス許可に含まれる権限が変更された場合、そのアクセス許可が関連付けられたユーザは、更新されたアクセス許可を有効にするためにログアウトしてログインし直す必要があります。</block>
   <block id="8199d65907d89211dfcf977c5adaa6ea" category="summary">ONTAP tools for VMware vSphereは、障害発生時にONTAP tools for VMware vSphereの機能を中断なく提供するためのハイアベイラビリティ（HA）構成をサポートしています。</block>
   <block id="9624863e1bada8aa7f612552980aaa76" category="paragraph">ONTAP tools for VMware vSphereは、障害発生時にONTAP tools for VMware vSphereの機能を中断なく提供するためのハイアベイラビリティ（HA）構成をサポートしています。</block>
   <block id="8064fc3703a869b3b7423038b89f7e8c" category="paragraph">ハイアベイラビリティ（ HA ）解決策は、以下のような理由で発生するシステム停止からの迅速なリカバリを可能にします。</block>
   <block id="9e376ae380add7745ba0f865258f10a7" category="paragraph">高可用性（HA）を実現するためにONTAP tools for VMware vSphereを追加で設定する必要はありません。</block>
   <block id="ab797bcbadd3dbc9bd870404057111f1" category="admonition">ONTAP Tools for VMware vSphereはvCenter HAをサポートしていません。</block>
-  <block id="a3a3f39887f64ae51ced6d024f11ac31" category="summary">vCenter Server で認識されるのはアクセス許可で、権限ではありません。vCenter Server アクセス許可は 3 つの要素で構成されます。</block>
-  <block id="054195114e28f4a480374b34e3d89663" category="doc">vCenter Server アクセス許可の要素</block>
-  <block id="5c88132196c6909932172f7c24e72f30" category="paragraph">vCenter Server には次のコンポーネントがあります。</block>
-  <block id="e30cdcbd3580fa95d30eac8911c6dc96" category="list-text">1 つ以上の権限（ロール）</block>
-  <block id="62fa3cacab7eb182cc3f1bb8f5497415" category="paragraph">ユーザが実行できるタスクを定義します。</block>
-  <block id="bb75957d6dfbcb3803abbc7ab35a2971" category="list-text">vSphere オブジェクト</block>
-  <block id="f764cca89b5f9c76bc996c2837e9ba2c" category="paragraph">タスクの対象となるオブジェクトです。</block>
-  <block id="1413241f9b9207ddb78c282c13edb014" category="list-text">ユーザまたはグループ</block>
-  <block id="debdb3ce4a86d0a653cb9af2997ed87b" category="paragraph">タスクを実行できるユーザまたはグループを定義します。</block>
-  <block id="83002a8f3da272c6326e5e31c94c7134" category="admonition">グレーのボックスは vCenter Server 側の要素、白のボックスは vCenter Server を実行しているオペレーティングシステム側の要素を表しています。</block>
-  <block id="c044992cd80fcb18a780756977b6bc3f" category="inline-image-macro">権限コンポーネントの図</block>
-  <block id="b96085011a4e0805bceab50863c6d6a7" category="paragraph">VMware vSphere 用の ONTAP ツールには、次の 2 種類の権限が関連付けられています。</block>
   <block id="ac38773d017495a97d5b88f242578cb8" category="list-text">vCenter Server 標準の権限</block>
-  <block id="812c5d24b89720dbab0e021d979b0bdf" category="paragraph">vCenter Server に付属している権限です。</block>
   <block id="c583b0e017739fb649bcc5aa5ba5619c" category="list-text">ONTAP tools固有の権限</block>
-  <block id="88483b63289d05b7c95896b86e9a811f" category="paragraph">これらの権限は、特定のONTAP Tools for VMware vSphereタスク用に定義されています。ONTAP Tools for VMware vSphereに固有の機能です。</block>
-  <block id="e6849a5c9bef90c880922dccbc71793b" category="paragraph">ONTAP tools for VMware vSphereのタスクには、ONTAP tools固有の権限とvCenter Server標準の権限の両方が必要です。これらの権限は ' ユーザーのロールを構成しますアクセス許可には複数の権限を含めることができます。これらの権限は、 vCenter Server にログインしているユーザを対象としています。</block>
-  <block id="5e4a27fe472e02379e0fad15d3b8be53" category="admonition">vCenter Server RBACの使用を簡易化するために、ONTAP tools for VMware vSphereには、ONTAP tools for VMware vSphereタスクの実行に必要なONTAP tools固有の権限と標準の権限をすべて含む標準ロールがいくつか用意されています。</block>
-  <block id="a61c7e49f2d62469efe4be0dd2d42a28" category="paragraph">アクセス許可に含まれる権限が変更された場合、そのアクセス許可が関連付けられたユーザは、更新されたアクセス許可を有効にするためにログアウトしてログインし直す必要があります。</block>
   <block id="0c26eb3da0cc8bb038a438623b92ece4" category="section-title">vSphere オブジェクト</block>
-  <block id="ce0f8ed3eb5e44bde1c81a61f9bd5f2f" category="paragraph">ユーザとグループは、 Active Directory （またはローカルの vCenter Server マシン）を使用して設定できます。その後、vCenter Serverアクセス許可を使用してこれらのユーザまたはグループにアクセスを許可し、特定のONTAP Tools for VMware vSphereタスクを実行できるようにします。</block>
-  <block id="602291944388a73cbe9572d935cac7b1" category="admonition">これらのvCenter Serverアクセス許可は、ONTAP tools for VMware vSphere vCenterユーザに適用され、ONTAP tools for VMware vSphere管理者には適用されません。ONTAP tools for VMware vSphereの管理者には、デフォルトでフルアクセス権が付与され、権限を割り当てる必要はありません。</block>
-  <block id="c3a3dd532edfb82b4e332bc19f333c01" category="paragraph">ユーザとグループにはロールは割り当てられません。vCenter Server アクセス許可を割り当てることで、間接的にロールが適用されます。</block>
-  <block id="2d847d92362470bf79aa0427e1453c96" category="summary">ONTAP tools for VMware vSphereおよびRole-Based Access Control（RBAC；ロールベースアクセス制御）を使用する際に推奨されるONTAPロールをいくつか設定できます。これらのロールには、ONTAP tools for VMware vSphereタスクで実行するストレージ処理に必要なONTAP権限が含まれています。</block>
-  <block id="ffb080dcf51bd945ecc0be6bb66c6e3a" category="doc">ONTAP Tools for VMware vSphereで推奨されるONTAPロール</block>
-  <block id="9e1206eb5bee69c287327f64ae7f2c30" category="paragraph">VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、ONTAP tools for VMware vSphereタスクで実行するストレージ処理の実行に必要なONTAP権限が含まれています。</block>
-  <block id="ceda4dc6f91e16840d542d582e38fe0e" category="paragraph">新しいユーザロールを作成するには、ONTAPを実行するストレージシステムの管理者としてログインする必要があります。ONTAP System Manager 9.8P1以降を使用してONTAP ロールを作成できます。</block>
-  <block id="c6c23d6afef1eec90994809adb35c625" category="paragraph">各ONTAPロールには、ロールのクレデンシャルを構成するユーザ名とパスワードのペアが関連付けられています。このクレデンシャルを使用してログインしないと、ロールに関連付けられたストレージ処理にアクセスできません。</block>
-  <block id="69644a6f1157b2daba1739ea376a5e8a" category="paragraph">セキュリティ対策として、ONTAP Tools for VMware vSphere固有のONTAPロールは階層構造になっています。最初のロールは最も制限が高く、ONTAP tools for VMware vSphereのストレージ処理の最も基本的なセットに関連する権限のみが含まれています。次のロールには、そのロール独自の権限と、前のロールに関連付けられているすべての権限が含まれます。ロールを追加するたびに、サポートされるストレージ処理に対する制限が少なくなります。</block>
-  <block id="f74310ba13bf8cb3ecfe7ad2cee5538a" category="paragraph">ONTAP Tools for VMware vSphereを使用する際に推奨されるONTAP RBACロールの一部を次に示します。ロールを作成したら、仮想マシンのプロビジョニングなど、ストレージに関するタスクを実行する必要があるユーザに割り当てることができます。</block>
-  <block id="98dcf1a3ea14d2dcf65106ad521efae4" category="cell">*権限*</block>
-  <block id="1958a2c28b13115859c67a58b105f27c" category="cell">ストレージを作成できます。また、Discoveryロールに関連付けられているすべての権限が含まれます。</block>
-  <block id="86087fc8fd9dd51486dc3c430bf6abac" category="cell">ストレージを変更できます。また、DiscoveryロールとCreate Storageロールに関連付けられているすべての権限が含まれます。</block>
-  <block id="a62ba12e7d9cf0e95b53a7ef0ccc6987" category="cell">ストレージを破棄できます。また、Discoveryロール、Create Storageロール、Modify Storageロールに関連付けられているすべての権限が含まれます。</block>
-  <block id="9aba481264947da03013bacc0bdb5337" category="paragraph">ONTAP tools for VMware vSphereを使用している場合は、Policy-Based Management（PBM；ポリシーベース管理）ロールも設定します。ストレージポリシーを使用してストレージを管理できます。このロールを使用するには、「検出」ロールも設定する必要があります。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">作業を開始する前に</block>
   <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP メソッド</block>
   <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">取得</block>
@@ -785,9 +704,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1608a10fc8319b14c6c50a77edab9e7c" category="sidebar">ESXi ホストの設定の変更</block>
   <block id="ce0ce3ea98d033e77751261b2720fefe" category="sidebar">パスワードを管理します</block>
   <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="sidebar">前提条件</block>
-  <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概要</block>
-  <block id="6bc1d2c44eecf063e620d732e6c3e492" category="sidebar">vCenter Serverアクセス許可</block>
-  <block id="a9f3de4f2df78227aea2ac4a6b2e7aef" category="sidebar">推奨されるONTAPロール</block>
   <block id="721041095b64df665034c0b19c967475" category="sidebar">ONTAP tools for VMware vSphereの高可用性</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">データストアと仮想マシンを保護</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">大規模な環境向けのSRAの設定</block>
@@ -869,7 +785,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">と入力<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> してvCenterクレデンシャルを変更する。</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">デュアルスタック</block>
   <block id="6fad70424d056d4284134202caa28cae" category="paragraph">デュアルスタックネットワークは、IPv4アドレスとIPv6アドレスの両方の同時使用をサポートするネットワーク環境です。</block>
-  <block id="38fbb1e19cdf2b31cbfb571328fbea35" category="paragraph"><block ref="38fbb1e19cdf2b31cbfb571328fbea35" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c44d290e1f1de6d718f00f72c70dbd6b" category="paragraph">ホストクラスタレベルでデータストアを作成すると、データストアが作成されてデスティネーションのすべてのホストにマウントされます。この操作は、現在のユーザに実行権限がある場合にのみ有効になります。</block>
   <block id="259450d9669b66ac4364e9fcbb6c06e6" category="list-text">[名前とプロトコル]*ペインで、データストア名、サイズ、およびプロトコル情報を入力します。アドバンストオプションで、*[データストアクラスタ]*および*[Kerberos認証]*を選択します。</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">ONTAP tools for VMware vSphereを導入するための構成の制限</block>
@@ -1107,7 +1022,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="234e9bf11d28f2eb5743a4afd467b352" category="paragraph">トピックに記載されている手順を実行しておく必要があります <block ref="63dec5e0603452dbccad6eca584eafe1" category="inline-link-macro-rx"></block>。</block>
   <block id="ea3aed5969a29eebb3849662acbdc1ca" category="list-text">次のコマンドを実行して、VMware Live Site RecoveryマシンフォルダのキャッシュされたONTAP toolsユーザ名パスワードを削除します。</block>
   <block id="12aad99311cc30ce7ff1a450a29c3ec0" category="list-text">VMware Live Site Recoveryアレイマネージャを使用して、保護対象サイトとリカバリサイトをペアリングしておく必要があります。</block>
-  <block id="c8af2a359991324c5027f67981fcf118" category="sidebar">ONTAP Tools for VMware vSphere 10.1のドキュメント</block>
   <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">以前のバージョンのONTAP Tools for VMware vSphere 9のドキュメント</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">VMware vSphereとONTAPの詳細</block>
   <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">Virtual Machine File System（VMFS）は、VMware vSphere環境に仮想マシンファイルを格納するために特別に設計されたクラスタファイルシステムです。複数のESXiホストが同じ仮想マシンファイルに同時にアクセスできるため、vMotionや高可用性などの機能が有効になります。</block>
@@ -1179,7 +1093,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">目標復旧時点（RPO）</block>
   <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPOは、データをバックアップまたはレプリケートする頻度を表します。これは、業務を再開するために、システム停止後にデータをリカバリする必要がある時点を表します。たとえば、RPOが4時間の組織では、災害発生時に最大4時間のデータ損失を許容できます。</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">管理Privilegesでクラスタにログインします。ユーザを設定するには、次の手順を実行します。</block>
-  <block id="9c275e19e563a19853ce98157a4409c7" category="admonition">アンインストール処理では、ONTAP toolsのロールは削除されませんが、ONTAP tools固有のPrivilegesのローカライズ名は削除され、プレフィックスが付加され<block ref="9de395ca99b82f3f1184378e489fdde5" prefix=" " category="inline-code"></block>ます。ONTAP tools for VMware vSphereを再インストールするか新しいバージョンにアップグレードすると、標準のONTAP tools for VMware vSphereロールとONTAP tools固有の権限がすべてリストアされます。</block>
   <block id="bbeec4867a4357c871f33630e5eb711f" category="list-text">管理Privilegesでクラスタにログインします。</block>
   <block id="137ef7229d434ea827c18ad48fbf2401" category="cell">/api/security/accounts（/api/security/アカウント）</block>
   <block id="b8c9edfa0cdda60d394e99a82fdfe9e8" category="cell">権限の検出</block>
@@ -1456,7 +1369,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="528fcc96313b41a079cf4a618d21bc56" category="list-text">「* 4 *」と入力して、* Support and Diagnostics（サポートと診断）*メニューを選択します。</block>
   <block id="69fc33706a999a8497eea8a0a1410092" category="list-text">次のコマンドを実行します。</block>
   <block id="4c4796167c3422541c6e31f440e40302" category="list-text">ONTAPのユーザ名とパスワードを入力します。</block>
-  <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">ONTAP Tools for VMware vSphere 10.2のドキュメント</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">ONTAP tools for VMware vSphere 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">保護対象サイトとリカバリサイトの設定</block>
   <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">ONTAP tools for VMware vSphere 10.3では、VMFSデータストア、VVolデータストア、およびそれぞれのVMのオブザーバビリティ指標のサポートが拡張されました。</block>
@@ -1668,7 +1580,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a1f81812b9996ffae82950938651b560" category="paragraph">これにより、ONTAP tools for VMware vSphere 10.1 / 10.2で使用されているONTAP内のTridentボリュームがすべて削除されます。</block>
   <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">個 々 のAPI呼び出しの例として、* vcenters *カテゴリまで下にスクロールし、エンドポイントの横にある* get *を選択します。<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
   <block id="ef78cf93c4b4adc658c8565b28ac853c" category="paragraph">アクセストークンの要求と使用の例については、を参照してください<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
-  <block id="82723240a39079ab06612c9bd8a4524f" category="paragraph">ONTAP Tools for VMware vSphereの標準ロールを表示するには、vSphere Clientのホームページで*[ロール]*を選択します。ONTAP Tools for VMware vSphereのロールで、次のタスクを実行できます。</block>
   <block id="7b0f795e746611f8d000c88ef7404ee7" category="list-text">WebブラウザからONTAP Tools Managerを起動します。<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
   <block id="6700bd2d5a11f981faf541727c91e5eb" category="list-text">次のコマンドを使用してvSphere Clientにログインします。<block ref="9ad784043785fc1c1be39efefce3e216" prefix=" " category="inline-code"></block></block>
   <block id="3a3cf1aabccd549ecea01e8e5bd01415" category="list-text">ショートカットページで、プラグインセクションの* NetApp ONTAP tools *を選択します。</block>
@@ -1929,9 +1840,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="fde1abb5537b55c34521d414267b3f70" category="section-title">ASA r2システム</block>
   <block id="bd605fff7af6a2da2d78ab96c4c19217" category="section-title">ストレージバックエンド</block>
   <block id="e11e4e825b2240bfaf05656d41f53cd9" category="paragraph">ストレージバックエンドは、ESXiホストが仮想マシンファイル、データ、およびその他のリソースを格納するために使用する基盤となるストレージインフラです。ストレージバックエンドを使用すると、ESXiホストは永続的データにアクセスして管理できるため、仮想環境に必要なストレージ機能とパフォーマンスが提供されます。</block>
-  <block id="7cdf42e875600623792db5729c81ff94" category="paragraph">ONTAP tools for VMware vSphere GUIにアクセスするには、製品レベルのONTAP tools固有のView権限が、適切なvSphereオブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、NetAppアイコンを選択したときにONTAP tools for VMware vSphereにエラーメッセージが表示され、ONTAP tools for VMware vSphereにアクセスできません。</block>
-  <block id="c005a2f296e1f1b3a93d8cb2491ce926" category="paragraph">割り当てレベルによって、ユーザーインターフェイスのどの部分を表示できるかが決まります。ルートオブジェクト（フォルダ）にView権限を割り当てると、NetAppアイコンを選択してONTAP tools for VMware vSphereにアクセスできるようになります。</block>
-  <block id="c1287de0652e56f6a72160899cfb2b87" category="paragraph">アクセス許可はvSphereオブジェクトに関連付けられます。vCenter Server、ESXiホスト、仮想マシン、データストア、データセンター、フォルダなどがあります。任意のvSphereオブジェクトに権限を割り当てることができます。vSphereオブジェクトに割り当てられたアクセス許可に基づいて、そのオブジェクトに対してどのユーザがどのタスクを実行できるかがvCenter Serverによって決まります。ONTAP tools for VMware vSphere固有のタスクの場合、アクセス許可の割り当てと検証はルートフォルダレベル（vCenter Server）でのみ行われ、他のエンティティでは行われません。ただしVAAIプラグインの処理は例外で、該当するESXiホストに対して権限が検証されます。</block>
   <block id="a6fd0b4332e8ac1bd18da3d605f3f558" category="open-title">vSphere Clientユーザインターフェイスを使用</block>
   <block id="15d9ec0601efc7a09529f55671b2bf35" category="admonition">vSphere Clientユーザインターフェイスを使用してストレージバックエンドを追加する場合、vVolデータストアでSVMユーザを直接追加することはサポートされません。</block>
   <block id="1371ece860fedc2eae03b50872f67242" category="list-text">ストレージバックエンドを追加し、サーバのIPアドレス、ユーザ名、パスワード、およびポートの詳細を指定します。</block>
@@ -2047,4 +1955,132 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="9ec5add7ee06ee04d0890fe8cedb44a5" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。OVAをコンテンツライブラリにインポートした場合は、コンテンツライブラリから直接導入できるため、この手順をスキップして次の手順に進むことができます。</block>
   <block id="b0dfff6a1c3e295ea3b778c18fd97c19" category="paragraph">から_tar.gz_ファイルをダウンロードしておく必要があります<block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block>。</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text"><block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>からSRAアダプタファイルをダウンロードしておく必要があります<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
+  <block id="92b0e7888dea318ff0d52ecace485e8b" category="summary">ロールベースアクセス制御（RBAC）は、組織内のリソースへのアクセスを制御するためのセキュリティフレームワークです。RBACでは、個 々 のユーザに許可を割り当てるのではなく、特定のレベルの権限でロールを定義してアクションを実行することで、管理が簡易化されます。定義されたロールはユーザーに割り当てられます。これにより、エラーのリスクが軽減され、組織全体のアクセス制御の管理が簡素化されます。</block>
+  <block id="bc7d4efb983c07650bf67ebd23206b42" category="doc">ONTAP Tools for VMware vSphere 10 RBACの詳細</block>
+  <block id="d4f28f897c6613f7cf374c4b672a42af" category="paragraph">RBACの標準モデルは、いくつかの実装テクノロジや複雑化するフェーズで構成されています。その結果、実際のRBACの導入は、ソフトウェアベンダーとその顧客のニーズに基づいて異なり、比較的単純なものから非常に複雑なものまでさまざまです。</block>
+  <block id="768c252904fcf4ee8a7b04339470d9d4" category="section-title">RBACコンポーネント</block>
+  <block id="3a45671de0dc0525b288d3633ab884e8" category="paragraph">大まかには、すべてのRBAC実装に一般的に含まれているコンポーネントがいくつかあります。これらのコンポーネントは、承認プロセスの定義の一部として、さまざまな方法で結合されます。</block>
+  <block id="d030a619fc394824cae6f9f006b210b2" category="paragraph">a_privilege_は、許可または拒否できるアクションまたは機能です。ファイルを読み取る機能のような単純なものかもしれませんし、特定のソフトウェアシステムに固有のより抽象的な操作かもしれません。Privilegesを定義して、REST APIエンドポイントとCLIコマンドへのアクセスを制限することもできます。すべてのRBAC実装には事前定義されたPrivilegesが含まれており、管理者はカスタムPrivilegesを作成することもできます。</block>
+  <block id="0e54116025e006443a313af3422c73b6" category="paragraph">a_role_は、1つ以上のPrivilegesを含むコンテナです。ロールは通常、特定のタスクまたはジョブ機能に基づいて定義されます。ロールをユーザに割り当てると、そのロールに含まれるすべてのPrivilegesがユーザに付与されます。また、Privilegesと同様に、実装には事前定義されたロールが含まれており、通常はカスタムロールを作成できます。</block>
+  <block id="c8308b1eba7ba926a61b8fd802194386" category="paragraph-title">オブジェクト</block>
+  <block id="251ba6a14d90c886235eec2229fddbaa" category="paragraph">an_object_は、RBAC環境内で識別される実際のリソースまたは抽象リソースを表します。Privilegesで定義されたアクションは、関連オブジェクトに対して、または関連オブジェクトとともに実行されます。実装に応じて、Privilegesはオブジェクトタイプまたは特定のオブジェクトインスタンスに付与できます。</block>
+  <block id="d06c4b7230b78df6a13a1ffe93c68ea7" category="paragraph">_users_には、認証後に適用されるロールが割り当てられるか、またはロールに関連付けられます。RBACの実装によっては、1人のユーザに1つのロールのみを割り当てることができるものと、1人のユーザに複数のロールを割り当てることができるものがあります（一度に1つのロールのみがアクティブになる場合もあります）。ロールを_groups_に割り当てると、セキュリティ管理がさらに簡素化されます。</block>
+  <block id="74b037a49a7d27ecca7fc6857aedcd2a" category="paragraph">a_permission_は'ロールとともにユーザーまたはグループをオブジェクトにバインドする定義です権限は階層オブジェクトモデルで役立ち、階層内の子にオプションで継承することができます。</block>
+  <block id="ecc206dfcc570366eb56c27d01c64234" category="section-title">2つのRBAC環境</block>
+  <block id="857ac2a8af334039722446a532094bd6" category="paragraph">ONTAP tools for VMware vSphere 10を使用する際に考慮する必要があるRBAC環境は2つあります。</block>
+  <block id="7b992155512beae7a0c0bcd838bf53bc" category="paragraph-title">VMware vCenter Server</block>
+  <block id="a44122ce0420d82ffec8245eb58d1686" category="inline-link-macro">vCenter Server RBACカンキヨウ</block>
+  <block id="abfe427299b92162e94931d6113396c6" category="paragraph">VMware vCenter Serverに実装されたRBACは、vSphere Clientユーザインターフェイスを通じて公開されるオブジェクトへのアクセスを制限するために使用されます。ONTAP tools for VMware vSphere 10のインストールの一環として、RBAC環境が拡張され、ONTAP toolsの機能を表すオブジェクトが追加されました。これらのオブジェクトへのアクセスは、リモートプラグインを通じて提供されます。詳細については、を参照してください。<block ref="0dce39201791f8056b9c7e84d5c66f06" category="inline-link-macro-rx"></block></block>
+  <block id="dbc7df65565b4f36db0a469d1e54a440" category="paragraph-title">ONTAPクラスタ</block>
+  <block id="95efa80bc6e01f977e0f0ccd4a71490a" category="inline-link-macro">ONTAP RBACカンキヨウ</block>
+  <block id="d5afa90f21ed3ed6f44619bc06967ae9" category="paragraph">ONTAP tools for VMware vSphere 10は、ONTAP REST APIを使用してONTAPクラスタに接続し、ストレージ関連の処理を実行します。ストレージリソースへのアクセスは、認証時に指定したONTAPユーザに関連付けられたONTAPロールで制御されます。詳細については、を参照してください <block ref="e4be7d0a80a9c4d84c7c1c04c147ff8e" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8b25344f06ee105a716a7392efac0b3f" category="summary">ONTAPは、堅牢で拡張可能なRBAC環境を提供します。RBAC機能を使用すると、REST APIおよびCLIで公開されるストレージおよびシステム処理へのアクセスを制御できます。ONTAP Tools for VMware vSphere 10環境で使用する前に、環境を理解しておくと役立ちます。</block>
+  <block id="ffb63b72d307f89b9034ca9eb9c65046" category="doc">ONTAP RBAC環境とONTAP Tools for VMware vSphere 10</block>
+  <block id="4c095493a08eb39706180a8f9166adc3" category="section-title">管理オプションの概要</block>
+  <block id="d4f827c0c7c9fb2e15e437f882df68ca" category="inline-link">ONTAPの自動化：RBACセキュリティの概要</block>
+  <block id="54d793c5631c270bc5de979749809fd2" category="paragraph">ONTAP RBACを使用する際には、環境や目標に応じていくつかのオプションを使用できます。主な管理上の決定事項の概要を以下に示します。詳細については、も参照してください<block ref="120c2c6e56fa9c261aa8c0c07fc333dd" category="inline-link-rx"></block>。</block>
+  <block id="ee01143765aa7dfe1c8f38d4fba08c2f" category="admonition">ONTAP RBACはストレージ環境専用に設計されており、vCenter Serverで提供されるRBACよりも簡単に実装できます。ONTAPでは、ユーザに直接ロールを割り当てます。vCenter Serverで使用するアクセス許可などを明示的に設定する必要はありません。ONTAP RBACでは必要ありません。</block>
+  <block id="c06f60010bfa0d3998d5bbc662b880ed" category="paragraph-title">ロールとPrivilegesのタイプ</block>
+  <block id="b7b5a206a6cae3234a904f8160b66b9e" category="paragraph">ONTAPユーザを定義するには、ONTAPロールが必要です。ONTAPロールには次の2種類があります。</block>
+  <block id="50780f47f6839d47d60bc4555ee00c3f" category="list-text">REST</block>
+  <block id="b020897c0b77687983b09de882280534" category="paragraph">RESTロールはONTAP 9.6で導入されたもので、一般にREST APIを使用してONTAP にアクセスするユーザに適用されます。これらのロールに含まれるPrivilegesは、ONTAP REST APIエンドポイントへのアクセスと関連するアクションの観点から定義されます。</block>
+  <block id="1bfbcce75c3c9a52a464d4cb0984488a" category="list-text">伝統的</block>
+  <block id="dffa619f8403e2b2cb8724a4a4cda04e" category="paragraph">これらはONTAP 9.6より前のレガシーロールです。これらはRBACの基本的な側面であり続けています。Privilegesは、ONTAP CLIコマンドへのアクセスという観点から定義されます。</block>
+  <block id="c97707263686600c7674280c234c5566" category="paragraph">RESTロールは最近導入されましたが、従来のロールにはいくつかの利点があります。たとえば、追加のクエリパラメータを含めることもできます。これにより、Privilegesは、追加のクエリパラメータが適用されるオブジェクトをより正確に定義できます。</block>
+  <block id="5d113f2038d289f391614c39043629e8" category="paragraph-title">適用範囲</block>
+  <block id="6ba94b087558d51e0653f055d89fd1e5" category="paragraph">ONTAPロールは、2つの異なるスコープのいずれかで定義できます。特定のデータSVM（SVMレベル）またはONTAPクラスタ全体（クラスタレベル）に適用できます。</block>
+  <block id="4decfe07f6af497a150cb2dd84ce7618" category="paragraph-title">ロールの定義</block>
+  <block id="71ce8e2978e352b6f5bb692e3f48b57a" category="paragraph">ONTAPには、クラスタレベルとSVMレベルの両方で事前定義された一連のロールが用意されています。カスタムロールを定義することもできます。</block>
+  <block id="19f0e25901b006bda97a48b2d2f6e165" category="section-title">ONTAP RESTロールの使用</block>
+  <block id="f9c8e8f0f77467890d2e7d7d0a646019" category="paragraph">ONTAP tools for VMware vSphere 10に含まれているONTAP RESTロールを使用する場合は、いくつかの考慮事項があります。</block>
+  <block id="dc4c8b8f3e2d25c9c02701f2e4f4a5f6" category="paragraph-title">ロールマッピング</block>
+  <block id="14347bc1ffea96e9ab9fb563020db667" category="paragraph">従来のロールを使用するかRESTロールを使用するかに関係なく、すべてのONTAPアクセスの決定は基になるCLIコマンドに基づいて行われます。ただし、RESTロールのPrivilegesはREST APIエンドポイントで定義されるため、ONTAPでは各RESTロールに対して_mapped_traditionalロールを作成する必要があります。そのため、各RESTロールは基盤となる従来のロールにマッピングされます。これにより、ONTAPは、ロールタイプに関係なく一貫した方法でアクセス制御の決定を行うことができます。並行マッピングされたロールは変更できません。</block>
+  <block id="39af865fde550e697cea78c7cf019668" category="paragraph-title">CLI Privilegesを使用したRESTロールの定義</block>
+  <block id="2c5adc49ae85a10c71840d17103a3ef9" category="paragraph">ONTAPでは常にCLIコマンドを使用して基本レベルでのアクセスを決定するため、RESTエンドポイントの代わりにCLIコマンドPrivilegesを使用してRESTロールを表すことができます。このアプローチのメリットの1つは、従来の役割で利用できるきめ細かさです。</block>
+  <block id="1723772cd71ffc40ef36a464ac996953" category="paragraph-title">ONTAPロールを定義する際の管理インターフェイス</block>
+  <block id="8b74f69bd0a99078b4c4c49ea8d7d099" category="inline-link-macro">ONTAP RBACとONTAP Tools for VMware vSphere 10の使用</block>
+  <block id="33de9a7c17ad95edd4bf87d2e32a7ab6" category="paragraph">ONTAP CLIおよびREST APIを使用して、ユーザとロールを作成できます。ただし、System ManagerのインターフェイスとONTAP tools Managerから利用できるJSONファイルを使用する方が便利です。詳細については、を参照してください <block ref="cd4e0c522d130b8c0abe0fca11ee41a7" category="inline-link-macro-rx"></block> 。</block>
+  <block id="75b97d1a08ea05c79f1586fc8900cd8e" category="summary">ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本番環境で使用する前に考慮する必要があります。</block>
+  <block id="8bca7397193febb861597e2ecb032df9" category="section-title">セツテイフロセスノカイヨウ</block>
+  <block id="5895a8b246dedec8e607b00c78dcaf2a" category="paragraph">ONTAP Tools for VMware vSphere 10では、カスタムロールを持つONTAPユーザの作成がサポートされます。定義はJSONファイルにパッケージ化されており、ONTAPクラスタにアップロードできます。ユーザを作成し、環境やセキュリティのニーズに合わせてロールを調整できます。</block>
+  <block id="bb89f796a730c3146a98b69f62482e8d" category="paragraph">主な設定手順について、以下で大まかに説明します。<block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block>詳細については、を参照してください。</block>
+  <block id="28b866f285e4410c78d90e8cd0fda2d4" category="paragraph-title">1.準備</block>
+  <block id="b680153df51e82ba263f4bcb7d5dd65d" category="paragraph">ONTAP tools ManagerとONTAPクラスタの両方に対する管理クレデンシャルが必要です。</block>
+  <block id="5fad7e68da310385f8f20a219196a7b4" category="paragraph-title">2.JSON定義ファイルをダウンロードする</block>
+  <block id="ed04383b924fe7780b87ffb754ffa018" category="paragraph">ONTAP tools Managerのユーザインターフェイスにサインインしたら、RBAC定義を含むJSONファイルをダウンロードできます。</block>
+  <block id="a05c5ee8679155cb70def30bf43cccb1" category="paragraph-title">3.ロールを持つONTAPユーザを作成する</block>
+  <block id="764285e36c0af4a82a910203c3b82632" category="paragraph">System Managerにサインインしたら、ユーザとロールを作成できます。</block>
+  <block id="29f61373486f27633d96729ea473c9e7" category="list-text">左側の*[クラスタ]*を選択し、*[設定]*を選択します。</block>
+  <block id="68ef81e78bc386790e42bd6b1c658d2b" category="list-text">[ユーザとロール]*まで下にスクロールし、をクリックします<block ref="45858e136decb60b1d8904129517fe57" prefix=" " category="inline-code"></block>。</block>
+  <block id="5e33f36fe4c95345500e05c0f606e0f8" category="list-text">[Users]で[Add]*を選択し、[Virtualization products]*を選択します。</block>
+  <block id="e66204bf4ee480dcb50321f8368b8679" category="list-text">ローカルワークステーションでJSONファイルを選択してアップロードします。</block>
+  <block id="e1ecf0df107c9252cace9925c2a29f31" category="paragraph-title">4.ロールを設定する</block>
+  <block id="98e5d66a7eb282e5a69852ad7275ec67" category="paragraph">ロールの定義の一環として、いくつかの管理上の決定を行う必要があります。詳細については、を参照してください<block ref="bd29c31fcc0cc4783cf22b7c5cfe94c1" category="inline-xref-macro-rx"></block>。</block>
+  <block id="caaada9f24a645cbd103e85551d04c05" category="section-title">System Managerを使用してロールを設定する</block>
+  <block id="e2a35a79ba0aa9b16035aa7c210480f6" category="paragraph">System Managerで新しいユーザとロールの作成を開始し、JSONファイルをアップロードしたら、環境とニーズに基づいてロールをカスタマイズできます。</block>
+  <block id="c64b493bd7f05a91606b4cb92775170f" category="section-title">コアユーザとロールの設定</block>
+  <block id="bc4dd7304bc570e82641f4dc36d238bc" category="paragraph">RBACの定義は、VSC、VASA Provider、SRAなど、複数の製品機能としてパッケージ化されています。RBACのサポートが必要な環境を選択してください。たとえば、ロールでリモートプラグイン機能をサポートする場合は、[VSC]を選択します。また、ユーザ名と関連するパスワードを選択する必要があります。</block>
+  <block id="9e287e56b8c475b9b8dafb51e6efcab2" category="paragraph">Privilegesロールは、ONTAPストレージに必要なアクセスレベルに基づいて4セットに分類されます。ロールのベースとなるPrivilegesには次のものがあります。</block>
+  <block id="afff6329efc99be50b0cf1045a8df64d" category="list-text">ストレージの作成</block>
+  <block id="cc35f7bfa1d730ac17dcf17a16d1864c" category="paragraph">ストレージを作成できます。また、Discoveryロールに関連付けられているすべてのPrivilegesも含まれます。</block>
+  <block id="3e6957e55cc58c7676ae8e001d33606d" category="list-text">ストレージの変更</block>
+  <block id="24ea39c4af086b250a1ef48b8f73eb27" category="paragraph">ストレージを変更できます。また、discoveryおよびcreate storageのロールに関連付けられているすべてのPrivilegesも含まれます。</block>
+  <block id="4e7c41e3bba1d4b12b4cb6a39b1814f6" category="list-text">ストレージの削除</block>
+  <block id="f0a085c6b703ea4bd4c06c6e4ca51aa7" category="paragraph">ストレージを破棄できます。また、検出、ストレージの作成、ストレージの変更の各ロールに関連付けられているすべてのPrivilegesも含まれます。</block>
+  <block id="e4ed639cf75d595ee4858ce438889671" category="section-title">ロールを持つユーザを生成する</block>
+  <block id="aa6879df2b3169fbda16473119c2ce29" category="paragraph">環境の構成オプションを選択したら、*[追加]*をクリックすると、ONTAPによってユーザーとロールが作成されます。生成されたロールの名前は、次の値を連結したものです。</block>
+  <block id="03706e1dce0c98b08d188205d076dd47" category="list-text">JSONファイルで定義された固定プレフィックス値（例：「OTV_10」）</block>
+  <block id="7dac56e2b364e98d1289533350488840" category="list-text">選択した製品機能</block>
+  <block id="1da679710b1adbd212bf4e405b38f281" category="list-text">権限セットのリスト。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">例</block>
+  <block id="4628ce4ed29ed74d4945136c742ba3a6" category="paragraph"><block ref="7c14b8ae567d452539a915b9285021b8" prefix="" category="inline-code"></block></block>
+  <block id="d3b71e8bd1ba110ebe240ca63dae1329" category="paragraph">新しいユーザーが「ユーザーとロール」ページのリストに追加されます。HTTPとONTAPIの両方のユーザログイン方法がサポートされていることに注意してください。</block>
+  <block id="cf7e7d1fa6689d4e0e92d999c6237fb5" category="summary">VMware vCenter ServerにはRBAC機能が用意されており、vSphereオブジェクトへのアクセスを制御できます。これは、vCenterの一元化された認証および許可セキュリティサービスの重要な部分です。</block>
+  <block id="dc7c1083aa09af7f48c3dfcd88881a53" category="doc">vCenter Server RBAC環境とONTAP Tools for VMware vSphere 10</block>
+  <block id="c919d083ca35909ad6ec0213308214ee" category="section-title">vCenter Serverアクセス許可の図</block>
+  <block id="f5936d22e8b5eb5001bc642d6372a3ce" category="paragraph">アクセス許可は、vCenter Server環境でアクセス制御を適用するための基盤です。これは、アクセス許可の定義に含まれるユーザまたはグループを含むvSphereオブジェクトに適用されます。次の図に、vCenterアクセス許可の概要を示します。</block>
+  <block id="65b1fd655adb8df9bc252ecbc423fd17" category="inline-image-macro">vCenterケンケン</block>
+  <block id="6c696fa4db382aa6a86b003bfc7df380" category="paragraph"><block ref="6c696fa4db382aa6a86b003bfc7df380" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="af1d6322de747a6050ffe22586be77f6" category="section-title">vCenter Serverアクセス許可のコンポーネント</block>
+  <block id="bf87a4af222cf10da55ca70c08d92f7c" category="paragraph">vCenter Serverアクセス許可は、アクセス許可の作成時にバインドされる複数のコンポーネントで構成されるパッケージです。</block>
+  <block id="1f6500745cb0fece762afaa61fff19be" category="inline-link-macro">vCenter ServerでRBACを使用する</block>
+  <block id="a3707a4a1f2fa1889a1b2fe7a9c17ac1" category="paragraph">アクセス許可はvSphereオブジェクトに関連付けられます。vCenter Server、ESXiホスト、仮想マシン、データストア、データセンター、フォルダなどがあります。vCenter Serverは、オブジェクトに割り当てられた権限に基づいて、各ユーザまたはグループがそのオブジェクトに対して実行できる操作またはタスクを決定します。ONTAP tools for VMware vSphereに固有のタスクについては、すべてのアクセス許可がvCenter Serverのルートフォルダレベルまたはルートフォルダレベルで割り当てられ、検証されます。詳細については、を参照してください <block ref="bd32297ae4942b99b96b1173467488f7" category="inline-link-macro-rx"></block> 。</block>
+  <block id="bee14fb76ab72077391e4058cc8f8b53" category="section-title">Privilegesとロール</block>
+  <block id="1808ba062a2823e5f8f47e9c508e5f88" category="paragraph">ONTAP Tools for VMware vSphere 10で使用されるvSphere Privilegesには、2つのタイプがあります。この環境でのRBACの使用を簡易化するために、ONTAP toolsには、必要なネイティブおよびカスタムのPrivilegesを含むロールが用意されています。Privilegesには以下が含まれます。</block>
+  <block id="99fb3dfe64d66e2151482a34134ca83c" category="paragraph">これはvCenter Serverが提供するPrivilegesです。</block>
+  <block id="33f0238bdb7e394a53a83a61dd4a87a3" category="paragraph">これらは、ONTAP Tools for VMware vSphereに固有のカスタムPrivilegesです。</block>
+  <block id="74e2e4ae3e05b8a6875b8d0942e5d032" category="paragraph">ユーザとグループは、Active DirectoryまたはローカルのvCenter Serverインスタンスを使用して定義できます。ロールと組み合わせて、vSphereオブジェクト階層内のオブジェクトに対する権限を作成できます。この権限は、関連付けられたロールのPrivilegesに基づいてアクセスを許可します。役割は、個別にユーザーに直接割り当てられるわけではないことに注意してください。代わりに、ユーザとグループは、より大きなvCenter Serverアクセス許可の一部としてPrivilegesロールを使用してオブジェクトにアクセスできます。</block>
+  <block id="11d52c42c4c5e962da96cbb07269c71c" category="summary">ONTAP Tools for VMware vSphere 10 RBACのvCenter Serverへの実装については、本番環境で使用する前に考慮する必要があります。</block>
+  <block id="bad4f36fb4d680591de5a6d098a4900f" category="doc">vCenter Server RBACとONTAP Tools for VMware vSphere 10の使用</block>
+  <block id="402c7f2e2d1ca35a706580b301f4a235" category="section-title">vCenterのロールと管理者アカウント</block>
+  <block id="40e1cd7cd8a9460fd1ce9dbbb4902ec1" category="paragraph">カスタムのvCenter Serverロールを定義して使用する必要があるのは、vSphereオブジェクトおよび関連する管理タスクへのアクセスを制限する場合のみです。アクセスを制限する必要がない場合は、代わりに管理者アカウントを使用できます。各管理者アカウントは、オブジェクト階層の最上位レベルにある管理者ロールで定義されます。これにより、ONTAP tools for VMware vSphere 10によって追加されたvSphereオブジェクトを含む、vSphereオブジェクトへのフルアクセスが提供されます。</block>
+  <block id="ca3c90e3f31cf4cc368af5855131e6ed" category="section-title">vSphereオブジェクト階層</block>
+  <block id="5feab15f38afcf82447aa4cbe9aa92b2" category="paragraph">vSphereオブジェクトインベントリは階層構造になっています。たとえば、次のように階層を下に移動できます。</block>
+  <block id="c35fcf133dd7c94e80fa77cf671290c4" category="paragraph"><block ref="c4436d4a190778b7ec1e9461f6454bdd" prefix="" category="inline-code"></block>--&gt;--&gt;--&gt;--&gt;<block ref="615707baa418ce315e44ac2a5d6164af" prefix=" " category="inline-code"></block><block ref="249694a485fc5d3289c38986b4f8e887" prefix=" " category="inline-code"></block><block ref="52a1e1faba85313e38b02d33db3e72fa" prefix=" " category="inline-code"></block><block ref="b19292cad601553e06435e12582db069" prefix=" " category="inline-code"></block></block>
+  <block id="4ff2ed0d44ed1a198235e972b2e7f020" category="paragraph">vSphereオブジェクト階層ではすべての権限が検証されますが、VAAIプラグインの処理はターゲットESXiホストに対して検証されます。</block>
+  <block id="cf3ebf71afc09e18d1f314148fa3811e" category="section-title">ONTAP Tools for VMware vSphere 10に含まれるロール</block>
+  <block id="9956bf2190822dfa9e747d5beea541f5" category="paragraph">vCenter Server RBACの使用を簡易化するために、ONTAP Tools for VMware vSphereには、さまざまな管理タスクに合わせてカスタマイズされた事前定義されたロールが用意されています。</block>
+  <block id="164df67d012e8e0ac61963c54eda6893" category="admonition">必要に応じて、新しいカスタムロールを作成できます。この場合は、既存のONTAP toolsロールのいずれかをクローニングし、必要に応じて編集する必要があります。設定を変更したら、影響を受けるvSphere Clientユーザがログアウトしてから再度ログインし、変更をアクティブ化する必要があります。</block>
+  <block id="63c3900e2803574b915938ebce0260d4" category="paragraph">ONTAP tools for VMware vSphereのロールを表示するには、vSphere Clientの上部にある*[メニュー]*を選択し、*[管理]*をクリックしてから、左側の*[ロール]*をクリックします。以下に説明する3つの事前定義されたロールがあります。</block>
+  <block id="37dfa1e83e1bae8babc789706610e685" category="paragraph">VMware vSphere管理者タスク用のコアONTAPツールを実行するために必要なvCenter Server PrivilegesおよびONTAPツール固有のPrivilegesをすべて提供します。</block>
+  <block id="cd027b3cb7fb1e8712103dffdf01a491" category="paragraph-title">NetApp ONTAP Tools for VMware vSphereプロビジョニング</block>
+  <block id="7e5cada6cb223f80ed0a2b6fee9ab3dc" category="section-title">vSphereオブジェクトとONTAPストレージのバックエンド</block>
+  <block id="c9f180d06ed9b9b8dbf48d2f9c6f8b7e" category="paragraph">2つのRBAC環境が連携して動作します。vSphere Clientインターフェイスでタスクを実行する場合は、まずvCenter Serverに定義されているONTAP toolsのロールがチェックされます。処理がvSphereで許可されている場合は、ONTAPロールPrivilegesが検証されます。2番目の手順は、ストレージバックエンドの作成および設定時にユーザに割り当てられたONTAPロールに基づいて実行します。</block>
+  <block id="ae05278c1a2b0d45fbc61a21675607b9" category="section-title">vCenter Server RBACノシヨウ</block>
+  <block id="c77af40075fd8cffde6139bae4fbf41e" category="paragraph">vCenter ServerのPrivilegesとアクセス許可を使用する際に考慮すべき点がいくつかあります。</block>
+  <block id="ffe7522d9ea3d134eb0a945275d454d7" category="section-title">必要な権限</block>
+  <block id="ff130e198f6b34171e4682320f8f17df" category="paragraph">ONTAP tools for VMware vSphere 10のユーザインターフェイスにアクセスするには、ONTAP tools固有の_view_privilegeが必要です。この権限がない状態でvSphereにサインインし、NetAppアイコンをクリックすると、ONTAP tools for VMware vSphereにエラーメッセージが表示され、ユーザインターフェイスにアクセスできません。</block>
+  <block id="6385cb263e2cd14332ec0eb2e87b8b5e" category="paragraph">vSphereオブジェクト階層の割り当てレベルによって、ユーザインターフェイスのどの部分にアクセスできるかが決まります。ルートオブジェクトにView権限を割り当てると、NetAppアイコンをクリックしてONTAP tools for VMware vSphereにアクセスできるようになります。</block>
+  <block id="c4ac20de086e0cd3fd84b12e6d2ea8e1" category="paragraph">代わりに、別の下位のvSphereオブジェクトレベルにView権限を割り当てることができます。ただし、これにより、アクセスして使用できるONTAP Tools for VMware vSphereメニューが制限されます。</block>
+  <block id="548c90bb357fe2a9cfd43bd38ea29463" category="paragraph">vSphereのオブジェクトおよびタスクへのアクセスを制限する場合は、vCenter Serverアクセス許可を使用する必要があります。vSphereオブジェクト階層で権限を割り当てる場所によって、ユーザが実行できるONTAP tools for VMware vSphere 10タスクが決まります。</block>
+  <block id="f9cec60da9773f244eba81315b01771b" category="admonition">アクセスをより制限的に定義する必要がないかぎり、ルートオブジェクトレベルまたはルートフォルダレベルで権限を割り当てることをお勧めします。</block>
+  <block id="2c3800c2e1b0d19b0ee4eac0c7b2181b" category="paragraph">ONTAP tools for VMware vSphere 10で使用できる権限は、ストレージシステムなどのvSphere以外のカスタムオブジェクトに適用されます。割り当て可能なvSphereオブジェクトがないため、可能であればこれらのアクセス許可をONTAP tools for VMware vSphereルートオブジェクトに割り当てる必要があります。たとえば、ONTAP tools for VMware vSphereの「Add/Modify/Remove storage systems」権限を含むすべてのアクセス許可は、ルートオブジェクトレベルに割り当てる必要があります。</block>
+  <block id="1c6f51dd930ae7303df3ce602b9079b3" category="paragraph">オブジェクト階層の上位レベルでアクセス許可を定義する場合は、アクセス許可が子オブジェクトに継承されるように設定できます。必要に応じて、親から継承したアクセス許可を上書きする追加のアクセス許可を子オブジェクトに割り当てることができます。</block>
+  <block id="1756a472d8c27ed7ed5cf0e74f8e0204" category="paragraph">権限はいつでも変更できます。アクセス許可に含まれるPrivilegesを変更した場合、アクセス許可に関連付けられているユーザが変更を有効にするには、vSphereからログアウトしてログインし直す必要があります。</block>
+  <block id="01f1acd42f23e67e01a07139e3bfa8df" category="sidebar">RBACの詳細</block>
+  <block id="89371fddb8c77133f989dc310158af51" category="sidebar">VMware vSphereを使用したRBAC</block>
+  <block id="f892343d37463039adbca9c5b26aff67" category="sidebar">vCenter Server環境</block>
+  <block id="be4a0889e315bfb69ba644fbb58270ea" category="sidebar">ONTAPを使用したRBAC</block>
+  <block id="c024abed0c8217f644225264da1b23b2" category="sidebar">ONTAPの環境</block>
+  <block id="be1fc37ef971360b0cf69ced82982a58" category="sidebar">ONTAPでRBACを使用する</block>
 </blocks>
