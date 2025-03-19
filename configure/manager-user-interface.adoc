@@ -22,7 +22,7 @@ ONTAP Tools Managerは、次のことを支援します。
 * パスワード管理-ユーザのOVAアプリケーションのパスワードをリセットします。
 
 
-ONTAP tools Managerにアクセスするには `\https://loadBalancerIP:8443/virtualization/ui/`、ブラウザからを起動し、導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+ONTAP tools Managerにアクセスするには `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`、ブラウザからを起動し、導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 
 ONTAP tools Managerの概要セクションでは、サービスの管理、ノードサイズのアップスケーリング、ハイアベイラビリティ（HA）の有効化など、アプライアンスの構成を管理できます。また、ノードに関連するONTAPツールの全体的な情報（健全性、ネットワークの詳細、アラートなど）を監視することもできます。
 

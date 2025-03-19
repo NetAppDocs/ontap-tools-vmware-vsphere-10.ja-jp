@@ -27,7 +27,7 @@ summary: ストレージバックエンドは、ESXiホストがデータスト�
 NOTE: マルチテナントセットアップでは、SVMユーザクレデンシャルを使用するために、ストレージバックエンドクラスタをグローバルに、SVMをローカルに追加できます。
 
 .手順
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから* Storage backends *を選択します。
 . ストレージバックエンドを追加し、サーバのIPアドレスまたはFQDN、ユーザ名、およびパスワードの詳細を指定します。

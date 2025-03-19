@@ -18,7 +18,7 @@ ONTAP tools Managerを使用してONTAP tools for VMware vSphereの構成をス�
 指定したOVAテンプレートのバージョンがノード1と同じであることを確認します。ノード1は、ONTAP Tools for VMware vSphere OVAを最初に導入するデフォルトのノードです。
 
 .手順
-. WebブラウザからONTAP Tools Managerを起動します。 `\https://loadBalancerIP:8443/virtualization/ui/`
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . 概要セクションの*アプライアンス設定の編集*を選択します。
 . [構成]セクションでは、要件に応じてスケールアップしてノードサイズを拡張し、HA構成を有効にすることができます。変更を行うには、vCenter Serverのクレデンシャルが必要です。

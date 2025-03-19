@@ -1542,12 +1542,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a1f81812b9996ffae82950938651b560" category="paragraph">これにより、ONTAP tools for VMware vSphere 10.1 / 10.2で使用されているONTAP内のTridentボリュームがすべて削除されます。</block>
   <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">個 々 のAPI呼び出しの例として、* vcenters *カテゴリまで下にスクロールし、エンドポイントの横にある* get *を選択します。<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
   <block id="ef78cf93c4b4adc658c8565b28ac853c" category="paragraph">アクセストークンの要求と使用の例については、を参照してください<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
-  <block id="7b0f795e746611f8d000c88ef7404ee7" category="list-text">WebブラウザからONTAP Tools Managerを起動します。<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
   <block id="6700bd2d5a11f981faf541727c91e5eb" category="list-text">次のコマンドを使用してvSphere Clientにログインします。<block ref="9ad784043785fc1c1be39efefce3e216" prefix=" " category="inline-code"></block></block>
   <block id="3a3cf1aabccd549ecea01e8e5bd01415" category="list-text">ショートカットページで、プラグインセクションの* NetApp ONTAP tools *を選択します。</block>
   <block id="f017ca342576480350b43d2d7e7f73ae" category="summary">vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。</block>
   <block id="f05b95a344d62647f6489daf34512360" category="paragraph">ONTAP toolsをvCenterと統合することで、プロビジョニング、Snapshot、データ保護などのストレージタスクをvSphere Clientから直接実行できるため、別のストレージ管理コンソールに切り替える必要がありません。</block>
-  <block id="f8539fd8796614c8ef01970c32bcf658" category="list-text">Webブラウザを開き、次のURLに移動します。<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
   <block id="d5e2bc65733d04e5cb0f6d28bc9c86af" category="list-text">vCenter Serverインスタンスをオンボードするには、* vCenters *&gt;* Add *を選択します。vCenterのIPアドレスまたはホスト名、ユーザ名、パスワード、およびポートの詳細を入力します。</block>
   <block id="3739ecac839d5ac8c0f3ea1f4faedcd4" category="paragraph">vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理が自動的にトリガーされます。</block>
   <block id="e73ab0bb08227c7d6283172340ef4110" category="list-text">vCenter Clientプラグインがリモートプラグインとして登録されます。</block>
@@ -1594,7 +1592,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="eb4182715f8cde98563dc59ea36461d3" category="cell">NFS.HeartbeatTimeout</block>
   <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
   <block id="0aa364b40943456fe1d59c4a4a6ee32d" category="list-text">ファイルを参照して選択し<block ref="74f7b54ea713d9f5b69839982911bbf7" prefix=" " category="inline-code"></block>、*アップロード*を選択してファイルをONTAPツールにアップロードします。</block>
-  <block id="741276b1afc1cd52f0ec6404edcf55de" category="paragraph">ONTAP tools Managerにアクセスするには<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block>、ブラウザからを起動し、導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
   <block id="fb31aab466ef06ee817c945e4fe16b33" category="cell">アプライアンスのカードには、ONTAP toolsアプライアンスの全体的なステータスが表示されます。アプライアンスの設定の詳細と有効なサービスのステータスが表示されます。ONTAP toolsアプライアンスの詳細については、*[詳細を表示]*リンクを選択してください。アプライアンス設定の編集アクション・ジョブが進行中の場合、アプライアンス・ポートレットにジョブのステータスと詳細が表示されます。</block>
   <block id="96322cb1e08cb1a6e918061bfd2a7459" category="cell">[Alerts]カードには、HAノードレベルのアラートなど、ONTAP toolsのアラートがタイプ別に表示されます。アラートのリストを表示するには、カウントテキスト（ハイパーリンク）を選択します。このリンクをクリックすると、選択したタイプでフィルタリングされた[Alerts]ビューページが表示されます。</block>
   <block id="a353c311fd478f54264d2f3142183a7e" category="cell">ONTAP toolsのノードカードには、ノードのリストとノード名、ノードVM名、ステータス、およびすべてのネットワーク関連データが表示されます。[詳細を表示]*を選択すると、選択したノードに関連するその他の詳細を表示できます。[注]非HA構成の場合、表示されるノードは1つだけです。HAセットアップでは、3つのノードが表示されています。</block>
@@ -2072,4 +2069,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">vCenter ServerからONTAP tools for VMware vSphere VMの電源をオフにし、VMを削除します。</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="399a5cfe88876e091f96014da7798994" category="list-text">ONTAPシステムマネージャのユーザインターフェイスで、検索バーでボリュームの名前を検索し、名前を選択してボリュームを開きます。[Snapshot]に移動し、そのボリュームのSnapshotを追加します。</block>
+  <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">WebブラウザからONTAP Tools Managerを起動します。<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
+  <block id="3fe306eaabad41057c3375dc9d2105d0" category="list-text">Webブラウザを開き、次のURLに移動します。<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
+  <block id="76bb3525c98b82b9b4baedca4379aa0d" category="paragraph">ONTAP tools Managerにアクセスするには<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block>、ブラウザからを起動し、導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
 </blocks>
