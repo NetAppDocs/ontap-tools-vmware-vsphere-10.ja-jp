@@ -100,8 +100,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 | 高可用性 | 大（L） | ~100k | 256 [注]表のホスト数は、複数のvCenterからのホストの総数を示しています。 
 |===
-ノードごとのホストシステムのサイジング要件の詳細については、を参照してくださいlink:../deploy/prerequisites.html["ONTAP Tools for VMware vSphereを導入するための前提条件"]。
-
 
 
 == ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）
@@ -200,16 +198,3 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 | 123（TCP） | ntpdはこのポートを使用してNTPサーバの検証を実行します。 
 |===
-
-
-== 導入前のチェック
-
-導入を進める前に、次の項目が揃っていることを確認してください。
-
-* vCenter Server環境がセットアップおよび設定されている。
-* OVAを導入するための親vCenter Serverのクレデンシャルが設定されている。
-* ONTAP tools for VMware vSphereが導入後に接続するvCenter Serverインスタンスの登録用ログインクレデンシャルを用意しておきます。
-* ブラウザキャッシュが削除されます。
-* 非HA環境に使用できる空きIPアドレスが3つあることを確認します。1つはロードバランサ用の空きIPアドレス、もう1つはKubernetesコントロールプレーン用の空きIPアドレス、もう1つはノード用のIPアドレスです。HA環境では、これら3つのIPアドレスとともに、2番目と3番目のノード用にさらに2つのIPアドレスが必要になります。ホスト名は、割り当てる前にDNSの空きIPアドレスにマッピングする必要があります。5つのIPアドレスはすべて、導入用に選択したVLAN上にある必要があります。
-* カスタムCA証明書が必須であるvCenterが複数ある環境では、証明書が発行されるドメイン名が仮想IPアドレスにマッピングされていることを確認します。ドメイン名に対して_nslookup_checkが実行され、ドメインが目的のIPアドレスに解決されているかどうかが確認されます。証明書は、ロードバランサのIPアドレスのドメイン名とIPアドレスを使用して作成する必要があります。
-

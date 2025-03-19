@@ -84,9 +84,9 @@ entries:
   url: "/manage/disable-autosupport.html"
 - title: AutoSupportプロキシURLの更新
   url: "/manage/update-proxyurl.html"
-- title: ほぼゼロRPO
+- title: バックアップの作成とセットアップのリカバリ
   url: "/manage/enable-backup.html"
-- title: ONTAP tools導入環境のアンインストール
+- title: ONTAP Tools for VMware vSphereのアンインストール
   url: "/manage/uninstall-deployment.html"
-- title: ボリュームをクリーンアップ
+- title: FlexVolボリュームを削除する
   url: "/manage/delete-deployment.html"

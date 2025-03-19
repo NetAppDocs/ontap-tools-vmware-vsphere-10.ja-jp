@@ -101,7 +101,7 @@ ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場�
 * 次のいずれかの方法で、すべてのボリュームのSnapshotを1つずつ作成します。
 +
 ** CLIから次のコマンドを実行します。_volume snapshot create -vserver <vserver_name>-volume <volume_name>-snapshot <snapshot_name>_
-** ONTAP System Managerのユーザインターフェイスで、検索バーの名前でボリュームを検索し、名前を選択してボリュームを開きます。[Snapshot]に移動し、そのボリュームのSnapshotを追加します。
+** ONTAPシステムマネージャのユーザインターフェイスで、検索バーでボリュームの名前を検索し、名前を選択してボリュームを開きます。[Snapshot]に移動し、そのボリュームのSnapshotを追加します。
 
 
 

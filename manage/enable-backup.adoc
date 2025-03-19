@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphere 10.3では動的ストレージプロビジョニングツールが使用されるため、RPOをゼロにすることはできません。ただし、RPOはほぼゼロに近づきます。 
 ---
-= ほぼゼロRPO
+= バックアップの作成とセットアップのリカバリ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
