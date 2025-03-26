@@ -1,3 +1,9 @@
+---
+permalink: configure/configure-network-access.html 
+sidebar: sidebar 
+keywords: network access configuration, export policy, mount operation, ESXi hosts 
+summary: ネットワークアクセスを設定していない場合は、ESXiホストで検出されたすべてのIPアドレスがデフォルトでエクスポートポリシーに追加されます。 
+---
 = ネットワークアクセスの設定
 :allow-uri-read: 
 :icons: font

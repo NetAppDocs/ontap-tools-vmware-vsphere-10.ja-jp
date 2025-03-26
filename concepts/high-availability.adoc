@@ -29,3 +29,5 @@ NOTE: 単一ノード障害のみがサポートされます。
 
 
 NOTE: ONTAP Tools for VMware vSphereはvCenter HAをサポートしていません。
+
+HA機能を有効にするには、導入時またはあとでONTAP tools for VMware vSphere VMの設定で、CPUのホットアドとメモリのホットプラグを有効にする必要があります。
