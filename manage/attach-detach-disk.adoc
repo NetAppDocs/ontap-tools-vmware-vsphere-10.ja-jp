@@ -1,0 +1,49 @@
+---
+permalink: manage/attach-detach-disk.html 
+sidebar: sidebar 
+keywords:  
+summary: - 
+---
+= 仮想マシンのデータディスクの接続または接続解除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 仮想マシンへのデータディスクの接続
+
+データディスクを仮想マシンに接続してストレージ容量を拡張します。
+
+.手順
+. vSphere Clientにログインします。
+. インベントリ内の仮想マシンを右クリックし、*[設定の編集]*を選択します。
+. [仮想ハードウェア]タブで、*[既存のハードディスク]*を選択します。
+. ディスクが存在する仮想マシンを選択します。
+. 接続するディスクを選択し、* OK *を選択します。
+
+
+.結果
+[Virtual Hardware devices]リストにハードディスクが表示されます。
+
+
+
+== 仮想マシンからデータディスクの接続解除
+
+仮想マシンに接続されているデータディスクが不要になったときは、接続を解除できます。仮想マシンから接続を解除しても、ディスクは自動的には削除されず、ONTAPストレージシステムに残ります。
+
+.手順
+. vSphere Clientにログインします。
+. インベントリ内の仮想マシンを右クリックし、*[設定の編集]*を選択します。
+. ディスク上にポインタを移動し、*[削除]*を選択します。
++
+
+NOTE: ディスクが仮想マシンから削除されます。他の仮想マシンがディスクを共有している場合、ディスクファイルは削除されません。
+
+
+
+.関連情報
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-a-new-hard-disk-to-a-virtual-machinevm-admin.html["仮想マシンへの新しいハードディスクの追加"]
+
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-an-existing-hard-disk-to-a-virtual-machinevm-admin.html["仮想マシンへの既存のハードディスクの追加"]

@@ -14,9 +14,12 @@ summary: ONTAP tools for VMware vSphereのログファイルは、ONTAP tools fo
 AutoSupportプロキシURLを更新して、ネットワークアクセス制御またはセキュリティ対策にプロキシサーバを使用するシナリオでAutoSupport機能が適切に機能するようにします。これにより、AutoSupportデータを適切なプロキシ経由でルーティングできるため、セキュアな転送とコンプライアンスが可能になります。
 
 .手順
-. vCenter Serverで、メンテナンスコンソールを開きます。
-. maintenance ユーザとしてログインします。
-. 1を入力して*[アプリケーションの設定]*を選択します。
-. 4と入力して*[Update AutoSupport proxy URL]*を選択します。
-. プロキシのURLを入力します。
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+. サイドバーから*[設定]*を選択します。
+. [設定]*>*[テレメトリ]*>*[編集]*オプションを選択します。
+. 有効な*プロキシURL *を入力し、変更を保存します。
++
+AutoSupportをディセーブルにすると、プロキシURLもディセーブルになります。
+
 

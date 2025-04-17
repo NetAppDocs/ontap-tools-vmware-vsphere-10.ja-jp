@@ -26,7 +26,7 @@ vCenter ServerのONTAP tools for VMware vSphereからデータストアを削除
 vCenter ServerからONTAP toolsからNFS、VMFS、またはVVolデータストアを削除するには、次の手順を実行します。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
+. vSphere Clientにログインします。
 . ホストシステム、ホストクラスタ、データセンターを右クリックし、* NetApp ONTAP tools *>*データストアの削除*を選択します。
 +
 

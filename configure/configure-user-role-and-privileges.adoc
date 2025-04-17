@@ -14,8 +14,8 @@ summary: ONTAP tools for VMware vSphereおよびONTAP System Managerに付属の
 ストレージバックエンドの管理に使用する新しいユーザロールと権限を設定するには、ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用します。
 
 .作業を開始する前に
-* ONTAP PrivilegesファイルをONTAP tools for VMware vSphereから、_\ https：//<loadbalancerIP>：8443 /virtualization/user-privileges/users_roles.zip_を使用してダウンロードしておく必要があります。
-* 次のコマンドを使用して、ONTAP PrivilegesファイルをONTAP toolsからダウンロードしておきます。 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
+* ONTAP PrivilegesファイルをONTAP tools for VMware vSphereから、_\ https：//<ONTAPtoolsIP>：8443 /virtualization/user-privileges/users_roles.zip_を使用してダウンロードしておく必要があります。
+* を使用して、ONTAP toolsからONTAP Privilegesファイルをダウンロードしておく必要があります `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
 
 NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM）レベルで直接作成できます。user_roles.jsonファイルを使用せずにユーザを作成することもできます。作成した場合は、SVMレベルの最小限の権限セットが必要になります。
@@ -24,7 +24,7 @@ NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM
 
 
 .手順
-. ダウンロードした_\ https：//<loadbalancerIP>：8443 /virtualization/user-privileges/users_roles.zip_fileを展開します。
+. ダウンロードした_\ https：//<ONTAPtoolsIP>：8443 /virtualization/user-privileges/users_roles.zip_fileを展開します。
 . クラスタのクラスタ管理IPアドレスを使用してONTAP System Managerにアクセスします。
 . 管理Privilegesでクラスタにログインします。ユーザを設定するには、次の手順を実行します。
 +
@@ -36,7 +36,7 @@ NOTE: ユーザは、クラスタレベルまたはStorage Virtual Machine（SVM
 +
 [Product]フィールドには自動的に値が入力されます。
 
-.. 製品機能ドロップダウンメニューから必要な機能を選択します。
+.. ドロップダウンから製品の機能として[VSC]、[VASA Provider]、または[SRA]を選択します。
 +
 [ロール]*フィールドには、選択した製品機能に基づいて自動的に値が入力されます。
 
@@ -146,6 +146,9 @@ APIの使用：
 
 
 | /api/network/ip/interfaces | 読み取り専用 | ストレージバックエンドの追加-管理LIFの範囲がクラスタ/ SVMであることを確認します。 
+
+
+| /api/ストレージ/アベイラビリティゾーン | 読み取り専用 | サズ・ディスカバリー。ONTAP 9.16.1リリース以降およびASA R2システムに適用されます。 
 |===
 
 
@@ -257,6 +260,12 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
+----
+ONTAPバージョン9.16.1以降のASA R2システムでは、次のコマンドを実行します。
+
+[listing]
+----
+security login rest-role create -role <role-name> -api /api/storage/availability-zones -access readonly
 ----
 
 
@@ -376,7 +385,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 
 == ONTAP tools for VMware vSphere 10.1ユーザから10.3ユーザへのアップグレード
 
-ONTAP tools for VMware vSphere 10.1ユーザが、JSONファイルを使用して作成されたクラスタスコープのユーザである場合は、ONTAP CLIでadminユーザを使用して次のコマンドを実行し、10.3リリースにアップグレードします。
+JSONファイルを使用して作成されたクラスタを対象としたユーザのONTAP tools for VMware vSphere 10.1ユーザの場合は、次のONTAP CLIコマンドをユーザadmin Privilegesで使用して10.3リリースにアップグレードします。
 
 製品機能の場合：
 
@@ -410,7 +419,7 @@ _security login role create -role <existing-role-name>-cmddirname "vserver nvme 
 
 _security login role create -role <existing-role-name>-cmddirname "vserver nvme subsystem map remove"-access all_
 
-ONTAP tools for VMware vSphere 10.1ユーザが、JSONファイルを使用して作成されたSVMスコープのユーザである場合は、ONTAP CLIでadminユーザを使用して次のコマンドを実行し、10.3リリースにアップグレードします。
+JSONファイルを使用して作成されたSVMを対象としたユーザを持つONTAP tools for VMware vSphere 10.1ユーザの場合は、管理ユーザPrivilegesを指定してONTAP CLIコマンドを使用し、10.3リリースにアップグレードします。
 
 SVM Privileges：
 
@@ -448,4 +457,26 @@ vserver nvme subsystem create
 
 vserver nvme subsystem modify
 
+----
+
+
+== ONTAP tools for VMware vSphere 10.3ユーザから10.4ユーザへのアップグレード
+
+ONTAP 9.16.1以降では、ONTAP tools for VMware vSphere 10.3のユーザが10.4ユーザにアップグレードされます。
+
+JSONファイルおよびONTAPバージョン9.16.1以降を使用して作成されたクラスタを対象としたユーザを含むONTAP tools for VMware vSphere 10.3ユーザの場合は、管理者ユーザPrivilegesを指定してONTAP CLIコマンドを使用し、10.4リリースにアップグレードします。
+
+製品機能の場合：
+
+* VSC
+* VSCとVASA Provider
+* VSCとSRA
+* VSC、VASA Provider、SRA：
+
+
+クラスタPrivileges：
+
+[listing]
+----
+security login role create -role <existing-role-name> -cmddirname "storage availability-zone show" -access all
 ----

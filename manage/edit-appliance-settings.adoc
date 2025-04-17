@@ -13,8 +13,10 @@ summary: 管理者パスワードは、ONTAP tools Managerを使用して変更�
 [role="lead"]
 ONTAP tools Managerを使用してONTAP tools for VMware vSphereの構成をスケールアップし、環境内のノード数を増やすか、構成をハイアベイラビリティ（HA）セットアップに変更します。ONTAP Tools for VMware vSphereアプライアンスは、最初はシングルノード非HA構成で導入されます。
 
-* 始める前に *
 
+NOTE: 非HAバックアップが有効な場合にHAに移行するには、まずバックアップを無効にし、移行後に再度有効にします。
+
+.作業を開始する前に
 * OVAテンプレートのバージョンがノード1と同じであることを確認します。ノード1は、ONTAP Tools for VMware vSphere OVAを最初に導入するデフォルトのノードです。
 * CPUホットアドとメモリホットプラグが有効になっていることを確認します。
 

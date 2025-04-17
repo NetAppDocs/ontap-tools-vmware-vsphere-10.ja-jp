@@ -11,10 +11,9 @@ summary: ONTAP Tools for VMware vSphereアプライアンスは、NFSデータ�
 
 
 [role="lead"]
-ONTAP Tools for VMware vSphereアプライアンスは、NFSデータストアとVMFSデータストアをサポートするためのコアサービスを備えた小規模なシングルノードとして導入されます。
+ONTAP Tools for VMware vSphereアプライアンスは、NFSデータストアとVMFSデータストアをサポートするためのコアサービスを備えた小規模なシングルノードとして導入されます。ONTAP toolsの導入プロセスには最大45分かかることがあります。
 
-* 始める前に *
-
+.作業を開始する前に
 VMwareのコンテンツライブラリは、VMテンプレート、vAppテンプレート、およびその他の種類のファイルを格納するコンテナオブジェクトです。コンテンツライブラリを使用した展開では、ネットワーク接続に依存しないシームレスなエクスペリエンスが提供されます。
 
 
@@ -28,7 +27,7 @@ NOTE: HA導入をあとで有効にする場合は、ONTAPツールをホスト�
 *コンテンツライブラリの作成*小規模なシングルノード展開のみを使用する予定の場合、コンテンツライブラリを作成する必要はありません。
 
 .  `.zip`バイナリ（_.ova_）とONTAP tools for VMware vSphereの署名済み証明書を含むファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
+. vSphere Clientにログインします。
 . vSphere Clientメニューを選択し、*[Content libraries]*を選択します。
 . ページの右側にある*[作成]*を選択します。
 . ライブラリの名前を指定し、コンテンツライブラリを作成します。
@@ -88,7 +87,7 @@ NOTE: Pure IPv6はサポートされていません。mixedモードは、IPv6�
 +
 導入タスクが作成されると、進行状況がvSphereタスクバーに表示されます。
 
-. タスクが完了したら、VMの電源をオンにします。
+. VMの電源を自動的にオンにするオプションが選択されていない場合は、タスクの完了後にVMの電源をオンにします。
 
 
 インストールの進行状況は、VMのWebコンソールで追跡できます。
@@ -99,6 +98,7 @@ OVFフォームに不一致がある場合は、ダイアログボックスが�
 vCenter Server 7.0.3でONTAP tools for VMware vSphereを導入している場合は、導入後に以下の手順を実行します。
 
 . vCenter Clientにログインする
+. ONTAP toolsノードの電源をオフにします。
 . [インベントリ]*の下にあるONTAP tools for VMware vSphere仮想マシンに移動し、*[設定の編集]*オプションを選択します。
 . [CPU]オプションで、[CPUホットアドを有効にする]チェックボックスをオンにします。
 . [Memory（メモリ）]オプションで、[Memory hot plug（メモリホットプラグ）]の[Enable（有効化）]チェックボックスをオンにします。

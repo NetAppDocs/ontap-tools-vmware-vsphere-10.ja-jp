@@ -49,27 +49,39 @@ ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vC
 | 大規模なHA構成（3ノードの累積） | 51 | 一 〇 二 | 1050 
 |===
 
+NOTE: バックアップを有効にすると、VMが導入されているデータストアに、各ONTAP toolsクラスタにさらに50GBのスペースが必要になります。したがって、非HAには400GBが必要で、HAには合計1100GBのスペースが必要です。
+
+
 
 == ストレージとアプリケーションの最小要件
 
 |===
-| ストレージ、ホスト、およびアプリケーション | 最小バージョン要件 
+| ストレージ、ホスト、およびアプリケーション | バージョン要件 
 
 
 | ONTAP | 9.14.1、9.15.1、および9.16.0。FAS、ASA Aシリーズ、ASA Cシリーズ、AFF Aシリーズ、AFF Cシリーズ、およびASA R2。 
 
 
-| ESXiホスト | ESXi 7.0.3 
+| ONTAP ToolsでサポートされるESXiホスト | 7.0.3以降 
 
 
-| vCenterサーバ | vCenter 7.0U3 
+| サポートされるvCenter ServerのONTAPツール | 7.0U3以降 
 
 
 | VASA Provider | 3.0 
 
 
-| OVAアプリケーション | 10.3 
+| OVAアプリケーション | 10.4 
+
+
+| ONTAP tools仮想マシンを導入するためのESXiホスト | 7.0、7.0U1、7.0U2、7.0U3、8.0、8.0U1、および8.0U3 
+
+
+| ONTAP tools仮想マシンを導入するためのvCenter Server | 7.0および8.0 
 |===
+
+NOTE: ONTAP tools for VMware vSphere 10.4以降では、仮想マシンハードウェアがバージョン10から17に変更されています。
+
 サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
@@ -151,50 +163,86 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-| * ポート * | * 概要 * 
+| * ポート * | *プロトコル* | * 概要 * 
 
 
-| 22（TCP） | Ansibleは、クラスタのプロビジョニング時の通信にこのSSHポートを使用します。このポートは、HA構成の場合、メンテナンスユーザのパスワードやステータスメッセージの変更、3つすべてのノードの値の更新などの機能で必要になります。 
+| 8143 | TCP | ONTAP tools用のHTTP / HTTPS接続。 
 
 
-| 443（TCP） | VASA Providerサービスの受信通信用のパススルーポートです。VASA Providerの自己署名証明書とカスタムCA証明書はこのポートでホストされています。 
+| 8043 | TCP | ONTAP tools用のHTTP / HTTPS接続。 
 
 
-| 8443（TCP） | このポートは、swaggerとManagerユーザインターフェイスアプリケーションを使用してAPIドキュメントをホストします。 
+| 9060 | TCP | ONTAP tools用のHTTP / HTTPS接続。 
 
 
-| 2379（TCP） | これは、GET、PUT、DELETE、etcdキー値ストア内のキーの監視などのクライアント要求のデフォルトポートです。 
+| 22 | TCP | Ansibleは、クラスタのプロビジョニング時の通信にこのSSHポートを使用します。このポートは、HA構成の場合、メンテナンスユーザのパスワードやステータスメッセージの変更、3つすべてのノードの値の更新などの機能で必要になります。 
 
 
-| 2380（TCP） | これは、etcdがデータレプリケーションと整合性のために依存するraft consensusアルゴリズムに使用されるetcdクラスタのサーバ間通信のデフォルトポートです。 
+| 443 | TCP | VASA Providerサービスの受信通信用のパススルーポートです。VASA Providerの自己署名証明書とカスタムCA証明書はこのポートでホストされています。 
 
 
-| 7472（TCP + UDP） | Prometheus指標のサービスポートです。 
+| 8443 | TCP | このポートは、swaggerとManagerユーザインターフェイスアプリケーションを使用してAPIドキュメントをホストします。 
 
 
-| 7946（TCP + UDP） | このポートは、Dockerのコンテナネットワーク検出に使用されます。 
+| 2379 | TCP | これは、GET、PUT、DELETE、etcdキー値ストア内のキーの監視などのクライアント要求のデフォルトポートです。 
 
 
-| 9083（TCP） | このポートは、VASA Providerサービスで内部的に使用されるサービスポートです。 
+| 2380 | TCP | これは、etcdがデータレプリケーションと整合性のために依存するraft consensusアルゴリズムに使用されるetcdクラスタのサーバ間通信のデフォルトポートです。 
 
 
-| 1162（UDP） | これはSNMPトラップパケットポートです。 
+| 7472 | TCP / UDP | Prometheus指標のサービスポートです。 
 
 
-| 6443（TCP） | ソース：RKE2エージェントノード。宛先：REK2サーバノード。説明：Kubernetes API 
+| 7946 | TCP / UDP | このポートは、Dockerのコンテナネットワーク検出に使用されます。 
 
 
-| 9345（TCP） | ソース：RKE2エージェントノード。宛先：REK2サーバノード。説明:REK2スーパーバイザAPI 
+| 9083 | TCP | このポートは、VASA Providerサービスで内部的に使用されるサービスポートです。 
 
 
-| 8472（TCP + UDP） | フランネルVXLANを使用する場合、すべてのノードがUDPポート8472を介して他のノードに到達できる必要があります。ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：VXLANを使用したCanal CNI 
+| 1162 | UDP | これはSNMPトラップパケットポートです。 
 
 
-| 10250（TCP） | ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：Kubelet指標 
+| 6443 | TCP | ソース：RKE2エージェントノード。宛先：REK2サーバノード。説明：Kubernetes API 
 
 
-| 30000～32767（TCP） | ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：NodePortポート範囲 
+| 9345 | TCP | ソース：RKE2エージェントノード。宛先：REK2サーバノード。説明:REK2スーパーバイザAPI 
 
 
-| 123（TCP） | ntpdはこのポートを使用してNTPサーバの検証を実行します。 
+| 8472 | TCP + UDP | フランネルVXLANを使用する場合、すべてのノードがUDPポート8472を介して他のノードに到達できる必要があります。ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：VXLANを使用したCanal CNI 
+
+
+| 10250 | TCP | ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：Kubelet指標 
+
+
+| 30000-32767 | TCP | ソース：すべてのRKE2ノード。宛先：すべてのREK2ノード。説明：NodePortポート範囲 
+
+
+| 123 | TCP | ntpdはこのポートを使用してNTPサーバの検証を実行します。 
+
+
+| 137-139 | TCP / UDP | SMB / Windows共有パケット。 
+
+
+| 6789 | TCP | Cephモニタ（MON） 
+
+
+| 3300 | TCP | Cephモニタ（MON） 
+
+
+| 6800-7300 | TCP | Ceph Manager、OSDs、およびファイルシステム（MDS）。 
+
+
+| 80 | TCP | Ceph RADOSゲートウェイ（RGW） 
+
+
+| 9080 | TCP | VP HTTP/HTTPS接続（IPv4の場合は127.0.0.0/8から、IPv6の場合は::1/128からのみ）。 
 |===
+
+
+== ONTAPストレージ設定
+
+ONTAPストレージとONTAP tools for VMware vSphereをシームレスに統合するには、次の設定を検討してください。
+
+* ストレージ接続にFibre Channel（FC；ファイバチャネル）を使用している場合は、ESXiホストをSVMのFC LIFに接続するようにFCスイッチにゾーニングを設定します。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
+* ONTAP toolsで管理されるSnapMirrorレプリケーションを使用するには、ONTAPストレージ管理者がONTAPでとを https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAPクラスタ間SVMピア関係"]作成してからSnapMirrorを使用する必要があります https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPクラスタピア関係"]。
+

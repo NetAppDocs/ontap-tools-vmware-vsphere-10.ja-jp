@@ -31,8 +31,6 @@ NOTE: のパスワードを設定する必要があります。 `diag` ユーザ
  a| 
 . サーバステータスの概要を表示します
 . VASA ProviderサービスおよびSRAサービスのログレベルの変更
-. AutoSupportを無効にする
-. AutoSupportプロキシURLの更新
 
 
 
@@ -44,7 +42,6 @@ System Configuration （システム設定）
 . 仮想マシンをシャットダウンします
 . 「maint」ユーザのパスワードの変更
 . タイムゾーンを変更します
-. 新しい NTP サーバを追加します
 . jail ディスクサイズ（ /jail ）の拡張
 . アップグレード
 . VMware Tools をインストールします

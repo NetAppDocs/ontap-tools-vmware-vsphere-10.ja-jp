@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: 管理者パスワードは、ONTAP tools Managerを使用して変更できます。 
+summary: ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP tools Managerを使用してVASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのサービスを有効にすることができます。 
 ---
 = ONTAP Tools for VMware vSphereサービスを有効にする
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 管理者パスワードは、ONTAP tools Managerを使用して変更�
 
 
 [role="lead"]
-ONTAP tools Managerを使用して、VASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのサービスを有効にするためのManager。
+ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP tools Managerを使用してVASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのサービスを有効にすることができます。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -26,6 +26,6 @@ ONTAP tools Managerを使用して、VASA Provider、vVol構成のインポー�
 NOTE: オプションのサービスを無効にする前に、ONTAP toolsで管理されているvCenter Serverでオプションのサービスが使用されていないことを確認してください。
 
 +
-[ VVol構成のインポートを許可する]*オプションは、VASA Providerサービスが有効になっている場合にのみ表示されます。このオプションを使用すると、ONTAP tools 9.xからONTAP tools 10.3にvVolデータを移行できます。
+[ VVol構成のインポートを許可する]*オプションは、VASA Providerサービスが有効になっている場合にのみ表示されます。このオプションを使用すると、ONTAP tools 9.xからONTAP tools 10.4にvVolデータを移行できます。
 
 

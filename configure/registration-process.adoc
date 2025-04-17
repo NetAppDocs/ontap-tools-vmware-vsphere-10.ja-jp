@@ -14,7 +14,7 @@ summary: VASA Providerは、ONTAP tools for VMware vSphereリモートプラグ�
 VASA Providerは、ONTAP tools for VMware vSphereを使用してvCenter Serverインスタンスに登録できます。[VASA Providerの設定]セクションに、選択したvCenter ServerのVASA Providerの登録ステータスが表示されます。
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
+. vSphere Clientにログインします。
 . プラグインセクションで*ショートカット*>* NetApp ONTAP tools *を選択します。
 . [設定]*>*[VASA Provider設定]*を選択します。VASA Providerの登録ステータスは「Not Registered」と表示されます。
 . [登録]*ボタンを選択してVASA Providerを登録します。
@@ -22,8 +22,7 @@ VASA Providerは、ONTAP tools for VMware vSphereを使用してvCenter Server�
 . 登録が完了してページが更新されると、登録されているVASA Providerのステータス、名前、バージョンが表示されます。登録後、登録解除アクションがアクティブになります。
 
 
-* 終了後 *
-
+.次の手順
 vCenterクライアントからオンボードしたVASA Providerが[VASA Provider]の下に表示されていることを確認します。
 
 .手順

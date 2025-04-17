@@ -25,7 +25,7 @@ ONTAP tools for VMware vSphereは、ホストクラスタの保護を管理し�
 
 
 .手順
-. 次のコマンドを使用してvSphere Clientにログインします。 `\https://<vcenterip>/<ui>`
+. vSphere Clientにログインします。
 . ホストクラスタを右クリックし、* NetApp ONTAP tools *>* Protect Cluster *を選択します。
 . [クラスタの保護]ウィンドウで、データストアタイプとソースStorage Virtual Machine（VM）の詳細が自動的に入力されます。[データストア]リンクを選択して保護されているデータストアを表示します。
 . 整合グループ名*を入力します。

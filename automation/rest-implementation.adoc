@@ -22,7 +22,7 @@ REST APIには、vCenterやアグリゲートなど、複数のリソースカ�
 
 == REST API にアクセスする方法
 
-ONTAP tools for VMware vSphere 10 REST APIには、ONTAP toolsのロードバランサのIPアドレスとポートからアクセスできます。完全なURLには、次のようないくつかの部分があります。
+ONTAP tools for VMware vSphere 10 REST APIには、ONTAP toolsのIPアドレスとポートからアクセスできます。完全なURLには、次のようないくつかの部分があります。
 
 * ONTAP toolsのIPアドレスとポート
 * APIバージョン

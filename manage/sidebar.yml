@@ -60,6 +60,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: VASAクリーンアップ
     url: "/manage/delete-virtual-machines.html"
+  - title: 仮想マシンのデータディスクの接続または接続解除
+    url: "/manage/attach-detach-disk.html"
 - title: ストレージシステムとホストを検出
   url: "/configure/discover-storage-systems-and-hosts.html"
 - title: ESXi ホストの設定の変更
@@ -84,7 +86,9 @@ entries:
   url: "/manage/disable-autosupport.html"
 - title: AutoSupportプロキシURLの更新
   url: "/manage/update-proxyurl.html"
-- title: バックアップの作成とセットアップのリカバリ
+- title: NTPサーバの追加
+  url: "/manage/add-ntpserver.html"
+- title: バックアップの作成とONTAP toolsセットアップのリカバリ
   url: "/manage/enable-backup.html"
 - title: ONTAP Tools for VMware vSphereのアンインストール
   url: "/manage/uninstall-deployment.html"
