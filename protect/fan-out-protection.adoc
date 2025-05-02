@@ -38,6 +38,8 @@ summary: ファンアウト保護では、整合性グループは、最初の�
 
 
 |===
+次の図は、ファンアウト保護の構成を示しています。 image:../media/fan-out-protection.png["ファンアウト保護構成"] image:../media/fan-out-protection-relationship.png["ファンアウト保護関係"]
+
 * 手順 *
 
 . 新しいPlace Holderデータストアを作成します。参照先 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["プレースホルダデータストアの選択"]

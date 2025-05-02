@@ -15,11 +15,9 @@ summary: ストレージバックエンドは、ESXiホストがデータスト�
 
 * このタスクについて *
 
-ONTAPクラスタにストレージバックエンドを追加する。vCenterが関連付けられたSVMのテナントとして機能するマルチテナンシーセットアップの場合は、ONTAP tools Managerを使用してクラスタを追加します。グローバルクラスタにストレージバックエンドを追加したら、クラスタを目的のvCenterテナントに関連付ける必要があります。vCenterテナントは、目的のStorage Virtual Machine（SVM）をオンボードする必要があります。これにより、SVMユーザはvVolデータストアをプロビジョニングできます。SVMを使用してvCenterにストレージを追加できます。
+マルチテナンシーのセットアップで、vCenterが関連付けられたSVMのテナントとして機能する場合は、ONTAP tools Managerを使用してクラスタを追加します。ストレージバックエンドをvCenter Serverに関連付けて、オンボードされたvCenter Serverインスタンスにグローバルにマッピングします。vCenterテナントは、目的のStorage Virtual Machine（SVM）をオンボードする必要があります。これにより、SVMユーザはvVolデータストアをプロビジョニングできます。SVMを使用してvCenterにストレージを追加できます。
 
-ローカルクラスタにストレージバックエンドを追加するには、vCenterサーバでONTAP toolsプラグインを使用します。
-
-link:../concepts/ontap-tools-concepts-terms.html["主要な概念と用語"]このセクションで使用される用語の詳細については、を参照してください。
+ONTAP toolsのユーザインターフェイスを使用して、ローカルストレージバックエンドをクラスタまたはSVMのクレデンシャルで追加します。これらのストレージバックエンドは1つのvCenterに限定されます。ローカルでクラスタのクレデンシャルを使用すると、関連付けられたSVMがvCenterに自動的にマッピングされてVVOLまたはVMFSが管理されます。SRAを含むVMFSの管理については、ONTAP toolsではグローバルクラスタを必要とせずにSVMクレデンシャルがサポートされます。
 
 [role="tabbed-block"]
 ====
