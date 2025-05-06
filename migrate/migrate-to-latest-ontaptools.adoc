@@ -51,13 +51,14 @@ NOTE: フェイルオーバーが完了しても再保護が保留中の場合�
 .. Storage Replication Adapter *セクションに移動します。
 .. 省略記号メニューから* Reset configuration *を選択します。
 .. 省略記号メニューから*削除*を選択します。
+
+
+. これらの手順は、保護サイトとリカバリサイトの両方で実行します。
 +
-これらの手順は、保護サイトとリカバリサイトの両方で実行します。
+.. の手順に従って、ONTAP Tools for VMware vSphere 10.4 SRAアダプタをインストールしますlink:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]。
+.. VMware Live Site Recoveryのユーザーインターフェイスページで、*アレイの検出*および*デバイスの検出*操作を実行し、移行前と同じようにデバイスが表示されることを確認します。
 
 
-
-. の手順に従って、ONTAP Tools for VMware vSphere 10.4 SRAアダプタをインストールしますlink:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]。
-. VMware Live Site Recoveryのユーザーインターフェイスページで、*アレイの検出*および*デバイスの検出*操作を実行し、移行前と同じようにデバイスが表示されることを確認します。
 
 
 
@@ -74,6 +75,12 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . 移行するvCenter ServerインスタンスをONTAP tools for VMware vSphere 10.4リリースに追加します。詳細については、を参照してください link:../configure/add-vcenter.html["vCenter Serverインスタンスを追加する"] 。
 . ONTAP toolsプラグイン用のvCenterサーバAPIからローカルにストレージバックエンドをオンボードします。
 . SwaggerまたはPostmanから次のAPIを実行して移行します。
++
+カール- Xポスト https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration[]
+
++
+Swaggerには、次のURLからアクセスできます。https://$FQDN_IP_PORT/,例： https://10.61.25.33:8443/[]
+
 +
 []
 ====
@@ -95,7 +102,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 
 *カールの例*
 
-/api/v1/vcenters/｛vcguid｝/migration-jobs
+カール- Xポスト https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
 
 * JSON入力例*
 
@@ -131,11 +138,11 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ｝
 
 ====
-. 次のURIを使用してステータスを確認します。
+. Swaggerで次のURIを使用してステータスを確認します。
 +
 [listing]
 ----
-https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 +
 ジョブが完了したら、移行レポートを確認します。このレポートはジョブデータに含まれており、ジョブ応答からアクセスできます。
@@ -149,8 +156,8 @@ VASA Providerは削除しないでください。
 +
 古いVASA Providerを停止すると、vCenter ServerはONTAP tools for VMware vSphereにフェイルオーバーします。すべてのデータストアとVMにアクセスし、ONTAP Tools for VMware vSphereからアクセスできます。
 
-. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.4に表示されるのは、データストアの検出ジョブがトリガーされてからで、完了までに最大30分かかることがあります。VMware vSphereプラグインのユーザインターフェイスページのONTAP toolsの[Overview]ページにデータストアが表示されていることを確認します。
-. 次のAPIを使用してパッチの移行を実行します。
+. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.4に表示されるのは、データストアの検出ジョブがトリガーされてからで、完了までに最大30分かかることがあります。VMware vSphereプラグインのユーザインターフェイスページのONTAP toolsの概要ページにデータストアが表示されるかどうかを確認します。
+. SwaggerまたはPostmanで次のAPIを使用してパッチの移行を実行します。
 +
 []
 ====
@@ -172,7 +179,7 @@ VASA Providerは削除しないでください。
 
 *カールの例*
 
-パッチ「/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43
+CURL-Xパッチ https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
 
 * JSON入力例*
 
@@ -205,7 +212,7 @@ NOTE: UUIDは、移行後のAPIに対する応答で返される移行UUIDです
 .次の手順
 移行を完了してONTAP tools 10.4をvCenter Serverに登録したら、次の手順を実行します。
 
-* すべてのホストで証明書を更新します。
+* 検出*が完了するまで待ちます。証明書はすべてのホストで自動的に更新されます。
 * データストアと仮想マシンの処理を開始する前に十分な時間を確保してください。必要な待機時間は、構成内のホスト、データストア、および仮想マシンの数によって異なります。待機しないと、一時的に動作エラーが発生する可能性があります。
 
 

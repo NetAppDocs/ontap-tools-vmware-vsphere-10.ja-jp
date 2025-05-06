@@ -41,7 +41,7 @@ NOTE: IPv4とIPv6のアドレス管理LIFがサポートされます。
 .vSphere Clientユーザインターフェイスを使用
 --
 
-NOTE: vSphere Clientユーザインターフェイスでストレージバックエンドを設定する場合、VVOLデータストアではSVMユーザを直接追加できない点に注意してください。
+NOTE: vSphere Clientユーザインターフェイスでストレージバックエンドを設定する場合、VVOLデータストアではSVMユーザの直接追加はサポートされない点に注意してください。
 
 . vSphere Clientにログインします。
 . ショートカットページで、プラグインセクションの* NetApp ONTAP tools *を選択します。
