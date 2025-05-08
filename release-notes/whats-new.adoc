@@ -18,14 +18,14 @@ ONTAP Tools for VMware vSphere 10.4の新機能について説明します。
 | 更新 | 説明 
 
 
-| クラスタあたり12ノードのASA R2システムのサポート | ONTAP Tools for VMware vSphere 10.4では、クラスタあたり最大12ノードのASA R2ストレージシステムのワークフローがサポートされるため、データ管理の効率と拡張性が向上します。iSCSIおよびFCプロトコルのvVolデータストアと、iSCSI、FC、NVMeプロトコルのVMFSデータストアがサポートされるため、柔軟で強化されたストレージオプションが提供されます。 
+| link:../configure/create-datastore.html["クラスタあたり12ノードのASA R2システムのサポート"] | ONTAP Tools for VMware vSphere 10.4では、クラスタあたり最大12ノードのASA R2ストレージシステムのワークフローがサポートされるため、データ管理の効率と拡張性が向上します。iSCSIおよびFCプロトコルのvVolデータストアと、iSCSI、FC、NVMeプロトコルのVMFSデータストアがサポートされるため、柔軟で強化されたストレージオプションが提供されます。 
 
 
-| ONTAP tools Managerユーザインターフェイスの機能拡張 | ONTAP tools Managerインターフェイスから、NTPサーバを有効にして環境全体の正確な時刻を同期し、システムパフォーマンスを監視および分析するためのテレメトリ設定を構成できるようになりました。これらの設定はメンテナンスコンソールでは使用できなくなります。 
+| link:../manage/add-ntpserver.html["ONTAP tools Managerユーザインターフェイスの機能拡張"] | ONTAP tools Managerインターフェイスから、NTPサーバを有効にして環境全体の正確な時刻を同期し、システムパフォーマンスを監視および分析するためのテレメトリ設定を構成できるようになりました。これらの設定はメンテナンスコンソールでは使用できなくなります。 
 
 
 | セキュリティ機能の強化 | セキュリティ機能により、保護と業界標準への準拠が強化され、管理者がVMware環境をより効果的に管理できるように、堅牢で使いやすいエクスペリエンスが提供されます。 
 
 
-| SRAディザスタリカバリ機能の強化 | ONTAP Tools for VMware vSphere 10.4では、SnapMirrorでスケジュールされたSnapshotコピーに加えて、Site Recovery Appliance（SRA）とカスタム名のSnapshotを使用したディザスタリカバリ処理がサポートされるようになりました。 
+| link:../protect/enable-storage-replication-adapter.html["SRAディザスタリカバリ機能の強化"] | ONTAP Tools for VMware vSphere 10.4では、SnapMirrorでスケジュールされたSnapshotコピーに加えて、Site Recovery Appliance（SRA）とカスタム名のSnapshotを使用したディザスタリカバリ処理がサポートされるようになりました。 
 |===

@@ -14,7 +14,7 @@ summary: ストレージデータを移行する際、ストレージバック�
 ストレージデータの移行時には、REST APIを使用してストレージバックエンドを手動でオンボードします。VASA Providerのデータ移行では、既存のDerbyデータベースからデータをエクスポートし、MongoDBデータベースにインポートします。
 
 
-NOTE: ONTAP Tools for VMware vSphere 9.XXからの移行は、VASA ProviderとVVOLを使用する場合にのみ必要です。
+NOTE: ONTAP Tools for VMware vSphere 9.XXからの移行は、VASA ProviderとVVOLを使用する場合にのみ必要です。NFSデータストアとVMFSデータストアは、ストレージ検出プロセスで検出されます。
 
 
 NOTE: ONTAP tools for VMware vSphere 9.xから10.4に移行すると、NVMe/FCプロトコルを使用するvVolデータストアが動作しなくなります。これは、ONTAP tools 10.4がNVMe-oFプロトコルをサポートするのはVMFSデータストアのみであるためです。
