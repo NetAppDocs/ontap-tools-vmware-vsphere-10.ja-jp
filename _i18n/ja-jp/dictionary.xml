@@ -898,7 +898,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="810eb1be62c2223bbb6ff683af2508bd" category="paragraph">次の表に、ONTAP tools for VMware vSphereを使用したVMware Live Site Recoveryインスタンスごとにサポートされる数を示します。</block>
   <block id="beadd6cb6100e1a0cce84603ccb7105a" category="paragraph">次の表に、VMware Live Site Recoveryの数と、VMware vSphereの導入規模に対応するONTAPツールを示します。</block>
   <block id="df0d7eb56e12922cca30035472c40aa7" category="cell">* VMware Live Site Recoveryインスタンスの数*</block>
-  <block id="de7cd16aa682868ad900edd519b06059" category="list-text">VMware Live Site Recovery構成の管理ページに移動します。</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA\）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM\）が連携できるようにすることができます。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM）の間のやり取りを有効にすることができます。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">VMware Live Site Recoveryで保護対象サイトとリカバリサイトをペアリングしておく必要があります。</block>
@@ -1497,15 +1496,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6a56526090ecb77854d07be849799242" category="paragraph">MPIO設定では、NetAppストレージシステムの優先パスを定義します。また、使用可能なパスのうちどのパスが最適化されているか（インターコネクトケーブルを経由する非最適化パスではなく）が判断され、そのいずれかのパスに優先パスが設定されます。</block>
   <block id="89f7633ad6a1e114cebf9902aa42fd5c" category="paragraph">NFS vStorage API for Array Integration（NFS VAAI）プラグインは、VMware vSphereとNFSストレージアレイを統合するソフトウェアコンポーネントです。ONTAP tools for VMware vSphereを使用してNFS VAAIプラグインをインストールし、NFSストレージアレイの高度な機能を活用して、特定のストレージ関連処理をESXiホストからストレージアレイ自体にオフロードします。</block>
   <block id="f9fcb823ee6471ecceb63c9625d2c8fc" category="list-text">インストールパッケージをダウンロードし<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block>ます。</block>
-  <block id="e27bb3e78ef59cd560e56215a182f3b3" category="list-text">ESXiホスト7.0U3の最新のパッチ以降のバージョンとONTAP 9.14.1以降のバージョンがあることを確認します。</block>
   <block id="a585389d21dd9fbdbdc15072bd5d7010" category="list-text">NFSデータストアをマウント</block>
-  <block id="3efe2db5c0b83bc2774d6061359381ed" category="list-text">DataMover.HardwareAcceleratedMove、DataMover.HardwareAcceleratedInit、およびVMFS3.HardwareAcceleratedLockingのホスト設定の値を「1」に設定します。これらの値を自動的に設定するには、EXSiホストの推奨設定を適用します。を参照してください <block ref="a13757a488cc72436349db8983ce6613" category="inline-link-macro-rx"></block>。</block>
-  <block id="957daa20d20cf15a7839d7e44ecdb2ab" category="list-text">vserver nfs modify -vserver vserver_name -vstorage enabledコマンドを使用して、Storage Virtual Machine（SVM）でvstorageオプションを有効にします。</block>
-  <block id="d5676260c3a3d58c4d9ebd79f3558bac" category="list-text">vSphere 7.0U3の最新のパッチリリースがインストールされていることを確認します。</block>
   <block id="0e57b7b27807ae2427ad1a654eca765e" category="list-text">[設定]*&gt;*[NFS VAAIツール]*を選択します。</block>
   <block id="75650b415bb2c723c71117c59992e489" category="list-text">[ESXiホストにインストール]*を選択し、NFS VAAIプラグインをインストールするESXiホストを選択して、*[インストール]*を選択します。</block>
   <block id="681ca77b2652713f7e6d867f281733ec" category="paragraph">プラグインのインストールに適したESXiホストのみが表示されます。インストールの進捗状況は、vSphere Web Clientの[Recent tasks]セクションで監視できます。</block>
-  <block id="4969bf5d68bb071342161a9b29a23f5c" category="list-text">インストールの完了後にESXiホストを手動で再起動する必要があります。</block>
   <block id="d15e664257aa2207434ef9543a593a8d" category="paragraph">VMware管理者がESXiホストを再起動すると、ONTAP Tools for VMware vSphereによってNFS VAAIプラグインが自動的に検出されて有効になります。</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">次の手順</block>
   <block id="90ba1578c2c367413063e7228d8586b5" category="paragraph">NFS VAAIプラグインをインストールしてESXiホストをリブートしたら、VAAIコピーオフロード用の正しいNFSエクスポートポリシーを設定する必要があります。NFS環境でVAAIを設定する場合は、次の要件を考慮してエクスポートポリシールールを設定します。</block>
@@ -1594,7 +1588,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">ONTAP Tools for VMware vSphereを管理します。</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">ONTAP Tools for VMware vSphereのアップグレード</block>
   <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">VASA Providerは、ONTAP tools for VMware vSphereを使用してvCenter Serverインスタンスに登録できます。[VASA Providerの設定]セクションに、選択したvCenter ServerのVASA Providerの登録ステータスが表示されます。</block>
-  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">VASA Providerの名前を入力し、ONTAP tools for VMware vSphereアプリケーションのユーザクレデンシャルを指定して、*[登録]*を選択します。</block>
   <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">登録が完了してページが更新されると、登録されているVASA Providerのステータス、名前、バージョンが表示されます。登録後、登録解除アクションがアクティブになります。</block>
   <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">VASA Providerサービスの受信通信用のパススルーポートです。VASA Providerの自己署名証明書とカスタムCA証明書はこのポートでホストされています。</block>
   <block id="131790b08b90f216c8731a6e1a071001" category="cell">このポートは、VASA Providerサービスで内部的に使用されるサービスポートです。</block>
@@ -1624,7 +1617,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="949ade5949e752c9b4f748b78767cb9b" category="admonition">ワークフローを容易にするため、ほとんどの入力オプションにはノード1のネットワークの詳細があらかじめ入力されています。ただし、ウィザードの最終ページに移動する前に、入力データを編集できます。他の2つのノードのIPv6アドレスの詳細を入力できるのは、最初のノードでIPv6アドレスが有効になっている場合のみです。</block>
   <block id="5a3dd06e1dba58a23c8b8e8cc1b07e40" category="list-text">[概要]*セクションで詳細を確認し、*変更を保存*します。</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">ONTAP Tools for VMware vSphereサービスを有効にする</block>
-  <block id="8c0d7661d66e379665cc68d77a595468" category="paragraph">サービスを初めて有効にするときは、VASA ProviderとSRAのクレデンシャルを作成する必要があります。これらは、vCenter ServerでVASA ProviderサービスとSRAサービスを登録または有効にするために使用します。</block>
   <block id="7e436228231add180554f1acd06b74fc" category="admonition">オプションのサービスを無効にする前に、ONTAP toolsで管理されているvCenter Serverでオプションのサービスが使用されていないことを確認してください。</block>
   <block id="ef1116c9ce2e3567875a69b012a5c5d8" category="list-text">ホストクラスタが統一された構成で保護されている場合、データストアのマウントオプションは無効になります。</block>
   <block id="f234e66a493b1542c97d72433c0faca6" category="paragraph">ONTAP tools for VMware vSphereでは、[Configure]タブにデータストアとそのボリュームのONTAPストレージ側ビューが表示されます。</block>
@@ -1991,7 +1983,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1870a2aa0cd0290ddebdd4f60c121814" category="list-text">[Datastore name]*と[Protocol]*の情報を入力します。</block>
   <block id="44a6b64ae3a7fef2f349f72cf3e32eb2" category="admonition">ASA R2システムでは、VVOLのiSCSIプロトコルとFCプロトコルがサポートされます。</block>
   <block id="8dde1f10223f65a679d998e569d238c3" category="list-text">データストアを作成するStorage VMを選択します。</block>
-  <block id="80d67086677891099603cd75cd0a26e8" category="list-text">NFSプロトコルのカスタムエクスポートポリシーを選択するか、iSCSIプロトコルとFCプロトコルのカスタムイニシエータグループ名を*[アドバンストオプション]*で選択します。</block>
   <block id="fd81895c9b4eb40921c7e241c091a1cd" category="admonition">ASA R2ストレージシステムタイプがSVMの場合、データストアは単なる論理コンテナであるため、ストレージユニット（LUN /ネームスペース）は作成されません。</block>
   <block id="e31f7e9745380863f95d73e48e2fabbf" category="list-text">[ストレージ属性]*ペインで、新しいボリュームを作成するか、既存のボリュームを使用できます。ただし、これら2種類のボリュームを組み合わせてVVOLデータストアを作成することはできません。</block>
   <block id="39355798de4906f96b13a31fd76a15e6" category="paragraph">新しいボリュームを作成するときに、データストアでQoSを有効にすることができます。デフォルトでは、LUNが作成される要求ごとに1つのボリュームが作成されます。この手順は、ASA R2ストレージシステムを使用するvVolデータストアには適用されません。</block>
@@ -2001,7 +1992,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="002da57ee8bba82828c8058c7d6cfecf" category="list-text">[名前とプロトコル]*ペインに、データストア名、サイズ、およびプロトコルの情報を入力します。詳細オプションで*[データストアクラスタ]*および*[Kerberos認証]*を選択します。</block>
   <block id="8d4768d2ffaf314b3ea87a21a27f7ec4" category="admonition">Kerberos認証は、NFS 4.1プロトコルが選択されている場合にのみ使用できます。</block>
   <block id="7b2c27e8d2aac8a15e90a619cd860d4d" category="list-text">[ストレージ]ペインで*[プラットフォーム]*と*[Storage VM]*を選択します。</block>
-  <block id="b48e3fbf26333d26d1456ba93f1a6c8f" category="list-text">必要に応じて、アドバンストオプションで*[カスタムエクスポートポリシー]*を選択しますが、推奨されません。使用する場合は、すべてのオブジェクトに対してvCenterで検出を実行してください。</block>
   <block id="97e5c74d2bd0f78816caf0c5c9036a82" category="admonition">SVMのデフォルト/ルートボリュームポリシーを使用してNFSデータストアを作成することはできません。</block>
   <block id="42d1ce422f23ede57a5c2e13f8855890" category="list-text">アドバンストオプションの*[非対称]*トグルボタンは、プラットフォームのドロップダウンでパフォーマンスまたは容量が選択されている場合にのみ表示されます。</block>
   <block id="fa6c3148403311b0d64dfc44a5925b3a" category="list-text">プラットフォームのドロップダウンで*[いずれか]*オプションを選択すると、プラットフォームフラグまたは非対称フラグに関係なくvCenterに属しているSVMが表示されます。</block>
@@ -2214,7 +2204,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">IPv4はノード設定のIPアドレスコンポーネントで、デバッグやメンテナンスの目的でノードの診断シェルやSSHアクセスを有効にするために使用できます。</block>
   <block id="b2594cd127874498d2bbfa55ff19c5f5" category="cell">ONTAP toolsの内部通信用仮想IPアドレス</block>
   <block id="a9919517205886b598c13e9032a09059" category="paragraph">ストレージデータの移行時には、REST APIを使用してストレージバックエンドを手動でオンボードします。VASA Providerのデータ移行では、既存のDerbyデータベースからデータをエクスポートし、MongoDBデータベースにインポートします。</block>
-  <block id="9060074cf56d9aadb36767f42ea21b34" category="admonition">ONTAP tools for VMware vSphere 9.xから10.4に移行すると、NVMe/FCプロトコルを使用するvVolデータストアが動作しなくなります。これは、ONTAP tools 10.4がNVMe-oFプロトコルをサポートするのはVMFSデータストアのみであるためです。</block>
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">ONTAP tools for VMware vSphere 9.12D1、9.13D2、9.13P2リリースからONTAP tools for VMware vSphere 10.4に移行することができます。</block>
   <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">パッチリリースにアップグレードする前に、現在のONTAP toolsの導入環境をバックアップしておく必要があります。</block>
   <block id="bf24d37a98e4819aab4f021ae207e4a2" category="list-text">移行するvCenter ServerインスタンスをONTAP tools for VMware vSphere 10.4リリースに追加します。詳細については、を参照してください <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block> 。</block>
@@ -2222,7 +2211,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="46ec37b71ccf8c993dcbf7cb78fe2af7" category="admonition">フェイルオーバーが完了しても再保護が保留中の場合は、移行を開始しないでください。移行を続行する前に、再保護プロセスが完了していることを確認してください。テストフェイルオーバーを実行中の場合は、テストフェイルオーバーをクリーンアップして移行を開始します。</block>
   <block id="da2f48d729eae4ca1010b4a077b66b02" category="list-text">VMware Site RecoveryでONTAP tools SRAアダプタfor VMware vSphere 9.xxを削除するには、次の手順を実行します。</block>
   <block id="b2c26a87d051d5889e6d2e4ab1fc79de" category="list-text">Storage Replication Adapter *セクションに移動します。</block>
-  <block id="b80a5fe26546f4090c014df2108347ab" category="list-text">省略記号メニューから* Reset configuration *を選択します。</block>
   <block id="1ab7bd22ce5077185a70517ea0db34ec" category="list-text">省略記号メニューから*削除*を選択します。</block>
   <block id="63fbd3cb55ffabae3747cd50140f1b47" category="list-text">の手順に従って、ONTAP Tools for VMware vSphere 10.4 SRAアダプタをインストールします<block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block>。</block>
   <block id="e3e32085ef48d00b185f9ae05a428520" category="list-text">VMware Live Site Recoveryのユーザーインターフェイスページで、*アレイの検出*および*デバイスの検出*操作を実行し、移行前と同じようにデバイスが表示されることを確認します。</block>
@@ -2272,8 +2260,18 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="8bf7814538fb554d339918e8af1041b7" category="cell">*ノードあたりシックプロビジョニングされたディスクスペース（GB）*</block>
   <block id="8e1b11ef4c2ef1e1f2b2b515cc7d496b" category="cell">大規模なメモ：大規模な導入はHA構成専用です。</block>
   <block id="1e1982b2e5b48af62e0f42cbc47ece79" category="admonition">バックアップを有効にすると、VMが導入されているデータストアに、各ONTAP toolsクラスタにさらに50GBのスペースが必要になります。したがって、非HAには400GBが必要で、HAには合計1100GBのスペースが必要です。</block>
-  <block id="6b20aec4ce81da173c6f34628ae6d34d" category="admonition">ONTAP Tools for VMware vSphere 9.XXからの移行は、VASA ProviderとVVOLを使用する場合にのみ必要です。NFSデータストアとVMFSデータストアは、ストレージ検出プロセスで検出されます。</block>
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
+  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">アドバンストオプションで、NFSプロトコルには*[カスタムエクスポートポリシー]*を、iSCSIプロトコルとFCプロトコルにはカスタムのイニシエータグループ名を選択できますが、この設定は推奨されません。このオプションを使用する場合は、すべてのオブジェクトに対してvCenterで検出を実行してください。</block>
+  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">アドバンストオプションでカスタムのエクスポートポリシーを選択することもできますが、この方法は推奨されません。使用する場合は、すべてのオブジェクトに対してvCenterで検出を実行してください。</block>
+  <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">ESXiホストとvSphere 7.0U3の最新のパッチ以降のバージョンとONTAP 9.14.1以降のバージョンがあることを確認します。</block>
+  <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">インストール後にESXiホストを手動で再起動します。</block>
+  <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">VASA Providerの名前とクレデンシャルを入力します。ユーザ名に使用できる文字は、アルファベット、数字、アンダースコアだけです。パスワードは8~256文字にする必要があります。</block>
+  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">[*Register] を選択します。</block>
+  <block id="7589490ed5e2b68e2f28beb45ecf3fca" category="paragraph">サービスを初めて有効にするときは、VASA ProviderとSRAのクレデンシャルを作成する必要があります。これらは、vCenter ServerでVASA ProviderサービスとSRAサービスを登録または有効にするために使用します。ユーザ名に使用できる文字は、アルファベット、数字、アンダースコアだけです。パスワードは8~256文字にする必要があります。</block>
+  <block id="67b08defea5ec6059f6e7c54a1da7e7d" category="admonition">ONTAP tools for VMware vSphere 9から10.4に移行すると、NVMe/FCプロトコルを使用するvVolデータストアが動作しなくなります。これは、ONTAP tools 10.4がNVMe-oFプロトコルをサポートするのはVMFSデータストアのみであるためです。</block>
+  <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">VMware Live Site Recovery構成管理ページに移動します。</block>
+  <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">省略記号メニューから* Reset configuration *を選択します。</block>
+  <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">ONTAP tools for VMware vSphere 9からの移行が必要なのは、VASA ProviderとVVOLを使用する場合のみです。NFSデータストアとVMFSデータストアは、ストレージ検出プロセスで検出されます。</block>
 </blocks>
