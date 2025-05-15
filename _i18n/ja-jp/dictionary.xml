@@ -211,14 +211,12 @@
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">ESXiホストの値の設定</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">ESXi ホストでは、次の値を設定できます。</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">HBA / CNAアダプタ設定</block>
-  <block id="d3c41b5a4cf556f3a598cc1221e08ee4" category="paragraph">NetAppストレージシステムに推奨されるHBAタイムアウト設定を設定します。</block>
   <block id="c803cf4eb4cbf3a6b12b1e1cc3443970" category="section-title">MPIO設定</block>
   <block id="5fc0e54193f8c3ad7e67febc376fc805" category="section-title">NFS 設定</block>
   <block id="5f115b5221541c527e67a2b71da5fb5d" category="list-text">サイドバーから[vCenter]を選択します。</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">ONTAP tools for VMware vSphereを使用して、NetApp NFS Plug-in for VMware vStorage APIs for Array Integration\（VAAI\）をインストールできます。</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">NFS VAAI プラグインをインストールします</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">NetApp NFS Plug-in for VMware VAAI</block>
-  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">vSphere 8.xは、NetApp NFS VAAIプラグイン2.0.1（ビルド16）でサポートされます。</block>
   <block id="42e4695fefd280ddc3a6f11124586510" category="list-text">VAAIプラグインをvCenter Serverにアップロードしたら、* Existing version *セクションで* Change *を選択します。VAAIプラグインがvCenter Serverにアップロードされていない場合は、*[アップロード]*ボタンを選択します。</block>
   <block id="062e7967273cea76dff9c3579a0c44db" category="doc">VASA ProviderをvCenter Serverインスタンスに登録する</block>
   <block id="3f95368adb4475e89e1f4206049b54ad" category="summary">VMware 仮想ボリューム（ vvols ）データストアは、 Mount VVOLs Datastore （ VVol データストアのマウント）ダイアログボックスを使用して、 1 つ以上の追加のホストにマウントできます。データストアをマウントすると、他のホストからストレージにアクセスできるようになります。vVolデータストアをアンマウントできるのは、APIを使用する場合のみです。</block>
@@ -1373,14 +1371,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="34708a7ee3c666f413240fedba4b042a" category="cell">このカードには、上位10個のデータストアがパフォーマンス指標でソートされて表示されます。ヘッダーを選択すると、選択した指標の上位10個のデータストアを昇順または降順でソートして表示できます。カードで行われたソートとフィルタリングの変更は、ブラウザキャッシュを変更またはクリアするまで保持されます。[Datastore type]ドロップダウンで、データストアのタイプ（NFS、VMFS、またはVVOL）を選択できます。</block>
   <block id="4c2183bca6b89d1820fb11f5a1d938c8" category="cell">このカードには、すべてのESXiホスト（選択したvCenterの）設定の、推奨されるNetAppホスト設定に関する全体的な準拠ステータスが設定グループ/カテゴリ別に表示されます。[推奨設定の適用]*リンクを選択すると、推奨設定を適用できます。ホストの準拠ステータスを選択すると、ホストのリストを表示できます。</block>
   <block id="62938ab037901a948099ef101beec571" category="list-text">検出されたストレージコントローラのうち、ステータスがのものを選択し<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block>、*[操作]*&gt;*[変更]*を選択します。</block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="cell">パラメータ</block>
   <block id="c77eb099ccd3a59aa3a56c3c98c84669" category="cell">設定する値</block>
   <block id="117704664d6cada78ac3107380f63d23" category="cell">Disk.QFullSampleSize</block>
-  <block id="07b21acb18ec7b34bd91453e33448369" category="cell">すべての構成で32。この値を設定すると、I/Oエラーを回避できます。</block>
   <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">Disk.QFullThreshold</block>
-  <block id="ed6604a4485d16e1285db04ae3d4279f" category="cell">8（すべての構成）この値を設定すると、I/Oエラーを回避できます。</block>
   <block id="19c08de7404551288e1274186e039ef4" category="cell">Emulex FC HBAタイムアウト</block>
-  <block id="6ea7e3b1d2b04c77c55309b1aaa41f8c" category="cell">デフォルト値。</block>
   <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">QLogic FC HBAタイムアウト</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">パラメータ</block>
   <block id="c3b49a515dd0046685e06092642aa139" category="cell">Net.TcpipHeapSize</block>
@@ -2263,8 +2257,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
-  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">アドバンストオプションで、NFSプロトコルには*[カスタムエクスポートポリシー]*を、iSCSIプロトコルとFCプロトコルにはカスタムのイニシエータグループ名を選択できますが、この設定は推奨されません。このオプションを使用する場合は、すべてのオブジェクトに対してvCenterで検出を実行してください。</block>
-  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">アドバンストオプションでカスタムのエクスポートポリシーを選択することもできますが、この方法は推奨されません。使用する場合は、すべてのオブジェクトに対してvCenterで検出を実行してください。</block>
   <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">ESXiホストとvSphere 7.0U3の最新のパッチ以降のバージョンとONTAP 9.14.1以降のバージョンがあることを確認します。</block>
   <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">インストール後にESXiホストを手動で再起動します。</block>
   <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">VASA Providerの名前とクレデンシャルを入力します。ユーザ名に使用できる文字は、アルファベット、数字、アンダースコアだけです。パスワードは8~256文字にする必要があります。</block>
@@ -2274,4 +2266,9 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">VMware Live Site Recovery構成管理ページに移動します。</block>
   <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">省略記号メニューから* Reset configuration *を選択します。</block>
   <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">ONTAP tools for VMware vSphere 9からの移行が必要なのは、VASA ProviderとVVOLを使用する場合のみです。NFSデータストアとVMFSデータストアは、ストレージ検出プロセスで検出されます。</block>
+  <block id="395ddb6ca1b9948e32145f8fa1a9201e" category="paragraph">次のパラメータをデフォルト値に設定します。</block>
+  <block id="be34be4d53796d7420ca7e08ae84df3e" category="list-text">詳細オプション（advanced options）で：</block>
+  <block id="bb18d56459266886917f70dbe8e01ef4" category="list-text">[カスタムエクスポートポリシー]*を選択した場合は、すべてのオブジェクトに対してvCenterで検出を実行してください。このオプションは使用しないことをお勧めします。</block>
+  <block id="0b3b86369c55c3299fc4f945d3cc9a8c" category="list-text">iSCSIプロトコルとFCプロトコルには* Custom initiator group * nameを選択できます。</block>
+  <block id="91756c37ce937828e162f58ca53f85a0" category="list-text">詳細オプションで*[カスタムエクスポートポリシー]*を選択した場合は、すべてのオブジェクトに対してvCenterで検出を実行します。このオプションは使用しないことをお勧めします。</block>
 </blocks>
