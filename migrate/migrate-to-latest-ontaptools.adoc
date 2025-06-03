@@ -156,7 +156,7 @@ VASA Providerは削除しないでください。
 +
 古いVASA Providerを停止すると、vCenter ServerはONTAP tools for VMware vSphereにフェイルオーバーします。すべてのデータストアとVMにアクセスし、ONTAP Tools for VMware vSphereからアクセスできます。
 
-. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.4に表示されるのは、データストアの検出ジョブがトリガーされてからで、完了までに最大30分かかることがあります。VMware vSphereプラグインのユーザインターフェイスページのONTAP toolsの概要ページにデータストアが表示されるかどうかを確認します。
+. ONTAP tools for VMware vSphere 9.xxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.4に表示されるのは、データストアの検出ジョブがトリガーされてからで、完了までに最大30分かかることがあります。VMware vSphere プラグインのユーザー インターフェイス ページの ONTAP ツールの概要ページにデータストアが表示されていることを確認します。
 . SwaggerまたはPostmanで次のAPIを使用してパッチの移行を実行します。
 +
 []
