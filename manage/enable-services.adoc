@@ -26,6 +26,6 @@ ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP t
 NOTE: オプションのサービスを無効にする前に、ONTAP toolsで管理されているvCenter Serverでオプションのサービスが使用されていないことを確認してください。
 
 +
-[ VVol構成のインポートを許可する]*オプションは、VASA Providerサービスが有効になっている場合にのみ表示されます。このオプションを使用すると、ONTAP tools 9.xからONTAP tools 10.4にvVolデータを移行できます。
+[ VVol構成のインポートを許可する]*オプションは、VASA Providerサービスが有効になっている場合にのみ表示されます。このオプションを使用すると、ONTAP tools 9.xxからONTAP tools 10.4にvVolデータを移行できます。
 
 

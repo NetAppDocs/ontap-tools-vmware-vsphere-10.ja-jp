@@ -2,7 +2,7 @@
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: ONTAP tools for VMware vSphereを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件を理解しておく必要があります。 
+summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。 
 ---
 = ONTAP tools for VMware vSphere導入の前提条件
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphereを導入する前に、導入パッケ�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件を理解しておく必要があります。
+VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。
 
 ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vCSA）で使用できます。ONTAP Tools for VMware vSphereは、ESXiシステムを含むサポートされているvSphere Clientに導入する必要があります。
 
@@ -68,7 +68,7 @@ NOTE: バックアップを有効にすると、VMが導入されているデー
 | OVAアプリケーション | 10.4 
 
 
-| ONTAP tools仮想マシンを導入するためのESXiホスト | 7.0、7.0U1、7.0U2、7.0U3、8.0、8.0U1、および8.0U3 
+| ONTAP tools仮想マシンを導入するためのESXiホスト | 7.0U3と8.0U3 
 
 
 | ONTAP tools仮想マシンを導入するためのvCenter Server | 7.0および8.0 
