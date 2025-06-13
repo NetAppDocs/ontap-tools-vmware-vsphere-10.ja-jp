@@ -2236,7 +2236,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">最初のノード VM から VMware vSphere の展開タイプ用の ONTAP ツールを決定します。</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">vCenter Serverで、ディザスタリカバリサービス（DRS）の自動化レベルを「部分自動化」に設定します。HAを導入した後、完全自動化に戻します。</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">HA セットアップ内のノード ホスト名は小文字にする必要があります。</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">バックアップ頻度の値を10~60分で入力します。</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">VMware vSphere HA 導入用の ONTAP ツールの場合、最初のノード (node1) のメンテナンス コンソールのユーザー パスワードを変更する必要があります。</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">MPIO 設定は、NVMe、NVMe/FC、NVMe/TCP プロトコルには適用されません。</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">VASA Providerは、ONTAP tools for VMware vSphereを使用してvCenter Serverインスタンスに登録できます。[VASA Providerの設定]セクションに、選択したvCenter ServerのVASA Providerの登録ステータスが表示されます。マルチ vCenter 展開では、各 vCenter Server インスタンスにカスタム CA 証明書があることを確認します。</block>
@@ -2277,4 +2276,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">ONTAP Tools for VMware vSphere 9.xxを10.4に移行</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">VMware vSphere の最新の ONTAP ツールへの移行</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">VASA プロバイダーと SRA の移行</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">バックアップ頻度の値を 5 ～ 60 分の範囲で入力します。</block>
 </blocks>
