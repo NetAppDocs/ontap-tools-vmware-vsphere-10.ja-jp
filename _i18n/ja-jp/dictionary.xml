@@ -2279,7 +2279,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">バックアップ頻度の値を 5 ～ 60 分の範囲で入力します。</block>
   <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">VMware vSphere の ONTAP ツールにおける igroup とエクスポート ポリシーを理解する</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">イニシエータグループ（igroup）は、FCプロトコルホストのワールドワイドポート名（WWPN）またはiSCSIホストの修飾ノード名（Qualified Node Name）のテーブルです。igroupを定義してLUNにマッピングすることで、どのイニシエータがLUNにアクセスできるかを制御できます。</block>
-  <block id="fc5f47745f7c061ae1196d24f351c7b6" category="paragraph">vCenter内の各データストアは親igroupに関連付けられ、各ホストはその親igroupの下にある子igroupにリンクされています。ユーザー定義の名前を持つカスタム親igroupを定義し、複数のデータストア間で再利用することで、igroupをより柔軟かつ相互接続された形で管理できます。以下の例に示すように、ワークフローによって生成されるigroup構成は異なります。</block>
   <block id="ae993cdc1fd6c1873ab68a1c6ee58ead" category="admonition">記載されている名前は説明のみを目的としており、実際のigroup名を指すものではありません。ONTAPツールで管理されるigroupでは、プレフィックス「otv_」が使用されます。カスタムigroupには任意の名前を付けることができます。</block>
   <block id="cf5f3091e30dee6597885d8c0e0c357f" category="cell">期間</block>
   <block id="1b63a2eb7e8a70cf1b8b669bc150e401" category="cell">DS&lt;番号&gt;</block>
@@ -2375,4 +2374,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bb53c6c29f127a298da7dd86bf00bb89" category="inline-link">エクスポートポリシーを作成する</block>
   <block id="c7196e0d279885126e6f1c8cf1f7195f" category="paragraph"><block ref="c7196e0d279885126e6f1c8cf1f7195f" category="inline-link-rx"></block></block>
   <block id="d416ef8edb2844634dbe8cfff2e77f9a" category="sidebar">igroupとエクスポートポリシーを理解する</block>
+  <block id="138a039e4dddf6a33f72d3080556a984" category="paragraph">VMware vSphere 9.x 向け ONTAP ツールでは、igroup はフラットな構造で作成および管理され、vCenter 内の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストア間での igroup の柔軟性と再利用性が制限されていました。VMwarevSphere 10.x 向け ONTAP ツールでは、ネストされた igroup が導入されています。vCenter 内の各データストアは親 igroup に関連付けられ、各ホストはその親の下にある子 igroup にリンクされます。VMwareユーザー定義の名前を持つカスタム親igroupを定義し、複数のデータストア間で再利用することで、igroupをより柔軟かつ相互接続された形で管理できます。vSphere 向け ONTAP ツールで LUN とデータストアを効果的に管理するには、igroup のワークフローを理解することが不可欠です。以下の例に示すように、ワークフローによって生成されるigroup構成は異なります。</block>
 </blocks>
