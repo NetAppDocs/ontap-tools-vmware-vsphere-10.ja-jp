@@ -2277,4 +2277,102 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">VMware vSphere の最新の ONTAP ツールへの移行</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">VASA プロバイダーと SRA の移行</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">バックアップ頻度の値を 5 ～ 60 分の範囲で入力します。</block>
+  <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">VMware vSphere の ONTAP ツールにおける igroup とエクスポート ポリシーを理解する</block>
+  <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">イニシエータグループ（igroup）は、FCプロトコルホストのワールドワイドポート名（WWPN）またはiSCSIホストの修飾ノード名（Qualified Node Name）のテーブルです。igroupを定義してLUNにマッピングすることで、どのイニシエータがLUNにアクセスできるかを制御できます。</block>
+  <block id="fc5f47745f7c061ae1196d24f351c7b6" category="paragraph">vCenter内の各データストアは親igroupに関連付けられ、各ホストはその親igroupの下にある子igroupにリンクされています。ユーザー定義の名前を持つカスタム親igroupを定義し、複数のデータストア間で再利用することで、igroupをより柔軟かつ相互接続された形で管理できます。以下の例に示すように、ワークフローによって生成されるigroup構成は異なります。</block>
+  <block id="ae993cdc1fd6c1873ab68a1c6ee58ead" category="admonition">記載されている名前は説明のみを目的としており、実際のigroup名を指すものではありません。ONTAPツールで管理されるigroupでは、プレフィックス「otv_」が使用されます。カスタムigroupには任意の名前を付けることができます。</block>
+  <block id="cf5f3091e30dee6597885d8c0e0c357f" category="cell">期間</block>
+  <block id="1b63a2eb7e8a70cf1b8b669bc150e401" category="cell">DS&lt;番号&gt;</block>
+  <block id="8a5227cc82d14862956938caffc1acf2" category="cell">データストア</block>
+  <block id="95a16b532fa8ed9188599929af9e5262" category="cell">iqn&lt;番号&gt;</block>
+  <block id="edb0132f304c760893f41c94545adda7" category="cell">イニシエータIQN</block>
+  <block id="41ec3b4baa8c2ac4670f3d8b342745f4" category="cell">ホスト&lt;番号&gt;</block>
+  <block id="eebd7b1ed737a71cd20f07184995f2d6" category="cell">ホストMoRef</block>
+  <block id="94c6c072c97f90138ebb2ee074be8600" category="cell">lun&lt;数値&gt;</block>
+  <block id="77863eecd3628172144d619c2f03fb64" category="cell">LUN ID</block>
+  <block id="b989cbd0eba5a3051041de7edfa979e5" category="cell">&lt;DSName&gt;Igroup&lt;番号&gt;</block>
+  <block id="d8cba531cf36a19013999be13aebec3a" category="cell">デフォルト（ONTAPツール管理）の親igroup</block>
+  <block id="3dc1d1c3dce65c0c38318e1ebbcd4dee" category="cell">&lt;Host-Moref&gt;Igroup&lt;番号&gt;</block>
+  <block id="7373da93b05c2b988adcaa5fbf0edfcc" category="cell">子igroup</block>
+  <block id="4bd15973d38707ac9b65aaf3f989ed0f" category="cell">CustomIgroup&lt;数値&gt;</block>
+  <block id="a81c9d5d7cdd61b993abfc37eaf551db" category="cell">ユーザー定義のカスタム親 igroup</block>
+  <block id="c9addbf487b919c868ba38bce10c0fec" category="cell">ClassicIgroup&lt;番号&gt;</block>
+  <block id="b6c271eb9e2a9392b22e2be5c7aa3614" category="cell">ONTAP ツール 9.x バージョンで使用される igroup。</block>
+  <block id="0b7b29d7656d8d29ec3286a241de010e" category="paragraph-title">例1：</block>
+  <block id="f55636419489fc39d90e3b2ec66d66d1" category="paragraph">1つのイニシエータを持つ単一のホスト上にデータストアを作成する</block>
+  <block id="239346122912a11ed5cbb915016a28e3" category="paragraph">*ワークフロー*: [作成] DS1 (lun1): host1 (iqn1)</block>
+  <block id="184e7557d37448b68814a3826b88604b" category="paragraph">*結果*：</block>
+  <block id="29792d8650120f6afd7c0ece95876b79" category="list-text">DS1Igroup：</block>
+  <block id="337504141d62bdffc7f0b1a0e1bb16af" category="list-text">ホスト1Iグループ → (iqn1: lun1)</block>
+  <block id="71c3f3b14a29b76e7d9976e1fd92866d" category="paragraph">ONTAPシステム上にDS1の親igroup DS1Igroupが作成され、子igroup host1Igroupがlun1にマッピングされます。LUNは常に子igroupにマッピングされます。</block>
+  <block id="2be7ab20c80a99b42fc79400ca3f36ea" category="paragraph-title">例2：</block>
+  <block id="be3104bc1fff4c1bfb9f5da101aed986" category="paragraph">既存のデータストアを追加のホストにマウントする</block>
+  <block id="835065c40104234c9a8abb4875fbeba8" category="paragraph">*ワークフロー*: [マウント] DS1 (lun1): host2 (iqn2)</block>
+  <block id="2297adf1ae6c60ea9363ce5ef2e41f52" category="list-text">ホスト2Iグループ → (iqn2: lun1)</block>
+  <block id="d2b07c984d7fce344070b5c0752a51d8" category="paragraph">子 igroup host2Igroup が作成され、既存の親 igroup DS1Igroup に追加されます。</block>
+  <block id="2d6cceda29fb927297683321657cc7f7" category="paragraph-title">例3：</block>
+  <block id="6e0ad0300479c496e85c7f90f364f3da" category="paragraph">ホストからデータストアをアンマウントする</block>
+  <block id="1042a36d4bd6b198c75db206e253d6a1" category="paragraph">*ワークフロー*: [アンマウント] DS1 (lun1): host1 (iqn1)</block>
+  <block id="99fb3d64e6243f94e6f41859fd70993d" category="paragraph">host1igroup は階層から削除されます。子 igroup は明示的に削除されません。削除は、次の 2 つの条件で発生します。• LUN がマッピングされていない場合、ONTAP システムによって子 igroup が削除されます。• スケジュールされたクリーンアップ ジョブによって、LUN がマッピングされていない、未割り当ての子 igroup が削除されます。これらのシナリオは、ONTAP ツールで管理されている igroup にのみ適用され、カスタム作成された igroup には適用されません。</block>
+  <block id="041ec4ff6ad5f804da8976d697659842" category="paragraph-title">例4：</block>
+  <block id="e5e28486c61b67fca6b2ef177a5f9359" category="paragraph">データストアの削除</block>
+  <block id="4a3642a61d33fc5e86d2b97fb3ec5b26" category="paragraph">*ワークフロー*: [削除] DS1 (lun1): host2 (iqn2)</block>
+  <block id="a221428f85ab85b50304989ceb5f1013" category="paragraph">親igroupと子igroupは、別のデータストアが親igroupを再利用しない場合に削除されます。子igroupは明示的に削除されることはありません。</block>
+  <block id="8c0e16266857385b0b0b181e3b641f04" category="paragraph-title">例5：</block>
+  <block id="726d4f85c9b9eaa5f6c5968d19c3a7df" category="paragraph">カスタム親igroupの下に複数のデータストアを作成する</block>
+  <block id="bea6104954555c1b763633c7a55ea6f8" category="paragraph">*ワークフロー*:</block>
+  <block id="19e99edc83cbbbcc6ab8d304178f9046" category="list-text">[作成] DS2 (lun2): ホスト1 (iqn1)、ホスト2 (iqn2)</block>
+  <block id="cb4835be3502172f05fc0fb1636c6f71" category="list-text">[作成] DS3 (lun3): host1 (iqn1)、host3 (iqn3)</block>
+  <block id="1349428cc30cda216cf2019786367f2e" category="list-text">CustomIgroup1：</block>
+  <block id="da0fa0c3efce4fb609fc503d43009a84" category="list-text">host1Igroup → (iqn1: lun2、lun3)</block>
+  <block id="f89b4a662e7511de5794930a38008165" category="list-text">ホスト2Iグループ → (iqn2: lun2)</block>
+  <block id="9db51efb0434c0f5d42d43e58d48a6d0" category="list-text">ホスト3Iグループ → (iqn3: lun3)</block>
+  <block id="ee0f441220124ad6f5f79f31ca2850c1" category="paragraph">CustomIgroup1 は DS2 用に作成され、DS3 で再利用されます。共有された親 igroup の下に子 igroup が作成または更新され、各子 igroup は対応する LUN にマッピングされます。</block>
+  <block id="a09d3d7fa6e5e57286de75b1ba1b3b81" category="paragraph-title">例6：</block>
+  <block id="14962f74dc2fca05f3ae890d88732a98" category="paragraph">カスタム親 igroup の下にある 1 つのデータストアを削除します。</block>
+  <block id="e33a694e17ff6619f6b2fe691a1d309a" category="paragraph">*ワークフロー*: [削除] DS2 (lun2): host1 (iqn1)、host2 (iqn2)</block>
+  <block id="67b13646bf72c18d796c8bf3198f5814" category="list-text">ホスト1Iグループ → (iqn1: lun3)</block>
+  <block id="6db15a5e6a1d1e2fef5984c15cc5eb69" category="list-text">CustomIgroup1 は再利用されませんが、削除されません。</block>
+  <block id="382a19507b1950afa51e368afebb5fcc" category="list-text">LUN がマップされていない場合、ONTAP システムは host2Igroup を削除します。</block>
+  <block id="32af8db1601aae83c5ed7e84130e7e2f" category="list-text">host1igroup は DS3 の lun3 にマッピングされているため削除されません。カスタム igroup は、再利用ステータスに関わらず削除されることはありません。</block>
+  <block id="5152900fa2b4fe857b3d0f2bf9c7b1eb" category="paragraph-title">例7：</block>
+  <block id="96c7142b58bd9e54729ddd088e808dc7" category="paragraph">vVols データストアの拡張（ボリュームの追加）</block>
+  <block id="d5819bf04d1e61714a844702340b0d01" category="paragraph">拡張前:</block>
+  <block id="4c770faced138366beb0f7a04f395d83" category="paragraph">[展開] DS4 (lun4): host4 (iqn4)</block>
+  <block id="51ebf26e977eb695e06cf1b254d79a30" category="list-text">DS4Igroup: host4Igroup → (iqn4: lun4)</block>
+  <block id="c367cd17021bf2e5e0481fdd6e7ae90b" category="paragraph">拡張後:</block>
+  <block id="6594f9252d2a17fc4bad619de20a7757" category="paragraph">[展開] DS4 (lun4、lun5): host4 (iqn4)</block>
+  <block id="aa5e06dab7f5d9a795d5333805806c5c" category="list-text">DS4Igroup: host4Igroup → (iqn4: lun4、lun5)</block>
+  <block id="a00c0ff3a9039b59496981135459ef0f" category="paragraph">新しい LUN が作成され、既存の子 igroup host4Igroup にマップされます。</block>
+  <block id="d8b6441496bad3b41e04f590687e0880" category="paragraph-title">例8：</block>
+  <block id="9e8052e57e1cbe7ffc7f3aed17d3a225" category="paragraph">vVols データストアの縮小（ボリュームの削除）</block>
+  <block id="a6c4fbf684b02254a93362b7f87f46b3" category="paragraph">収縮前：</block>
+  <block id="392dcdd65448cf07c9c771abcd18cf1d" category="paragraph">[縮小] DS4 (lun4、lun5): host4 (iqn4)</block>
+  <block id="8e16bef4ac0dfac3f3858a459f385130" category="paragraph">縮小後:</block>
+  <block id="32fb6c0701827305127700e83186ed50" category="paragraph">[縮小] DS4 (lun4): host4 (iqn4)</block>
+  <block id="44aac1af9c3e4914e749589a45fb9355" category="paragraph">指定されたLUN（lun5）は子igroupからマッピング解除されています。igroupは、マッピングされたLUNが少なくとも1つある限りアクティブなままです。</block>
+  <block id="04866dfa9cd876e3761fb20cb80cc396" category="paragraph-title">例9：</block>
+  <block id="40f0d0153abdb5aa1e2c4d8bff1c093e" category="paragraph">ONTAPツール9から10への移行（igroupの正規化）</block>
+  <block id="91d00fcabdddfee3723ef8914e95006a" category="paragraph">VMware vSphere 9.x バージョンの ONTAP ツールは、階層型 igroup をサポートしていません。10.3以降のバージョンへの移行時には、igroup を階層構造に正規化する必要があります。</block>
+  <block id="51d52f26bb3fadc49354d8294632607a" category="paragraph">移行前:</block>
+  <block id="551fe7e3259b26ff1787acbea836b895" category="paragraph">[移行] DS6 (lun6、lun7): host6 (iqn6)、host7 (iqn7) → ClassicIgroup1 (iqn6 &amp; iqn7: lun6、lun7)</block>
+  <block id="d5d2d4dab88d65ed1d095044810e95c5" category="paragraph">ONTAP ツール 9.x ロジックでは、1 対 1 のホスト マッピングを強制することなく、igroup ごとに複数のイニシエータが許可されます。</block>
+  <block id="e1511f1b44bc4c0e4bf944f12546a9e8" category="paragraph">移行後:</block>
+  <block id="a7d16c97cdedffae87ecd1f35d0ac590" category="paragraph">[移行] DS6 (lun6、lun7): host6 (iqn6)、host7 (iqn7) → ClassicIgroup1: otv_ClassicIgroup1 (iqn6 &amp; iqn7: lun6、lun7)</block>
+  <block id="d993b7559126972c5320acf14fe956d9" category="paragraph">移行中:</block>
+  <block id="8e328318bac6efeb120cc4c6cd3df1e7" category="list-text">新しい親 igroup (ClassicIgroup1) が作成されます。</block>
+  <block id="5682831142ad0882b1551736c0a14535" category="list-text">元の igroup の名前は otv_ プレフィックス付きで変更され、子 igroup になります。</block>
+  <block id="a1d7bef497585c5e3e0761a58c9192df" category="paragraph">これにより、階層モデルへの準拠が保証されます。</block>
+  <block id="9d7e0542459b60f98e1d8529e2c87e4e" category="paragraph-title">関連トピック</block>
+  <block id="19dea799245ee5cf6e758f51c6b46e67" category="inline-link">igroupについて</block>
+  <block id="9ec090c0889f67a04d8d16ec3fc894af" category="paragraph"><block ref="9ec090c0889f67a04d8d16ec3fc894af" category="inline-link-rx"></block></block>
+  <block id="bd4308f8ba5f92aa81fb16563206441d" category="section-title">輸出政策</block>
+  <block id="483d357ed85943a2600f4700b4234595" category="paragraph">エクスポートポリシーは、VMware vSphere 向け ONTAP ツールにおける NFS データストアへのアクセスを制御します。データストアにアクセスできるクライアントとその権限を定義します。エクスポートポリシーは ONTAP システムで作成および管理され、NFS データストアに関連付けることでアクセス制御を適用できます。各エクスポートポリシーは、アクセスを許可するクライアント（IP アドレスまたはサブネット）と付与する権限（読み取り専用または読み取り/書き込み）を指定するルールで構成されます。</block>
+  <block id="df454efba6089b22bf497aa6bdafcce9" category="paragraph">ONTAP Tools for VMware vSphere で NFS データストアを作成する際、既存のエクスポートポリシーを選択するか、新しいエクスポートポリシーを作成できます。作成したエクスポートポリシーはデータストアに適用され、承認されたクライアントのみがデータストアにアクセスできるようになります。</block>
+  <block id="e25beec793547cce47bd3965725ecdb1" category="paragraph">新しいESXiホストにNFSデータストアをマウントすると、VMware vSphere用のONTAPツールによって、そのデータストアに関連付けられた既存のエクスポートポリシーにホストのIPアドレスが追加されます。これにより、新しいホストは新しいエクスポートポリシーを作成しなくてもデータストアにアクセスできるようになります。</block>
+  <block id="52faf43c83a97dd583b56f8fd4367598" category="paragraph">ESXiホストからNFSデータストアを削除またはアンマウントすると、ONTAP Tools for VMware vSphereは、エクスポートポリシーからホストのIPアドレスを削除します。他のホストがそのエクスポートポリシーを使用していない場合は、そのポリシーは削除されます。NFSデータストアを削除すると、ONTAP Tools for VMware vSphereは、そのデータストアに関連付けられているエクスポートポリシーを削除します（他のデータストアで再利用されていない場合）。エクスポートポリシーが再利用されている場合は、ホストのIPアドレスが保持され、変更されません。データストアを削除すると、エクスポートポリシーによってホストのIPアドレスの割り当てが解除され、デフォルトのエクスポートポリシーが割り当てられます。これにより、ONTAPシステムは必要に応じてデータストアにアクセスできるようになります。</block>
+  <block id="064bdf085906b78017207e105ea1456c" category="paragraph">エクスポートポリシーを異なるデータストア間で再利用する場合、割り当て方法は異なります。エクスポートポリシーを再利用する際は、新しいホストIPアドレスをポリシーに追加できます。共有エクスポートポリシーを使用しているデータストアを削除またはアンマウントしても、ポリシーは削除されません。ポリシーは変更されず、ホストIPアドレスは他のデータストアと共有されているため削除されません。エクスポートポリシーの再利用は、アクセスやレイテンシの問題につながる可能性があるため、推奨されません。</block>
+  <block id="bb53c6c29f127a298da7dd86bf00bb89" category="inline-link">エクスポートポリシーを作成する</block>
+  <block id="c7196e0d279885126e6f1c8cf1f7195f" category="paragraph"><block ref="c7196e0d279885126e6f1c8cf1f7195f" category="inline-link-rx"></block></block>
+  <block id="d416ef8edb2844634dbe8cfff2e77f9a" category="sidebar">igroupとエクスポートポリシーを理解する</block>
 </blocks>
