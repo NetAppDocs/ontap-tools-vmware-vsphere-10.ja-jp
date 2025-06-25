@@ -6,7 +6,7 @@ entries:
   url: "/deploy/quick-start.html"
 - title: ハイアベイラビリティ（HA）導入ワークフロー
   url: "/deploy/ha-workflow.html"
-- title: 前提条件
+- title: ONTAPツールの要件と構成の制限
   url: "/deploy/prerequisites.html"
 - title: 始める前に
   url: "/deploy/pre-deploy-checks.html"

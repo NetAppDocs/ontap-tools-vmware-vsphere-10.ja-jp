@@ -54,7 +54,7 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 
 === シングルノード導入の場合
 
-次のワークシートを使用して、ONTAP tools for VMware vSphereの初期導入に必要な情報を収集します。for ONTAP tools for VMware vSphereの初期導入：
+次のワークシートを使用して、VMware vSphere の初期導入用の ONTAP ツールに必要な情報を収集します。
 
 |===
 | 要件 | あなたの価値 
@@ -133,4 +133,14 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 
 == ネットワークファイアウォールの設定
 
-ネットワークファイアウォールで、IPアドレスに必要なポートを開きます。ONTAP toolsがポート443経由でこのLIFにアクセスできる必要があります。最新のアップデートについては、を参照してlink:../deploy/prerequisites.html["ポートの要件"]ください。
+ネットワークファイアウォールで、IPアドレスに必要なポートを開きます。ONTAP ツールはポート 443 を介してこの LIF にアクセスできる必要があります。最新のアップデートについては、を参照してlink:../deploy/prerequisites.html["ポートの要件"]ください。
+
+
+
+== ONTAPストレージ設定
+
+ONTAPストレージとONTAP tools for VMware vSphereをシームレスに統合するには、次の設定を検討してください。
+
+* ストレージ接続にFibre Channel（FC；ファイバチャネル）を使用している場合は、ESXiホストをSVMのFC LIFに接続するようにFCスイッチにゾーニングを設定します。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
+* ONTAP toolsで管理されるSnapMirrorレプリケーションを使用するには、ONTAPストレージ管理者がONTAPでとを https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAPクラスタ間SVMピア関係"]作成してからSnapMirrorを使用する必要があります https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPクラスタピア関係"]。
+

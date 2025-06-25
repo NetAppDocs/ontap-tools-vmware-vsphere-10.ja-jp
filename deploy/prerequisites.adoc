@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。 
 ---
-= ONTAP tools for VMware vSphere導入の前提条件
+= VMware vSphere の要件と構成の制限に対する ONTAP ツール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -79,74 +79,6 @@ NOTE: ONTAP tools for VMware vSphere 10.4以降では、仮想マシンハード
 サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
-
-
-
-== ONTAP tools for VMware vSphereを導入するための構成の制限
-
-次の表は、VMware vSphere用のONTAP toolsを設定する際のガイドとして使用できます。
-
-|===
-
-
-| * 導入 * | * タイプ * | * VVOLの数* | *ホスト数* 
-
-
-| HA 認定外 | 小（S） | ~12、000 | 32だ 
-
-
-| HA 認定外 | 中（M） | 最大24、000 | 64 
-
-
-| 高可用性 | 小（S） | 最大24、000 | 64 
-
-
-| 高可用性 | 中（M） | 約50k | 128 
-
-
-| 高可用性 | 大（L） | ~100k | 256 [注]表のホスト数は、複数のvCenterからのホストの総数を示しています。 
-|===
-
-
-== ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）
-
-次の表に、ONTAP tools for VMware vSphereを使用したVMware Live Site Recoveryインスタンスごとにサポートされる数を示します。
-
-|===
-| * vCenterの導入規模* | *小さい* | *中* 
-
-
-| アレイベースのレプリケーションを使用した保護用に構成された仮想マシンの総数 | 2000 | 5000 
-
-
-| アレイベースのレプリケーション保護グループの総数 | 250 | 250 
-
-
-| リカバリプランあたりの保護グループの総数 | 50 | 50 
-
-
-| レプリケートされたデータストア数 | 255 | 255 
-
-
-| VM数 | 4000 | 7000 
-|===
-次の表に、VMware Live Site Recoveryの数と、VMware vSphereの導入規模に対応するONTAPツールを示します。
-
-|===
-
-
-| * VMware Live Site Recoveryインスタンスの数* | * ONTAPツールの導入規模* 
-
-
-| 最大4 | 小規模 
-
-
-| 4～8 | 中 
-
-
-| 8人以上 | 大規模 
-|===
-詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recoveryの運用上の制限"]。
 
 
 
@@ -233,10 +165,68 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-== ONTAPストレージ設定
+== ONTAP tools for VMware vSphereを導入するための構成の制限
 
-ONTAPストレージとONTAP tools for VMware vSphereをシームレスに統合するには、次の設定を検討してください。
+次の表は、VMware vSphere用のONTAP toolsを設定する際のガイドとして使用できます。
 
-* ストレージ接続にFibre Channel（FC；ファイバチャネル）を使用している場合は、ESXiホストをSVMのFC LIFに接続するようにFCスイッチにゾーニングを設定します。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
-* ONTAP toolsで管理されるSnapMirrorレプリケーションを使用するには、ONTAPストレージ管理者がONTAPでとを https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAPクラスタ間SVMピア関係"]作成してからSnapMirrorを使用する必要があります https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPクラスタピア関係"]。
+|===
 
+
+| * 導入 * | * タイプ * | * VVOLの数* | *ホスト数* 
+
+
+| HA 認定外 | 小（S） | ~12、000 | 32だ 
+
+
+| HA 認定外 | 中（M） | 最大24、000 | 64 
+
+
+| 高可用性 | 小（S） | 最大24、000 | 64 
+
+
+| 高可用性 | 中（M） | 約50k | 128 
+
+
+| 高可用性 | 大（L） | ~100k | 256 [注]表のホスト数は、複数のvCenterからのホストの総数を示しています。 
+|===
+
+
+== ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）
+
+次の表に、ONTAP tools for VMware vSphereを使用したVMware Live Site Recoveryインスタンスごとにサポートされる数を示します。
+
+|===
+| * vCenterの導入規模* | *小さい* | *中* 
+
+
+| アレイベースのレプリケーションを使用した保護用に構成された仮想マシンの総数 | 2000 | 5000 
+
+
+| アレイベースのレプリケーション保護グループの総数 | 250 | 250 
+
+
+| リカバリプランあたりの保護グループの総数 | 50 | 50 
+
+
+| レプリケートされたデータストア数 | 255 | 255 
+
+
+| VM数 | 4000 | 7000 
+|===
+次の表に、VMware Live Site Recoveryの数と、VMware vSphereの導入規模に対応するONTAPツールを示します。
+
+|===
+
+
+| * VMware Live Site Recoveryインスタンスの数* | * ONTAPツールの導入規模* 
+
+
+| 最大4 | 小規模 
+
+
+| 4～8 | 中 
+
+
+| 8人以上 | 大規模 
+|===
+詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recoveryの運用上の制限"]。

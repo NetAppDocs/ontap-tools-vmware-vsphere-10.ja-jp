@@ -24,7 +24,7 @@ vCenter Serverがインストールされ、アクセス可能であることを
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome["Interoperability Matrix Tool で確認してください"]
-* link:../deploy/prerequisites.html["ONTAP tools for VMware vSphere導入の前提条件"]
+* link:../deploy/prerequisites.html["VMware vSphere の要件と構成の制限に対する ONTAP ツール"]
 * link:../deploy/pre-deploy-checks.html["始める前に"]
 
 
