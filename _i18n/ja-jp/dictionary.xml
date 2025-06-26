@@ -2246,16 +2246,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="8b6081846f56ef049557c82e5b444e2d" category="paragraph">セットアップにNFSおよびVMFSデータストアがあり、vVolsデータストアが含まれていない場合は、ONTAP Tools 9.xxをアンインストールし、ONTAP Tools 10.xを導入するだけです。ただし、セットアップにvVolsデータストアが含まれている場合は、VASA ProviderとSRAの移行プロセスを実行する必要があります。</block>
   <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">次の表は、これら 2 つの異なるシナリオにおける移行プロセスの概要を示しています。</block>
   <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*セットアップにvVolsデータストアがある場合*</block>
-  <block id="a52ec04716984e73a95a673f19b4381b" category="cell">*セットアップにvVolsデータストアが含まれていない場合*</block>
-  <block id="612ae34fe355690bba22816577fb8ceb" category="inline-link-macro">VASAプロバイダーの移行</block>
-  <block id="b01a9665d854fa0b6f2ee86db8e7e7e5" category="inline-link-macro">SRA を移行</block>
   <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">VMストレージポリシーを作成する</block>
-  <block id="a1a2f15a55d77fba2d3e9d1ffb9c2d37" category="cell">手順: 1.<block ref="b948e8148e317c6b3a44b41129efa89c" category="inline-link-macro-rx"></block> 2.<block ref="fd39ed98cbc7c628cdfb8965952c02e6" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="27116dca14772e71a5f801de216fb934" category="inline-link-macro">VMware vSphere 10.4 用の ONTAP ツールを導入および構成する</block>
   <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">OTV 9.xx を環境から削除する方法</block>
-  <block id="2de1e904f7a723f3fccf3b29b5d3a892" category="cell">手順：1.環境からONTAPツール9.xxを削除します。 <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp ナレッジベースの記事。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">ONTAP tools for VMware vSphere 9.xxから10.4に移行すると、NVMe/FCプロトコルを使用するvVolデータストアが動作しなくなります。これは、ONTAP tools 10.4がNVMe-oFプロトコルをサポートするのはVMFSデータストアのみであるためです。</block>
-  <block id="61ace5a2518ab1c5ed7b0cdaaff98213" category="doc">VASA プロバイダとストレージ レプリケーション アダプタ (SRA) を移行する</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">VASAプロバイダーの移行手順</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">ONTAP ツール プラグインの vCenter Server API からストレージ バックエンドをローカルにオンボードします。</block>
   <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">Swaggerには、次のURLからアクセスできます。https://$FQDN_IP_PORT/,例：<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block></block>
@@ -2263,13 +2257,11 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "ユーザー名": "xxxxx", "パスワード": "*******" } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">VMware vSphereストレージプロバイダ用のONTAPツールをvCenter Serverに追加し、 <block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> VMware vSphere 用の ONTAP ツールを使用します。</block>
   <block id="9a75388e84716581ed710b23451155ae" category="list-text">ONTAP tools for VMware vSphere 9.xxxから移行されたNFSデータストアとVMFSデータストアがONTAP tools for VMware vSphere 10.4に表示されるのは、データストアの検出ジョブがトリガーされてからで、完了までに最大30分かかることがあります。VMware vSphere プラグインのユーザー インターフェイス ページの ONTAP ツールの概要ページにデータストアが表示されていることを確認します。</block>
-  <block id="219ce9585531b00b3bd54170f3775f53" category="section-title">SRAの移行手順</block>
   <block id="507fcd9c144d0cee8403de3b0608fc58" category="paragraph">リカバリプランにおいて、保護サイトとは仮想マシンが現在実行されている場所を指し、リカバリサイトとは仮想マシンがリカバリされる場所を指します。SRMインターフェースには、リカバリプランの状態と、保護サイトとリカバリサイトの詳細が表示されます。リカバリプランでは、「クリーンアップ」ボタンと「再保護」ボタンは無効になっていますが、「テスト」ボタンと「実行」ボタンは有効なままです。これは、サイトがデータリカバリの準備ができていることを示します。SRAを移行する前に、一方のサイトが保護状態、もう一方のサイトがリカバリ状態であることを確認してください。</block>
   <block id="d6b99aad2c3ad58ece5306ce3dbab4d3" category="cell">高可用性、パフォーマンス、拡張性の制限を拡張しながら、ONTAP tools 10.xを9.xxパリティに移行</block>
   <block id="ea974b3b2665a0ede55feb5ef712e4dd" category="paragraph"><block ref="ea974b3b2665a0ede55feb5ef712e4dd" category="inline-link-macro-rx"></block></block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">ONTAP Tools for VMware vSphere 9.xxを10.4に移行</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">VMware vSphere の最新の ONTAP ツールへの移行</block>
-  <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">VASA プロバイダーと SRA の移行</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">バックアップ頻度の値を 5 ～ 60 分の範囲で入力します。</block>
   <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">VMware vSphere の ONTAP ツールにおける igroup とエクスポート ポリシーを理解する</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">イニシエータグループ（igroup）は、FCプロトコルホストのワールドワイドポート名（WWPN）またはiSCSIホストの修飾ノード名（Qualified Node Name）のテーブルです。igroupを定義してLUNにマッピングすることで、どのイニシエータがLUNにアクセスできるかを制御できます。</block>
@@ -2376,4 +2368,11 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="dc0055de9b7e911c1f50f49dc1b3ef79" category="inline-link-macro">VMware vSphere の要件と構成の制限に対する ONTAP ツール</block>
   <block id="25eb466dd476278d60eabf35f3daa859" category="list-text"><block ref="25eb466dd476278d60eabf35f3daa859" category="inline-link-macro-rx"></block></block>
   <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">ONTAPツールの要件と構成の制限</block>
+  <block id="122962cdef914297e7bd27106c4b08ef" category="cell">*セットアップにNFSとVMFSデータストアのみが含まれている場合*</block>
+  <block id="23582373a176f3a1391b91644579b591" category="inline-link-macro">VASAプロバイダーの移行</block>
+  <block id="56e81eec05ba3edf697b5613dfbb8977" category="cell">手順：1.<block ref="393201960d4eefccacb06cc7ccdc8cfc" category="inline-link-macro-rx"></block> 2. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="690fca4891ecdd9975fe5dc5bd2a520b" category="inline-link-macro">SRAの更新</block>
+  <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">手順：1.環境からONTAPツール9.xxを削除します。 <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp ナレッジベースの記事。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3.<block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">VASA プロバイダーを移行し、SRA を更新する</block>
+  <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">ストレージレプリケーションアダプタ(SRA)を更新する手順</block>
 </blocks>
