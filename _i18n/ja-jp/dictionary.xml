@@ -2179,7 +2179,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">VMware vSphere HA 導入用の ONTAP ツールの場合、最初のノード (node1) のメンテナンス コンソールのユーザー パスワードを変更する必要があります。</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">MPIO 設定は、NVMe、NVMe/FC、NVMe/TCP プロトコルには適用されません。</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">VASA Providerは、ONTAP tools for VMware vSphereを使用してvCenter Serverインスタンスに登録できます。[VASA Providerの設定]セクションに、選択したvCenter ServerのVASA Providerの登録ステータスが表示されます。マルチ vCenter 展開では、各 vCenter Server インスタンスにカスタム CA 証明書があることを確認します。</block>
-  <block id="6cc905f50a7d9454e2cd6814a57ffcc4" category="list-text">ダウンロード<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> VMware vSphere用ONTAPツールのバイナリ（_.ova_）と署名付き証明書を含むファイル<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
   <block id="5da601563ca7e442eafa7d6f32d54969" category="paragraph">VMware vSphere 用の ONTAP ツールは、最初は非 HA セットアップとして導入されます。HA環境に拡張するには、CPUホットプラグとメモリホットプラグインを有効にする必要があります。この手順は導入プロセスの一環として実行することも、導入後にVM設定を編集することもできます。</block>
   <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。</block>
   <block id="7cbac47005f891099143c8780a7b8c4a" category="cell">7.0U3と8.0U3</block>
@@ -2382,5 +2381,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c9aedb092df3b12da4134b957e20bd24" category="list-text"><block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block> SRA 機能を有効にします。</block>
   <block id="6df3cc05d7d7f12128b849f4ef34c11a" category="cell">ISO は現在のバージョンと同じか、または現在のバージョンより 2 つ上のリリースである可能性があります。</block>
   <block id="93470a6d5ec43c6c46729637f4feda14" category="paragraph">ONTAP tools for VMware vSphereからアップグレードする場合は、アップグレードタスクを進める前に次の手順を完了する必要があります。* サービスデータは仮想マシンにローカルに保存されるため、各ノードに 100 GB のハードディスクを追加します。* パワーオフ状態の仮想マシンの CPU とメモリを、デプロイメントの種類に応じて変更します。CPUと RAM のホットプラグインを有効にします。</block>
-  <block id="c9d47f8c41ca805122d820b5a33c8400" category="list-text">ONTAP tools for VMware vSphereのバイナリ(_.ova_)と署名済み証明書が含まれているファイルをからダウンロードします。OVA をコンテンツ ライブラリにインポートした場合は、この手順をスキップして次の手順に進むことができます</block>
+  <block id="c9d47f8c41ca805122d820b5a33c8400" category="list-text">ONTAP tools for VMware vSphereのバイナリ(_.ova_)と署名済み証明書が含まれているファイルをからダウンロードします<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。OVA をコンテンツ ライブラリにインポートした場合は、この手順をスキップして次の手順に進むことができます</block>
+  <block id="f7df05ae68c6e5833dfd15542c1632c0" category="list-text">ONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名付き証明書を含むファイルを次の場所からダウンロードします。 <block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
 </blocks>

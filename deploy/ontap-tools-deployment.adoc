@@ -26,7 +26,7 @@ NOTE: HA導入をあとで有効にする場合は、ONTAPツールをホスト�
 
 *コンテンツライブラリの作成*小規模なシングルノード展開のみを使用する予定の場合、コンテンツライブラリを作成する必要はありません。
 
-. ダウンロード `.zip` VMware vSphere用ONTAPツールのバイナリ（_.ova_）と署名付き証明書を含むファイル https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^] 。
+. ONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名付き証明書を含むファイルを次の場所からダウンロードします。  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^] 。
 . vSphere Clientにログインします。
 . vSphere Clientメニューを選択し、*[Content libraries]*を選択します。
 . ページの右側にある*[作成]*を選択します。
@@ -44,7 +44,7 @@ NOTE: 導入を進める前に、インベントリ上のクラスタのDistribu
 VMware vSphere 用の ONTAP ツールは、最初は非 HA セットアップとして導入されます。HA環境に拡張するには、CPUホットプラグとメモリホットプラグインを有効にする必要があります。この手順は導入プロセスの一環として実行することも、導入後にVM設定を編集することもできます。
 
 .手順
-. ONTAP tools for VMware vSphereのバイナリ(_.ova_)と署名済み証明書が含まれているファイルをからダウンロードします。OVA をコンテンツ ライブラリにインポートした場合は、この手順をスキップして次の手順に進むことができます
+. ONTAP tools for VMware vSphereのバイナリ(_.ova_)と署名済み証明書が含まれているファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。OVA をコンテンツ ライブラリにインポートした場合は、この手順をスキップして次の手順に進むことができます
 . vSphereサーバにログインします。
 . OVAを導入するリソースプール、クラスタ、またはホストに移動します。
 +
