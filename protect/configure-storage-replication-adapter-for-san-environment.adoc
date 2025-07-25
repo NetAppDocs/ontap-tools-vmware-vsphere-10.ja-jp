@@ -66,6 +66,6 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 .手順
 . 保護対象サイトのデータストアに、 vCenter Server に登録された仮想マシンがあることを確認します。
 . 保護対象サイトの ESXi ホストに、 Storage Virtual Machine （ SVM ）の NFS エクスポートボリュームがマウントされていることを確認します。
-. Array Managerウィザードを使用してVMware Live Site Recoveryにアレイを追加する場合は、NFSエクスポートが存在するIPアドレス、ホスト名、またはFQDNなどの有効なアドレスが* NFS Addresses *フィールドに指定されていることを確認します。
+. アレイマネージャウィザードを使用してVMware Live Site Recoveryにアレイを追加する際は、*NFSアドレス*フィールドにNFSエクスポートが存在するIPアドレスやFQDNなどの有効なアドレスが指定されていることを確認してください。*NFSアドレス*フィールドにはNFSホスト名を使用しないでください。
 . を使用します `ping` リカバリサイトの各ESXiホストでコマンドを実行し、SVMのNFSエクスポートへの接続に使用されるIPアドレスにホストのVMkernelポートからアクセスできることを確認します。
 

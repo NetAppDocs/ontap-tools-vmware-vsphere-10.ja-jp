@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザスタリカバリを設定するためのオプションがあります。 
 ---
-= SRA でデータストアを保護する
+= データストアを保護するためにSRAを構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザス�
 * ONTAP Tools for VMware vSphereを導入しておく必要があります。
 *  `.tar.gz`からSRAアダプタファイルをダウンロードしておく必要があります https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。
 * SRAワークフローを実行する前に、ソースとデスティネーションのONTAPクラスタで同じカスタムSnapMirrorスケジュールを作成しておく必要があります。
+* link:../manage/enable-services.html["ONTAP Tools for VMware vSphereサービスを有効にする"] SRA 機能を有効にします。
 
 
 .手順

@@ -2,7 +2,7 @@
 permalink: deploy/quick-start.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: ONTAP tools for VMware vSphereの使用を開始するには、いくつかの手順を実行します。 
+summary: このクイック スタート セクションで、 ONTAP tools for VMware vSphereをセットアップします。 
 ---
 = ONTAP Tools for VMware vSphereのクイックスタートガイド
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: ONTAP tools for VMware vSphereの使用を開始するには、いく�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereの使用を開始するには、いくつかの手順を実行します。このクイックスタートガイドでは、ONTAP tools for VMware vSphereの初期セットアップについて説明します。
+このクイック スタート セクションで、 ONTAP tools for VMware vSphereをセットアップします。
 
 まず、ONTAP tools for VMware vSphereを小規模なシングルノード構成として導入し、NFSデータストアとVMFSデータストアをサポートするためのコアサービスを提供します。vVolデータストアとハイアベイラビリティ（HA）を使用するように構成を拡張する必要がある場合は、このワークフローの完了後に拡張します。詳細については、を参照してlink:../deploy/ha-workflow.html["HA導入ワークフロー"]ください。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]導入計画
 [role="quick-margin-para"]
-vSphere、ONTAP、ESXiホストのバージョンがONTAP toolsのバージョンに対応していることを確認します。十分なCPU、メモリ、およびディスクスペースを割り当てます。セキュリティポリシーによっては、ネットワークトラフィックを許可するためにファイアウォールまたはその他のセキュリティアプライアンスの設定が必要になる場合があります。
+vSphere、 ONTAP、ESXiホストのバージョンがONTAPツールのバージョンと互換性があることを確認してください。十分なCPU、メモリ、ディスク容量を割り当ててください。セキュリティルールによっては、ネットワークトラフィックを許可するためにファイアウォールなどのセキュリティツールを設定する必要がある場合があります。
 
 [role="quick-margin-para"]
 vCenter Serverがインストールされ、アクセス可能であることを確認します。
@@ -30,7 +30,7 @@ vCenter Serverがインストールされ、アクセス可能であることを
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]ONTAP Tools for VMware vSphereの導入
 [role="quick-margin-para"]
-まず、ONTAP tools for VMware vSphereを小規模なシングルノード構成として導入し、NFSおよびVMFSデータストアをサポートするためのコアサービスを提供します。vVolデータストアとハイアベイラビリティ（HA）を使用するように構成を拡張する場合は、このワークフローの完了後に拡張します。HA構成に拡張するには、CPUのホットアドオプションとメモリのホットプラグオプションが有効になっていることを確認する必要があります。
+まず、 ONTAP tools for VMware vSphereを、 NFS および VMFS データストアをサポートするコアサービスを提供する小規模なシングルノード構成として導入します。vVolsデータvVolsと高可用性（HA）を使用するように構成を拡張する予定がある場合は、このワークフローを完了した後に拡張してください。HA構成に拡張するには、CPU ホットアドとメモリ ホットプラグが有効になっていることを確認してください。
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html["ONTAP Tools for VMware vSphereの導入"]
@@ -38,7 +38,7 @@ vCenter Serverがインストールされ、アクセス可能であることを
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"]vCenter Serverインスタンスの追加
 [role="quick-margin-para"]
-ONTAP tools for VMware vSphereに1つ以上のvCenter Serverインスタンスを追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。
+ONTAP tools for VMware vSphereに vCenter Server インスタンスを追加して、vCenter Server 環境内の仮想データストアを構成、管理、保護します。
 
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html["vCenter Serverインスタンスの追加"]
@@ -72,11 +72,12 @@ ONTAP toolsのユーザインターフェイスを使用して、ローカルス
 * link:../manage/certificate-manage.html["証明書を管理します"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["7"]（オプション）SRA保護の有効化
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["7"] （オプション）SRA保護を構成する
 [role="quick-margin-para"]
 SRA機能を有効にして、ディザスタリカバリを設定し、NFSまたはVMFSデータストアを保護する。
 
 [role="quick-margin-list"]
+* link:../manage/enable-services.html["ONTAP Tools for VMware vSphereサービスを有効にする"]
 * link:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]
 
 
@@ -93,5 +94,5 @@ SnapMirror Active Syncのホストクラスタ保護を管理するために、O
 障害が発生した場合にセットアップをリカバリするために使用できる、ONTAP tools for VMware vSphereのセットアップのバックアップをスケジュールします。
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["バックアップの作成とONTAP toolsセットアップのリカバリ"]
+* link:../manage/manage/enable-backup.html["バックアップの作成とONTAP toolsセットアップのリカバリ"]
 

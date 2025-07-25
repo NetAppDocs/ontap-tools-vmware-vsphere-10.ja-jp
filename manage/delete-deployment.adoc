@@ -2,7 +2,7 @@
 permalink: manage/delete-deployment.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: ONTAP tools for VMware vSphereの導入環境を削除したら、導入時に作成されたFlexVolをクリーンアップする必要があります。導入に専用のONTAPクラスタを使用していた場合は、FlexVolをクリーンアップする必要があります。導入によって大量のFlexVolが作成され、使用されないためパフォーマンスが低下します。 
+summary: ONTAP tools for VMware vSphereを削除した後は、導入中に作成された FlexVolume をクリーンアップする必要があります。導入に専用のONTAPクラスタを使用した場合は、導入によって未使用の FlexVolume が大量に作成され、パフォーマンスが低下する可能性があるため、FlexVolume をクリーンアップする必要があります。 
 ---
 = FlexVolボリュームを削除する
 :allow-uri-read: 

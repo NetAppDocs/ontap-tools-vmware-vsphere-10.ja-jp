@@ -6,7 +6,7 @@ entries:
   url: "/configure/protect-cluster.html"
 - title: SRAによる保護を使用して保護する
   entries:
-  - title: SRA でデータストアを保護する
+  - title: データストアを保護するためにSRAを構成する
     url: "/protect/enable-storage-replication-adapter.html"
   - title: SAN環境およびNAS環境向けのSRAの設定
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"

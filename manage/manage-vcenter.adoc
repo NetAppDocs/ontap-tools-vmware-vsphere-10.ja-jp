@@ -52,7 +52,7 @@ vCenter Serverを削除する前に、vCenter Serverに接続されているす�
 . 削除するvCenter Serverの縦の省略記号を選択し、*[削除]*を選択します。
 +
 
-NOTE: vCenter Serverインスタンスを削除すると、それらのインスタンスはアプリケーションで管理されなくなります。
+NOTE: vCenter Server インスタンスを削除すると、それらはアプリケーションによってメンテナンスされなくなります。
 
 
 
