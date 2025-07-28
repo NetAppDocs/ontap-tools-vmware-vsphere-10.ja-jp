@@ -2130,10 +2130,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6a9f1ff4ac0e0c970407817908ab7071" category="doc">vVolデータストアの拡張</block>
   <block id="c61ac620cee1003679fdaa462dbeaede" category="admonition">vVolデータストアの拡張処理は、ASA R2システムベースのvVolデータストアでは実行できません。</block>
   <block id="b5bf1eb9fc501e53457cde004db09086" category="list-text">SwaggerまたはPostmanから次のAPIを実行して移行します。</block>
-  <block id="54caf31d7246402cdcb6cd5c255c5c64" category="paragraph">カール- Xポスト<block ref="4042f1acb8fe47ca556f8b938a8d6e08" category="inline-link-rx"></block></block>
   <block id="91377d2edc3d930017c1b8c4679bdb89" category="list-text">Swaggerで次のURIを使用してステータスを確認します。</block>
   <block id="96b2fedcc932770f843418dedfe7f004" category="list-text">SwaggerまたはPostmanで次のAPIを使用してパッチの移行を実行します。</block>
-  <block id="99a490d727b23ee47f3b441a7342d420" category="paragraph">CURL-Xパッチ<block ref="fd07e34d045cf59e25acb7168e60f530" category="inline-link-rx"></block></block>
   <block id="5db743b53293821cee54f2f6de3ecd01" category="list-text">検出*が完了するまで待ちます。証明書はすべてのホストで自動的に更新されます。</block>
   <block id="821d346df6abaf74ffd3d352413de8ff" category="list-text">*ホストシステムのサイジング要件*導入規模に応じた推奨メモリは次の表のとおりです。ハイアベイラビリティ（HA）を導入するには、表で指定したアプライアンスサイズの3倍が必要です。</block>
   <block id="a13a152159236a6645a22fae6e163217" category="cell">*ノードあたりのCPU数*</block>
@@ -2196,7 +2194,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">ONTAP tools for VMware vSphere 9.xxから10.4に移行すると、NVMe/FCプロトコルを使用するvVolデータストアが動作しなくなります。これは、ONTAP tools 10.4がNVMe-oFプロトコルをサポートするのはVMFSデータストアのみであるためです。</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">VASAプロバイダーの移行手順</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">ONTAP ツール プラグインの vCenter Server API からストレージ バックエンドをローカルにオンボードします。</block>
-  <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">Swaggerには、次のURLからアクセスできます。https://$FQDN_IP_PORT/,例：<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block></block>
   <block id="6e086f74a5eaa2061811529e1d6a623e" category="paragraph">カール -X POST <block ref="c5820eec1fb061702ab2f34b24d1d295" category="inline-link-rx"></block> \ --header 'x-auth: &lt;認証トークン&gt;' \ --header 'Content-Type: application/json' \ --data '{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "username": "xxxxx", "password": "******" }, "database_password": "******" }'</block>
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "ユーザー名": "xxxxx", "パスワード": "*******" } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">VMware vSphereストレージプロバイダ用のONTAPツールをvCenter Serverに追加し、 <block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> VMware vSphere 用の ONTAP ツールを使用します。</block>
@@ -2340,7 +2337,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="e6a187afd099cc2fbaed679eda4f9a89" category="paragraph">ONTAP tools for VMware vSphereに vCenter Server インスタンスを追加して、vCenter Server 環境内の仮想データストアを構成、管理、保護します。</block>
   <block id="0115ba480d5059c11ce8f89628a7743d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> （オプション）SRA保護を構成する</block>
   <block id="3d67f96eb2aec81f92bfe17a27594d9f" category="list-text"><block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block></block>
-  <block id="26e0f425f3ae7a1bcdeaee665ec072ff" category="list-text"><block ref="26e0f425f3ae7a1bcdeaee665ec072ff" category="inline-link-macro-rx"></block></block>
   <block id="034f02f8ec70fbc1533e451250a2bcad" category="admonition">ディスクは仮想マシンから削除されます。他の仮想マシンがディスクを共有している場合、ディスクファイルは削除されません。</block>
   <block id="a5e1dbbf601c017647380a6aecd9eb8d" category="list-text">ログバンドルのラベルを指定して、ログバンドルを生成します。ファイルが生成されると、ダウンロードオプションが表示されます。ダウンロードには時間がかかる場合があります。</block>
   <block id="b0a6cb6bc671c9e84eb8bf05473ab774" category="summary">ONTAP tools for VMware vSphereを削除した後は、導入中に作成された FlexVolume をクリーンアップする必要があります。導入に専用のONTAPクラスタを使用した場合は、導入によって未使用の FlexVolume が大量に作成され、パフォーマンスが低下する可能性があるため、FlexVolume をクリーンアップする必要があります。</block>
@@ -2354,7 +2350,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c7a3e6d485a07dd9c95f9051e9912372" category="paragraph">古いVASAプロバイダが停止すると、vCenter ServerはONTAP tools for VMware vSphereにフェイルオーバーします。すべてのデータストアと仮想マシンはONTAP tools for VMware vSphereからアクセス可能になり、サービスが提供されます。</block>
   <block id="4e3b183a92792cfb6d46be8c763d9b1f" category="list-text">データストアおよび仮想マシンの操作を開始する前に、十分な時間を確保してください。必要な待機時間は、構成内のホスト、データストア、および仮想マシンの数によって異なります。待機しない場合、断続的な操作障害が発生する可能性があります。</block>
   <block id="2c6bdfd15e2c3837505962bde7327555" category="paragraph">リカバリプランにおいて、保護サイトとは仮想マシンが現在実行されている場所を指し、リカバリサイトとは仮想マシンがリカバリされる場所を指します。SRMインターフェースには、リカバリプランの状態と、保護サイトとリカバリサイトの詳細が表示されます。リカバリプランでは、「*CleanupP*」ボタンと「*Reprotect*」ボタンは無効になっていますが、「TEST」ボタンと「RUN」ボタンは有効なままです。これは、サイトがデータリカバリの準備ができていることを示します。SRAを移行する前に、一方のサイトが保護状態、もう一方のサイトがリカバリ状態であることを確認してください。</block>
-  <block id="e6f96ab39ba072438ac442d86c5d8cbd" category="list-text"><block ref="e6f96ab39ba072438ac442d86c5d8cbd" category="inline-link-macro-rx"></block></block>
   <block id="2f1a00cebb4ee36563713e73cd552aad" category="list-text">クラスターに接続する場合は、*SVM 名* フィールドに SVM 名を指定するか、クラスター内のすべての SVM を管理するには空白のままにします。</block>
   <block id="5921d19c5073db0cf91d2f7a19cb58b3" category="summary">VMware Live Site Recovery アプライアンスを展開した後、ストレージ レプリケーション アダプタ (SRA) を構成して、災害復旧管理を有効にします。</block>
   <block id="5f917c11d7a2e921fe58d07dc5187d72" category="paragraph">VMware Live Site Recovery アプライアンスで SRA を構成すると、ONTAP tools for VMware vSphereがアプライアンス内に保存され、VMware Live Site Recovery と SRA 間の通信が可能になります。</block>
@@ -2383,4 +2378,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="93470a6d5ec43c6c46729637f4feda14" category="paragraph">ONTAP tools for VMware vSphereからアップグレードする場合は、アップグレードタスクを進める前に次の手順を完了する必要があります。* サービスデータは仮想マシンにローカルに保存されるため、各ノードに 100 GB のハードディスクを追加します。* パワーオフ状態の仮想マシンの CPU とメモリを、デプロイメントの種類に応じて変更します。CPUと RAM のホットプラグインを有効にします。</block>
   <block id="c9d47f8c41ca805122d820b5a33c8400" category="list-text">ONTAP tools for VMware vSphereのバイナリ(_.ova_)と署名済み証明書が含まれているファイルをからダウンロードします<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。OVA をコンテンツ ライブラリにインポートした場合は、この手順をスキップして次の手順に進むことができます</block>
   <block id="f7df05ae68c6e5833dfd15542c1632c0" category="list-text">ONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名付き証明書を含むファイルを次の場所からダウンロードします。 <block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
+  <block id="a99f72442060cbc9b70a30a0deceb5ac" category="list-text"><block ref="a99f72442060cbc9b70a30a0deceb5ac" category="inline-link-macro-rx"></block></block>
+  <block id="df0e042574783c577a323cad7e00d03f" category="paragraph">カール -X POST <block ref="60b2cf26de252a4c9c938a4ded6aed78" prefix=" " category="inline-code"></block></block>
+  <block id="1899392092401675b3ca134eaf0dae0e" category="paragraph">次の URL から Swagger にアクセスできます。 <block ref="2b09eb15e8e904ff30adf6fd75069681" prefix=" " category="inline-code"></block> 。</block>
+  <block id="90299a7739327ddb8f7bdb36ab48e642" category="paragraph">curl -X パッチ<block ref="8083d85a2708038b6e3e98616b6fee1c" prefix=" " category="inline-code"></block></block>
 </blocks>

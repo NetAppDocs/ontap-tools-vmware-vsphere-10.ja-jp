@@ -94,5 +94,5 @@ SnapMirror Active Syncのホストクラスタ保護を管理するために、O
 障害が発生した場合にセットアップをリカバリするために使用できる、ONTAP tools for VMware vSphereのセットアップのバックアップをスケジュールします。
 
 [role="quick-margin-list"]
-* link:../manage/manage/enable-backup.html["バックアップの作成とONTAP toolsセットアップのリカバリ"]
+* link:../manage/enable-backup.html["バックアップの作成とONTAP toolsセットアップのリカバリ"]
 

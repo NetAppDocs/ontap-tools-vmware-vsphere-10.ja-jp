@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: データディスクを仮想マシンに接続してストレージ容量を拡張します。 
 ---
 = 仮想マシンのデータディスクの接続または接続解除
 :allow-uri-read: 

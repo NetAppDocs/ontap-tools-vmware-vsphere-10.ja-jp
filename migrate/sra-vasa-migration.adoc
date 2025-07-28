@@ -25,10 +25,10 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . ONTAP ツール プラグインの vCenter Server API からストレージ バックエンドをローカルにオンボードします。
 . SwaggerまたはPostmanから次のAPIを実行して移行します。
 +
-カール- Xポスト https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
+カール -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs``
 
 +
-Swaggerには、次のURLからアクセスできます。https://$FQDN_IP_PORT/,例： https://10.67.25.33:8443/[]
+次の URL から Swagger にアクセスできます。  `\https://$FQDN_IP_PORT/', for example: `\https://10.67.25.33:8443` 。
 
 +
 []
@@ -72,7 +72,7 @@ Swaggerには、次のURLからアクセスできます。https://$FQDN_IP_PORT/
 +
 [listing]
 ----
-curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
 ジョブが完了したら、移行レポートを確認します。このレポートはジョブデータに含まれており、ジョブ応答からアクセスできます。
@@ -109,7 +109,7 @@ VASA Providerは削除しないでください。
 
 *カールの例*
 
-CURL-Xパッチ https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
+curl -X パッチ `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
 
 * JSON出力例*
 
@@ -176,7 +176,7 @@ NOTE: フェイルオーバーが完了しても再保護が保留中の場合�
 
 . これらの手順は、保護サイトとリカバリサイトの両方で実行します。
 +
-.. link:../manage/enable-services.adoc["ONTAP Tools for VMware vSphereサービスを有効にする"]
+.. link:../manage/enable-services.html["ONTAP Tools for VMware vSphereサービスを有効にする"]
 .. の手順に従って、ONTAP Tools for VMware vSphere 10.4 SRAアダプタをインストールしますlink:../protect/configure-on-srm-appliance.html["VMware Live Site RecoveryアプライアンスでのSRAの設定"]。
 .. VMware Live Site Recoveryのユーザーインターフェイスページで、*アレイの検出*および*デバイスの検出*操作を実行し、移行前と同じようにデバイスが表示されることを確認します。
 
