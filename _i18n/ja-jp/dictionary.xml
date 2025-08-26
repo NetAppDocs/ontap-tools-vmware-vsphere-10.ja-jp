@@ -1351,7 +1351,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">テンプレートの詳細を確認し、* Next *を選択します。</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">ライセンス契約を読んで同意し、* Next *を選択します。</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">各ソースネットワークのデスティネーションネットワークを選択し、*[Next]*を選択します。</block>
-  <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">[テンプレートのカスタマイズ]ウィンドウで、必要なフィールドに入力し、*[次へ]*を選択します。</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">画面右上の* administrator *アイコンを選択し、* Change password *を選択します。</block>
   <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">[ホストクラスタ保護]*ウィンドウで、クラスタに対する省略記号メニューを選択し、*[保護の削除]*を選択します。</block>
   <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">概要セクションの*アプライアンス設定の編集*を選択します。</block>
@@ -1763,8 +1762,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
   <block id="955e2530b35bd36732551d894e503a00" category="list-text">[名前とフォルダの選択]フィールドに仮想マシン名を入力し、その場所を選択します。</block>
   <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">vCenter Server 8.0.3バージョンを使用している場合は、[この仮想マシンのハードウェアをカスタマイズする]オプションを選択します。これにより、[完了の準備完了]ウィンドウに進む前に、[ハードウェアをカスタマイズする]という追加の手順がアクティブになります。</block>
-  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">vCenter Server 7.0.3バージョンを使用している場合は、導入の最後にある* what's next？*セクションの手順に従ってください。</block>
-  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">vCenter Server 8.0.3バージョンを使用している場合は、*ハードウェアのカスタマイズ*ウィンドウで* CPUホットアド*オプションと*メモリホットプラグ*オプションを有効にしてHA機能を有効にします。</block>
   <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">vCenter Server 7.0.3でONTAP tools for VMware vSphereを導入している場合は、導入後に以下の手順を実行します。</block>
   <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">vCenter Clientにログインする</block>
   <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">[インベントリ]*の下にあるONTAP tools for VMware vSphere仮想マシンに移動し、*[設定の編集]*オプションを選択します。</block>
@@ -1981,7 +1978,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">ONTAPストレージ設定</block>
   <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">ONTAPストレージとONTAP tools for VMware vSphereをシームレスに統合するには、次の設定を検討してください。</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">ONTAPシステムを使用したFCおよびFCoEのゾーニングについて</block>
-  <block id="70b4e2df1c2bfeb98be224b551dbb572" category="list-text">ストレージ接続にFibre Channel（FC；ファイバチャネル）を使用している場合は、ESXiホストをSVMのFC LIFに接続するようにFCスイッチにゾーニングを設定します。<block ref="b7794521bd71e03bf277ba88ec7edd58" category="inline-link-rx"></block></block>
   <block id="172a02306231a2a4f49511d5b78568bd" category="inline-link">ONTAPクラスタピア関係</block>
   <block id="01409d70514dee021d7a19fe33614d67" category="inline-link">ONTAPクラスタ間SVMピア関係</block>
   <block id="896541ee85adff34fb9f5a9c75ef9d3d" category="list-text">ONTAP toolsで管理されるSnapMirrorレプリケーションを使用するには、ONTAPストレージ管理者がONTAPでとを<block ref="8c2edb06b2585f1e066ba3419010ff37" category="inline-link-rx"></block>作成してからSnapMirrorを使用する必要があります<block ref="c6246851dd06c6faec212d662b844298" category="inline-link-rx"></block>。</block>
@@ -2385,4 +2381,11 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ec08a84e1743fa84ea31f88ca3a008ea" category="admonition">最新の互換性情報については、<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> 。</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 からONTAP 9.16.1</block>
   <block id="18adf16502c1eb6879520f01503df225" category="cell">ONTAPツール 10.2 の場合はONTAP 9.12.1 からONTAP 9.15.1 まで。  ONTAPツール 10.3 用のONTAP 9.14.1、9.15.1、9.16.0、および 9.16.1。  ONTAPツール 10.4 用のONTAP 9.14.1、9.15.1、9.16.0、および 9.16.1。  ASA r2 システムを使用する場合、 ONTAPツール 10.4 にはONTAP 9.16.1P3 以降が必要です。</block>
+  <block id="2de89f426cb40a40a73e0dc57ba1d0b0" category="inline-image-macro">名前とフォルダを選択してください</block>
+  <block id="797b9d658e154cdf3e14cfdbdb0fc337" category="list-text">vCenter Server 7.0.3 バージョンを使用している場合は、デプロイの最後にある「次の手順」セクションの手順に従ってください。<block ref="10901421e1b49cc7648423e4186ee13b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47d44ed4727a9bed10ad17773b1b922e" category="inline-image-macro">Customize template</block>
+  <block id="603b3c719f65dafb1976e068ef1f8d45" category="list-text">*テンプレートのカスタマイズ*ウィンドウで、必須フィールドに入力し、*次へ*を選択します。<block ref="bfa0729b2fed6181848e39628c495247" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">ハードウェアをカスタマイズする</block>
+  <block id="2a2d465455150512141b1402a600df32" category="list-text">vCenter Server 8.0.3 バージョンを使用する場合は、[ハードウェアのカスタマイズ] ウィンドウで [CPU ホット アド] オプションと [メモリ ホット プラグ] オプションを有効にして、HA 機能を有効にします。<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="936fb178b14835844700bc06aa5ab952" category="list-text">ストレージ接続にファイバ チャネル (FC) を使用している場合は、FC スイッチのゾーニングを構成して、ESXi ホストを SVM の FC LIF に接続します。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
 </blocks>

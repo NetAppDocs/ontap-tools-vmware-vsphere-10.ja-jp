@@ -142,6 +142,6 @@ NOTE: 上記のすべてのIPアドレスのDNSレコードを作成します。
 
 ONTAPストレージとONTAP tools for VMware vSphereをシームレスに統合するには、次の設定を検討してください。
 
-* ストレージ接続にFibre Channel（FC；ファイバチャネル）を使用している場合は、ESXiホストをSVMのFC LIFに接続するようにFCスイッチにゾーニングを設定します。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
+* ストレージ接続にファイバ チャネル (FC) を使用している場合は、FC スイッチのゾーニングを構成して、ESXi ホストを SVM の FC LIF に接続します。 https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
 * ONTAP toolsで管理されるSnapMirrorレプリケーションを使用するには、ONTAPストレージ管理者がONTAPでとを https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAPクラスタ間SVMピア関係"]作成してからSnapMirrorを使用する必要があります https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPクラスタピア関係"]。
 
