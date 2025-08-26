@@ -1465,7 +1465,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">[リセット（Reset）]*を選択して変更を適用します。</block>
   <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">[リセット（Reset）]*を選択して変更を適用します。パスワードがリセットされたら、新しいパスワードを使用してログインできます。</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">右側のペインで[Configure]タブを選択します。</block>
-  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage vMotion</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">右側のペインで* Monitor *タブを選択します。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「 * 次へ * 」を選択します。</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">[管理]タブで*[プレースホルダデータストア]*&gt;*[新規]*を選択して、新しいプレースホルダデータストアを作成します。</block>
@@ -1707,7 +1706,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">この情報はインストール時に検証されます。不一致がある場合は、Webコンソールにエラーメッセージが表示され、修正するように求められます。</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">ホスト名には、アルファベット（A ~ Z、a ~ z）、数字（0 ~ 9）、およびハイフン（-）を使用する必要があります。デュアルスタックを設定するには、IPv6アドレスにマッピングされたホスト名を指定します。</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">Pure IPv6はサポートされていません。mixedモードは、IPv6アドレスとIPv4アドレスの両方を含むVLANでサポートされます。</block>
-  <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">OVFフォームに不一致がある場合は、ダイアログボックスが修正アクションを促します。タブボタンを使用して移動し、必要な変更を行い、「OK」を選択します。問題の解決は3回試行できます。3回試行しても問題が解決しない場合は、インストールプロセスが停止します。新しい仮想マシンでインストールを再試行することを推奨します。</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">FlexVolボリュームを削除する</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">VMware環境のONTAP toolsに専用のONTAPクラスタを使用すると、未使用のFlexVolボリュームが多数作成されます。ONTAP Tools for VMware vSphereを削除したら、パフォーマンスへの影響を回避するためにFlexVolボリュームを削除する必要があります。</block>
   <block id="3fcb4ec0988a47a419299691b19d04fa" category="paragraph">iSCSI環境の場合は、igroupも削除する必要があります。</block>
@@ -1720,7 +1718,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">ONTAP Tools for VMware vSphereのアンインストール</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">ONTAP tools for VMware vSphereで管理されるデータストアから、すべての仮想マシンを削除または移動します。</block>
   <block id="4ad237c48098cfd8973e73475bded403" category="list-text">仮想マシンを削除するには、を参照してください。<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
-  <block id="937380d419246adf3fdb369397226f82" category="list-text">管理対象外のデータストアに移動するには、を参照してください。<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block></block>
   <block id="1d920979688b28c7b10ef84d14436f95" category="list-text">VASAプロバイダを有効にした場合は、ONTAPツールで*[設定]*&gt;*[VASA Provider設定]*&gt;*[登録解除]*を選択して、すべてのvCenterサーバからVASAプロバイダの登録を解除します。</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">VMware Live Site RecoveryからSRAアダプタを削除します。</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">ポート5480を使用して、VMware Live Site Recoveryアプライアンスの管理インターフェイスにadminとしてログインします。</block>
@@ -2388,4 +2385,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">ハードウェアをカスタマイズする</block>
   <block id="2a2d465455150512141b1402a600df32" category="list-text">vCenter Server 8.0.3 バージョンを使用する場合は、[ハードウェアのカスタマイズ] ウィンドウで [CPU ホット アド] オプションと [メモリ ホット プラグ] オプションを有効にして、HA 機能を有効にします。<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="936fb178b14835844700bc06aa5ab952" category="list-text">ストレージ接続にファイバ チャネル (FC) を使用している場合は、FC スイッチのゾーニングを構成して、ESXi ホストを SVM の FC LIF に接続します。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
+  <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">OVF フォームに不一致がある場合は、ダイアログ ボックスが表示され、修正アクションが促されます。タブボタンを使用して移動し、必要な変更を加えて、[OK] を選択します。問題を解決するには 3 回試みることができます。  3 回試行しても問題が解決しない場合は、インストール プロセスが停止し、新しい仮想マシンでインストールを再試行することをお勧めします。</block>
+  <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">Storage vMotion を使用して仮想マシンを移行する方法</block>
+  <block id="0166be8b4848389c414e9e383efe9111" category="list-text">管理されていないデータストアに移動するには、<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
 </blocks>
