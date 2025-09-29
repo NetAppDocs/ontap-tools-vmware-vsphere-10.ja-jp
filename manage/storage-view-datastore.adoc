@@ -14,7 +14,7 @@ summary: 'ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPスト
 ONTAP tools for VMware vSphereでは、[Configure]タブにデータストアとそのボリュームのONTAPストレージ側ビューが表示されます。
 
 .手順
-. vSphere Clientで、データストアに移動します。
+. vSphere クライアントからデータストアに移動します。
 . 右側のペインで[Configure]タブを選択します。
 . NetApp ONTAP tools *>* ONTAP Storage *を選択します。データストアのタイプに応じて、ビューが変わります。詳細については、次の表を参照してください。
 

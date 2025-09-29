@@ -27,8 +27,8 @@ VMware Live Site Recovery アプライアンスで SRA を構成すると、ONTA
 . _.tar.gz_ファイルをVMware Live Site Recoveryにアップロードします。
 . PuTTY などの SSH クライアントを介して管理者アカウントを使用して VMware Live Site Recovery アプライアンスにログインします。
 . 次のコマンドを使用してrootユーザに切り替えます。 `su root`
-. コマンドを実行し `cd /var/log/vmware/srm` てログディレクトリに移動します。
-. ログの場所で、コマンドを入力してSRAで使用されるDocker IDを取得します。 `docker ps -l`
+. コマンドを実行する `cd /var/log/vmware/srm`ログディレクトリに移動します。
+. ログの場所で、SRA で使用される Docker ID を取得するコマンドを入力します。 `docker ps -l`
 . コンテナIDにログインするには、次のコマンドを入力します。 `docker exec -it -u srm <container id> sh`
 . 次のコマンドを使用して、 ONTAP tools for VMware vSphere IP アドレスとパスワードで VMware Live Site Recovery を構成します。  `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 +
@@ -40,5 +40,4 @@ VMware Live Site Recovery アプライアンスで SRA を構成すると、ONTA
 . アダプタを再スキャンして、更新された詳細が VMware Live Site Recovery のストレージ レプリケーション アダプタ ページに表示されることを確認します。
 
 
-.結果
-ストレージ資格情報が保存されたことを示す確認メッセージが表示されます。これで、SRA は指定された IP アドレス、ポート、および資格情報を使用して SRA サーバーと通信できるようになりました。
+*結果* ストレージ資格情報が保存されたことを示す確認メッセージが表示されます。これで、指定された IP アドレス、ポート、および資格情報を使用して SRA サーバーと通信できるようになりました。

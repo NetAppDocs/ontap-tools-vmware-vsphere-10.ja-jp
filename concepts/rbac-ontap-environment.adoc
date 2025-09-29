@@ -23,7 +23,7 @@ ONTAPは、堅牢で拡張可能なRBAC環境を提供します。RBAC機能を�
 ONTAP RBACを使用する際には、環境や目標に応じていくつかのオプションを使用できます。主な管理上の決定事項の概要を以下に示します。詳細については、も参照してください https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAPの自動化：RBACセキュリティの概要"^]。
 
 
-NOTE: ONTAP RBACはストレージ環境専用に設計されており、vCenter Serverで提供されるRBACよりも簡単に実装できます。ONTAPでは、ユーザに直接ロールを割り当てます。vCenter Serverで使用するアクセス許可などを明示的に設定する必要はありません。ONTAP RBACでは必要ありません。
+NOTE: ONTAP RBAC はストレージ環境に合わせて調整されており、vCenter Server で提供される RBAC 実装よりもシンプルです。  ONTAPでは、ロールをユーザーに直接割り当てます。  ONTAP RBAC では、vCenter Server で使用されるような明示的な権限の構成は必要ありません。
 
 .ロールとPrivilegesのタイプ
 ONTAPユーザを定義するには、ONTAPロールが必要です。ONTAPロールには次の2種類があります。

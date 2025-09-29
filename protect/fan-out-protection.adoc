@@ -2,7 +2,7 @@
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
 keywords:  
-summary: ファンアウト保護では、整合性グループは、最初のデスティネーションONTAPクラスタで同期関係を使用し、2番目のデスティネーションONTAPクラスタで非同期関係を使用して二重保護されます。 
+summary: ファンアウト保護のシナリオでは、コンシステンシ グループは、最初の宛先ONTAPクラスタ上の同期関係と、2 番目の宛先ONTAPクラスタ上の非同期関係によって二重に保護されます。 
 ---
 = ファンアウト保護
 :allow-uri-read: 
@@ -11,9 +11,12 @@ summary: ファンアウト保護では、整合性グループは、最初の�
 
 
 [role="lead"]
-ファンアウト保護では、整合性グループは、最初のデスティネーションONTAPクラスタで同期関係を使用し、2番目のデスティネーションONTAPクラスタで非同期関係を使用して二重保護されます。SnapMirrorのアクティブな同期保護のワークフローを作成、編集、削除すると、同期保護が維持されます。SRMのフェイルオーバーと再保護のワークフローでは、非同期の保護が維持されます。
+ファンアウト保護のシナリオでは、コンシステンシ グループは、最初の宛先ONTAPクラスタ上の同期関係と、2 番目の宛先ONTAPクラスタ上の非同期関係によって二重に保護されます。  SnapMirrorアクティブ同期保護の作成、編集、および削除ワークフローにより、同期保護が維持されます。  VMware Live Site Recovery アプライアンスのフェイルオーバーと再保護ワークフローは、非同期保護を維持します。
 
-ファンアウト保護を確立するには、3つのサイトのクラスタとSVMをピアリングする必要があります。
+
+NOTE: SVM ユーザーではファンアウトはサポートされません。
+
+ファンアウト保護を設定するには、3 つのサイト クラスターと SVM をピアリングします。
 
 例
 
@@ -38,10 +41,17 @@ summary: ファンアウト保護では、整合性グループは、最初の�
 
 
 |===
-次の図は、ファンアウト保護の構成を示しています。 image:../media/fan-out-protection.png["ファンアウト保護構成"] image:../media/fan-out-protection-relationship.png["ファンアウト保護関係"]
+次の図は、ファンアウト保護構成を示しています。image:../media/fan-out-protection.png["ファンアウト保護構成"] image:../media/fan-out-protection-relationship.png["ファンアウト保護関係"]
 
-* 手順 *
+.手順
+. 新しいプレースホルダー データストアを選択します。段階的保護のプレースホルダ データストアの選択基準は次のとおりです。
++
+** 保護しているホスト クラスターにプレースホルダー データストアを配置しないでください。
+** ホスト クラスタにプレースホルダ データストアを含める必要がある場合は、 SnapMirrorアクティブ同期保護を設定する前に、それを VMware Live Site Recovery アプライアンスに追加します。この設定により、プレースホルダー データストアを保護から除外することができます。
++
+詳細については、 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["プレースホルダデータストアの選択"]
 
-. 新しいプレースホルダー データストアを作成します。参照する https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["プレースホルダデータストアの選択"]
-. ホストクラスタの保護にデータストアを追加しますlink:../manage/edit-hostcluster-protection.html["保護されているホストクラスタを変更"]。非同期と同期の両方のポリシータイプを追加する必要があります。
+
+
+. 次のようにホストクラスタ保護にデータストアを追加します。link:../manage/edit-hostcluster-protection.html["保護されているホストクラスタを変更"] 。非同期ポリシー タイプと同期ポリシー タイプの両方を追加します。
 

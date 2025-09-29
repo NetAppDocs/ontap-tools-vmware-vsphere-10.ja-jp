@@ -4,12 +4,22 @@ title: ONTAP Tools for VMware vSphereを管理します。
 entries:
 - title: ONTAP Tools for VMware vSphereダッシュボードの概要
   url: "/configure/dashboard-overview.html"
-- title: ONTAP tools Managerユーザインターフェイス
-  url: "/configure/manager-user-interface.html"
 - title: igroupとエクスポートポリシーを理解する
   url: "/manage/igroup-workflow.html"
 - title: ONTAPツールで管理されるigroupを理解する
   url: "/manage/nested-igroups.html"
+- title: ONTAP tools Managerユーザインターフェイス
+  url: "/manage/manager-user-interface.html"
+- title: ONTAPツールマネージャの設定を管理する
+  entries:
+  - title: AutoSupport設定の編集
+    url: "/manage/edit-autosupport.html"
+  - title: NTPサーバの追加
+    url: "/manage/add-ntpserver.html"
+  - title: VASAプロバイダーとSRAの資格情報をリセットする
+    url: "/manage/reset-vasa-sra-credentials.html"
+  - title: バックアップ設定を編集する
+    url: "/manage/backup-settings.html"
 - title: ONTAP Tools for VMware vSphereサービスを有効にする
   url: "/manage/enable-services.html"
 - title: ONTAP Tools for VMware vSphereの設定の変更
@@ -38,7 +48,7 @@ entries:
   url: "/manage/manage-storage-threshold.html"
 - title: ストレージバックエンドを管理
   url: "/manage/storage-backend.html"
-- title: vCenter Serverインスタンスの管理
+- title: ONTAPツールでvCenter Serverインスタンスを管理する
   url: "/manage/manage-vcenter.html"
 - title: 証明書を管理します
   url: "/manage/certificate-manage.html"
@@ -52,10 +62,10 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: vCenterサーバとONTAPクレデンシャルを更新する
     url: "/manage/update-vcenter-credentials.html"
+  - title: 証明書検証フラグを変更する
+    url: "/manage/change-valid-flag.html"
 - title: ONTAP toolsレポート
   url: "/manage/reports.html"
-- title: ログファイルを収集します
-  url: "/manage/collect-the-log-files.html"
 - title: 仮想マシンを管理
   entries:
   - title: 仮想マシンの移行またはクローニングに関する考慮事項
@@ -86,14 +96,8 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: ホストクラスタの保護の解除
     url: "/manage/delete-hostcluster-protection.html"
-- title: AutoSupportを無効にする
-  url: "/manage/disable-autosupport.html"
-- title: AutoSupportプロキシURLの更新
-  url: "/manage/update-proxyurl.html"
-- title: NTPサーバの追加
-  url: "/manage/add-ntpserver.html"
-- title: バックアップの作成とONTAP toolsセットアップのリカバリ
-  url: "/manage/enable-backup.html"
+- title: ONTAPツールのセットアップを回復する
+  url: "/manage/recover-backup.html"
 - title: ONTAP Tools for VMware vSphereのアンインストール
   url: "/manage/uninstall-deployment.html"
 - title: FlexVolボリュームを削除する

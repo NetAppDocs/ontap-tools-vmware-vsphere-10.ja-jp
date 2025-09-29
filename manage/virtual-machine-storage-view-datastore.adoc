@@ -17,7 +17,7 @@ summary: '[ストレージ]ビューには、仮想マシンによって作成�
 NOTE: このビューは、ONTAP Tools for VMware vSphereで管理するvVolデータストア関連のディスクが1つ以上マウントされているVMに適用されます。
 
 .手順
-. vSphere Clientで、仮想マシンに移動します。
+. vSphere Client から仮想マシンに移動します。
 . 右側のペインで* Monitor *タブを選択します。
 . NetApp ONTAP tools *>* Storage *を選択します。右側のペインに*[ストレージ]*の詳細が表示されます。VMに存在するvVolのリストが表示されます。
 +

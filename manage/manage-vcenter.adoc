@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: vCenterは、ホスト、仮想マシン、およびストレージバックエンドを制御できる一元管理プラットフォームです。 
 ---
-= vCenter Serverインスタンスの管理
+= ONTAPツールでvCenter Serverインスタンスを管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,19 +37,20 @@ vCenter Serverインスタンスを変更するには、次の手順を実行し
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから該当するvCenter Serverインスタンスを選択します。
 . 変更するvCenter Serverの縦の省略記号を選択し、*[変更]*を選択します。
-. vCenter Serverインスタンスの詳細を変更し、*[変更]*を選択します。
+. *vCenter の変更* ウィンドウで、ユーザー名、パスワード、ポートの詳細を入力します。
+. 証明書をアップロードし、「*変更*」を選択します。
 
 
 
 
 == vCenter Serverインスタンスを削除する
 
-vCenter Serverを削除する前に、vCenter Serverに接続されているすべてのストレージバックエンドを削除する必要があります。
+vCenter Server を削除する前に、vCenter Server からすべてのストレージ バックエンドを削除します。
 
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから該当するvCenter Serverインスタンスを選択します。
-. 削除するvCenter Serverの縦の省略記号を選択し、*[削除]*を選択します。
+. 削除する vCenter Server の縦の省略記号を選択し、[削除] を選択します。
 +
 
 NOTE: vCenter Server インスタンスを削除すると、それらはアプリケーションによってメンテナンスされなくなります。

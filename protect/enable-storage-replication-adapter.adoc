@@ -17,7 +17,7 @@ ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザス�
 * vCenter ServerインスタンスのセットアップとESXiホストの設定が完了している必要があります。
 * ONTAP Tools for VMware vSphereを導入しておく必要があります。
 *  `.tar.gz`からSRAアダプタファイルをダウンロードしておく必要があります https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。
-* SRAワークフローを実行する前に、ソースとデスティネーションのONTAPクラスタで同じカスタムSnapMirrorスケジュールを作成しておく必要があります。
+* SRA ワークフローを実行する前に、ソースと宛先の両方のONTAPクラスタで同じカスタムSnapMirrorスケジュールを設定する必要があります。
 * link:../manage/enable-services.html["ONTAP Tools for VMware vSphereサービスを有効にする"] SRA 機能を有効にします。
 
 
@@ -27,3 +27,16 @@ ONTAP tools for VMware vSphereには、SRA機能を有効にしてディザス�
 . SRAプラグインの_.tar.gz_installerをVMware Live Site Recoveryにアップロードします。
 . アダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。
 
+
+
+NOTE: フェイルオーバー後、データストアに対して拡張、マウント、削除などのアクションが使用できなくなる可能性があります。データストアの検出を実行して更新し、適切なコンテキスト メニュー アクションを表示します。
+
+
+NOTE: 再保護操作を実行するたびに、両方のサイトでストレージ検出を実行する必要があります。
+
+SRA 保護を備えた新しいセットアップでは、常にテストフェイルオーバーを実行します。テストフェイルオーバーをスキップすると、再保護操作が失敗する可能性があります。
+
+ファンアウト構成では、自動フェイルオーバーデュプレックスおよび非同期SnapMirrorの SnapMirrorソースがサイト B に変更されるSnapMirror Active Sync フェイルオーバー後に、サイト B と C の間でテストフェイルオーバーを実行します。この手順をスキップすると、再保護操作が失敗する可能性があります。
+
+.関連情報
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview["VMware Site Recovery Manager を使用して NFS データストアの災害復旧を構成する"]

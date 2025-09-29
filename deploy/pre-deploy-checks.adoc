@@ -60,13 +60,13 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 | 要件 | あなたの価値 
 
 
-| ONTAPツールアプリケーションのIPアドレス。これは、ONTAPツールのWebインターフェースにアクセスするためのIPアドレスです。 |  
+| ONTAPツール アプリケーションの IP アドレス。これは、ONTAPツールのWebインターフェース（ロードバランサ）にアクセスするためのIPアドレスです。 |  
 
 
-| ONTAPツールの内部通信用仮想IPアドレス。このIPアドレスは、複数のONTAPツールインスタンスを使用する環境での内部通信に使用されます。このIPアドレスは、ONTAPツールアプリケーションのIPアドレスと同じにしないでください。 |  
+| 内部通信用のONTAPツール仮想 IP アドレス。この IP アドレスは、複数のONTAPツール インスタンスを含むセットアップでの内部通信に使用されます。この IP アドレスは、 ONTAPツール アプリケーションの IP アドレスと同じであってはなりません。(Kubernetes コントロール プレーン) |  
 
 
-| 最初のノードのDNSホスト名 |  
+| ONTAPツール管理ノードのDNSホスト名 |  
 
 
 | プライマリ DNS サーバ |  
@@ -78,7 +78,7 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 | DNS検索ドメイン |  
 
 
-| 最初のノードの IPv4 アドレス。管理ネットワーク上のノード管理インターフェースに固有の IPv4 アドレスです。 |  
+| ONTAPツール管理ノードの IPv4 アドレス。これは、管理ネットワーク上のノード管理インターフェイスの一意の IPv4 アドレスです。 |  
 
 
 | IPv4アドレスのサブネットマスク |  
@@ -134,7 +134,7 @@ NOTE: 上記のすべてのIPアドレスのDNSレコードを作成します。
 
 == ネットワークファイアウォールの設定
 
-ネットワークファイアウォールで、IPアドレスに必要なポートを開きます。ONTAP ツールはポート 443 を介してこの LIF にアクセスできる必要があります。最新のアップデートについては、を参照してlink:../deploy/prerequisites.html["ポートの要件"]ください。
+関連するすべての IP アドレスに対して必要なファイアウォール ポートが開いていることを確認します。 ONTAPツールはポート 443 経由で LIF にアクセスする必要があります。必要なポートの完全なリストについては、次のポート要件セクションを参照してください。link:../deploy/prerequisites.html["VMware vSphere の要件と構成の制限に対する ONTAP ツール"] 。
 
 
 
@@ -142,6 +142,6 @@ NOTE: 上記のすべてのIPアドレスのDNSレコードを作成します。
 
 ONTAPストレージとONTAP tools for VMware vSphereをシームレスに統合するには、次の設定を検討してください。
 
-* ストレージ接続にファイバ チャネル (FC) を使用している場合は、FC スイッチのゾーニングを構成して、ESXi ホストを SVM の FC LIF に接続します。 https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
+* ストレージ接続にファイバー チャネル (FC) を使用している場合は、FC スイッチのゾーニングを構成して、ESXi ホストを SVM の FC LIF に接続します。 https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["ONTAPシステムを使用したFCおよびFCoEのゾーニングについて"]
 * ONTAP toolsで管理されるSnapMirrorレプリケーションを使用するには、ONTAPストレージ管理者がONTAPでとを https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAPクラスタ間SVMピア関係"]作成してからSnapMirrorを使用する必要があります https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAPクラスタピア関係"]。
 

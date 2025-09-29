@@ -20,23 +20,17 @@ VMware Live Site Recovery用Storage Replication Adapter（SRA）を実行する�
 .作業を開始する前に
 保護対象サイトとリカバリサイトには、次のプログラムがインストールされている必要があります。
 
-* VMware Live Site Recovery
-+
-VMware Live Site Recoveryのインストールに関するドキュメントは、VMwareサイトにあります。
-
+* VMware Live Site Recovery: VMware サイトでは、VMware Live Site Recovery のインストール ドキュメントが提供されています。
 +
 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["VMware Live Site Recoveryについて"]
 
-* SRA
-+
-アダプタはVMware Live Site Recoveryにインストールされます。
-
+* SRA: VMware Live Site Recovery にアダプタをインストールします。
 
 
 .手順
 . 保護対象サイトで、プライマリ ESXi ホストがプライマリストレージシステムの LUN に接続されていることを確認します。
 . LUNが含まれているigroupにが含まれていることを確認します `ostype` プライマリストレージシステムでオプションを_vmware_に設定します。
-. リカバリサイトのESXiホストからStorage Virtual Machine（SVM）への適切なiSCSI接続が確立されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスでき、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。
+. リカバリ サイトの ESXi ホストに、ストレージ仮想マシン (SVM) への適切な iSCSI およびファイバ チャネル接続があることを確認します。セカンダリ サイトの ESXi ホストはセカンダリ サイトのストレージにアクセスできる必要があり、プライマリ サイトの ESXi ホストはプライマリ サイトのストレージにアクセスできる必要があります。
 +
 そのためには、ESXiホストのSVMでローカルLUNが接続されていることを確認するか、または `iscsi show initiators` SVMでコマンドを実行します。
 ESXiホストでマッピングされたLUNへのLUNアクセスをチェックして、iSCSI接続を確認します。
@@ -50,17 +44,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
 .作業を開始する前に
 保護対象サイトとリカバリサイトには、次のプログラムがインストールされている必要があります。
 
-* VMware Live Site Recovery
-+
-VMware Live Site Recoveryのインストールに関するドキュメントは、VMwareサイトで参照できます。
-
-+
-https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["VMware Live Site Recoveryについて"]
-
-* SRA
-+
-アダプタがVMware Live Site RecoveryとSRAサーバにインストールされている。
-
+* VMware Live Site Recovery: VMware Live Site Recovery のインストール ドキュメントは、VMware のサイトにあります - https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["VMware Live Site Recoveryについて"]
+* SRA: VMware Live Site Recovery と SRA サーバーにアダプタをインストールします。
 
 
 .手順

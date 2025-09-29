@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。 
 ---
-= vCenter Serverインスタンスの追加
+= ONTAPツールにvCenter Serverインスタンスを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,14 +13,14 @@ summary: vCenter ServerインスタンスをONTAP tools for VMware vSphereに追
 [role="lead"]
 vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。複数の vCenter Server インスタンスを追加する場合、ONTAP ツールと各 vCenter Server 間の安全な通信にはカスタム CA 証明書が必要です。
 
-* このタスクについて *
-
-ONTAP toolsをvCenterと統合することで、プロビジョニング、Snapshot、データ保護などのストレージタスクをvSphere Clientから直接実行できるため、別のストレージ管理コンソールに切り替える必要がありません。
+.タスクの内容
+ONTAPツールは vCenter Server と統合され、プロビジョニング、スナップショット、データ保護などのストレージ タスクを vSphere クライアントから直接実行します。
 
 .手順
-. Webブラウザを開き、次のURLに移動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Web ブラウザを開き、次の URL にアクセスします。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . vCenter Serverインスタンスをオンボードするには、* vCenters *>* Add *を選択します。vCenterのIPアドレスまたはホスト名、ユーザ名、パスワード、およびポートの詳細を入力します。
+. 詳細オプションで、vCenter Server 証明書を自動的に取得 (承認) するか、手動でアップロードします。
 +
 
 NOTE: vCenterインスタンスをONTAP toolsに追加するために管理者アカウントは必要ありません。権限が制限された管理者アカウントなしでカスタムロールを作成できます。詳細については、を参照してください link:../concepts/rbac-vcenter-use.html["vCenter Server RBACとONTAP Tools for VMware vSphere 10の使用"] 。
@@ -29,7 +29,7 @@ NOTE: vCenterインスタンスをONTAP toolsに追加するために管理者�
 
 vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理が自動的にトリガーされます。
 
-* vCenter Clientプラグインがリモートプラグインとして登録されます。
+* ONTAPツールは、vCenter クライアント プラグインをリモート プラグインとして登録します。
 * プラグインとAPIのカスタムPrivilegesがvCenter Serverインスタンスに適用されます。
 * ユーザを管理するためのカスタムロールが作成されます。
 * プラグインは、vSphereユーザインターフェイスにショートカットとして表示されます。

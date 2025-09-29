@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 イニシエータグループ（igroup）は、FCプロトコルホストのワールドワイドポート名（WWPN）またはiSCSIホストの修飾ノード名（Qualified Node Name）のテーブルです。igroupを定義してLUNにマッピングすることで、どのイニシエータがLUNにアクセスできるかを制御できます。
 
-VMware vSphere 9.x 向け ONTAP ツールでは、igroup はフラットな構造で作成および管理され、vCenter 内の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストア間での igroup の柔軟性と再利用性が制限されていました。VMwarevSphere 10.x 向け ONTAP ツールでは、ネストされた igroup が導入されています。vCenter 内の各データストアは親 igroup に関連付けられ、各ホストはその親の下にある子 igroup にリンクされます。VMwareユーザー定義の名前を持つカスタム親igroupを定義し、複数のデータストア間で再利用することで、igroupをより柔軟かつ相互接続された形で管理できます。vSphere 向け ONTAP ツールで LUN とデータストアを効果的に管理するには、igroup のワークフローを理解することが不可欠です。以下の例に示すように、ワークフローによって生成されるigroup構成は異なります。
+ONTAP tools for VMware vSphereでは、igroup はフラットな構造で作成および管理され、vCenter 内の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストアにわたる igroup の柔軟性と再利用が制限されていました。 ONTAP tools for VMware vSphereでは、ネストされた igroup が導入されています。ネストされた igroup では、vCenter 内の各データストアが親 igroup に関連付けられ、各ホストはその親の下の子 igroup にリンクされます。複数のデータストア間で再利用できるように、ユーザー定義の名前を持つカスタムの親 igroup を定義して、より柔軟で相互接続された igroup の管理を実現できます。 igroup ワークフローを理解することは、 ONTAP tools for VMware vSphereで LUN とデータストアを効果的に管理するために不可欠です。次の例に示すように、ワークフローによって異なる igroup 構成が生成されます。
 
 
-NOTE: 記載されている名前は説明のみを目的としており、実際のigroup名を指すものではありません。ONTAPツールで管理されるigroupでは、プレフィックス「otv_」が使用されます。カスタムigroupには任意の名前を付けることができます。
+NOTE: 記載されている名前は説明のみを目的としており、実際の igroup 名を指すものではありません。 ONTAPツールで管理される igroup は、プレフィックス「otv_」を使用します。カスタム igroup には任意の名前を付けることができます。
 
 |===
 
@@ -94,7 +94,7 @@ ONTAPシステム上にDS1の親igroup DS1Igroupが作成され、子igroup host
 
 
 
-host1igroup は階層から削除されます。子 igroup は明示的に削除されません。削除は次の 2 つの条件下で発生します。
+host1Igroup は階層から削除されます。子 igroup は明示的に削除されません。削除は次の 2 つの条件下で発生します。
 
 * LUN がマップされていない場合、ONTAP システムは子 igroup を削除します。
 * スケジュールされたクリーンアップ ジョブにより、LUN マッピングのない、ぶら下がっている子 igroup が削除されます。割り当ての子 igroup が削除されます。これらのシナリオは、ONTAP ツールで管理されている igroup にのみ適用され、カスタム作成された igroup には適用されません。
@@ -114,7 +114,7 @@ host1igroup は階層から削除されます。子 igroup は明示的に削除
 
 
 
-親igroupと子igroupは、別のデータストアが親igroupを再利用しない場合に削除されます。子igroupは明示的に削除されることはありません。
+別のデータストアが親 igroup を再利用しない場合、親 igroup と子 igroup は削除されます。子igroupは明示的に削除されることはありません
 
 .例5：
 カスタム親igroupの下に複数のデータストアを作成する
@@ -203,7 +203,7 @@ ONTAPツール9から10への移行（igroupの正規化）
 
 * ワークフロー *
 
-VMware vSphere 9.x バージョンの ONTAP ツールは、階層型 igroup をサポートしていません。10.3以降のバージョンへの移行時には、igroup を階層構造に正規化する必要があります。
+VMware vSPhere 9.x バージョン用のONTAPツールは、階層型 igroup をサポートしていません。  10.3 以降のバージョンへの移行中は、igroup を階層構造に正規化する必要があります。
 
 移行前:
 

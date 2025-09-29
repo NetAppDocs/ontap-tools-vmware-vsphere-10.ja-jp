@@ -6,7 +6,7 @@ entries:
   url: "/concepts/ontap-tools-overview.html"
 - title: 主要な概念と用語
   url: "/concepts/ontap-tools-concepts-terms.html"
-- title: ロールベースアクセス制御
+- title: ロールベースのアクセス制御 (RBAC)
   entries:
   - title: RBACの詳細
     url: "/concepts/rbac-learn-about.html"
@@ -22,7 +22,3 @@ entries:
       url: "/concepts/rbac-ontap-environment.html"
     - title: ONTAPでRBACを使用する
       url: "/concepts/rbac-ontap-use.html"
-- title: ONTAP tools for VMware vSphereの高可用性
-  url: "/concepts/high-availability.html"
-- title: ONTAP tools Managerユーザインターフェイス
-  url: "/configure/manager-user-interface.html"

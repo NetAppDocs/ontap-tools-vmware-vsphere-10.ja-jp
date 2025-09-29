@@ -4,27 +4,27 @@ sidebar: sidebar
 keywords: upgrade 
 summary: アップグレードは、HA構成と非HA構成の両方でサポートされます。 
 ---
-= ONTAP Tools for VMware vSphere 10.xから10.4へのアップグレード
+= ONTAP tools for VMware vSphereから 10.5 へのアップグレード
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 10.2または10.3から10.4にアップグレードできます。ONTAP tools 10.0または10.1から10.4へのただし、の直接アップグレードはサポートされていません。
+ONTAP tools for VMware vSphereから 10.5 にアップグレードできます。ただし、 ONTAPツール 10.0、10.1、または 10.2 から 10.5 にアップグレードするには、まず 10.3 または 10.4 にアップグレードしてから 10.5 に進む必要があります。
 
 注：
 
-* ASA R2システムでは、ストレージアベイラビリティゾーン（SAZ）を追加する前に、ONTAP tools for VMware vSphere 10.4 with ONTAP 9.16.1にアップグレードする必要があります。
-* ONTAP tools for VMware vSphere 10.2または10.3から10.4リリースへのアップグレードに失敗した場合、ロールバックはサポートされません。セットアップをリカバリするには、ONTAP tools for VMware vSphere 10.2にRPOを、ONTAP tools for VMware vSphere 10.3にはほぼゼロのRPOまたはスナップショットリカバリを使用します。
+* ASA r2 システムの場合、追加のストレージ可用性ゾーン (SAZ) を設定する前に、 ONTAP tools for VMware vSphereを 10.5 に、 ONTAP を9.16.1 にアップグレードしてください。
+* ONTAP tools for VMware vSphereから 10.5 へのアップグレードが失敗した場合、ロールバックすることはできません。低い RPO またはスナップショット回復を使用してセットアップを復元します。  ONTAP tools for VMware vSphereの場合は、ゼロ RPO を使用してセットアップを復元します。
 
 
 .作業を開始する前に
-非HAアップグレードの場合は、ONTAP tools VMの電源をオフにします。HAアップグレードの場合は、仮想マシン（VM）の設定を次のように変更する前に、最初のノードの電源をオフにします。
+* ONTAPシステム証明書とオンボードされた vCenter 証明書が少なくとも 5 日間有効であることを確認します。期限が早く切れると、アップグレードは失敗します。
+* 安全なアップグレードを確実に行うには、証明書にサブジェクト別名 (SAN) エントリが含まれていることを確認します。証明書に SAN エントリがなく、アップグレードを続行する必要がある場合は、証明書検証フラグを false に設定して、アップグレード中にプロンプトで SAN チェックをバイパスできます。
+* すべてのノードに 100 GB の容量を持つ 5 番目のディスクがあることを確認します。
+* ノード構成が以下の表の仕様と一致していることを確認します。
 
-ONTAP tools for VMware vSphereからアップグレードする場合は、アップグレードタスクを進める前に次の手順を完了する必要があります。* サービスデータは仮想マシンにローカルに保存されるため、各ノードに 100 GB のハードディスクを追加します。* パワーオフ状態の仮想マシンの CPU とメモリを、デプロイメントの種類に応じて変更します。CPUと RAM のホットプラグインを有効にします。
-
-+
 
 |===
 | 展開タイプ | ノードあたりのCPU（コア） | ノードあたりのメモリ（GB） | ノードあたりのディスクスペース（GB） | 合計CPU（コア） | メモリ（GB） | 合計ディスク容量（GB） 
@@ -44,110 +44,46 @@ ONTAP tools for VMware vSphereからアップグレードする場合は、ア�
 
 | 大規模なHA構成 | 17 | 34 | 350 | 51 | 一 〇 二 | 1050 
 |===
-* 変更が完了したらVMの電源をオンにし、サービスが実行中の状態になるまで待ちます。
-* HA環境の場合は、リソースを変更し、CPUとRAMのホットプラグインを有効にし、2番目と3番目のノードにも100GBのハードディスクを追加します。これらのノードをリブートする必要はありません。
-* ONTAP tools 10.2を使用してアプライアンスをローカルパス（簡単な導入）として導入した場合は、アップグレード前に休止スナップショットを作成する必要があります。
+* CPU と RAM のホット プラグインが有効になっていることを確認します。
+* ONTAP tools for VMware vSphereの場合、アップグレードする前に、 ONTAPツール仮想マシンで静止スナップショットを作成します。
+* 低い RPO バックアップを有効にし、vCenter Client インターフェイスに 1 つのバックアップが表示されるようにします。
 
-
-ONTAP tools for VMware vSphere 10.0から10.1にアップグレードする場合は、アップグレードタスクに進む前に次の手順を実行する必要があります。*診断を有効にする*
-
-. vCenter Serverで、ONTAP toolsへのコンソールを開きます。
-. maintenance ユーザとしてログインします。
-. 「* 4 *」と入力して* Support and Diagnostics（サポートと診断）*を選択します。
-. 「* 2 *」と入力して*[リモート診断アクセスを有効にする]*を選択します。
-. 「* y *」と入力して、任意のパスワードを設定します。
-. ターミナル/ puttyから、ユーザ「diag」と前の手順で設定したパスワードを使用してVMのIPアドレスにログインします。
-
-
-* MongoDBのバックアップを取る*
-
-次のコマンドを実行して、MongoDBのバックアップを作成します。
-
-* kn exec-it ntv-MongoDB-0 sh-kNはkubectl -n ntv-systemの別名である。
-* ポッド内でrun_env | grep MongoDB_root_password_commandを実行します。
-* run_exit_commandを実行してポッドから出力します。
-* run_kN exec NTV-MongoDB-0--mongodump -u root -p MongoDB_root_password --archive=/tmp/ mongodb-backup.gz --gzip_commandを実行して、上記のコマンドで設定したMongo_root_passwordを置き換えます。
-* _kN cp NTV-MongoDB-0：/tmp/ mongodb-backup.gz ./MongoDB-backup.gz_commandを実行して、上記のコマンドを使用して作成したMongoDBバックアップをポッドからホストにコピーします。
-
-
-*すべてのボリュームのスナップショットを作成*
-
-* 「kN get pvc」コマンドを実行し、コマンド出力を保存します。
-* 次のいずれかの方法で、すべてのボリュームのSnapshotを1つずつ作成します。
-+
-** CLIから次のコマンドを実行します。_volume snapshot create -vserver <vserver_name>-volume <volume_name>-snapshot <snapshot_name>_
-** ONTAPシステムマネージャのユーザインターフェイスで、検索バーでボリュームの名前を検索し、名前を選択してボリュームを開きます。[Snapshot]に移動し、そのボリュームのSnapshotを追加します。
-
-
-
-
-* vCenterでVMware vSphere VM用のONTAPツールのスナップショットを作成します（HA導入の場合は3 VM、非HA導入の場合は1 VM）*
-
-* vSphere Clientユーザインターフェイスで、VMを選択します。
-* [Snapshots]タブに移動し、*[Take Snapshot]*ボタンを選択します。VMの休止スナップショットを作成します。詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["仮想マシンのスナップショットの作成"^]。
-
-
-アップグレードを実行する前に、「generate-support-bundle-job」というプレフィックスが付いた完了したポッドをログバンドルから削除してください。サポートバンドルの生成を実行中の場合は、完了してからポッドを削除します。
-
-どのようなアップグレードでも、100 GBのハードディスクドライブ（HDD）を追加する必要があります。HDDを追加するには、次のタスクを実行します。
-
-. シングルノード構成のVMを選択するか、HA構成の3つすべてのVMを選択します。
-. VMを右クリックし、*[Add New Device]*>* Hard Disk*を選択します。
-. [New Hard disk]フィールドに100 GB HDDを追加します。
-. [適用]を選択します。
-
-
-ハードディスクを追加したら、それぞれの構成のVMのリソースを更新し、プライマリVMを再起動します。
-
-新しいHDDが作成されます。Dynamic Storage Provisionerは、このHDDを使用してボリュームを生成またはレプリケートします。
 
 .手順
 . ONTAP tools for VMware vSphereアップグレードISOをコンテンツライブラリにアップロードします。
 . プライマリVMページで、*[Actions]*>*[Edit Settings]*を選択します。
-. CD/DVDドライブ*フィールドの編集設定ウィンドウで、コンテンツライブラリISOファイルを選択します。
-. ISOファイルを選択し、* OK *を選択します。[CD/DVDドライブ]フィールドで[接続済み]チェックボックスを選択します。image:../media/primaryvm-edit-settings.png["設定を編集します"]
+. *CD/DVD ドライブ* フィールドの編集設定ウィンドウで、*コンテンツ ライブラリ ISO ファイル* を選択します。
+. ISO ファイルを選択し、*CD/DVD ドライブ* フィールドの *接続済み* ボックスをオンにして、*OK* をクリックします。
 . vCenter Serverで、ONTAP toolsへのコンソールを開きます。
 . maintenance ユーザとしてログインします。
-. 「* 3 *」と入力して、[システム設定]メニューを選択します。
-. 「* 7 *」と入力して、アップグレードオプションを選択します。
+. *3* と入力して *システム構成* メニューを選択します。
+. *7* と入力して *アップグレード* オプションを選択します。
++
+アップグレード中に、オンボードされたストレージ バックエンド証明書にサブジェクト別名 (SAN) エントリがない場合、不足している SAN を示すプロンプトが表示されます。  SAN を検証せずに続行することを選択した場合、アップグレードは続行されますが、潜在的なセキュリティ リスクがあるため、これはお勧めしません。
+
 . をアップグレードすると、次の処理が自動的に実行されます。
 +
-.. 証明書のアップグレード
-.. プラグインのリモートアップグレード
+.. ゲートウェイ証明書は 1 年間の有効期間で更新されます。以前の SRA アダプタを削除し、新しい 10.5 アダプタをアップロードすると、SRA 証明書の有効期間は 10 年から 1 年に変わります。
+.. リモートプラグインがアップグレードされました
+.. ONTAPおよびvCenter Serverの証明書が検証され、 ONTAPツールに追加されます
+.. バックアップが有効になっています
 
 
-
-
-ONTAP tools for VMware vSphere 10.4にアップグレードすると、次のことが可能になります。
-
-* マネージャのユーザインターフェイスからサービスを無効にする
-* 非HAセットアップからHAセットアップへの移行
-* 非HA小規模構成非HA中規模構成、またはHA中規模または大規模構成にスケールアップします。
-* HA構成でないアップグレードの場合は、ONTAP tools VMをリブートして変更を反映します。HAのアップグレードの場合は、最初のノードをリブートして変更をノードに反映します。
 
 
 .次の手順
-以前のリリースのONTAP tools for VMware vSphereを10.4にアップグレードしたら、SRAアダプタを再スキャンして、[VMware Live Site Recovery][Storage Replication Adapters]ページで詳細が更新されたことを確認します。
+ONTAP tools for VMware vSphereにアップグレードした後:
 
-アップグレードが完了したら、次の手順に従ってONTAPからTridentボリュームを手動で削除します。
-
-
-NOTE: ONTAP tools for VMware vSphere 10.1または10.2が非HAの小規模または中規模（ローカルパス）構成の場合、これらの手順は必要ありません。
-
-. vCenter Serverで、ONTAP toolsへのコンソールを開きます。
-. maintenance ユーザとしてログインします。
-. 「* 4 *」と入力して、* Support and Diagnostics（サポートと診断）*メニューを選択します。
-. * 1 *を入力して*アクセス診断シェル*オプションを選択します。
-. 次のコマンドを実行します。
-+
-[listing]
-----
-sudo python3 /home/maint/scripts/ontap_cleanup.py
-----
-. ONTAPのユーザ名とパスワードを入力します。
+* システムアラートを監視し、ゲートウェイ証明書が 1 年後に期限切れになる前に更新する計画を立てます。
+* ONTAPツール 10.4 または 10.3 SRA アダプタを削除し、10.5 SRA アダプタ tar ファイルをアップロードします。次に、SRA アダプタを再スキャンして、VMware Site Recovery ストレージ レプリケーション アダプタ ページを更新します。
 
 
-これにより、ONTAP tools for VMware vSphere 10.1 / 10.2で使用されているONTAP内のTridentボリュームがすべて削除されます。
+アップグレード後は、次のことが可能になります。
+
+* マネージャのユーザインターフェイスからサービスを無効にする
+* 非HAセットアップからHAセットアップへの移行
+* 非 HA の小規模構成を非 HA の中規模構成に、または HA の中規模または大規模構成にスケールアップします。
+
 
 .関連情報
-link:../migrate/migrate-to-latest-ontaptools.html["ONTAP Tools for VMware vSphere 9.xxから10.4への移行"]
+link:../migrate/migrate-to-latest-ontaptools.html["ONTAP tools for VMware vSphereから 10.5 に移行する"]

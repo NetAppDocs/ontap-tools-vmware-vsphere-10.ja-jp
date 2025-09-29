@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphereの使用を開始するには、いく�
 
 
 [role="lead"]
-VVOLデータストアを使用している場合は、ONTAP toolsの初期導入をハイアベイラビリティ（HA）構成に拡張し、VASA Providerサービスを有効にする必要があります。
+復元力を高め、サービスごとにより多くのコンテナをサポートするには、初期のONTAPツールの導入を高可用性 (HA) 構成に拡張します。  HA セットアップのvVolsデータストアでは、VASA プロバイダー サービスを有効にする必要があります。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]導入のスケールアップ
 [role="quick-margin-para"]
@@ -23,7 +23,7 @@ ONTAP tools for VMware vSphereの構成をスケールアップして環境内�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]サービスの有効化
 [role="quick-margin-para"]
-vVolデータストアを設定するには、VASA Providerサービスを有効にする必要があります。VASA ProviderをvCenterに登録し、ストレージポリシーがHAの要件（ネットワークやストレージの適切な構成など）を満たしていることを確認します。
+vVolsデータストアを構成するには、VASA プロバイダー サービスを有効にする必要があります。  VASA プロバイダーを vCenter に登録し、適切なネットワークとストレージの構成を含むストレージ ポリシーが HA 要件を満たしていることを確認します。
 
 [role="quick-margin-para"]
 VMware Site Recovery Manager（SRM）またはVMware Live Site Recovery（VLSR）用のONTAP tools Storage Replication Adapter（SRA）をSRAサービスで使用できるようにします。

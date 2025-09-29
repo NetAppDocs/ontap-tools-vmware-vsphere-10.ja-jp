@@ -1,0 +1,55 @@
+---
+permalink: manage/recover-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP tools for VMware vSphere 10.3以降では、アプライアンスで動的ストレージプロビジョニングツールが使用されるため、RPOをゼロにすることはできません。ただし、RPOはほぼゼロに近づきます。 
+---
+= ONTAPツールのセットアップを回復する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphere以降では、バックアップ機能がデフォルトで有効になっています。
+
+ONTAP tools for VMware vSphereを導入するデータストアには、バックアップ ファイルが保存されます。  ONTAPツールの IP アドレスにちなんで名付けられたフォルダ（ドットはアンダースコアに置き換えられ、末尾に _OTV_backup_ が付けられます）には、最新の 2 つのバックアップ ファイル（_OTV_backup_1.tar.enc_ と _OTV_backup_2.tar.enc_）と、最新のバックアップの名前を含む情報ファイル（_OTV_backup_info.txt_）が保存されます。
+
+新しい仮想マシンが同じONTAPツール IP アドレスを使用し、有効なサービス、ノード サイズ、HA モードなどの初期システム構成と一致していることを確認します。
+
+.手順
+. 元の仮想マシンのデータストアからローカル システムにバックアップ ファイルをダウンロードします。
++
+.. ストレージ セクションに移動し、仮想マシンのバックアップ ファイルが含まれているデータストアを選択します。
+.. [ファイル]*セクションを選択します。
+.. 必要なバックアップ ディレクトリをダウンロードします。
+
+
+. 既存の仮想マシンの電源をオフにします。次に、元のデプロイメントと同じ OVA ファイルを使用して新しい仮想マシンをデプロイします。
+. vCenter Serverで、メンテナンスコンソールを開きます。
+. maintenance ユーザとしてログインします。
+. と入力 `4`して*[Support and Diagnostics]*を選択します。
+. と入力 `2`して*[リモート診断アクセスを有効にする]*オプションを選択し、診断アクセス用の新しいパスワードを作成します。
+. ダウンロードしたディレクトリからバックアップ ファイルを選択します。最新のバックアップを識別するには、_OTV_backup_info.txt_ ファイルを参照してください。
+. 次のコマンドを使用して、バックアップ ファイルを新しい仮想マシンに転送します。プロンプトが表示されたら、診断パスワードを入力します。
++
+[listing]
+----
+scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
+----
++
+
+NOTE: コマンドに記載されている宛先パスとファイル名 (/home/diag/system_recovery.tar.enc) を変更しないでください。
+
+. バックアップ ファイルが転送されたら、診断シェルにログインして次のコマンドを実行します。
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
+----
++
+ログは_/ var/log/post-deploy-upgrade.log_fileに記録されます。
+
+
+
+リカバリが完了すると、 ONTAPツールによってサービスと vCenter オブジェクトが復元されます。

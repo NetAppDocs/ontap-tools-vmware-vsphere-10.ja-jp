@@ -6,7 +6,7 @@ indexpage:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3343864
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876
     - title: VMware vSphere 向け ONTAP ツールについて説明します
       url: "/concepts/ontap-tools-overview.html"
     - title: ONTAP Tools for VMware vSphereの導入
@@ -21,8 +21,6 @@ indexpage:
       url: "/concepts/rbac-learn-about.html"
     - title: リモート診断を設定します
       url: "/manage/configure-remote-diagnostic-access.html"
-    - title: ONTAP tools for VMware vSphereの高可用性
-      url: "/concepts/high-availability.html"
     - title: データストアを保護
       url: "/protect/enable-storage-replication-adapter.html"
   - title: リソースの追加

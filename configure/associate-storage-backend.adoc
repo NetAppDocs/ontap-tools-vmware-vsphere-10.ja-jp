@@ -11,12 +11,12 @@ summary: ストレージバックエンドをvCenter Serverに関連付けて、
 
 
 [role="lead"]
-ストレージバックエンドをvCenter Serverに関連付けて、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間にグローバルなマッピングを作成します。
+すべての vCenter Server インスタンスのアクセスを有効にするには、ストレージ バックエンドを vCenter Server インスタンスに関連付けます。  MetroCluster構成の場合、ストレージ バックエンド クラスタを関連付けるときに、そのピア クラスタも vCenter Server に関連付けるようにしてください。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから[vCenter]を選択します。
-. ストレージバックエンドに関連付けるvCenter Serverインスタンスの縦の省略記号を選択します。
-. ドロップダウンからストレージバックエンドを選択して、vCenter Serverインスタンスを必要なストレージバックエンドに関連付けます。
+. ストレージ バックエンドに接続する vCenter Server インスタンスの横にある縦の省略記号を選択します。
+. ドロップダウン メニューから、選択した vCenter Server インスタンスに関連付けるストレージ バックエンドを選択します。
 

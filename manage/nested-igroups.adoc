@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 ONTAPツール VM とONTAPストレージ システムの両方を管理する場合、特にデータストアを非ONTAPツール環境からONTAPツール管理に移行する場合は、igroup の動作を理解することが重要です。このセクションでは、この移行中に igroup がどのように更新されるかについて説明します。
 
-ONTAP tools for VMware vSphereは、 VMware データセンター環境内でのONTAPおよび vCenter オブジェクトの作成とメンテナンスを自動化することで、データストアの管理を簡素化します。
+ONTAP tools for VMware vSphere以降では、VMware データセンター環境でONTAPおよび vCenter オブジェクトを自動的に作成および管理することで、データストアの管理が合理化されます。
 
 ONTAP tools for VMware vSphereは、 igroup を 2 つの異なるコンテキストで解釈します。
 

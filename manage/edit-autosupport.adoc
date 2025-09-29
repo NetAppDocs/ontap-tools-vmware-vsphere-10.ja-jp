@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP tools for VMware vSphereを初めて構成する場合、 AutoSupport はデフォルトで有効になります。有効になってから 24 時間以内にテクニカル サポートにメッセージが送信されます。 
+---
+= AutoSupport設定の編集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphereを初めて構成する場合、 AutoSupport はデフォルトで有効になります。有効になってから 24 時間以内にテクニカル サポートにメッセージが送信されます。
+
+
+
+== AutoSupportを無効にする
+
+AutoSupportを無効にすると、プロアクティブなサポートと監視は受けられなくなります。
+
+
+NOTE: 問題の検出と解決を迅速化するために、 AutoSupportを有効にしておくことをお勧めします。  AutoSupportが無効になっている場合でも、システムは引き続きローカルで情報を収集して保存しますが、ネットワーク経由でレポートを送信しません。
+
+.手順
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+. [設定]*>*[テレメトリ]*>*[編集]*オプションを選択します。
+. AutoSupport *オプションの選択を解除し、変更を保存します。
+
+
+
+
+== AutoSupportプロキシURLの更新
+
+AutoSupport機能がデータをプロキシ サーバー経由でルーティングし、安全に転送できるように、 AutoSupportプロキシ URL を更新します。
+
+.手順
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+. サイドバーから*[設定]*を選択します。
+. [設定]*>*[テレメトリ]*>*[編集]*オプションを選択します。
+. 有効な*プロキシURL *を入力し、変更を保存します。
++
+AutoSupportをディセーブルにすると、プロキシURLもディセーブルになります。
+
+

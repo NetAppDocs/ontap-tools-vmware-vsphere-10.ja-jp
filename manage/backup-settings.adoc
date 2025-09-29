@@ -1,0 +1,23 @@
+---
+permalink: manage/backup-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: NTPサーバの詳細を入力して、ONTAP toolsアプライアンスのタイムクロックを同期します。 
+---
+= バックアップ設定を編集する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphere以降では、バックアップ機能がデフォルトで有効になっており、10 分ごとにバックアップが作成されます。バックアップを無効にしたり、バックアップの頻度を編集したりできます。
+
+バックアップを無効にしないでください。無効にすると、 ONTAPツールが低い RPO を維持できなくなります。バックアップを無効にしても、既存のバックアップ ファイルは削除されません。バックアップの頻度を 10 ～ 60 分の範囲で変更できます。
+
+.手順
+. WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
+. *設定* > *バックアップ* > *編集* オプションを選択します。
+. 編集ウィンドウでは、バックアップを無効にしたり、バックアップの頻度を編集したりできます。
+

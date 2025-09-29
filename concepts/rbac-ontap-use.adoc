@@ -17,7 +17,7 @@ ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本�
 
 == セツテイフロセスノカイヨウ
 
-ONTAP Tools for VMware vSphere 10では、カスタムロールを持つONTAPユーザの作成がサポートされます。定義はJSONファイルにパッケージ化されており、ONTAPクラスタにアップロードできます。ユーザを作成し、環境やセキュリティのニーズに合わせてロールを調整できます。
+ONTAP tools for VMware vSphereには、カスタム ロールを持つONTAPユーザーの作成のサポートが含まれています。定義は、 ONTAPクラスターにアップロードできる JSON ファイルにパッケージ化されています。ユーザーを作成し、環境とセキュリティのニーズに合わせてロールをカスタマイズできます。
 
 主な設定手順について、以下で大まかに説明します。link:../configure/configure-user-role-and-privileges.html["ONTAPユーザのロールと権限の設定"]詳細については、を参照してください。
 

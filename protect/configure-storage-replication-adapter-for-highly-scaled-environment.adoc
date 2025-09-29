@@ -63,6 +63,6 @@ summary: 大規模な環境で最適なパフォーマンスを実現するに�
 タイムアウトに達した場合は、 `storage.commandTimeout` および `storage.maxConcurrentCommandCnt` 値を大きくします。
 
 
-NOTE: 指定したタイムアウト間隔が最大値です。最大タイムアウトに達することはありません。ほとんどのコマンドは、設定された最大タイムアウト間隔内に終了します。
+NOTE: このタイムアウト間隔は最大値です。最大タイムアウトに達するまで待つ必要はありません。ほとんどのコマンドは、設定された最大タイムアウト間隔以内に終了します。
 
 SANプロバイダ設定の変更については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Change Storage Settings"]。

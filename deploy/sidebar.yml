@@ -12,5 +12,5 @@ entries:
   url: "/deploy/pre-deploy-checks.html"
 - title: ONTAP Tools for VMware vSphereの導入
   url: "/deploy/ontap-tools-deployment.html"
-- title: 導入エラーコード
+- title: デプロイメントエラーのトラブルシューティング
   url: "/deploy/deployment-error-codes.html"
