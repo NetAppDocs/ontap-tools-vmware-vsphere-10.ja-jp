@@ -26,7 +26,7 @@ ONTAP tools for VMware vSphereは、現在の VMware 相互運用性認定標準
 * * MetroClusterサポート*
 
 
-このリリースでは、 MetroCluster (MCC) 構成のサポートが導入され、高可用性と災害復旧機能が強化されています。
+このリリースでは、 MetroCluster構成のサポートが導入され、高可用性と災害復旧機能が強化されています。
 
 * *セキュリティと証明書管理*
 
