@@ -11,10 +11,10 @@ summary: '[ストレージ]ビューには、仮想マシンによって作成�
 
 
 [role="lead"]
-[ストレージ]ビューには、仮想マシンによって作成されたVVOLのリストが表示されます。
+ストレージ ビューには、仮想マシンが作成するvVolsのリストが表示されます。
 
 
-NOTE: このビューは、ONTAP Tools for VMware vSphereで管理するvVolデータストア関連のディスクが1つ以上マウントされているVMに適用されます。
+NOTE: このビューは、ONTAP tools for VMware vSphere が管理するvVolsデータストアからのディスクが少なくとも 1 つある VM に適用されます。
 
 .手順
 . vSphere Client から仮想マシンに移動します。

@@ -17,7 +17,7 @@ ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP t
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . 概要セクションの*アプライアンス設定の編集*を選択します。
-. [サービス]セクションで、要件に応じて、VASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのオプションのサービスを有効にすることができます。
+. *サービス* セクションでは、必要に応じて、VASA プロバイダー、 vVols構成のインポート、災害復旧 (SRA) などのオプション サービスを有効にできます。
 +
 サービスを初めて有効にするときは、VASA ProviderとSRAのクレデンシャルを作成する必要があります。これらは、vCenter ServerでVASA ProviderサービスとSRAサービスを登録または有効にするために使用します。ユーザ名に使用できる文字は、アルファベット、数字、アンダースコアだけです。パスワードは8~256文字にする必要があります。
 
