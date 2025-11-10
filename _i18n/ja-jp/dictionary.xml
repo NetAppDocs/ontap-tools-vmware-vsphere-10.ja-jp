@@ -204,9 +204,6 @@
   <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">移行する仮想マシンでVASA Providerが実行されていないことを確認します。VASA Provider を実行している仮想マシンを VVOL データストアに移行すると、いっさいの管理操作を実行できなくなり、仮想マシンの電源をオンにすることもできなくなります。</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">NFSおよびVMFSデータストアからvVolデータストアに移行する場合、VMFSデータストアからのデータの移動にはvStorage APIs for Array Integration（VAAI）のオフロードがvCenter Serverで使用されますが、NFS VMDKファイルからのデータの移動には使用されません。VAAI のオフロードは、通常、ホストの負荷を軽減します。</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">証明書を管理します</block>
-  <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">メンテナンスコンソールを使用して、vCenter ServerとONTAPのクレデンシャルを更新できます。</block>
-  <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">vCenter ServerとONTAPのクレデンシャルを更新する</block>
-  <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">メンテナンスコンソールを使用して、vCenter ServerインスタンスとONTAPクレデンシャルを更新できます。</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">メンテナンスユーザのログインクレデンシャルが必要です。</block>
   <block id="2e7ce9d8495225c584175fd7caa148ce" category="summary">ONTAP Tools for VMware vSphereプラグインは、仮想マシンとデータストアのレポートを提供します。</block>
   <block id="bd294460cf119253eaf3ca5c5ff6bb68" category="summary">ゲストOSの再起動操作中に、grubメニューにメンテナンスコンソールのユーザパスワードをリセットするオプションが表示されます。 </block>
@@ -475,7 +472,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">VASA ProviderをvCenter Serverに登録</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">パッチ</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">ONTAP tools for VMware vSphereアップグレードISOをコンテンツライブラリにアップロードします。</block>
-  <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">プライマリVMページで、*[Actions]*&gt;*[Edit Settings]*を選択します。</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">をアップグレードすると、次の処理が自動的に実行されます。</block>
   <block id="ea228e7ce90fb22b7336716e47dc7d35" category="summary">このページでは、ONTAP tools for VMware vSphereシステムのアップグレード処理のエラーコードについて説明します。</block>
   <block id="f804f395829e966ca161a8be7756fec4" category="doc">アップグレードのエラーコード</block>
@@ -576,8 +572,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Perlコマンドを実行して、SRAに新しいクレデンシャルを設定します。</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">必要なアレイペアを選択し、対応する詳細を確認します。</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">と入力<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> して[System Configuration Menu]を選択します。</block>
-  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">と入力<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> してONTAP資格情報を変更します。</block>
-  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">と入力<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> してvCenterクレデンシャルを変更する。</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">デュアルスタック</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">ONTAP tools for VMware vSphereを導入するための構成の制限</block>
   <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">次の表は、VMware vSphere用のONTAP toolsを設定する際のガイドとして使用できます。</block>
@@ -677,7 +671,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">NFSおよびVMFSデータストアのマウント</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">NFSおよびVMFSデータストアのアンマウント</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">vVolデータストアの拡張</block>
-  <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">vCenterサーバとONTAPクレデンシャルを更新する</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">ホストクラスタの保護を管理します。</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">ホストクラスタの保護を変更</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
@@ -2440,8 +2433,18 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="0e527af09bb57a137d15be7b82466174" category="cell">すべてのボリュームを一覧表示します。ONTAPストレージ ペインからストレージを拡張または削除できます。ONTAPツールは、 ASA r2 システムベースのvVolsデータストアに対してこのビューをサポートしていません。</block>
   <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">データストアのアンマウント アクションは、ESXi ホストから NFS または VMFS データストアを削除します。これは、ONTAP tools for VMware vSphereによって検出または管理されるデータストアで使用できます。</block>
   <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">vSphere クライアントはダイアログ ボックスを開き、データストアをマウントする ESXi ホストを一覧表示します。保護されたデータストアに対して操作を実行すると、画面に警告メッセージが表示されます。</block>
-  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">デプロイ後に vCenter Server、 ONTAP、または Data LIF の認証情報を変更した場合は、この手順で更新します。</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">ストレージ ビューには、仮想マシンが作成するvVolsのリストが表示されます。</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">このビューは、ONTAP tools for VMware vSphere が管理するvVolsデータストアからのディスクが少なくとも 1 つある VM に適用されます。</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">*2* と入力して *システム構成* メニューを選択します。</block>
+  <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">クリックすると、ポート要件テーブルが展開または折りたたまれます。</block>
+  <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">メンテナンス コンソールを使用して vCenter Server の資格情報を更新できます。</block>
+  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">vCenter Server の資格情報を更新する</block>
+  <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">メンテナンス コンソールを使用して、vCenter Server インスタンスの資格情報を更新できます。</block>
+  <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">デプロイ後に vCenter Server の資格情報を変更した場合は、この手順を使用して資格情報を更新します。</block>
+  <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">入力<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> vCenter の資格情報を変更します。</block>
+  <block id="b09a768d508454c0e540ea7b37cb5509" category="paragraph">参照 <block ref="afe6cee65a7db7868c8d2eef90c140e6" category="inline-link-macro-rx"></block> そして <block ref="da3a0196b755588b543a28093241fcfa" category="inline-link-macro-rx"></block> バックアップとリカバリの詳細については、こちらをご覧ください。</block>
+  <block id="a928a1b805644ea87a643f7f8d60a477" category="list-text">プライマリ VM ページで、[*アクション*] &gt; [*設定の編集*] を選択します。プライマリ VM 名を識別するには:</block>
+  <block id="75a86edd37c9b2122be450b28fa09149" category="list-text">任意のノードで診断シェルを有効にする</block>
+  <block id="e016d50ae26af4214e6a864c1c2c8db5" category="list-text">次のコマンドを実行します。<block ref="1ebe86b64a17c55ae52f4488cffae75f" prefix=" " category="inline-code"></block></block>
+  <block id="e40ec845cea3d17ed090f7fc08824c3f" category="sidebar">vCenter Server の資格情報を更新する</block>
 </blocks>

@@ -62,7 +62,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: 他のノードでSSHを開始する
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: vCenterサーバとONTAPクレデンシャルを更新する
+  - title: vCenter Server の資格情報を更新する
     url: "/manage/update-vcenter-credentials.html"
   - title: 証明書検証フラグを変更する
     url: "/manage/change-valid-flag.html"
