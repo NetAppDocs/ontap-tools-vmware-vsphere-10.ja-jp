@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphereおよびONTAP System Manager 用の ONTA
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereおよびONTAP System Manager 用の ONTAP ツールの JSON ファイルを使用して、ストレージ バックエンドのユーザー ロールと権限を構成します。
+このセクションを使用して、 ONTAP tools for VMware vSphereおよびONTAP System Manager 用の ONTAP ツールを使用して、ストレージ バックエンドのONTAPユーザー ロールと権限を構成します。提供されている JSON ファイルを使用してロールを割り当て、ユーザーとロールを手動で作成し、管理者以外のアカウントに必要な最小限の権限を適用できます。
 
 .作業を開始する前に
 * _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ を使用して、 ONTAP tools for VMware vSphereからONTAPPrivilegesファイルをダウンロードします。  zip ファイルをダウンロードすると、2 つの JSON ファイルが見つかります。  ASA r2 システムを構成するときは、 ASA r2 固有の JSON ファイルを使用します。

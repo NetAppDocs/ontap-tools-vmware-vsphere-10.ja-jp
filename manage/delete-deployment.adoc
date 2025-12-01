@@ -14,18 +14,12 @@ summary: VMware環境のONTAP toolsに専用のONTAPクラスタを使用する�
 VMware環境のONTAP toolsに専用のONTAPクラスタを使用すると、未使用のFlexVolボリュームが多数作成されます。ONTAP Tools for VMware vSphereを削除したら、パフォーマンスへの影響を回避するためにFlexVolボリュームを削除する必要があります。
 
 .手順
-. ONTAPツール管理ノード VM から、 ONTAP tools for VMware vSphereを決定します。
+. ONTAPツール管理ノード VM から、 ONTAP tools for VMware vSphereを確認します。デプロイメントタイプを確認するには、次のコマンドを実行します: _cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
 +
-_cat /opt/netapp/meta/ansible vars.yaml | grep -i protocol_
+iSCSI 展開の場合は、igroup も削除します。
 
-+
-iSCSI環境の場合は、igroupも削除する必要があります。
-
-. FlexVolボリュームのリストを取得します。
-+
-_kubectl describe persistentvolumes | grep internalName | awk -F'=''｛print $2｝'_
-
+. FlexVolボリュームのリストを取得します。_kubectl で永続ボリュームを記述 | grep で内部名を記述 | awk -F'=' '{print $2}'_
 . vCenter ServerからVMを削除します。を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["VMおよびVMテンプレートの削除と再登録"]。
-. FlexVolボリュームを削除します。を参照してください https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["FlexVol ボリュームを削除します"]。ボリュームを削除するCLIコマンドで、FlexVolボリュームの正確な名前を指定します。
+. FlexVolボリュームを削除します。参照 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["FlexVol ボリュームを削除します"]。ボリュームを削除するには、CLI コマンドに正確なFlexVol volume名を入力します。
 . iSCSIを導入している場合は、ONTAPストレージシステムからSAN igroupを削除します。を参照してください https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["SANイニシエータとigroupを表示および管理します"]。
 

@@ -22,7 +22,20 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . ONTAP tools for VMware vSphereをデプロイします。
 . 移行する vCenter Server インスタンスを、 ONTAP tools for VMware vSphereに追加します。参照link:../configure/add-vcenter.html["vCenter Serverインスタンスを追加する"]詳細についてはこちらをご覧ください。
-. ONTAP ツール プラグインの vCenter Server API からストレージ バックエンドをローカルにオンボードします。
+. ONTAPツールプラグインのvCenter Server APIからストレージバックエンドをローカルにオンボードします。link:../configure/add-storage-backend.html["vSphere クライアント インターフェイスを使用してストレージ バックエンドを追加する"]詳細についてはこちらをご覧ください。
+. REST API リクエストを認証するためのアクセス トークンを取得します。次の例を使用して、変数を環境固有の値に置き換えます。
++
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/login” \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+-d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
+----
++
+レスポンスで返されたアクセス トークンをコピーして保存します。
+
 . SwaggerまたはPostmanから次のAPIを実行して移行します。
 +
 [listing]
@@ -96,19 +109,27 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 +
 [listing]
 ----
-curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migration_id>?includeSubJobsAndTasks=true`
 ----
 +
 ジョブが完了したら、ジョブ応答の移行レポートを確認します。
 
-. VMware vSphereストレージプロバイダ用のONTAPツールをvCenter Serverに追加し、 link:../configure/registration-process.html["VASA Providerを登録する"] VMware vSphere 用の ONTAP ツールを使用します。
+. ONTAP tools for VMware vSphereをvCenter Server に追加します。
+. VASA プロバイダーをONTAP tools for VMware vSphereに登録します。手順については、link:../configure/registration-process.html["VASA Providerを登録する"] 。
+. 登録後、vSphere Client の *ストレージ プロバイダー* で VASA プロバイダーの名前とステータスを確認します。  VASA プロバイダーがオンラインになり、登録が成功したことが確認されます。
 . link:../manage/enable-services.html["VASA Provider の有効化"]ONTAP tools for VMware vSphereのサービス。
-. ONTAP Tools for VMware vSphereストレージプロバイダ9.10 / 9.11 / 9.12 / 9.13 VASA Providerサービスをメンテナンスコンソールから停止します。
+. 次の手順に従って、 ONTAP tools for VMware vSphereを停止します。
 +
-VASA プロバイダーを削除しないでください。
-
+.. ONTAPツール 9.x で、Web コンソールを開きます。
+.. メンテナンス コンソールにアクセスします。
+.. 入力 `1`*アプリケーション構成*メニューを選択します。
+.. 入力 `5`VASA プロバイダーおよび SRA サービスを停止します。
+.. vSphere Client で、*インベントリ* > *ストレージ プロバイダー* に移動します。
+.. ストレージ バックエンドからONTAPツール 9.x VASA プロバイダーを選択し、[削除] をクリックします。
 +
 古いVASAプロバイダが停止すると、vCenter ServerはONTAP tools for VMware vSphereにフェイルオーバーします。すべてのデータストアと仮想マシンはONTAP tools for VMware vSphereからアクセス可能になり、サービスが提供されます。
+
+
 
 . 移行された NFS および VMFS データストアは、データストア検出ジョブの後にONTAP tools for VMware vSphereに表示されます。この処理には最大 30 分かかる場合があります。概要ページで可視性を確認します。
 . SwaggerまたはPostmanで次のAPIを使用してパッチの移行を実行します。
@@ -131,11 +152,17 @@ VASA プロバイダーを削除しないでください。
 
 非同期
 
+Swagger では次の URI を使用します。
+
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
+----
 *カールの例*
 
 [listing]
 ----
-curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/d50073ce-35b4-4c51-9d2e-4ce66f802c35`
 ----
 * JSON出力例*
 
@@ -149,15 +176,16 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373
   "status": "running"
 }
 ----
+====
++
 PATCH処理の要求の本文が空です。
+
+
 
 
 NOTE: UUIDは、移行後のAPIに対する応答で返される移行UUIDです。
 
 パッチ移行APIを実行すると、すべてのVMがストレージポリシーに準拠します。
-
-====
-
 
 .次の手順
 移行を完了し、 ONTAPツール 10.5 を vCenter Server に登録したら、次の手順を実行します。
