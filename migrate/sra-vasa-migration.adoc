@@ -10,6 +10,9 @@ summary: ストレージデータを移行する際、ストレージバック�
 :imagesdir: ../media/
 
 
+[role="lead"]
+このセクションの手順に従って、VASA プロバイダーをONTAP tools for VMware vSphere 9.xx からONTAP tools for VMware vSphere 10.5 に移行し、VMware Live Site Recovery アプライアンス上のストレージ レプリケーション アダプタ (SRA) を更新します。
+
 
 
 == VASAプロバイダーの移行手順

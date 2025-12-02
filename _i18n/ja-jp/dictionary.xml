@@ -1987,7 +1987,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bf2ddf3529c43aaac032b60fd698afdf" category="admonition">デプロイメントを続行する前に、インベントリ上のクラスターの分散リソース スケジューラ (DRS) を「保守的」に設定します。これにより、インストール中に VM が移行されなくなります。</block>
   <block id="e665d4f634eb279e3d3649d89dce4f3e" category="paragraph">ONTAP tools for VMware vSphereは、最初は非 HA セットアップとして導入されます。  HA展開にスケールするには、CPUホットプラグとメモリホットプラグインを有効にする必要があります。この手順は、展開プロセスの一環として実行することも、展開後にVM設定を編集することもできます。</block>
   <block id="76ecd43e2d7d963469ed779109b6621d" category="list-text">OVA を展開するリソース プール、クラスター、またはホストに移動します。</block>
-  <block id="fb90c88e0a037c598666652371595d40" category="list-text">情報はインストール中に検証されます。不一致がある場合は、Web コンソールにエラー メッセージが表示され、修正するように求められます。</block>
   <block id="a85cd355d0191e9ca39647db304e9886" category="list-text">*インベントリ* の下にあるONTAP tools for VMware vSphereに移動し、*設定の編集* オプションを選択します。</block>
   <block id="7bc1f449f84cbd0274b17756a6c88276" category="cell">ONTAPツール アプリケーションの IP アドレス。これは、ONTAPツールのWebインターフェース（ロードバランサ）にアクセスするためのIPアドレスです。</block>
   <block id="0a975d248a4d2c7d423087028109208e" category="cell">内部通信用のONTAPツール仮想 IP アドレス。この IP アドレスは、複数のONTAPツール インスタンスを含むセットアップでの内部通信に使用されます。この IP アドレスは、 ONTAPツール アプリケーションの IP アドレスと同じであってはなりません。(Kubernetes コントロール プレーン)</block>
@@ -2505,4 +2504,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="765335765cc8607272cb60cd0929a9e9" category="list-text">低い RPO のバックアップが推奨されます。ただし、非 HA 展開では、アップグレード前にONTAPツール仮想マシンの静止スナップショットを取得できます。</block>
   <block id="750686b04dbf67a95b96fd8a0f1efb0f" category="list-text">ONTAPツール 10.4 または 10.3 SRA アダプタを削除し、10.5 SRA アダプタ tar ファイルをアップロードします。</block>
   <block id="829b3830a5408ec70946282b75f9c6b7" category="list-text">SRA アダプタ tar をアップロードした後、インストール コマンドを実行します。次に、SRA アダプタを再スキャンして、VMware Site Recovery のストレージ レプリケーション アダプタ ページを更新します。</block>
+  <block id="070f340136b38d4a8c74afe9526b62dc" category="paragraph">このセクションの手順に従って、VASA プロバイダーをONTAP tools for VMware vSphere 9.xx からONTAP tools for VMware vSphere 10.5 に移行し、VMware Live Site Recovery アプライアンス上のストレージ レプリケーション アダプタ (SRA) を更新します。</block>
 </blocks>
