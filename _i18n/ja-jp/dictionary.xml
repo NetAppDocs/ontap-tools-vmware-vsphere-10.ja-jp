@@ -2477,13 +2477,11 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAPツール10.2以降</block>
   <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">主な価値提案</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">強化されたセキュリティ、コンプライアンス、自動化機能により、Day 0 から Day 2 の運用を合理化および簡素化します。</block>
-  <block id="9596f14660005b587cb5dfdcc52a84c9" category="cell">サポートが拡張され、VMFS の FC と、VMFS のみの NVMe-oF/FC、NVMe-oF/TCP が含まれるようになりました。NetApp SnapMirrorの使いやすさ、vSphere メトロ ストレージ クラスタのシンプルなセットアップ、および 3 サイトの VMware Live Site Recovery のサポート</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">ONTAPリリース認定</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 からONTAP 9.16.1</block>
   <block id="53f67abe3ae260cacfac7adeeda90377" category="cell">ONTAPツール 10.2 の場合はONTAP 9.12.1 ～ 9.15.1。ONTAPツール 10.3 用のONTAP 9.14.1、9.15.1、9.16.0、および 9.16.1。ONTAPツール 10.4 用のONTAP 9.14.1、9.15.1、9.16.0、および 9.16.1。ASA r2 システムを使用する場合、 ONTAPツール 10.4 にはONTAP 9.16.1P3 以降が必要です。  ONTAPツール 10.5 用のONTAP 9.15.1、9.16.0、9.16.1、9.17.0、および 9.17.1</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">VMware リリースのサポート</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 から VMware Live Site Recovery 9.0</block>
-  <block id="d72bb3e1e67692ec327a89e11558943e" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 から VMware Live Site Recovery 9.0 *注:* ONTAPツール 10.x では、SRM は共有サイトをサポートし、拡張性の向上とパフォーマンスの向上を実現します。</block>
   <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">プロトコルのサポート</block>
   <block id="69e493705b5762fd000de8321c6e2f1b" category="cell">NFS および VMFS データストア: NFS (v3 および v4.1)、VMFS (iSCSI および FCP)</block>
   <block id="308203c1fb88371d593fd65f1a44edf5" category="cell">NFS および VMFS データストア: NFS (v3 および v4.1)、VMFS (iSCSI/FCP/NVMe-oF)</block>
@@ -2494,8 +2492,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="0ae86707597758caa42797b966846966" category="cell">パフォーマンス、容量、ホストコンプライアンスダッシュボード 動的なVMとデータストアレポート</block>
   <block id="e48d3655de549622076e6823dc5953da" category="cell">パフォーマンス、容量、ホストコンプライアンスダッシュボードの更新 動的VMおよびデータストアレポート</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">データ保護</block>
-  <block id="3e28850991da16d19121f4144528251d" category="cell">VMFSおよびNFS SCV統合のためのSRAレプリケーションとバックアップのための相互運用性</block>
-  <block id="f04d5a39f552e53928ef021fc890d6c5" category="cell">SMAS と VMware Live Site Recovery を組み合わせた iSCSI VMFS および NFS v3 データストアの 3 サイト保護の SRA レプリケーション。</block>
   <block id="f995a81db9639d1f6676a86caa7c78e5" category="cell">VASAプロバイダーのサポート</block>
   <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4.0</block>
   <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3.0</block>
@@ -2505,4 +2501,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="750686b04dbf67a95b96fd8a0f1efb0f" category="list-text">ONTAPツール 10.4 または 10.3 SRA アダプタを削除し、10.5 SRA アダプタ tar ファイルをアップロードします。</block>
   <block id="829b3830a5408ec70946282b75f9c6b7" category="list-text">SRA アダプタ tar をアップロードした後、インストール コマンドを実行します。次に、SRA アダプタを再スキャンして、VMware Site Recovery のストレージ レプリケーション アダプタ ページを更新します。</block>
   <block id="070f340136b38d4a8c74afe9526b62dc" category="paragraph">このセクションの手順に従って、VASA プロバイダーをONTAP tools for VMware vSphere 9.xx からONTAP tools for VMware vSphere 10.5 に移行し、VMware Live Site Recovery アプライアンス上のストレージ レプリケーション アダプタ (SRA) を更新します。</block>
+  <block id="503418f2f3e87464c59131a65b8d6509" category="cell">サポートが拡張され、VMFS の FC と VMFS 専用の NVMe-oF が含まれるようになりました。NetApp SnapMirrorの使いやすさ、vSphere メトロ ストレージ クラスタのシンプルなセットアップ、および 3 サイトの VMware Live Site Recovery のサポート</block>
+  <block id="cdac32b049102650f7299ebf43f574d4" category="cell">vSphere 7.x-8.x、 ONTAPツール 10.5 以降の vSphere 9.0、VMware Site Recovery Manager (SRM) 8.7 から VMware Live Site Recovery 9.0 *注:* ONTAPツール 10.x では、SRM は共有サイトをサポートし、拡張性の向上とパフォーマンスの向上を実現します。</block>
+  <block id="3815b1a102d580dcf982cbd303e8f23c" category="cell">VMFS および NFS の SRA レプリケーション。バックアップのための SCV 統合および相互運用性。</block>
+  <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">SMAS と VMware Live Site Recovery を組み合わせた iSCSI VMFS および NFS v3 データストアの 3 サイト保護の SRA レプリケーション。VMFS を使用した FCP の SRA サポート。</block>
+  <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">プロンプトが表示されたら、vCenter の資格情報を入力します。これは、 ONTAPツールがホストされている vCenter インスタンスです。</block>
+  <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別の vCenter インスタンスを管理する）でONTAPツールを使用している場合は、 ONTAPツールをホストしている vCenter インスタンスに制限付きロールを割り当てることができます。以下にリストされているデータストア権限のみを持つ専用の vCenter ユーザーとロールを作成できます。</block>
 </blocks>
