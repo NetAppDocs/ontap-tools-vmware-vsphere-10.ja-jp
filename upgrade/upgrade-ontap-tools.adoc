@@ -75,7 +75,7 @@ ONTAP tools for VMware vSphereから 10.5 にアップグレードできます�
 +
 ** Allocate space
 ** Browse datastore
-** 低レベルのファイル操作
+** Low level file operations
 ** Remove file
 ** Update virtual machine files
 ** 仮想マシンのメタデータを更新する

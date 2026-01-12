@@ -41,7 +41,180 @@ vCenter Server RBACの使用を簡易化するために、ONTAP Tools for VMware
 
 NOTE: 必要に応じて、新しいカスタムロールを作成できます。この場合は、既存のONTAP toolsロールのいずれかをクローニングし、必要に応じて編集する必要があります。設定を変更したら、影響を受けるvSphere Clientユーザがログアウトしてから再度ログインし、変更をアクティブ化する必要があります。
 
-ONTAP tools for VMware vSphereのロールを表示するには、vSphere Clientの上部にある*[メニュー]*を選択し、*[管理]*をクリックしてから、左側の*[ロール]*をクリックします。以下に説明する3つの事前定義されたロールがあります。
+ONTAP tools for VMware vSphereを表示するには、vSphere Client の上部にある *メニュー* を選択し、左側の *管理* をクリックしてから *ロール* をクリックします。vCenter の展開またはオンボーディングを担当する vCenter ユーザーに割り当てられるロールには、次の権限が含まれている必要があります。これらの権限が、展開またはオンボーディング プロセスの前提条件として構成されていることを確認します。
+
+* アラーム
++
+** アラームを確認する
+
+
+* コンテンツライブラリ
++
+** ライブラリアイテムを追加
+** テンプレートをチェックインする
+** テンプレートをチェックする
+** ファイルをダウンロードする
+** 輸入ストレージ
+** ストレージの読み取り
+** ライブラリアイテムを同期
+** 購読したライブラリを同期する
+** 構成設定を表示する
+
+
+* データストア
++
+** Allocate space
+** Browse datastore
+** Low level file operations
+** Remove file
+** Update virtual machine files
+** 仮想マシンのメタデータを更新する
+
+
+* ESXエージェントマネージャ
++
+** View
+
+
+* フォルダ
++
+** フォルダを作成
+
+
+* ホスト
++
+** 構成
++
+*** 詳細設定
+*** 設定の変更
+*** ネットワーク構成
+*** System resources
+*** 仮想マシンの自動起動構成
+
+
+** 現地での活動
++
+*** Create virtual machine
+*** Delete virtual machine
+*** Reconfigure virtual machine
+
+
+
+
+* ネットワーク
++
+** Assign network
+** 設定
+
+
+* Ovfマネージャー
++
+** OvfConsumer アクセス
+
+
+* ホストプロフィール
++
+** View
+
+
+* リソース
++
+** Assign virtual machine to resource pool
+
+
+* スケジュールされたタスク
++
+** タスクを作成する
+** タスクの変更
+** タスクを実行
+
+
+* タスク
++
+** タスクを作成
+** タスクの更新
+
+
+* vApp
++
+** 仮想マシンを追加する
+** リソース プールの割り当て
+** vAppの割り当て
+** 作成
+** インポート
+** 動く
+** Power off
+** Power on
+** URLから取得
+** OVF環境の表示
+
+
+* 仮想マシン
++
+** 構成の変更
++
+*** Add existing disk
+*** Add new disk
+*** Add or remove device
+*** 高度な設定
+*** Change CPU count
+*** メモリの変更
+*** Change Settings
+*** Change resource
+*** Extend virtual disk
+*** Modify device settings
+*** Remove disk
+*** ゲスト情報をリセットする
+*** Upgrade virtual machine compatibility
+
+
+** 在庫を編集
++
+*** Create from existing
+*** Create new
+*** 動く
+*** 登録
+*** 削除
+*** 登録解除
+
+
+** 交流
++
+*** 仮想マシン上のバックアップ操作
+*** Configure CD media
+*** Configure floppy media
+*** デバイスを接続する
+*** コンソール操作
+*** VIX APIによるゲストシステム管理
+*** Power off
+*** Power on
+*** リセット
+*** 中断
+
+
+** プロビジョニング
++
+*** Allow disk access
+*** Clone template
+*** ゲストをカスタマイズ
+*** Deploy template
+*** カスタマイズ仕様を変更する
+*** Read customization specifications
+
+
+** Snapshotの管理
++
+*** Snapshot の作成
+*** Remove snapshot
+*** スナップショットの名前を変更する
+*** Revert to snapshot
+
+
+
+
+
+
+以下に説明する 3 つの定義済みロールがあります。
 
 .VMware vSphere管理者向けNetApp ONTAPツール
 VMware vSphere管理者タスク用のコアONTAPツールを実行するために必要なvCenter Server PrivilegesおよびONTAPツール固有のPrivilegesをすべて提供します。
