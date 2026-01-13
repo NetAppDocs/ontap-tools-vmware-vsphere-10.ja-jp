@@ -43,7 +43,7 @@ a_permission_は'ロールとともにユーザーまたはグループをオブ
 
 == 2つのRBAC環境
 
-ONTAP tools for VMware vSphere 10を使用する際に考慮する必要があるRBAC環境は2つあります。
+ONTAP tools for VMware vSphereを使用する場合は、考慮する必要がある 2 つの異なる RBAC 環境があります。ONTAP tools for VMware vSphereでは、操作を実行するために vCenter とONTAP の両方で特定の権限が必要です。ONTAPツールはストレージ管理タスクを自動化しますが、vCenter またはONTAPのいずれにもユーザー アカウントを作成しません。サービス アカウントは、必要に応じて vSphere 管理者が作成する必要があります。このドキュメントでは、管理者が効果的なONTAPツール管理のために必要なロールと権限を割り当てるためのガイダンスを提供します。
 
 .VMware vCenter Server
 VMware vCenter Serverに実装されたRBACは、vSphere Clientユーザインターフェイスを通じて公開されるオブジェクトへのアクセスを制限するために使用されます。ONTAP tools for VMware vSphere 10のインストールの一環として、RBAC環境が拡張され、ONTAP toolsの機能を表すオブジェクトが追加されました。これらのオブジェクトへのアクセスは、リモートプラグインを通じて提供されます。詳細については、を参照してください。link:../concepts/rbac-vcenter-environment.html["vCenter Server RBACカンキヨウ"]

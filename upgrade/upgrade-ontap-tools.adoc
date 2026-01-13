@@ -70,22 +70,13 @@ ONTAP tools for VMware vSphereから 10.5 にアップグレードできます�
 . *7* と入力して *アップグレード* オプションを選択します。
 . プロンプトが表示されたら、vCenter の資格情報を入力します。これは、 ONTAPツールがホストされている vCenter インスタンスです。
 +
-2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別の vCenter インスタンスを管理する）でONTAPツールを使用している場合は、 ONTAPツールをホストしている vCenter インスタンスに制限付きロールを割り当てることができます。以下にリストされているデータストア権限のみを持つ専用の vCenter ユーザーとロールを作成できます。
+2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する）でONTAPツールを使用している場合は、 ONTAPツールをホストしている vCenter インスタンスに制限付きロールを割り当てることができます。OVF テンプレートのデプロイに必要な権限のみを持つ専用の vCenter ユーザーとロールを作成できます。詳細については、 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]。
 
-+
-** Allocate space
-** Browse datastore
-** Low level file operations
-** Remove file
-** Update virtual machine files
-** 仮想マシンのメタデータを更新する
 +
 ONTAPツールによって管理される vCenter インスタンスの場合、vCenter ユーザー アカウントに管理者権限があることを確認します。
 
 +
 アップグレード中に、オンボードされたストレージ バックエンド証明書にサブジェクト別名 (SAN) エントリがない場合、不足している SAN を示すプロンプトが表示されます。  SAN を検証せずに続行することを選択した場合、アップグレードは続行されますが、潜在的なセキュリティ リスクがあるため、これはお勧めしません。
-
-
 
 . をアップグレードすると、次の処理が自動的に実行されます。
 +

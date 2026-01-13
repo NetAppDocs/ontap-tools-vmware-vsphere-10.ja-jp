@@ -84,18 +84,12 @@ NOTE: ONTAP Tools for VMware vSphere仮想マシンは、自身が管理するVV
 NOTE: vCenter ホスト名は、 ONTAPツール アプライアンスがデプロイされている vCenter Server インスタンスの名前です。
 
 +
-アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する 2 つの vCenter Server トポロジでONTAPツールを展開する場合は、 ONTAPツールをホストする vCenter インスタンスに制限付きロールを割り当てることができます。  OVF テンプレートの展開に必要な、以下にリストされているデータストア権限のみを持つ専用の vCenter ユーザーとロールを作成できます。
+2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する）でONTAPツールを展開する場合は、 ONTAPツールをホストする vCenter インスタンスに制限付きロールを割り当てることができます。OVF テンプレートのデプロイに必要な権限のみを持つ専用の vCenter ユーザーとロールを作成できます。詳細については、 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]。
 
-+
-** Allocate space
-** Browse datastore
-** Low level file operations
-** Remove file
-** Update virtual machine files
-** 仮想マシンのメタデータを更新する
 +
 ONTAPツールによって管理される vCenter インスタンスの場合、vCenter ユーザー アカウントに管理者権限があることを確認します。
 
++
 ** ホスト名には、アルファベット（A ~ Z、a ~ z）、数字（0 ~ 9）、およびハイフン（-）を使用する必要があります。デュアルスタックを設定するには、IPv6アドレスにマッピングされたホスト名を指定します。
 +
 

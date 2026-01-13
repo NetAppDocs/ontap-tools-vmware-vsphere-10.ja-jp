@@ -1199,7 +1199,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d06c4b7230b78df6a13a1ffe93c68ea7" category="paragraph">_users_には、認証後に適用されるロールが割り当てられるか、またはロールに関連付けられます。RBACの実装によっては、1人のユーザに1つのロールのみを割り当てることができるものと、1人のユーザに複数のロールを割り当てることができるものがあります（一度に1つのロールのみがアクティブになる場合もあります）。ロールを_groups_に割り当てると、セキュリティ管理がさらに簡素化されます。</block>
   <block id="74b037a49a7d27ecca7fc6857aedcd2a" category="paragraph">a_permission_は'ロールとともにユーザーまたはグループをオブジェクトにバインドする定義です権限は階層オブジェクトモデルで役立ち、階層内の子にオプションで継承することができます。</block>
   <block id="ecc206dfcc570366eb56c27d01c64234" category="section-title">2つのRBAC環境</block>
-  <block id="857ac2a8af334039722446a532094bd6" category="paragraph">ONTAP tools for VMware vSphere 10を使用する際に考慮する必要があるRBAC環境は2つあります。</block>
   <block id="7b992155512beae7a0c0bcd838bf53bc" category="paragraph-title">VMware vCenter Server</block>
   <block id="a44122ce0420d82ffec8245eb58d1686" category="inline-link-macro">vCenter Server RBACカンキヨウ</block>
   <block id="abfe427299b92162e94931d6113396c6" category="paragraph">VMware vCenter Serverに実装されたRBACは、vSphere Clientユーザインターフェイスを通じて公開されるオブジェクトへのアクセスを制限するために使用されます。ONTAP tools for VMware vSphere 10のインストールの一環として、RBAC環境が拡張され、ONTAP toolsの機能を表すオブジェクトが追加されました。これらのオブジェクトへのアクセスは、リモートプラグインを通じて提供されます。詳細については、を参照してください。<block ref="0dce39201791f8056b9c7e84d5c66f06" category="inline-link-macro-rx"></block></block>
@@ -2404,7 +2403,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ab6b75688f7cffb753cc8176e2986ff4" category="admonition">デプロイ後にコンテンツ ライブラリ内の OVA テンプレートを削除しないでください。</block>
   <block id="a00726d752fdb02dab8165021fc4e90c" category="list-text">*テンプレートのカスタマイズ* ウィンドウで、必須フィールドに入力します。<block ref="84a003836f9d8bb0e3b8332e561bfec2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d9d9f212eda5eb8e0566b4f30f82fb10" category="admonition">vCenter ホスト名は、 ONTAPツール アプライアンスがデプロイされている vCenter Server インスタンスの名前です。</block>
-  <block id="3a7af0096c6ddabf7582b1bae1272dd6" category="paragraph">アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する 2 つの vCenter Server トポロジでONTAPツールを展開する場合は、 ONTAPツールをホストする vCenter インスタンスに制限付きロールを割り当てることができます。  OVF テンプレートの展開に必要な、以下にリストされているデータストア権限のみを持つ専用の vCenter ユーザーとロールを作成できます。</block>
   <block id="c6519d60f243eebfcc92d096e23bdb8b" category="list-text">Allocate space</block>
   <block id="653ea8411fd85f46f22e62ee3cabb643" category="list-text">Browse datastore</block>
   <block id="b21f085d08623fc7a5a9da204cc66c8c" category="list-text">Remove file</block>
@@ -2502,7 +2500,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3815b1a102d580dcf982cbd303e8f23c" category="cell">VMFS および NFS の SRA レプリケーション。バックアップのための SCV 統合および相互運用性。</block>
   <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">SMAS と VMware Live Site Recovery を組み合わせた iSCSI VMFS および NFS v3 データストアの 3 サイト保護の SRA レプリケーション。VMFS を使用した FCP の SRA サポート。</block>
   <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">プロンプトが表示されたら、vCenter の資格情報を入力します。これは、 ONTAPツールがホストされている vCenter インスタンスです。</block>
-  <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別の vCenter インスタンスを管理する）でONTAPツールを使用している場合は、 ONTAPツールをホストしている vCenter インスタンスに制限付きロールを割り当てることができます。以下にリストされているデータストア権限のみを持つ専用の vCenter ユーザーとロールを作成できます。</block>
   <block id="02086c74e7c7de9c13df55ddb85cb6a9" category="paragraph">ONTAP tools for VMware vSphereを表示するには、vSphere Client の上部にある *メニュー* を選択し、左側の *管理* をクリックしてから *ロール* をクリックします。vCenter の展開またはオンボーディングを担当する vCenter ユーザーに割り当てられるロールには、次の権限が含まれている必要があります。これらの権限が、展開またはオンボーディング プロセスの前提条件として構成されていることを確認します。</block>
   <block id="301d574ef42563b03638c8eae19225cb" category="list-text">アラーム</block>
   <block id="6c352acb91887b241b030d91d72bdf66" category="list-text">アラームを確認する</block>
@@ -2608,4 +2605,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="8012fc6ae8c7c5cd0d9d44e8d3169bbb" category="list-text">証明書が Base 64 ASCII 形式であり、開始行と終了行が含まれていることを確認します。次に例を示します。</block>
   <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">出力をコピーし、<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> デスクトップ上の拡張機能。</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
+  <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">ONTAP tools for VMware vSphereを使用する場合は、考慮する必要がある 2 つの異なる RBAC 環境があります。ONTAP tools for VMware vSphereでは、操作を実行するために vCenter とONTAP の両方で特定の権限が必要です。ONTAPツールはストレージ管理タスクを自動化しますが、vCenter またはONTAPのいずれにもユーザー アカウントを作成しません。サービス アカウントは、必要に応じて vSphere 管理者が作成する必要があります。このドキュメントでは、管理者が効果的なONTAPツール管理のために必要なロールと権限を割り当てるためのガイダンスを提供します。</block>
+  <block id="4ae8aea132dd80b8c5923dad28c5b661" category="paragraph">2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する）でONTAPツールを展開する場合は、 ONTAPツールをホストする vCenter インスタンスに制限付きロールを割り当てることができます。OVF テンプレートのデプロイに必要な権限のみを持つ専用の vCenter ユーザーとロールを作成できます。詳細については、<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
+  <block id="281aaa5cbe3748f40438f77dcaf6f2ab" category="paragraph">2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する）でONTAPツールを使用している場合は、 ONTAPツールをホストしている vCenter インスタンスに制限付きロールを割り当てることができます。OVF テンプレートのデプロイに必要な権限のみを持つ専用の vCenter ユーザーとロールを作成できます。詳細については、<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
 </blocks>
