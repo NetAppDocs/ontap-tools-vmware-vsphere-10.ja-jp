@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: データストアのサイズを変更すると、仮想マシンファイル用のストレージを拡張できます。データストアのサイズは、インフラ要件の変化に応じて変更できます。 
 ---
-= NFSおよびVMFSデータストアのサイズ変更
+= ONTAP toolsでNFSおよびVMFSデータストアのサイズを変更する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

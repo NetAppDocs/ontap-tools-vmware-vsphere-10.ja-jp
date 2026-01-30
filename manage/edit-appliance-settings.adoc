@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 管理者パスワードは、ONTAP tools Managerを使用して変更できます。 
 ---
-= ONTAP Tools for VMware vSphereの設定の変更
+= ONTAP toolsアプライアンスの設定を変更する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

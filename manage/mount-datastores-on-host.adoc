@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: データストアをマウントすると、他のホストからストレージにアクセスできるようになります。ホストを VMware 環境に追加したあとで、そのホストにデータストアをマウントできます。 
 ---
-= NFSデータストアとVMFSデータストアのマウント
+= ONTAP toolsでNFSおよびVMFSデータストアをマウントする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

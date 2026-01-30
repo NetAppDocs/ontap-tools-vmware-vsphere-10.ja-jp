@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphereは、NetAppストレージシステムに最適なESXiホストのマルチパス設定とHBAタイムアウト設定を確認して設定します。 
 ---
-= ESXiホストの設定
+= ONTAP toolsでESXiホストの設定を構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

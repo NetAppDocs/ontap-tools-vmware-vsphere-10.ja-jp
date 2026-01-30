@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP tools Managerを使用してVASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのサービスを有効にすることができます。 
 ---
-= ONTAP Tools for VMware vSphereサービスを有効にする
+= ONTAP toolsサービスを有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

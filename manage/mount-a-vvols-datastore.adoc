@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Mount vVol 
 summary: VMware 仮想ボリューム（ vvols ）データストアは、 Mount VVOLs Datastore （ VVol データストアのマウント）ダイアログボックスを使用して、 1 つ以上の追加のホストにマウントできます。データストアをマウントすると、他のホストからストレージにアクセスできるようになります。vVolデータストアをアンマウントできるのは、APIを使用する場合のみです。 
 ---
-= vVolデータストアのマウント
+= ONTAP tools で vVols データストアをマウントする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

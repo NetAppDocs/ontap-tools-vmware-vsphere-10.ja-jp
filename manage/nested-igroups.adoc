@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= ONTAPツールで管理されるigroupを理解する
+= ONTAP toolsによるigroupの管理方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

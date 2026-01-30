@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: VMware Live Site RecoveryのArray Managerウィザードを使用してStorage Replication Adapter（SRA\）を設定し、VMware Live Site RecoveryとStorage Virtual Machine（SVM\）が連携できるようにすることができます。 
 ---
-= アレイマネージャを使用して SRA を設定する
+= ONTAP toolsのアレイマネージャを使用してSRAを設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

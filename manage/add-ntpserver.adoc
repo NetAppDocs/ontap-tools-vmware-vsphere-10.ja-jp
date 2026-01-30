@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: NTPサーバの詳細を入力して、ONTAP toolsアプライアンスのタイムクロックを同期します。 
 ---
-= NTPサーバの追加
+= ONTAP toolsにNTPサーバーを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

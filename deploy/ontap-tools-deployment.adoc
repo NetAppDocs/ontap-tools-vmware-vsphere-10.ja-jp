@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphereは、 NFS および VMFS データストアをサポートするコア サービスを備えた小規模の単一ノードとして展開されます。 
 ---
-= ONTAP Tools for VMware vSphereの導入
+= ONTAP Toolsの導入
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

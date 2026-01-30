@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: '[データストアの削除]操作を実行すると、選択したデータストアにVVolがない場合にデータストアが削除されます。' 
 ---
-= vVolデータストアの縮小
+= ONTAP tools で vVols データストアを縮小する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

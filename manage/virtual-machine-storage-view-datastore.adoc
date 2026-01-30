@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: '[ストレージ]ビューには、仮想マシンによって作成されたVVOLのリストが表示されます。' 
 ---
-= 仮想マシンストレージビュー
+= ONTAP toolsの仮想マシンストレージビュー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

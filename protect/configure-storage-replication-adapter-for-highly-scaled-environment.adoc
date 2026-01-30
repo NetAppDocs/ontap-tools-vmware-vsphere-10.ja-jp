@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 大規模な環境で最適なパフォーマンスを実現するには、Storage Replication Adapter（SRA\）の推奨設定に従ってストレージのタイムアウト間隔を設定する必要があります。 
 ---
-= 大規模な環境向けのSRAの設定
+= 大規模環境向けに ONTAP tools で SRA を構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

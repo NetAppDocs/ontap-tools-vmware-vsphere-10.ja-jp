@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: ONTAP tools for VMware vSphereの使用を開始するには、いくつかの手順を実行します。 
 ---
-= ハイアベイラビリティ（HA）導入ワークフロー
+= ONTAP toolsの高可用性導入ワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAPツールのメンテナンスコンソールを使用して、アプリケーション、システム、ネットワークの構成を管理できます。管理者パスワードとメンテナンスパスワードを変更できます。また、サポートバンドルの生成、ログレベルの設定、TLS設定の表示と管理、リモート診断の開始も可能です。 
 ---
-= ONTAP Tools for VMware vSphereメンテナンスコンソールの概要
+= ONTAP toolsのメンテナンスコンソールについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

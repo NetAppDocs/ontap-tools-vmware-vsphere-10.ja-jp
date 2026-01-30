@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= VMware vSphere の ONTAP ツールにおける igroup とエクスポート ポリシーを理解する
+= ONTAP toolsがigroupとエクスポートポリシーを管理する方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

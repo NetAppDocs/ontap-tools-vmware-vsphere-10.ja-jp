@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphereの単一インスタンスで、複数のvCenter Serverインスタンスを管理できます。ONTAP Tools for VMware vSphereは、VASA Provider用の自己署名証明書を使用して導入されます。これにより、vVolデータストアに対して管理できるvCenter Serverインスタンスは1つだけです。 
 ---
-= 証明書を管理します
+= ONTAP tools証明書の管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

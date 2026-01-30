@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: アップグレードの前に、他のノードでSSHを開始する必要があります。 
 ---
-= 他のノードでSSHを開始する
+= 他のONTAP toolsノードでSSHを起動します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

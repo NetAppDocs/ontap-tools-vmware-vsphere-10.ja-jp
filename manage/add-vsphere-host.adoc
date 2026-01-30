@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 新しい VMware vSphere ホストをONTAP tools for VMware vSphereに追加します。 
 ---
-= 新しい VMware vSphere ホストを追加する
+= VMware vSphereホストをONTAPツールに追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

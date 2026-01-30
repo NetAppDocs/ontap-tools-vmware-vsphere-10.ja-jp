@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: ホストクラスタの保護を解除すると、データストアの保護は解除されます。 
 ---
-= ホストクラスタの保護の解除
+= ONTAP toolsでホストクラスタ保護を削除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

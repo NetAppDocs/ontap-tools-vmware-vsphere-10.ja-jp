@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: vCenter ClientのショートカットセクションでONTAP tools for VMware vSphereプラグインのアイコンを選択すると、概要ページが表示されます。このページはダッシュボードのように機能し、ONTAP Tools for VMware vSphereプラグインの概要を確認できます。 
 ---
-= ONTAP Tools for VMware vSphereダッシュボードの概要
+= ONTAP toolsダッシュボードについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

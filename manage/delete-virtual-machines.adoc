@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: VASAのクリーンアップを実行するには、このセクションの手順を使用します。 
 ---
-= VASAクリーンアップ
+= ONTAP toolsでVASA構成をクリーンアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

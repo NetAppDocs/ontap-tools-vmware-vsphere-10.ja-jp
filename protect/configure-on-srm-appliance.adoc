@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'VMware Live Site Recovery アプライアンスを展開した後、ストレージ レプリケーション アダプタ (SRA) を構成して、災害復旧管理を有効にします。' 
 ---
-= VMware Live Site RecoveryアプライアンスでのSRAの設定
+= ONTAP tools を使用して VMware Live Site Recovery アプライアンスで SRA を構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

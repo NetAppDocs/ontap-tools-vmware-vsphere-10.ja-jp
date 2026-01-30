@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: データセンター内の既存の仮想マシンを移行する際の考慮事項について理解しておく必要があります。 
 ---
-= 仮想マシンの移行またはクローニングに関する考慮事項
+= ONTAP toolsにおける仮想マシンの移行とクローン作成に関する考慮事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

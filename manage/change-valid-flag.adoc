@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: メンテナンス コンソールを使用して証明書検証フラグを変更できます。 
 ---
-= 証明書検証フラグを変更する
+= ONTAP toolsで証明書検証フラグを変更する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

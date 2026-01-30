@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools manager, managerui 
 summary: ONTAP tools Managerを使用すると、VMware vSphere管理者向けのONTAP toolsをより詳細に制御して使用できるため、アプライアンス、テナント、ストレージバックエンドの全体的な管理に役立ちます。 
 ---
-= ONTAP tools Managerユーザインターフェイス
+= ONTAP toolsマネージャのユーザーインターフェイスについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

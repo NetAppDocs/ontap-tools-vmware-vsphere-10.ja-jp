@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: ONTAP Tools for VMware vSphereは、ホストクラスタの保護を管理します。 
 ---
-= ホストクラスタの保護を使用した保護
+= ONTAP toolsでホストクラスタを保護する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

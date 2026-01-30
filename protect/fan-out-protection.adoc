@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ファンアウト保護のシナリオでは、コンシステンシ グループは、最初の宛先ONTAPクラスタ上の同期関係と、2 番目の宛先ONTAPクラスタ上の非同期関係によって二重に保護されます。 
 ---
-= ファンアウト保護
+= ONTAP toolsのファンアウト保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

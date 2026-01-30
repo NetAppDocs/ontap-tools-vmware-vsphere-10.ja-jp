@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 保護対象ホストクラスタのSnapMirror関係を編集することができます。関係を追加、変更、および削除できます。ただし、整合グループ名は編集できません。 
 ---
-= 保護されているホストクラスタを変更
+= ONTAP toolsで保護されたホストクラスタを変更する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

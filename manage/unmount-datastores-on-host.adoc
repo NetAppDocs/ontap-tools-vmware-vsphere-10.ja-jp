@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '[データストアのアンマウント]操作を実行すると、NFSまたはVMFSデータストアがESXiホストからアンマウントされます。データストアのアンマウント処理は、ONTAP tools for VMware vSphereで検出または管理されるNFSおよびVMFSデータストアに対して有効になります。' 
 ---
-= NFSデータストアとVMFSデータストアのアンマウント
+= ONTAP toolsでNFSおよびVMFSデータストアをアンマウントする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

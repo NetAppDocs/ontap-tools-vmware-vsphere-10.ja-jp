@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 'ONTAP tools for VMware vSphereの[Configure]タブにあるONTAPストレージビューには、データストアとそのボリュームに関連するデータが表示されます。' 
 ---
-= データストアのONTAPストレージビュー
+= ONTAP tools のデータストアの ONTAP ストレージ ビュー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

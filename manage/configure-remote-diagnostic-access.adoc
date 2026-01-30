@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: diagユーザのSSHアクセスを有効にするようにONTAP tools for VMware vSphereを設定できます。 
 ---
-= リモート診断アクセスを設定します
+= ONTAP toolsのリモート診断アクセスを設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: Delete datastore action：データストアを削除します。NFSまたはVMFSデータストアの場合は、ダイアログボックスに、そのデータストアを使用しているVMのリストが表示されます。 
 ---
-= データストアの削除
+= ONTAP toolsでデータストアを削除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: NTPサーバの詳細を入力して、ONTAP toolsアプライアンスのタイムクロックを同期します。 
 ---
-= バックアップ設定を編集する
+= ONTAPツールのバックアップ設定を編集する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

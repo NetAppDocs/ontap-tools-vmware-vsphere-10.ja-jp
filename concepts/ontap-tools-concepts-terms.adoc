@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 次のセクションでは、このドキュメントで使用される主な概念と用語について説明します。 
 ---
-= 主要な概念と用語
+= ONTAP toolsの主要な概念と用語
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network access configuration, export policy, mount operation, ESXi hosts 
 summary: ネットワークアクセスを設定していない場合は、ESXiホストで検出されたすべてのIPアドレスがデフォルトでエクスポートポリシーに追加されます。 
 ---
-= ネットワークアクセスの設定
+= ONTAP tools でネットワーク アクセスを設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

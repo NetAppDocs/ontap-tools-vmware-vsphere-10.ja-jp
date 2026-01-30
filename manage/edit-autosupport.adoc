@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphereを初めて構成する場合、 AutoSupport はデフォルトで有効になります。有効になってから 24 時間以内にテクニカル サポートにメッセージが送信されます。 
 ---
-= AutoSupport設定の編集
+= ONTAP toolsのAutoSupport設定を編集する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

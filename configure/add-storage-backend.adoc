@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ストレージバックエンドは、ESXiホストがデータストレージに使用するシステムです。 
 ---
-= ONTAPツールにストレージバックエンドを追加する
+= ONTAP toolsにストレージバックエンドを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

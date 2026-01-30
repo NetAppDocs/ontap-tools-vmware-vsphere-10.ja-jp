@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Migrate NFS and VMFS virtual machines 
 summary: NFSおよびVMFSデータストアからVirtual Volumes\（VVols\）データストアに仮想マシンを移行して、ポリシーベースのVM管理やその他のVVOL機能を活用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。 
 ---
-= NFSおよびVMFSデータストアを使用する仮想マシンをvVolデータストアに移行する
+= ONTAP tools で仮想マシンを vVols データストアに移行する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

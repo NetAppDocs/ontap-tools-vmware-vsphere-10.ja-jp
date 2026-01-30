@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, use ontap rbac 
 summary: ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本番環境で使用する前に考慮する必要があります。 
 ---
-= ONTAP RBACとONTAP Tools for VMware vSphere 10の使用
+= ONTAP tools に関する ONTAP RBAC の考慮事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

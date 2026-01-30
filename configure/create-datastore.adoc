@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ホスト クラスタ レベルでデータストアを作成すると、 ONTAPツールによってそれがすべての宛先ホストにマウントされ、必要な権限がある場合にのみアクションが有効になります。 
 ---
-= データストアを作成
+= ONTAP toolsでデータストアを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

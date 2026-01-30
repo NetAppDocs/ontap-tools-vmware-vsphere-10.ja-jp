@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: ストレージデータを移行する際、ストレージバックエンドはREST APIを使用して手動でオンボーディングされます。VASA Providerのデータを移行すると、既存のDerbyデータベースからデータがエクスポートされ、MongoDBデータベースにインポートされます。 
 ---
-= VASA プロバイダーを移行し、SRA を更新する
+= VASA プロバイダーを移行し、ONTAP ツールで SRA を更新する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

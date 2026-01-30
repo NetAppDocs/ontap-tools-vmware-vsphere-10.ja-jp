@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 仮想マシンがどちらか一方のホストグループにフェイルオーバーするように構成されるように、保護対象サイトとリカバリサイトのリソースをマッピングする必要があります。 
 ---
-= リソースマッピングを設定する
+= ONTAP toolsでリソースマッピングを設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

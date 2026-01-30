@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ストレージバックエンドをvCenter Serverに関連付けて、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間にグローバルなマッピングを作成します。 
 ---
-= ストレージバックエンドとvCenter Serverインスタンスの関連付け
+= ONTAP tools でvCenter Server インスタンスにストレージバックエンドを関連付ける
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

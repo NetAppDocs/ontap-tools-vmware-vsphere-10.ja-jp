@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: VMware環境のONTAP toolsに専用のONTAPクラスタを使用すると、未使用のFlexVolボリュームが多数作成されます。ONTAP Tools for VMware vSphereを削除したら、パフォーマンスへの影響を回避するためにFlexVolボリュームを削除する必要があります。 
 ---
-= FlexVolボリュームを削除する
+= ONTAP toolsをアンインストールした後、FlexVolボリュームを削除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

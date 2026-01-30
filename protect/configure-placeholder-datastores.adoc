@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '保護された仮想マシン (VM) 用にリカバリ サイトの vCenter インベントリ内のスペースを予約するようにプレースホルダー データストアを構成します。プレースホルダ VM は小さく、通常は数百キロバイトしか使用しないため、プレースホルダ データストアに必要な容量は最小限です。' 
 ---
-= プレースホルダデータストアを設定します
+= ONTAP toolsでプレースホルダデータストアを設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

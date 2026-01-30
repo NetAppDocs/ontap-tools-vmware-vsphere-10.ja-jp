@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: vSphere ClientでONTAP tools for VMware vSphereを初めて実行すると、ONTAP tools for VMware vSphereによって、ESXiホスト、そのLUNとNFSエクスポート、およびLUNとエクスポートを所有するNetAppストレージシステムが検出されます。 
 ---
-= ストレージシステムとホストを検出
+= ONTAP toolsでストレージシステムとホストを検出する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
