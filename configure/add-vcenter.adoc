@@ -13,19 +13,37 @@ summary: vCenter ServerインスタンスをONTAP tools for VMware vSphereに追
 [role="lead"]
 vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。複数の vCenter Server インスタンスを追加する場合、ONTAP ツールと各 vCenter Server 間の安全な通信にはカスタム CA 証明書が必要です。
 
-vCenter Server インスタンスを ONTAP tools Manager に登録する際は、vCenter Server 証明書に有効なサブジェクト代替名（SAN）拡張が含まれていることを確認してください。SAN 拡張には、DNS と IP アドレスの両方のエントリが含まれている必要があります。例：
+.タスクの内容
+ONTAPツールは vCenter Server と統合され、プロビジョニング、スナップショット、データ保護などのストレージ タスクを vSphere クライアントから直接実行します。
 
+.作業を開始する前に
+* vCenter Server証明書に、DNSとIPアドレスの両方のエントリを含む有効なサブジェクト代替名（SAN）拡張が含まれていることを確認してください。例：
++
 [listing]
 ----
 X509v3 extensions:
     X509v3 Subject Alternative Name:
         DNS: vcenter.example.com, DNS: vcenter, IP Address: 192.168.0.50
 ----
-vCenter Server証明書にSAN拡張機能が含まれていない場合、またはSAN拡張機能に正しいDNSまたはIPアドレス値が含まれていない場合、証明書検証エラーが原因でONTAP tools操作が失敗する可能性があります。
++
+証明書にSAN拡張が含まれていない場合、またはSAN拡張に正しいDNSまたはIPアドレス値が含まれていない場合、証明書検証エラーのため、ONTAP tools for VMware vSphereの操作が失敗する可能性があります。
 
-.タスクの内容
-ONTAPツールは vCenter Server と統合され、プロビジョニング、スナップショット、データ保護などのストレージ タスクを vSphere クライアントから直接実行します。
+* vCenter Server のプライマリネットワーク識別子（PNID）を SAN の詳細に含める必要があります。PNID と DNS 名は同一であり、DNS で解決可能である必要があります。
+* vCenter Server は、完全修飾ドメイン名（FQDN）を使用して導入し、証明書の SAN に DNS Name=machine_FQDN が含まれていることを確認して、最適な互換性とサポートを実現することをお勧めします。
+* 詳細については、VMware のドキュメントを参照してください：
++
+** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["異なる解決策パスのvSphere証明書の要件"]
+** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html["vCenter マシン SSL 証明書をカスタム認証局署名証明書に置き換える"]
+** https://knowledge.broadcom.com/external/article/406282/error-subject-alternate-name-san-field-d.html["エラー：Subject Alternate Name（SAN）フィールドにPNIDが含まれていません。有効な証明書を提供してください"]
 
+
+
+
+[NOTE]
+====
+FQDN が使用できない場合は、PNID を IP アドレスに設定し、IP アドレスを SAN に含めることができます。ただし、これは VMware では推奨されていません。
+
+====
 .手順
 . Web ブラウザを開き、次の URL にアクセスします。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
