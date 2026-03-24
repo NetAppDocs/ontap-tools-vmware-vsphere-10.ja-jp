@@ -35,7 +35,7 @@ curl --request POST \
   --location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/vcenter-login" \
   --header "Content-Type: application/json" \
   --header "Accept: */*" \
-  -d '{"username": "$MYUSER", "password": "$MYPASSWORD"}'
+  -d '{"username": "$MYUSER", "password": "$MYPASSWORD", "vcenter hostname": "$MYVCENTER"}'
 ----
 +
 レスポンスで返されたアクセス トークンをコピーして保存します。
@@ -118,7 +118,6 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?i
 +
 前の手順で移行ジョブから返された「id」値を使用します。ジョブが完了したら、ジョブ応答の移行レポートを確認します。
 
-. ONTAP tools for VMware vSphereをvCenter Server に追加します。
 . VASA プロバイダーをONTAP tools for VMware vSphereに登録します。手順については、link:../configure/registration-process.html["VASA Providerを登録する"] 。
 . VASA Provider の登録を確認します：
 +
