@@ -163,7 +163,7 @@ sudo rke2-uninstall.sh（すべてのVM）：
 
 * 診断シェルを有効にします。
 * 次のコマンドを実行します。 `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-*  `/var/log/otvng/post-deploy-upgrade.log`でログを確認します。
+* でログを確認します `/var/log/otvng/post-deploy-upgrade.log`
 
 
 |===
