@@ -13,10 +13,10 @@ summary: このリリースの VMware vSphere 用 ONTAP ツールに関する重
 [role="lead"]
 ONTAP tools for VMware vSphereで利用できる新機能と拡張機能について説明します。
 
-新機能と強化機能の完全なリストについては、xref:whats-new.adoc[ONTAP tools for VMware vSphereの新機能] 。
+新機能と機能強化の完全なリストについては、xref:whats-new.adoc[ONTAP tools for VMware vSphereの新機能]を参照してください。
 
-最新の互換性情報については、 https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^] 。
+最新の互換性情報については、 https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]を参照してください。
 
 ONTAP tools for VMware vSphereからONTAP tools for VMware vSphereへの移行がサポートされています。
 
-詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["ONTAP tools for VMware vSphereのリリース ノート"^] 。リリース ノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。
+詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["ONTAP tools for VMware vSphereのリリース ノート"^]を参照してください。NetAppアカウントでサインインするか、アカウントを作成してリリースノートにアクセスする必要があります。

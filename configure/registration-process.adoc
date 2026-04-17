@@ -13,14 +13,14 @@ summary: ONTAP tools for VMware vSphereを使用して、VASA プロバイダー
 [role="lead"]
 ONTAP tools for VMware vSphereを使用して、VASA プロバイダーを vCenter Server インスタンスに登録します。これにより、ストレージ ポリシー ベースの管理、 vVolsサポート、 ONTAPシステム上の VMware Live Site Recovery アプライアンスとの統合が可能になります。
 
-VASA プロバイダ設定には、選択した vCenter Server の登録ステータスが表示されます。
+VASA プロバイダー設定には、選択したvCenter Server の登録ステータスが表示されます。
 
 .手順
 . vSphere Clientにログインします。
 . プラグインセクションで*ショートカット*>* NetApp ONTAP tools *を選択します。
 . *設定* > *VASA プロバイダー設定*を選択します。  ONTAPツールでは、VASA プロバイダの登録ステータスが未登録として表示されます。
 . [登録]*ボタンを選択してVASA Providerを登録します。
-. VASA プロバイダーの名前と資格情報を入力します。ユーザー名には文字、数字、アンダースコアのみを含めることができます。パスワードの長さを 8 文字から 256 文字の間で設定します。
+. VASA Providerの名前とクレデンシャルを入力します。ユーザ名には、英字、数字、アンダースコアのみを使用できます。パスワードは8~256文字にする必要があります。
 . [*Register] を選択します。
 . 登録が正常に完了し、ページが更新されると、 ONTAPツールには登録済みの VASA プロバイダーのステータス、名前、バージョンが表示されます。
 

@@ -17,9 +17,9 @@ VMware Live Site Recovery アプライアンスで SRA を構成すると、ONTA
 
 .作業を開始する前に
 * _.tar.gz_ファイルを https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"]。
-* ONTAPツール マネージャーで SRA サービスを有効にします。詳細については、 link:../manage/enable-services.html["サービスを有効にする"]セクション。
-* VMware vSphere アプライアンスの ONTATP ツールに vCenter Server を追加します。詳細については、 link:../configure/add-vcenter.html["vCenter Server を追加する"]セクション。
-* ONTAP tools for VMware vSphereにストレージ バックエンドを追加します。詳細については、 link:../configure/add-storage-backend.html["ストレージバックエンドを追加する"]セクション。
+* ONTAP tools ManagerでSRAサービスを有効にします。詳細については、link:../manage/enable-services.html["サービスを有効にする"]セクションを参照してください。
+* vCenter Server を ONTAP tools for VMware vSphere アプライアンスに追加します。詳細については、link:../configure/add-vcenter.html["vCenter Server を追加する"] セクションを参照してください。
+* ONTAP tools for VMware vSphere にストレージバックエンドを追加します。詳細については、link:../configure/add-storage-backend.html["ストレージバックエンドを追加する"]セクションを参照してください。
 
 
 

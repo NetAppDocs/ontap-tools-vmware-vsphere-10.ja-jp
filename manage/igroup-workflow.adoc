@@ -223,6 +223,12 @@ ONTAP ツール 9.x ロジックでは、1 対 1 のホスト マッピングを
 
 これにより、階層モデルへの準拠が保証されます。
 
+ONTAP tools 10.5P2以降では、移行されたigroupは使用されなくなると削除されます。以前のバージョンでは、移行されたigroupは削除されませんでした。以下の点に注意してください：
+
+* 移行されたigroupは、データストア間で再利用できません。
+* カスタムigroup（ユーザー定義）は削除されず、引き続き再利用できます。
+
+
 .関連トピック
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["igroupについて"]
 

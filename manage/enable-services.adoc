@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP tools Managerを使用してVASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのサービスを有効にすることができます。 
+summary: ONTAP tools Managerを使用して、VASA Provider、vVols構成のインポート、ディザスタリカバリ（SRA）などのオプションサービスを有効にすることができます。 
 ---
 = ONTAP toolsサービスを有効にする
 :allow-uri-read: 

@@ -90,11 +90,11 @@ JSON ファイルを使用せずにユーザーとロールを手動で作成し
 
 . ユーザーを作成します:
 +
-.. Users *テーブルの* Add *を選択します。
+.. *ユーザー* テーブルの下にある *追加* を選択します。
 .. [ユーザの追加]ダイアログボックスで、*[System Manager]*を選択します。
 .. [Username]*を入力します。
 .. 上記の*ロールの作成*ステップで作成したオプションから*ロール*を選択します。
-.. アクセスを許可するアプリケーションと認証方法を入力します。ONTAPIとHTTPが必要なアプリケーションで、認証タイプは* Password *です。
+.. アクセスを許可するアプリケーションと認証方法を入力します。ONTAPI と HTTP は必須のアプリケーションで、認証タイプは * Password * です。
 .. ユーザーの*パスワード*とユーザーの*保存*を設定します。
 
 
@@ -259,13 +259,13 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
 
 ----
-また、ONTAPバージョン9.16.0以降の場合は、次のコマンドを実行します。
+さらに、ONTAPバージョン9.16.0以降では、以下のコマンドを実行してください：
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
-ONTAPバージョン9.16.1以降のASA R2システムでは、次のコマンドを実行します。
+ONTAP バージョン 9.16.1 以降の ASA r2 システムの場合は、次のコマンドを実行します。
 
 [listing]
 ----
@@ -355,13 +355,13 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
-また、ONTAPバージョン9.16.0以降の場合は、次のコマンドを実行します。
+さらに、ONTAPバージョン9.16.0以降では、以下のコマンドを実行してください：
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
-上記で作成したAPIベースのロールを使用して新しいAPIベースのユーザを作成するには、次のコマンドを実行します。
+以前に作成したAPIベースのロールを使用して新しいAPIベースのユーザーを作成するには、次のコマンドを実行します：
 
 [listing]
 ----

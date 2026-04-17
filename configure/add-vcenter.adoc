@@ -29,7 +29,7 @@ X509v3 extensions:
 証明書にSAN拡張が含まれていない場合、またはSAN拡張に正しいDNSまたはIPアドレス値が含まれていない場合、証明書検証エラーのため、ONTAP tools for VMware vSphereの操作が失敗する可能性があります。
 
 * vCenter Server のプライマリネットワーク識別子（PNID）を SAN の詳細に含める必要があります。PNID と DNS 名は同一であり、DNS で解決可能である必要があります。
-* vCenter Server は、完全修飾ドメイン名（FQDN）を使用して導入し、証明書の SAN に DNS Name=machine_FQDN が含まれていることを確認して、最適な互換性とサポートを実現することをお勧めします。
+* vCenter Server は完全修飾ドメイン名（FQDN）を使用して導入することを推奨します。証明書の SAN に DNS Name=machine_FQDN が含まれるようにすることで、最適な互換性とサポートを実現します。
 * 詳細については、VMware のドキュメントを参照してください：
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["異なる解決策パスのvSphere証明書の要件"]

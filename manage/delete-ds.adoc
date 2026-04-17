@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: Delete datastore action：データストアを削除します。NFSまたはVMFSデータストアの場合は、ダイアログボックスに、そのデータストアを使用しているVMのリストが表示されます。 
+summary: データストア削除アクションは、データストアを削除します。NFSまたはVMFSデータストアの場合、そのデータストアを使用している仮想マシンの一覧が表示されたダイアログボックスが表示されます。 
 ---
 = ONTAP toolsでデータストアを削除する
 :allow-uri-read: 
@@ -16,7 +16,7 @@ summary: Delete datastore action：データストアを削除します。NFSま
 データストアを削除すると、データストアの種類に応じて次のアクションが実行されます。
 
 * vVol コンテナがマウント解除されました。
-* igroup が使用されていない場合は、iqn は igroup から削除されます。
+* igroupが使用されていない場合、そのイニシエータはigroupから削除されます。
 * vVol コンテナが削除されます。
 * フレックス ボリュームはストレージ アレイ上に残ります。
 

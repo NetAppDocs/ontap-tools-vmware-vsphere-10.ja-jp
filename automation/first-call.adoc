@@ -70,7 +70,7 @@ curl --request POST \
 --header "Accept: */*" \
 -d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
 ----
-応答で提供されたアクセストークンをコピーして保存します。
+レスポンスで提供されるアクセストークンをコピーして保存してください。
 
 
 

@@ -19,7 +19,7 @@ summary: すべてのAPI呼び出しの詳細については、ONTAP Tools for V
 ONTAP Tools for VMware vSphere 10 REST APIのドキュメントには、Swaggerユーザインターフェイスからオンラインでアクセスできます。ONTAP tools for VMware vSphere 10ゲートウェイサービスとポートのIPアドレスまたはFQDNが必要です。
 
 .手順
-. 次のURLをブラウザに入力し、変数の適切なIPアドレスとポートの組み合わせに置き換えて* Enter *を押します。
+. 以下のURLをブラウザに入力し、変数の部分を適切なIPアドレスとポートの組み合わせに置き換えて、*Enter*キーを押します。
 +
 `\https://$FQDN_IP_PORT/`
 
