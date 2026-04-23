@@ -84,7 +84,7 @@ NOTE: 自身が管理するvVolsデータストアにONTAP tools for VMware vSph
 NOTE: vCenter ホスト名は、 ONTAPツール アプライアンスがデプロイされている vCenter Server インスタンスの名前です。
 
 +
-2 つの vCenter Server トポロジ（アプライアンスが 1 つの vCenter インスタンスでホストされ、別のインスタンスを管理する）でONTAPツールを展開する場合は、 ONTAPツールをホストする vCenter インスタンスに制限付きロールを割り当てることができます。OVF テンプレートのデプロイに必要な権限のみを持つ専用の vCenter ユーザーとロールを作成できます。詳細については、 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]。
+2つのvCenter Server構成でONTAP toolsを導入する場合（アプライアンスが1つのvCenterインスタンスでホストされ、別のインスタンスを管理する場合）、ONTAP toolsをホストしているvCenterインスタンスに制限付きロールを割り当てることができます。OVFテンプレートの導入に必要な権限のみを持つ専用のvCenterユーザーとロールを作成できます。詳細については、link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]に記載されているロールを参照してください。
 
 +
 ONTAPツールによって管理される vCenter インスタンスの場合、vCenter ユーザー アカウントに管理者権限があることを確認します。
