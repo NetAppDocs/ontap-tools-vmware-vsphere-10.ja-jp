@@ -2791,4 +2791,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">ONTAP tools が検出されたネイティブ igroup を管理すると、その igroup はデータストア作成用のカスタムイニシエータグループ名のドロップダウンリストで使用できるようになります。</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">新しいデータストアLUNは、正規化された子igroupにマッピングされます。例：<block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block></block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphereは、ONTAP tools で管理されていない、またはデータストアにリンクされていないONTAPシステムで作成されたigroupを検出または使用しません。</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">ストレージバックエンドをローカルに追加および管理します。vCenterインスタンスの場合、またはONTAPツールでクラスター全体の検出をグローバルに行う場合に使用します。</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10：ストレージバックエンドのグローバルスコープとローカルスコープとは</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">グローバルおよびローカルストレージバックエンドの詳細については、KB記事<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>
