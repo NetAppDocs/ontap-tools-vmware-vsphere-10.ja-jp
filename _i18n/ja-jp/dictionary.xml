@@ -1320,28 +1320,15 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1497fccb0979c83f7f0501efa49af88e" category="list-text"><block ref="1497fccb0979c83f7f0501efa49af88e" category="inline-link-macro-rx"></block></block>
   <block id="69182d9cdaae4040cb12f338633b33c7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>ONTAP Tools for VMware vSphereの導入</block>
   <block id="e5470d0dab088b9c8b712af4be3801de" category="list-text"><block ref="e5470d0dab088b9c8b712af4be3801de" category="inline-link-macro-rx"></block></block>
-  <block id="d6f4de0e60c9b74a0f06b9c8cb7e5556" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>vCenter Serverインスタンスの追加</block>
-  <block id="fbc3413db4202f1fe331f16af6b38f13" category="list-text"><block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">4つ</block>
-  <block id="f876a7cbd467b5fe36bfff5b237cab15" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>ONTAPユーザロールとPrivilegesの設定</block>
-  <block id="a3dce2225c6773b6233d6d06ca6524a1" category="paragraph">ONTAP tools for VMware vSphereに付属のJSONファイルを使用して、ストレージバックエンドを管理するための新しいユーザロールとPrivilegesを設定します。</block>
   <block id="b3debf9a0a4da8901422599f88761e9e" category="list-text"><block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block></block>
   <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">5 つ</block>
-  <block id="78a9753ae84f65cfc93b9190109fdbe1" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>ストレージバックエンドの設定</block>
-  <block id="151c3727ca69fe365d30ca8b00d0ef02" category="paragraph">ONTAPクラスタにストレージバックエンドを追加します。vCenterが関連付けられたSVMのテナントとして機能するマルチテナンシーセットアップの場合は、ONTAP tools Managerを使用してクラスタを追加します。ストレージバックエンドをvCenter Serverに関連付けて、オンボードされたvCenter Serverインスタンスにグローバルにマッピングします。</block>
   <block id="623727ddcf21460c69461e09290ff6e3" category="paragraph">ONTAP toolsのユーザインターフェイスを使用して、ローカルストレージバックエンドをクラスタまたはSVMのクレデンシャルで追加します。これらのストレージバックエンドは1つのvCenterに限定されます。ローカルでクラスタのクレデンシャルを使用すると、関連付けられたSVMがvCenterに自動的にマッピングされてVVOLまたはVMFSが管理されます。SRAを含むVMFSの管理については、ONTAP toolsではグローバルクラスタを必要とせずにSVMクレデンシャルがサポートされます。</block>
   <block id="5e15cfab5137c8c5b07a50f9eb816e0a" category="list-text"><block ref="5e15cfab5137c8c5b07a50f9eb816e0a" category="inline-link-macro-rx"></block></block>
   <block id="d0c12810d8bb376bdd62e0a7dcb8f3ef" category="inline-link-macro">ストレージバックエンドをvCenter Serverインスタンスに関連付ける</block>
   <block id="349dea55081cba7988d2e74a569b149b" category="list-text"><block ref="349dea55081cba7988d2e74a569b149b" category="inline-link-macro-rx"></block></block>
-  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">6</block>
-  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">7</block>
-  <block id="461016ffd7a6c7ca138e75fad0c9b7ce" category="paragraph">SRA機能を有効にして、ディザスタリカバリを設定し、NFSまたはVMFSデータストアを保護する。</block>
   <block id="9b6610ae0d9b3f2df042445cc8433cf4" category="list-text"><block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
-  <block id="24d27c169c2c881eb09a065116f2aa5c" category="inline-image-macro">8つ</block>
-  <block id="1f3c2366ee78e590a43f78ce3ec33af9" category="paragraph-title"><block ref="bf2dc80b0d3f76e4f77c4fce580f56c0" category="inline-image-macro-rx" type="image"></block>（オプション）SnapMirrorアクティブ同期保護を有効にします。</block>
   <block id="5c77c00bef7fd2d8fb97abc8f2ff015a" category="list-text"><block ref="5c77c00bef7fd2d8fb97abc8f2ff015a" category="inline-link-macro-rx"></block></block>
-  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">9つ</block>
-  <block id="c5ee3ef473a8e2d4f3f8b40330e2bcd2" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block>ONTAP tools for VMware vSphere環境のバックアップとリカバリのセットアップ</block>
   <block id="4073f6bd126ab1197095ddfaadcb200f" category="list-text">CPUホットアドとメモリホットプラグが有効になっていることを確認します。</block>
   <block id="1e98e4c05a8f5cfd1ddd0daba1e28284" category="paragraph">ONTAP tools for VMware vSphere 10 REST APIには、ONTAP toolsのIPアドレスとポートからアクセスできます。完全なURLには、次のようないくつかの部分があります。</block>
   <block id="b36742dbca767f044c826ec8fbe9b099" category="inline-link">整合グループ</block>
@@ -1508,9 +1495,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="e4365b2f9588eb138888d2bae6c6ac55" category="list-text">VMware vSphere 7リリースを使用している場合は、VMwareサイトの手順に従って<block ref="6b6e21be7e83380915b7a93b5de98cc6" category="inline-link-rx"></block>NVMe/TCPポートバインドを設定します。VMware vSphere 8リリースを使用している場合は、に従って<block ref="5075091467dfddb38b411ec1bb554877" category="inline-link-rx"></block>NVMe/TCPポートバインドを設定します。</block>
   <block id="d6e530451ec429932fcb540369b5619d" category="list-text">VMware vSphere 7リリースの場合は、ページの手順に従って<block ref="562342ed7eb0295ae9f7a72ea788d31d" category="inline-link-rx"></block>NVMe/TCPソフトウェアアダプタを設定します。VMware vSphere 8リリースの場合は、に従って<block ref="1f8f8787602f2f92045aa29b0a3fa467" category="inline-link-rx"></block>NVMe/TCPソフトウェアアダプタを設定します。</block>
   <block id="9d596e014ec247e8a36a9d698795a54f" category="list-text"><block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block>ESXiホストでアクションを実行します。詳細については、を参照してください<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block>。</block>
-  <block id="5ba022aa97c9316a9962bea92efe8e4f" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block>複数の vCenter Server インスタンスを使用している場合は証明書をアップグレードします</block>
-  <block id="cc2976705cd90914f7093a509084c243" category="paragraph">複数の vCenter Server インスタンスで作業する場合は、自己署名証明書を証明機関 (CA) 署名証明書にアップグレードします。</block>
-  <block id="293752750693507b1f4c7f6bc41f019e" category="paragraph">SnapMirror Active Syncのホストクラスタ保護を管理するために、ONTAP tools for VMware vSphereを設定します。SnapMirror アクティブ同期を使用するには、ONTAP システムで ONTAP クラスタと SVM ピアリングを実行します。これはVMFSデータストアにのみ該当します。</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">vCenter Serverで、ディザスタリカバリサービス（DRS）の自動化レベルを「部分自動化」に設定します。HAを導入した後、完全自動化に戻します。</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">HA セットアップ内のノード ホスト名は小文字にする必要があります。</block>
   <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。</block>
@@ -1628,10 +1612,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="64330c7217f629eb146d9c9276f808df" category="admonition">ASA r2 ストレージ システム タイプ SVM では、データストアは論理コンテナにすぎないため、ストレージ ユニット (LUN/名前空間) は作成されません。</block>
   <block id="36b0287ed1ac9ef5ae710b3824924694" category="paragraph">検出要求が送信された後、最近のタスク パネルでアクションの進行状況を追跡できます。</block>
   <block id="8598aab6bb36721c708c8e437a58cdc2" category="summary">このクイック スタート セクションで、 ONTAP tools for VMware vSphereをセットアップします。</block>
-  <block id="569d8591be50649b9e7b8bea144f3512" category="paragraph">vSphere、 ONTAP、ESXiホストのバージョンがONTAPツールのバージョンと互換性があることを確認してください。十分なCPU、メモリ、ディスク容量を割り当ててください。セキュリティルールによっては、ネットワークトラフィックを許可するためにファイアウォールなどのセキュリティツールを設定する必要がある場合があります。</block>
-  <block id="e9b5da82e11916ae21c792527e11c3be" category="paragraph">まず、 ONTAP tools for VMware vSphereを、 NFS および VMFS データストアをサポートするコアサービスを提供する小規模なシングルノード構成として導入します。vVolsデータvVolsと高可用性（HA）を使用するように構成を拡張する予定がある場合は、このワークフローを完了した後に拡張してください。HA構成に拡張するには、CPU ホットアドとメモリ ホットプラグが有効になっていることを確認してください。</block>
-  <block id="e6a187afd099cc2fbaed679eda4f9a89" category="paragraph">ONTAP tools for VMware vSphereに vCenter Server インスタンスを追加して、vCenter Server 環境内の仮想データストアを構成、管理、保護します。</block>
-  <block id="0115ba480d5059c11ce8f89628a7743d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> （オプション）SRA保護を構成する</block>
   <block id="3d67f96eb2aec81f92bfe17a27594d9f" category="list-text"><block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block></block>
   <block id="034f02f8ec70fbc1533e451250a2bcad" category="admonition">ディスクは仮想マシンから削除されます。他の仮想マシンがディスクを共有している場合、ディスクファイルは削除されません。</block>
   <block id="a5e1dbbf601c017647380a6aecd9eb8d" category="list-text">ログバンドルのラベルを指定して、ログバンドルを生成します。ファイルが生成されると、ダウンロードオプションが表示されます。ダウンロードには時間がかかる場合があります。</block>
@@ -2051,7 +2031,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="2613ec9391540fc8d9d6ce743d7a9759" category="list-text">CPU と RAM のホット プラグインが有効になっていることを確認します。</block>
   <block id="c3061246985713c75c44c8a3b878779b" category="list-text">*CD/DVD ドライブ* フィールドの編集設定ウィンドウで、*コンテンツ ライブラリ ISO ファイル* を選択します。</block>
   <block id="462136a29a804d85c9626a4ff63b2bef" category="list-text">ISO ファイルを選択し、*CD/DVD ドライブ* フィールドの *接続済み* ボックスをオンにして、*OK* をクリックします。</block>
-  <block id="9f6f7d4ab9570c7b22acd4966be9f823" category="list-text">*7* と入力して *アップグレード* オプションを選択します。</block>
   <block id="c6306b642a5e71b051af55355ca139dc" category="paragraph">アップグレード中に、オンボードされたストレージ バックエンド証明書にサブジェクト別名 (SAN) エントリがない場合、不足している SAN を示すプロンプトが表示されます。  SAN を検証せずに続行することを選択した場合、アップグレードは続行されますが、潜在的なセキュリティ リスクがあるため、これはお勧めしません。</block>
   <block id="6c872843c1ab00a20d8f946d62fe9e30" category="list-text">ゲートウェイ証明書は 1 年間の有効期間で更新されます。以前の SRA アダプタを削除し、新しい 10.5 アダプタをアップロードすると、SRA 証明書の有効期間は 10 年から 1 年に変わります。</block>
   <block id="f77f29b09f12b9fd7711c99fe911df61" category="list-text">リモートプラグインがアップグレードされました</block>
@@ -2795,4 +2774,32 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10：ストレージバックエンドのグローバルスコープとローカルスコープとは</block>
   <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">グローバルおよびローカルストレージバックエンドの詳細については、KB記事<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block>を参照してください。</block>
   <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
+  <block id="32baa6fa3fd628b1cfe2b88a5916a2d0" category="paragraph">「テンプレートのカスタマイズ」ページの値は、正常にデプロイするために必須です。</block>
+  <block id="75db3442d8b7defbd86cc017cc392550" category="paragraph">特に以下のフィールドに注意してください：</block>
+  <block id="2bd591705cef0dfc0c9ec432fc2beb36" category="list-text">*ホスト名*：ONTAP tools VM のホスト名を入力してください。有効なホスト名形式を使用してください。</block>
+  <block id="03ffc67414aededc55ef2a19403a00ab" category="list-text">*ONTAP tools の IP アドレス*：これは、ONTAP tools へのアクセスに使用するプライマリ管理インターフェイスです。</block>
+  <block id="93d910cd0742d24cb2d5837f339a34f8" category="list-text">*IPv4アドレス*：これは、トラブルシューティングとメンテナンスのための診断シェルとSSHアクセスに使用されるノードのIPアドレスです。</block>
+  <block id="c9143eee30edd84eeded44c8dd4bb50f" category="paragraph">ホストまたはvCenterに DNS 名を使用する場合は、それらの名前が DNS で正しく解決されることを確認してください。</block>
+  <block id="b58aeebf1906a056812bcdbaf54f976c" category="paragraph">まずこれらのコアタスクを完了して、ONTAP tools を Day-0 の管理およびプロビジョニングに対応できる状態にしてください。次に、環境および保護要件に基づいて、オプションのタスクを完了してください。</block>
+  <block id="64d1ecdf3bedbe05adfb8f78686b4db7" category="paragraph">お使いの環境が、サポートされているデプロイメントに対応できる状態であることを確認してください。vSphere、ONTAP、および ESXi ホストのバージョンが ONTAP tools のバージョンと互換性があることを確認してください。十分な CPU、メモリ、およびディスク容量を確保してください。セキュリティルールによっては、ファイアウォールやその他のセキュリティツールを設定して、ネットワーク トラフィックを許可する必要がある場合があります。</block>
+  <block id="276faf3e6e29fa7b1570b8f766258180" category="paragraph">NFS および VMFS データストアの基本サービスを確立するために ONTAP tools アプライアンスを導入します。</block>
+  <block id="55747971e728b60a8cf7102d4827be24" category="paragraph">最初に、ONTAP tools for VMware vSphere を小規模なシングルノード構成としてデプロイします。構成を拡張して vVols データストアと高可用性（HA）を使用する予定がある場合は、このワークフローを完了した後に行います。HA 構成に拡張するには、CPU ホットアドとメモリのホットプラグが有効になっていることを確認してください。</block>
+  <block id="8a6f9e4a5fb59bbab0bc76b71989a8f2" category="paragraph">デプロイ中は、*カスタマイズ テンプレート* フィールド、特にホスト名、ONTAP tools の IP アドレスの使用状況、および DNS 要件を注意深く確認してください。</block>
+  <block id="b03edebb993cb976361dcfc8a538c1f7" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> vCenter クライアント プラグイン の登録とインストール</block>
+  <block id="5bc0d5ae0656002c035d2539cfea51ba" category="paragraph">vCenter クライアント プラグインを登録し、必要な権限とロールを適用するには、vCenter Server インスタンスを追加します。vCenter Server インスタンスを追加すると、ONTAP tools はリモート プラグインを登録し、カスタム プラグインおよび API 権限を適用し、カスタムロールを作成して、vSphere ユーザーインターフェイスにプラグインのショートカットを追加します。</block>
+  <block id="24e6d4440f24355aaa1e4165cfb6a5cc" category="list-text"><block ref="24e6d4440f24355aaa1e4165cfb6a5cc" category="inline-link-macro-rx"></block></block>
+  <block id="b52069e3641f2eb2864cffb4c8c7c4fa" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>ストレージバックエンドを設定する</block>
+  <block id="2a26c8ff6aa8490afbb0fa106898391c" category="paragraph">ONTAP ストレージリソースを接続して、ONTAP tools がデータストアをプロビジョニングおよび管理できるようにします。ストレージバックエンドを ONTAP クラスタに追加します。マルチテナント環境で vCenter Server がテナント SVM に関連付けられている場合は、ONTAP tools Manager を使用してクラスタを追加します。次に、ストレージバックエンドを vCenter Server に関連付けて、その vCenter インスタンスのグローバルマッピングを作成します。</block>
+  <block id="ea535b00ee3474d0227260e20f46a815" category="floating-title">オプションの次のタスク</block>
+  <block id="21a0a2e2c5f22a528df4f552d86138b3" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> ONTAP ユーザーロールと権限の設定</block>
+  <block id="76d2aa0929f56a4db2a8e5000cf7fb83" category="paragraph">デフォルトの管理者アカウントではなく、最小権限アクセスのためのカスタム ONTAP ロールを設定します。</block>
+  <block id="a280d081e593760440ed6669695cab4c" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>複数の vCenter Server インスタンスの証明書をアップグレードする</block>
+  <block id="c561f6968a3856f0e862792702438ef2" category="paragraph">複数の vCenter Server インスタンス間で信頼できる証明書ベースの通信を使用するために証明書をアップグレードします。</block>
+  <block id="12df35656e0e2d52e94d1b7dfa72dec6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>SRA保護の設定</block>
+  <block id="362b420dc64efd583c01df906961512c" category="paragraph">SRA機能を有効にして、NFSおよびVMFSデータストアのディザスタリカバリ保護を設定します。</block>
+  <block id="f62b5a465756ead58c7977a24742bf1e" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> SnapMirror アクティブ同期保護を有効にする</block>
+  <block id="5c6a636fcbf98404a3efd92d16afa6ff" category="paragraph">VMFSデータストアを保護するために、SnapMirror active syncを使用してホスト クラスター保護をセットアップします。ONTAPシステムで、必要なクラスターとSVMをピアリングし、ONTAP tools for VMware vSphereでホスト クラスター保護を構成します。このオプションはVMFSデータストアにのみ適用されます。</block>
+  <block id="a3aabff6b45a63c93a791fd68b5023c2" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> ONTAP tools の導入環境のバックアップとリカバリを設定する</block>
+  <block id="09aa3c7b466d868e6fc06622035e28ff" category="paragraph">バックアップとリカバリを設定して ONTAP tools の構成を保護し、障害発生時に迅速に復旧できるようにします。</block>
+  <block id="528b6cb0de0d2a7a4138b5cc5f0e7bd2" category="list-text">「アップグレード」オプションを選択するには、*6* を入力してください。</block>
 </blocks>

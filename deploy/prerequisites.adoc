@@ -17,6 +17,7 @@ ONTAP tools for VMware vSphere は、VMware vCenter Server Virtual Appliance（v
 
 
 
+[[system-requirements]]
 == システム要件
 
 * *ノードあたりのインストールパッケージのスペース要件*
@@ -47,6 +48,7 @@ NOTE: バックアップを有効にすると、VMが導入されているデー
 
 
 
+[[minimum-storage-and-application-requirements]]
 == ストレージとアプリケーションの最小要件
 
 |===
@@ -82,6 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[port-requirements]]
 == ポートの要件
 
 以下の表は、 NetAppが使用するネットワーク ポートとその用途の概要を示しています。ポートには 3 つの種類があります。
@@ -158,6 +161,7 @@ NOTE: HA 展開の場合、すべてのノード間で UDP ポート 8472 が開
 ====
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
 == ONTAP tools for VMware vSphere を vVols データストアに導入する際の構成上の制限
 
 次の表は、VMware vSphere用のONTAP toolsを構成するためのガイドとして使用できます。
@@ -187,6 +191,7 @@ NOTE: 表内のホスト数は、接続されているすべてのvCentersの合
 
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
 == VMFS および NFS データストア用の ONTAP tools for VMware vSphere を導入するための構成制限
 
 このセクションに記載されている構成制限は、NetAppによって検証およびサポートされています。実際の制限は、環境やワークロードによって異なる場合があります。これらの制限を超えると、パフォーマンスやサポート性に影響が出る可能性があるため、推奨されません。表を確認する際は、以下の点にご留意ください：
@@ -218,6 +223,7 @@ NOTE: 表内のホスト数は、接続されているすべてのvCentersの合
 |===
 
 
+[[ontap-tools-for-vmware-vsphere-storage-replication-adapter-sra]]
 == ONTAP Tools for VMware vSphere - Storage Replication Adapter（SRA）
 
 次の表に、ONTAP tools for VMware vSphereを使用したVMware Live Site Recoveryインスタンスごとにサポートされる数を示します。

@@ -67,7 +67,7 @@ ONTAP tools for VMware vSphereから 10.5 にアップグレードできます�
 . vCenter Serverで、ONTAP toolsへのコンソールを開きます。
 . maintenance ユーザとしてログインします。
 . *2* と入力して *システム構成* メニューを選択します。
-. *7* と入力して *アップグレード* オプションを選択します。
+. 「アップグレード」オプションを選択するには、*6* を入力してください。
 . プロンプトが表示されたら、vCenter のクレデンシャルを入力します。これは、ONTAP tools がホストされている vCenter インスタンスです。
 +
 2つのvCenter Server構成でONTAP toolsを使用している場合（アプライアンスが1つのvCenterインスタンスでホストされ、別のインスタンスを管理する場合）、ONTAP toolsをホストしているvCenterインスタンスに制限付きロールを割り当てることができます。OVFテンプレートのデプロイに必要な権限のみを持つ専用のvCenterユーザーとロールを作成できます。詳細については、link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]に記載されているロールを参照してください。

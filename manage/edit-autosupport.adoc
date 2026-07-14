@@ -15,6 +15,7 @@ ONTAP tools for VMware vSphereを初めて構成する場合、 AutoSupport は�
 
 
 
+[[disable-autosupport]]
 == AutoSupportを無効にする
 
 AutoSupportを無効にすると、プロアクティブなサポートと監視は受けられなくなります。
@@ -31,6 +32,7 @@ NOTE: 問題の検出と解決を迅速化するために、 AutoSupportを有�
 
 
 
+[[update-autosupport-proxy-url]]
 == AutoSupportプロキシURLの更新
 
 AutoSupport機能がデータをプロキシ サーバー経由でルーティングし、安全に転送できるように、 AutoSupportプロキシ URL を更新します。

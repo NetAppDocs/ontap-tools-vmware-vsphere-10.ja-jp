@@ -24,6 +24,7 @@ NOTE: ホスト クラスターの保護を作成、編集、または削除し�
 
 
 
+[[monitor-host-cluster-protection]]
 == ホストクラスタ保護の監視
 
 保護された各ホスト クラスタの保護ステータス、 SnapMirror関係、データストア、およびSnapMirrorステータスを監視します。
@@ -39,6 +40,7 @@ NOTE: ホスト クラスターの保護を作成、編集、または削除し�
 
 
 
+[[add-new-datastores-or-hosts]]
 == 新しいデータストアまたはホストの追加
 
 vCenter ユーザー インターフェイスを使用して、保護されたクラスターにホストを追加するか、データストアを作成します。
@@ -69,6 +71,7 @@ ONTAPツールは vCenter タスクを作成し、*最近のタスク* パネル
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == 新しいSnapMirror関係を追加する
 
 .手順
@@ -91,6 +94,7 @@ ONTAPツールは vCenter タスクを作成し、*最近のタスク* パネル
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == 既存のSnapMirror関係を削除する
 
 SnapMirror非同期関係を削除するには、セカンダリ サイトの SVM またはクラスタがONTAP tools for VMware vSphereでストレージ バックエンドとして追加されていることを確認します。すべてのSnapMirror関係を一度に削除することはできません。関係を削除すると、対応する関係もONTAPクラスタから削除されます。自動フェイルオーバー デュプレックスSnapMirror関係を削除すると、システムは宛先データストアをマップ解除し、宛先ONTAPクラスタからコンシステンシ グループ、LUN、ボリューム、および igroup を削除します。
@@ -118,6 +122,7 @@ ONTAPツールは vCenter タスクを作成し、*最近のタスク* パネル
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == 既存のSnapMirror関係を変更する
 
 SnapMirror の非同期関係を変更するには、セカンダリ サイトの SVM またはクラスタがONTAP tools for VMware vSphereでストレージ バックエンドとして追加されていることを確認します。自動フェイルオーバー デュプレックスSnapMirror関係では、均一構成のホスト近接性または非均一構成のホスト アクセスを更新できます。非同期と自動フェールオーバーのデュプレックス ポリシー タイプ間の変更はサポートされていません。クラスター内で新しく検出されたホストの近接性またはアクセス設定を構成できます。

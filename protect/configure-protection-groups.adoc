@@ -17,6 +17,7 @@ summary: 保護対象サイトで仮想マシンのグループを保護する�
 
 
 
+[[pair-protected-and-recovery-sites]]
 == 保護対象サイトとリカバリサイトをペアリング
 
 Storage Replication Adapter（SRA）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトをvSphere Clientを使用してペアリングする必要があります。
@@ -47,6 +48,7 @@ NOTE: Storage Replication Adapter（SRA）は、1つの同期関係（Automated 
 
 
 
+[[configure-protection-groups]]
 == 保護グループを設定します
 
 .作業を開始する前に

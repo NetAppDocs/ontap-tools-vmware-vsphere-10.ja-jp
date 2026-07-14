@@ -15,6 +15,7 @@ vCenter Serverインスタンスは、ホスト、仮想マシン、ストレー
 
 
 
+[[dissociate-storage-backends-with-the-vcenter-server-instance]]
 == ストレージバックエンドとvCenter Serverインスタンスの関連付けを解除する
 
 vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドとの関連付けまたは関連付け解除を行うオプションがあります。
@@ -29,6 +30,7 @@ vCenter Serverのリストページには、関連するストレージバック
 
 
 
+[[modify-a-vcenter-server-instance]]
 == vCenter Serverインスタンスを変更する
 
 vCenter Serverインスタンスを変更するには、次の手順を実行します。
@@ -43,6 +45,7 @@ vCenter Serverインスタンスを変更するには、次の手順を実行し
 
 
 
+[[remove-a-vcenter-server-instance]]
 == vCenter Serverインスタンスを削除する
 
 vCenter Server を削除する前に、vCenter Server からすべてのストレージ バックエンドを削除します。
@@ -65,6 +68,7 @@ ONTAP toolsでvCenter Serverインスタンスを削除すると、次の処理�
 
 
 
+[[renew-vcenter-server-certificate]]
 == vCenter Server 証明書を更新する
 
 ONTAPツールは、vCenter 証明書の有効期限が近づいている場合、または有効期限が切れている場合に通知します。vCenter 証明書を更新した後、次の手順に従って新しい証明書をONTAPツールにアップロードします。

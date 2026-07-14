@@ -49,6 +49,7 @@ ONTAPツールは新しいロールとユーザーを追加します。設定し
 
 
 
+[[svm-aggregate-mapping-requirements]]
 == SVMアグリゲートのマッピングの要件
 
 SVM ユーザー認証情報を使用してデータストアをプロビジョニングする場合、 ONTAP tools for VMware vSphereは、データストア POST API で指定されたアグリゲート上にボリュームを作成します。 ONTAP、SVM ユーザーが SVM にマップされていないアグリゲート上にボリュームを作成できないようにします。ボリュームを作成する前に、 ONTAP REST API または CLI を使用して SVM を必要なアグリゲートにマッピングします。
@@ -67,6 +68,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 ----
 
 
+[[create-ontap-user-and-role-manually]]
 == ONTAPのユーザとロールを手動で作成する
 
 JSON ファイルを使用せずにユーザーとロールを手動で作成します。
@@ -102,6 +104,7 @@ JSON ファイルを使用せずにユーザーとロールを手動で作成し
 
 
 
+[[list-of-minimum-privileges-required-for-non-admin-global-scoped-cluster-user]]
 === 管理者以外のグローバルを対象としたクラスタユーザに必要な最小権限のリスト
 
 このページでは、JSON ファイルのない管理者以外のグローバル スコープのクラスター ユーザーに必要な最小限の権限を示します。クラスタがローカル スコープ内にある場合、 ONTAP tools for VMware vSphereではONTAPでのプロビジョニングに読み取り権限以上の権限が必要なため、JSON ファイルを使用してユーザを作成します。
@@ -154,6 +157,7 @@ API を使用して機能にアクセスできます。
 |===
 
 
+[[create-ontap-tools-for-vmware-vsphere-ontap-api-based-cluster-scoped-user]]
 === クラスタを対象としたONTAP Tools for VMware vSphere ONTAP APIベースのユーザを作成する
 
 
@@ -273,6 +277,7 @@ security login rest-role create -role <role-name> -api /api/storage/availability
 ----
 
 
+[[create-ontap-tools-for-vmware-vsphere-ontap-api-based-svm-scoped-user]]
 === ONTAP tools for VMware vSphere ONTAP APIベースのSVMを対象としたユーザを作成する
 
 すべての権限を持つ SVM スコープ ユーザーを作成するには、次のコマンドを実行します。
@@ -387,6 +392,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 ----
 
 
+[[upgrade-ontap-tools-for-vmware-vsphere-10-1-user-to-10-3-user]]
 == ONTAP tools for VMware vSphere 10.1ユーザから10.3ユーザへのアップグレード
 
 JSONファイルを使用して作成されたクラスタを対象としたユーザのONTAP tools for VMware vSphere 10.1ユーザの場合は、次のONTAP CLIコマンドをユーザadmin Privilegesで使用して10.3リリースにアップグレードします。
@@ -464,6 +470,7 @@ vserver nvme subsystem modify
 ----
 
 
+[[upgrade-ontap-tools-for-vmware-vsphere-10-3-user-to-10-4-user]]
 == ONTAP tools for VMware vSphere 10.3ユーザから10.4ユーザへのアップグレード
 
 ONTAP 9.16.1 以降では、 ONTAP tools for VMware vSphereを10.4 ユーザーにアップグレードします。

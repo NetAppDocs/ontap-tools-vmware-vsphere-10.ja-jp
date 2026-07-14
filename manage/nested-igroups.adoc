@@ -17,6 +17,7 @@ ONTAP tools for VMware vSphere 10.4以降、ONTAP toolsはONTAPおよびvCenter�
 
 
 
+[[quick-behavior-summary]]
 == 簡単な動作概要
 
 * ONTAP tools で管理される VMFS データストアは、ネストされた igroup を使用します（データストアコンテキストごとに 1 つの親 igroup 、ホストごとに子 igroup ）。
@@ -27,6 +28,7 @@ ONTAP tools for VMware vSphere 10.4以降、ONTAP toolsはONTAPおよびvCenter�
 
 
 
+[[igroup-contexts]]
 == igroupコンテキスト
 
 ONTAP tools for VMware vSphereは、igroupを2つのコンテキストで処理します。
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["ONTAPツールは、再利用された子 igrou
 
 
 
+[[naming-behavior]]
 == 命名の動作
 
 データストアを作成し、igroupフィールドを空白のままにすると、ONTAP toolsは、デフォルトでネストされたigroup構造を作成します。
@@ -59,6 +62,7 @@ ONTAP システムインターフェースでは、*親イニシエータグル�
 
 
 
+[[behavior-by-scenario]]
 == シナリオ別の動作
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ ONTAP システムインターフェースでは、*親イニシエータグル�
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == カスタムigroupの再利用とAPIの動作
 
 ONTAP tools のユーザーインターフェイスでは、データストアを作成する際に、ドロップダウンリストから既存のカスタム親igroupを再利用できます。
@@ -90,6 +95,7 @@ NOTE: 再利用できるのはカスタムigroupのみです。ONTAP tools 9.x�
 
 
 
+[[native-to-managed-conversion-view]]
 == ネイティブからマネージドへの変換ビュー
 
 ONTAP システムおよびVMware環境でigroupとデータストアを直接作成する場合、ONTAP tools は初期状態ではこれらのオブジェクトを管理しません。これにより、フラットなigroup構造になります。
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphereは、ONTAPシステムで作成されたigroupの
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == 検出されたネイティブigroupの再利用
 
 ONTAP tools が検出されたネイティブ igroup を管理すると、その igroup はデータストア作成用のカスタムイニシエータグループ名のドロップダウンリストで使用できるようになります。

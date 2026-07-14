@@ -45,6 +45,7 @@ ONTAP tools for VMware vSphereは、現在の VMware 相互運用性認定標準
 
 
 
+[[supported-ontap-platforms-and-vcenter-server-versions]]
 == サポートされているONTAPプラットフォームと vCenter Server バージョン
 
 ONTAP tools for VMware vSphere 10.5 P1は、SRAおよびSnapMirror active syncコンポーネントのvCenter高可用性（HA）構成をサポートします。この構成ではvVolsはサポートされていません。HAフェイルオーバー中、vCenterが数分間利用できない場合があります。大規模な環境やエラーが発生した場合、フェイルオーバー時間が15分を超えることがあります。

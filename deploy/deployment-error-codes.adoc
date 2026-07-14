@@ -15,6 +15,7 @@ summary: このページでは、ONTAP tools for VMware vSphereシステムの�
 
 
 
+[[collect-the-log-files]]
 == ログファイルを収集します
 
 ONTAP tools for VMware vSphere のログファイルは、ONTAP tools Manager ユーザーインターフェイスで使用可能なオプションから収集できます。テクニカルサポート担当者から、問題解決のためにログファイルの収集を依頼される場合があります。
@@ -49,6 +50,7 @@ NOTE: 生成されたログバンドルは、過去3日間または72時間以�
 
 
 
+[[deployment-error-codes]]
 == 導入エラーコード
 
 ONTAP tools for VMware vSphereの導入、リブート、およびリカバリの処理中にエラーコードが発生することがあります。

@@ -234,6 +234,7 @@ https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["igroupにつ
 
 
 
+[[export-policies]]
 == 輸出政策
 
 エクスポート ポリシーは、ONTAP tools for VMware vSphereで NFS データストアのアクセスとクライアント権限を制御します。エクスポート ポリシーはONTAPシステムで作成および管理され、NFS データストアで使用してアクセス制御を実施できます。各エクスポート ポリシーは、アクセスが許可されるクライアント (IP アドレスまたはサブネット) と付与される権限 (読み取り専用または読み取り/書き込み) を指定するルールで構成されます。

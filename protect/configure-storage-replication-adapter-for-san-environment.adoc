@@ -15,6 +15,7 @@ VMware Live Site Recovery用Storage Replication Adapter（SRA）を実行する�
 
 
 
+[[configure-sra-for-san-environments]]
 == SAN環境用のSRAの設定
 
 
@@ -48,6 +49,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
 
 
 
+[[configure-sra-for-nas-environments]]
 == NAS環境向けのSRAの設定
 
 
