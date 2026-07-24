@@ -1,8 +1,8 @@
 ---
 permalink: upgrade/upgrade-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: このページでは、ONTAP tools for VMware vSphereシステムのアップグレード処理のエラーコードについて説明します。 
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs 
+summary: ONTAP tools のアップグレードエラーコードを使用して、失敗したワークフローを特定し、VMware vSphere のアップグレードの問題をトラブルシューティングします。 
 ---
 = ONTAP toolsのアップグレードエラーコード
 :allow-uri-read: 
@@ -65,7 +65,7 @@ NOTE: このページに記載されているエラーコードは参考情報�
 | 052 | ISO は現在のバージョンと同じか、または現在のバージョンより 2 つ上のリリースである可能性があります。 | 現在のバージョンからアップグレードするには、互換性のあるISOバージョンを使用してください。 
 
 
-| 068 | Debianパッケージのロールバックに失敗しました | RPOゼロまたはSnapshotベースのリカバリを使用して、アップグレードを再試行してください。 
+| 068 | Debian OSパッケージのロールバックに失敗しました | RPOゼロまたはSnapshotベースのリカバリを使用して、アップグレードを再試行してください。 
 
 
 | 069 | フアイルノリストアニシツハイ | RPOゼロまたはSnapshotベースのリカバリを使用して、アップグレードを再試行してください。 
@@ -77,7 +77,7 @@ NOTE: このページに記載されているエラーコードは参考情報�
 | 071 | Kubernetesクラスタが健全な状態でない | - 
 
 
-| 074 | ISOのマウントに失敗しました | /var/log/ upgrade-run.logを確認して、アップグレードを再試行してください。 
+| 074 | ISOのマウントに失敗しました | /var/log/otvng/upgrade-run.log を確認し、アップグレードを再試行してください。 
 
 
 | 075 | アップグレードの事前確認に失敗しました | アップグレードを再試行します。 
@@ -107,10 +107,10 @@ NOTE: このページに記載されているエラーコードは参考情報�
 | 083 | バックアップの削除に失敗しました | RPOゼロまたはSnapshotベースのリカバリを使用して、アップグレードを再試行してください。 
 
 
-| 084 | JobManagerを本番環境に戻すことができませんでした | アップグレードを復旧／完了するには、以下の手順を実行してください。1.診断シェルを有効にする 2.次のコマンドを実行します：_sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3./var/log/post-deploy-upgrade.log のログを確認してください。 
+| 084 | JobManagerを本番環境に戻すことができませんでした | アップグレードを復旧／完了するには、以下の手順を実行してください。1.診断シェルを有効にします。2.次のコマンドを実行します：_sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3./var/log/otvng/post-deploy-upgrade.log でログを確認してください。 
 
 
-| 087 | アップグレード後の手順に失敗しました。 | アップグレードをリカバリまたは完了するには、次の手順を実行します。1.診断シェル2を有効にします。run_sudo perl /home/maint/scripts/post-deploy-upgrade.pl -- postupgrade_command 3./var/log/ post-deploy-upgrade.logにあるログを確認します。 
+| 087 | アップグレード後の手順に失敗しました。 | アップグレードを復旧／完了するには、以下の手順を実行してください。1.診断シェルを有効にします。2._sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ コマンドを実行します。3./var/log/otvng/post-deploy-upgrade.log のログを確認してください。 
 
 
 | 088 | journaldのログローテーションの設定に失敗しました | VMがホストされているホストと互換性のあるVMのネットワーク設定を確認してください。VMを別のホストに移行して再起動してみてください。 
@@ -128,10 +128,13 @@ NOTE: このページに記載されているエラーコードは参考情報�
 | 097 | アップグレードのためのサービスのアンインストールに失敗しました | RPOゼロまたはSnapshotベースのリカバリを使用してから、アップグレードを再試行してください。 
 
 
-| 098 | NTV-systemからDynamic Storage Provisionerネームスペースへのdockercredシークレットのコピーに失敗しました | アップグレードログを確認してからアップグレードを再試行してください。 
+| 098 | ntv-systemからrook-cephネームスペースへのdockercredシークレットのコピーに失敗しました | アップグレードログを確認してからアップグレードを再試行してください。 
 
 
 | 099 | 新しいHDDの追加を検証できませんでした | HA構成の場合はすべてのノードに新しいHDDを追加し、HA構成でない場合は1つのノードに新しいHDDを追加します。 
+
+
+| 108 | スクリプトのシードに失敗しました | - 
 
 
 | 109 | 永続ボリュームデータのバックアップに失敗しました | アップグレードログを確認してからアップグレードを再試行してください。 
@@ -161,7 +164,7 @@ NOTE: このページに記載されているエラーコードは参考情報�
 | 056 | 移行バックアップの削除に失敗しました | NA 
 
 
-| 090 | ストレージバックエンドとvCenterの証明書検証に失敗しました | アップグレード ログと /var/log/cert_validation_error.log のログ ファイルを確認し、アップグレードを再試行してください。 
+| 090 | ストレージバックエンドとvCenterの証明書検証に失敗しました | アップグレードログと /var/log/otvng/cert_validation_error.log にあるログファイルを確認し、アップグレードを再試行してください。 
 
 
 | 114 | MongoDBコレクションの内部証明書更新が失敗しました  a| 
@@ -216,7 +219,7 @@ sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
 +
 [listing]
 ----
-tail -f /var/log/post-deploy-upgrade.log
+tail -f /var/log/otvng/post-deploy-upgrade.log
 ----
 +
 成功メッセージを探してください： `Completed post 10.5 upgrade steps.`

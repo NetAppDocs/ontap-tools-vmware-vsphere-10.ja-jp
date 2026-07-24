@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-ontap-environment.html 
 sidebar: sidebar 
-keywords: ontap rbac, ontap rbac environment 
-summary: ONTAPは、堅牢で拡張可能なRBAC環境を提供します。RBAC機能を使用すると、REST APIおよびCLIで公開されるストレージおよびシステム処理へのアクセスを制御できます。ONTAP Tools for VMware vSphere 10環境で使用する前に、環境を理解しておくと役立ちます。 
+keywords: ONTAP RBAC, storage access control, REST API security, ONTAP user roles 
+summary: ONTAP RBAC 環境と、REST API および CLI を通じてストレージおよびシステム操作へのアクセスを制御する方法を確認します。 
 ---
 = ONTAP RBAC が ONTAP tools と連携する仕組み
 :hardbreaks:

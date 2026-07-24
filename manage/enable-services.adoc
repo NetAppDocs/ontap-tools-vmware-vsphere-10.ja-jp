@@ -1,8 +1,8 @@
 ---
 permalink: manage/enable-services.html 
 sidebar: sidebar 
-keywords:  
-summary: ONTAP tools Managerを使用して、VASA Provider、vVols構成のインポート、ディザスタリカバリ（SRA）などのオプションサービスを有効にすることができます。 
+keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration 
+summary: VASA Provider、vVols 構成のインポート、およびディザスタリカバリ（SRA）を含む、オプションの ONTAP tools サービスを有効にします。 
 ---
 = ONTAP toolsサービスを有効にする
 :allow-uri-read: 
@@ -11,21 +11,25 @@ summary: ONTAP tools Managerを使用して、VASA Provider、vVols構成のイ�
 
 
 [role="lead"]
-ONTAP tools Managerを使用して管理者パスワードを変更し、ONTAP tools Managerを使用してVASA Provider、vVol構成のインポート、ディザスタリカバリ（SRA）などのサービスを有効にすることができます。
+ONTAP tools Manager を使用して、VASA Provider、vVols 構成のインポート、ディザスタリカバリ（SRA）などのオプションサービスを有効にします。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
-. 概要セクションの*アプライアンス設定の編集*を選択します。
-. *サービス* セクションでは、必要に応じて、VASA プロバイダー、 vVols構成のインポート、災害復旧 (SRA) などのオプション サービスを有効にできます。
+. 「概要」セクションで、「アプライアンス設定の編集」を選択します。
+. 「サービス」セクションで、VASA プロバイダー、vVols 構成のインポート、および災害復旧（SRA）など、必要なオプションサービスを有効にします。
 +
-サービスを初めて有効にするときは、VASA ProviderとSRAのクレデンシャルを作成する必要があります。これらは、vCenter ServerでVASA ProviderサービスとSRAサービスを登録または有効にするために使用します。ユーザ名に使用できる文字は、アルファベット、数字、アンダースコアだけです。パスワードは8~256文字にする必要があります。
-
-+
-
-NOTE: オプションのサービスを無効にする前に、 ONTAPツールによって管理される vCenter Server がそれらのサービスを使用していないことを確認してください。
+これらのサービスを初めて有効にする際は、VASA ProviderとSRAの認証情報を作成してください。
 
 +
-* vVols構成のインポートを許可する* オプションは、VASA プロバイダー サービスが有効になっている場合にのみ表示されます。このオプションにより、 ONTAPツール 9.xx からONTAPツール 10.5 へのvVolsデータの移行が可能になります。
+** これらの認証情報を使用して、vCenter Server で VASA Provider および SRA サービスを登録して有効化します。
+** ユーザー名には、英字、数字、アンダースコアのみを使用できます。
+** パスワードの長さは8文字以上256文字以下である必要があります。
 
 
+
+
+
+NOTE: オプションのサービスを無効にする前に、ONTAP tools で管理されている vCenter Server インスタンスがそのサービスを使用していないことを確認してください。
+
++ 「vVols構成のインポートを許可」オプションは、VASA Providerサービスが有効な場合にのみ表示されます。このオプションを使用すると、ONTAP tools 9.xからONTAP tools 10.6へのvVolsデータの移行が可能になります。

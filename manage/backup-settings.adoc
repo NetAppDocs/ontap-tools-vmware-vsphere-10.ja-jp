@@ -1,8 +1,8 @@
 ---
 permalink: manage/backup-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: NTPサーバの詳細を入力して、ONTAP toolsアプライアンスのタイムクロックを同期します。 
+keywords: ONTAP tools backup settings, configure backup schedule, appliance backup configuration, ONTAP tools data protection 
+summary: ONTAP tools のバックアップを有効または無効にし、バックアップ頻度を 10 分から 60 分の間で設定します。 
 ---
 = ONTAPツールのバックアップ設定を編集する
 :allow-uri-read: 

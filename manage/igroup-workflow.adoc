@@ -1,8 +1,8 @@
 ---
 permalink: manage/igroup-workflow.html 
 sidebar: sidebar 
-keywords:  
-summary:  
+keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
+summary: ONTAP tools がデータストアへのアクセスのために igroup とエクスポートポリシーを作成および管理する方法について説明します。 
 ---
 = ONTAP toolsがigroupとエクスポートポリシーを管理する方法
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 イニシエータグループ（igroup）は、FCプロトコルホストのワールドワイドポート名（WWPN）またはiSCSIホストの修飾ノード名（Qualified Node Name）のテーブルです。igroupを定義してLUNにマッピングすることで、どのイニシエータがLUNにアクセスできるかを制御できます。
 
-ONTAP tools for VMware vSphereでは、igroup はフラットな構造で作成および管理され、vCenter 内の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストアにわたる igroup の柔軟性と再利用が制限されていました。ONTAP tools for VMware vSphereでは、ネストされた igroup が導入されています。ネストされた igroup では、vCenter 内の各データストアが親 igroup に関連付けられ、各ホストはその親の下の子 igroup にリンクされます。ユーザー定義の名前を持つカスタム親 igroup を定義して、データストア間で再利用することで、igroup の管理を容易にすることができます。 ONTAP tools for VMware vSphereで LUN とデータストアを管理するための igroup ワークフローを理解します。次の例に示すように、ワークフローによって異なる igroup 構成が生成されます。
+ONTAP tools for VMware vSphere 9.x では、igroup はフラットな構造で作成および管理され、vCenter の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストア間での igroup の柔軟性と再利用性が制限されていました。ONTAP tools for VMware vSphere 10.4 では、ネストされた igroup が導入され、vCenter の各データストアは親 igroup に関連付けられており、各ホストはその親の下にある子 igroup にリンクされています。igroup の管理を容易にするために、ユーザー定義の名前を持つカスタム親 igroup を定義して、データストア間で再利用することができます。ONTAP tools for VMware vSphere で LUN とデータストアを管理するための igroup ワークフローを理解してください。ワークフローが異なると、生成される igroup 構成も異なります。以下の例をご覧ください。
 
 
 NOTE: 記載されている名前は説明のみを目的としており、実際の igroup 名を指すものではありません。 ONTAPツールで管理される igroup は、プレフィックス「otv_」を使用します。カスタム igroup には任意の名前を付けることができます。

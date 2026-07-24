@@ -1,8 +1,8 @@
 ---
 permalink: manage/change-valid-flag.html 
 sidebar: sidebar 
-keywords:  
-summary: メンテナンス コンソールを使用して証明書検証フラグを変更できます。 
+keywords: certificate validation flag, ONTAP tools certificate check, maintenance console certificate settings, TLS validation toggle 
+summary: メンテナンスコンソールを使用して、証明書の検証フラグを変更します。 
 ---
 = ONTAP toolsで証明書検証フラグを変更する
 :allow-uri-read: 
@@ -17,8 +17,9 @@ summary: メンテナンス コンソールを使用して証明書検証フラ�
 メンテナンスユーザのログインクレデンシャルが必要です。
 
 .手順
-. vCenter Serverで、ONTAP toolsへのコンソールを開きます。
-. maintenance ユーザとしてログインします。
+. vCenter Serverにログインします。
+. ONTAP tools の VM を見つけて、Web コンソールを起動します。
+.  `maint`の資格情報を使用してログインします。
 . 入力 `1`*アプリケーション構成*メニューを選択します。
 . 入力 `3`証明書検証フラグを変更します。
 +

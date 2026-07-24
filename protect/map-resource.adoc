@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-resource.html 
 sidebar: sidebar 
-keywords:  
-summary: 仮想マシンがどちらか一方のホストグループにフェイルオーバーするように構成されるように、保護対象サイトとリカバリサイトのリソースをマッピングする必要があります。 
+keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools 
+summary: フェイルオーバー時に仮想マシンを正しく配置するために、保護サイトと復旧サイト間でリソースプール、ホスト、またはクラスタをマッピングします。 
 ---
 = ONTAP toolsでリソースマッピングを設定する
 :allow-uri-read: 

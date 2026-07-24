@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-protection-groups.html 
 sidebar: sidebar 
-keywords:  
-summary: 保護対象サイトで仮想マシンのグループを保護するには、保護グループを作成する必要があります。 
+keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
+summary: 保護対象サイトの仮想マシン用に保護グループを作成し、保護対象ボリュームにデータストアを追加した後、ストレージ検出を更新します。 
 ---
 = ONTAP toolsで保護サイトとリカバリサイトを構成する
 :allow-uri-read: 
@@ -23,10 +23,10 @@ summary: 保護対象サイトで仮想マシンのグループを保護する�
 Storage Replication Adapter（SRA）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトをvSphere Clientを使用してペアリングする必要があります。
 
 
-NOTE: Storage Replication Adapter（SRA）は、1つの同期関係（Automated Failover Duplexタイプ）と非同期関係SnapMirrorを使用した整合性グループでのファンアウトをサポートします。ただし、整合性グループでの2つの非同期SnapMirror関係を使用したファンアウト、またはボリュームでのSnapMirror関係のファンアウトはサポートされていません。VaultタイプのSnapMirror関係は、これらのファンアウト制限の対象外です。SRAでの整合性グループのサポートは、UnifiedおよびASA r2ストレージシステムのSANプロトコル（iSCSIおよびファイバーチャネル）に限定されています。整合性グループはNFSではサポートされていません。NFSデータストアボリュームが整合性グループに配置されている場合、デバイス検出処理は失敗します。
+NOTE: Storage Replication Adapter（SRA）は、Automated Failover Duplexタイプの同期関係が1つと、整合性グループ上の非同期SnapMirror関係が1つのファンアウトをサポートします。ただし、整合性グループ上の2つの非同期SnapMirror関係によるファンアウト、またはボリューム上のSnapMirror関係によるファンアウトはサポートされていません。VaultタイプのSnapMirror関係は、これらのファンアウト制限の対象外です。SRAにおける整合性グループのサポートは、ONTAPストレージおよびASA r2ストレージシステム上のSANプロトコル（iSCSIおよびファイバーチャネル）に限定されています。NFSでは整合性グループはサポートされていません。NFSデータストアボリュームが整合性グループ下に配置されている場合、デバイス検出操作は失敗します。
 
 .作業を開始する前に
-* 保護対象サイトとリカバリサイトにVMware Live Site Recoveryがインストールされている必要があります。
+* 保護対象サイトと復旧対象サイトの両方に、VMware Live Site Recovery (VLSR) をインストールしておく必要があります。
 * 保護対象サイトとリカバリサイトにSRAをインストールしておく必要があります。
 
 
@@ -54,7 +54,7 @@ NOTE: Storage Replication Adapter（SRA）は、1つの同期関係（Automated 
 .作業を開始する前に
 ソースとターゲットの両方のサイトで以下を設定する必要があります。
 
-* 同じバージョンのVMware Live Site Recoveryがインストールされている
+* 同じバージョンのVLSRがインストールされている
 * 仮想マシン
 * 保護対象サイトとリカバリサイトのペアリング
 * ソースとデスティネーションのデータストアをそれぞれのサイトにマウントする必要があります

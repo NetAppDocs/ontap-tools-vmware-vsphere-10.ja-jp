@@ -1,8 +1,8 @@
 ---
 permalink: manage/uninstall-deployment.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: このセクションの手順に従って、ONTAP tools for VMware vSphere環境を正常に終了します。 
+keywords: uninstall ONTAP tools, remove ONTAP tools deployment, appliance decommission workflow, graceful deployment termination 
+summary: ONTAP tools for VMware vSphere のデプロイメントを正常に終了します。 
 ---
 = ONTAP toolsをアンインストールする
 :allow-uri-read: 
@@ -17,7 +17,7 @@ ONTAP tools for VMware vSphereをアンインストールすると、ツール�
 . ONTAP tools for VMware vSphereで管理されるデータストアから、すべての仮想マシンを削除または移動します。
 +
 ** 仮想マシンを削除するには、を参照してください。 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["VMおよびVMテンプレートの削除と再登録"]
-** 管理されていないデータストアに移動するには、 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/migrate-a-virtual-machine-with-storage-vmotion.html["Storage vMotion を使用して仮想マシンを移行する方法"]
+** それらを管理対象外のデータストアに移動するには、Storage vMotion を使用した仮想マシンの移行について https://techdocs.broadcom.com/["Broadcom技術ドキュメント"]を参照してください。
 
 
 . link:../manage/delete-ds.html["データストアの削除"]ONTAP Tools for VMware vSphereを使用して作成されます。

@@ -1,8 +1,8 @@
 ---
 permalink: manage/expand-storage-of-vvol-datastore.html 
 sidebar: sidebar 
-keywords: virtual volume datastores 
-summary: 'vCenterオブジェクトビューでデータストアオブジェクトを右クリックすると、[plug-in]セクションにONTAP tools for VMware vSphereでサポートされるアクションが表示されます。' 
+keywords: expand vVols datastore, increase vVol datastore capacity, ONTAP tools vVol storage expansion, VMware virtual volumes scaling 
+summary: ONTAP toolsのアクションを使用して、vCenterオブジェクトビューからvVolsデータストアストレージを拡張します。 
 ---
 = ONTAP tools で vVols データストアを拡張する
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html 
 sidebar: sidebar 
-keywords: release notes, feature, comparison 
-summary: ONTAP tools for VMware vSphere 9 とONTAP tools for VMware vSphere 10 の機能比較について学びます 
+keywords: ONTAP tools feature comparison, VMware vSphere, version upgrade, compatibility, NetApp tools 
+summary: ONTAP tools for VMware vSphere 9 と 10 の機能を比較して、ONTAP tools 10.2 以降に移行するかどうかを決定します。 
 ---
 = ONTAP tools for VMware vSphereの機能比較
 :allow-uri-read: 
@@ -11,26 +11,28 @@ summary: ONTAP tools for VMware vSphere 9 とONTAP tools for VMware vSphere 10 �
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 9 からONTAP tools for VMware vSphere 10.2 以降のバージョンへの移行が適切かどうかを確認します。
+ONTAP tools for VMware vSphere 9 から ONTAP tools for VMware vSphere 10.2 以降への移行が、お使いの環境に適した選択肢となる理由をご説明します。
 
 
 NOTE: 最新の互換性情報については、 https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]を参照してください。
+
+ONTAP tools 9.x の最新のサポート終了情報については、 https://mysupport.netapp.com/site/info/version-support["ソフトウェア バージョンのサポート"^]を参照してください。
 
 [cols="20%,25%,30%"]
 |===
 | 特徴 | ONTAPツール9.13 | ONTAPツール10.2以降 
 
 
-| 主な価値提案 | 強化されたセキュリティ、コンプライアンス、自動化機能により、Day 0 から Day 2 の運用を合理化および簡素化します。 | サポートが拡張され、VMFS の FC と VMFS 専用の NVMe-oF が含まれるようになりました。NetApp SnapMirrorの使いやすさ、vSphere メトロ ストレージ クラスタのシンプルなセットアップ、および 3 サイトの VMware Live Site Recovery のサポート 
+| 主な価値提案 | セキュリティ、コンプライアンス、自動化機能を強化し、Day 0からDay 2までの運用を合理化および簡素化します。ONTAP toolsアプライアンスごとにサポートされるvCenter Serverは1つのみです。 | VMFS向けにFCのサポートを拡張し、VMFSのみにNVMe-oFのサポートを追加しました。NetApp SnapMirrorの使いやすさ、vSphereメトロストレージクラスタの簡単なセットアップ、および3サイトのVMware Live Site Recoveryサポートにより、ONTAP toolsアプライアンスごとに複数のvCenter Serverインスタンスをサポートし、アプライアンスの数と全体的なリソース要件を削減します。 
 
 
-| ONTAPリリース認定 | ONTAP 9.9.1 からONTAP 9.16.1 | ONTAP tools 10.2の場合、ONTAP 9.12.1～9.15.1。ONTAP tools 10.3の場合、ONTAP 9.14.1、9.15.1、9.16.0、および9.16.1。ONTAP tools 10.4の場合、ONTAP 9.14.1、9.15.1、9.16.0、および9.16.1。ASA r2システムを使用する場合、ONTAP tools 10.4にはONTAP 9.16.1P3以降が必要です。ONTAP tools 10.5の場合、ONTAP 9.15.1、9.16.1、および9.17.0 
+| ONTAPリリース認定 | ONTAP 9.9.1 からONTAP 9.16.1 | ONTAP tools 10.2 の場合は ONTAP 9.12.1 ～ 9.15.1。ONTAP tools 10.3 の場合は ONTAP 9.14.1、9.15.1、9.16.0、および 9.16.1。ONTAP tools 10.4 の場合は ONTAP 9.14.1、9.15.1、9.16.0、および 9.16.1。ASA r2 システムを使用する場合、ONTAP tools 10.4 には ONTAP 9.16.1P3 以降が必要です。ONTAP tools 10.5 の場合は ONTAP 9.15.1、9.16.1、および 9.17.0。ONTAP tools 10.6 の場合は ONTAP 9.16.1、9.17.1、9.18.1、および 9.19.1、ならびに ASA r2 バージョン 9.16.1P3、9.17.1、9.18.1、および 9.19.1。 
 
 
-| VMware リリースのサポート | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 から VMware Live Site Recovery 9.0 | vSphere 7.x-8.x、 ONTAPツール 10.5 以降の vSphere 9.0、VMware Site Recovery Manager (SRM) 8.7 から VMware Live Site Recovery 9.0 *注:* ONTAPツール 10.x では、SRM は共有サイトをサポートし、拡張性の向上とパフォーマンスの向上を実現します。 
+| VMware リリースのサポート | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 から VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0（ONTAP tools 10.5以降）VMware Site Recovery Manager (SRM) 8.7からVMware Live Site Recovery 9.0、9.0.1、9.0.2、9.0.3、および9.0.4 
 
 
-| プロトコルのサポート | NFS および VMFS データストア: NFS (v3 および v4.1)、VMFS (iSCSI および FCP) | NFS および VMFS データストア: NFS (v3 および v4.1)、VMFS (iSCSI/FCP/NVMe-oF) 
+| プロトコルのサポート | NFS および VMFS データストア: NFS (v3 および v4.1)、VMFS (iSCSI および FCP) | NFSおよびVMFSデータストア：NFS（v3およびv4.1）、VMFS（iSCSI/FCP/NVMe-TCPおよびNVMe-FC） 
 
 
 | 拡張性 | ホストとVM: 300台のホスト、最大10,000台のVM データストア: 600台のNFS、最大50台のVMFS | ホストとVM: 600ホスト 
@@ -39,7 +41,7 @@ NOTE: 最新の互換性情報については、 https://mysupport.netapp.com/ma
 | 可観測性 | パフォーマンス、容量、ホストコンプライアンスダッシュボード 動的なVMとデータストアレポート | パフォーマンス、容量、ホストコンプライアンスダッシュボードの更新 動的VMおよびデータストアレポート 
 
 
-| データ保護 | VMFS および NFS の SRA レプリケーション。バックアップのための SCV 統合および相互運用性。 | SMAS と VMware Live Site Recovery を組み合わせた iSCSI VMFS および NFS v3 データストアの 3 サイト保護の SRA レプリケーション。VMFS を使用した FCP の SRA サポート。 
+| データ保護 | VMFS および NFS の SRA レプリケーション。バックアップのための SCV 統合および相互運用性。 | iSCSI VMFSおよびNFS v3データストア向けのSRAレプリケーション、SMASとVMware Live Site Recoveryを組み合わせた3サイト保護。VMFSを使用したFCPのSRAサポート。ONTAP tools 10.6からのきめ細かなデータストア保護と整合性グループ管理。*注：* ONTAP tools 10.xでは、SRMが共有サイトをサポートし、拡張性の向上とパフォーマンスの改善を実現しています。 
 
 
 | VASAプロバイダーのサポート | VASA 4.0 | VASA 3.0 

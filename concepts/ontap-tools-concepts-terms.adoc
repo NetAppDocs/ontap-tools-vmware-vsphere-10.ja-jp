@@ -1,8 +1,8 @@
 ---
 permalink: concepts/ontap-tools-concepts-terms.html 
 sidebar: sidebar 
-keywords:  
-summary: 次のセクションでは、このドキュメントで使用される主な概念と用語について説明します。 
+keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
+summary: ONTAP tools for VMware vSphere のドキュメントで使用される主要な概念と用語を確認します。 
 ---
 = ONTAP toolsの主要な概念と用語
 :allow-uri-read: 

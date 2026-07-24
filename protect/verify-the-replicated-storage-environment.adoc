@@ -2,7 +2,7 @@
 permalink: protect/verify-the-replicated-storage-environment.html 
 sidebar: sidebar 
 keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery 
-summary: Storage Replication Adapter（SRA\）を設定したら、保護対象サイトとリカバリサイトが正常にペアリングされていることを確認する必要があります。レプリケートされたストレージシステムは、保護対象サイトとリカバリサイトの両方から検出可能である必要があります。 
+summary: SRAの設定後、保護サイトとリカバリーサイトのペアリングを確認し、レプリケートされたストレージの検出が行われたことを確認します。 
 ---
 = ONTAP toolsで複製されたストレージシステムを検証する
 :allow-uri-read: 

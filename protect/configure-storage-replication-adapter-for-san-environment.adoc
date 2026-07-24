@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: VMware Live Site Recovery用のStorage Replication Adapter（SRA\）を実行する前に、ストレージシステムをセットアップする必要があります。 
+keywords: SRA SAN configuration, VMware Live Site Recovery, iSCSI and Fibre Channel, SnapMirror, ONTAP tools 
+summary: VMware Live Site RecoveryでSRAワークフローを実行する前に、SANおよびNASストレージシステムをセットアップしてください。 
 ---
 = SAN および NAS 環境向けの ONTAP tools で SRA を構成する
 :allow-uri-read: 
@@ -19,7 +19,7 @@ VMware Live Site Recovery用Storage Replication Adapter（SRA）を実行する�
 == SAN環境用のSRAの設定
 
 
-NOTE: SRAワークフローの整合性グループは、UnifiedとASA r2ストレージシステムの両方で、SANプロトコル（iSCSIとファイバーチャネル）でのみサポートされています。
+NOTE: SRAワークフローの整合性グループは、ONTAPストレージとASA r2ストレージシステムの両方で、SANプロトコル（iSCSIおよびファイバーチャネル）でのみサポートされています。
 
 .作業を開始する前に
 保護対象サイトとリカバリサイトには、次のプログラムがインストールされている必要があります。

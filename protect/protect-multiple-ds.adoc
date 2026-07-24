@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: ホストクラスタ内の複数の VMFS データストアを保護するには、データストアを保護グループにグループ化し、SnapMirror ポリシーを適用します。 
+---
+= ONTAP tools を使用してクラスター内のデータストアを保護する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストクラスタに複数のストレージ仮想マシン（SVM）のデータストアが含まれており、選択したデータストアを異なるポリシーで保護する必要がある場合は、きめ細かなデータストア保護を使用してください。
+
+.作業を開始する前に
+ホストクラスタ内のデータストアを保護する前に、以下の要件を満たしていることを確認してください。
+
+* これらのデータストアは、iSCSIまたはFCプロトコルを使用するVMFSデータストアです。
+* データストアが検出され、ONTAP tools で使用できるようになります。
+* ソースおよびターゲットのストレージVMは、SnapMirror関係用に設定されています。
+
+
+.手順
+. vSphere Clientにログインします。
+. ホストまたはホストクラスタを右クリックして、* NetApp ONTAP tools* > *データストアの保護*を選択します。
+. クラスター内の *Storage VM* を選択します。
++
+選択されたSVMのデータストアが表示されます。
+
+. 「データストアタイプ」フィールドには、保護でサポートされている唯一のデータストアタイプとして VMFS があらかじめ入力されており、無効になっています。
+. 資格基準に基づいて表示されるリストから、保護するデータストアを選択し、*Next*をクリックします。
+. 「保護設定」ウィンドウで、選択したデータストアを既存の保護グループで保護するか、新しい保護グループで保護するかを選択します。
+. 「新規作成」を選択した場合は、保護グループの名前を入力し、「関係の追加」を選択してください。
+. [ SnapMirror関係の追加]*ウィンドウで、*[ターゲットStorage VM]*と*[ポリシー]*タイプを選択します。
++
+ポリシータイプは非同期または AutomatedFailOverDuplex です。AutomatedFailOverDuplex は、iSCSI または FC プロトコルを使用する ONTAP 9.15.1 上にプロビジョニングされ、ホストクラスタにマウントされたデータストアでのみサポートされます。
+
++
+SnapMirror関係をAutomatedFailOverDuplexとして追加する場合は、ONTAP tools for VMware vSphereがデプロイされているのと同じvCenter Serverに、ターゲット ストレージをストレージ バックエンドとして追加します。
+
++
+AutomatedFailOverDuplexポリシータイプには、均一クラスタ構成と非均一クラスタ構成があります。均一クラスタ構成の場合、ホストのイニシエータグループ構成がターゲットサイトにレプリケートされます。詳細については、link:../concepts/ontap-tools-concepts-terms.html["主要な概念と用語"]を参照してください。
+
+. クラスター構成が均一でない場合は、クラスター内の各ホストに対してホストアクセス（送信元または宛先）を選択してください。ONTAP tools は、ターゲットストレージ上に、ホストがターゲットストレージオブジェクトにアクセスできるようにするための、対応するホストイニシエータグループ構成を作成します。
+. [ 保存（ Save ） ] を選択します。
+. 「概要」ウィンドウで設定を確認し、「保護」を選択します。
+. 利用可能なすべての保護グループの詳細を表示するには、*NetApp ONTAP tools* > *Protection* > *Protection groups* に移動します。
+
+
+.結果
+選択されたデータストアを使用して新しい保護グループが作成され、SnapMirror関係がその保護グループに追加されます。システムはジョブID詳細を含むvCenterタスクを作成し、最近のタスクパネルにその進捗状況を表示します。これは非同期タスクです。ユーザーインターフェースにはリクエストの送信状況のみが表示され、タスクの完了を待つことはありません。
+
+[NOTE]
+====
+ONTAP ストレージ （ONTAP 9） クラスターの場合、保護グループが非同期関係にある場合、最後以外のデータストアの保護解除はサポートされません。
+
+====
+.関連情報
+* link:../manage/protect-ds.html["VMFSデータストアを保護する"]
+* link:../manage/unprotect-ds.html["VMFSデータストアの保護を解除する"]
+

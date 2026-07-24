@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: vCenter クライアントのショートカット セクションで ONTAP tools for VMware vSphere プラグイン アイコンを選択すると、ユーザー インターフェイスが概要ページに移動します。このページはダッシュボードとして機能し、ONTAP tools for VMware vSphere プラグインの概要を提供します。 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: ONTAP tools ダッシュボードを確認して、プラグインのステータス、データストア、および vCenter Server データの概要を表示します。 
 ---
 = ONTAP toolsダッシュボードについて学ぶ
 :allow-uri-read: 
@@ -16,6 +16,10 @@ vCenter クライアントのショートカット セクションからONTAP to
 拡張リンク モード (ELM) では、vCenter Server ドロップダウンが表示されます。データを表示する vCenter Server を選択します。ドロップダウンはプラグインのすべてのリストビューで利用できます。あるページでvCenter Serverを選択すると、プラグイン内のタブを切り替えても同じ内容が保持されます。image:../media/remote-plugin-dashboard.png["ダッシュボードの概要"]
 
 概要ページから、*検出*アクションを実行できます。検出アクションは、vCenter レベルで新しく追加または更新されたストレージ バックエンド、ホスト、データストア、および保護ステータスまたは関係を検出します。スケジュールされた検出を待たずにオンデマンド検出を実行します。
+
+保護対象のホストクラスタに新しいホストを追加すると、保護設定が「部分的に保護」に変更されます。
+
+この状態を解決するには、「クラスタ構成の変更」を開き、ホストを正しいサイト（ソースまたはターゲット）に割り当てて、「変更」を選択します。
 
 
 NOTE: *Discovery* ボタンは、検出を実行するために必要な権限を持っている場合にのみ有効になります。

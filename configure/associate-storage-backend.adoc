@@ -1,8 +1,8 @@
 ---
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: ストレージバックエンドをvCenter Serverに関連付けて、ストレージバックエンドとオンボードされたvCenter Serverインスタンスの間にグローバルなマッピングを作成します。 
+keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
+summary: グローバルストレージバックエンドを ONTAP tools の vCenter Server インスタンスに関連付けます。 
 ---
 = ONTAP tools でvCenter Server インスタンスにストレージバックエンドを関連付ける
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: ストレージバックエンドをvCenter Serverに関連付けて、
 
 
 [role="lead"]
-すべての vCenter Server インスタンスのアクセスを有効にするには、ストレージ バックエンドを vCenter Server インスタンスに関連付けます。  MetroCluster構成の場合、ストレージ バックエンド クラスタを関連付けるときに、そのピア クラスタも vCenter Server に関連付けるようにしてください。
+このタスクを使用して、グローバルストレージバックエンドをvCenter Serverインスタンスに関連付けます。グローバルストレージバックエンドとは、ONTAP tools Managerに追加されたバックエンドのうち、特定のvCenter Serverインスタンスにまだ関連付けられていないものです。NetApp MetroCluster構成では、ストレージバックエンドクラスタを関連付ける際に、そのピアクラスタもvCenter Serverに関連付けてください。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから[vCenter]を選択します。
-. ストレージ バックエンドに接続する vCenter Server インスタンスの横にある縦の省略記号を選択します。
+. ストレージバックエンドに接続する vCenter Server インスタンスの横にある縦の省略記号（…）を選択します。
 . ドロップダウン メニューから、選択した vCenter Server インスタンスに関連付けるストレージ バックエンドを選択します。
 

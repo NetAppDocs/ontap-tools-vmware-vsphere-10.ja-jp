@@ -1,8 +1,8 @@
 ---
 permalink: manage/resize-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: データストアのサイズを変更すると、仮想マシンファイル用のストレージを拡張できます。データストアのサイズは、インフラ要件の変化に応じて変更できます。 
+keywords: resize NFS VMFS datastore, increase datastore capacity, ONTAP tools datastore expansion, VMware datastore size change 
+summary: インフラストラクチャの要件変更に応じて、仮想マシンのファイルストレージ容量を増やすためにデータストアのサイズを変更します。 
 ---
 = ONTAP toolsでNFSおよびVMFSデータストアのサイズを変更する
 :allow-uri-read: 

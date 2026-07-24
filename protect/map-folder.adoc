@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-folder.html 
 sidebar: sidebar 
-keywords:  
-summary: 保護対象サイトとリカバリサイトの間の通信を有効にするには、それらのサイトのフォルダをマッピングする必要があります。 
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools 
+summary: VMware Live Site Recoveryのフェイルオーバーワークフローを準備するために、保護サイトとリカバリサイト間でフォルダをマッピングします。 
 ---
 = ONTAP toolsでフォルダマッピングを設定する
 :allow-uri-read: 

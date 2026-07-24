@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。 
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server 
+summary: ONTAP tools の展開前チェックリストを完了してください。vSphere の互換性、サイジング、証明書、およびネットワーク要件が含まれます。 
 ---
 = ONTAP toolsの導入前要件
 :allow-uri-read: 
@@ -58,14 +58,15 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 
 次のワークシートを使用して、VMware vSphere の初期導入用の ONTAP ツールに必要な情報を収集します。
 
+[cols="3,1"]
 |===
 | 要件 | あなたの価値 
 
 
-| ONTAP ツールアプリケーションの IP アドレス。これは、 `\https://<ip>:8443/virtualization/ui/`で ONTAP ツールマネージャの Web インターフェイス（ロードバランサ）にアクセスするための IP アドレスです。 |  
+| ONTAP tools の IP アドレス（旧称：ロードバランサー）。この外部 IP アドレスは、 `\https://<ip>:8443/virtualization/ui/` で ONTAP tools Manager インターフェースにアクセスし、API 呼び出しを送信し、vCenter インターフェースから ONTAP tools プラグインにアクセスするために使用されます。 |  
 
 
-| 内部通信用のONTAP tools仮想IPアドレス。このIPアドレスは、複数のONTAP toolsインスタンスを使用するセットアップでの内部通信に使用されます。このIPアドレスは、ONTAP toolsアプリケーションのIPアドレスと同じにしないでください。（Kubernetesコントロールプレーン） |  
+| ONTAP tools の仮想IPアドレス（旧称ノードインターコネクト）。このIPアドレスはKubernetes APIサーバーに割り当てられ、シングルノードおよびマルチノード環境におけるKubernetesコントロールプレーンの仮想IPアドレスとして機能します。これは内部クラスタ通信とKubernetes管理に使用され、ONTAP tools のIPアドレスとは異なる必要があります。 |  
 
 
 | ONTAPツール管理ノードのDNSホスト名 |  
@@ -80,7 +81,7 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 | DNS検索ドメイン |  
 
 
-| ONTAP tools管理ノードのIPv4アドレス。管理ネットワーク上のノード管理インターフェイスの一意のIPv4アドレスです。これは、SSH経由のリモート診断アクセスのためにONTAP toolsアプライアンスに接続するために使用されます。 |  
+| ONTAP tools 管理ノードの IPv4 アドレス。シングルノード展開では、このアドレスは ONTAP tools VM に指定されたホスト名にマッピングされます。HA 展開では、2 つの追加の ONTAP tools VM に対して追加の IPv4 アドレスを指定する必要があります。 |  
 
 
 | IPv4アドレスのサブネットマスク |  
@@ -107,6 +108,7 @@ NOTE: 上記すべてのIPアドレスに対してDNSレコードを作成して
 
 シングルノード導入の要件に加えて、HA導入には次の情報が必要です。
 
+[cols="3,1"]
 |===
 
 

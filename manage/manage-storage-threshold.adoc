@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-storage-threshold.html 
 sidebar: sidebar 
-keywords:  
-summary: ボリュームやアグリゲートの容量が特定のレベルに達したときにvCenter Serverで通知を受信するしきい値を設定できます。  
+keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings 
+summary: vCenter Server でボリュームおよびアグリゲートの容量レベルに対するしきい値通知を設定します。 
 ---
 = ONTAP toolsでストレージしきい値を管理する
 :allow-uri-read: 

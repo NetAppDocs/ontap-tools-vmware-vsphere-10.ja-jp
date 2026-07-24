@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-ontap-use.html 
 sidebar: sidebar 
-keywords: ontap rbac, use ontap rbac 
-summary: ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本番環境で使用する前に考慮する必要があります。 
+keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
+summary: 本番環境で使用する前に、ONTAP tools の ONTAP RBAC に関する考慮事項を確認してください。 
 ---
 = ONTAP tools に関する ONTAP RBAC の考慮事項
 :allow-uri-read: 

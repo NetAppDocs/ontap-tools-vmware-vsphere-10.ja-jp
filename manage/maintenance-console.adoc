@@ -1,8 +1,8 @@
 ---
 permalink: manage/maintenance-console.html 
 sidebar: sidebar 
-keywords:  
-summary: ONTAPツールのメンテナンスコンソールを使用して、アプリケーション、システム、ネットワークの構成を管理できます。管理者パスワードとメンテナンスパスワードを変更できます。また、サポートバンドルの生成、ログレベルの設定、TLS設定の表示と管理、リモート診断の開始も可能です。 
+keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
+summary: ONTAP tools の設定管理、パスワードのリセット、サポートバンドルの生成、および TLS 設定の構成を行います。 
 ---
 = ONTAP toolsのメンテナンスコンソールについて学ぶ
 :allow-uri-read: 
@@ -40,12 +40,14 @@ NOTE: のパスワードを設定する必要があります。 `diag` ユーザ
 System Configuration （システム設定）
  a| 
 . 仮想マシンをリブートします
-. 仮想マシンをシャットダウンします
-. 「maint」ユーザのパスワードの変更
+. 仮想マシンのシャットダウン
+. マネージャーUIパスワードをリセットするためのトークンを生成する
 . タイムゾーンを変更します
 . jail ディスクサイズ（ /jail ）の拡張
 . アップグレード
 . VMware Tools をインストールします
+. vCenter 資格情報の更新
+. ONTAP tools サービス証明書の更新
 
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-network.html 
 sidebar: sidebar 
-keywords:  
-summary: 保護対象サイトとリカバリサイト間の通信を有効にするには、それらのサイトのネットワークをマッピングする必要があります。 
+keywords: network mappings, protected and recovery sites, VMware Live Site Recovery, resource mappings, ONTAP tools 
+summary: VMware Live Site Recoveryのフェイルオーバー中にVMの接続性を整合させるため、保護サイトと復旧サイト間のネットワークをマッピングします。 
 ---
 = ONTAP toolsでネットワーク マッピングを設定する
 :allow-uri-read: 

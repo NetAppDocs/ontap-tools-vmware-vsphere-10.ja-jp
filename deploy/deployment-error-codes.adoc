@@ -1,8 +1,8 @@
 ---
 permalink: deploy/deployment-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: このページでは、ONTAP tools for VMware vSphereシステムの導入、リブート、およびリカバリの各処理に関するエラーコードについて説明します。 
+keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
+summary: ONTAP tools の導入エラーコードを使用して、導入、再起動、およびリカバリの失敗を診断および解決します。 
 ---
 = ONTAP toolsの導入エラーのトラブルシューティング
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: このページでは、ONTAP tools for VMware vSphereシステムの�
 
 
 [role="lead"]
-デプロイメントの問題が発生した場合は、ログとエラー コードを確認して問題を診断し、解決してください。 ONTAP tools for VMware vSphere以降、ポッドから収集されるログ バンドルには、MongoDB、RabbitMQ、Vault からのログと、すべてのポッドのステータスおよび説明が含まれます。これらは既存のONTAPツール サービス ログに加えて提供され、サポート性とトラブルシューティングを強化します。
+デプロイメントで問題が発生した場合は、ログとエラーコードを確認して問題を診断し、解決してください。ONTAP tools for VMware vSphere 10.6 以降、ポッドから収集されるログバンドルには、MongoDB、RabbitMQ、および Vault のログに加え、すべてのポッドのステータスと説明が含まれます。ONTAP tools 10.6 では、トラブルシューティング時の追跡性を向上させるために、監査ログ機能も追加されています。これらは既存の ONTAP tools サービスログに加えて提供され、サポート性とトラブルシューティング性が向上します。
 
 
 
@@ -56,7 +56,7 @@ NOTE: 生成されたログバンドルは、過去3日間または72時間以�
 ONTAP tools for VMware vSphereの導入、リブート、およびリカバリの処理中にエラーコードが発生することがあります。
 エラーコードは5桁で、最初の2桁は問題に遭遇したスクリプトを表し、最後の3桁はそのスクリプト内の特定のワークフローを表します。
 
-すべてのエラー ログは、/var/log ディレクトリの ansible-perl-errors.log ファイルに記録され、問題を簡単に追跡して解決できるようになります。このログ ファイルには、エラー コードと失敗した Ansible タスクが含まれています。
+すべてのエラーログは、問題の追跡と解決を容易にするため、/var/log/otvng ディレクトリ内の ansible-perl-errors.log ファイルに記録されます。このログファイルには、エラーコードと失敗した Ansible タスクが含まれています。
 
 
 NOTE: このページに記載されているエラーコードは参考情報としてのみご利用ください。エラーが解消されない場合、または解決策が記載されていない場合は、サポートチームにお問い合わせください。
@@ -129,10 +129,10 @@ sudo rke2-uninstall.sh（すべてのVM）：
 | 060 | オペレータの配備に失敗しました | リスタート 
 
 
-| 061 | サービスの導入に失敗しました | 詳細とエラーログについては、/var/log/ ansible-perl-errors.logおよび/var/log/ ansible-run.logで、ntv-system名前空間でGETポッド、GET RS、GET svcなどの基本的なKubernetesデバッグを実行し、再導入します。 
+| 061 | サービスの導入に失敗しました | Kubernetes の基本的なデバッグ（get pods、get rs、get svc など）を ntv-system 名前空間で実行し、詳細とエラー ログ（/var/log/otvng/ansible-perl-errors.log および /var/log/otvng/ansible-run.log）を確認してから再デプロイしてください。 
 
 
-| 062 | ONTAP toolsサービスの導入に失敗しました | 詳細と再導入については、/var/log/ ansible-perl-errors.logにあるエラーログを参照してください。 
+| 062 | ONTAP toolsサービスの導入に失敗しました | 詳細については、/var/log/otvng/ansible-perl-errors.log にあるエラーログを参照し、再デプロイしてください。 
 
 
 | 065 | SwaggerページのURLにアクセスできません | 再導入 
@@ -143,7 +143,7 @@ sudo rke2-uninstall.sh（すべてのVM）：
 
 * 診断シェルを有効にします。
 * 「sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy」コマンドを実行します。
-* /var/log/post-deploy-upgrade.log のログを確認してください。
+* /var/log/otvng/post-deploy-upgrade.log にあるログを確認してください。
 
 
 
@@ -158,16 +158,6 @@ sudo rke2-uninstall.sh（すべてのVM）：
 
 
 | 108 | スクリプトのシードに失敗しました | - 
-
-
-| 114 | MongoDBコレクションの内部証明書更新が失敗しました  a| 
-デプロイがエラーコード114で失敗した場合は、以下の手順を実行してください：
-
-* 診断シェルを有効にします。
-* 次のコマンドを実行します。 `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* でログを確認します `/var/log/otvng/post-deploy-upgrade.log`
-
-
 |===
 |===
 

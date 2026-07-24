@@ -1,8 +1,8 @@
 ---
 permalink: configure/discover-storage-systems-and-hosts.html 
 sidebar: sidebar 
-keywords:  
-summary: vSphere ClientでONTAP tools for VMware vSphereを初めて実行すると、ONTAP tools for VMware vSphereによって、ESXiホスト、そのLUNとNFSエクスポート、およびLUNとエクスポートを所有するNetAppストレージシステムが検出されます。 
+keywords: discover storage systems and hosts, ONTAP tools first discovery, ESXi host and LUN discovery, NFS export discovery 
+summary: 初回起動時に、ESXi ホスト、LUN、NFS エクスポート、および NetApp ストレージシステムを ONTAP tools で検出します。 
 ---
 = ONTAP toolsでストレージシステムとホストを検出する
 :allow-uri-read: 
@@ -24,8 +24,8 @@ ONTAP tools for VMware vSphereをvSphere Client で初めて起動すると、ES
 ストレージシステムを検出する際、ONTAP tools for VMware vSphereは、vCenter Serverインスタンスで管理しているESXiホストから情報を収集します。
 
 .手順
-. vSphere Clientの[ホーム]ページで、*[ホストおよびクラスタ]*を選択します。
-. 必要なデータセンターを右クリックして、*NetApp ONTAP tools* > *Update Host Data* を選択します。
+. vSphere クライアントのホームページで、*ホストとクラスタ* を選択します。
+. 必要なデータセンターを右クリックして、*NetApp ONTAP tools* > *ホストとストレージデータの更新* を選択します。
 +
 [*確認*（Confirm *）]ダイアログボックスで、選択内容を確認します。
 

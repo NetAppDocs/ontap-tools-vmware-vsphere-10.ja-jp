@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: vCenterは、ホスト、仮想マシン、およびストレージバックエンドを制御できる一元管理プラットフォームです。 
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management 
+summary: vCenter インスタンスを ONTAP tools で管理して、ホスト、仮想マシン、ストレージバックエンドを制御します。 
 ---
 = ONTAPツールでvCenter Serverインスタンスを管理する
 :allow-uri-read: 
@@ -15,16 +15,16 @@ vCenter Serverインスタンスは、ホスト、仮想マシン、ストレー
 
 
 
-[[dissociate-storage-backends-with-the-vcenter-server-instance]]
-== ストレージバックエンドとvCenter Serverインスタンスの関連付けを解除する
+[[dissociate-storage-backends-from-a-vcenter-server-instance]]
+== ストレージバックエンドを vCenter Server インスタンスから切り離す
 
 vCenter Serverのリストページには、関連するストレージバックエンドの数が表示されます。各vCenter Serverインスタンスには、ストレージバックエンドとの関連付けまたは関連付け解除を行うオプションがあります。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
-. サイドバーから必要なvCenter Serverインスタンスを選択します。
-. ストレージバックエンドに関連付ける、またはストレージバックエンドとの関連付けを解除するvCenter Serverの縦の省略記号を選択します。
+. サイドバーから *vCenters* を選択します。
+. ストレージバックエンドと関連付けたり、関連付けを解除したりする vCenter Server の縦の省略記号を選択します。
 . [ストレージバックエンドの関連付けを解除]*を選択します。
 
 
@@ -33,12 +33,10 @@ vCenter Serverのリストページには、関連するストレージバック
 [[modify-a-vcenter-server-instance]]
 == vCenter Serverインスタンスを変更する
 
-vCenter Serverインスタンスを変更するには、次の手順を実行します。
-
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
-. サイドバーから該当するvCenter Serverインスタンスを選択します。
-. 変更するvCenter Serverの縦の省略記号を選択し、*[変更]*を選択します。
+. サイドバーから *vCenters* を選択します。
+. 変更する vCenter Server の縦の省略記号を選択し、*変更* を選択します。
 . *vCenter の変更* ウィンドウで、ユーザー名、パスワード、ポートの詳細を入力します。
 . 証明書をアップロードし、「*変更*」を選択します。
 
@@ -48,22 +46,61 @@ vCenter Serverインスタンスを変更するには、次の手順を実行し
 [[remove-a-vcenter-server-instance]]
 == vCenter Serverインスタンスを削除する
 
-vCenter Server を削除する前に、vCenter Server からすべてのストレージ バックエンドを削除します。
+データストアとストレージバックエンドがまだ関連付けられている場合でも、vCenter Server インスタンスを削除できます。*vCenter の削除* ダイアログでは、vCenter Server の現在の状態に基づいて必要なアクションが案内されます。
 
+
+NOTE: 強制削除は ONTAP ツールのメタデータのみを削除します。ONTAP ストレージオブジェクト（ボリュームまたは LUN）、vSphere データストア、または仮想マシンは削除されません。
+
+.作業を開始する前に
+強制削除は、vCenter Server に vVols データストアまたは保護されたデータストアがある場合はブロックされます。続行する前に：
+
+* すべての vVols データストアを削除または移行します。
+* 保護されているすべてのデータストアの保護を解除します。
+* 検出ジョブが実行されていないことを確認してください。検出ジョブが実行中の場合、強制削除操作は実行されません。
+
+
+
+NOTE: 他の vCenter Server インスタンスと共有されるグローバルストレージバックエンドは保持されます。削除された vCenter Server との関連付けのみが削除されます。
+
+.手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
-. サイドバーから該当するvCenter Serverインスタンスを選択します。
-. 削除する vCenter Server の縦の省略記号を選択し、[削除] を選択します。
+. サイドバーから *vCenters* を選択します。
+. 必要な vCenter Server の縦の省略記号を選択し、*削除* を選択します。
+. *vCenter の削除* ダイアログで、vCenter Server の状態を確認し、必要な操作をすべて完了してください。
 +
+ダイアログの動作は、vCenter Server の状態によって異なります：
 
-NOTE: vCenter Server インスタンスを削除すると、それらはアプリケーションによってメンテナンスされなくなります。
++
+[cols="2,2,3"]
+|===
+| 条件 | ダイアログの動作 | 必要な処理 
 
 
+| vVolsまたは保護されたデータストアはありませんが、ストレージ バックエンドが関連付けられています | このダイアログには、関連付けられているストレージバックエンドとデータストアの数が表示されます。 | 「このvCenter Serverからすべてのストレージ アーティファクトを削除する」および「関連付けられているデータストアがONTAP toolsによって管理されなくなることを理解しています」を選択します。 
 
-ONTAP toolsでvCenter Serverインスタンスを削除すると、次の処理が自動的に実行されます。
+
+| vVolsデータストア、保護されたデータストア、またはストレージ バックエンドはありません | ダイアログが表示され、削除が確認されます。 | 追加の対応は不要です。 
+|===
+. 「強制削除」を選択します。
+. 操作を確定します。
+
+
+.結果
+ONTAP tools は以下のアクションを自動的に実行します：
 
 * プラグインの登録が解除されました。
 * プラグイン権限とプラグインロールが削除されました。
+
+
+vCenter Server インスタンスは、ONTAP tools による管理対象ではなくなりました。
+
+削除中に vCenter Server にアクセスできない場合：
+
+* ONTAP tools は vCenter Server のレコードを削除します。
+* プラグインの登録解除は行われません。
+* 警告メッセージが表示されます。
+* VMware vCenter Server からプラグインの登録を手動で解除する必要があります。
 
 
 
@@ -120,9 +157,9 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから該当するvCenter Serverインスタンスを選択します。
-. 変更するvCenter Serverの縦の省略記号を選択し、*[変更]*を選択します。
+. 変更する vCenter Server の縦の省略記号を選択し、*変更* を選択します。
 . *vCenter の変更* ウィンドウで、ユーザー名、パスワード、ポートの詳細を入力します。
-. 証明書をアップロードし、「*変更*」を選択します。
+. 証明書をアップロードし、*変更*を選択します。
 
 
 .関連情報

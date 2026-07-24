@@ -1,8 +1,8 @@
 ---
 permalink: manage/unmount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: '[データストアのアンマウント]操作を実行すると、NFSまたはVMFSデータストアがESXiホストからアンマウントされます。データストアのアンマウント処理は、ONTAP tools for VMware vSphereで検出または管理されるNFSおよびVMFSデータストアに対して有効になります。' 
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach 
+summary: ONTAP tools を使用して、ESXi ホストから NFS または VMFS データストアをアンマウントします。 
 ---
 = ONTAP toolsでNFSおよびVMFSデータストアをアンマウントする
 :allow-uri-read: 
@@ -11,13 +11,15 @@ summary: '[データストアのアンマウント]操作を実行すると、NF
 
 
 [role="lead"]
-データストアのアンマウント アクションは、ESXi ホストから NFS または VMFS データストアを削除します。これは、ONTAP tools for VMware vSphereによって検出または管理されるデータストアで使用できます。
+このタスクを使用して、ESXiホストからNFSまたはVMFSデータストアをアンマウントします。クラスタレベルのデータストアのアンマウントは、UIまたはAPIを通じてはサポートされていません。
+
+ONTAP tools 10.6以降、保護されたVMFSデータストアのアンマウントはブロックされます。
 
 .手順
 . vSphere Clientにログインします。
-. NFS または VMFS データストア オブジェクトを右クリックし、*データストアのマウント解除* を選択します。
+. NFSまたはVMFSデータストアオブジェクトを右クリックし、*データストアのマウント解除*を選択します。
 +
-vSphere クライアントはダイアログ ボックスを開き、データストアをマウントする ESXi ホストを一覧表示します。保護されたデータストアに対して操作を実行すると、画面に警告メッセージが表示されます。
+vSphereクライアントはダイアログボックスを開き、データストアをマウントしているESXiホストの一覧を表示します。データストアが保護されている場合、ONTAP toolsはリクエストをブロックし、データストアが保護されているためアンマウントできないというメッセージを表示します。
 
 . データストアをアンマウントするESXiホストを1つ以上選択します。
 +
@@ -25,12 +27,12 @@ vSphere クライアントはダイアログ ボックスを開き、データ�
 
 . [アンマウント]*ボタンを選択します。
 +
-データストアが保護されたホストクラスタの一部である場合は、警告メッセージが表示されます。
+*データストアのマウント解除*オプションは、ホストが保護対象ホストクラスタの外に移動された場合にのみ使用できます。
 
 
 
 
-NOTE: 。link:../manage/edit-hostcluster-protection.html["保護されているホストクラスタを変更"]完全な保護を可能にします。
+NOTE: データストアが保護されている場合は、アンマウントする前に保護を解除する必要があります。
 
 .次の手順
 進捗状況は、[最近のタスク]パネルで追跡できます。

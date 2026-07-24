@@ -1,8 +1,8 @@
 ---
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。 
+keywords: ONTAP tools requirements, configuration limits, supported versions, sizing 
+summary: ONTAP tools for VMware vSphere をデプロイする前に、サポート対象バージョン、サイジング、ポート要件、および構成制限を確認してください。 
 ---
 = VMware vSphere の要件と構成の制限に対する ONTAP ツール
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パ�
 
 
 [role="lead"]
-VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件といくつかの基本的なホスト システム要件を理解しておく必要があります。
+ONTAP tools for VMware vSphere をデプロイする前に、サポート対象バージョン、サイジング、ポート要件、および構成制限を確認してください。
 
-ONTAP tools for VMware vSphere は、VMware vCenter Server Virtual Appliance（vCSA）で使用できます。ONTAP tools for VMware vSphere は、ESXiホストを含むサポートされているvSphere環境に導入する必要があります。
+ESXi ホストと VMware vCenter Server Virtual Appliance（vCSA）を含む、サポートされている vSphere 環境に ONTAP tools for VMware vSphere をデプロイします。
 
 
 
@@ -26,7 +26,7 @@ ONTAP tools for VMware vSphere は、VMware vCenter Server Virtual Appliance（v
 ** シックプロビジョニングの場合は348GB
 
 
-* *ホスト システムのサイズ要件* 以下の表は、各展開サイズに推奨されるメモリを示しています。高可用性 (HA) 展開の場合、記載されているアプライアンス サイズの 3 倍が必要です。
+* *ホストシステムのサイジング要件* 下の表は、各デプロイメントサイズにおけるノードあたりの推奨CPU、メモリ、およびディスク容量を示しています。高可用性（HA）構成の場合は、3つのノードをデプロイしてください。
 
 
 |===
@@ -35,16 +35,22 @@ ONTAP tools for VMware vSphere は、VMware vCenter Server Virtual Appliance（v
 | *展開の種類* | *ノードあたりのCPU数* | *ノードあたりのメモリ（GB）* | *ノードあたりシックプロビジョニングされたディスクスペース（GB）* 
 
 
+| エクストラスモール（XS） | 6 | 12 | 350 
+
+
 | 小規模 | 9 | 18 | 350 
 
 
 | 中 | 13 | 26 | 350 
 
 
-| 大規模なメモ：大規模な導入はHA構成専用です。 | 17 | 34 | 350 
+| 大規模 | 17 | 34 | 350 
 |===
 
-NOTE: バックアップを有効にすると、VMが導入されているデータストアに、各ONTAP toolsクラスタにさらに50GBのスペースが必要になります。したがって、非HAには400GBが必要で、HAには合計1100GBのスペースが必要です。
+NOTE: 大規模なデプロイメントは、HA構成の場合のみサポートされます。
+
+
+NOTE: バックアップが有効になっている場合、各 ONTAP tools クラスタには、VM がデプロイされるデータストア上にさらに 50 GB の空き容量が必要です。したがって、非 HA 構成では 400 GB、HA 構成では合計 1100 GB の容量が必要となります。
 
 
 
@@ -55,28 +61,28 @@ NOTE: バックアップを有効にすると、VMが導入されているデー
 | ストレージ、ホスト、およびアプリケーション | バージョン要件 
 
 
-| ONTAP | 9.15.1、9.16.1、および9.17.0 
+| ONTAPシステム | 9.16.1、9.17.1、9.18.1、9.19.1 
 
 
-| ONTAP ToolsでサポートされるESXiホスト | 7.0.3以降 
+| ONTAP tools で管理される ESXi ホスト | 7.0.3以降 
 
 
-| サポートされるvCenter ServerのONTAPツール | 7.0U3以降 
+| vCenter Server インスタンスは ONTAP tools で管理されます | 8.0U3以降 
 
 
 | VASA Provider | 3.0 
 
 
-| OVAアプリケーション | 10.5 
+| OVAアプリケーション | 10.6 
 
 
-| ONTAP tools仮想マシンを導入するためのESXiホスト | 7.0U3と8.0U3 
+| ONTAP tools 仮想マシンのデプロイに使用する ESXi ホスト | 7.0U3と8.0U3 
 
 
-| ONTAP tools仮想マシンを導入するためのvCenter Server | 7.0および8.0 
+| vCenter Server は ONTAP tools 仮想マシンのデプロイに使用されます | 7.0および8.0 
 |===
 
-NOTE: ONTAP tools for VMware vSphere 10.4以降では、仮想マシンハードウェアがバージョン10から17に変更されています。
+NOTE: ONTAP tools for VMware vSphere 10.4 以降、仮想マシンのハードウェアバージョンが 10 から 17 に変更されます。
 
 サポートされるONTAP、vCenter Server、ESXiホスト、およびプラグインアプリケーションのバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
 
@@ -90,7 +96,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 以下の表は、 NetAppが使用するネットワーク ポートとその用途の概要を示しています。ポートには 3 つの種類があります。
 
 * 外部ポート: これらのポートは、Kubernetes クラスターまたはノードの外部からアクセスできます。これらにより、サービスは外部ネットワークまたはユーザーと通信できるようになり、クラスター環境外のシステムとの統合が可能になります。
-* ノード間ポート: これらのポートは、Kubernetes クラスター内のノード間の通信を可能にします。データの共有や共同作業などのクラスター タスクに必要です。単一ノード展開の場合、ノード間ポートはノード内でのみ使用され、外部アクセスは必要ありません。ノード間ポートはクラスター外部からのトラフィックを受け入れることができます。ファイアウォール ルールを使用して、ノード間ポートからのインターネット アクセスをブロックします。
+* ノード間ポート：これらのポートは、Kubernetesクラスタ内のノード間の通信を可能にします。これらは、データ交換やノード調整といったクラスタ操作に必要です。シングルノード構成の場合、ノード間ポートはノード内部でのみ使用され、外部からのアクセスは不要です。信頼できるクラスタネットワークからのノード間トラフィックのみを許可し、ファイアウォールルールを使用してインターネットアクセスをブロックします。
 * 内部ポート: これらのポートは、ClusterIP アドレスを使用して Kubernetes クラスター内で通信します。これらは外部に公開されず、ファイアウォール ルールに追加する必要もありません。
 
 
@@ -161,10 +167,10 @@ NOTE: HA 展開の場合、すべてのノード間で UDP ポート 8472 が開
 ====
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
-== ONTAP tools for VMware vSphere を vVols データストアに導入する際の構成上の制限
+[[configuration-limits-for-vvol-datastores]]
+== vVol データストアの構成制限
 
-次の表は、VMware vSphere用のONTAP toolsを構成するためのガイドとして使用できます。
+ONTAP tools for VMware vSphere を設定する際には、以下の表を参考にしてください。
 
 |===
 
@@ -178,21 +184,21 @@ NOTE: HA 展開の場合、すべてのノード間で UDP ポート 8472 が開
 | HA 認定外 | 中（M） | 最大24K | 64 
 
 
-| 高可用性 | 小（S） | 最大24K | 64 
+| HA | 小（S） | 最大24K | 64 
 
 
-| 高可用性 | 中（M） | 最大50k | 128 
+| HA | 中（M） | 最大50K | 128 
 
 
-| 高可用性 | 大（L） | 最大10万 | 256 
+| HA | 大（L） | 最大100K | 256 
 |===
 
 NOTE: 表内のホスト数は、接続されているすべてのvCentersの合計を表します。
 
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
-== VMFS および NFS データストア用の ONTAP tools for VMware vSphere を導入するための構成制限
+[[configuration-limits-for-vmfs-and-nfs-datastores]]
+== VMFSおよびNFSデータストアの構成制限
 
 このセクションに記載されている構成制限は、NetAppによって検証およびサポートされています。実際の制限は、環境やワークロードによって異なる場合があります。これらの制限を超えると、パフォーマンスやサポート性に影響が出る可能性があるため、推奨されません。表を確認する際は、以下の点にご留意ください：
 
@@ -207,10 +213,16 @@ NOTE: 表内のホスト数は、接続されているすべてのvCentersの合
 | 導入 | VMFSおよびNFSデータストアの数 | DR対応VMFSデータストアの数 | ホスト数 
 
 
+| 極小 | 50 | 50 | 16 
+
+
 | 非HA小規模 | 200 | 80 | 32だ 
 
 
 | 非HAメディア | 250 | 100 | 32だ 
+
+
+| HA極小 | 200 | 100 | 32だ 
 
 
 | HA小規模 | 350 | 200 | 64 
@@ -229,7 +241,7 @@ NOTE: 表内のホスト数は、接続されているすべてのvCentersの合
 次の表に、ONTAP tools for VMware vSphereを使用したVMware Live Site Recoveryインスタンスごとにサポートされる数を示します。
 
 |===
-| * vCenterの導入規模* | *小さい* | *中* 
+| *vCenter 展開サイズ* | *小さい* | *中* 
 
 
 | アレイベースのレプリケーションを使用した保護用に構成された仮想マシンの総数 | 2000 | 5000 
@@ -251,7 +263,7 @@ NOTE: 表内のホスト数は、接続されているすべてのvCentersの合
 |===
 
 
-| * VMware Live Site Recoveryインスタンスの数* | * ONTAPツールの導入規模* 
+| * VMware Live Site Recoveryインスタンスの数* | *ONTAP tools 導入サイズ* 
 
 
 | 最大4 | 小規模 

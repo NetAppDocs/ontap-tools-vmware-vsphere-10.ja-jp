@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: 'ONTAP tools for VMware vSphere の [Configure] タブにある ONTAP ストレージ ビューには、データストアとそのボリュームに関するデータが表示されます。' 
+keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility 
+summary: ONTAP tools for VMware vSphere の ONTAP ストレージページで、データストアとボリュームの詳細を確認できます。 
 ---
 = ONTAP tools のデータストアの ONTAP ストレージ ビュー
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'ONTAP tools for VMware vSphere の [Configure] タブにある ONTAP �
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereでは、[Configure]タブにデータストアとそのボリュームのONTAPストレージ側ビューが表示されます。
+データストアとボリュームの情報を表示するには、「*設定*」タブの「ONTAP ストレージ」ページを使用します。
 
 .手順
-. vSphere クライアントからデータストアに移動します。
+. vSphere Client インベントリで、データストアを選択します。
 . 右側のペインで[Configure]タブを選択します。
 . * NetApp ONTAPツール* > * ONTAPストレージ* を選択します。ビューはデータストアの種類によって変わります。以下の表を参照してください。
 
@@ -25,11 +25,13 @@ ONTAP tools for VMware vSphereでは、[Configure]タブにデータストアと
 | *データストアタイプ* | *利用可能な情報* 
 
 
-| NFSデータストア | ストレージの詳細*ページには、ストレージバックエンド、アグリゲート、およびボリュームの情報が表示されます。NFSの詳細*ページには、NFSデータストアに関連するデータが含まれています。 
+| NFSデータストア | 「ストレージの詳細」ページには、ストレージのバックエンド、アグリゲート、およびボリューム情報が含まれています。「NFS の詳細」ページには、NFS データストアに関連するデータが含まれています。注意：nconnect の値が ONTAP tools の外部で変更された場合、ONTAP tools に表示される値はその外部の変更を反映しない可能性があります。 
 
 
-| VMFSテタストア | [ストレージの詳細]ページには、ストレージバックエンド、アグリゲート、ボリューム、およびストレージ可用性ゾーン（SAZ）の詳細が表示されます。ストレージユニットの詳細*ページには、ストレージユニットの詳細が表示されます。 
+| VMFSテタストア | 「ストレージの詳細」ページには、ストレージバックエンド、アグリゲート、ボリューム、およびストレージの可用性ゾーン（SAZ）の詳細が含まれています。「ストレージユニットの詳細」ページには、ストレージユニットの詳細情報が含まれています。 
 
 
 | vVolテエタストア | すべてのボリュームを一覧表示します。ONTAPストレージ ペインからストレージを拡張または削除できます。ONTAPツールは、 ASA r2 システムベースのvVolsデータストアに対してこのビューをサポートしていません。 
 |===
+.結果
+選択したデータストアの種類に基づいて、ONTAP側のデータストアの詳細を確認できます。

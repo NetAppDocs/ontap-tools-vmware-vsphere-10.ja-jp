@@ -1,55 +1,126 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.5, ONTAP tools for VMware vSphere' 
-summary: ONTAP tools for VMware vSphereで利用できる新しい機能について説明します。 
+keywords: ONTAP tools 10.6, VMware vSphere release notes, datastore protection, audit logging, nconnect 
+summary: ONTAP tools for VMware vSphere 10.6 の新機能と強化点について説明します。 
 ---
-= ONTAP tools for VMware vSphereの新機能
+= ONTAP tools for VMware vSphere 10.6 の新機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereで利用できる新しい機能について説明します。
-
-* *プラットフォームの資格*
-
-
-ONTAP tools for VMware vSphereは、 ASA r2 システムのサポートを追加し、最新のハードウェアおよびソフトウェア構成との互換性を提供します。このリリースにはONTAP 9.16.1 および 9.17.1 との統合も含まれており、サポートされる環境が拡張されています。
-
-* *VMware の資格と認定資格*
-
-
-ONTAP tools for VMware vSphereは、現在の VMware 相互運用性認定標準に準拠しており、ESXi ホストと vCenter Server の両方をサポートしています。
-
-* * MetroClusterサポート*
-
-
-このリリースでは、 MetroCluster構成のサポートが導入され、高可用性と災害復旧機能が強化されています。
-
-* *セキュリティと証明書管理*
-
-
-このリリースでは、自己署名証明書の管理が合理化され、ユーザー エクスペリエンスとセキュリティ標準への準拠が強化されます。  ONTAP tools for VMware vSphereのONTAPおよび ONTAP ツールを保護するための、改善された証明書検証ワークフローを提供します。
-
-* *レプリケーションの強化*
-
-
-このリリースでは、 ASA r2 システムの SRA およびSnapMirror Active Sync を含む階層的整合性グループを使用した VMFS レプリケーションがサポートされます。ゼロ RPO バックアップをサポートし、データ保護とリカバリを改善します。
-
-* *アップグレードと移行*
-
-
-以前のバージョンのONTAP tools for VMware vSphereからONTAP tools for VMware vSphere 10.5 へのアップグレードおよび移行プロセスは、シームレスかつ効率的に実行され、ダウンタイムを最小限に抑え、スムーズな移行を保証するように設計されています。
+ONTAP tools for VMware vSphere 10.6 の新機能と強化点について説明します。
 
 
 
-[[supported-ontap-platforms-and-vcenter-server-versions]]
-== サポートされているONTAPプラットフォームと vCenter Server バージョン
+[[granular-datastore-protection]]
+== きめ細かなデータストア保護
 
-ONTAP tools for VMware vSphere 10.5 P1は、SRAおよびSnapMirror active syncコンポーネントのvCenter高可用性（HA）構成をサポートします。この構成ではvVolsはサポートされていません。HAフェイルオーバー中、vCenterが数分間利用できない場合があります。大規模な環境やエラーが発生した場合、フェイルオーバー時間が15分を超えることがあります。
+ONTAP tools 10.6ではデータストアレベルの保護機能が導入され、ホストクラスタ全体ではなく、選択したデータストアにのみ保護を適用できるようになりました。
 
-詳細については、 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-availability/vcenter-server-high-availability.html["vCenter High Availabilityドキュメント"^]を参照してください。vCenter HAに関するご質問は、 https://support.broadcom.com/["Broadcomサポート"^]までお問い合わせください。
+主な機能強化点は以下のとおりです：
 
-バージョン互換性に関する最新情報については、 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^] 。
+* データストアレベルの保護（ONTAPシステムおよびASA r2システム）
+* 自動フェイルオーバーデュプレックス（AFD）および非同期保護ポリシー
+* iSCSIおよびFC VMFSデータストアのサポート
+* 階層的整合性グループとファンアウト設定
+* 保護するデータストアを選択することで、整合性グループのメンバーシップを制御できます。
+* 均一および非均一なAFD保護構成
+* データストアやホストを追加または削除することで保護を変更できる機能
+* vCenter プラグインのデータストア保護ワークフロー
+* ホストクラスタ保護からデータストアレベル保護へのアップグレードパス
+
+
+
+
+[[audit-logging]]
+== 監査ロギング
+
+ONTAP tools 10.6では、セキュリティと運用追跡性を向上させるために監査ログ機能が追加されました。
+
+監査ログには以下が含まれます：
+
+* GET以外のすべての REST API 呼び出し（リクエストとレスポンスの詳細を含む）
+* 検出ジョブ、AutoSupportバンドルジョブ、クリーンアップジョブ、およびメンテナンスコンソール操作
+* 監査ログアーカイブの完全性保護（改ざんおよび削除アラートを含む）
+* Syslog転送のサポート
+
+
+これらのアップデートは、コンプライアンスおよびセキュリティ要件をサポートするものです。
+
+
+
+[[nconnect-support-for-nfs-datastores]]
+== NFSデータストアに対するnconnectのサポート
+
+ONTAP tools 10.6 では VMware NFS データストアの nconnect サポートが追加され、ESXi ホストと ONTAP NFS データストア間で複数の並列 TCP 接続が可能になります。
+
+このリリースでは以下をサポートします：
+
+* プロビジョニング中のNFSv3データストア用nconnect
+* NFSv4.1データストアのnconnectをvCenter 8.0U3以降でプロビジョニング中に使用する
+* ESXiホストにおける最大nconnect値の変更
+
+
+これは、マルチVMワークロードにおけるスループットとNFSデータストアのパフォーマンス向上に役立ちます。
+
+
+
+[[smaller-default-deployment-with-xs-profile]]
+== XSプロファイルを使用した小規模なデフォルト展開
+
+ONTAP tools 10.6では、リソースのオーバーヘッドを削減し、初期導入を簡素化するために、より小さなデフォルトのエクストラスモール（XS）デプロイメントプロファイルが導入されました。
+
+機能強化の内容は以下のとおりです：
+
+* 初期展開時のデフォルト構成としてのXS
+* 最適化されたデフォルトのハードウェア設定を使用したOVA展開
+* XSによるデータストアのプロビジョニング、保護、SRAサービスの有効化、およびHAモードのサポート
+* マネージャーUIで利用可能なデプロイメントプロファイルは、エクストラスモール（XS）、スモール（S）、ミディアム（M）、ラージ（L）の4種類です。
+
+
+このモデルは、初期設置面積が小さく、明確なスケールアップの道筋を提供します。
+
+
+
+[[ease-of-deployment-improvement]]
+== 導入の容易性の向上
+
+ONTAP tools 10.6では、プライマリ ONTAP tools VMの新規デプロイメントにおいて、CPUのホット アドとメモリのホットプラグがデフォルトで有効になります。
+
+これにより、展開前または展開後にこれらの設定を手動で有効にする必要がなくなります。
+
+
+
+[[protection-workflow-improvement]]
+== 保護ワークフローの改善
+
+ONTAP tools 10.6では、ONTAPクラスターが利用できない場合にストレージ検出を手動でトリガーする必要がなくなり、保護ワークフローが簡素化されます。
+
+
+
+[[platform-and-interoperability-qualification]]
+== プラットフォームおよび相互運用性の認定
+
+ONTAP tools 10.6は、主要なONTAPおよびVMwareリリース全体にわたってプラットフォームと相互運用性のサポートを拡張し、VMware環境におけるシームレスなNetAppストレージ統合を実現します。
+
+このリリースは現在の ONTAP プラットフォーム構成と VMware リリースに対応しており、プラットフォームのアップグレードや VMware スタックのリフレッシュ時における運用上の複雑さを軽減します。
+
+
+
+[[supportability-enhancements]]
+== サポート性の向上
+
+ONTAP tools 10.6では、トラブルシューティングとライフサイクル管理が改善されています。
+
+主な更新内容は以下のとおりです：
+
+* アクセス不能または古い vCenter エントリーの強制削除
+*  `ntpd`から `chronyd`への移行（時刻同期用）。アップグレード中に既存のNTPサーバー設定が自動的に移行されます。
+* メンテナンスコンソールオプションで、有効期限後でも内部サービス証明書を更新できます。
+* 標準NTPプロトコル（UDP ポート123）を介した、従来のNTPサーバーとRHELベースのchronyサーバーの両方をサポートします。
+
+
+バージョン互換性に関する最新情報については、 https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]を参照してください。

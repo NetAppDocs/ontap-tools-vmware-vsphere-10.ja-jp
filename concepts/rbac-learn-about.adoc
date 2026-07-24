@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-learn-about.html 
 sidebar: sidebar 
-keywords: role based access control, rbac, rbac components, learn about rbac 
-summary: ロールベースアクセス制御（RBAC）は、組織内のリソースへのアクセスを制御するためのセキュリティフレームワークです。RBACでは、個 々 のユーザに許可を割り当てるのではなく、特定のレベルの権限でロールを定義してアクションを実行することで、管理が簡易化されます。定義されたロールはユーザーに割り当てられます。これにより、エラーのリスクが軽減され、組織全体のアクセス制御の管理が簡素化されます。 
+keywords: RBAC framework, role-based access control, authorization, security 
+summary: RBACが特定の権限レベルを持つロールを定義してアクセスを制御し、ONTAP tools でのユーザー管理を簡素化する方法について説明します。 
 ---
 = ONTAP tools RBACについて学ぶ
 :hardbreaks:

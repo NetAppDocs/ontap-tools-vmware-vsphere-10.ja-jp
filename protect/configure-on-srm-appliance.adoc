@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-on-srm-appliance.html 
 sidebar: sidebar 
-keywords:  
-summary: 'VMware Live Site Recovery アプライアンスを展開した後、ストレージ レプリケーション アダプタ (SRA) を構成して、災害復旧管理を有効にします。' 
+keywords: SRA configuration, VMware Live Site Recovery, ONTAP tools, disaster recovery, Site Recovery Manager appliance 
+summary: VMware Live Site RecoveryアプライアンスでSRAを設定して、ONTAP toolsを使用した災害復旧ワークフローを有効にします。 
 ---
 = ONTAP tools を使用して VMware Live Site Recovery アプライアンスで SRA を構成する
 :allow-uri-read: 

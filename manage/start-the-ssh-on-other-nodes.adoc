@@ -1,8 +1,8 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html 
 sidebar: sidebar 
-keywords:  
-summary: アップグレードの前に、他のノードでSSHを開始する必要があります。 
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting 
+summary: アップグレードを実行する前に、他のノードでSSHを起動してください。 
 ---
 = 他のONTAP toolsノードでSSHを起動します
 :allow-uri-read: 
@@ -20,8 +20,9 @@ vCenter Server インスタンスの VASA プロバイダ拡張機能を有効�
 アップグレードする前に、各ノードでこの手順を繰り返します。
 
 .手順
-. vCenter Serverで、VASA Providerへのコンソールを開きます。
-. maintenance ユーザとしてログインします。
+. vCenter Serverにログインします。
+. ONTAP tools ノード VM を見つけて、Web コンソールを起動します。
+.  `maint`の資格情報を使用してログインします。
 . 入力するコマンド `4` [Support and Diagnostics]を選択します。
 . 入力するコマンド `1` [Access diagnostic shell]を選択します。
 . 入力するコマンド `y` 続行してください。

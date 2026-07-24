@@ -1,8 +1,8 @@
 ---
 permalink: configure/registration-process.html 
 sidebar: sidebar 
-keywords:  
-summary: ONTAP tools for VMware vSphereを使用して、VASA プロバイダーを vCenter Server インスタンスに登録できます。 
+keywords: register VASA Provider, ONTAP tools VASA registration, vCenter VASA Provider, vVols policy management 
+summary: ONTAP tools のリモート プラグイン インターフェイスを使用して、VASA Provider を vCenter Server インスタンスに登録します。 
 ---
 = ONTAP tools で VASA Provider を vCenter Server インスタンスに登録する
 :allow-uri-read: 

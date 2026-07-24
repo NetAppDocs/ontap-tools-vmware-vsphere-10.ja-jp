@@ -1,8 +1,8 @@
 ---
 permalink: configure/add-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。 
+keywords: add vCenter Server, ONTAP tools vCenter registration, multiple vCenter support, vCenter CA certificate 
+summary: vCenter Server インスタンスを ONTAP tools に追加して、データストアを構成、管理、および保護します。 
 ---
 = ONTAPツールにvCenter Serverインスタンスを追加する
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: vCenter ServerインスタンスをONTAP tools for VMware vSphereに追
 
 
 [role="lead"]
-vCenter ServerインスタンスをONTAP tools for VMware vSphereに追加して、vCenter Server環境内の仮想データストアを設定、管理、保護します。複数の vCenter Server インスタンスを追加する場合、ONTAP ツールと各 vCenter Server 間の安全な通信にはカスタム CA 証明書が必要です。
+vCenter Server インスタンスを ONTAP tools for VMware vSphere に追加して、vCenter Server 環境のデータストアを設定、管理、保護します。複数の vCenter Server インスタンスを追加する場合、ONTAP tools と各 vCenter Server 間のセキュアな通信にはカスタム CA 証明書が必要です。
 
 .タスクの内容
 ONTAPツールは vCenter Server と統合され、プロビジョニング、スナップショット、データ保護などのストレージ タスクを vSphere クライアントから直接実行します。

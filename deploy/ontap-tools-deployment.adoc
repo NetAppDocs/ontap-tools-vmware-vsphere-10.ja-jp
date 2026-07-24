@@ -1,8 +1,8 @@
 ---
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
-keywords:  
-summary: ONTAP tools for VMware vSphereは、 NFS および VMFS データストアをサポートするコア サービスを備えた小規模の単一ノードとして展開されます。 
+keywords: deploy ONTAP tools, OVA, content library, single-node configuration 
+summary: ONTAP tools for VMware vSphere を超小型シングルノードアプライアンスとして導入します。 
 ---
 = ONTAP Toolsの導入
 :allow-uri-read: 
@@ -11,53 +11,51 @@ summary: ONTAP tools for VMware vSphereは、 NFS および VMFS データスト
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereは、 NFS および VMFS データストアをサポートするコア サービスを備えた小規模の単一ノードとして展開されます。ONTAPの導入プロセスには最大45分かかる場合があります。
+NFS および VMFS データストアをサポートする超小型シングルノードアプライアンスとして、ONTAP tools for VMware vSphere を導入します。導入プロセスには最大 45 分かかります。
 
 .作業を開始する前に
-小さな単一ノードを展開する場合、コンテンツ ライブラリはオプションです。マルチノードまたは HA 展開の場合、コンテンツ ライブラリが必要です。 VMware では、コンテンツ ライブラリに VM テンプレート、vApp テンプレート、およびその他のファイルが保存されます。コンテンツ ライブラリを使用して展開すると、ネットワーク接続に依存しないため、シームレスなエクスペリエンスが実現します。
+超小型のシングルノード構成を導入する場合、コンテンツライブラリはオプションです。マルチノード構成または HA 構成の場合、コンテンツライブラリが必要です。
 
-コンテンツ ライブラリを作成する前に、次の点を考慮してください。
+VMware では、コンテンツライブラリに VM テンプレート、vApp テンプレート、およびその他のファイルが格納されます。コンテンツライブラリを使用すると、テンプレート操作中に直接的なネットワーク アクセスに依存しないため、展開が簡素化されます。
+
+コンテンツライブラリを作成する前に：
 
 * クラスター内のすべてのホストがアクセスできるように、共有データストアにコンテンツ ライブラリを作成します。
-* ONTAP tools for VMware vSphereを導入する前に、コンテンツ ライブラリを設定します。
-* アプライアンスを HA 用に構成する前に、コンテンツ ライブラリが作成されていることを確認してください。
-+
-
-NOTE: デプロイ後にコンテンツ ライブラリ内の OVA テンプレートを削除しないでください。
+* ONTAP tools for VMware vSphere OVA をデプロイする前に、コンテンツライブラリを作成してください。
+* デプロイ後もOVAテンプレートはコンテンツライブラリに保管してください。
 
 
 
+NOTE: 後で HA を有効にする予定がある場合は、ONTAP tools の VM を ESXi ホスト上に直接配置するのではなく、ESXi クラスタまたはリソース プールに配置してください。
 
-NOTE: 将来的に HA 展開を有効にするには、ONTAP tools 仮想マシンを ESXi ホスト上に直接展開しないでください。代わりに、ESXi ホスト クラスタまたはリソース プール内に展開してください。
+コンテンツライブラリを作成するには：
 
-コンテンツ ライブラリを作成するには、次の手順に従います。
-
-. ONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名付き証明書を含むファイルを次の場所からダウンロードします。  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^] 。
+. ONTAP tools for VMware vSphere のバイナリ（_.ova_）と署名済み証明書を https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]からダウンロードします。
 . vSphere Clientにログインします。
-. vSphere Clientメニューを選択し、*[Content libraries]*を選択します。
-. ページの右側にある*[作成]*を選択します。
-. ライブラリの名前を指定し、コンテンツライブラリを作成します。
-. 作成したコンテンツ ライブラリに移動します。
-. ページ右側の*Actions*を選択し、*Import item*を選択して、OVAファイルをインポートします。
+. vSphere Client メニューから、「コンテンツライブラリ」を選択します。
+. 「作成」を選択します。
+. 名前を入力して、コンテンツライブラリを作成してください。
+. 作成したコンテンツライブラリを開きます。
+. *Actions* > *Import item* を選択し、OVA ファイルをインポートします。
 
 
 
-NOTE: 詳細については https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["コンテンツライブラリの作成と使用"]、ブログを参照してください。
+NOTE: 詳細については、 https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["コンテンツライブラリの作成と使用"]を参照してください。
 
 
-NOTE: デプロイを進める前に、クラスタの分散リソース スケジューラ（DRS）を「保守的」に設定してください。これにより、インストール中に VM が移行されないことが保証されます。
+NOTE: デプロイ前に、クラスタの分散リソース スケジューラ（DRS）を「保守的」に設定して、インストール中の VM 移行を防止してください。
 
-ONTAP tools for VMware vSphere vSphereは、最初は非HA構成で展開されます。HA展開に拡張するには、CPUホット アドとメモリ ホットプラグを有効にする必要があります。この手順は、デプロイプロセスの一部として実行することも、デプロイ後にVMの設定を編集することもできます。
+ONTAP tools for VMware vSphere は、最初は非HA構成で展開されます。ONTAP tools 10.6 以降、CPU ホット アドおよびメモリのホットプラグはデフォルトで有効になっています。後でHA構成に拡張するには、これらの機能を有効にする必要があります。
 
 .手順
-. ONTAP tools for VMware vSphereのバイナリ(_.ova_)と署名済み証明書が含まれているファイルをからダウンロードします https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]。OVA をコンテンツ ライブラリにインポートした場合は、この手順をスキップして次の手順に進むことができます
+. ONTAP tools の OVA ファイルと署名済み証明書を https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Site"^]からダウンロードします。既に OVA をコンテンツライブラリにインポートしている場合は、この手順をスキップしてください。
 . vSphereサーバにログインします。
-. OVA を展開するリソース プール、クラスター、またはホストに移動します。
+. OVA をデプロイするリソース プール、クラスター、またはホストに移動します。
 +
 
-NOTE: 自身が管理するvVolsデータストアにONTAP tools for VMware vSphere仮想マシンを絶対に保存しないでください。
+IMPORTANT: ONTAP tools VM は、管理対象の vVols データストアに保存しないでください。
 
-. OVAは、コンテンツライブラリまたはローカルシステムから導入できます。
+. OVAファイルは、コンテンツライブラリまたはローカルシステムから展開してください。
 +
 |===
 
@@ -67,18 +65,13 @@ NOTE: 自身が管理するvVolsデータストアにONTAP tools for VMware vSph
 
 | a.右クリックして*[Deploy OVF template...]*を選択します。b. URLからOVAファイルを選択するか場所を参照し、*[Next]*を選択します。 | A.コンテンツライブラリに移動し、導入するライブラリアイテムを選択します。B.* Actions *>* New VM from this template *を選択します。 
 |===
-. [名前とフォルダの選択]フィールドに仮想マシン名を入力し、その場所を選択します。
-+
-** vCenter Server 8.0.3 バージョンを使用している場合は、*この仮想マシンのハードウェアをカスタマイズする*オプションを選択します。これにより、*完了の準備ができました*ウィンドウに進む前に*ハードウェアのカスタマイズ*という追加の手順が有効になります。
-** vCenter Server 7.0.3を使用している場合は、導入の最後にある*次の手順*セクションの手順に従ってください。image:../media/select-name.png["名前とフォルダを選択してください"]
-
-
+. 「名前とフォルダを選択」に、VMの名前と場所を入力します。
 . コンピュータリソースを選択し、* Next *を選択します。必要に応じて、[Automatically power on deployed VM]チェックボックスをオンにします。
 . テンプレートの詳細を確認し、* Next *を選択します。
 . ライセンス契約を読んで同意し、* Next *を選択します。
 . 構成用のストレージとディスクフォーマットを選択し、*[次へ]*を選択します。
 . 各ソースネットワークのデスティネーションネットワークを選択し、*[Next]*を選択します。
-. *テンプレートのカスタマイズ*ウィンドウで、必要な項目を入力してください。image:../media/custom-temp-p2.png["Customize template"]
+. *テンプレートのカスタマイズ*ウィンドウで、必要な値を入力します。image:../media/custom-temp-p2.png["Customize template"]
 +
 [IMPORTANT]
 ====
@@ -99,39 +92,29 @@ NOTE: 自身が管理するvVolsデータストアにONTAP tools for VMware vSph
 NOTE: vCenter ホスト名は、 ONTAPツール アプライアンスがデプロイされている vCenter Server インスタンスの名前です。
 
 +
-2つのvCenter Server構成でONTAP toolsを導入する場合（アプライアンスが1つのvCenterインスタンスでホストされ、別のインスタンスを管理する場合）、ONTAP toolsをホストしているvCenterインスタンスに制限付きロールを割り当てることができます。OVFテンプレートの導入に必要な権限のみを持つ専用のvCenterユーザーとロールを作成できます。詳細については、link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]に記載されているロールを参照してください。
+2つのvCenter Serverトポロジ（アプライアンスが1つのvCenterインスタンスにホストされ、別のインスタンスを管理する構成）にONTAP toolsをデプロイする場合は、ONTAP toolsをホストするvCenterインスタンスに制限付きロールを割り当ててください。OVFテンプレートのデプロイに必要な権限のみを持つ専用のvCenterユーザーとロールを作成してください。詳細については、link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["ONTAP Tools for VMware vSphere 10に含まれるロール"]を参照してください。
 
 +
-ONTAPツールによって管理される vCenter インスタンスの場合、vCenter ユーザー アカウントに管理者権限があることを確認します。
+ONTAP tools で管理される vCenter インスタンスについては、vCenter ユーザーアカウントに管理者権限があることを確認してください。
 
 +
-** ホスト名には、アルファベット（A ~ Z、a ~ z）、数字（0 ~ 9）、およびハイフン（-）を使用する必要があります。デュアルスタックを設定するには、IPv6アドレスにマッピングされたホスト名を指定します。
+** ホスト名には、文字（A-Z、a-z）、数字（0-9）、ハイフン（-）を含める必要があります。デュアル スタックの場合は、IPv6 アドレスにマッピングされたホスト名を指定してください。
 +
 
-NOTE: Pure IPv6はサポートされていません。mixedモードは、IPv6アドレスとIPv4アドレスの両方を含むVLANでサポートされます。
+NOTE: 純粋なIPv6はサポートされていません。IPv6アドレスとIPv4アドレスの両方を含むVLANでは、混合モードがサポートされます。
 
-** ONTAP toolsのIPアドレスは、ONTAP toolsと通信するためのプライマリインターフェイスです。
-** IPv4はノード設定のIPアドレスコンポーネントで、デバッグやメンテナンスの目的でノードの診断シェルやSSHアクセスを有効にするために使用できます。
+** ONTAP tools の IP アドレス（旧ロードバランサー）は、ONTAP tools Manager (`\https://<ip>:8443/virtualization/ui/`）、API 呼び出し、および vCenter UI からのプラグイン アクセスの外部エンドポイントです。
+** ONTAP tools の仮想 IP アドレス（旧称ノードインターコネクト）は、Kubernetes API （kube-api）サーバーに割り当てられ、Kubernetes コントロールプレーンの仮想 IP として機能します。
+** IPv4アドレスは、指定されたホスト名にマッピングされたノード管理アドレスであり、診断シェルおよびSSH アクセスに使用されます。
 
 
-. vCenter Server 8.0.3 バージョンを使用する場合は、*ハードウェアのカスタマイズ* ウィンドウで *CPU ホット アド* および *メモリ ホットプラグ* オプションを有効にして、HA 機能を使用できるようにします。image:../media/customize-hw105-p2-1.png["CPUホット アド"] image:../media/customize-hw105-p2.png["メモリー ホットプラグ"]
 . [選択内容の確認]ウィンドウで詳細を確認し、*[終了]*を選択します。
 +
-導入タスクが作成されると、進行状況がvSphereタスクバーに表示されます。
+デプロイタスクが開始されると、進行状況がvSphereタスクバーに表示されます。
 
-. VMの電源を自動的にオンにするオプションが選択されていない場合は、タスクの完了後にVMの電源をオンにします。
+. 自動電源オンを選択しなかった場合は、タスク完了後に仮想マシンの電源をオンにしてください。
 
 
-インストールの進行状況は、VMのWebコンソールで追跡できます。
+VMのWebコンソールからインストールの進行状況を追跡できます。
 
-OVF フォームに不一致がある場合は、ダイアログ ボックスが表示され、修正アクションが促されます。タブボタンを使用して移動し、必要な変更を加えて、[OK] を選択します。問題を解決するには 3 回試みることができます。  3 回試行しても問題が解決しない場合は、インストール プロセスが停止し、新しい仮想マシンでインストールを再試行することをお勧めします。
-
-.次の手順
-ONTAP tools for VMware vSphere を vCenter Server 7.0.3 とともに導入済みの場合は、導入後に以下の手順に従ってください。
-
-. vCenter Clientにログインする
-. ONTAP toolsノードの電源をオフにします。
-. *インベントリ* の下にあるONTAP tools for VMware vSphereに移動し、*設定の編集* オプションを選択します。
-. [CPU]オプションで、[CPUホットアドを有効にする]チェックボックスをオンにします。
-. [Memory（メモリ）]オプションで、[Memory hot plug（メモリホットプラグ）]の[Enable（有効化）]チェックボックスをオンにします。
-
+OVFフォームに不一致がある場合は、修正措置を促すダイアログボックスが表示されます。タブキーを使って移動し、必要な変更を行い、*OK* を選択してください。問題解決のための試行回数は3回です。3回試行しても問題が解決しない場合は、インストールが停止しますので、新しい仮想マシンでインストールを再試行してください。
