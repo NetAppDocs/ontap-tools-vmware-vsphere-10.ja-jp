@@ -3122,4 +3122,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3d3b22ece01725fa79df30b77fa3a31a" category="sidebar">ONTAP tools for VMware vSphere 9.xx から 10.6 への移行</block>
   <block id="41a5e22b558335c66fd0b39340507737" category="sidebar">きめ細かなデータストア保護の概念と適用要件</block>
   <block id="78b8a2472e1c8fa0502b3ca56bf4d2c2" category="sidebar">データストア保護のためにクラスタを構成する</block>
+  <block id="6449edcecf1e41dc6b7285ef82391ccf" category="section-title">ストレージバックエンド検出の構成制限</block>
+  <block id="1bf037add08fddef448fa6335970a313" category="paragraph">ONTAP toolsは、最大200個のSVMと約10,000個のLUNのストレージバックエンド検出をサポートします。</block>
 </blocks>

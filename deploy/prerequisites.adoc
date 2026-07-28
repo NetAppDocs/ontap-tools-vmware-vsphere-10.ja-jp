@@ -197,6 +197,13 @@ NOTE: 表内のホスト数は、接続されているすべてのvCentersの合
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== ストレージバックエンド検出の構成制限
+
+ONTAP toolsは、最大200個のSVMと約10,000個のLUNのストレージバックエンド検出をサポートします。
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == VMFSおよびNFSデータストアの構成制限
 

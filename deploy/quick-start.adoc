@@ -67,11 +67,6 @@ ONTAP toolsのインターフェイスを使用して、クラスターまたは
 [discrete]
 == オプションの次のタスク
 
-
-
-[[optional-next-tasks]]
-== オプションの次のタスク
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"] ONTAP ユーザーロールと権限の設定
 [role="quick-margin-para"]
 デフォルトの管理者アカウントを使用する代わりに、最小権限アクセスのためのカスタム ONTAP ロールを設定してください。
