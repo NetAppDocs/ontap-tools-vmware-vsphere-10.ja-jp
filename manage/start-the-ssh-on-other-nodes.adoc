@@ -11,7 +11,7 @@ summary: アップグレードを実行する前に、他のノードでSSHを�
 
 
 [role="lead"]
-アップグレードの前に、他のノードでSSHを開始する必要があります。
+ONTAP tools for VMware vSphere をアップグレードする前に、環境内の他の各ノードで SSH を起動する必要があります。
 
 .作業を開始する前に
 vCenter Server インスタンスの VASA プロバイダ拡張機能を有効にします。

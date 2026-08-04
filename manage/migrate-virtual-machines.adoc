@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: データセンター内の既存の仮想マシンを移行する前に、重要な考慮事項を確認してください。 
 ---
-= ONTAP toolsにおける仮想マシンの移行とクローン作成に関する考慮事項
+= ONTAP tools における仮想マシンの移行とクローン作成について
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereは、コンピューティング専用（vMotion）、ストレージ専用（Storage vMotion）、およびすべてのデータストアにわたるコンピューティングとストレージの統合移行など、すべての主要な仮想マシン移行タイプをサポートしています。このトピックでは、基盤となるデータストアのタイプに関わらず、仮想マシンの移行とクローン作成を成功させるための重要な考慮事項とベストプラクティスについて概説します。
+ONTAP tools for VMware vSphereは、コンピューティング専用（vMotion）、ストレージ専用（Storage vMotion）、およびすべてのデータストアにわたるコンピューティングとストレージの統合移行など、仮想マシン移行のすべての主要なタイプをサポートしています。これらの移行とクローン作成に関する考慮事項とベストプラクティスを理解することで、基盤となるデータストアの種類に関係なく、成功した結果を達成することができます。
 
 
 
@@ -25,7 +25,7 @@ ONTAP tools for VMware vSphereは、コンピューティング専用（vMotion�
 * 別のESXiホスト上の別の互換性のあるデータストア
 
 
-仮想マシンを別のFlexVolボリュームに移行すると、システムはそのボリュームのメタデータファイルを仮想マシン情報で更新します。仮想マシンが別のESXiホストに移行されても、ストレージが同じ場合、基盤となるFlexVolボリュームメタデータファイルは変更されません。
+仮想マシンを別の FlexVol ボリュームに移行する場合、システムはそのボリュームのメタデータファイルを仮想マシン情報で更新します。仮想マシンが別の ESXi ホストに移行されても、ストレージが同じ場合、基盤となる FlexVol ボリュームのメタデータファイルは変更されません。
 
 仮想マシンの移行に関する情報については、以下を参照してください https://techdocs.broadcom.com/["Broadcom技術ドキュメント"]
 
@@ -38,15 +38,15 @@ ONTAP tools for VMware vSphereは、コンピューティング専用（vMotion�
 
 * レプリケーション グループを使用した同じ FlexVol ボリュームの同じコンテナ
 +
-同じFlexVol volumeのメタデータファイルは、クローンされた仮想マシンの詳細情報で更新されます。
+ONTAP tools は、クローンされた仮想マシンの詳細情報を使用して、同じ FlexVol volume のメタデータファイルを更新します。
 
 * レプリケーショングループを使用した異なるFlexVolボリュームの同じコンテナ
 +
-クローンされた仮想マシンが配置されているFlexVol volumeでは、メタデータファイルがクローンされた仮想マシンの詳細情報で更新されます。
+クローンされた仮想マシンが配置される FlexVol volume では、ONTAP tools はクローンされた仮想マシンの詳細情報でメタデータファイルを更新します。
 
 * 別のコンテナまたはvVolsデータストア
 +
-クローンされた仮想マシンが配置されているFlexVolボリュームでは、メタデータファイルが仮想マシンの詳細情報で更新されます。
+クローンされた仮想マシンが配置される FlexVol volume では、ONTAP tools は仮想マシンの詳細情報でメタデータファイルを更新します。
 
 
 

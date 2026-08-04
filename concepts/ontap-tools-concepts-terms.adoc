@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
 summary: ONTAP tools for VMware vSphere のドキュメントで使用される主要な概念と用語を確認します。 
 ---
-= ONTAP toolsの主要な概念と用語
+= ONTAP tools の主要な用語と定義
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-次のセクションでは、このドキュメントで使用される主な概念と用語について説明します。
+ONTAP tools for VMware vSphere で使用される主要な概念と用語を理解してください。定義には、ストレージバックエンド、仮想ボリューム（vVols）、SnapMirror アクティブ同期、VASA、SRA、およびその他のコアコンポーネントが含まれます。
 
 
 
@@ -53,7 +53,7 @@ LUNは、Storage Area Network（SAN；ストレージエリアネットワーク
 [[nvme-namespace-and-subsystem]]
 === NVMeネームスペースとサブシステム
 
-NVMeネームスペースは、論理ブロックにフォーマット可能な不揮発性メモリの容量です。ネームスペースはFCプロトコルやiSCSIプロトコルのLUNに相当し、NVMeサブシステムはigroupに相当します。NVMeサブシステムをイニシエータに関連付けると、関連付けられたイニシエータがサブシステム内のネームスペースにアクセスできるようになります。
+NVMe ネームスペースとは、論理ブロックにフォーマット可能な不揮発性メモリの量のことです。ネームスペースは FC および iSCSI プロトコルにおける LUN に相当し、NVMe サブシステムは igroup に類似しています。NVMe サブシステムはイニシエータと関連付けることができ、イニシエータはサブシステム内のネームスペースにアクセスできるようになります。
 
 
 
@@ -74,14 +74,14 @@ OVAは、仮想マシン上で実行する必要がある仮想アプライア�
 [[recovery-point-objective-rpo]]
 === 目標復旧時点（RPO）
 
-RPOは、データのバックアップまたはレプリケーションの頻度を測定します。これは、障害発生後に業務を再開するためにデータを復元する必要がある正確な時点を指定します。たとえば、RPOが4時間の組織では、災害発生時に最大4時間のデータ損失を許容できます。
+RPOは、データのバックアップまたは複製をどのくらいの頻度で行うかを示す指標です。これは、業務を再開するために、障害発生後にデータを復元する必要がある正確な時点を指定するものです。例えば、組織のRPO（目標復旧時点）が4時間であれば、災害発生時に最大4時間分のデータ損失を許容できるということになります。
 
 
 
 [[snapmirror-active-sync]]
 === SnapMirrorアクティブ同期
 
-SnapMirror Active Syncを使用すると、サイト全体に障害が発生してもビジネスサービスの運用を継続できるため、アプリケーションをセカンダリコピーを使用して透過的にフェイルオーバーできます。SnapMirrorアクティブ同期でフェイルオーバーをトリガーするために、手動操作やカスタムスクリプトは必要ありません。詳細については https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirrorアクティブ同期"]、をご覧ください。
+SnapMirror active sync を使用すると、完全なサイト障害が発生してもビジネス サービスが継続して動作できるようになり、セカンダリ コピーを使用してアプリケーションを透過的にフェイルオーバーすることができます。SnapMirror active sync では、フェイルオーバーをトリガーするために手動操作やカスタム スクリプトは必要ありません。詳細はこちらをご覧ください https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirrorアクティブ同期"]。
 
 
 
@@ -119,7 +119,7 @@ SVMは、ONTAPにおけるマルチテナンシーの単位です。ハイパー
 * *非均一ホストアクセス*は、各サイトのホストが同じサイトのクラスタにのみ接続されることを意味します。サイト間パスとストレッチパスは接続されません。
 +
 
-NOTE: 均一ホストアクセスは、すべてのSnapMirrorアクティブ同期配置でサポートされます。非均一ホストアクセスは、対称アクティブ/アクティブ配置でのみサポートされます。詳細については https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["ONTAPでのSnapMirrorアクティブ同期の概要"]、をご覧ください。
+NOTE: SnapMirror active sync は、あらゆるデプロイメントに対して均一なホスト アクセスをサポートします。非均一なホスト アクセスをサポートするのは、対称型アクティブ / アクティブデプロイメントのみです。詳細はこちらをご覧ください https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["ONTAPでのSnapMirrorアクティブ同期の概要"]。
 
 
 
@@ -135,7 +135,7 @@ VMFSは、VMware vSphere環境に仮想マシンファイルを格納するよ�
 [[virtual-volumes-vvols]]
 === 仮想ボリューム（ VVOL ）
 
-vVolsは、仮想マシンが使用するストレージに対して、ボリュームレベルの抽象化を提供します。これにはいくつかの利点があり、従来のLUNを使用する代替手段となります。vVolデータストアは通常、vVolsのコンテナとして機能する単一のLUNに関連付けられています。
+vVolsは、仮想マシンが使用するストレージに対して、ボリュームレベルの抽象化を提供します。vVolsにはいくつかの利点があり、従来のLUNを使用する代替手段となります。vVolデータストアは通常、vVolsのコンテナとして機能する単一のLUNに関連付けられています。
 
 
 
@@ -149,7 +149,7 @@ vCenter Serverの[Policies and Profiles]に仮想マシンストレージポリ�
 [[vmware-live-site-recovery]]
 === VMware Live Site Recovery
 
-VMware Live Site Recoveryは、以前はSite Recovery Manager（SRM）と呼ばれていましたが、VMware仮想環境のビジネス継続性、ディザスタリカバリ、サイト移行、および無停止のテスト機能を提供します。
+VMware Live Site Recovery（旧称：Site Recovery Manager （SRM））は、VMware 仮想環境向けに、ビジネス継続性、ディザスタリカバリ、サイト移行、および無停止テスト機能を提供します。
 
 
 

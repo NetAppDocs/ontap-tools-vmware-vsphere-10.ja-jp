@@ -11,7 +11,7 @@ summary: ONTAP tools がネストされた igroup を表現および管理し、
 
 
 [role="lead"]
-ONTAP tools VMとONTAPストレージシステムの両方を管理する場合、特にONTAP toolsで管理されていない環境から管理されている環境へデータストアを移動する際には、igroupの動作を理解することが重要です。このページでは、ONTAP tools for VMware vSphereがigroupをどのように表現し管理するかについて説明します。これは、以前のリリースと現在のネストされたigroupモデルとの間の動作の違いを理解するための概念的な情報です。
+ONTAP tools の VM と ONTAP ストレージシステムの両方を管理する場合は、igroup の動作を理解する必要があります。特に、ONTAP tools で管理されていない環境から管理されている環境へデータストアを移動する場合は重要です。ONTAP tools for VMware vSphere は、ネストされた igroup モデルを使用して igroup を表現および管理します。このモデルを理解することで、以前のリリースと現在の実装との動作の違いを解釈するのに役立ちます。
 
 ONTAP tools for VMware vSphere 10.4以降、ONTAP toolsはONTAPおよびvCenterオブジェクトを自動的に作成および維持し、VMwareデータセンター環境におけるデータストア管理を簡素化します。ONTAP tools for VMware vSphere 10.5 P2以降、移行されたigroupは使用されなくなると自動的に削除されます。
 
@@ -41,7 +41,7 @@ image:../media/non-otv-managed.png["ONTAPツール以外で管理されるigroup
 .ONTAPツールが管理するigroup
 データストアを作成すると、ONTAP tools for VMware vSphereはネスト構造でigroupを作成します。
 
-たとえば、データストア 1 がホスト 1、2、3 に作成されてマウントされ、新しいデータストア (データストア 2) がホスト 3、4、5 に作成されてマウントされると、 ONTAPツールは効率的な管理のためにホスト レベルの igroup を再利用します。
+例えば、datastore1 を作成してホスト 1、2、3 にマウントし、次に datastore2 を作成してホスト 3、4、5 にマウントするとします。ONTAP tools は、効率的な管理のためにホストレベルの igroup を再利用します。
 
 image:../media/otv-managed.png["ONTAPツールで管理されるigroup"]
 
@@ -98,7 +98,7 @@ NOTE: 再利用できるのはカスタムigroupのみです。ONTAP tools 9.x�
 [[native-to-managed-conversion-view]]
 == ネイティブからマネージドへの変換ビュー
 
-ONTAP システムおよびVMware環境でigroupとデータストアを直接作成する場合、ONTAP tools は初期状態ではこれらのオブジェクトを管理しません。これにより、フラットなigroup構造になります。
+igroup とデータストアを ONTAP システムおよび VMware 環境で直接作成した場合、ONTAP tools は初期状態ではこれらのオブジェクトを管理しないため、フラットな igroup 構造になります。
 
 image:../media/vmfsds-native.png["データストアとigroupがネイティブに作成されました"]
 

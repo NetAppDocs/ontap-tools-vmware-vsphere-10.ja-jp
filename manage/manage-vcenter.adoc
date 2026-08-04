@@ -11,7 +11,7 @@ summary: vCenter インスタンスを ONTAP tools で管理して、ホスト�
 
 
 [role="lead"]
-vCenter Serverインスタンスは、ホスト、仮想マシン、ストレージバックエンドを制御できる一元管理プラットフォームです。
+vCenter Serverインスタンスは、ホスト、仮想マシン、ストレージバックエンドを制御できる中央管理プラットフォームです。ONTAP toolsでは、ストレージバックエンドの関連付けを解除したり、インスタンスの詳細を変更したり、インスタンスを削除したり、vCenter Server証明書を更新したりできます。
 
 
 
@@ -33,12 +33,14 @@ vCenter Serverのリストページには、関連するストレージバック
 [[modify-a-vcenter-server-instance]]
 == vCenter Serverインスタンスを変更する
 
+次の手順を実行して、vCenter Server インスタンスを変更します。
+
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。
 . サイドバーから *vCenters* を選択します。
 . 変更する vCenter Server の縦の省略記号を選択し、*変更* を選択します。
 . *vCenter の変更* ウィンドウで、ユーザー名、パスワード、ポートの詳細を入力します。
-. 証明書をアップロードし、「*変更*」を選択します。
+. 証明書をアップロードし、*変更*を選択します。
 
 
 
@@ -117,7 +119,7 @@ ONTAPツールは、vCenter 証明書の有効期限が近づいている場合�
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
 ----
-. 証明書が Base 64 ASCII 形式であり、開始行と終了行が含まれていることを確認します。次に例を示します。
+. 証明書が Base 64 ASCII 形式であり、開始行と終了行が含まれていることを確認してください。例：
 +
 [listing]
 ----

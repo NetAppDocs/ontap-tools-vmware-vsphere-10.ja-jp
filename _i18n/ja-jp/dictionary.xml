@@ -125,7 +125,6 @@
   <block id="cbed6a690169a39b735cd91952a313f3" category="paragraph">VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに最も適した設定を行います。</block>
   <block id="48541486be8b3f08161f9ca5ec2e9de2" category="list-text">[推奨設定の適用]*リンクを選択します。</block>
   <block id="7ca24662c9fd82d1c8f828af5176f560" category="list-text">設定ページで、必要に応じて推奨値を選択します。</block>
-  <block id="c260b7a566deca46e5b1c9214afd516d" category="summary">ストレージバックエンドは、ESXiホストがデータストレージに使用するシステムです。</block>
   <block id="600bee7ab6e14dd0a2755b8f2270990c" category="list-text">導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
   <block id="a8534b379980a6bb97915d2890ad3522" category="section-title">vCenter Serverインスタンスを追加する</block>
   <block id="1fb8597774c73340601ce61c9d3435ad" category="list-text">ユーザを管理するためのカスタムロールが作成されます。</block>
@@ -176,7 +175,6 @@
   <block id="c4f8ed60e900e21e211600378be9ee4b" category="doc">ONTAP tools Managerのパスワードの変更</block>
   <block id="d4a113b393db168040c1e9829f30a5d6" category="doc">NFSおよびVMFSデータストアを使用する仮想マシンをvVolデータストアに移行する</block>
   <block id="8cf7c9a705a6403c6ba75ba220837f38" category="paragraph">NFSおよびVMFSデータストアからVirtual Volumes（VVol）データストアに仮想マシンを移行して、ポリシーベースのVM管理やその他のVVol機能を利用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。</block>
-  <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">移行する仮想マシンでVASA Providerが実行されていないことを確認します。VASA Provider を実行している仮想マシンを VVOL データストアに移行すると、いっさいの管理操作を実行できなくなり、仮想マシンの電源をオンにすることもできなくなります。</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">NFSおよびVMFSデータストアからvVolデータストアに移行する場合、VMFSデータストアからのデータの移動にはvStorage APIs for Array Integration（VAAI）のオフロードがvCenter Serverで使用されますが、NFS VMDKファイルからのデータの移動には使用されません。VAAI のオフロードは、通常、ホストの負荷を軽減します。</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">証明書を管理します</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">メンテナンスユーザのログインクレデンシャルが必要です。</block>
@@ -208,9 +206,6 @@
   <block id="5fffbf2fea252f0535c4bf75d67805e3" category="paragraph">保護された仮想マシンは、次の場所にクローニングできます。</block>
   <block id="3cd4a1ddd805e8692af529725906108e" category="doc">データストアの削除</block>
   <block id="a8211be0a6fb73b95cdffd1ac6d2b9d5" category="list-text">ONTAPストレージの元のボリュームを削除するには、* ONTAPクラスタのボリュームを削除する*を選択します。</block>
-  <block id="c00d479945ae0ac31dc91b4e3dd1e862" category="summary">データストアをマウントすると、他のホストからストレージにアクセスできるようになります。ホストを VMware 環境に追加したあとで、そのホストにデータストアをマウントできます。</block>
-  <block id="6758b1c73221d6658afeee2ccd4a3e13" category="paragraph">ボリュームやアグリゲートの容量が特定のレベルに達したときにvCenter Serverで通知を受信するしきい値を設定できます。</block>
-  <block id="0ca6560aa88bd22fa1b3bb69d8594555" category="list-title">手順</block>
   <block id="eefb401515606432e535b2c010ca31a1" category="doc">データストアのONTAPストレージビュー</block>
   <block id="3c69aed3fe79d658207798783104200f" category="inline-link">コンテンツライブラリの作成と使用</block>
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">[選択内容の確認]ウィンドウで詳細を確認し、*[終了]*を選択します。</block>
@@ -277,7 +272,6 @@ sudo rke2-uninstall.sh（すべてのVM）：</block>
   <block id="bf4c81fa7ba63639b09571cecd64f47b" category="cell">VMware vSphere管理者向けNetApp ONTAPツール</block>
   <block id="b2cd18c44875bb3f426decbafad3b8e6" category="cell">NetApp ONTAP Tools for VMware vSphere読み取り専用</block>
   <block id="172e99eeccf15776434aac31db2a4a6e" category="cell">ONTAP toolsへの読み取り専用アクセスを許可します。アクセスが制御されたONTAP tools for VMware vSphereアクションを実行することはできません。</block>
-  <block id="eb59b3767616ff613c26e1d7f5451f0e" category="summary">次のセクションでは、このドキュメントで使用される主な概念と用語について説明します。</block>
   <block id="9ffd131623ad515701813a71121ab8a3" category="doc">主要な概念と用語</block>
   <block id="d8656f55a37738b40be6ef5801f660e5" category="section-title">認証局（CA）</block>
   <block id="87657b14ac822b0f1c3f5984ab602336" category="section-title">高可用性（ HA ）</block>
@@ -467,10 +461,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c010d526ac46428eb5d252ae2a7d2d6d" category="list-text">ONTAP Tools for VMware vSphere VMを削除します。</block>
   <block id="73199adc1dd0bc42eef3c48da1e43a0b" category="doc">ストレージのしきい値の管理</block>
   <block id="4f3d8287647170b16320a50c9b202bcf" category="doc">vVolデータストアのマウント</block>
-  <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">ONTAP Tools for VMware vSphereプラグインは、仮想マシンとデータストアのレポートを提供します。vCenterクライアントのショートカットセクションでNetApp ONTAP tools for VMware vSphereプラグインのアイコンを選択すると、ユーザインターフェイスが概要ページに移動します。[レポート]タブを選択して、仮想マシンとデータストアのレポートを表示します。</block>
   <block id="4e740e8d009ff8d0ca15216304e1e027" category="paragraph">[列の管理]オプションを使用すると、さまざまな列の表示と非表示を切り替えることができます。</block>
   <block id="c9e48152a254396a711cecd4df0731c4" category="list-text">NFSまたはVMFSデータストアを右クリックし、* NetApp ONTAP tools *&gt;* Resize datastore *を選択します。</block>
-  <block id="e5fca0377c7dfd55d5d999c1160bf046" category="summary">アップグレードの前に、他のノードでSSHを開始する必要があります。</block>
   <block id="38b79f652cf5dac18f92a7f17de383e2" category="doc">他のノードでSSHを開始する</block>
   <block id="08742e1de625adf7d63692f2b4ed6187" category="section-title">ストレージバックエンドの変更</block>
   <block id="cb1ab6992e81e4e8cb491da7d71f7c3d" category="paragraph">ストレージバックエンドを変更するには、このセクションの手順を実行します。</block>
@@ -535,7 +527,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="15fd5e4e757c3763d058dedf1246e182" category="list-text">[関係の追加]*を選択します。</block>
   <block id="3fe598cb92fb08f012c12b0e1aa67204" category="list-text">[ SnapMirror関係の追加]*ウィンドウで、*[ターゲットStorage VM]*と*[ポリシー]*タイプを選択します。</block>
   <block id="b5783ac409e73180ab37229219e49c28" category="doc">vVolデータストアの縮小</block>
-  <block id="cfe2ade5e927260481a4080015905722" category="paragraph">5秒でオプションを選択できます。いずれかのキーを押して進行状況を停止し、GRUBメニューをフリーズします。</block>
   <block id="9704bbe9f3dcdd6bcaf267fe293ed88b" category="doc">NFSおよびVMFSデータストアのサイズ変更</block>
   <block id="145030897b3622bf5373be4a74e8ad80" category="list-text">データストアをアンマウントするESXiホストを1つ以上選択します。</block>
   <block id="b58a084a2e5b8ee16e91cff21aeacb3b" category="list-text">[アンマウント]*ボタンを選択します。</block>
@@ -597,7 +588,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">vCenter Serverインスタンスの追加</block>
   <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">システム要件</block>
   <block id="7b4a891ff8781d5df1c6613d8a092a8a" category="doc">vCenter Serverインスタンスの管理</block>
-  <block id="55a2bc624166080e36f75d7c8c9ae6a9" category="paragraph">vCenter Serverインスタンスは、ホスト、仮想マシン、ストレージバックエンドを制御できる一元管理プラットフォームです。</block>
   <block id="328fffedf05a4fd19a6c35615f155640" category="section-title">vCenter Serverインスタンスを変更する</block>
   <block id="09a7915402ea99d52bd59c26effb3cd9" category="list-text">サイドバーから該当するvCenter Serverインスタンスを選択します。</block>
   <block id="db846111e857460f56cbf51ec88e1faa" category="section-title">vCenter Serverインスタンスを削除する</block>
@@ -670,7 +660,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">進捗状況は、最近のタスクパネルで追跡できます。</block>
   <block id="e3ad07a7efc1e8b336d03741c1f32de2" category="doc">ONTAP toolsレポート</block>
   <block id="6af43bd137ddca6aadd0587323c669ae" category="paragraph">進捗状況は、[最近のタスク]パネルで追跡できます。</block>
-  <block id="adbfd849396b043f4dcb2a476c5c8679" category="list-text">ASA R2 SVMシステムでは、容量ポートレットは表示されません。容量ポータルは、SVMまたはクラスタに対してDisaggregatedプロパティが「true」に設定されている場合にのみ必要です。</block>
   <block id="a0232c1a7a8b2051db36fee0cee48ac5" category="list-text">ASA R2 SVMシステムの場合は、[基本情報]セクションにプラットフォームタイプが表示されます。</block>
   <block id="623a19a9d92512b6c3a5932066325ffa" category="paragraph">[Interface]タブには、インターフェイスに関する詳細情報が表示されます。</block>
   <block id="bbf638168b43bf582cecf10177afc3d2" category="paragraph">[ローカル階層]タブには、アグリゲートリストに関する詳細情報が表示されます。</block>
@@ -892,7 +881,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6ca1f41f9b51c9451c86fc8719b6b18d" category="list-text">[ホストにデータストアをマウントする]ダイアログボックスで、データストアをマウントするホストを選択し、*[マウント]*を選択します。</block>
   <block id="cd976ca49583a8080802261ae61aa5a0" category="list-text">マウントするデータストアを選択し、*[マウント]*を選択します。</block>
   <block id="f90f65776adad29b4cbb92ed52a8e69c" category="list-text">VVOLデータストアを右クリックし、* NetApp ONTAP tools *&gt;*[データストアからのストレージの削除]*を選択します。</block>
-  <block id="aead57347d2dc00927edd37edabb180a" category="list-text">[ストレージの削除]*ポップアップで*[ ONTAPクラスタからボリュームを削除する]*チェックボックスを選択してデータストアおよびONTAPストレージからボリュームを削除し、*[削除]*を選択します。</block>
   <block id="267de19ac03e71a99875cacf87972c29" category="list-text">サイドバーから*[設定]*を選択します。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>ONTAP Tools for VMware vSphereを使用して作成されます。</block>
   <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">すべてのストレージバックエンドを削除します。を参照してください <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
@@ -970,7 +958,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">タスクの内容</block>
   <block id="d71ad052f215892f4dc93f59a3cadac4" category="list-text">vSphere Clientのバージョンと選択したデータストアのタイプによっては、一部の右クリック操作が無効または使用できない場合があります。</block>
   <block id="2e833566ef9159934f13bfc085d5d3d8" category="list-text">vSphere Client 8.0以降のバージョンを使用している場合、一部の右クリックオプションは非表示になります。</block>
-  <block id="a109b0e6328f3c52176e48fdf19eb575" category="list-text">vSphere 7.0U3からvSphere 8.0のバージョンでは、オプションが表示されていても、この操作は無効になります。</block>
   <block id="39037b551a4495c32d5aa53bb3952e75" category="list-text">左側のナビゲーションペインで、ホストを含むデータセンターを選択します。</block>
   <block id="fa946c7b8b00ac3d8f1845bdcf279074" category="paragraph">データストアをすべてのホストからアンマウントすることはできません。代わりにデータストアの削除処理を使用することを推奨します。</block>
   <block id="664d1c7a4b62c8e9260ce3fdf6ca12ed" category="admonition">アレイマネージャを設定するときは、ONTAP tools for VMware vSphereでストレージシステムのオンボードに使用したのと同じ接続（IPアドレス）をストレージシステムに使用する必要があります。たとえば、アレイマネージャの設定範囲がSVMである場合は、ONTAP tools for VMware vSphereのストレージをSVMレベルで追加する必要があります。</block>
@@ -982,7 +969,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">ONTAP Tools for VMware vSphereのアップグレード</block>
   <block id="f86285920a635060c5823a8276628377" category="open-title">VASA Providerの証明書のアップグレード</block>
   <block id="bfa75497fc09ee1e1a68a164c43dbf33" category="paragraph"><block ref="bfa75497fc09ee1e1a68a164c43dbf33" category="inline-link-macro-rx"></block></block>
-  <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">ONTAP tools for VMware vSphereをアンインストールすると、ツール内のデータがすべて削除されます。</block>
   <block id="cbd662f4329d81667a2e3c676911b7ad" category="doc">ONTAP Tools for VMware vSphereの設定の変更</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">ONTAP Tools for VMware vSphereサービスを有効にする</block>
   <block id="2bff6d8315f7f8c6cf3c54e6e53d9698" category="cell">*データストアタイプ*</block>
@@ -995,11 +981,9 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>。</block>
   <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">VMware Live Site RecoveryアプライアンスでのSRAの設定</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text"><block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>からSRAアダプタファイルをダウンロードしておく必要があります<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
-  <block id="92b0e7888dea318ff0d52ecace485e8b" category="summary">ロールベースアクセス制御（RBAC）は、組織内のリソースへのアクセスを制御するためのセキュリティフレームワークです。RBACでは、個 々 のユーザに許可を割り当てるのではなく、特定のレベルの権限でロールを定義してアクションを実行することで、管理が簡易化されます。定義されたロールはユーザーに割り当てられます。これにより、エラーのリスクが軽減され、組織全体のアクセス制御の管理が簡素化されます。</block>
   <block id="bc7d4efb983c07650bf67ebd23206b42" category="doc">ONTAP Tools for VMware vSphere 10 RBACの詳細</block>
   <block id="d4f28f897c6613f7cf374c4b672a42af" category="paragraph">RBACの標準モデルは、いくつかの実装テクノロジや複雑化するフェーズで構成されています。その結果、実際のRBACの導入は、ソフトウェアベンダーとその顧客のニーズに基づいて異なり、比較的単純なものから非常に複雑なものまでさまざまです。</block>
   <block id="768c252904fcf4ee8a7b04339470d9d4" category="section-title">RBACコンポーネント</block>
-  <block id="0e54116025e006443a313af3422c73b6" category="paragraph">a_role_は、1つ以上のPrivilegesを含むコンテナです。ロールは通常、特定のタスクまたはジョブ機能に基づいて定義されます。ロールをユーザに割り当てると、そのロールに含まれるすべてのPrivilegesがユーザに付与されます。また、Privilegesと同様に、実装には事前定義されたロールが含まれており、通常はカスタムロールを作成できます。</block>
   <block id="c8308b1eba7ba926a61b8fd802194386" category="paragraph-title">オブジェクト</block>
   <block id="251ba6a14d90c886235eec2229fddbaa" category="paragraph">an_object_は、RBAC環境内で識別される実際のリソースまたは抽象リソースを表します。Privilegesで定義されたアクションは、関連オブジェクトに対して、または関連オブジェクトとともに実行されます。実装に応じて、Privilegesはオブジェクトタイプまたは特定のオブジェクトインスタンスに付与できます。</block>
   <block id="d06c4b7230b78df6a13a1ffe93c68ea7" category="paragraph">_users_には、認証後に適用されるロールが割り当てられるか、またはロールに関連付けられます。RBACの実装によっては、1人のユーザに1つのロールのみを割り当てることができるものと、1人のユーザに複数のロールを割り当てることができるものがあります（一度に1つのロールのみがアクティブになる場合もあります）。ロールを_groups_に割り当てると、セキュリティ管理がさらに簡素化されます。</block>
@@ -1007,14 +991,10 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ecc206dfcc570366eb56c27d01c64234" category="section-title">2つのRBAC環境</block>
   <block id="7b992155512beae7a0c0bcd838bf53bc" category="paragraph-title">VMware vCenter Server</block>
   <block id="a44122ce0420d82ffec8245eb58d1686" category="inline-link-macro">vCenter Server RBACカンキヨウ</block>
-  <block id="abfe427299b92162e94931d6113396c6" category="paragraph">VMware vCenter Serverに実装されたRBACは、vSphere Clientユーザインターフェイスを通じて公開されるオブジェクトへのアクセスを制限するために使用されます。ONTAP tools for VMware vSphere 10のインストールの一環として、RBAC環境が拡張され、ONTAP toolsの機能を表すオブジェクトが追加されました。これらのオブジェクトへのアクセスは、リモートプラグインを通じて提供されます。詳細については、を参照してください。<block ref="0dce39201791f8056b9c7e84d5c66f06" category="inline-link-macro-rx"></block></block>
   <block id="dbc7df65565b4f36db0a469d1e54a440" category="paragraph-title">ONTAPクラスタ</block>
   <block id="95efa80bc6e01f977e0f0ccd4a71490a" category="inline-link-macro">ONTAP RBACカンキヨウ</block>
-  <block id="d5afa90f21ed3ed6f44619bc06967ae9" category="paragraph">ONTAP tools for VMware vSphere 10は、ONTAP REST APIを使用してONTAPクラスタに接続し、ストレージ関連の処理を実行します。ストレージリソースへのアクセスは、認証時に指定したONTAPユーザに関連付けられたONTAPロールで制御されます。詳細については、を参照してください <block ref="e4be7d0a80a9c4d84c7c1c04c147ff8e" category="inline-link-macro-rx"></block> 。</block>
-  <block id="8b25344f06ee105a716a7392efac0b3f" category="summary">ONTAPは、堅牢で拡張可能なRBAC環境を提供します。RBAC機能を使用すると、REST APIおよびCLIで公開されるストレージおよびシステム処理へのアクセスを制御できます。ONTAP Tools for VMware vSphere 10環境で使用する前に、環境を理解しておくと役立ちます。</block>
   <block id="4c095493a08eb39706180a8f9166adc3" category="section-title">管理オプションの概要</block>
   <block id="d4f827c0c7c9fb2e15e437f882df68ca" category="inline-link">ONTAPの自動化：RBACセキュリティの概要</block>
-  <block id="54d793c5631c270bc5de979749809fd2" category="paragraph">ONTAP RBACを使用する際には、環境や目標に応じていくつかのオプションを使用できます。主な管理上の決定事項の概要を以下に示します。詳細については、も参照してください<block ref="120c2c6e56fa9c261aa8c0c07fc333dd" category="inline-link-rx"></block>。</block>
   <block id="c06f60010bfa0d3998d5bbc662b880ed" category="paragraph-title">ロールとPrivilegesのタイプ</block>
   <block id="b7b5a206a6cae3234a904f8160b66b9e" category="paragraph">ONTAPユーザを定義するには、ONTAPロールが必要です。ONTAPロールには次の2種類があります。</block>
   <block id="50780f47f6839d47d60bc4555ee00c3f" category="list-text">REST</block>
@@ -1025,7 +1005,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4decfe07f6af497a150cb2dd84ce7618" category="paragraph-title">ロールの定義</block>
   <block id="71ce8e2978e352b6f5bb692e3f48b57a" category="paragraph">ONTAPには、クラスタレベルとSVMレベルの両方で事前定義された一連のロールが用意されています。カスタムロールを定義することもできます。</block>
   <block id="19f0e25901b006bda97a48b2d2f6e165" category="section-title">ONTAP RESTロールの使用</block>
-  <block id="f9c8e8f0f77467890d2e7d7d0a646019" category="paragraph">ONTAP tools for VMware vSphere 10に含まれているONTAP RESTロールを使用する場合は、いくつかの考慮事項があります。</block>
   <block id="dc4c8b8f3e2d25c9c02701f2e4f4a5f6" category="paragraph-title">ロールマッピング</block>
   <block id="14347bc1ffea96e9ab9fb563020db667" category="paragraph">従来のロールを使用するかRESTロールを使用するかに関係なく、すべてのONTAPアクセスの決定は基になるCLIコマンドに基づいて行われます。ただし、RESTロールのPrivilegesはREST APIエンドポイントで定義されるため、ONTAPでは各RESTロールに対して_mapped_traditionalロールを作成する必要があります。そのため、各RESTロールは基盤となる従来のロールにマッピングされます。これにより、ONTAPは、ロールタイプに関係なく一貫した方法でアクセス制御の決定を行うことができます。並行マッピングされたロールは変更できません。</block>
   <block id="39af865fde550e697cea78c7cf019668" category="paragraph-title">CLI Privilegesを使用したRESTロールの定義</block>
@@ -1033,9 +1012,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1723772cd71ffc40ef36a464ac996953" category="paragraph-title">ONTAPロールを定義する際の管理インターフェイス</block>
   <block id="8b74f69bd0a99078b4c4c49ea8d7d099" category="inline-link-macro">ONTAP RBACとONTAP Tools for VMware vSphere 10の使用</block>
   <block id="33de9a7c17ad95edd4bf87d2e32a7ab6" category="paragraph">ONTAP CLIおよびREST APIを使用して、ユーザとロールを作成できます。ただし、System ManagerのインターフェイスとONTAP tools Managerから利用できるJSONファイルを使用する方が便利です。詳細については、を参照してください <block ref="cd4e0c522d130b8c0abe0fca11ee41a7" category="inline-link-macro-rx"></block> 。</block>
-  <block id="75b97d1a08ea05c79f1586fc8900cd8e" category="summary">ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本番環境で使用する前に考慮する必要があります。</block>
   <block id="8bca7397193febb861597e2ecb032df9" category="section-title">セツテイフロセスノカイヨウ</block>
-  <block id="bb89f796a730c3146a98b69f62482e8d" category="paragraph">主な設定手順について、以下で大まかに説明します。<block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block>詳細については、を参照してください。</block>
   <block id="28b866f285e4410c78d90e8cd0fda2d4" category="paragraph-title">1.準備</block>
   <block id="b680153df51e82ba263f4bcb7d5dd65d" category="paragraph">ONTAP tools ManagerとONTAPクラスタの両方に対する管理クレデンシャルが必要です。</block>
   <block id="5fad7e68da310385f8f20a219196a7b4" category="paragraph-title">2.JSON定義ファイルをダウンロードする</block>
@@ -1043,7 +1020,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="a05c5ee8679155cb70def30bf43cccb1" category="paragraph-title">3.ロールを持つONTAPユーザを作成する</block>
   <block id="764285e36c0af4a82a910203c3b82632" category="paragraph">System Managerにサインインしたら、ユーザとロールを作成できます。</block>
   <block id="29f61373486f27633d96729ea473c9e7" category="list-text">左側の*[クラスタ]*を選択し、*[設定]*を選択します。</block>
-  <block id="68ef81e78bc386790e42bd6b1c658d2b" category="list-text">[ユーザとロール]*まで下にスクロールし、をクリックします<block ref="45858e136decb60b1d8904129517fe57" prefix=" " category="inline-code"></block>。</block>
   <block id="5e33f36fe4c95345500e05c0f606e0f8" category="list-text">[Users]で[Add]*を選択し、[Virtualization products]*を選択します。</block>
   <block id="e66204bf4ee480dcb50321f8368b8679" category="list-text">ローカルワークステーションでJSONファイルを選択してアップロードします。</block>
   <block id="e1ecf0df107c9252cace9925c2a29f31" category="paragraph-title">4.ロールを設定する</block>
@@ -1059,15 +1035,12 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4e7c41e3bba1d4b12b4cb6a39b1814f6" category="list-text">ストレージの削除</block>
   <block id="f0a085c6b703ea4bd4c06c6e4ca51aa7" category="paragraph">ストレージを破棄できます。また、検出、ストレージの作成、ストレージの変更の各ロールに関連付けられているすべてのPrivilegesも含まれます。</block>
   <block id="e4ed639cf75d595ee4858ce438889671" category="section-title">ロールを持つユーザを生成する</block>
-  <block id="aa6879df2b3169fbda16473119c2ce29" category="paragraph">環境の構成オプションを選択したら、*[追加]*をクリックすると、ONTAPによってユーザーとロールが作成されます。生成されたロールの名前は、次の値を連結したものです。</block>
   <block id="03706e1dce0c98b08d188205d076dd47" category="list-text">JSONファイルで定義された固定プレフィックス値（例：「OTV_10」）</block>
   <block id="7dac56e2b364e98d1289533350488840" category="list-text">選択した製品機能</block>
   <block id="1da679710b1adbd212bf4e405b38f281" category="list-text">権限セットのリスト。</block>
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">例</block>
   <block id="4628ce4ed29ed74d4945136c742ba3a6" category="paragraph"><block ref="7c14b8ae567d452539a915b9285021b8" prefix="" category="inline-code"></block></block>
-  <block id="cf7e7d1fa6689d4e0e92d999c6237fb5" category="summary">VMware vCenter ServerにはRBAC機能が用意されており、vSphereオブジェクトへのアクセスを制御できます。これは、vCenterの一元化された認証および許可セキュリティサービスの重要な部分です。</block>
   <block id="c919d083ca35909ad6ec0213308214ee" category="section-title">vCenter Serverアクセス許可の図</block>
-  <block id="f5936d22e8b5eb5001bc642d6372a3ce" category="paragraph">アクセス許可は、vCenter Server環境でアクセス制御を適用するための基盤です。これは、アクセス許可の定義に含まれるユーザまたはグループを含むvSphereオブジェクトに適用されます。次の図に、vCenterアクセス許可の概要を示します。</block>
   <block id="65b1fd655adb8df9bc252ecbc423fd17" category="inline-image-macro">vCenterケンケン</block>
   <block id="6c696fa4db382aa6a86b003bfc7df380" category="paragraph"><block ref="6c696fa4db382aa6a86b003bfc7df380" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af1d6322de747a6050ffe22586be77f6" category="section-title">vCenter Serverアクセス許可のコンポーネント</block>
@@ -1075,10 +1048,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1f6500745cb0fece762afaa61fff19be" category="inline-link-macro">vCenter ServerでRBACを使用する</block>
   <block id="a3707a4a1f2fa1889a1b2fe7a9c17ac1" category="paragraph">アクセス許可はvSphereオブジェクトに関連付けられます。vCenter Server、ESXiホスト、仮想マシン、データストア、データセンター、フォルダなどがあります。vCenter Serverは、オブジェクトに割り当てられた権限に基づいて、各ユーザまたはグループがそのオブジェクトに対して実行できる操作またはタスクを決定します。ONTAP tools for VMware vSphereに固有のタスクについては、すべてのアクセス許可がvCenter Serverのルートフォルダレベルまたはルートフォルダレベルで割り当てられ、検証されます。詳細については、を参照してください <block ref="bd32297ae4942b99b96b1173467488f7" category="inline-link-macro-rx"></block> 。</block>
   <block id="bee14fb76ab72077391e4058cc8f8b53" category="section-title">Privilegesとロール</block>
-  <block id="1808ba062a2823e5f8f47e9c508e5f88" category="paragraph">ONTAP Tools for VMware vSphere 10で使用されるvSphere Privilegesには、2つのタイプがあります。この環境でのRBACの使用を簡易化するために、ONTAP toolsには、必要なネイティブおよびカスタムのPrivilegesを含むロールが用意されています。Privilegesには以下が含まれます。</block>
   <block id="99fb3dfe64d66e2151482a34134ca83c" category="paragraph">これはvCenter Serverが提供するPrivilegesです。</block>
   <block id="33f0238bdb7e394a53a83a61dd4a87a3" category="paragraph">これらは、ONTAP Tools for VMware vSphereに固有のカスタムPrivilegesです。</block>
-  <block id="11d52c42c4c5e962da96cbb07269c71c" category="summary">ONTAP Tools for VMware vSphere 10 RBACのvCenter Serverへの実装については、本番環境で使用する前に考慮する必要があります。</block>
   <block id="bad4f36fb4d680591de5a6d098a4900f" category="doc">vCenter Server RBACとONTAP Tools for VMware vSphere 10の使用</block>
   <block id="402c7f2e2d1ca35a706580b301f4a235" category="section-title">vCenterのロールと管理者アカウント</block>
   <block id="40e1cd7cd8a9460fd1ce9dbbb4902ec1" category="paragraph">カスタムのvCenter Serverロールを定義して使用する必要があるのは、vSphereオブジェクトおよび関連する管理タスクへのアクセスを制限する場合のみです。アクセスを制限する必要がない場合は、代わりに管理者アカウントを使用できます。各管理者アカウントは、オブジェクト階層の最上位レベルにある管理者ロールで定義されます。これにより、ONTAP tools for VMware vSphere 10によって追加されたvSphereオブジェクトを含む、vSphereオブジェクトへのフルアクセスが提供されます。</block>
@@ -1090,17 +1061,12 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="37dfa1e83e1bae8babc789706610e685" category="paragraph">VMware vSphere管理者タスク用のコアONTAPツールを実行するために必要なvCenter Server PrivilegesおよびONTAPツール固有のPrivilegesをすべて提供します。</block>
   <block id="cd027b3cb7fb1e8712103dffdf01a491" category="paragraph-title">NetApp ONTAP Tools for VMware vSphereプロビジョニング</block>
   <block id="7e5cada6cb223f80ed0a2b6fee9ab3dc" category="section-title">vSphereオブジェクトとONTAPストレージのバックエンド</block>
-  <block id="c9f180d06ed9b9b8dbf48d2f9c6f8b7e" category="paragraph">2つのRBAC環境が連携して動作します。vSphere Clientインターフェイスでタスクを実行する場合は、まずvCenter Serverに定義されているONTAP toolsのロールがチェックされます。処理がvSphereで許可されている場合は、ONTAPロールPrivilegesが検証されます。2番目の手順は、ストレージバックエンドの作成および設定時にユーザに割り当てられたONTAPロールに基づいて実行します。</block>
   <block id="ae05278c1a2b0d45fbc61a21675607b9" category="section-title">vCenter Server RBACノシヨウ</block>
-  <block id="c77af40075fd8cffde6139bae4fbf41e" category="paragraph">vCenter ServerのPrivilegesとアクセス許可を使用する際に考慮すべき点がいくつかあります。</block>
   <block id="ffe7522d9ea3d134eb0a945275d454d7" category="section-title">必要な権限</block>
-  <block id="ff130e198f6b34171e4682320f8f17df" category="paragraph">ONTAP tools for VMware vSphere 10のユーザインターフェイスにアクセスするには、ONTAP tools固有の_view_privilegeが必要です。この権限がない状態でvSphereにサインインし、NetAppアイコンをクリックすると、ONTAP tools for VMware vSphereにエラーメッセージが表示され、ユーザインターフェイスにアクセスできません。</block>
   <block id="6385cb263e2cd14332ec0eb2e87b8b5e" category="paragraph">vSphereオブジェクト階層の割り当てレベルによって、ユーザインターフェイスのどの部分にアクセスできるかが決まります。ルートオブジェクトにView権限を割り当てると、NetAppアイコンをクリックしてONTAP tools for VMware vSphereにアクセスできるようになります。</block>
-  <block id="c4ac20de086e0cd3fd84b12e6d2ea8e1" category="paragraph">代わりに、別の下位のvSphereオブジェクトレベルにView権限を割り当てることができます。ただし、これにより、アクセスして使用できるONTAP Tools for VMware vSphereメニューが制限されます。</block>
   <block id="548c90bb357fe2a9cfd43bd38ea29463" category="paragraph">vSphereのオブジェクトおよびタスクへのアクセスを制限する場合は、vCenter Serverアクセス許可を使用する必要があります。vSphereオブジェクト階層で権限を割り当てる場所によって、ユーザが実行できるONTAP tools for VMware vSphere 10タスクが決まります。</block>
   <block id="f9cec60da9773f244eba81315b01771b" category="admonition">アクセスをより制限的に定義する必要がないかぎり、ルートオブジェクトレベルまたはルートフォルダレベルで権限を割り当てることをお勧めします。</block>
   <block id="2c3800c2e1b0d19b0ee4eac0c7b2181b" category="paragraph">ONTAP tools for VMware vSphere 10で使用できる権限は、ストレージシステムなどのvSphere以外のカスタムオブジェクトに適用されます。割り当て可能なvSphereオブジェクトがないため、可能であればこれらのアクセス許可をONTAP tools for VMware vSphereルートオブジェクトに割り当てる必要があります。たとえば、ONTAP tools for VMware vSphereの「Add/Modify/Remove storage systems」権限を含むすべてのアクセス許可は、ルートオブジェクトレベルに割り当てる必要があります。</block>
-  <block id="1c6f51dd930ae7303df3ce602b9079b3" category="paragraph">オブジェクト階層の上位レベルでアクセス許可を定義する場合は、アクセス許可が子オブジェクトに継承されるように設定できます。必要に応じて、親から継承したアクセス許可を上書きする追加のアクセス許可を子オブジェクトに割り当てることができます。</block>
   <block id="1756a472d8c27ed7ed5cf0e74f8e0204" category="paragraph">権限はいつでも変更できます。アクセス許可に含まれるPrivilegesを変更した場合、アクセス許可に関連付けられているユーザが変更を有効にするには、vSphereからログアウトしてログインし直す必要があります。</block>
   <block id="01f1acd42f23e67e01a07139e3bfa8df" category="sidebar">RBACの詳細</block>
   <block id="89371fddb8c77133f989dc310158af51" category="sidebar">VMware vSphereを使用したRBAC</block>
@@ -1128,7 +1094,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">vCenter ServerからONTAP tools for VMware vSphere VMの電源をオフにし、VMを削除します。</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">WebブラウザからONTAP Tools Managerを起動します。<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
-  <block id="76bb3525c98b82b9b4baedca4379aa0d" category="paragraph">ONTAP tools Managerにアクセスするには<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block>、ブラウザからを起動し、導入時に指定したONTAP tools for VMware vSphere管理者のクレデンシャルを使用してログインします。</block>
   <block id="0b044bf45314e5d20c59ab7b578f7495" category="cell">ローカルシステムカラ</block>
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">コンテンツライブラリから</block>
   <block id="7b8fae4ee3f2f1e2d2d1cd158ca75e12" category="cell">a.右クリックして*[Deploy OVF template...]*を選択します。b. URLからOVAファイルを選択するか場所を参照し、*[Next]*を選択します。</block>
@@ -1198,8 +1163,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1e98e4c05a8f5cfd1ddd0daba1e28284" category="paragraph">ONTAP tools for VMware vSphere 10 REST APIには、ONTAP toolsのIPアドレスとポートからアクセスできます。完全なURLには、次のようないくつかの部分があります。</block>
   <block id="b36742dbca767f044c826ec8fbe9b099" category="inline-link">整合グループ</block>
   <block id="9eac467fd769a68fc8c2bbd01ce818d4" category="paragraph">デュアルスタックネットワークは、IPv4アドレスとIPv6アドレスの同時使用をサポートするネットワーク環境です。</block>
-  <block id="85f9c12859f9ef21706534940f93412f" category="paragraph">NVMeネームスペースは、論理ブロックにフォーマット可能な不揮発性メモリの容量です。ネームスペースはFCプロトコルやiSCSIプロトコルのLUNに相当し、NVMeサブシステムはigroupに相当します。NVMeサブシステムをイニシエータに関連付けると、関連付けられたイニシエータがサブシステム内のネームスペースにアクセスできるようになります。</block>
-  <block id="40dabb8e3301dc76538fa75004a2c92d" category="paragraph">SnapMirror Active Syncを使用すると、サイト全体に障害が発生してもビジネスサービスの運用を継続できるため、アプリケーションをセカンダリコピーを使用して透過的にフェイルオーバーできます。SnapMirrorアクティブ同期でフェイルオーバーをトリガーするために、手動操作やカスタムスクリプトは必要ありません。詳細については<block ref="51ec33761f23a6cc5cbb85c996201f16" category="inline-link-rx"></block>、をご覧ください。</block>
   <block id="416eb13c424a197adbae4d97eeda27ca" category="paragraph">ストレージバックエンドは、ESXiホストが仮想マシンファイル、データ、およびその他のリソースを格納するために使用する基盤となるストレージインフラです。ESXiホストが永続的データにアクセスして管理できるため、仮想環境に必要なストレージ機能とパフォーマンスが提供されます。</block>
   <block id="ed10c289499acf6ca0b8ce6f1d8390ad" category="paragraph-title">グローバルクラスタ（ストレージバックエンド）</block>
   <block id="db1d66c1a01c130b426288c498569de0" category="paragraph">グローバルストレージバックエンドは、ONTAPクラスタのクレデンシャルでのみ使用でき、ONTAP tools Managerのインターフェイスからオンボードできます。最小限のPrivilegesで追加することで、VVOLの管理に必要な重要なクラスタリソースを検出できます。グローバルクラスタは、vVol管理用にSVMユーザをローカルに追加するマルチテナンシーシナリオに最適です。</block>
@@ -1208,10 +1171,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d35000254eff180e9f797ebdccec4695" category="paragraph">SRAは、VMware Live Site Recoveryアプライアンスにインストールされるストレージベンダー固有のソフトウェアです。このアダプタを使用すると、Site Recovery Managerとストレージコントローラの間で、Storage Virtual Machine（SVM）レベルおよびクラスタレベルの設定で通信できます。</block>
   <block id="f30b9ca52573ae4e07e1d47a07aa8bf6" category="list-text">*均一なホストアクセス*は、2つのサイトのホストが両方のサイトのストレージクラスタへのすべてのパスに接続されていることを意味します。サイト間パスが複数の距離にわたってストレッチされている。</block>
   <block id="32e3115035ed1831322c88ce03af5c52" category="inline-link">ONTAPでのSnapMirrorアクティブ同期の概要</block>
-  <block id="61a01ef40449c7382afbe7d9f585de78" category="admonition">均一ホストアクセスは、すべてのSnapMirrorアクティブ同期配置でサポートされます。非均一ホストアクセスは、対称アクティブ/アクティブ配置でのみサポートされます。詳細については<block ref="90f942fd5a37ab4e29fced42177889a8" category="inline-link-rx"></block>、をご覧ください。</block>
   <block id="cf0250ffb64c5b28b4fa608cd46f3dd5" category="paragraph">VMFSは、VMware vSphere環境に仮想マシンファイルを格納するように設計された、クラスタ化されたファイルシステムです。</block>
   <block id="84653c24dbab141b74f0a352877dbeac" category="paragraph">vCenter Serverの[Policies and Profiles]に仮想マシンストレージポリシーが作成されます。VVOLの場合は、NetApp VVOLストレージタイププロバイダのルールを使用してルールセットを作成します。</block>
-  <block id="5f889e7e595395fa5adbf818e938c5c8" category="paragraph">VMware Live Site Recoveryは、以前はSite Recovery Manager（SRM）と呼ばれていましたが、VMware仮想環境のビジネス継続性、ディザスタリカバリ、サイト移行、および無停止のテスト機能を提供します。</block>
   <block id="8fc2832377269f6b67ea3ab1fee70ab2" category="paragraph">VASAは、管理用のストレージアレイとvCenter Serverを統合する一連のAPIです。このアーキテクチャは、VMware vSphereとストレージシステムの間の通信を処理するVASA Providerなど、複数のコンポーネントに基づいています。</block>
   <block id="46d5887698b4ff6635920edd7737e068" category="paragraph">RPOはRecovery Point Objective（目標復旧時点）の略で、所定の時間内に許容可能とみなされるデータ損失量です。RPOゼロとは、データ損失が一切許容されないことを意味します。</block>
   <block id="6889ed9097181a67fffc7885fd10edb8" category="cell">/api/ストレージ/アベイラビリティゾーン</block>
@@ -1408,7 +1369,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bb53c6c29f127a298da7dd86bf00bb89" category="inline-link">エクスポートポリシーを作成する</block>
   <block id="c7196e0d279885126e6f1c8cf1f7195f" category="paragraph"><block ref="c7196e0d279885126e6f1c8cf1f7195f" category="inline-link-rx"></block></block>
   <block id="d416ef8edb2844634dbe8cfff2e77f9a" category="sidebar">igroupとエクスポートポリシーを理解する</block>
-  <block id="8233416977fe9ac3bd1460bb64acef70" category="paragraph">RPOは、データのバックアップまたはレプリケーションの頻度を測定します。これは、障害発生後に業務を再開するためにデータを復元する必要がある正確な時点を指定します。たとえば、RPOが4時間の組織では、災害発生時に最大4時間のデータ損失を許容できます。</block>
   <block id="84654158695aac7865527b63b1f18c59" category="paragraph">次のワークシートを使用して、VMware vSphere の初期導入用の ONTAP ツールに必要な情報を収集します。</block>
   <block id="fa8cdf838397737e9844f0c6b13bf641" category="doc">VMware vSphere の要件と構成の制限に対する ONTAP ツール</block>
   <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">ONTAPツールの要件と構成の制限</block>
@@ -1421,7 +1381,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="58f346f8b1d31103f78fd7d4298e390b" category="list-text">スケジュールされたクリーンアップ ジョブにより、LUN マッピングのない、ぶら下がっている子 igroup が削除されます。割り当ての子 igroup が削除されます。これらのシナリオは、ONTAP ツールで管理されている igroup にのみ適用され、カスタム作成された igroup には適用されません。</block>
   <block id="80fc4e7f765f5ad9941a9120af4f8556" category="paragraph">初期セットアップ時に IP アドレスを設定する必要がありますが、ポートは 8443 に固定されています。URLの最初の部分は、 ONTAP tools for VMware vSphereで一貫しており、エンドポイント間で変更されるのはリソース カテゴリと特定のリソースのみです。</block>
   <block id="7b0e9cf321ba8511e8db9d3cd25f605d" category="cell">指定されたJSONリクエストボディを使用して、リソースインスタンス全体を更新します。ユーザーが変更できないキー値は保持されます。</block>
-  <block id="0a1cc47a533be02380374bdc570af9e2" category="paragraph">Active Directory またはローカルの vCenter Server インスタンスを使用して、ユーザーとグループを定義できます。ロールと組み合わせることで、vSphere オブジェクト階層内のオブジェクトに対する権限を作成できます。この権限は、関連付けられたロールの権限に基づいてアクセスを許可します。ロールはユーザーに直接個別に割り当てられるのではなく、ユーザーとグループは、vCenter Server のより広範な権限の一部として、ロール権限を通じてオブジェクトへのアクセスを取得します。</block>
   <block id="e396ff391610b3b376c3a278b575438f" category="list-text">ドロップダウンから製品機能として*VSC、VASA プロバイダー、および SRA*を選択します。</block>
   <block id="36b0287ed1ac9ef5ae710b3824924694" category="paragraph">検出要求が送信された後、最近のタスク パネルでアクションの進行状況を追跡できます。</block>
   <block id="3d67f96eb2aec81f92bfe17a27594d9f" category="list-text"><block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block></block>
@@ -1454,7 +1413,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="9738529e665f70e20304e0f0ff9c5f51" category="inline-image-macro">ONTAPツール以外で管理されるigroup</block>
   <block id="572cd36eaad5edc6b82b660df677a0cd" category="paragraph"><block ref="572cd36eaad5edc6b82b660df677a0cd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e349a4e96a32db77479984ded59c694d" category="paragraph-title">ONTAPツールが管理するigroup</block>
-  <block id="8d143644f80909e38a614f9099bea451" category="paragraph">たとえば、データストア 1 がホスト 1、2、3 に作成されてマウントされ、新しいデータストア (データストア 2) がホスト 3、4、5 に作成されてマウントされると、 ONTAPツールは効率的な管理のためにホスト レベルの igroup を再利用します。</block>
   <block id="3bc511986def8084108b5b16361c50c4" category="inline-image-macro">ONTAPツールで管理されるigroup</block>
   <block id="034ec76def2bb67df2065a028531ceda" category="paragraph"><block ref="034ec76def2bb67df2065a028531ceda" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b4214e66e80d2bcb41c3a862d82b9be2" category="inline-image-macro">ONTAPツールは、再利用された子 igroup を持つ igroup を管理します</block>
@@ -1470,7 +1428,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="79182607593f93694c6797765025e5ee" category="paragraph">ONTAP tools for VMware vSphereは以下をサポートします。</block>
   <block id="ae41b024764289871089c192a87abf54" category="list-text">保護や災害復旧などのコア仮想マシン（VM）機能</block>
   <block id="83a449418ccadab91c9d50b430fd073e" category="list-text">ストレージポリシーベースの管理のためのVASAプロバイダー</block>
-  <block id="8728903617ae21646b68affb02eea58b" category="paragraph-title">VMware 向けONTAPツールの高可用性</block>
   <block id="28d9e6a3719e909081966bb4fcf58eec" category="paragraph">ONTAP tools for VMware vSphereは、障害発生時にも中断のない運用を維持できるように高可用性 (HA) サポートを提供します。</block>
   <block id="5cf9717949bd2b276794f878283cf6c0" category="paragraph">HA ソリューションは、次の種類の停止から迅速に回復するのに役立ちます。</block>
   <block id="f7def35c2e2401f50a22b0a65712e1bc" category="list-text">ホスト障害 - 単一ノード障害のみがサポートされます。</block>
@@ -1478,7 +1435,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1664c0b571da93292f9b3364fc893b07" category="list-text">アプリケーション（ONTAPツール）の障害</block>
   <block id="05492ed741da484353289bc486de0911" category="paragraph">ONTAP tools for VMware vSphereを有効にするために、追加の構成を実行する必要はありません。</block>
   <block id="f46fc0107fc80b6421984c860a629ac4" category="paragraph">ONTAP tools for VMware vSphereはvCenter HA をサポートしていません。</block>
-  <block id="cb5aaa4b432bfb00da738902f4a63d98" category="admonition">ONTAP RBAC はストレージ環境に合わせて調整されており、vCenter Server で提供される RBAC 実装よりもシンプルです。  ONTAPでは、ロールをユーザーに直接割り当てます。  ONTAP RBAC では、vCenter Server で使用されるような明示的な権限の構成は必要ありません。</block>
   <block id="f4a146c168aaa994f4132a4e560fa781" category="paragraph">ONTAP tools for VMware vSphereには、カスタム ロールを持つONTAPユーザーの作成のサポートが含まれています。定義は、 ONTAPクラスターにアップロードできる JSON ファイルにパッケージ化されています。ユーザーを作成し、環境とセキュリティのニーズに合わせてロールをカスタマイズできます。</block>
   <block id="b225fa16c9a3f1bf85713a4461d5c022" category="paragraph">証明書に有効なサブジェクト別名 (SAN) フィールドが含まれていることを確認します。  ONTAPシステムは、SAN フィールドを使用してクラスタおよび SVM 管理 LIF を識別します。</block>
   <block id="1f3277e5ebdf2eea2a6f3fe3418039c2" category="list-text">ONTAPクラスタ証明書を自動的に取得して承認するか、証明書の場所を参照して手動でアップロードします。</block>
@@ -1610,8 +1566,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="089678d18235d9e266cec00bebd63f77" category="list-text">ONTAPツールの左ペインで、*設定* &gt; *しきい値設定* &gt; *編集* に移動します。</block>
   <block id="981dec7888864af8df725a6d07d6bd44" category="doc">ONTAPツールでvCenter Serverインスタンスを管理する</block>
   <block id="c1edad95a129405325612eb83df172c8" category="list-text">*vCenter の変更* ウィンドウで、ユーザー名、パスワード、ポートの詳細を入力します。</block>
-  <block id="16dc82f56fd5b2f70a4fc914737955e6" category="list-text">証明書をアップロードし、「*変更*」を選択します。</block>
-  <block id="e0d0715d42a111c0314119f132da7eb4" category="paragraph">ONTAP tools for VMware vSphereはマルチテナントをサポートし、複数の vCenter Server インスタンスの管理を可能にします。</block>
   <block id="1100ab4dca9f92f8486ae26fb4f2d22d" category="paragraph">ONTAPツール マネージャは、 ONTAP tools for VMware vSphereを管理するための Web ベースのコンソールです。</block>
   <block id="19261ed631b8c3951c904f58fe339585" category="paragraph">ONTAPツール マネージャーは次の機能を提供します。</block>
   <block id="91c6868773941acb19b4e876dc376a99" category="list-text">アラートの管理 - ONTAP tools for VMware vSphereによって生成されたアラートを表示およびフィルタリングします。</block>
@@ -1627,9 +1581,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="f5f901b14c53dd0fcc447d49a0a88704" category="cell">vCenter カードには、 ONTAPツールによって管理されるすべての vCenter Server インスタンスの健全性ステータスが表示されます。対応するリンクを選択すると、選択したインスタンスの詳細情報を含むページに移動し、各 vCenter の詳細を表示できます。</block>
   <block id="4978c8e180a586c0d7a0f9331682041c" category="cell">ストレージバックエンドカード</block>
   <block id="5c7f849b2e350d34740fba56730e25ba" category="cell">ストレージ バックエンド カードには、 ONTAPツールで設定されているすべてのONTAPストレージ クラスターの健全性と接続ステータスが表示されます。対応するリンクを選択すると、選択したクラスターの詳細情報を含むページに移動し、各ストレージ バックエンドの詳細を表示できます。</block>
-  <block id="7cc3bb1c6bb475d226bfbe5da1ebd38c" category="cell">ONTAPツール ノード カードには、ノード名、VM 名、ステータス、ネットワーク情報など、アプライアンス内のすべてのノードが表示されます。特定のノードの詳細を表示するには、[詳細を表示] を選択します。  [注意] 非 HA 構成では、単一のノードのみが表示されます。  HA 構成では、3 つのノードが表示されます。</block>
   <block id="5ab1668c9ec40eca8f10aa49dea404c7" category="list-text">移行するデータストアの機能に一致する仮想ディスク形式、VM ストレージ ポリシー、および vVol データストアを選択します。</block>
-  <block id="dc48ac4a32526d5d7522c456f1f1cc94" category="paragraph">ONTAP tools for VMware vSphere以降では、バックアップ機能がデフォルトで有効になっています。</block>
   <block id="4b22f5195e2a06a5686ef3db3a69b260" category="paragraph">ONTAP tools for VMware vSphereを導入するデータストアには、バックアップ ファイルが保存されます。  ONTAPツールの IP アドレスにちなんで名付けられたフォルダ（ドットはアンダースコアに置き換えられ、末尾に _OTV_backup_ が付けられます）には、最新の 2 つのバックアップ ファイル（_OTV_backup_1.tar.enc_ と _OTV_backup_2.tar.enc_）と、最新のバックアップの名前を含む情報ファイル（_OTV_backup_info.txt_）が保存されます。</block>
   <block id="306eea5fcb683e6cb37822175d853d2c" category="paragraph">新しい仮想マシンが同じONTAPツール IP アドレスを使用し、有効なサービス、ノード サイズ、HA モードなどの初期システム構成と一致していることを確認します。</block>
   <block id="1a67e76e4c33afb70717329bd9a27021" category="list-text">元の仮想マシンのデータストアからローカル システムにバックアップ ファイルをダウンロードします。</block>
@@ -1638,29 +1590,21 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="31357e5ce742a9b4b3d161470ef1bb33" category="list-text">既存の仮想マシンの電源をオフにします。次に、元のデプロイメントと同じ OVA ファイルを使用して新しい仮想マシンをデプロイします。</block>
   <block id="e192763eeda45b0f2a7552a020709ba2" category="list-text">ダウンロードしたディレクトリからバックアップ ファイルを選択します。最新のバックアップを識別するには、_OTV_backup_info.txt_ ファイルを参照してください。</block>
   <block id="5e1934db6f792c096c2d213489b8ba86" category="list-text">次のコマンドを使用して、バックアップ ファイルを新しい仮想マシンに転送します。プロンプトが表示されたら、診断パスワードを入力します。</block>
-  <block id="391290f2d6e73e30b72d024c57e55f59" category="admonition">コマンドに記載されている宛先パスとファイル名 (/home/diag/system_recovery.tar.enc) を変更しないでください。</block>
   <block id="428dc800d37baccdfeb6cdda98b0361b" category="list-text">バックアップ ファイルが転送されたら、診断シェルにログインして次のコマンドを実行します。</block>
   <block id="297d37a39d3a4fd1e8107b7327e350b8" category="paragraph">リカバリが完了すると、 ONTAPツールによってサービスと vCenter オブジェクトが復元されます。</block>
-  <block id="a7b42fd06d1579ab9b8318093d65976c" category="paragraph">ボリュームにvVolsが含まれている場合は、ボリュームからストレージを削除することはできません。このようなボリュームでは削除オプションは無効になります。データストアからボリュームを削除するときに、選択したボリュームをONTAPストレージから削除するオプションもあります。</block>
   <block id="8b6a716bd213fd5082e2a1b11bf0cc37" category="admonition">ASA r2 システムに基づくvVolsデータストアでは、 vVolsデータストアの縮小操作はサポートされていません。</block>
-  <block id="99fd05f6d33ef152b93e6f0f16c9f4ee" category="admonition">vVolsが存在するボリュームを選択するオプションは無効になっています。</block>
-  <block id="38a601e0b95d355705ee6b3483056874" category="admonition">ONTAP tools for VMware vSphereの場合、 ONTAPツール管理ノード (node1) のメンテナンス コンソール ユーザー パスワードを変更する必要があります。</block>
   <block id="f4a28bea29de7130904a49ce71fcda2d" category="doc">VASAプロバイダーとSRAの資格情報をリセットする</block>
   <block id="a80bdf4868ec62bbe3ef67baeb42cb67" category="paragraph">VASA プロバイダーまたは SRA の認証情報を忘れた場合は、 ONTAPツール マネージャー インターフェイスを使用して新しいパスワードにリセットできます。新しいパスワードの長さは 8 〜 256 文字にする必要があります。</block>
   <block id="673936fef32f9dd6b23c43b11bd88528" category="list-text">*設定* &gt; *VASA プロバイダー/SRA 資格情報* &gt; *パスワードのリセット* オプションを選択します。</block>
   <block id="02869ef81585e2e03bcef51de32501f0" category="list-text">新しいパスワードを入力し、確認します。</block>
   <block id="75b01958c6e05268ce4d2df4330a0a23" category="list-text">変更を適用するには、[*保存*] を選択します。</block>
-  <block id="746a91199f9ded67c342a410ffc66b99" category="paragraph">スケジュールされた検出によってストレージの詳細がすぐに更新されるのを待たずに、ストレージ バックエンドの検出をオンデマンドで実行できます。  MetroCluster構成の場合、スイッチオーバー後にONTAPツールの検出を手動で実行します。</block>
   <block id="116bdbf8d5ea399dddfcc2bb811eba6c" category="list-text">ONTAPツールの左側のペインで、*ストレージ バックエンド* に移動し、ストレージ バックエンドを選択します。</block>
-  <block id="09b12e9f965db5f445087847df636534" category="paragraph">ストレージ バックエンドの資格情報またはポート名を変更できます。 ONTAPツール マネージャを使用して、グローバルONTAPクラスタのストレージ バックエンドを変更することもできます。証明書の有効期限が 30 日以内に切れる場合、 ONTAPツールは警告を表示します。ストレージ バックエンドを変更し、 ONTAP管理者からの新しい証明書をアップロードします。</block>
   <block id="6538f2bc46a0166c96df394ff286cd0b" category="paragraph">ストレージ バックエンドを変更すると、 ONTAP tools for VMware vSphereはストレージ バックエンドの検出を実行し、ストレージの詳細を更新します。</block>
   <block id="a26444f0644637f89872d43b06b05d49" category="paragraph">次のように、 ONTAPツール マネージャーを使用してグローバルONTAPクラスターを変更します。</block>
   <block id="9e0b7b2ef50d7be606b0f144311abb59" category="paragraph">ストレージ バックエンドを削除する前に、ストレージ バックエンドに接続されているすべてのデータストアを削除する必要があります。ストレージ バックエンドを削除するには、以下の手順に従います。</block>
-  <block id="2dd8efc32bdfed8be86798e332dd9d24" category="paragraph">ストレージ バックエンド ページには、すべてのストレージ バックエンドが一覧表示されます。追加したストレージ バックエンドに対してストレージの検出、変更、および削除の操作を実行できますが、クラスタの下の個々の子 SVM に対しては実行できません。</block>
   <block id="916076ab8ff97003b5ea9faaf3c4f091" category="paragraph">コンポーネントの概要を表示するには、親クラスターまたは子クラスターを選択します。親クラスターの場合、アクション ドロップダウンを使用してストレージを検出し、ストレージ バックエンドを変更または削除します。</block>
   <block id="ca1fe156424f1fed62bea40d441c5f60" category="list-text">証明書のステータスや有効期限などの証明書の詳細。</block>
   <block id="04a7db67b286ba524d69dd1780854b00" category="list-text">ネットワークの IP アドレスやポートなどのネットワーク情報。子 SVM の場合、情報は親ストレージ バックエンドと同じです。</block>
-  <block id="54d8e79db120e9876f89e74434f3f7ab" category="list-text">SVM またはクラスターの分解プロパティが「true」に設定されている場合、 ASA r2 システム クラスターのドリルダウン ビューにはローカル層タブが含まれません。</block>
   <block id="a0dfbcfb08f653b07e61158aab1c2319" category="list-text">vSphere Client から仮想マシンに移動します。</block>
   <block id="736d7b4110bd62c0b6273a55c6f63aaa" category="paragraph">次の URL から Swagger にアクセスできます。<block ref="4c9882763c7aaf0e39789953130b5809" prefix=" " category="inline-code"></block> 、 例えば：<block ref="801eb101d5a4938360a68df419d61538" prefix=" " category="inline-code"></block> 。</block>
   <block id="bb14930b9106b492b967f6186850d39a" category="list-text">データストアに移動し、*概要* &gt; *VM ストレージ ポリシー* を選択します。</block>
@@ -1795,22 +1739,17 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="9ca1bffcd412b8ef99e9a92a8b3193e1" category="list-text">*ボリュームの作成または選択*ウィンドウでは、新しいボリュームを作成するか、既存のボリュームから選択することができます。画面上の指示に従って選択してください。</block>
   <block id="99695bfd999355f1df38ec35a7171539" category="paragraph">ONTAP tools for VMware vSphereのメンテナンス コンソールを使用すると、アプリケーション、システム、およびネットワークの設定を管理できます。管理者およびメンテナンス パスワードの更新、サポート バンドルの生成、ログ レベルの構成、TLS 設定の管理、リモート診断の有効化を行うことができます。</block>
   <block id="0e3dbc4805c820c2543dcfc7fb0ff1ae" category="paragraph">ONTAP tools for VMware vSphereを導入した後、メンテナンス コンソールにアクセスできない場合は、vCenter Server から VMware ツールをインストールします。ログインするには<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>デプロイメント中に設定されたユーザー名とパスワード。メンテナンス コンソールまたはルート ログイン コンソールでファイルを編集するには、*nano* を使用します。</block>
-  <block id="3dc9723f860cc7fa81343acb2b1bc55f" category="list-text">*しきい値の編集*ウィンドウで、*ほぼ満杯*フィールドと*満杯*フィールドに必要な値を入力し、*保存*を選択します。しきい値を、推奨されるデフォルト (ほぼ満杯の場合は 80、満杯の場合は 90) に復元できます。</block>
   <block id="ba8e3bf168d21be1baf9d641e008977f" category="paragraph">最近のタスク パネルに進行状況が表示されます。</block>
   <block id="83c2a6ded9467f8048f9a53cabd2e783" category="paragraph-title">関連トピック</block>
   <block id="403e2c858b37daa43171ef37b71e6640" category="paragraph"><block ref="403e2c858b37daa43171ef37b71e6640" category="inline-link-macro-rx"></block></block>
   <block id="8664aa558a2cba72e1c6505af0d61e83" category="list-text">ホスト クラスタが均一な構成で保護されている場合、vSphere はマウント データストア オプションを無効にします。</block>
   <block id="a1f04821262e5782b06fa1bb2f7ef076" category="list-text">NFS/VMFS データストアをホストまたはホスト クラスターにマウントするには、右クリックして * NetApp ONTAPツール* &gt; * データストアのマウント* を選択します。</block>
-  <block id="fa8e5790b9361467cce37c07e12ce82a" category="paragraph">このページでは、 vVolsデータストアからボリュームを削除する方法について説明します。</block>
   <block id="0af9e2225c011d534179288b190817a8" category="paragraph">vCenter Server のONTAPツールによって管理される任意のvVolsデータストアで、データストアからストレージを削除するアクションを使用します。</block>
   <block id="ccfaf6c006e0fbebe82be5ae3a6c2815" category="list-text">vVolsがないボリュームを選択し、[削除] を選択します。</block>
-  <block id="a5237c050fbb750b60c81abc7be6abc8" category="paragraph">仮想マシン レポートには、検出された仮想マシン ( ONTAPストレージ ベースのデータストアからのディスクが少なくとも 1 つ必要) のリストとパフォーマンス メトリックが表示されます。VM レコードを展開すると、インターフェイスにディスク関連のすべてのデータストア情報が表示されます。</block>
-  <block id="6714328364d88bcb775867c58aa0ce37" category="paragraph">データストア レポートには、 ONTAP tools for VMware vSphere検出または認識された、任意のONTAPストレージを使用するデータストアが、パフォーマンス メトリックとともに一覧表示されます。</block>
   <block id="e385df3f1b468053117f334cd5da5f4b" category="paragraph">NFS および VMFS データストアのサイズを増やすことができます。これらのデータストア内のFlexVol volumeは現在のサイズより小さくすることはできませんが、最大 120% まで拡大できます。</block>
   <block id="57b462a22850f4fc55f97706795dc43e" category="list-text">[サイズ変更] ダイアログ ボックスで、データストアの新しいサイズを入力し、[OK] を選択します。</block>
   <block id="573e0ca6fef15685abd4cf05acc508cf" category="paragraph">アップグレードする前に、各ノードでこの手順を繰り返します。</block>
   <block id="a2be99a76876ae4852bec1944bbbfbae" category="list-text">* NetApp ONTAPツール* &gt; * ONTAPストレージ* を選択します。ビューはデータストアの種類によって変わります。以下の表を参照してください。</block>
-  <block id="0e527af09bb57a137d15be7b82466174" category="cell">すべてのボリュームを一覧表示します。ONTAPストレージ ペインからストレージを拡張または削除できます。ONTAPツールは、 ASA r2 システムベースのvVolsデータストアに対してこのビューをサポートしていません。</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">ストレージ ビューには、仮想マシンが作成するvVolsのリストが表示されます。</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">このビューは、ONTAP tools for VMware vSphere が管理するvVolsデータストアからのディスクが少なくとも 1 つある VM に適用されます。</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">*2* と入力して *システム構成* メニューを選択します。</block>
@@ -1856,7 +1795,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1bd0f2a993333e57c9bf5fbf70ebfd23" category="paragraph">VMware vSphere のONTAPツール ダッシュボードを使用して、構成の問題を特定し、ESXi ホストを選択し、 NetApp の推奨設定を確認して適用します。</block>
   <block id="543b5405133261779f842b69bcefb755" category="paragraph">ESXi ホスト システム ポートレットには、ESXi ホスト設定に関する問題が表示されます。問題を選択すると、ホスト名または IP アドレスが表示されます。</block>
   <block id="2689488c422f25fd5066a87a7eebb900" category="list-text">*推奨ホスト設定の適用* ウィンドウで、 NetApp推奨ホスト設定を使用するホストを選択し、*次へ* を選択します。</block>
-  <block id="3eed416be7bc8f2370d73ee8f1bc9449" category="paragraph">ONTAP tools for VMware vSphereを使用して、vCenter Server への SRA および VASA プロバイダの登録に必要なアプリケーション ユーザー パスワードをリセットするには、次の手順に従います。</block>
   <block id="0e34e7c95e9c7b617330c9702facb87f" category="list-text">Web ブラウザを開き、次の場所に移動します。<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
   <block id="54ec5ee4996969f97069754eeacdf0bf" category="list-text">ONTAPツールの導入時に設定された管理者の認証情報を使用してログインします。</block>
   <block id="98fb1492b8afb1eebc13eda0b5686157" category="list-text">サイドバーから*設定*を選択します。</block>
@@ -1999,13 +1937,11 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ada1b8fca015644eb0e5c19ee82795da" category="list-text">Remove snapshot</block>
   <block id="c3b272eb798aaa11b258a91dbf4ef016" category="list-text">スナップショットの名前を変更する</block>
   <block id="e2a5f777b44916836fdc3739a3964e98" category="list-text">Revert to snapshot</block>
-  <block id="9d907c3f5539ff6f152a649a7d58d691" category="paragraph">以下に説明する 3 つの定義済みロールがあります。</block>
   <block id="ed6bb5734812ec0d7dd5450746f207a0" category="paragraph">導入時に、 ONTAPツールおよび VASA プロバイダー用の自己署名証明書がデフォルトで生成されます。ONTAPツール マネージャ インターフェイスを使用して、この証明書を更新したり、カスタム CA 証明書に置き換えたりすることができます。マルチ vCenter 展開では、カスタム CA 証明書の使用が必要です。</block>
   <block id="1289a0b5a75e6b47ee61b41fe287786a" category="section-title">vCenter Server 証明書を更新する</block>
   <block id="45666909a9079a8d4af9a72d51a83220" category="paragraph">ONTAPツールは、vCenter 証明書の有効期限が近づいている場合、または有効期限が切れている場合に通知します。vCenter 証明書を更新した後、次の手順に従って新しい証明書をONTAPツールにアップロードします。</block>
   <block id="282eed63cac957955b046d29d83d09d8" category="list-text">ONTAPツールのリモート診断シェルにログインします。</block>
   <block id="e6452e8e9c18000281aae81760220823" category="list-text">診断シェルから更新された vCenter 証明書を取得します。</block>
-  <block id="8012fc6ae8c7c5cd0d9d44e8d3169bbb" category="list-text">証明書が Base 64 ASCII 形式であり、開始行と終了行が含まれていることを確認します。次に例を示します。</block>
   <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">出力をコピーし、<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> デスクトップ上の拡張機能。</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">ONTAP tools for VMware vSphereを使用する場合は、考慮する必要がある 2 つの異なる RBAC 環境があります。ONTAP tools for VMware vSphereでは、操作を実行するために vCenter とONTAP の両方で特定の権限が必要です。ONTAPツールはストレージ管理タスクを自動化しますが、vCenter またはONTAPのいずれにもユーザー アカウントを作成しません。サービス アカウントは、必要に応じて vSphere 管理者が作成する必要があります。このドキュメントでは、管理者が効果的なONTAPツール管理のために必要なロールと権限を割り当てるためのガイダンスを提供します。</block>
@@ -2013,13 +1949,8 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3e6657795439746877b7825a3d38e9ee" category="doc">最初のONTAP tools REST API呼び出しを実行する</block>
   <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">ONTAP tools REST APIについて学ぶ</block>
   <block id="5a605ad8e95d1a9f3283371391a80135" category="doc">ONTAP tools REST API実装の詳細</block>
-  <block id="370f5531bbc04005016cdf030a95744b" category="doc">ONTAP toolsの主要な概念と用語</block>
-  <block id="246130515f3fc0998a670e11495c67e3" category="doc">ONTAP toolsについて学ぶ</block>
-  <block id="419fc0e7d78d105ba99e3cf9a68c7a3d" category="doc">ONTAP tools RBACについて学ぶ</block>
   <block id="ddd57c30734d8295ba001e0cbe968ee2" category="doc">ONTAP RBAC が ONTAP tools と連携する仕組み</block>
-  <block id="877a4ebbff9bae8a31da8960d39d2ba1" category="doc">ONTAP tools に関する ONTAP RBAC の考慮事項</block>
   <block id="587025fcd9783b8dad6642bf4ea9050a" category="doc">vCenter Server RBAC と ONTAP tools の連携</block>
-  <block id="b690b3fbfbdc8910bd0b4b68feb15af2" category="doc">vCenter ServerのRBACに関するONTAP toolsの考慮事項</block>
   <block id="eaeddcc9311544bd9a0756a835a12cea" category="doc">ONTAP toolsにストレージバックエンドを追加する</block>
   <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">ONTAP tools でvCenter Server インスタンスにストレージバックエンドを関連付ける</block>
   <block id="eb92fe0cb6bfddb65b18107ce1bfc6df" category="doc">ONTAP toolsでESXiホストの設定を構成する</block>
@@ -2067,7 +1998,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3080b4ebae2964eb31e9323c6c33266f" category="doc">ONTAP toolsでストレージしきい値を管理する</block>
   <block id="d02d02ee7e7b615b7792e1ad3ff171d0" category="doc">ONTAP toolsマネージャのユーザーインターフェイスについて学ぶ</block>
   <block id="524fd1aef9cb6cfddcfe07ccaac75346" category="doc">ONTAP tools で仮想マシンを vVols データストアに移行する</block>
-  <block id="fddcf8c5cf9cd2661235ccaf551a46aa" category="doc">ONTAP toolsにおける仮想マシンの移行とクローン作成に関する考慮事項</block>
   <block id="3299a7d360dc51186b4ee8c200627b3f" category="doc">ONTAP tools で vVols データストアをマウントする</block>
   <block id="ff5498cd43203d12b2c313c8ee80aae3" category="doc">ONTAP toolsでNFSおよびVMFSデータストアをマウントする</block>
   <block id="b904c32a2b89b03a0e1c9c4d83092c36" category="doc">ONTAP toolsによるigroupの管理方法</block>
@@ -2079,7 +2009,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6754215273b95339627d7015960cdb7c" category="doc">他のONTAP toolsノードでSSHを起動します</block>
   <block id="68ee39c4a4735429d7e0880a75745822" category="doc">ONTAP toolsでストレージバックエンドを管理する</block>
   <block id="06ab550759dfdf932c2570432dd605c1" category="doc">ONTAP tools のデータストアの ONTAP ストレージ ビュー</block>
-  <block id="4cd988c417a0bf223f5eebfa9518f8ad" category="doc">ONTAP toolsをアンインストールする</block>
   <block id="c57bb73289d8b0da9f85c1e90fa314ac" category="doc">ONTAP toolsでNFSおよびVMFSデータストアをアンマウントする</block>
   <block id="b65968a36172676af9d0e3db25da07d5" category="doc">ONTAP toolsでvCenter Serverのクレデンシャルを更新</block>
   <block id="f5e105fa1cc9d2e0af5a5f00dbbca6ac" category="doc">ONTAP toolsの仮想マシンストレージビュー</block>
@@ -2129,19 +2058,13 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="13aecc58d128b240da84710984d130fd" category="paragraph">整合性グループとは、単一の単位として管理されるボリュームの集合体です。整合性グループは、ストレージユニットおよびボリューム間でデータの一貫性を確保するために同期されます。ONTAPでは、複数のボリュームにまたがるアプリケーション ワークロードの管理と保護を容易に行うことができます。<block ref="730ae9662641ed0fdd9baf6d4eae07da" category="inline-link-rx"></block>の詳細をご覧ください。</block>
   <block id="eddce52331cd830ea692a43bfe614df5" category="paragraph">ONTAP tools ManagerはONTAP tools for VMware vSphere管理者に、管理対象のvCenter Serverインスタンスとオンボード済みストレージバックエンドに対するより高度な制御を提供します。vCenter Serverインスタンス、ストレージバックエンド、証明書、パスワード、ログバンドルの管理に役立ちます。</block>
   <block id="4f6154f4872b64dc1661fb16bc6b8293" category="paragraph">SVMは、ONTAPにおけるマルチテナンシーの単位です。ハイパーバイザー上で実行される仮想マシンと同様に、SVMは物理リソースを抽象化する論理エンティティです。SVMには、データボリュームと、クライアントにデータを提供する1つ以上のLIFが含まれています。</block>
-  <block id="032c2b49afde4f6b7011ee580a8c8a8a" category="paragraph">vVolsは、仮想マシンが使用するストレージに対して、ボリュームレベルの抽象化を提供します。これにはいくつかの利点があり、従来のLUNを使用する代替手段となります。vVolデータストアは通常、vVolsのコンテナとして機能する単一のLUNに関連付けられています。</block>
   <block id="7b35871f49b3c3cdc9c5c56d2390e753" category="paragraph">vSphere Metro Storage Cluster（vMSC）は、ストレッチ クラスタ展開で vSphere を有効化およびサポートするアーキテクチャです。vMSC ソリューションは、NetApp MetroCluster および SnapMirror アクティブ同期（旧称 SMBC）でサポートされています。これらのソリューションは、ドメイン障害が発生した場合のビジネス継続性を強化します。回復力モデルは、お客様による具体的な構成選択に基づいて決定されます。詳細については、<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>を参照してください。</block>
   <block id="fe5a1145f1df381e63aa73a544dc45be" category="paragraph">vVolsデータストアは、VASAプロバイダーによって作成および保守されるvVolsコンテナの論理的な表現です。</block>
   <block id="050869bd132ecbfa404b0df3989dfbda" category="paragraph">HA機能を使用するには、導入時またはVM設定でCPUホット アドとメモリ ホットプラグが有効になっていることを確認してください。</block>
-  <block id="2e2c701c3ff33a90c40f9b61b0bd1340" category="paragraph">大まかに言うと、RBACの実装には一般的にいくつかの構成要素が含まれています。これらの構成要素は、認可プロセスを定義する一環として、さまざまな方法で結び付けられています。</block>
   <block id="32251e58731596788c2e2884176bf172" category="paragraph">_特権_とは、許可または拒否できるアクションまたは機能のことです。ファイルの読み取り機能のような単純なものである場合もあれば、特定のソフトウェア システムに固有のより抽象的な操作である場合もあります。Privilegesを定義して、REST APIエンドポイントおよびCLIコマンドへのアクセスを制限することもできます。すべてのRBAC実装には事前定義された特権が含まれており、管理者がカスタム特権を作成できる場合もあります。</block>
   <block id="4131927f574752a7f22b82c87fb47153" category="paragraph">これらは、ONTAP 9.6 より前に存在していたレガシーロールです。これらは RBAC の根幹を成す要素であり続けています。権限は、ONTAP CLI コマンドへのアクセスに関して定義されます。</block>
-  <block id="2490399a625641e2e433230aeb6c4e74" category="paragraph">RESTロールは比較的最近導入されたものですが、従来のロールにもいくつかの利点があります。たとえば、追加のクエリパラメータを含めることで、権限が適用されるオブジェクトをより正確に定義できるようになります。</block>
-  <block id="a72ad00403889831225702578a7f137f" category="paragraph">ロール権限は、ONTAP ストレージに必要なアクセス レベルに基づいて 4 つのセットに分けられています。ロールの基となる権限には次のものがあります：</block>
-  <block id="47881a53d1ab40a9e8f819b5ef89d314" category="paragraph">新しいユーザーは、「ユーザーと役割」ページの一覧に追加されます。HTTPとONTAPIの両方のユーザーログイン方法がサポートされていることに注意してください。</block>
   <block id="520e89c2af9e4dd67d71a3e64f2769c6" category="paragraph">vCenter Server RBAC での作業を簡素化するために、ONTAP tools for VMware vSphere では、さまざまな管理タスクに合わせた事前定義ロールが提供されます。</block>
   <block id="e79b1480e1237de5076910fcc9353922" category="admonition">必要に応じて、新しいカスタムロールを作成できます。そのためには、既存のONTAP toolsロールの1つをクローニングし、必要に応じて編集します。構成変更後、影響を受けるvSphereクライアントユーザーは、変更を有効にするために一度ログアウトしてから再度ログインする必要があります。</block>
-  <block id="cffc70b67f938d6419b0f99319ea297c" category="paragraph">ONTAP tools for VMware vSphere のロールを表示するには、vSphere Client の上部にある *Menu* を選択し、*Administration* をクリックしてから、左側の *Roles* をクリックします。以下の権限は、vCenter Server の導入またはオンボーディングを担当する vCenter ユーザに割り当てられたロールに含める必要があります。これらの権限が、導入またはオンボーディング プロセスの前提条件として設定されていることを確認してください。</block>
   <block id="de5ee04fb5680a9360df3031db79ff86" category="list-text">vCenter Server は完全修飾ドメイン名（FQDN）を使用して導入することを推奨します。証明書の SAN に DNS Name=machine_FQDN が含まれるようにすることで、最適な互換性とサポートを実現します。</block>
   <block id="0a786964c0005a547ab65fa0860f9183" category="list-text">*ユーザー* テーブルの下にある *追加* を選択します。</block>
   <block id="d7951e07877f9ffc47d347a245ec4aff" category="list-text">アクセスを許可するアプリケーションと認証方法を入力します。ONTAPI と HTTP は必須のアプリケーションで、認証タイプは * Password * です。</block>
@@ -2187,27 +2110,19 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="182e6284277a0e84e0a6b2d2cea561b1" category="paragraph">ONTAP tools 10.5P2以降では、移行されたigroupは使用されなくなると削除されます。以前のバージョンでは、移行されたigroupは削除されませんでした。以下の点に注意してください：</block>
   <block id="7cb2aea7526ae34486b537c4c53161e8" category="list-text">移行されたigroupは、データストア間で再利用できません。</block>
   <block id="f90db3da42284fdfb75ac6424b51161f" category="list-text">カスタムigroup（ユーザー定義）は削除されず、引き続き再利用できます。</block>
-  <block id="1e0f7e6b525b3abba08284976fa81124" category="list-text">ジョブの監視 - ONTAP tools プラグイン インターフェイスと ONTAP tools Manager インターフェイスの両方から開始された非同期ジョブを監視およびデバッグします。期間を指定してジョブを絞り込んだり、ページ サイズを調整したり、エラーやサブタスクを含むジョブの詳細を表示したりできます。エラーの詳細を表示するには、失敗ステータスをクリックしてください。サブタスクのあるジョブの場合は、行を展開して説明とステータスを確認してください。サブジョブについては、ジョブのドリルダウン機能を使用して詳細を表示してください。</block>
-  <block id="7f4c46d47f7e74c38b18e569c8d4c32e" category="paragraph">ONTAP tools for VMware vSphereは、コンピューティング専用（vMotion）、ストレージ専用（Storage vMotion）、およびすべてのデータストアにわたるコンピューティングとストレージの統合移行など、すべての主要な仮想マシン移行タイプをサポートしています。このトピックでは、基盤となるデータストアのタイプに関わらず、仮想マシンの移行とクローン作成を成功させるための重要な考慮事項とベストプラクティスについて概説します。</block>
   <block id="61373bbd8009cf03fa8464673ab02f02" category="paragraph">保護された仮想マシンは、以下の場所に移行できます：</block>
   <block id="508d209cc07abf139a3f0c78946bbbd5" category="list-text">別の ESXi ホスト上の同じデータストア</block>
   <block id="5ac4d5ad38058a75eea380aef0d5b92d" category="list-text">同じESXiホスト上の別の互換性のあるデータストア</block>
   <block id="8a84a9b3823e5b795d30b91a078f4200" category="list-text">別のESXiホスト上の別の互換性のあるデータストア</block>
-  <block id="2f2ca6922f453e226a4afba0efe36f5b" category="paragraph">仮想マシンを別のFlexVolボリュームに移行すると、システムはそのボリュームのメタデータファイルを仮想マシン情報で更新します。仮想マシンが別のESXiホストに移行されても、ストレージが同じ場合、基盤となるFlexVolボリュームメタデータファイルは変更されません。</block>
   <block id="d33647394e2a97fc177b51afa0c41585" category="list-text">レプリケーション グループを使用した同じ FlexVol ボリュームの同じコンテナ</block>
-  <block id="b863614305e1270eae1dbe20e5a8d976" category="paragraph">同じFlexVol volumeのメタデータファイルは、クローンされた仮想マシンの詳細情報で更新されます。</block>
   <block id="b2fc53801d75c76c3256fa2a89d1c314" category="list-text">レプリケーショングループを使用した異なるFlexVolボリュームの同じコンテナ</block>
-  <block id="5e60c1a907cf59f145aed21d4312cb23" category="paragraph">クローンされた仮想マシンが配置されているFlexVol volumeでは、メタデータファイルがクローンされた仮想マシンの詳細情報で更新されます。</block>
   <block id="d3db00380a1d793954c8683fd665955d" category="list-text">別のコンテナまたはvVolsデータストア</block>
-  <block id="4f0c6f6e1eda9ffaab93c168f6421e03" category="paragraph">クローンされた仮想マシンが配置されているFlexVolボリュームでは、メタデータファイルが仮想マシンの詳細情報で更新されます。</block>
-  <block id="d81f900d794541aa77ab4dfbe1477ea9" category="paragraph">VMwareは現在、VMテンプレートにクローンされた仮想マシンをサポートしていません。</block>
   <block id="f30dc4f2c9f6bc6607af58d7f4245932" category="paragraph">保護された仮想マシンのクローンのクローンがサポートされています。</block>
   <block id="2aef08f5665fd77fc56cbc1fb74995db" category="paragraph">詳細については、Broadcomのドキュメントを参照してください。<block ref="74392a6ed560b64c3e452acc2a7ab97a" category="inline-link-rx"></block></block>
   <block id="d4b2324039945a38b742d5c3e4a1a452" category="section-title">仮想マシンのスナップショット</block>
   <block id="0a601d3069c118ae5d11bc287f25ea0e" category="paragraph">ONTAP tools は、標準的な VMware ワークフローを通じて仮想マシンのスナップショットをサポートします。スナップショットは、テストやパッチの準備などのユースケースを想定した、短期的なロールバック ポイントです。これらは、バックアップやレプリケーションベースのデータ保護の代替手段ではありません。スナップショット上で仮想マシンを長期間実行すると、不安定性やデータ損失を引き起こす可能性があります。</block>
   <block id="4ca168cd5422d86ae02e0150146818c6" category="admonition">メモリのスナップショットは、実行中のメモリの状態をキャプチャし、仮想マシンを一時的に停止させます。ONTAP tools のワークフローではサポートされていません。仮想マシンにメモリ スナップショットがある場合は、ONTAP tools で管理される整合性グループまたはホスト クラスタ関係に仮想マシンを含める前に、メモリ スナップショットを削除する必要があります。</block>
   <block id="a6dfe44f5c26ee3ec5e4275783b3873f" category="paragraph">ASA r2ストレージシステムでは、仮想マシンのスナップショットの動作が他のストレージタイプとは異なります。スナップショットは読み取り専用です。仮想マシンを起動すると、VASA Providerは読み取り専用のスナップショットからLUNを作成し、IOPSを有効にします。仮想マシンの電源を切ると、VASA ProviderはLUNを削除し、IOPSを無効にします。</block>
-  <block id="5e47c699225f9c6134236e2019564ec3" category="paragraph">ゲストOSの再起動操作中に、GRUBメニューにメンテナンスコンソールユーザーのパスワードをリセットするオプションが表示されます。このオプションを使用して、VM上のメンテナンスコンソールユーザーのパスワードを更新します。パスワードをリセットすると、VMが再起動して新しいパスワードを設定します。HA構成の展開シナリオでは、VMの再起動後、パスワードは他の2台のVM上で自動的に更新されます。</block>
   <block id="9e6b10df4957c54ec814e189c6532a65" category="list-text">VMを右クリックして、*Power* &gt; *Restart Guest OS* を選択します。システム再起動中に、次の画面が表示されます：<block ref="515bd311b9d352624722007b23637a91" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2cdcbfb16b1e7a2981a34ccc1a4f72e8" category="admonition">仮想マシンを起動すると、同じGRUBメニューが表示されます。ただし、パスワードのリセットオプションは、*Restart Guest OS*オプションと併用する場合にのみ使用してください。</block>
   <block id="3c47dd9f7fb85b763292cd710dfe67df" category="paragraph">ONTAP tools Managerを使用して、グローバルONTAPクラスタを削除できます。</block>
@@ -2272,7 +2187,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c7350f69257f107789d11e22929c1c1d" category="list-text">プロンプトが表示されたら、vCenter のクレデンシャルを入力します。これは、ONTAP tools がホストされている vCenter インスタンスです。</block>
   <block id="130feced60ff3be4c19a41924346eaef" category="paragraph">ストレージシステムは、保護サイトとリカバリサイトで *有効* のステータスで検出される必要があります。</block>
   <block id="f8eb6f34101d2549cf54a3790c57397e" category="paragraph">2つのvCenter Server構成でONTAP toolsを使用している場合（アプライアンスが1つのvCenterインスタンスでホストされ、別のインスタンスを管理する場合）、ONTAP toolsをホストしているvCenterインスタンスに制限付きロールを割り当てることができます。OVFテンプレートのデプロイに必要な権限のみを持つ専用のvCenterユーザーとロールを作成できます。詳細については、<block ref="195bdbec94ccbccdb53d22ac92079db9" category="inline-link-macro-rx"></block>に記載されているロールを参照してください。</block>
-  <block id="da450a701c49172b37bf4971370bc3f4" category="paragraph">ONTAP tools VMとONTAPストレージシステムの両方を管理する場合、特にONTAP toolsで管理されていない環境から管理されている環境へデータストアを移動する際には、igroupの動作を理解することが重要です。このページでは、ONTAP tools for VMware vSphereがigroupをどのように表現し管理するかについて説明します。これは、以前のリリースと現在のネストされたigroupモデルとの間の動作の違いを理解するための概念的な情報です。</block>
   <block id="a83fac25f150a3e5e2154a4819a8d47c" category="paragraph">ONTAP tools for VMware vSphere 10.4以降、ONTAP toolsはONTAPおよびvCenterオブジェクトを自動的に作成および維持し、VMwareデータセンター環境におけるデータストア管理を簡素化します。ONTAP tools for VMware vSphere 10.5 P2以降、移行されたigroupは使用されなくなると自動的に削除されます。</block>
   <block id="915fd0444b3d91b928c15a7bd8f7c701" category="section-title">簡単な動作概要</block>
   <block id="88b6a35841af92779f821e186e63bae2" category="list-text">ONTAP tools で管理される VMFS データストアは、ネストされた igroup を使用します（データストアコンテキストごとに 1 つの親 igroup 、ホストごとに子 igroup ）。</block>
@@ -2314,7 +2228,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="b1901f1f6cc126b36c3ff958f06b3758" category="paragraph">API を通じても同様の動作がサポートされています。データストアの作成時に既存の igroup を再利用するには、 API リクエストのペイロードに igroup の UUID を指定します。</block>
   <block id="4fa079a1f5cab34f881f8b6ababb95df" category="admonition">再利用できるのはカスタムigroupのみです。ONTAP tools 9.xから移行されたigroupは再利用できず、ONTAP tools 10.5 P2以降では、使用されなくなると自動的に削除されます。</block>
   <block id="a7a9fe023a2f428690fb8aa6cc6a8dfd" category="section-title">ネイティブからマネージドへの変換ビュー</block>
-  <block id="ad3f469106fbcef8e5ab970c5749f59b" category="paragraph">ONTAP システムおよびVMware環境でigroupとデータストアを直接作成する場合、ONTAP tools は初期状態ではこれらのオブジェクトを管理しません。これにより、フラットなigroup構造になります。</block>
   <block id="fb15774e938bc74abaac49d5ebb52fe8" category="paragraph">データストア検出後、ONTAP toolsは、データストアにマッピングされたigroupを識別して登録し、それらをネストされたモデルで表現します。親igroupはデータストアレベルで表現され、既存のigroupは<block ref="aab72ee24c6cb7d0cb1a4f9f52b31c7a" prefix=" " category="inline-code"></block>プレフィックスを持つ子igroupとして名前が変更され、イニシエータのマッピングは変更されません。</block>
   <block id="6b48aae04023f64a58fe48f72131f50c" category="paragraph">ONTAP tools for VMware vSphereは、ONTAPシステムで作成されたigroupのうち、データストアにマッピングされていないか、ONTAP toolsにリンクされていないigroupを検出または管理しません。検出時に、ONTAP toolsは検出されたデータストアにマッピングされているigroupのみを変換します。その他のigroupは管理対象外のままです。</block>
   <block id="2d0a7cdbdd21a063457344edcd4f0bd2" category="section-title">検出されたネイティブigroupの再利用</block>
@@ -2347,7 +2260,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="690fefef33689ddc4b7d9a16ce760bf3" category="paragraph">ONTAP tools for VMware vSphere 10 は、仮想マシンの機能へのゲートウェイを提供する単一の外部 IP アドレス（以前はロード バランサー）を公開します。このアドレスは初期設定時に指定します。このアドレスは、ONTAP tools Manager インターフェイスで使用されるほか、Swagger ドキュメント ページおよび REST API に直接アクセスする際にも使用されます。</block>
   <block id="9f9802a4c3b4fc2f5134728b9c88631f" category="summary">ONTAP tools for VMware vSphere のドキュメントで使用される主要な概念と用語を確認します。</block>
   <block id="c27523b63e07c2db806a68b71f248aa9" category="summary">ONTAP tools for VMware vSphereが仮想マシンのストレージライフサイクル管理、データストアのプロビジョニング、およびディザスタリカバリをサポートする方法について説明します。</block>
-  <block id="c020315c66479e4b2f22feba23d8f552" category="paragraph">ONTAP tools for VMware vSphere は、仮想マシンのストレージライフサイクル管理のためのツールセットです。VMware エコシステムと統合することで、データストアのプロビジョニングを簡素化し、仮想マシンに基本的な保護機能を提供します。これは、水平方向にスケーラブルなイベント駆動型マイクロサービスの集合体であり、Open Virtual Appliance （OVA）としてデプロイされます。</block>
   <block id="de6e3700be827dbfa20958c271ad57c5" category="summary">RBACが特定の権限レベルを持つロールを定義してアクセスを制御し、ONTAP tools でのユーザー管理を簡素化する方法について説明します。</block>
   <block id="746ea1ad38ef9c21403e9951fbca12c1" category="summary">ONTAP RBAC 環境と、REST API および CLI を通じてストレージおよびシステム操作へのアクセスを制御する方法を確認します。</block>
   <block id="deb41625a45fc3f05fbaae15b8becff4" category="summary">本番環境で使用する前に、ONTAP tools の ONTAP RBAC に関する考慮事項を確認してください。</block>
@@ -2774,7 +2686,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="bb3bcfc05904ee00bc436b853f3842cc" category="paragraph">VMware仮想ボリューム（vVols）データストアを1つ以上の追加ホストにマウントして、追加ホストへのストレージ アクセスを提供できます。vVolsデータストアのマウント解除は、ホストレベルのAPIを介してのみ実行できます。クラスタレベルのデータストアのアンマウントはサポートされていません。</block>
   <block id="b3c81d5c0972385bb188dc48a268ee5c" category="admonition">ホストを追加した後、ONTAP tools に表示されるまで、スケジュールされたホスト検出が完了するまでお待ちください。または、NetApp ONTAP tools の概要画面から手動で検出を実行することもできます。ESXi ホストを vSphere クラスターに追加する方法については、<block ref="3e60d586993b6ddf8b4da4780b26427e" category="inline-link-rx"></block>を参照してください。</block>
   <block id="45f0fa4f4e9052477ca7440767079d0d" category="summary">VMware環境にホストを追加した後、追加のホストにデータストアをマウントします。</block>
-  <block id="52d4b27b255e94f9b8281fae1c931d06" category="list-text">nconnect を備えたデータストアが新しいホストにマウントされると、ONTAP tools は、データストアの nconnect 値がホストの設定値を超える場合、その値を適用します。</block>
   <block id="972e5be580570a80327d8c3fad6ba61d" category="summary">ESXi ホストのデフォルトの nconnect 値を vCenter Server で変更します。</block>
   <block id="cf6bd378ad51203a32de00e4f18d21ad" category="doc">ONTAP tools で ESXi ホストのデフォルトの nconnect 値を変更する</block>
   <block id="cd55ec97181c2e3607fdbb57fb2f523b" category="paragraph">このタスクを使用して、選択したvCenter Server の ESXi ホストのデフォルト接続数（nconnect）を変更します。</block>
@@ -2822,14 +2733,9 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="005a1bc399714b9a6740173dd7037c68" category="list-text">縦に並んだ3点メニューを選択し、*ストレージの検出*を選択します。</block>
   <block id="61e1959f56ec955d2f71af19745b0533" category="list-text">縦に並んだ三点リーダーのメニューを選択し、*変更*を選択して認証情報またはポート名を変更します。最近のタスクパネルで進捗状況を確認できます。</block>
   <block id="8e91ee9e11c9314d8b03ff8bf279800c" category="list-text">縦に並んだ三点リーダーのメニューを選択し、*変更*を選択します。</block>
-  <block id="95c1f140364f630ea067864ef38cf635" category="list-text">縦に並んだ三点リーダーのメニューを選択し、*削除*を選択します。ストレージバックエンドにデータストアが含まれていないことを確認してください。最近のタスクパネルで進捗状況を確認できます。</block>
   <block id="bfefc04e8c979fb58e9b5ab0b858ee97" category="list-text">縦に並んだ三点リーダーのメニューを選択し、*削除*を選択します。</block>
   <block id="eea7e097b80c5ef01cd4ce52676387b4" category="summary">ONTAP tools for VMware vSphere の ONTAP ストレージページで、データストアとボリュームの詳細を確認できます。</block>
-  <block id="02b992f1080d231fe5e17c578aee118a" category="paragraph">データストアとボリュームの情報を表示するには、「*設定*」タブの「ONTAP ストレージ」ページを使用します。</block>
   <block id="377ee97d1675da06418b13ad9e7eed55" category="list-text">vSphere Client インベントリで、データストアを選択します。</block>
-  <block id="1f25f9cc2f9e277c0318faa6969f3552" category="cell">NFSデータストア</block>
-  <block id="690e97280f7a0116c9fe6916c4c1909f" category="cell">「ストレージの詳細」ページには、ストレージのバックエンド、アグリゲート、およびボリューム情報が含まれています。「NFS の詳細」ページには、NFS データストアに関連するデータが含まれています。注意：nconnect の値が ONTAP tools の外部で変更された場合、ONTAP tools に表示される値はその外部の変更を反映しない可能性があります。</block>
-  <block id="0562159b36dde521ceda6ae9508139ce" category="cell">「ストレージの詳細」ページには、ストレージバックエンド、アグリゲート、ボリューム、およびストレージの可用性ゾーン（SAZ）の詳細が含まれています。「ストレージユニットの詳細」ページには、ストレージユニットの詳細情報が含まれています。</block>
   <block id="0e0a930b6d104350434dd92c3fedc4da" category="paragraph">選択したデータストアの種類に基づいて、ONTAP側のデータストアの詳細を確認できます。</block>
   <block id="41bbaea45150447a80b84b8096ac7b97" category="summary">ONTAP tools for VMware vSphere のデプロイメントを正常に終了します。</block>
   <block id="7ec79a8db118338fb4559c63e28a4313" category="list-text">それらを管理対象外のデータストアに移動するには、Storage vMotion を使用した仮想マシンの移行について<block ref="3e60d586993b6ddf8b4da4780b26427e" category="inline-link-rx"></block>を参照してください。</block>
@@ -3124,4 +3030,97 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="78b8a2472e1c8fa0502b3ca56bf4d2c2" category="sidebar">データストア保護のためにクラスタを構成する</block>
   <block id="6449edcecf1e41dc6b7285ef82391ccf" category="section-title">ストレージバックエンド検出の構成制限</block>
   <block id="1bf037add08fddef448fa6335970a313" category="paragraph">ONTAP toolsは、最大200個のSVMと約10,000個のLUNのストレージバックエンド検出をサポートします。</block>
+  <block id="7af1235cb82e57d6baec40fccbe27fab" category="doc">ONTAP tools の主要な用語と定義</block>
+  <block id="396e9f0a27a16f56229cd312c14bb7ea" category="paragraph">ONTAP tools for VMware vSphere で使用される主要な概念と用語を理解してください。定義には、ストレージバックエンド、仮想ボリューム（vVols）、SnapMirror アクティブ同期、VASA、SRA、およびその他のコアコンポーネントが含まれます。</block>
+  <block id="5e861738222a415058b27f3889f4cec4" category="paragraph">NVMe ネームスペースとは、論理ブロックにフォーマット可能な不揮発性メモリの量のことです。ネームスペースは FC および iSCSI プロトコルにおける LUN に相当し、NVMe サブシステムは igroup に類似しています。NVMe サブシステムはイニシエータと関連付けることができ、イニシエータはサブシステム内のネームスペースにアクセスできるようになります。</block>
+  <block id="ec9c68b33f721936e364a16482146f81" category="paragraph">RPOは、データのバックアップまたは複製をどのくらいの頻度で行うかを示す指標です。これは、業務を再開するために、障害発生後にデータを復元する必要がある正確な時点を指定するものです。例えば、組織のRPO（目標復旧時点）が4時間であれば、災害発生時に最大4時間分のデータ損失を許容できるということになります。</block>
+  <block id="b51a6b7606b33e26aab0e549eaf9db6b" category="paragraph">SnapMirror active sync を使用すると、完全なサイト障害が発生してもビジネス サービスが継続して動作できるようになり、セカンダリ コピーを使用してアプリケーションを透過的にフェイルオーバーすることができます。SnapMirror active sync では、フェイルオーバーをトリガーするために手動操作やカスタム スクリプトは必要ありません。詳細はこちらをご覧ください<block ref="51ec33761f23a6cc5cbb85c996201f16" category="inline-link-rx"></block>。</block>
+  <block id="2498f8066c64362730666ebb4d975c1c" category="admonition">SnapMirror active sync は、あらゆるデプロイメントに対して均一なホスト アクセスをサポートします。非均一なホスト アクセスをサポートするのは、対称型アクティブ / アクティブデプロイメントのみです。詳細はこちらをご覧ください<block ref="90f942fd5a37ab4e29fced42177889a8" category="inline-link-rx"></block>。</block>
+  <block id="a551edd13efc51cfe21f361b7caf73fa" category="paragraph">vVolsは、仮想マシンが使用するストレージに対して、ボリュームレベルの抽象化を提供します。vVolsにはいくつかの利点があり、従来のLUNを使用する代替手段となります。vVolデータストアは通常、vVolsのコンテナとして機能する単一のLUNに関連付けられています。</block>
+  <block id="a249cadc59ef1d7b418156ae849a3273" category="paragraph">VMware Live Site Recovery（旧称：Site Recovery Manager （SRM））は、VMware 仮想環境向けに、ビジネス継続性、ディザスタリカバリ、サイト移行、および無停止テスト機能を提供します。</block>
+  <block id="5a3f6c6e1c67f3f199b2bf45f6fa459b" category="paragraph">ONTAP tools for VMware vSphere は、仮想マシンのライフサイクル管理のためのツールセットです。VMware のエコシステムと統合することで、データストアのプロビジョニングを簡素化し、仮想マシンの基本的な保護とディザスタリカバリ機能を提供します。オープン仮想アプライアンス（OVA）としてデプロイされ、水平方向にスケーラブルなイベント駆動型マイクロサービスを使用して、大規模な環境でも信頼性の高いパフォーマンスを提供します。</block>
+  <block id="721041095b64df665034c0b19c967475" category="paragraph-title">ONTAP tools for VMware vSphere の高可用性</block>
+  <block id="95325142ce073b0691cf07c5edf62a68" category="doc">ONTAP tools の RBAC について</block>
+  <block id="f23dbfaeec68aa079acf329e987d0948" category="paragraph">ロールベースアクセス制御（RBAC）は、組織内のリソースへのアクセスを制御するためのセキュリティフレームワークです。ONTAP tools for VMware vSphere は、VMware vCenter Server と ONTAP クラスターという 2 つの異なる環境で RBAC を使用して、ストレージ操作を実行できるユーザーと vSphere オブジェクトへのアクセスを管理します。RBAC は、個々のユーザーに権限を割り当てるのではなく、特定の権限レベルを持つロールを定義することで管理を簡素化し、エラーのリスクを軽減してアクセス制御管理を簡素化します。</block>
+  <block id="0b0a6bd063771972ebc5f3c25f4c478e" category="paragraph">RBACの実装はすべて、認可プロセスを定義するためにさまざまな方法で結合された複数のコンポーネントで構成されています。</block>
+  <block id="01a8c40e5759fe282f05ca77418d89fe" category="paragraph">ロールとは、1つ以上の権限を含むコンテナです。ロールは一般的に、特定の業務や職務内容に基づいて定義されます。ユーザーにロールが割り当てられると、そのユーザーにはそのロールに含まれるすべての権限が付与されます。権限と同様に、実装には事前定義されたロールが含まれており、一般的にはカスタムロールの作成も可能です。</block>
+  <block id="e93152a2c2ef3fbfedabf60b9518cacd" category="paragraph">VMware vCenter Server における RBAC の実装により、vSphere Client ユーザーインターフェースを通じて公開されるオブジェクトへのアクセスが制限されます。ONTAP tools for VMware vSphere 10 のインストールの一環として、RBAC 環境は ONTAP tools の機能を表す追加のオブジェクトを含むように拡張されます。これらのオブジェクトへのアクセスはリモートプラグインを通じて提供されます。詳細については、<block ref="0dce39201791f8056b9c7e84d5c66f06" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="58f907284dfad0eb487785694eb1128b" category="paragraph">ONTAP tools for VMware vSphere 10は、ONTAP REST APIを通じてONTAPクラスターに接続し、ストレージ関連の操作を実行します。ストレージ アクセスは、認証時に提供されたONTAPユーザーに関連付けられたONTAPロールによって制御されます。詳細については、<block ref="e4be7d0a80a9c4d84c7c1c04c147ff8e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0320feceb3424c5bb38a17e90203015b" category="paragraph">ONTAP は、REST API および CLI を通じてストレージとシステム操作へのアクセスを制御する、堅牢で拡張可能な RBAC 環境を提供します。ONTAP RBAC の概念（ロールの種類、スコープ、権限など）を理解することで、ONTAP tools for VMware vSphere 10 の展開におけるユーザーアクセスを設定および管理できます。</block>
+  <block id="6dfbbd4a46ef1b22735eebfdd4ce782e" category="paragraph">環境と目標に応じて、ONTAP RBACを使用する際に利用できるオプションがいくつかあります。以下のセクションでは、主要な管理上の決定事項の概要を説明します。詳細については、<block ref="120c2c6e56fa9c261aa8c0c07fc333dd" category="inline-link-rx"></block>も参照してください。</block>
+  <block id="097137836d685d0d313cca3272e66345" category="admonition">ONTAP RBACはストレージ環境に合わせて調整されており、vCenter Serverが提供するRBAC実装よりもシンプルです。ONTAPでは、ユーザーにロールを直接割り当てます。vCenter Serverとは異なり、ONTAP RBACでは明示的な権限を設定する必要はありません。</block>
+  <block id="849dc7d8ff16c32f04fb15794bc95680" category="paragraph">REST ロールは比較的最近導入されたものですが、従来のロールにもいくつかの利点があります。例えば、追加のクエリパラメータを含めることで、権限が適用されるオブジェクトをより正確に定義できます。</block>
+  <block id="0e8dd53f348c08b0fe9b51a2324de613" category="paragraph">ONTAP tools for VMware vSphere 10 に含まれる ONTAP REST ロールを使用する際は、以下の点に留意してください。</block>
+  <block id="3f716dd8eab2cdb41a8642477a09bf0d" category="doc">ONTAP tools for VMware vSphere における ONTAP RBAC</block>
+  <block id="73185c6bc471a697072933195b292f60" category="paragraph">ONTAP tools for VMware vSphereは、ONTAPを通じてロールベースのアクセス制御（RBAC）をサポートしており、ストレージリソースへのアクセスを制限するカスタムユーザーとロールを作成できます。構成プロセスと権限レベルを理解することで、本番環境にONTAP toolsを導入する前に適切なアクセス制御を設定できます。</block>
+  <block id="c8af6bf7d2ca259efd40775983b08b9c" category="paragraph">次のセクションでは、主要な設定手順の概要を説明します。詳細については、<block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="1e3ce53c73765c920d0d968caa181dfa" category="list-text">「ユーザーとロール」までスクロールダウンして、<block ref="45858e136decb60b1d8904129517fe57" prefix=" " category="inline-code"></block>を選択します。</block>
+  <block id="15b713144e36aa761d8ff3e179ae23a5" category="paragraph">ロール権限は、ONTAP ストレージへのアクセスレベルに基づいて 4 つのセットに分けられています。ロールの根拠となる権限には以下が含まれます：</block>
+  <block id="7a0599b2c34c3ec7d391e863ad2df8f4" category="paragraph">環境の構成オプションを選択したら、*追加*を選択すると、ONTAP がユーザーとロールを作成します。生成されるロールの名前は、以下の値を連結したものです。</block>
+  <block id="100a776d3332174a67821d3f620d626e" category="paragraph">新しいユーザーは、*ユーザーとロール*ページの一覧に表示されます。HTTP と ONTAPI の両方のユーザーログイン方法がサポートされています。</block>
+  <block id="89c55bc56b089f63b6a6336aa2254739" category="paragraph">VMware vCenter Server はロールベースのアクセス制御（RBAC）を提供し、vSphere オブジェクトへのアクセスを制御できます。vCenter Server の RBAC と ONTAP tools for VMware vSphere の統合を理解することで、権限を効果的に管理し、ストレージ アクセスを安全に保護できます。</block>
+  <block id="b74ebfc0f3af86228f3efb5db4705ba1" category="paragraph">権限は、vCenter Server 環境でアクセス制御を適用するための基盤です。権限は vSphere オブジェクトに適用され、権限定義の一部としてユーザーまたはグループを含みます。次の図は、vCenter Server 権限の概要を示しています。</block>
+  <block id="4a56e406bb24a719685e32ad2a0743c5" category="paragraph">ONTAP tools for VMware vSphere は、2種類のvSphere権限を使用します。この環境でのロールベースアクセス制御（RBAC）の操作を簡素化するために、ONTAP tools は、必要なネイティブ権限とカスタム権限を含むロールを提供します。権限には以下が含まれます：</block>
+  <block id="08056daf1ad4167269dfbbe24482d9de" category="paragraph">Active Directory またはローカルの vCenter Server インスタンスを使用してユーザーとグループを定義できます。ロールと組み合わせることで、vSphere オブジェクト階層内のオブジェクトに対する権限を作成できます。この権限は、関連付けられたロールの権限に基づいてアクセスを許可します。ロールは、ユーザーに単独で直接割り当てられるものではありません。代わりに、ユーザーとグループは、より大きな vCenter Server 権限の一部として、ロール権限を通じてオブジェクトへのアクセス権を取得します。</block>
+  <block id="82193461ff4cedf8de4a3126ceb54556" category="doc">vCenter Server の RBAC と ONTAP tools for VMware vSphere の連携方法</block>
+  <block id="ec67a4a530a59f455c9819b290b84282" category="paragraph">ONTAP tools for VMware vSphereは、vCenter Serverとともにロールベースアクセス制御（RBAC）を実装し、vSphereオブジェクトおよび管理タスクへのアクセスを制御します。事前定義されたロール、権限の割り当て、およびvCenterとONTAP権限の相互作用を含むRBACモデルを理解することで、本番環境にONTAP toolsを導入する前に適切なアクセスを設定できます。</block>
+  <block id="7ba87426ba7030d8fc4af27531e137ca" category="paragraph">ONTAP tools for VMware vSphere のロールを表示するには、vSphere Client の上部にある *メニュー* を選択し、*管理* を選択してから、左側の *ロール* を選択します。以下の権限は、vCenter Server のデプロイまたはオンボーディングを担当する vCenter ユーザーに割り当てられたロールに含める必要があります。デプロイまたはオンボーディングプロセスを開始する前に、これらの権限が設定されていることを確認してください。</block>
+  <block id="62df69a513f43742afa97bd4b5b4f6da" category="paragraph">ONTAP tools for VMware vSphereには、3つの事前定義されたロールが含まれています。</block>
+  <block id="f68b607b89e98287a3c75f6336257ab8" category="paragraph">これら2つのRBAC環境は連携して動作します。vSphere Clientでタスクを実行すると、ONTAP toolsはまずvCenter Serverのロールを確認します。操作がvSphereによって許可されている場合、ONTAPロールの権限が確認されます。この2番目のステップは、ストレージバックエンドの作成および設定時にユーザーに割り当てられたONTAPロールに基づいて実行されます。</block>
+  <block id="3f815c6fd257547e1a282234a1de6896" category="paragraph">vCenter Server の権限とアクセス許可を使用する際は、以下の点に留意してください。</block>
+  <block id="edec62b90a2c65722cfa9020dcacd2c2" category="paragraph">ONTAP tools for VMware vSphere 10 のユーザーインターフェースにアクセスするには、ONTAP tools 固有の「表示」権限が必要です。この権限なしで vSphere にサインインして NetApp アイコンを選択すると、ONTAP tools for VMware vSphere はエラーメッセージを表示し、ユーザーインターフェースへのアクセスを禁止します。</block>
+  <block id="ced58b5bb4a291199b50aa52a3a222a9" category="paragraph">代わりに、「表示」権限を別の下位の vSphere オブジェクトレベルに割り当てることができます。ただし、これによりアクセスできる ONTAP tools for VMware vSphere のメニューが制限されます。</block>
+  <block id="1a1acb21d7b5f499cc86e10a3c6da1f2" category="paragraph">オブジェクト階層の上位レベルで権限を定義する場合、その権限が下位レベルに渡され、子オブジェクトに継承されるように構成できます。必要に応じて、子オブジェクトに追加の権限を割り当てて、親オブジェクトから継承された権限を上書きすることができます。</block>
+  <block id="b0c7d90acffe2e5be3030e6d0decd331" category="paragraph">ボリュームまたはアグリゲートの容量が一定のレベルに達したときに vCenter Server で通知を受け取るためのストレージしきい値を設定できます。</block>
+  <block id="93280167470651d2299f071f5ea39306" category="list-text">「しきい値の編集」ウィンドウで、「ほぼ満杯」と「満杯」のフィールドに希望の値を入力し、「保存」を選択します。</block>
+  <block id="2c66cd8fb1e5116dcc8f321f78c1fe79" category="admonition">しきい値を推奨デフォルト値（ほぼ満杯の場合は 80、満杯の場合は 90）に戻すことができます。</block>
+  <block id="de5aab736db057d9a3980ded66c8276c" category="paragraph">vCenter Serverインスタンスは、ホスト、仮想マシン、ストレージバックエンドを制御できる中央管理プラットフォームです。ONTAP toolsでは、ストレージバックエンドの関連付けを解除したり、インスタンスの詳細を変更したり、インスタンスを削除したり、vCenter Server証明書を更新したりできます。</block>
+  <block id="600ef9127a1ae0f9a015c2160b32d5ff" category="paragraph">次の手順を実行して、vCenter Server インスタンスを変更します。</block>
+  <block id="1b66e19c4e61f16dbd5f42257c19644f" category="list-text">証明書が Base 64 ASCII 形式であり、開始行と終了行が含まれていることを確認してください。例：</block>
+  <block id="5ba92ad0f1a19ce436417772b99f567f" category="paragraph">ONTAP tools Managerは、vCenter Serverインスタンス、ストレージ バックエンド、高可用性（HA）やノード スケーリングなどのアプライアンス構成を含む、ONTAP tools for VMware vSphereを管理するために使用するWebベースのコンソールです。マルチテナンシーをサポートしているため、単一のインターフェイスから複数のvCenter Serverインスタンスを管理できます。</block>
+  <block id="66dad6b0d031af18b1f2a8c8152dde5c" category="list-text">ジョブの監視 - ONTAP tools プラグインインターフェースと ONTAP tools Manager インターフェースから開始された非同期ジョブを監視およびデバッグします。期間を指定してジョブを絞り込んだり、ページサイズを調整したり、エラーやサブタスクを含むジョブの詳細を表示したりできます。エラーの詳細を表示するには、失敗ステータスを選択してください。サブタスクのあるジョブの場合は、行を展開して説明とステータスを確認してください。サブジョブについては、ジョブのドリルダウン機能を使用して詳細を表示してください。</block>
+  <block id="d2f6ee98788066a9cec6a16cfb8edcd5" category="paragraph">ONTAP tools Manager にアクセスするには、ブラウザから<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block>を起動し、デプロイ時に指定した ONTAP tools for VMware vSphere の管理者認証情報でログインします。</block>
+  <block id="e9b6c5468ea5b443a70840ecd4ebe429" category="cell">ONTAP tools のノードカードには、アプライアンス内のすべてのノードが表示されます。これには、ノード名、VM 名、ステータス、ネットワーク情報が含まれます。特定のノードの詳細情報を表示するには、*詳細を表示*を選択してください。[NOTE] 非 HA 構成では、ノードは 1 つしか表示されません。HA 構成では、3 つのノードが表示されます。</block>
+  <block id="4dccdc1a2df67a962f6d1e73842b8c60" category="paragraph">移行予定の仮想マシン上でVASA Providerが実行されていないことを確認してください。VASA Providerを実行している仮想マシンをvVolsデータストアに移行すると、vVolsデータストア上の仮想マシンの電源オンを含む管理操作を実行できなくなります。</block>
+  <block id="b27068c86a02a608986b2f36e3ede73a" category="doc">ONTAP tools における仮想マシンの移行とクローン作成について</block>
+  <block id="1c3f0062a730c4b46d184b0061eb169a" category="paragraph">ONTAP tools for VMware vSphereは、コンピューティング専用（vMotion）、ストレージ専用（Storage vMotion）、およびすべてのデータストアにわたるコンピューティングとストレージの統合移行など、仮想マシン移行のすべての主要なタイプをサポートしています。これらの移行とクローン作成に関する考慮事項とベストプラクティスを理解することで、基盤となるデータストアの種類に関係なく、成功した結果を達成することができます。</block>
+  <block id="b21dc70621311bd676ece50fe94a5e4d" category="paragraph">仮想マシンを別の FlexVol ボリュームに移行する場合、システムはそのボリュームのメタデータファイルを仮想マシン情報で更新します。仮想マシンが別の ESXi ホストに移行されても、ストレージが同じ場合、基盤となる FlexVol ボリュームのメタデータファイルは変更されません。</block>
+  <block id="c96ad90beca2cc436d708876805a1833" category="paragraph">ONTAP tools は、クローンされた仮想マシンの詳細情報を使用して、同じ FlexVol volume のメタデータファイルを更新します。</block>
+  <block id="8fe31777264d4d06665b646e29a75aa5" category="paragraph">クローンされた仮想マシンが配置される FlexVol volume では、ONTAP tools はクローンされた仮想マシンの詳細情報でメタデータファイルを更新します。</block>
+  <block id="b4d3ea6ce388312440fa8e607179a424" category="paragraph">クローンされた仮想マシンが配置される FlexVol volume では、ONTAP tools は仮想マシンの詳細情報でメタデータファイルを更新します。</block>
+  <block id="f98a8ade446cecb96c026d2460b5c596" category="paragraph">VMwareは現在、VMテンプレートにクローンされた仮想マシンをサポートしていません。</block>
+  <block id="511a60ea21d357d9300c22e4e2a2cbb8" category="paragraph">データストアをマウントすると、VMware環境にホストを追加した後、追加のホストへのストレージ アクセスが可能になります。</block>
+  <block id="98a4d867fe94e2841609745a9b7f93c2" category="list-text">vSphere 7.0U3 から vSphere 8.0 では、オプションは表示されるものの、アクションは無効になっています。</block>
+  <block id="c0bc8330fd696b661f2fb5c18414427d" category="paragraph">ONTAP tools の VM と ONTAP ストレージシステムの両方を管理する場合は、igroup の動作を理解する必要があります。特に、ONTAP tools で管理されていない環境から管理されている環境へデータストアを移動する場合は重要です。ONTAP tools for VMware vSphere は、ネストされた igroup モデルを使用して igroup を表現および管理します。このモデルを理解することで、以前のリリースと現在の実装との動作の違いを解釈するのに役立ちます。</block>
+  <block id="bf9b080c4b8b776ea18893cbdb32b835" category="paragraph">例えば、datastore1 を作成してホスト 1、2、3 にマウントし、次に datastore2 を作成してホスト 3、4、5 にマウントするとします。ONTAP tools は、効率的な管理のためにホストレベルの igroup を再利用します。</block>
+  <block id="f083c753e7d5cd875ba4d0ab72191189" category="paragraph">igroup とデータストアを ONTAP システムおよび VMware 環境で直接作成した場合、ONTAP tools は初期状態ではこれらのオブジェクトを管理しないため、フラットな igroup 構造になります。</block>
+  <block id="48b46dc98dea33957f493cfe5bfc09ba" category="paragraph">データストアに保存されているバックアップファイルから復元することで、ONTAP tools for VMware vSphere のセットアップを回復できます。ONTAP tools for VMware vSphere 10.5 以降、バックアップ機能はデフォルトで有効になっているため、アプライアンスの再デプロイや復旧が必要な場合に最新のバックアップを利用できます。</block>
+  <block id="6ec21ff320d03f11a4225fbb76ac13b3" category="admonition">コマンドで指定されている保存先パスとファイル名（/home/diag/system_recovery.tar.enc）は変更しないでください。</block>
+  <block id="a3f751b92667dfc4d55df02516833e39" category="paragraph">データストアからストレージを削除するアクションを使用して、ONTAP tools の vVols データストアからボリュームを削除し、追加のストレージが不要になった場合に容量を縮小します。</block>
+  <block id="f8ace8ad630c7e75980dce077d46b26f" category="paragraph">ボリュームに vVols が含まれている場合、そのボリュームからストレージを削除することはできません。このようなボリュームでは削除オプションは無効になっています。データストアからボリュームを削除する場合、選択したボリュームを ONTAP ストレージから削除するオプションもあります。</block>
+  <block id="8ce73f32d584f9cbeba5885cdd6956b3" category="admonition">vVols が存在するボリュームを選択するオプションは無効になっています。</block>
+  <block id="e93ffc3b7fa7aa5e157bebc9f77699b4" category="list-text">「ストレージを削除」ポップアップで、「ONTAP クラスタからボリュームを削除」チェックボックスを選択してデータストアおよび ONTAP ストレージからボリュームを削除し、「削除」を選択します。</block>
+  <block id="7dd80682bc839c81db35f040d24e8cf4" category="doc">ONTAP tools for VMware vSphere レポート</block>
+  <block id="7adf163c0b95b5edc109663c936842c5" category="paragraph">ONTAP tools for VMware vSphereプラグインは、ONTAPストレージを基盤とする仮想マシンとデータストアの監視に役立つレポートを提供します。これらのレポートを表示するには、vCenterクライアントのショートカット セクションでONTAP tools for VMware vSphereプラグイン アイコンを選択し、次に「レポート」タブを選択します。</block>
+  <block id="38231b6e13ee3db4ddfaf32d629a70bc" category="paragraph">仮想マシンレポートには、ONTAP ストレージベースのデータストアに少なくとも 1 つのディスクがある検出済みの仮想マシンと、パフォーマンス指標が一覧表示されます。VM レコードを展開すると、インターフェースにディスク関連のデータストア情報がすべて表示されます。</block>
+  <block id="ee980cc257f97818925f30a7c45725b1" category="paragraph">データストアレポートには、ONTAP tools for VMware vSphere が検出した ONTAP ストレージを使用するデータストアと、パフォーマンス指標が一覧表示されます。</block>
+  <block id="af082e46705496a3f6651d84bfb70bc7" category="paragraph">SRAおよびVASAプロバイダーのvCenter ServerへのONTAP tools for VMware vSphere登録に必要なアプリケーションユーザーパスワードをリセットします。</block>
+  <block id="71710c4198d33dd3eafa499a6565635a" category="paragraph">ゲストOSの再起動操作中に、GRUBメニューにメンテナンスコンソールユーザーのパスワードをリセットするオプションが表示されます。このオプションを使用して、VM上のメンテナンスコンソールユーザーのパスワードを更新します。パスワードをリセットすると、VMが再起動して新しいパスワードを設定します。HA構成では、VMが再起動すると、システムは他の2つのVMのパスワードを自動的に更新します。</block>
+  <block id="3b7810185415648229159add658c5b77" category="admonition">ONTAP tools for VMware vSphere の HA 展開では、ONTAP tools 管理ノード（node1）のメンテナンスコンソールのユーザーパスワードを変更します。</block>
+  <block id="b322adf0a7d51463b1e60a7895f8a242" category="paragraph">選択肢を選ぶ時間は5秒です。いずれかのキーを押すと、処理が停止し、GRUBメニューがフリーズします。</block>
+  <block id="0ac9209139799542e5b72500bea3340c" category="paragraph">ONTAP tools for VMware vSphere をアップグレードする前に、環境内の他の各ノードで SSH を起動する必要があります。</block>
+  <block id="5cdcc37018b884a7a61683de51fbe7ab" category="paragraph">ストレージバックエンドとは、ESXiホストがデータ保存に使用するシステムのことです。ストレージバックエンドの検出、変更、削除は、ONTAP tools for VMware vSphere を使用して行うことができます。</block>
+  <block id="0c39fb3d1a8f1db86a218d52f179092d" category="paragraph">ストレージの詳細を更新するために、次回のスケジュールされた検出を待つのではなく、必要に応じてストレージバックエンドの検出を実行できます。MetroCluster 構成の場合は、スイッチオーバー後に ONTAP tools の検出を手動で実行してください。</block>
+  <block id="ce976143d96039cb8de4ddbb9de30578" category="paragraph">ストレージバックエンドの認証情報またはポート名を変更できます。ONTAP tools Manager を使用して、グローバル ONTAP クラスターのストレージバックエンドを変更することもできます。証明書の有効期限が 30 日以内の場合、ONTAP tools に警告が表示されます。ストレージバックエンドを変更し、ONTAP 管理者から新しい証明書をアップロードしてください。</block>
+  <block id="3a74725bdfcac06fed406cbc0dde5684" category="list-text">縦に並んだ三点リーダーのメニューを選択し、*削除*を選択します。ストレージバックエンドにデータストアが含まれていないことを確認してください。最近のタスクパネルで進捗状況を確認できます。</block>
+  <block id="6464d2a45e37f03e9b8c4c6239b16e39" category="paragraph">ストレージバックエンドのページには、すべてのストレージバックエンドが一覧表示されます。追加したストレージバックエンドを検出、変更、削除することはできますが、クラスタ配下の個々の子SVMに対してこれらの操作を実行することはできません。</block>
+  <block id="d23b2a19c8f9cfc73fd02e511df8319e" category="list-text">ASA r2 システム クラスタのドリルダウン ビューでは、SVM またはクラスタの disaggregated プロパティが「true」に設定されている場合、ローカル ティア タブは含まれません。</block>
+  <block id="175e10c501928a68873d479ffe74575e" category="list-text">ASA r2 SVM システムでは、容量ポートレットは表示されません。容量ポートレットは、SVM またはクラスタの disaggregated プロパティが「true」に設定されている場合にのみ必要です。</block>
+  <block id="64df08aa38e98ab154f508da552988a8" category="paragraph">ONTAP tools for VMware vSphere の「構成」タブには、データストアとそのボリュームの ONTAP ストレージ側ビューが表示されます。これには、各データストアタイプのストレージバックエンド、アグリゲート、ボリュームの詳細が含まれます。</block>
+  <block id="69e64cda3f8125351b5e3c5ea7debf1d" category="cell">NFSデータストア</block>
+  <block id="d66582fd5d1bc4161c88c3f34695e1f8" category="cell">「ストレージの詳細」ページには、ストレージのバックエンド、アグリゲート、およびボリュームに関する情報が含まれています。「NFS の詳細」ページには、NFS データストアに関連するデータが含まれています。注意：nconnect の値が ONTAP tools の外部で変更された場合、ONTAP tools に表示される値にその外部の変更が反映されない可能性があります。</block>
+  <block id="142b92f8974022c41936ada0973434a6" category="cell">「ストレージの詳細」ページには、ストレージバックエンド、アグリゲート、ボリューム、およびストレージの可用性ゾーン（SAZ）の詳細が含まれています。「ストレージユニットの詳細」ページには、ストレージユニットの詳細が記載されています。</block>
+  <block id="f02ba84a6292d236b6193eb515758b58" category="cell">このページには、すべてのボリュームが一覧表示されます。ONTAP ストレージペインからストレージを拡張または削除できます。ONTAP tools for VMware vSphere は、ASA r2 システムベースの vVols データストアに対してこのビューをサポートしていません。</block>
+  <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">VMware vSphere 向け ONTAP tools のデプロイメントをアンインストールする</block>
+  <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">ONTAP tools for VMware vSphere をアンインストールすると、ツール内のすべてのデータが削除されます。デプロイメントを正常に終了し、予期しないデータ損失を回避するには、以下の手順を完了する必要があります。</block>
 </blocks>

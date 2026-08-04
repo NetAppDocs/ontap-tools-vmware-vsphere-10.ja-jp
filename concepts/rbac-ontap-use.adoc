@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
 summary: 本番環境で使用する前に、ONTAP tools の ONTAP RBAC に関する考慮事項を確認してください。 
 ---
-= ONTAP tools に関する ONTAP RBAC の考慮事項
+= ONTAP tools for VMware vSphere における ONTAP RBAC
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本番環境で使用する前に考慮する必要があります。
+ONTAP tools for VMware vSphereは、ONTAPを通じてロールベースのアクセス制御（RBAC）をサポートしており、ストレージリソースへのアクセスを制限するカスタムユーザーとロールを作成できます。構成プロセスと権限レベルを理解することで、本番環境にONTAP toolsを導入する前に適切なアクセス制御を設定できます。
 
 
 
@@ -20,7 +20,7 @@ ONTAPでのONTAP Tools for VMware vSphere 10 RBACの実装については、本�
 
 ONTAP tools for VMware vSphereには、カスタム ロールを持つONTAPユーザーの作成のサポートが含まれています。定義は、 ONTAPクラスターにアップロードできる JSON ファイルにパッケージ化されています。ユーザーを作成し、環境とセキュリティのニーズに合わせてロールをカスタマイズできます。
 
-主な設定手順について、以下で大まかに説明します。link:../configure/configure-user-role-and-privileges.html["ONTAPユーザのロールと権限の設定"]詳細については、を参照してください。
+次のセクションでは、主要な設定手順の概要を説明します。詳細については、link:../configure/configure-user-role-and-privileges.html["ONTAPユーザのロールと権限の設定"]を参照してください。
 
 .1.準備
 ONTAP tools ManagerとONTAPクラスタの両方に対する管理クレデンシャルが必要です。
@@ -32,7 +32,7 @@ ONTAP tools Managerのユーザインターフェイスにサインインした�
 System Managerにサインインしたら、ユーザとロールを作成できます。
 
 . 左側の*[クラスタ]*を選択し、*[設定]*を選択します。
-. [ユーザとロール]*まで下にスクロールし、をクリックします `-->`。
+. 「ユーザーとロール」までスクロールダウンして、 `-->`を選択します。
 . [Users]で[Add]*を選択し、[Virtualization products]*を選択します。
 . ローカルワークステーションでJSONファイルを選択してアップロードします。
 
@@ -59,7 +59,7 @@ RBACの定義は、VSC、VASA Provider、SRAなど、複数の製品機能とし
 [[privileges]]
 === 権限
 
-ロール権限は、ONTAP ストレージに必要なアクセス レベルに基づいて 4 つのセットに分けられています。ロールの基となる権限には次のものがあります：
+ロール権限は、ONTAP ストレージへのアクセスレベルに基づいて 4 つのセットに分けられています。ロールの根拠となる権限には以下が含まれます：
 
 * 検出
 +
@@ -84,7 +84,7 @@ RBACの定義は、VSC、VASA Provider、SRAなど、複数の製品機能とし
 [[generate-the-user-with-a-role]]
 === ロールを持つユーザを生成する
 
-環境の構成オプションを選択したら、*[追加]*をクリックすると、ONTAPによってユーザーとロールが作成されます。生成されたロールの名前は、次の値を連結したものです。
+環境の構成オプションを選択したら、*追加*を選択すると、ONTAP がユーザーとロールを作成します。生成されるロールの名前は、以下の値を連結したものです。
 
 * JSONファイルで定義された固定プレフィックス値（例：「OTV_10」）
 * 選択した製品機能
@@ -94,4 +94,4 @@ RBACの定義は、VSC、VASA Provider、SRAなど、複数の製品機能とし
 .例
 `OTV_10_VSC_Discovery_Create`
 
-新しいユーザーは、「ユーザーと役割」ページの一覧に追加されます。HTTPとONTAPIの両方のユーザーログイン方法がサポートされていることに注意してください。
+新しいユーザーは、*ユーザーとロール*ページの一覧に表示されます。HTTP と ONTAPI の両方のユーザーログイン方法がサポートされています。
