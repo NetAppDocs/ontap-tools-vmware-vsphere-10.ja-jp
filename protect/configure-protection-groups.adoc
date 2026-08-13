@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
 summary: 保護対象サイトの仮想マシン用に保護グループを作成し、保護対象ボリュームにデータストアを追加した後、ストレージ検出を更新します。 
 ---
-= ONTAP toolsで保護サイトとリカバリサイトを構成する
+= ONTAP tools でサイトをペアリングし、保護グループを設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -2016,8 +2016,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">ONTAP toolsのアレイマネージャを使用してSRAを設定する</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">ONTAP tools を使用して VMware Live Site Recovery アプライアンスで SRA を構成する</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">ONTAP toolsでプレースホルダデータストアを設定する</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">ONTAP toolsで保護サイトとリカバリサイトを構成する</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">大規模環境向けに ONTAP tools で SRA を構成する</block>
   <block id="366099eedc535323fc065faade609247" category="doc">SAN および NAS 環境向けの ONTAP tools で SRA を構成する</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">データストアを保護するために ONTAP tools で SRA を設定する</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">ONTAP toolsのファンアウト保護</block>
@@ -2851,7 +2849,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">詳細については、<block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block>を参照してください。</block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text"><block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block>に従って、データストアをホストクラスタ保護に追加します。非同期ポリシータイプと同期ポリシータイプの両方を追加します。</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">ホストクラスタ内のデータストアを保護する前に、データストアのきめ細かな保護方法とデータストアの適格性基準を理解してください。</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">詳細なデータストア保護の適格性基準</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">ホストクラスタ全体を保護するのではなく、きめ細かなデータストア保護を使用して、ホストクラスタ内の選択したVMFSデータストアを保護します。</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">きめ細かなデータストア保護は、ONTAP tools for VMware vSphere 10.6以降で利用可能です。この機能は、クラスタ全体での選択ではなく、データストアレベルでの保護計画を提供します。</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">この機能により、以下のことが可能になります：</block>
@@ -3123,4 +3120,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">このページには、すべてのボリュームが一覧表示されます。ONTAP ストレージペインからストレージを拡張または削除できます。ONTAP tools for VMware vSphere は、ASA r2 システムベースの vVols データストアに対してこのビューをサポートしていません。</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">VMware vSphere 向け ONTAP tools のデプロイメントをアンインストールする</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">ONTAP tools for VMware vSphere をアンインストールすると、ツール内のすべてのデータが削除されます。デプロイメントを正常に終了し、予期しないデータ損失を回避するには、以下の手順を完了する必要があります。</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">ONTAP tools でサイトをペアリングし、保護グループを設定する</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">ONTAP toolsの大規模環境向けSRAタイムアウト設定</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">ONTAP tools における詳細なデータストア保護の適格性基準</block>
 </blocks>

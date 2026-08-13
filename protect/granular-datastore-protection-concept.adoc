@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
 summary: ホストクラスタ内のデータストアを保護する前に、データストアのきめ細かな保護方法とデータストアの適格性基準を理解してください。 
 ---
-= 詳細なデータストア保護の適格性基準
+= ONTAP tools における詳細なデータストア保護の適格性基準
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
