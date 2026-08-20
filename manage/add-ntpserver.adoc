@@ -11,7 +11,7 @@ summary: ONTAP tools でアプライアンスの時刻を同期するために N
 
 
 [role="lead"]
-NTPサーバの詳細を入力して、ONTAP toolsアプライアンスのタイムクロックを同期します。
+NTP サーバーの詳細を入力して、ONTAP tools アプライアンスのクロックを同期します。
 
 
 NOTE: ONTAP tools for VMware vSphere 10.6 以降、時刻同期デーモンは ntpd ではなく chronyd になります。10.6 へのアップグレード時には、既存の NTP サーバー設定が自動的に移行されます。手動での再設定は不要です。

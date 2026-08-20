@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: ONTAP tools がデータストアへのアクセスのために igroup とエクスポートポリシーを作成および管理する方法について説明します。 
 ---
-= ONTAP toolsがigroupとエクスポートポリシーを管理する方法
+= ONTAP tools の igroup とエクスポートポリシーのワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-イニシエータグループ（igroup）は、FCプロトコルホストのワールドワイドポート名（WWPN）またはiSCSIホストの修飾ノード名（Qualified Node Name）のテーブルです。igroupを定義してLUNにマッピングすることで、どのイニシエータがLUNにアクセスできるかを制御できます。
+この情報を使用して、ONTAP tools for VMware vSphere がデータストア アクセスのための igroup とエクスポート ポリシーをどのように作成および管理するかを理解します。
 
-ONTAP tools for VMware vSphere 9.x では、igroup はフラットな構造で作成および管理され、vCenter の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストア間での igroup の柔軟性と再利用性が制限されていました。ONTAP tools for VMware vSphere 10.4 では、ネストされた igroup が導入され、vCenter の各データストアは親 igroup に関連付けられており、各ホストはその親の下にある子 igroup にリンクされています。igroup の管理を容易にするために、ユーザー定義の名前を持つカスタム親 igroup を定義して、データストア間で再利用することができます。ONTAP tools for VMware vSphere で LUN とデータストアを管理するための igroup ワークフローを理解してください。ワークフローが異なると、生成される igroup 構成も異なります。以下の例をご覧ください。
+ONTAP tools for VMware vSphere 9.x では、igroup はフラットな構造で作成および管理され、vCenter 内の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストア間での igroup の柔軟性と再利用性が制限されていました。ONTAP tools for VMware vSphere 10.4 ではネストされた igroup が導入され、vCenter 内の各データストアは親 igroup に関連付けられ、各ホストはその親の下にある子 igroup にリンクされています。igroup の管理を容易にするために、ユーザー定義の名前を持つカスタム親 igroup を定義して、データストア間で再利用することができます。この情報を使用して、ONTAP tools for VMware vSphere が igroup ワークフローを通じて LUN とデータストアを管理する方法を理解してください。ワークフローが異なると、生成される igroup 構成も異なります。以下の例をご覧ください。
 
 
 NOTE: 記載されている名前は説明のみを目的としており、実際の igroup 名を指すものではありません。 ONTAPツールで管理される igroup は、プレフィックス「otv_」を使用します。カスタム igroup には任意の名前を付けることができます。
@@ -78,7 +78,7 @@ ONTAP はDS1 の親 igroup DS1Igroup を作成し、子 igroup host1Igroup を l
 
 
 
-ONTAP tools for VMware vSphereは、子 igroup host2Igroup を作成し、それを既存の親 igroup DS1Igroup に追加します。
+ONTAP tools for VMware vSphere は、子igroup host2Igroupを作成し、既存の親igroup DS1Igroupに追加します。
 
 .例3：
 ホストからデータストアをアンマウントする
@@ -203,7 +203,7 @@ ONTAPツール9から10への移行（igroupの正規化）
 
 * ワークフロー *
 
-VMware vSPhere 9.x バージョン用のONTAPツールは、階層型 igroup をサポートしていません。  10.3 以降のバージョンへの移行中は、igroup を階層構造に正規化する必要があります。
+ONTAP tools for VMware vSphere 9.x バージョンでは階層型 igroup はサポートされていません。バージョン 10.3 以降への移行時には、igroup を階層構造に正規化する必要があります。
 
 移行前:
 
@@ -243,7 +243,7 @@ ONTAP Tools for VMware vSphere で NFS データストアを作成する際、�
 
 新しいESXiホストにNFSデータストアをマウントすると、VMware vSphere用のONTAPツールによって、そのデータストアに関連付けられた既存のエクスポートポリシーにホストのIPアドレスが追加されます。これにより、新しいホストは新しいエクスポートポリシーを作成しなくてもデータストアにアクセスできるようになります。
 
-ESXi ホストから NFS データストアを削除またはアンマウントすると、 ONTAP tools for VMware vSphere、エクスポート ポリシーからホストの IP アドレスが削除されます。他のホストがそのエクスポート ポリシーを使用していない場合は、そのエクスポート ポリシーは削除されます。NFS データストアを削除すると、そのデータストアに関連付けられているエクスポート ポリシーが他のデータストアで再利用されていない場合、 ONTAP tools for VMware vSphereそのデータストアが削除されます。エクスポート ポリシーが再利用される場合、ホスト IP アドレスは保持され、変更されません。データストアを削除すると、エクスポート ポリシーによってホスト IP アドレスの割り当てが解除され、デフォルトのエクスポート ポリシーが割り当てられるため、必要に応じてONTAPシステムがデータストアにアクセスできるようになります。
+ESXi ホストから NFS データストアを削除またはアンマウントすると、ONTAP tools for VMware vSphere はホストの IP アドレスをエクスポートポリシーから削除します。他のホストがそのエクスポートポリシーを使用していない場合、そのポリシーは削除されます。NFS データストアを削除すると、ONTAP tools for VMware vSphere は、他のデータストアで再利用されていない場合、そのデータストアに関連付けられているエクスポートポリシーを削除します。エクスポートポリシーが再利用される場合、ホストの IP アドレスは維持され、変更されません。データストアを削除すると、ONTAP tools はエクスポートポリシーからホストの IP アドレスを削除し、ONTAP がアクセスを必要とする場合はデフォルトのエクスポートポリシーを割り当てます。
 
 エクスポートポリシーを異なるデータストア間で再利用する場合、割り当て方法が異なります。エクスポートポリシーを再利用する際は、新しいホストIPアドレスをポリシーに追加できます。共有エクスポートポリシーを使用しているデータストアを削除またはアンマウントしても、ポリシーは削除されません。ポリシーは変更されず、ホストIPアドレスも削除されません。これは、他のデータストアと共有されているためです。エクスポートポリシーの再利用は、アクセスやレイテンシの問題につながる可能性があるため、推奨されません。
 

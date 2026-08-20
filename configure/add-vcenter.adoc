@@ -11,7 +11,7 @@ summary: vCenter Server インスタンスを ONTAP tools に追加して、デ�
 
 
 [role="lead"]
-vCenter Server インスタンスを ONTAP tools for VMware vSphere に追加して、vCenter Server 環境のデータストアを設定、管理、保護します。複数の vCenter Server インスタンスを追加する場合、ONTAP tools と各 vCenter Server 間のセキュアな通信にはカスタム CA 証明書が必要です。
+vCenter Server インスタンスを ONTAP tools for VMware vSphere に追加して、vCenter Server 環境のデータストアを構成、管理、および保護します。複数の vCenter Server インスタンスを追加する場合は、ONTAP tools と各 vCenter Server 間のセキュアな通信のためにカスタム CA 証明書を構成してください。
 
 .タスクの内容
 ONTAPツールは vCenter Server と統合され、プロビジョニング、スナップショット、データ保護などのストレージ タスクを vSphere クライアントから直接実行します。
@@ -19,8 +19,8 @@ ONTAPツールは vCenter Server と統合され、プロビジョニング、�
 vCenter ServerインスタンスをONTAP toolsに追加すると、次の処理が自動的にトリガーされます。
 
 * ONTAPツールは、vCenter クライアント プラグインをリモート プラグインとして登録します。
-* プラグインとAPIのカスタムPrivilegesがvCenter Serverインスタンスに適用されます。
-* ユーザを管理するためのカスタムロールが作成されます。
+* ONTAP tools は、プラグインと API のカスタム Privileges を vCenter Server インスタンスに適用します。
+* ONTAP tools は、ユーザーを管理するためのカスタムロールを作成します。
 * プラグインは、vSphereユーザインターフェイスにショートカットとして表示されます。
 
 
@@ -37,7 +37,7 @@ X509v3 extensions:
 証明書にSAN拡張が含まれていない場合、またはSAN拡張に正しいDNSまたはIPアドレス値が含まれていない場合、証明書検証エラーのため、ONTAP tools for VMware vSphereの操作が失敗する可能性があります。
 
 * vCenter Server のプライマリネットワーク識別子（PNID）を SAN の詳細に含める必要があります。PNID と DNS 名は同一であり、DNS で解決可能である必要があります。
-* vCenter Server は完全修飾ドメイン名（FQDN）を使用して導入することを推奨します。証明書の SAN に DNS Name=machine_FQDN が含まれるようにすることで、最適な互換性とサポートを実現します。
+* vCenter Server を完全修飾ドメイン名（FQDN）を使用してデプロイし、最適な互換性とサポートを確保するために、証明書の SAN に DNS Name=machine_FQDN が含まれていることを確認してください。
 * 詳細については、VMware のドキュメントを参照してください：
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["異なる解決策パスのvSphere証明書の要件"]
@@ -49,7 +49,7 @@ X509v3 extensions:
 
 [NOTE]
 ====
-FQDN が使用できない場合は、PNID を IP アドレスに設定し、IP アドレスを SAN に含めることができます。ただし、これは VMware では推奨されていません。
+FQDNが利用できない場合は、PNIDをIPアドレスに設定し、そのIPアドレスをSANに含めることができます。ただし、VMwareはこの構成を推奨していません。
 
 ====
 .手順
@@ -59,6 +59,6 @@ FQDN が使用できない場合は、PNID を IP アドレスに設定し、IP 
 . 詳細オプションで、vCenter Server 証明書を自動的に取得 (承認) するか、手動でアップロードします。
 +
 
-NOTE: vCenterインスタンスをONTAP toolsに追加するために管理者アカウントは必要ありません。権限が制限された管理者アカウントなしでカスタムロールを作成できます。詳細については、を参照してください link:../concepts/rbac-vcenter-use.html["vCenter Server RBACとONTAP Tools for VMware vSphere 10の使用"] 。
+NOTE: vCenter インスタンスを ONTAP tools に追加するために管理者アカウントは必要ありません。管理者アカウントがなくても、権限を制限したカスタムロールを作成できます。詳細については、link:../concepts/rbac-vcenter-use.html["vCenter Server RBACとONTAP Tools for VMware vSphere 10の使用"] を参照してください。
 
 

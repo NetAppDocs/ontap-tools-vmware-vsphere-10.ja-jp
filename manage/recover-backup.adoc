@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
 summary: バックアップから ONTAP tools をリカバリし、リリースごとのゼロ RPO およびほぼゼロ RPO の動作を理解します。 
 ---
-= ONTAPツールのセットアップを回復する
+= バックアップからONTAP tools for VMware vSphereをリカバリする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-データストアに保存されているバックアップファイルから復元することで、ONTAP tools for VMware vSphere のセットアップを回復できます。ONTAP tools for VMware vSphere 10.5 以降、バックアップ機能はデフォルトで有効になっているため、アプライアンスの再デプロイや復旧が必要な場合に最新のバックアップを利用できます。
+データストアに保存されているバックアップファイルを復元することで、ONTAP tools for VMware vSphere を回復します。ONTAP tools for VMware vSphere 10.5 以降、バックアップはデフォルトで有効になっているため、アプライアンスの再デプロイや復旧が必要な場合でも、通常は最新のバックアップが利用可能です。
 
-ONTAP tools for VMware vSphereを導入するデータストアには、バックアップ ファイルが保存されます。  ONTAPツールの IP アドレスにちなんで名付けられたフォルダ（ドットはアンダースコアに置き換えられ、末尾に _OTV_backup_ が付けられます）には、最新の 2 つのバックアップ ファイル（_OTV_backup_1.tar.enc_ と _OTV_backup_2.tar.enc_）と、最新のバックアップの名前を含む情報ファイル（_OTV_backup_info.txt_）が保存されます。
+ONTAP tools for VMware vSphere 仮想マシンをデプロイするデータストアには、バックアップファイルが保存されます。ONTAP tools の IP アドレスにちなんで名付けられたフォルダには、最新のバックアップファイル 2 つ（_OTV_backup_1.tar.enc_ および _OTV_backup_2.tar.enc_）と、最新のバックアップを識別する情報ファイル（_OTV_backup_info.txt_）が保存されます。
 
 新しい仮想マシンが同じONTAPツール IP アドレスを使用し、有効なサービス、ノード サイズ、HA モードなどの初期システム構成と一致していることを確認します。
 

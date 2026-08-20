@@ -11,10 +11,10 @@ summary: ONTAP tools と ONTAP System Manager の JSON ファイルを使用し�
 
 
 [role="lead"]
-このセクションを使用して、 ONTAP tools for VMware vSphereおよびONTAP System Manager 用の ONTAP ツールを使用して、ストレージ バックエンドのONTAPユーザー ロールと権限を構成します。提供されている JSON ファイルを使用してロールを割り当て、ユーザーとロールを手動で作成し、管理者以外のアカウントに必要な最小限の権限を適用できます。
+ONTAP tools for VMware vSphere と ONTAP System Manager を使用して、ストレージバックエンドの ONTAP ユーザーロールと Privileges を設定します。提供されている JSON ファイルを使用してロールを割り当てたり、ユーザーとロールを手動で作成したり、管理者以外のアカウントに必要最低限の Privileges を適用したりできます。
 
 .作業を開始する前に
-* _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ を使用して、 ONTAP tools for VMware vSphereからONTAPPrivilegesファイルをダウンロードします。  zip ファイルをダウンロードすると、2 つの JSON ファイルが見つかります。  ASA r2 システムを構成するときは、 ASA r2 固有の JSON ファイルを使用します。
+* ONTAP tools for VMware vSphere から ONTAP Privileges ファイルを _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ でダウンロードします。zip ファイルには 2 つの JSON ファイルが含まれています。ASA r2 システムを設定する場合は、ASA r2 固有の JSON ファイルを使用します。
 +
 
 NOTE: ユーザーは、クラスター レベルまたはストレージ仮想マシン (SVM) レベルで直接作成できます。  user_roles.json ファイルを使用しない場合は、ユーザーに必要な最小限の SVM 権限があることを確認してください。
@@ -35,7 +35,7 @@ NOTE: ユーザーは、クラスター レベルまたはストレージ仮想�
 +
 ONTAPツールは、製品フィールドに自動的に入力します。
 
-.. ドロップダウンから製品機能として*VSC、VASA プロバイダー、および SRA*を選択します。
+.. ドロップダウンリストから、製品機能として「VSC、VASA Provider、およびSRA」を選択してください。
 +
 ONTAPツールは、選択した製品の機能に基づいて *Role* フィールドに自動的に入力します。
 
@@ -104,10 +104,10 @@ JSON ファイルを使用せずにユーザーとロールを手動で作成し
 
 
 
-[[list-of-minimum-privileges-required-for-non-admin-global-scoped-cluster-user]]
-=== 管理者以外のグローバルを対象としたクラスタユーザに必要な最小権限のリスト
+[[list-of-minimum-privileges-required-for-a-non-admin-global-scoped-cluster-user]]
+=== 管理者権限を持たないグローバルスコープのクラスタユーザーに必要な最小限の Privileges の一覧
 
-このページでは、JSON ファイルのない管理者以外のグローバル スコープのクラスター ユーザーに必要な最小限の権限を示します。クラスタがローカル スコープ内にある場合、 ONTAP tools for VMware vSphereではONTAPでのプロビジョニングに読み取り権限以上の権限が必要なため、JSON ファイルを使用してユーザを作成します。
+このページでは、JSON ファイルを持たない、管理者権限を持たないグローバルスコープのクラスタユーザーに必要な最小限の Privileges を一覧表示します。クラスターがローカルスコープにある場合は、JSON ファイルを使用してユーザーを作成してください。これは、ONTAP tools for VMware vSphere が ONTAP でのプロビジョニングに Read Privileges 以上の権限を必要とするためです。
 
 API を使用して機能にアクセスできます。
 

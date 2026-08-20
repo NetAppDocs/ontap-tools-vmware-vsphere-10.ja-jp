@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine 
 summary: ストレージビューから仮想マシンによって作成された vVols のリストを表示します。 
 ---
-= ONTAP toolsの仮想マシンストレージビュー
+= ONTAP tools で仮想マシンのストレージの詳細を表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ストレージ ビューには、仮想マシンが作成するvVolsのリストが表示されます。
+ストレージビューを使用して、仮想マシンに関連付けられているvVolsを確認します。
 
 
 NOTE: このビューは、ONTAP tools for VMware vSphere が管理するvVolsデータストアからのディスクが少なくとも 1 つある VM に適用されます。
@@ -19,8 +19,8 @@ NOTE: このビューは、ONTAP tools for VMware vSphere が管理するvVols�
 .手順
 . vSphere Client から仮想マシンに移動します。
 . 右側のペインで* Monitor *タブを選択します。
-. NetApp ONTAP tools *>* Storage *を選択します。右側のペインに*[ストレージ]*の詳細が表示されます。VMに存在するvVolのリストが表示されます。
+. *NetApp ONTAP tools* > *ストレージ* を選択します。*ストレージ* の詳細が右側のペインに表示されます。VM上の vVols のリストを確認できます。
 +
-[列の管理]オプションを使用すると、別の列の表示/非表示を切り替えることができます。
+「列の管理」オプションを使用すると、列の表示/非表示を切り替えることができます。
 
 

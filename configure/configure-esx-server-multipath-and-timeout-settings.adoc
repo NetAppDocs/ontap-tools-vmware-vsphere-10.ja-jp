@@ -6,17 +6,21 @@ summary: ESXiホストのマルチパスおよびHBAタイムアウト設定を�
 ---
 = ONTAP toolsでESXiホストの設定を構成する
 :allow-uri-read: 
+:firstname: = Configure ESXi host settings in ONTAP tools
+:author: = Configure ESXi host settings in ONTAP tools
+:authorinitials: =
+:authors: = Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ESXi サーバーのマルチパスとタイムアウト設定を構成すると、データの可用性と整合性を維持するのに役立ちます。プライマリ パスが使用できなくなった場合に、バックアップ ストレージ パスへの自動フェイルオーバーが可能になります。
+ESXi ホストのマルチパス設定とタイムアウト設定を構成することで、データの可用性と整合性を維持するのに役立ちます。プライマリパスが利用できなくなった場合に、バックアップ ストレージパスへの自動フェイルオーバーが可能になります。
 
 
 
-[[configure-esxi-server-multipath-and-timeout-settings]]
-== ESXiサーバのマルチパスとタイムアウトの設定
+[[apply-recommended-esxi-host-settings]]
+== 推奨される ESXi ホスト設定を適用する
 
 VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに最も適した設定を行います。
 
@@ -27,7 +31,7 @@ VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設�
 . VMware vSphere Web Clientのホームページで、*[ホストおよびクラスタ]*を選択します。
 . VMware vSphere Web Clientのショートカットページで、[plug-ins]セクションで* NetApp ONTAP tools *を選択します。
 . ONTAP Tools for VMware vSphereプラグインの概要（ダッシュボード）にある* ESXiホストコンプライアンス*カードに移動します。
-. [推奨設定の適用]*リンクを選択します。
+. 「推奨設定を適用」リンクを選択します。
 . *推奨ホスト設定の適用* ウィンドウで、 NetApp推奨設定を使用するように更新するホストを選択し、*次へ* を選択します。
 +
 
@@ -51,7 +55,7 @@ ESXi ホストでは、次の値を設定できます。
 [[hbacna-adapter-settings]]
 === HBA / CNAアダプタ設定
 
-次のパラメータをデフォルト値に設定します。
+ONTAP tools は、以下のパラメータをデフォルト値に設定します。
 
 * Disk.QFullSampleSize
 * Disk.QFullThreshold
@@ -64,12 +68,12 @@ ESXi ホストでは、次の値を設定できます。
 [[mpio-settings]]
 === MPIO設定
 
-MPIO 設定は、 NetAppストレージ システムに最適なパスを選択します。  MPIO 設定では最適なパスを選択して使用します。
+MPIO設定は、NetAppストレージシステムに対して利用可能な最良のパスを選択して使用します。
 
 高パフォーマンス環境の場合、または単一の LUN データストアでテストする場合は、ラウンドロビン (VMW_PSP_RR) パス選択ポリシー (PSP) の負荷分散設定を調整してパフォーマンスを向上させます。デフォルトの IOPS 値を 1000 から 1 に設定します。
 
 
-NOTE: MPIO 設定は、NVMe、NVMe/FC、NVMe/TCP プロトコルには適用されません。
+NOTE: MPIO設定は、NVMe、NVMe/FC、およびNVMe/TCPプロトコルには適用されません。
 
 
 
@@ -77,8 +81,6 @@ NOTE: MPIO 設定は、NVMe、NVMe/FC、NVMe/TCP プロトコルには適用さ�
 === NFS 設定
 
 |===
-
-
 | パラメータ | 設定する値 
 
 

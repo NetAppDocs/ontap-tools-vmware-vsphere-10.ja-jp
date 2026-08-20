@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphere のデプロイメントを正常に終�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere をアンインストールすると、ツール内のすべてのデータが削除されます。デプロイメントを正常に終了し、予期しないデータ損失を回避するには、以下の手順を完了する必要があります。
+ONTAP tools for VMware vSphereをアンインストールすると、アプライアンス内のデータが削除されます。予期しないデータ損失を回避するために、以下の手順を実行してデプロイメントを正常にシャットダウンしてください。
 
 .手順
 . ONTAP tools for VMware vSphereで管理されるデータストアから、すべての仮想マシンを削除または移動します。
@@ -21,7 +21,7 @@ ONTAP tools for VMware vSphere をアンインストールすると、ツール�
 
 
 . link:../manage/delete-ds.html["データストアの削除"]ONTAP Tools for VMware vSphereを使用して作成されます。
-. VASAプロバイダを有効にした場合は、ONTAPツールで*[設定]*>*[VASA Provider設定]*>*[登録解除]*を選択して、すべてのvCenterサーバからVASAプロバイダの登録を解除します。
+. VASA プロバイダーを有効にしている場合は、ONTAP tools で *設定* > *VASA プロバイダー設定* > *登録解除* を選択して、すべての vCenter Server インスタンスから VASA プロバイダーの登録を解除してください。
 . vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください link:../manage/manage-vcenter.html["ストレージバックエンドとvCenter Serverインスタンスの関連付けを解除する"]。
 . すべてのストレージバックエンドを削除します。を参照してください link:../manage/storage-backend.html["ストレージバックエンドを管理"]。
 . VMware Live Site RecoveryからSRAアダプタを削除します。

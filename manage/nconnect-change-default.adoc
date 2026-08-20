@@ -11,7 +11,7 @@ summary: ESXi ホストのデフォルトの nconnect 値を vCenter Server で�
 
 
 [role="lead"]
-このタスクを使用して、選択したvCenter Server の ESXi ホストのデフォルト接続数（nconnect）を変更します。
+選択した vCenter Server の ESXi ホストのデフォルトの接続数（nconnect）を変更します。
 
 .タスクの内容
 * このページで設定されているnconnectの値は、ホストレベルのデフォルト値です。

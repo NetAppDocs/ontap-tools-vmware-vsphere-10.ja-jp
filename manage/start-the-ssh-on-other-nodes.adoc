@@ -11,7 +11,7 @@ summary: アップグレードを実行する前に、他のノードでSSHを�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere をアップグレードする前に、環境内の他の各ノードで SSH を起動する必要があります。
+ONTAP tools for VMware vSphereをアップグレードする前に、環境内の他の各ノードでSSHを起動してください。
 
 .作業を開始する前に
 vCenter Server インスタンスの VASA プロバイダ拡張機能を有効にします。
@@ -23,8 +23,8 @@ vCenter Server インスタンスの VASA プロバイダ拡張機能を有効�
 . vCenter Serverにログインします。
 . ONTAP tools ノード VM を見つけて、Web コンソールを起動します。
 .  `maint`の資格情報を使用してログインします。
-. 入力するコマンド `4` [Support and Diagnostics]を選択します。
-. 入力するコマンド `1` [Access diagnostic shell]を選択します。
+. と入力 `4`して*[Support and Diagnostics]*を選択します。
+. Enter `1`を押して「診断シェルへのアクセス」を選択してください。
 . 入力するコマンド `y` 続行してください。
-. コマンド_sudo systemctl restart ssh_を実行します。
+. コマンドを実行します `sudo systemctl restart ssh`。
 

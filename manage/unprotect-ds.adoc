@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
 summary: VMFSデータストアの保護を解除し、必要に応じて関連するターゲット側のストレージ要素を削除します。 
 ---
-= VMFSデータストアの保護を解除する
+= ONTAP tools でVMFSデータストアの保護を解除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,8 +16,8 @@ summary: VMFSデータストアの保護を解除し、必要に応じて関連�
 .タスクの内容
 VMFSデータストアの保護を解除する際には、以下の動作に注意してください。
 
-* 保護グループ内の最後のデータストアの保護を解除すると、保護グループとその保護設定名が削除されます。
-* 最後のデータストアの場合、ONTAP tools には保護設定の名前が表示されます。
+* 保護グループ内の最後のデータストアの保護を解除すると、保護グループとその保護設定が削除されます。
+* 最後のデータストアについては、ONTAP tools には保護設定の名前が表示されます。
 
 
 .作業を開始する前に

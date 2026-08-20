@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration 
 summary: VASA Provider、vVols 構成のインポート、およびディザスタリカバリ（SRA）を含む、オプションの ONTAP tools サービスを有効にします。 
 ---
-= ONTAP toolsサービスを有効にする
+= ONTAP tools Manager でオプションサービスを有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

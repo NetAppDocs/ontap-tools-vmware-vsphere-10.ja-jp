@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: ONTAP tools がネストされた igroup を表現および管理し、ホストとデータストアの効率的なマッピングを実現する方法について説明します。 
 ---
-= ONTAP toolsによるigroupの管理方法
+= ONTAP tools のネストされた igroup 管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools の VM と ONTAP ストレージシステムの両方を管理する場合は、igroup の動作を理解する必要があります。特に、ONTAP tools で管理されていない環境から管理されている環境へデータストアを移動する場合は重要です。ONTAP tools for VMware vSphere は、ネストされた igroup モデルを使用して igroup を表現および管理します。このモデルを理解することで、以前のリリースと現在の実装との動作の違いを解釈するのに役立ちます。
+ONTAP tools で管理されていない環境から管理されている環境にデータストアを移動する場合は、igroup の動作を理解してください。ONTAP tools for VMware vSphere はネストされた igroup モデルを使用しており、以前のリリースと現在の実装との間の動作の違いを説明するのに役立ちます。
 
-ONTAP tools for VMware vSphere 10.4以降、ONTAP toolsはONTAPおよびvCenterオブジェクトを自動的に作成および維持し、VMwareデータセンター環境におけるデータストア管理を簡素化します。ONTAP tools for VMware vSphere 10.5 P2以降、移行されたigroupは使用されなくなると自動的に削除されます。
+ONTAP tools for VMware vSphere 10.4 以降、ONTAP tools は ONTAP および vCenter オブジェクトを自動的に作成および管理し、VMware データセンター環境におけるデータストア管理を簡素化します。ONTAP tools for VMware vSphere 10.5 P2 以降、ONTAP tools は使用されなくなった移行済み igroup を自動的に削除します。
 
 
 

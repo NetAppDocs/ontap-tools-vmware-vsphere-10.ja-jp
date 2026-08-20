@@ -11,7 +11,7 @@ summary: 初回起動時に、ESXi ホスト、LUN、NFS エクスポート、�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereをvSphere Client で初めて起動すると、ESXi ホスト、それに関連付けられた LUN と NFS エクスポート、およびこれらのリソースを所有するNetAppストレージ システムが自動的に検出されます。
+ONTAP tools for VMware vSphere を vSphere Client で初めて起動すると、ESXi ホスト、それに関連付けられた LUN と NFS エクスポート、およびこれらのリソースを所有する NetApp ストレージシステムが自動的に検出されます。
 
 .作業を開始する前に
 * すべての ESXi ホストの電源がオンになっていて接続されていることを確認します。
@@ -25,7 +25,7 @@ ONTAP tools for VMware vSphereをvSphere Client で初めて起動すると、ES
 
 .手順
 . vSphere クライアントのホームページで、*ホストとクラスタ* を選択します。
-. 必要なデータセンターを右クリックして、*NetApp ONTAP tools* > *ホストとストレージデータの更新* を選択します。
+. 必要なデータセンターを右クリックし、*NetApp ONTAP tools* > *ホストとストレージデータの更新*を選択します。
 +
 [*確認*（Confirm *）]ダイアログボックスで、選択内容を確認します。
 

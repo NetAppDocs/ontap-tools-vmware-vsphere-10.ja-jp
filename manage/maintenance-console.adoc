@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
 summary: ONTAP tools の設定管理、パスワードのリセット、サポートバンドルの生成、および TLS 設定の構成を行います。 
 ---
-= ONTAP toolsのメンテナンスコンソールについて学ぶ
+= ONTAP tools メンテナンスコンソール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,12 @@ summary: ONTAP tools の設定管理、パスワードのリセット、サポ�
 [role="lead"]
 ONTAP tools for VMware vSphereのメンテナンス コンソールを使用すると、アプリケーション、システム、およびネットワークの設定を管理できます。管理者およびメンテナンス パスワードの更新、サポート バンドルの生成、ログ レベルの構成、TLS 設定の管理、リモート診断の有効化を行うことができます。
 
-ONTAP tools for VMware vSphereを導入した後、メンテナンス コンソールにアクセスできない場合は、vCenter Server から VMware ツールをインストールします。ログインするには `maint`デプロイメント中に設定されたユーザー名とパスワード。メンテナンス コンソールまたはルート ログイン コンソールでファイルを編集するには、*nano* を使用します。
+ONTAP tools for VMware vSphere を展開した後、メンテナンスコンソールにアクセスできない場合は、vCenter Server から VMware Tools をインストールしてください。 `maint`を使用して、デプロイ時に設定したユーザー名とパスワードでログインしてください。メンテナンスコンソールまたは root ログインコンソールでファイルを編集するには、*nano* を使用してください。
 
 
-NOTE: のパスワードを設定する必要があります。 `diag` ユーザがリモート診断を有効にしています。
+NOTE: リモート診断を有効にするときに、 `diag` ユーザーのパスワードを設定します。
 
-メンテナンスコンソールにアクセスするには、導入したONTAP tools for VMware vSphereの*[概要]*タブを使用する必要があります。を選択するimage:../media/launch-maintenance-console.gif["再生ボタン"]と、メンテナンスコンソールが起動します。
+デプロイした ONTAP tools for VMware vSphere の「概要」タブを使用して、メンテナンスコンソールにアクセスします。メンテナンスコンソールを起動するには、image:../media/launch-maintenance-console.gif["再生ボタン"] を選択します。
 
 |===
 

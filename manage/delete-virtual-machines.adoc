@@ -11,14 +11,14 @@ summary: 仮想マシンを削除した後、VASAのクリーンアップを実�
 
 
 [role="lead"]
-VASA クリーンアップ プロセスを完了するには、次の手順に従います。
+ONTAP tools で VASA のクリーンアップを完了するには、次の手順を実行します。
 
 
-NOTE: VASA クリーンアップを開始する前に、 vVolsデータストアを削除することをお勧めします。
+NOTE: VASA のクリーンアップを開始する前に、vVols データストアを削除してください。
 
 .手順
-. \https://OTV_IP:8143/Register.htmlに移動してプラグインの登録を解除します。
+. 開いて `\https://OTV_IP:8143/Register.html`プラグインの登録を解除します。
 . プラグインがvCenter Serverで使用できなくなったことを確認します。
-. ONTAP Tools for VMware vSphere VMをシャットダウンします。
+. ONTAP tools for VMware vSphere 仮想マシン（VM）をシャットダウンします。
 . ONTAP Tools for VMware vSphere VMを削除します。
 

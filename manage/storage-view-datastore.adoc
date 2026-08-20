@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphere の ONTAP ストレージページで、
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere の「構成」タブには、データストアとそのボリュームの ONTAP ストレージ側ビューが表示されます。これには、各データストアタイプのストレージバックエンド、アグリゲート、ボリュームの詳細が含まれます。
+ONTAP tools for VMware vSphere では、*Configure* タブにデータストアとそのボリュームに関する ONTAP 側の詳細が表示されます。これには、各データストアタイプのストレージバックエンド、アグリゲート、ボリュームの詳細が含まれます。
 
 .手順
 . vSphere Client インベントリで、データストアを選択します。

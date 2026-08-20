@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection 
 summary: ホストクラスタ保護のためのホストクラスタ構成設定を表示、編集、および削除します。 
 ---
-= ONTAP tools でのクラスター構成の管理
+= ONTAP tools でのホストクラスタ構成の管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ summary: ホストクラスタ保護のためのホストクラスタ構成設�
 +
 .. 設定を編集するには、「編集」を選択し、必要な設定を更新してください。詳細については、link:../protect/config-proximity.html["ONTAP tools を使用してデータストア保護のためにクラスターを設定する"]を参照してください。
 +
-クラスターに新しいホストが追加された場合、既存のクラスター構成設定は自動的にそのホストには適用されません。既存のクラスター構成を編集し、新しいホストを適切なサイトに割り当てます。
+クラスターに新しいホストを追加すると、ONTAP tools は、既存のクラスタ構成設定をそのホストに自動的に適用しません。既存のクラスタ構成を編集し、新しいホストを適切なサイトに割り当てます。
 
 .. 設定を削除するには、*削除*を選択し、ダイアログボックスで削除を確認します。
 

@@ -11,7 +11,7 @@ summary: ONTAP tools および VASA Provider の証明書を管理し、デフ�
 
 
 [role="lead"]
-導入時に、 ONTAPツールおよび VASA プロバイダー用の自己署名証明書がデフォルトで生成されます。ONTAPツール マネージャ インターフェイスを使用して、この証明書を更新したり、カスタム CA 証明書に置き換えたりすることができます。マルチ vCenter 展開では、カスタム CA 証明書の使用が必要です。
+ONTAP tools と VASA Provider は、デフォルトで自己署名証明書を使用します。ONTAP tools Manager では、その証明書を更新したり、カスタム CA 証明書に置き換えたりできます。マルチvCenter 展開には、カスタム CA 証明書が必要です。
 
 
 WARNING: 証明書が期限内に更新されずに失効した場合、ONTAP tools が機能しなくなります。継続的な運用を維持し、サービスの中断を防ぐため、証明書の有効期限が切れる前に更新してください。
@@ -25,7 +25,7 @@ WARNING: 証明書が期限内に更新されずに失効した場合、ONTAP to
 
 
 
-NOTE: ONTAP tools の IP アドレスは、完全修飾ドメイン名（FQDN）にマッピングされている必要があります。証明書には、サブジェクトまたはサブジェクトの別名に、ONTAP tools の IP アドレスにマッピングされた同じ FQDN が含まれている必要があります。
+NOTE: ONTAP tools の IP アドレスは、完全修飾ドメイン名（FQDN）にマッピングされる必要があります。証明書には、サブジェクト代替名（SAN）フィールドに同じ完全修飾ドメイン名（FQDN）が含まれている必要があります。
 
 
 NOTE: CA署名証明書から自己署名証明書に切り替えることはできません。
@@ -34,7 +34,7 @@ NOTE: CA署名証明書から自己署名証明書に切り替えることはで
 ====
 .ONTAP tools証明書のアップグレード
 --
-ONTAP toolsタブには、証明書の種類（自己署名/ CA署名）やドメイン名などの詳細が表示されます。導入時にデフォルトで自己署名証明書が生成されます。証明書を更新するか、証明書をCAにアップグレードできます。
+ONTAP tools タブには、証明書の種類（自己署名証明書または CA 署名証明書）やドメイン名などの詳細情報が表示されます。デプロイ時、ONTAP tools はデフォルトで自己署名証明書を生成します。証明書を更新するか、CA 署名証明書にアップグレードすることができます。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -45,7 +45,7 @@ ONTAP toolsタブには、証明書の種類（自己署名/ CA署名）やド�
 
 +
 
-NOTE: 証明書が更新されるまでシステムはオフラインになり、ONTAP tools Managerインターフェイスからログアウトされます。
+NOTE: 証明書の更新が完了するまでシステムはオフラインになり、ONTAP tools Manager からログアウトされます。
 
 . 自己署名証明書をカスタムCA証明書にアップグレードするには、*[証明書]*>*[ ONTAP tools ]*>*[CAにアップグレード]*オプションを選択します。
 +
@@ -62,7 +62,7 @@ NOTE: アップグレードが完了するまでシステムはオフライン�
 --
 .VASA Providerの証明書のアップグレード
 --
-ONTAP Tools for VMware vSphereは、VASA Provider用の自己署名証明書を使用して導入されます。これにより、vVolデータストアに対して管理できるvCenter Serverインスタンスは1つだけです。複数のvCenter Serverインスタンスを管理している環境でVVol機能を有効にする場合は、自己署名証明書をカスタムのCA証明書に変更する必要があります。
+ONTAP tools for VMware vSphereは、デフォルトでVASA Providerに自己署名証明書を使用します。その証明書を使用する場合、vVolsデータストアに対して管理できるvCenter Serverインスタンスは1つだけです。複数のvCenter Serverインスタンスを管理し、それらのインスタンスでvVols機能を有効にする場合は、自己署名証明書をカスタムCA証明書に変更する必要があります。
 
 .手順
 . WebブラウザからONTAP Tools Managerを起動します。 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
