@@ -1838,7 +1838,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="e6452e8e9c18000281aae81760220823" category="list-text">診断シェルから更新された vCenter 証明書を取得します。</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">ONTAP tools for VMware vSphereを使用する場合は、考慮する必要がある 2 つの異なる RBAC 環境があります。ONTAP tools for VMware vSphereでは、操作を実行するために vCenter とONTAP の両方で特定の権限が必要です。ONTAPツールはストレージ管理タスクを自動化しますが、vCenter またはONTAPのいずれにもユーザー アカウントを作成しません。サービス アカウントは、必要に応じて vSphere 管理者が作成する必要があります。このドキュメントでは、管理者が効果的なONTAPツール管理のために必要なロールと権限を割り当てるためのガイダンスを提供します。</block>
-  <block id="85f52c3a4cf68ed98d733bd16d720806" category="doc">ONTAP tools REST APIリファレンス</block>
   <block id="3e6657795439746877b7825a3d38e9ee" category="doc">最初のONTAP tools REST API呼び出しを実行する</block>
   <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">ONTAP tools REST APIについて学ぶ</block>
   <block id="5a605ad8e95d1a9f3283371391a80135" category="doc">ONTAP tools REST API実装の詳細</block>
@@ -1851,9 +1850,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="95d5cac81150e067965210d361bbfb2f" category="doc">ONTAP toolsでデータストアを作成する</block>
   <block id="287275745bfa919e80da387835621319" category="doc">ONTAP toolsでストレージシステムとホストを検出する</block>
   <block id="e697d4e8f25b738f21f477e610eec27a" category="doc">ONTAP tools で VASA Provider を vCenter Server インスタンスに登録する</block>
-  <block id="7f3151e275294a9f61ed00de889273e2" category="doc">ONTAP toolsの導入エラーのトラブルシューティング</block>
   <block id="294a9fea24dd193e76e09982dc7598f8" category="doc">ONTAP toolsの高可用性導入ワークフロー</block>
-  <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="doc">ONTAP Toolsの導入</block>
   <block id="a852f7bb9ca4b2463cb324f20a03a33f" category="doc">ONTAP toolsの導入前要件</block>
   <block id="b5d2d3a15a4fc37813f0e8d92c8df16d" category="cell">最大12K</block>
   <block id="1075c55fd78c4ee15842761b6be2c749" category="cell">最大24K</block>
@@ -2992,7 +2989,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c0f9e2b5a70cb22ffbaec35e0963504a" category="cell">このカードには、パフォーマンス指標に基づいてソートされた上位10個のデータストアが表示されます。ヘッダーを選択すると、選択したメトリックの上位10件のデータストアを昇順または降順で並べ替えることができます。カード上で行った並べ替えやフィルタリングの変更は、ブラウザのキャッシュを変更またはクリアするまで保持されます。データストアタイプのドロップダウンリストを使用して、データストアタイプ（NFS、VMFS、または vVols）を選択します。</block>
   <block id="12de44e04cf272eb16b72ae12e77adcd" category="paragraph">ONTAP tools for VMware vSphere を vSphere Client で初めて起動すると、ESXi ホスト、それに関連付けられた LUN と NFS エクスポート、およびこれらのリソースを所有する NetApp ストレージシステムが自動的に検出されます。</block>
   <block id="87aa71b46d12fe17cac2c0b855f379a3" category="list-text">必要なデータセンターを右クリックし、*NetApp ONTAP tools* &gt; *ホストとストレージデータの更新*を選択します。</block>
-  <block id="f5eb38e0d7510dc50906995da5266ad4" category="doc">ONTAP tools を使用して NFS VAAI プラグイン をインストールする</block>
   <block id="aa73e1a501dc6e18d7c4e895589d2005" category="paragraph">NFS vStorage Array Integration用API（NFS VAAI）プラグインは、VMware vSphereをNFSストレージアレイに接続し、ESXiホストの代わりにストレージアレイが特定のストレージ操作を処理できるようにします。ONTAP tools for VMware vSphereを使用してVAAIプラグインをインストールします。</block>
   <block id="a3b203702a6097601122fe2faf910248" category="list-text">プラグイン セクションの「*ショートカット*」&gt;「*NetApp ONTAP tools*」を選択します。</block>
   <block id="7c0e08714c4cb3e8da61be850118b1f9" category="paragraph">NTP サーバーの詳細を入力して、ONTAP tools アプライアンスのクロックを同期します。</block>
@@ -3052,7 +3048,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="3e7ddae4cf1db8d9c002c8ea20899198" category="doc">ONTAP tools で vVols データストアを拡張する</block>
   <block id="b0b62f1236c5866a65b083c891ba140b" category="paragraph">vCenter オブジェクト ビューでデータストア オブジェクトを右クリックすると、プラグイン セクションに ONTAP tools for VMware vSphere でサポートされているアクションが表示されます。使用可能なアクションは、データストアの種類と現在のユーザーの Privileges によって異なります。</block>
   <block id="95e9c1a7d2cfd152c5a51f8703f540dc" category="admonition">この手順は、ASA r2 システムベースの vVols データストアには適用されません。</block>
-  <block id="eb50753fe343f5a3bd1299b243db9237" category="doc">ONTAP tools の igroup とエクスポートポリシーのワークフロー</block>
   <block id="f8b2875ad5502793710c9bdefd26c541" category="paragraph">この情報を使用して、ONTAP tools for VMware vSphere がデータストア アクセスのための igroup とエクスポート ポリシーをどのように作成および管理するかを理解します。</block>
   <block id="e71c2200ee51ec842f21452effc78de6" category="paragraph">ONTAP tools for VMware vSphere 9.x では、igroup はフラットな構造で作成および管理され、vCenter 内の各データストアは単一の igroup に関連付けられていました。このモデルでは、複数のデータストア間での igroup の柔軟性と再利用性が制限されていました。ONTAP tools for VMware vSphere 10.4 ではネストされた igroup が導入され、vCenter 内の各データストアは親 igroup に関連付けられ、各ホストはその親の下にある子 igroup にリンクされています。igroup の管理を容易にするために、ユーザー定義の名前を持つカスタム親 igroup を定義して、データストア間で再利用することができます。この情報を使用して、ONTAP tools for VMware vSphere が igroup ワークフローを通じて LUN とデータストアを管理する方法を理解してください。ワークフローが異なると、生成される igroup 構成も異なります。以下の例をご覧ください。</block>
   <block id="b4620fbb34dbdb976eca43eee22b9fc4" category="paragraph">ONTAP tools for VMware vSphere は、子igroup host2Igroupを作成し、既存の親igroup DS1Igroupに追加します。</block>
@@ -3129,4 +3124,18 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="ae70d77fff05174738fe4cb76f19e0a2" category="doc">ONTAP tools で仮想マシンのストレージの詳細を表示する</block>
   <block id="cac5f85fabd72ec42e30d493b57a81da" category="paragraph">ストレージビューを使用して、仮想マシンに関連付けられているvVolsを確認します。</block>
   <block id="82199557859e59cf6898b255cd98ea3f" category="list-text">*NetApp ONTAP tools* &gt; *ストレージ* を選択します。*ストレージ* の詳細が右側のペインに表示されます。VM上の vVols のリストを確認できます。</block>
+  <block id="5a66ba13a8dc00ed8bcea0c5323f9dec" category="doc">Swagger UI で ONTAP tools REST API ドキュメントを表示する</block>
+  <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">ONTAP tools でvCenter Server インスタンスにストレージバックエンドを関連付ける</block>
+  <block id="8761e266bba00679b7078b2ece451295" category="doc">ONTAP tools を使用して NFS VAAI プラグインをインストールする</block>
+  <block id="2476099c83b7793808f5ba708e5b592c" category="doc">ONTAP tools 導入エラーコード</block>
+  <block id="8dee8cc33274cb62a45a4ac35700d849" category="doc">ONTAP tools をシングルノードアプライアンスとして導入する</block>
+  <block id="6d538e124b476aff2397c149a69e279b" category="doc">ONTAP toolsがigroupとエクスポートポリシーを管理する方法</block>
+  <block id="30e47efa2040640e7c0056e2bfb71a7b" category="doc">ONTAP tools for VMware vSphere のバージョン別機能比較</block>
+  <block id="ebf11048b18616fbd6ba58d38a1858be" category="cell">094</block>
+  <block id="dc8434651b9231a4a07cd70651df6cb2" category="cell">NTPの設定が失敗し、システムはNTPsecにロールバックされました。</block>
+  <block id="deffa26efb6f3e7347013d7b1e7145cb" category="paragraph">Chronyのインストールに不具合が生じ、アップグレードが失敗した場合：</block>
+  <block id="1b4d213b917b2a9601c255e522c420e3" category="list-text">Chronyがインストールされているかどうかを確認します。</block>
+  <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">Chronyがインストールされていて、問題が指定したNTPサーバーにある場合は、それらのサーバーにアクセスできるかどうかを確認してください。</block>
+  <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">サーバーに到達できる場合、問題はサーバーの到達可能性とは無関係です。サーバーに本当に到達できない場合は、ONTAP tools Manager からそのサーバーを削除し、代わりに到達可能な NTP サーバーを指定してください。</block>
+  <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">NTPアップグレード中にその他の問題でアップグレードが失敗した場合は、以下のログを確認してください。</block>
 </blocks>

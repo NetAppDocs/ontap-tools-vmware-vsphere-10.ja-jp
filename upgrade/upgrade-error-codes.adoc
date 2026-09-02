@@ -119,6 +119,37 @@ NOTE: このページに記載されているエラーコードは参考情報�
 | 089 | サマリーログのrotate構成ファイルの所有権の変更に失敗しました | アップグレードを再試行します。 
 
 
+| 094 | NTPの設定が失敗し、システムはNTPsecにロールバックされました。  a| 
+Chronyのインストールに不具合が生じ、アップグレードが失敗した場合：
+
+. Chronyがインストールされているかどうかを確認します。
++
+[listing]
+----
+systemctl status chrony
+----
+. Chronyがインストールされていて、問題が指定したNTPサーバーにある場合は、それらのサーバーにアクセスできるかどうかを確認してください。
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+サーバーに到達できる場合、問題はサーバーの到達可能性とは無関係です。サーバーに本当に到達できない場合は、ONTAP tools Manager からそのサーバーを削除し、代わりに到達可能な NTP サーバーを指定してください。
+
+. NTPアップグレード中にその他の問題でアップグレードが失敗した場合は、以下のログを確認してください。
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | OSのアップグレードに失敗 | OSのアップグレードはリカバリされません。ONTAP toolsサービスがアップグレードされ、新しいポッドが実行されます。 
 
 

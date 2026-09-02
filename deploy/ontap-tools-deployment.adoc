@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deploy ONTAP tools, OVA, content library, single-node configuration 
 summary: ONTAP tools for VMware vSphere を超小型シングルノードアプライアンスとして導入します。 
 ---
-= ONTAP Toolsの導入
+= ONTAP tools をシングルノードアプライアンスとして導入する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

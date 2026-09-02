@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
 summary: グローバルストレージバックエンドを ONTAP tools の vCenter Server インスタンスに関連付けます。 
 ---
-= ストレージバックエンドとvCenter Serverインスタンスの関連付け
+= ONTAP tools でvCenter Server インスタンスにストレージバックエンドを関連付ける
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
