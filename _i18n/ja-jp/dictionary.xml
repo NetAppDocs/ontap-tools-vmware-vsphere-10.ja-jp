@@ -1910,7 +1910,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">vCenter Server のプライマリネットワーク識別子（PNID）を SAN の詳細に含める必要があります。PNID と DNS 名は同一であり、DNS で解決可能である必要があります。</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">詳細については、VMware のドキュメントを参照してください：</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">異なる解決策パスのvSphere証明書の要件</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">vCenter マシン SSL 証明書をカスタム認証局署名証明書に置き換える</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">エラー：Subject Alternate Name（SAN）フィールドにPNIDが含まれていません。有効な証明書を提供してください</block>
@@ -3138,4 +3137,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">Chronyがインストールされていて、問題が指定したNTPサーバーにある場合は、それらのサーバーにアクセスできるかどうかを確認してください。</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">サーバーに到達できる場合、問題はサーバーの到達可能性とは無関係です。サーバーに本当に到達できない場合は、ONTAP tools Manager からそのサーバーを削除し、代わりに到達可能な NTP サーバーを指定してください。</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">NTPアップグレード中にその他の問題でアップグレードが失敗した場合は、以下のログを確認してください。</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>
