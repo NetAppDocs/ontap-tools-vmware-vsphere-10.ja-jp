@@ -117,7 +117,8 @@ ONTAPツールは、vCenter 証明書の有効期限が近づいている場合�
 +
 [listing]
 ----
-echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+echo | openssl s_client -connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+// OTVDOC-378 updates
 ----
 . 証明書が Base 64 ASCII 形式であり、開始行と終了行が含まれていることを確認してください。例：
 +

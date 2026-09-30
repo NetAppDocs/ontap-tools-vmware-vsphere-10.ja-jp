@@ -22,8 +22,6 @@ ONTAP tools for VMware vSphereをアンインストールすると、アプラ�
 
 . link:../manage/delete-ds.html["データストアの削除"]ONTAP Tools for VMware vSphereを使用して作成されます。
 . VASA プロバイダーを有効にしている場合は、ONTAP tools で *設定* > *VASA プロバイダー設定* > *登録解除* を選択して、すべての vCenter Server インスタンスから VASA プロバイダーの登録を解除してください。
-. vCenter Serverインスタンスからすべてのストレージバックエンドの関連付けを解除します。を参照してください link:../manage/manage-vcenter.html["ストレージバックエンドとvCenter Serverインスタンスの関連付けを解除する"]。
-. すべてのストレージバックエンドを削除します。を参照してください link:../manage/storage-backend.html["ストレージバックエンドを管理"]。
 . VMware Live Site RecoveryからSRAアダプタを削除します。
 +
 .. ポート5480を使用して、VMware Live Site Recoveryアプライアンスの管理インターフェイスにadminとしてログインします。
@@ -32,7 +30,16 @@ ONTAP tools for VMware vSphereをアンインストールすると、アプラ�
 .. アダプタを削除した結果がわかっていることを確認し、*[削除]*を選択します。
 
 
-. ONTAP tools for VMware vSphereにオンボードしたvCenterサーバインスタンスを削除します。を参照してください link:../manage/manage-vcenter.html["vCenter Serverインスタンスの管理"]。
+. ONTAP tools for VMware vSphereにオンボードされたvCenter Serverインスタンスを削除します。link:../manage/manage-vcenter.html["vCenter Serverインスタンスの管理"]を参照してください。
++
+vCenter Server インスタンスを削除すると、ONTAP tools が必要なクリーンアップ作業をガイドします。*削除 vCenter* ダイアログでプロンプトが表示された場合は、*この vCenter Server からすべてのストレージアーティファクトを削除する* および *関連するデータストアが ONTAP tools で管理されなくなることを理解しています* を選択し、*強制削除* を選択します。
+
++
+*強制削除*を使用する前に、すべてのvVolsデータストアが削除または移行され、保護されているすべてのデータストアが保護解除され、検出ジョブが実行されていないことを確認してください。
+
++
+削除中に vCenter Server に到達できない場合、ONTAP tools は vCenter Server のレコードのみを削除します。VMware vCenter Server からプラグインを手動で登録解除する必要があります。
+
 . vCenter ServerからONTAP tools for VMware vSphere VMの電源をオフにし、VMを削除します。
 
 

@@ -16,6 +16,9 @@ ONTAP tools for VMware vSphere をデプロイする前に、サポート対象�
 ESXi ホストと VMware vCenter Server Virtual Appliance（vCSA）を含む、サポートされている vSphere 環境に ONTAP tools for VMware vSphere をデプロイします。
 
 
+NOTE: ONTAP tools 仮想マシンを VMware vApp 内の vCenter Server に展開しないでください。
+
+
 
 [[system-requirements]]
 == システム要件
