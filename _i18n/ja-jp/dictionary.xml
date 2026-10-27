@@ -2010,7 +2010,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="fd1fec484c752a0ad18686c59991b35b" category="list-text">VMware Live Site Recoveryにアレイを追加するためにArray Managerウィザードを使用する場合、NFSエクスポートが存在する有効なIPアドレスが*NFSアドレス*フィールドに指定されていることを確認してください。*NFSアドレス*フィールドには、NFSホスト名またはFQDNを使用しないでください。</block>
   <block id="35dd3c34f9d3e59e75b956c68339650a" category="list-text">vCenter Server インスタンスをセットアップし、ESXi ホストを設定しておく必要があります。</block>
   <block id="c7ea02d052f1b1d128bc360d103cdf7e" category="list-text">URL：<block ref="2a7ebd2b210bd0162c7e7a99192bd2aa" prefix=" " category="inline-code"></block>を使用してVMware Live Site Recoveryアプライアンス管理インターフェイスにログインし、VMware Live Site Recoveryアプライアンス管理インターフェイスでStorage Replication Adaptersに移動します。</block>
-  <block id="e9f5fe18bf493055ffe64fce990aa01c" category="admonition">ファンアウトはSVMユーザーではサポートされていません。</block>
   <block id="55f4391cb93210149bb7ca85177e180e" category="list-text">新しいプレースホルダーデータストアを選択してください。段階的保護のためのプレースホルダーデータストア選択基準は以下のとおりです：</block>
   <block id="579c905a6e5880a07ad75a967ef305ce" category="list-text">ホスト クラスタにプレースホルダ データストアを含める必要がある場合は、SnapMirror アクティブ同期保護を設定する前に、VMware Live Site Recovery アプライアンスに追加してください。この設定では、プレースホルダ データストアを保護対象から外すことができます。</block>
   <block id="bb77456a0c0176e391a7fcc54c7d640c" category="paragraph">フォルダーマッピングページには、保護されたサイトのリソースと回復サイトのリソースが表示されます。環境内の他のフォルダについても、同様の手順で操作できます。</block>
@@ -3237,4 +3236,5 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="b9b1d3880586c1123a9bd1eb1d0efc3d" category="paragraph">移行は、特定のONTAP tools 9.xリリースからのみサポートされます。移行パスは、環境でvVolsを使用しているかどうかによって異なります：vVolsを使用する環境ではVASA Providerを移行してSRAを更新しますが、NFSおよびVMFSデータストアのみを使用する環境では9.xの導入を削除して10.xを導入します。ONTAP tools 10.xはVMFSデータストアでのみNVMe-oFをサポートするため、NVMe/FCを使用するvVolsデータストアは移行後に動作しなくなります。サポートされているソースリリースと手順については、<block ref="27c624a79bb0117c5523d04d3b8af0f1" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="ea4b665c1a45f1eeb347dcc5ac156f2d" category="paragraph-title">REST APIを使用してONTAP toolsの操作を自動化できますか？</block>
   <block id="ace000412a4686f2d39bcff385c7f9a9" category="paragraph">はい。ONTAP toolsは、ONTAPクラスタのREST APIとは別に、自動化のためのREST APIを提供します。APIアクセスには、ONTAP toolsのIPアドレスとポート8443を使用します。ONTAP tools Managerのクレデンシャルで認証してアクセストークンを取得し、そのトークンを<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>ヘッダーで送信します。長時間実行される処理は非同期で実行でき、監視対象のジョブを返します。開始するには、<block ref="d6e36bb958210663cc4b017ad9ad5fc2" category="inline-link-macro-rx"></block>および<block ref="e80b3414f41f200b08ca92f57c0602dd" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="cb0bf506e37053e61b7bc79a19047980" category="admonition">SVMユーザーの場合、ファンアウト保護はサポートされていません。ファンアウト保護には、AutomatedFailOverDuplex関係に加えて非同期関係が必要です。また、ONTAP toolsは、SVMユーザー認証情報で追加されたストレージバックエンドの非同期保護の作成をサポートしていません。</block>
 </blocks>
