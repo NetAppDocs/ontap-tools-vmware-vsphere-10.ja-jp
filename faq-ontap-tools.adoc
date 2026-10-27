@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: faq-ontap-tools.html 
+keywords: faq, frequently asked questions, frequently asked questions about ontap tools for vmware vsphere, datastore management, disaster recovery, vvols, storage backends 
+summary: ONTAP tools for VMware vSphereに関するよくある質問。 
+---
+= ONTAP tools for VMware vSphereのFAQ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+このFAQでは、ONTAP tools for VMware vSphereに関するよくある質問にお答えします。ONTAP tools環境の導入、管理、トラブルシューティングに役立つ、概念、導入、ストレージバックエンド、データストアの保護、自動化に焦点を当てています。
+
+
+
+[[deployment-and-high-availability]]
+== 展開と高可用性
+
+.ONTAP toolsでサポートされているVMware vSphere、ESXi、およびONTAPのバージョンはどれですか？
+サポートされているONTAP、ESXi、およびvCenter Serverのバージョンは、ONTAP toolsのリリースによって異なります。ONTAP tools仮想マシンのデプロイに使用されるESXiホストおよびvCenter Serverには、デプロイ後にONTAP toolsが管理できるバージョンよりも、個別の厳しい要件が適用される場合もあります。サポートされるバージョンはリリースごとに異なるため、実行しているリリースについては常に https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]およびlink:deploy/prerequisites.html["VMware vSphere の要件と構成の制限に対する ONTAP ツール"]を確認してください。
+
+.ONTAP toolsは9.xと10.xのどちらのバージョンを使用するべきですか？
+ほとんどの環境は、最新のONTAP tools 10.xリリースに移行することでメリットが得られます。ONTAP tools 9.13と比較して、VMFSのNVMe-oFサポートが追加され、より新しいONTAPおよびVMware vSphereリリースに対応し、アプライアンスごとに1つだけでなく複数のvCenter Serverインスタンスをサポートします。ONTAP tools 9.xにとどまることは、最新の10.xリリースではまだサポートされていない特定の依存関係が環境にある場合にのみ意味があります。ONTAP tools 9.xはサポート終了が近づいているため、早めに移行を計画することをお勧めします。現在のサポート終了日については、 https://mysupport.netapp.com/site/info/version-support["NetApp Support Site - ソフトウェアバージョンのサポート"^]ページを確認してください。ご使用のONTAP、ESXi、およびvSphereのバージョンに一致するバージョンを確認するには、link:release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html["ONTAP tools for VMware vSphere のバージョン別機能比較"]および https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool"^]を参照してください。
+
+.ニーズの拡大に合わせてONTAP toolsの導入環境を拡張するにはどうすればよいですか？
+ONTAP toolsは常に、最初は超小型（XS）のシングルノードアプライアンスとしてデプロイされ、NFSおよびVMFSデータストアのコアサービスを提供します。後でより多くのリソース、より高い回復力、またはvVolsとHAが必要になった場合は、小規模、中規模、大規模にスケールアップしたり、HAに拡張したりできます。HA構成はマルチノード構成で、3つのノードを使用し、コンテンツライブラリが必要です。大規模構成はHAでのみサポートされます。HA拡張をサポートするには、アプライアンスをESXiクラスタまたはリソース プールにデプロイし、CPUホットアドとメモリのホットプラグが有効になっていることを確認します。ONTAP tools 10.6以降では、新規導入時にこれらの設定がデフォルトで有効になります。各サイズのCPU、メモリ、ディスクリソースはlink:deploy/prerequisites.html["VMware vSphere の要件と構成の制限に対する ONTAP ツール"]に記載されているため、まずはXSのデフォルト設定から始めて、要件の増加に応じて拡張していくのが安全です。ONTAP toolsはスケールアップのみをサポートしています。ノードサイズを増やすことはできますが、減らすことはできません。また、HAを有効にした後は、非HAのシングルノード構成に戻すことはできません。展開、サイジング、拡張の手順については、link:deploy/quick-start.html["ONTAP Tools for VMware vSphereのクイックスタートガイド"]、link:deploy/ha-workflow.html["ONTAP toolsの高可用性導入ワークフロー"]、およびlink:manage/edit-appliance-settings.html["ONTAP tools のスケールアップと高可用性の有効化"]を参照してください。
+
+.高可用性は何を保護しますか？また、どのような点を考慮すべきですか？
+HAソリューションは、単一ノードのホスト障害、ネットワーク障害、ゲストOS障害、またはONTAP toolsのアプリケーションの障害からのリカバリを支援することを目的としています。HA構成では3つのノードを使用します。ノード間通信のため、これらのノードは同じサブネット上に配置する必要があります。CPUのホットアドとメモリのホットプラグを有効にする必要があります。また、HAワークフローではvVolsデータストア用のVASA Providerも必要です。セットアップ手順については、link:deploy/ha-workflow.html["ONTAP toolsの高可用性導入ワークフロー"]を参照してください。
+
+.高可用性（HA）構成は必要ですか？また、どのような場合に使用すべきですか？
+vVolsを使用せずにNFSまたはVMFSデータストアのみを使用している場合、HAは必須ではありませんが、単一ノードのホスト、ネットワーク、ゲストOS、またはONTAP toolsのアプリケーションの障害に対するより広範な耐障害性を提供します。vVolsデータストアでVASA Providerサービスを継続的に利用できるようにするにはHAが必要であるため、vVolsを使用する場合、または単一ノード環境よりも高いサービスの耐障害性とサービスあたりのコンテナ数が必要な場合は、HA環境を使用してください。
+
+.単一のONTAP tools 10.xのデプロイで、複数のvCenter Serverインスタンスを管理できますか？
+はい。アプライアンスごとに1つのvCenter Serverのみをサポートする ONTAP tools 9.x とは異なり、ONTAP tools 10.x はマルチテナンシーをサポートし、単一の ONTAP tools Manager インターフェイスから複数のvCenter Server インスタンスを管理できるため、アプライアンス数と全体的なリソース要件を削減できます。複数のvCenter Server インスタンスにわたって vVols データストアを使用する場合は、セキュアな通信のために自己署名証明書を CA 署名証明書にアップグレードしてください。手順については、link:configure/add-vcenter.html["ONTAPツールにvCenter Serverインスタンスを追加する"]を参照してください。
+
+
+
+[[networking-and-ports]]
+== ネットワークとポート
+
+.ONTAP toolsの導入にはいくつのIPアドレスが必要ですか？また、それぞれの用途は何ですか？
+単一ノード構成の場合、同じサブネット上に3つの固有の静的IPv4アドレスが必要です：
+
+* *ONTAP tools IP*（旧ロードバランサIP）：ONTAP tools Manager(`https://<ONTAPtoolsIP>:8443/virtualization/ui/`）、REST API、VASA Provider、Storage Replication Adapter（SRA）、およびvSphere Clientプラグインの外部エンドポイント。
+* *ONTAP tools仮想IP*（旧ノード インターコネクトIP）：Kubernetes APIサーバーに割り当てられ、Kubernetesコントロール プレーンの仮想IPとして使用されます。
+* *ノードIP*：診断シェルおよびSSHアクセスに使用されるノード管理アドレス。
+
+
+HA展開では、2番目と3番目のノードそれぞれに1つの追加ノードIPアドレスが追加されます。ONTAP toolsのIPと仮想IPは、すべてのノードで共有されます。完全な展開ワークシートについては、link:deploy/prerequisites.html["VMware vSphere の要件と構成の制限に対する ONTAP ツール"]およびlink:deploy/pre-deploy-checks.html["ONTAP toolsの導入前要件"]を参照してください。
+
+.ONTAP toolsはどのネットワークポートを使用しますか？
+ONTAP toolsは、ONTAP tools Manager、REST API、VASA Provider、およびvSphere Clientプラグインのバックエンド用の外部パススルーポートとして、ポート443および8443を公開します。ポート要件表の残りのポートは、アプライアンスのKubernetesクラスタが内部的に使用するノード間ポートです。シングルノード構成では外部からのアクセスは不要ですが、HA構成では、ポッド間通信用のUDP 8472を含め、3つのノードすべてがこれらのポートで相互に通信できる必要があります。完全なポートの表については、link:deploy/prerequisites.html["VMware vSphere の要件と構成の制限に対する ONTAP ツール"]を参照してください。
+
+
+
+[[certificates-and-security]]
+== 証明書とセキュリティ
+
+.ONTAP toolsがvCenter Server証明書に求める要件は何ですか？
+証明書は、接続先のサーバーの身元を証明する場合にのみ、接続の安全性を確保します。サブジェクト代替名（SAN）拡張機能は、その証明を提供します：証明書が有効なDNS名とIPアドレスを一覧表示します。
+
+vCenter ServerマシンのSSL証明書は、以下の要件を満たす必要があります：
+
+* SANには、vCenter ServerのDNS名とIPアドレスが含まれます。
+* SANにはvCenter Serverのプライマリネットワーク識別子（PNID）が含まれており、PNIDはDNS名と一致します。
+* SAN内のすべての名前はDNSで解決されます。
+
+
+証明書に SAN がない場合、または SAN が vCenter Server の DNS 名、IP アドレス、または PNID と一致しない場合、ONTAP tools の操作は証明書の検証エラーで失敗します。この検証を無効にすることはできません。vCenter Server インスタンスを追加する前に、vSphere Certificate Manager で SAN を修正してください。証明書の要件と例については、link:configure/add-vcenter.html["ONTAPツールにvCenter Serverインスタンスを追加する"] を参照してください。
+
+.ストレージバックエンドを追加する際に証明書の検証が失敗する理由と、その解決方法を教えてください。
+ONTAP toolsは、vCenter Server証明書を検証するのと同じ理由で、デフォルトでストレージバックエンド証明書を検証します：SAN拡張機能は、証明書がどのクラスタまたはSVM管理LIFに属しているかを証明します。デフォルトのONTAP自己署名証明書にはSANが含まれていないことが多いため、ストレージバックエンドを追加する際に検証に失敗します。
+
+検証失敗を解決するには：
+
+* 証明書を、SANにクラスタまたはSVM管理LIFのIPアドレスまたはDNS名が含まれるものに置き換え、ストレージバックエンドを追加または再追加する際に、更新された証明書を取得して認証してください。
+* 証明書をすぐに交換できない場合は、メンテナンス コンソールから証明書の検証を無効にしてください。これにより、構成されているすべてのストレージ バックエンドの検証がバイパスされますが、vCenter Server証明書には適用されません。
+
+
+ストレージバックエンド証明書が更新前に期限切れになった場合、ONTAP toolsは、ストレージシステムに接続できなくなったため、ストレージバックエンドを不明としてマークします。手順については、link:configure/add-storage-backend.html["ONTAP toolsにストレージバックエンドを追加する"]およびlink:manage/change-valid-flag.html["証明書検証フラグを変更する"]を参照してください。
+
+
+
+[[datastores-and-storage-backends]]
+== データストアとストレージバックエンド
+
+.どのようなデータストアの種類とプロトコルを管理できますか？
+ONTAP toolsは、以下のデータストアタイプとプロトコルをサポートしています：
+
+* *NFS*：NFSv3およびNFSv4.1。
+* *VMFS*：iSCSI、FC、NVMe/TCP、およびNVMe/FC。
+* *vVols*：VASA Providerを通じてプロビジョニングおよび管理されます。
+
+
+作成手順については、link:configure/create-datastore.html["ONTAP toolsでデータストアを作成する"]を参照してください。
+
+.なぜONTAP toolsは多数のigroupを作成するのですか？また、既存のフラットなigroupを使用できますか？
+ONTAP toolsは設計上、ネストされたigroupモデルを使用します：
+
+* 親igroupは各データストアのアクセスを表し、子igroupは各ESXiホストを表します。LUNマッピングは子igroupに適用されます。
+* この構造により、ONTAP toolsはデータストアごとにホストアクセスを複製するのではなく、複数のデータストア間でホストの子igroupを再利用できるようになり、マウント、アンマウント、ホストの更新操作に必要な、ホストごとの詳細な制御がONTAP toolsに提供されます。
+* ONTAP toolsで管理されるigroupは、 `otv_`プレフィックスを使用します。
+
+
+ONTAP toolsが検出するデータストアにマッピングされたフラットなigroupがすでにある場合、ONTAP toolsは検出中にそれらを変換します：元のigroupを `otv_`プレフィックスを付けて名前を変更した子igroupとして保持し、基盤となるイニシエータマッピングを変更することなく、その上に親igroupを作成します。ブートLUN igroupなど、データストアにマッピングされていないigroupはそのまま残されます。
+
+ONTAP toolsはホストのアクセスを追跡するためにこの親子構造に依存しているため、ONTAP toolsで管理されるigroupを手動で名前変更、編集、または削除しないでください。代わりに、ONTAP toolsのマウント、アンマウント、およびホスト更新ワークフローを使用してください。詳細については、link:manage/nested-igroups.html["ONTAP tools のネストされた igroup 管理"]およびlink:manage/igroup-workflow.html["ONTAP toolsがigroupとエクスポートポリシーを管理する方法"]を参照してください。
+
+.グローバルストレージバックエンドとローカルストレージバックエンドの違いは何ですか？
+ストレージバックエンドは、その範囲と認証情報が異なります：
+
+* *グローバルストレージバックエンド*：ONTAPクラスタの認証情報のみを使用して、ONTAP tools Managerに1回追加されます。vCenter Serverに関連付けるまではリンクされず、vVolsの管理に必要なクラスタレベルの検出機能を提供します。
+* *ローカルストレージバックエンド*：クラスタまたはSVMの認証情報を使用してvCenter Serverごとに追加され、そのvCenter Serverでのみ使用できます。VMFSデータストアおよびストレージレプリケーションアダプタ（SRA）ワークフローにはSVMの認証情報のみで十分ですが、vVolsには不十分です。
+
+
+手順については、link:configure/add-storage-backend.html["ONTAP toolsにストレージバックエンドを追加する"] および link:configure/associate-storage-backend.html["ONTAP tools でvCenter Server インスタンスにストレージバックエンドを関連付ける"] を参照してください。
+
+.ONTAP toolsでvVolsを使用するには何が必要ですか？
+vVolsデータストアのワークフローは、VASA Providerサービスが有効になっており、選択したvCenter Serverに登録されている必要があります。ONTAP toolsはVASA Providerを使用してvVolsデータストアの表現を作成および維持し、VMストレージポリシーはNetApp vVolsストレージタイププロバイダのルールを使用します。HA設定では、HAワークフローでもvVolsデータストア用にVASA Providerが必要です。セットアップ手順については、link:manage/enable-services.html["ONTAP tools Manager でオプションサービスを有効にする"]およびlink:configure/registration-process.html["ONTAP tools で VASA Provider を vCenter Server インスタンスに登録する"]を参照してください。
+
+.VMwareはvVolsを非推奨にしました。ONTAP toolsのユーザーにとって、これは何を意味するのでしょうか。
+BroadcomはvVolsを非推奨としており、これはVMware Cloud FoundationおよびVMware vSphere Foundation 9.0から適用され、今後のリリースでこの機能を廃止する予定です。新規導入の場合は、VMFSまたはNFSデータストアを計画し、現在vVolsを使用していない限りVASAプロバイダーは無効のままにしてください。各リリースでのvVolsのサポートについては、ONTAP toolsのリリースノートを確認してください。
+
+
+
+[[protection-and-disaster-recovery]]
+== 保護と災害復旧
+
+.ONTAP tools for VMware vSphereを使用してデータストアを保護するにはどうすればよいですか？
+iSCSI または FC プロトコルを使用する適格な VMFS データストアを保護するには、Asynchronous または AutomatedFailOverDuplex ポリシーを使用して、SnapMirror 関係を持つ保護グループにデータストアを追加します。ホストクラスターに複数の SVM からのデータストアが含まれている場合は、代わりにきめ細かなデータストア保護ワークフローを使用して、保護グループレベルでデータストアを選択および保護します。手順については、link:manage/protect-ds.html["ONTAP tools で VMFS データストアを保護する"] および link:protect/protect-multiple-ds.html["ONTAP tools を使用してクラスター内のデータストアを保護する"] を参照してください。
+
+.災害復旧にONTAP toolsをどのように使用できますか？
+アレイベースのディザスタリカバリの場合は、ONTAP toolsでSRAサービスを有効にし、VMware Live Site RecoveryアプライアンスにSRAアダプタをインストールします。SRAワークフローを実行する前に、ソースクラスタとデスティネーションクラスタで同じカスタムSnapMirrorスケジュールを使用してください。新しいSRAセットアップでは、必ずテストフェイルオーバーを実行してください。これを省略すると、再保護処理が失敗する可能性があります。セットアップ手順については、link:protect/enable-storage-replication-adapter.html["データストアを保護するために ONTAP tools で SRA を設定する"]を参照してください。
+
+.SRAとVMware Live Site Recoveryで保護できるデータストアの種類はどれですか？
+SRAは、iSCSIおよびFC上のNFSv3データストアとVMFSデータストアをサポートします。NVMe-oFデータストアではディザスタリカバリはサポートされておらず、VMware Live Site RecoveryはNFSv4.1またはFlexGroupデータストアのアレイベースのレプリケーションをサポートしていません。整合性グループはiSCSIとFCのみでサポートされています。NFSボリュームを整合性グループに追加すると、デバイス検出が失敗します。
+
+.SnapMirrorアクティブ同期保護は、SRAベースのディザスタリカバリとどのように異なりますか？
+ホストクラスタ保護ワークフローでは、VMFSデータストアにSnapMirrorアクティブ同期を使用します。ONTAP tools 10.6では、詳細なデータストア保護もサポートされており、iSCSIまたはFCを使用して対象となるVMFSデータストアを選択し、保護グループレベルで保護を適用できます。SRAは代わりに、アレイベースのディザスタリカバリワークフローのためにVMware Live Site Recoveryと統合されます。対象条件の詳細については、link:protect/granular-datastore-protection-concept.html["ONTAP tools における詳細なデータストア保護の適格性基準"]を参照してください。
+
+
+
+[[access-control-backup-and-support]]
+== アクセス制御、バックアップ、およびサポート
+
+.ONTAPツール、vCenter、およびONTAP間で、アクセス制御はどのように機能しますか？
+アクセスは2つの環境で制御されます：vCenter Serverの権限はvSphereオブジェクトへのアクセスを制御し、ONTAPのロールはストレージ操作を制御します。ONTAP toolsは、最初にvCenterのロールを確認し、次にストレージバックエンドに関連付けられたONTAPのロールを確認します。ONTAP toolsはvCenterやONTAPにユーザーアカウントを作成しないため、管理者が必須のサービスアカウントを作成します。詳細については、link:concepts/rbac-learn-about.html["ONTAP tools の RBAC について"]を参照してください。
+
+.ONTAP tools for VMware vSphereでロールベースアクセス制御（RBAC）を設定するにはどうすればよいですか？
+ONTAP toolsはvCenterやONTAPでユーザーアカウントを作成しないため、vSphere管理者が両方の環境で必要なサービスアカウントを作成し、ロールを割り当てる必要があります。vCenter Serverでは、ONTAP toolsはリモートプラグインを介して公開される追加のオブジェクトでRBACモデルを拡張します。ONTAPでは、ストレージバックエンドの認証時に指定したユーザーに割り当てられたONTAPロールを通じてアクセスが制御されます。ONTAP toolsには、ストレージバックエンドの操作に必要な最小限の権限を割り当てるために使用できる事前定義されたロールとJSONロールファイルが用意されています。セットアップ手順については、link:concepts/rbac-vcenter-use.html["vCenter Server の RBAC と ONTAP tools for VMware vSphere の連携方法"]およびlink:configure/configure-user-role-and-privileges.html["ONTAP tools用のONTAPユーザーロールと権限を設定する"]を参照してください。
+
+.ONTAP toolsはどのくらいの頻度でアプライアンスをバックアップしますか？また、そのバックアップは何に使用されますか？
+ONTAP tools 10.5以降では、バックアップはデフォルトで有効になっており、10分ごとに実行されます。バックアップファイルはデータストアに保存され、元の仮想マシンが失われた場合にONTAP toolsアプライアンス自体を再デプロイしてリカバリすることができます。これらは、ONTAP toolsが管理するONTAPクラスタやvCenter Server構成のバックアップではありません。頻度は10分から60分の間で変更できます。手順については、link:manage/backup-settings.html["ONTAPツールのバックアップ設定を編集する"]およびlink:manage/recover-backup.html["バックアップからONTAP tools for VMware vSphereをリカバリする"]を参照してください。
+
+.ONTAP toolsのバックアップを無効にできますか？
+バックアップを無効にすることはできますが、ONTAP toolsが低い目標復旧時点を維持できなくなるため、無効にしないでください。バックアップを無効にしても、既存のバックアップファイルは削除されません。手順については、link:manage/backup-settings.html["ONTAPツールのバックアップ設定を編集する"]を参照してください。
+
+.トラブルシューティングやサポートへの問い合わせが必要な場合、ログはどこで確認できますか？
+ログバンドルは、ONTAP tools ManagerまたはvSphere Clientから生成できます。ONTAP tools Managerで生成されたバンドルには、管理対象のすべてのvCenter Serverインスタンスのログが含まれます。vSphere Clientで生成されたバンドルは、選択したvCenter Serverにスコープが限定されます。生成されたアーカイブをダウンロードし、要請があった場合はテクニカルサポートに提供してください。手順については、link:deploy/deployment-error-codes.html["ONTAP tools 導入エラーコード"]を参照してください。
+
+.ONTAP toolsのトラブルシューティング用に診断情報を収集するにはどうすればよいですか？
+ログバンドルに加えて、メンテナンス コンソールから `diag`ユーザー アカウントへのリモート診断（SSH）アクセスを有効にすることができます。一度に許可されるdiagログイン セッションは1つのみです。アクセスは、翌日の午前0時、または再度diagユーザーとしてログインした時点で自動的に無効になります。ログバンドルで提供される情報以上の詳細なトラブルシューティングには、このアクセスを使用します。テクニカル サポートが作業のベースとなるログを入手できるように、まずログバンドルを生成してください。手順については、link:manage/configure-remote-diagnostic-access.html["ONTAP toolsのリモート診断アクセスを設定する"]を参照してください。
+
+
+
+[[upgrade-migration-and-automation]]
+== アップグレード、移行、および自動化
+
+.最新のONTAP tools 10.xリリースに直接アップグレードできますか？
+最新リリース直前の2つのリリース（N-2）からの直接アップグレードがサポートされています。さらに古いバージョンを使用している場合は、まず最新リリースへの直接アップグレードをサポートする最も古いリリースにアップグレードし、その後再度最新リリースにアップグレードしてください。アップグレードを開始する前に、低RPOバックアップを有効にしてバックアップをダウンロードしてください。アップグレードが失敗した場合、必ずしもロールバックできるとは限らず、その場合の復旧は低RPOバックアップまたはスナップショット復旧に依存することになります。サポートされているアップグレードパスと手順については、link:upgrade/upgrade-ontap-tools.html["ONTAP tools for VMware vSphere 10.x から 10.6 へのアップグレード"]を参照してください。
+
+.ONTAP tools 9.xから最新の10.xリリースに移行するにはどうすればよいですか？
+移行は、特定のONTAP tools 9.xリリースからのみサポートされます。移行パスは、環境でvVolsを使用しているかどうかによって異なります：vVolsを使用する環境ではVASA Providerを移行してSRAを更新しますが、NFSおよびVMFSデータストアのみを使用する環境では9.xの導入を削除して10.xを導入します。ONTAP tools 10.xはVMFSデータストアでのみNVMe-oFをサポートするため、NVMe/FCを使用するvVolsデータストアは移行後に動作しなくなります。サポートされているソースリリースと手順については、link:migrate/migrate-to-latest-ontaptools.html["ONTAP tools for VMware vSphere 9.xx から 10.6 への移行"]を参照してください。
+
+.REST APIを使用してONTAP toolsの操作を自動化できますか？
+はい。ONTAP toolsは、ONTAPクラスタのREST APIとは別に、自動化のためのREST APIを提供します。APIアクセスには、ONTAP toolsのIPアドレスとポート8443を使用します。ONTAP tools Managerのクレデンシャルで認証してアクセストークンを取得し、そのトークンを `x-auth`ヘッダーで送信します。長時間実行される処理は非同期で実行でき、監視対象のジョブを返します。開始するには、link:automation/learn-rest-api.html["ONTAP tools REST APIについて学ぶ"]およびlink:automation/first-call.html["最初のONTAP tools REST API呼び出しを実行する"]を参照してください。
