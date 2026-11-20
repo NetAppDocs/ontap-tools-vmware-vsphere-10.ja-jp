@@ -16,7 +16,7 @@ ONTAP tools for VMware vSphereをアンインストールすると、アプラ�
 .手順
 . ONTAP tools for VMware vSphereで管理されるデータストアから、すべての仮想マシンを削除または移動します。
 +
-** 仮想マシンを削除するには、を参照してください。 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["VMおよびVMテンプレートの削除と再登録"]
+** 仮想マシンを削除するには、 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machines/adding-and-removing-virtual-machines.html["VMおよびVMテンプレートの削除と再登録"]を参照してください。
 ** それらを管理対象外のデータストアに移動するには、Storage vMotion を使用した仮想マシンの移行について https://techdocs.broadcom.com/["Broadcom技術ドキュメント"]を参照してください。
 
 
